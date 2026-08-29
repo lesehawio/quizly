@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Quizly · Master Engine · Series 05</title>
+    <style>
+        :root {
+            --bg: #f7edf1;
+            --surface: #fffafd;
+            --surface2: #fdf3f7;
+            --ink: #251820;
+            --muted: #765b68;
+            --line: #ecd6df;
+            --pink: #f94779;
+            --pink2: #ff7aa1;
+            --soft: #ffe8f0;
+            --purple: #7c4dff;
+            --green: #1f9d73;
+            --yellow: #c98112;
+            --shadow: 0 18px 55px rgba(115, 38, 67, .12);
+        }
+        [data-theme="dark"] {
+            --bg: #140c11;
+            --surface: #21131a;
+            --surface2: #2a1821;
+            --ink: #f9e8ef;
+            --muted: #c7a9b7;
+            --line: #4a2938;
+            --soft: #39202c;
+            --shadow: 0 18px 55px rgba(0, 0, 0, .35);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            margin: 0;
+            background: radial-gradient(circle at top right, #ffd9e7 0, transparent 28%), var(--bg);
+            color: var(--ink);
+            font-family: Tahoma, "Segoe UI", sans-serif;
+            line-height: 1.9;
+            -webkit-font-smoothing: antialiased;
+            transition: background .3s, color .3s;
+        }
+        [data-theme="dark"] body {
+            background: radial-gradient(circle at top right, #3c1828 0, transparent 28%), var(--bg);
+        }
+        .app {
+            max-width: 1180px;
+            margin: auto;
+            padding: 14px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .logo-icon {
+            width: 54px;
+            height: 54px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 1px solid rgba(249, 71, 121, 0.25);
+            box-shadow: 0 10px 30px rgba(249, 71, 121, 0.15);
+            flex-shrink: 0;
+        }
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 6px;
+        }
+        .brand h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .brand small {
+            color: var(--muted);
+            font-size: 11px;
+            display: block;
+        }
+        button,
+        .btn {
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--ink);
+            padding: 8px 14px;
+            border-radius: 14px;
+            cursor: pointer;
+            font: inherit;
+            font-size: 14px;
+            touch-action: manipulation;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: .2s;
+        }
+        button:hover,
+        .btn:hover {
+            border-color: var(--pink);
+            transform: translateY(-1px);
+        }
+        .hero {
+            background: linear-gradient(135deg, #9f174d, #f94779 55%, #ff8bad);
+            padding: 30px 20px;
+            border-radius: 28px;
+            color: #fff;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "05";
+            position: absolute;
+            left: -10px;
+            bottom: -40px;
+            font-size: 160px;
+            font-weight: 900;
+            opacity: .09;
+            line-height: 1;
+        }
+        .hero h2 {
+            margin: 0;
+            font-size: 28px;
+            position: relative;
+            z-index: 2;
+        }
+        .hero p {
+            max-width: 100%;
+            opacity: .94;
+            margin: 8px 0 16px;
+            font-size: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        .pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            position: relative;
+            z-index: 2;
+        }
+        .pill {
+            background: rgba(255, 255, 255, .14);
+            border: 1px solid rgba(255, 255, 255, .2);
+            padding: 5px 10px;
+            border-radius: 99px;
+            font-size: 12px;
+        }
+        .notice {
+            margin: 16px 0;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-right: 7px solid var(--pink);
+            padding: 14px 16px;
+            border-radius: 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 14px 0;
+        }
+        .stat {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 14px;
+            border-radius: 18px;
+            box-shadow: 0 7px 22px rgba(0, 0, 0, .03);
+            transition: .2s;
+        }
+        .stat:hover {
+            border-color: var(--pink);
+        }
+        .stat b {
+            display: block;
+            font-size: 22px;
+            color: var(--pink);
+        }
+        .stat span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+        nav {
+            position: sticky;
+            top: 6px;
+            z-index: 5;
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            background: rgba(255, 250, 253, .92);
+            backdrop-filter: blur(14px);
+            padding: 8px 10px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            margin: 14px 0;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        nav::-webkit-scrollbar {
+            display: none;
+        }
+        [data-theme="dark"] nav {
+            background: rgba(33, 19, 26, .92);
+        }
+        nav a {
+            white-space: nowrap;
+            text-decoration: none;
+            color: var(--muted);
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            flex-shrink: 0;
+            transition: .2s;
+        }
+        nav a:hover {
+            background: var(--soft);
+            color: var(--pink);
+        }
+        nav a.active {
+            background: var(--soft);
+            color: var(--pink);
+            font-weight: bold;
+        }
+        .section {
+            margin-top: 30px;
+            display: none;
+            animation: fadeUp .35s ease;
+        }
+        .section.active {
+            display: block;
+        }
+        @keyframes fadeUp {
+            0% {
+                opacity: .3;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+        .section-sub {
+            color: var(--muted);
+            margin-top: 0;
+            font-size: 14px;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 16px;
+            margin: 12px 0;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .035);
+            transition: .2s;
+        }
+        .card:hover {
+            border-color: var(--pink);
+        }
+        .card-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            padding: 3px 10px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        .badge.s {
+            background: #ffe3ea;
+            color: #a71547;
+        }
+        .badge.a {
+            background: #fff0cc;
+            color: #946000;
+        }
+        .badge.b {
+            background: #e5e1ff;
+            color: #5538b5;
+        }
+        .badge.direct {
+            background: #dff7ee;
+            color: #08724d;
+        }
+        [data-theme="dark"] .badge.s {
+            background: #3a1f2a;
+            color: #f9a8c4;
+        }
+        [data-theme="dark"] .badge.a {
+            background: #3a2f1a;
+            color: #f5c87a;
+        }
+        [data-theme="dark"] .badge.b {
+            background: #282044;
+            color: #b8a8f0;
+        }
+        [data-theme="dark"] .badge.direct {
+            background: #1a3a2e;
+            color: #7ad0b0;
+        }
+        .en {
+            font-family: "Segoe UI", Arial, sans-serif;
+            direction: ltr;
+            text-align: left;
+            background: var(--surface2);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 10px 14px;
+            margin: 10px 0;
+            font-size: 15px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .fa {
+            font-family: Tahoma, "Segoe UI", sans-serif;
+            text-align: right;
+            background: var(--surface2);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 10px 14px;
+            margin: 10px 0;
+            font-size: 15px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            color: var(--muted);
+        }
+        .grid2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .box {
+            padding: 12px 14px;
+            border-radius: 16px;
+            background: var(--surface2);
+            border: 1px solid var(--line);
+        }
+        .box h4 {
+            margin: 0 0 6px;
+            color: var(--pink);
+            font-size: 15px;
+        }
+        .question {
+            border-right: 5px solid var(--pink);
+        }
+        .qnum {
+            color: var(--pink);
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .answer {
+            color: var(--green);
+            font-weight: bold;
+        }
+        .vocab {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .word {
+            background: var(--soft);
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-family: "Segoe UI", sans-serif;
+            font-size: 12px;
+            border: 1px solid var(--line);
+        }
+        .compare {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 13px;
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .compare th,
+        .compare td {
+            border-bottom: 1px solid var(--line);
+            padding: 8px 10px;
+            text-align: right;
+            font-size: 13px;
+        }
+        .compare th {
+            color: var(--pink);
+        }
+        .search {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--ink);
+            font: inherit;
+            font-size: 15px;
+            -webkit-appearance: none;
+        }
+        .quiz {
+            background: linear-gradient(135deg, var(--surface), var(--surface2));
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 18px;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .option {
+            text-align: right;
+            padding: 12px 16px;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--ink);
+            cursor: pointer;
+            font: inherit;
+            font-size: 15px;
+            touch-action: manipulation;
+            min-height: 48px;
+            width: 100%;
+            transition: all .15s;
+        }
+        .option:active {
+            transform: scale(.98);
+        }
+        .option.correct {
+            border-color: var(--green);
+            background: #dff7ee;
+        }
+        .option.wrong {
+            border-color: #e74c3c;
+            background: #fde8e8;
+        }
+        [data-theme="dark"] .option.correct {
+            background: #1a3a2e;
+            border-color: #7ad0b0;
+        }
+        [data-theme="dark"] .option.wrong {
+            background: #3a1a1a;
+            border-color: #e74c3c;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            min-height: 28px;
+            font-size: 15px;
+        }
+        .quiz-progress {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .score-bar {
+            background: var(--line);
+            border-radius: 99px;
+            height: 6px;
+            overflow: hidden;
+            margin: 8px 0 12px;
+        }
+        .score-fill {
+            height: 100%;
+            background: var(--pink);
+            border-radius: 99px;
+            transition: width .4s ease;
+            width: 0%;
+        }
+        .mastery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 12px 0;
+        }
+        .mastery-item {
+            background: var(--surface2);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 8px 12px;
+            font-size: 13px;
+        }
+        .mastery-item .bar {
+            height: 4px;
+            background: var(--line);
+            border-radius: 99px;
+            margin-top: 4px;
+            overflow: hidden;
+        }
+        .mastery-item .fill {
+            height: 100%;
+            background: var(--pink);
+            border-radius: 99px;
+            transition: width .6s ease;
+        }
+        .trap {
+            border-right-color: #e08b17;
+        }
+        .trap strong {
+            color: #b36d00;
+        }
+        .footer {
+            padding: 20px 0;
+            color: var(--muted);
+            text-align: center;
+            font-size: 13px;
+            border-top: 1px solid var(--line);
+            margin-top: 30px;
+        }
+        @media (min-width: 520px) {
+            .app {
+                padding: 20px;
+            }
+            .hero {
+                padding: 38px 28px;
+            }
+            .hero h2 {
+                font-size: 34px;
+            }
+            .stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .options {
+                grid-template-columns: 1fr 1fr;
+            }
+            .mastery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 380px) {
+            .app {
+                padding: 10px;
+            }
+            .hero {
+                padding: 22px 14px;
+            }
+            .hero h2 {
+                font-size: 22px;
+            }
+            .card {
+                padding: 12px;
+            }
+            .en,
+            .fa {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+            .section-title {
+                font-size: 20px;
+            }
+            .stat b {
+                font-size: 20px;
+            }
+            .brand h1 {
+                font-size: 18px;
+            }
+            .logo-icon {
+                width: 44px;
+                height: 44px;
+            }
+            button,
+            .btn {
+                font-size: 13px;
+                padding: 6px 12px;
+                min-height: 38px;
+            }
+            .option {
+                font-size: 14px;
+                padding: 10px 14px;
+                min-height: 44px;
+            }
+            .mastery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+
+        <header>
+            <div class="brand">
+                <div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div>
+                <div><h1>Quizly</h1><small>Master Engine · Series 05</small></div>
+            </div>
+            <button id="theme">🌙 تم شب</button>
+        </header>
+
+        <section class="hero">
+            <h2>متون انگلیسی در مشاوره<br>Series 05</h2>
+            <p>سری پنجم با مفاهیم پایه روان‌شناسی، مکاتب، شرطی‌سازی، روان‌شناسی اجتماعی و تاریخچه</p>
+            <div class="pills">
+                <span class="pill">30 سؤال</span>
+                <span class="pill">English + فارسی</span>
+                <span class="pill">یادداشت‌ها</span>
+                <span class="pill">واژگان</span>
+                <span class="pill">دام‌ها</span>
+                <span class="pill">کوییز هوشمند</span>
+            </div>
+        </section>
+
+        <div class="notice">
+            <b>🧠 معماری مادر Quizly:</b> هر سوال → تحلیل → مفهوم → کلیدواژه → مقایسه → دام → مرور تطبیقی. سری ۵ شامل مفاهیم پایه روان‌شناسی، مکاتب، شرطی‌سازی و روان‌شناسی اجتماعی است.
+        </div>
+
+        <div class="stats" id="stats">
+            <div class="stat"><b id="totalQ">30</b><span>سؤال تحلیل‌شده</span></div>
+            <div class="stat"><b id="totalConcepts">0</b><span>مفهوم یکتا</span></div>
+            <div class="stat"><b id="totalVocab">8</b><span>واژه</span></div>
+            <div class="stat"><b id="totalTraps">6</b><span>دام امتحانی</span></div>
+        </div>
+
+        <nav>
+            <a href="#sec-questions">سؤال‌ها</a>
+            <a href="#sec-lessons">درس‌ها</a>
+            <a href="#sec-compare">مقایسه</a>
+            <a href="#sec-vocab">واژگان</a>
+            <a href="#sec-traps">دام‌ها</a>
+            <a href="#sec-quiz">کوییز</a>
+            <a href="#sec-delta">سری دلتا</a>
+            <a href="#sec-mastery">تسلط</a>
+        </nav>
+
+        <section id="sec-questions" class="section active">
+            <h2 class="section-title">01 · نقشه‌ی سؤال‌ها</h2>
+            <p class="section-sub">۳۰ سوال با تحلیل کامل، ترجمه و اولویت</p>
+            <input class="search" id="search" placeholder="جست‌وجو: Pavlov, Skinner, Gestalt, Asch, conformity ...">
+            <div id="questionList"></div>
+        </section>
+
+        <section id="sec-lessons" class="section">
+            <h2 class="section-title">02 · درس‌های استخراج‌شده</h2>
+            <p class="section-sub">از سوال‌ها به دانش واقعی</p>
+            <div id="lessonContainer"></div>
+        </section>
+
+        <section id="sec-compare" class="section">
+            <h2 class="section-title">03 · مقایسه مفاهیم</h2>
+            <p class="section-sub">چیزهایی که نباید قاطی شوند</p>
+            <div id="compareContainer"></div>
+        </section>
+
+        <section id="sec-vocab" class="section">
+            <h2 class="section-title">04 · واژگان کلیدی</h2>
+            <p class="section-sub">لغات مهم با معنی و کاربرد</p>
+            <div id="vocabContainer"></div>
+        </section>
+
+        <section id="sec-traps" class="section">
+            <h2 class="section-title">05 · دام‌های امتحانی</h2>
+            <p class="section-sub">الگوهای فریب سوالات</p>
+            <div id="trapsContainer"></div>
+        </section>
+
+        <section id="sec-quiz" class="section">
+            <h2 class="section-title">06 · کوییز هوشمند</h2>
+            <p class="section-sub">مرور تطبیقی با اولویت S و تکرار اشتباهات</p>
+            <div class="quiz" id="quizContainer">
+                <div class="quiz-progress" id="quizProgress">سوال ۱ از ۱۰</div>
+                <div class="score-bar"><div class="score-fill" id="quizScoreFill"></div></div>
+                <h3 id="quizQuestion"></h3>
+                <div id="quizOptions" class="options"></div>
+                <div id="quizFeedback" class="feedback"></div>
+                <button id="quizNext" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+                <button id="quizReset" style="margin-top:8px;width:100%;justify-content:center;background:var(--soft);border-color:var(--line)">🔄 شروع مجدد</button>
+            </div>
+        </section>
+
+        <section id="sec-delta" class="section">
+            <h2 class="section-title">07 · سری دلتا</h2>
+            <p class="section-sub">مقایسه با سری‌های قبلی</p>
+            <div class="card">
+                <div class="grid2">
+                    <div class="box">
+                        <h4>🆕 مفاهیم جدید</h4>
+                        <p>Objectivity, Developmental Psychology, Experimental Psychology, Personality Psychology, Counseling Psychology, Industrial Psychology, Artificial Intelligence, Systematic Observation, Gestaltists, Oedipus Complex, Phobia, Extinction, Superstition, Punishment, Nurturist View, Conformity, Groupthink, Risky Shift</p>
+                    </div>
+                    <div class="box">
+                        <h4>🔁 مفاهیم تکراری</h4>
+                        <p>Classical Conditioning, Operant Conditioning, Habituation, Generalization, Discrimination, Reinforcer, Reinforcement Schedule, Skinner, Pavlov, Maslow, Humanism</p>
+                    </div>
+                    <div class="box">
+                        <h4>🔄 زاویه جدید</h4>
+                        <p>Generalization vs Discrimination (تکرار با مثال جدید)<br>Pavlov → Classical Conditioning (تکرار)<br>Skinner → Operant Conditioning (تکرار)</p>
+                    </div>
+                    <div class="box">
+                        <h4>⚠️ تکامل دام</h4>
+                        <p>Generalization vs Discrimination (دام اصلی)<br>Classical vs Operant Conditioning (دام)<br>Conformity vs Obedience (دام)</p>
+                    </div>
+                </div>
+                <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--line);">
+                    <p><b>🔥 ۸۰% CORE برای این سری:</b></p>
+                    <div class="vocab">
+                        <span class="word">Objectivity → precise definitions</span>
+                        <span class="word">Developmental Psychology → changes over time</span>
+                        <span class="word">Experimental Psychology → experimentation</span>
+                        <span class="word">Personality Psychology → motivational aspects</span>
+                        <span class="word">Gestalt → wholeness</span>
+                        <span class="word">Pavlov → Classical Conditioning</span>
+                        <span class="word">Skinner → Operant Conditioning</span>
+                        <span class="word">Habituation → decrease in response</span>
+                        <span class="word">Generalization → similar stimuli</span>
+                        <span class="word">Discrimination → different stimuli</span>
+                        <span class="word">Conformity → Asch's studies</span>
+                        <span class="word">Groupthink → reluctance to voice criticism</span>
+                        <span class="word">Risky Shift → group caution effect</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-mastery" class="section">
+            <h2 class="section-title">08 · سطح تسلط</h2>
+            <p class="section-sub">نقشه‌ی پیشرفت بر اساس مفاهیم</p>
+            <div class="card" id="masteryContainer"></div>
+        </section>
+
+        <div class="footer">Quizly · Master Engine · Series 05 · ساخته‌شده با معماری مادر · قابل توسعه برای سری‌های بعدی</div>
+    </div>
+
+    <script>
+        // ================================================================
+        //  DATA — SERIES 05 (30 Questions)
+        // ================================================================
+        const SERIES = {
+            id: '05',
+            questions: [{
+                id: 'Q01',
+                text: 'Which one requires definitions that are precise and fully understandable to any appropriately trained person?',
+                options: ['Concept', 'Objectivity', 'Repeatable', 'Reserve'],
+                answer: 1,
+                type: 'Definition',
+                concept: 'Objectivity',
+                priority: 'S',
+                keyword: 'precise, understandable, trained person',
+                fa: 'کدام یک نیاز به تعاریفی دارد که دقیق و کاملاً قابل درک برای هر فرد آموزش‌دیده باشد؟',
+                why: 'عینیت (Objectivity) نیاز به تعاریف دقیق و قابل درک دارد.',
+                whyOthers: 'سایر گزینه‌ها با این تعریف همخوانی ندارند.',
+                examinerLogic: 'عینیت یکی از پایه‌های روش علمی است.'
+            }, {
+                id: 'Q02',
+                text: 'Which kind of study comprises general psychology but with special attention to changes over time and, often, to particular age-groups?',
+                options: ['Public', 'Collective', 'Developmental', 'Humanism'],
+                answer: 2,
+                type: 'Concept Recognition',
+                concept: 'Developmental Psychology',
+                priority: 'A',
+                keyword: 'changes over time, age-groups',
+                fa: 'کدام نوع مطالعه شامل روان‌شناسی عمومی است اما با توجه ویژه به تغییرات در طول زمان و اغلب به گروه‌های سنی خاص؟',
+                why: 'روان‌شناسی تحولی (Developmental Psychology) به تغییرات در طول زمان و گروه‌های سنی می‌پردازد.',
+                whyOthers: 'سایر گزینه‌ها با این توصیف همخوانی ندارند.',
+                examinerLogic: 'روان‌شناسی تحولی بر تغییرات رشدی تأکید دارد.'
+            }, {
+                id: 'Q03',
+                text: 'Which broad domain of human psychology includes all topics that are especially amenable to experimentation?',
+                options: ['Neuroscience', 'Craniological', 'Intellect', 'Experimental'],
+                answer: 3,
+                type: 'Definition',
+                concept: 'Experimental Psychology',
+                priority: 'S',
+                keyword: 'experimentation',
+                fa: 'کدام حوزه گسترده روان‌شناسی انسانی شامل تمام موضوعاتی است که به ویژه برای آزمایش مناسب هستند؟',
+                why: 'روان‌شناسی تجربی (Experimental Psychology) حوزه‌ای است که بر آزمایش تأکید دارد.',
+                whyOthers: 'سایر گزینه‌ها حوزه‌های دیگری هستند.',
+                examinerLogic: 'روان‌شناسی تجربی پایه‌ترین حوزه پژوهشی است.'
+            }, {
+                id: 'Q04',
+                text: 'Who should show so much interest in nonhuman subjects when their field is centered on the study of human behavior?',
+                options: ['Psychoanalysts', 'Psychologists', 'Existentialists', 'Constructionists'],
+                answer: 1,
+                type: 'Concept Recognition',
+                concept: 'Psychology',
+                priority: 'B',
+                keyword: 'nonhuman subjects, human behavior',
+                fa: 'چه کسی باید چنین علاقه‌ای به سوژه‌های غیرانسانی نشان دهد در حالی که حوزه آنها بر مطالعه رفتار انسان متمرکز است؟',
+                why: 'روان‌شناسان (Psychologists) از حیوانات در پژوهش‌های خود استفاده می‌کنند.',
+                whyOthers: 'سایر گزینه‌ها حوزه‌های دیگری هستند.',
+                examinerLogic: 'استفاده از حیوانات در پژوهش‌های روان‌شناسی.'
+            }, {
+                id: 'Q05',
+                text: 'They are particularly interested in the motivational aspects of behavior.',
+                options: ['Neuropsychology', 'General Psychology', 'Individual psychology', 'Personality psychology'],
+                answer: 3,
+                type: 'Concept Recognition',
+                concept: 'Personality Psychology',
+                priority: 'A',
+                keyword: 'motivational aspects',
+                fa: 'آنها به ویژه به جنبه‌های انگیزشی رفتار علاقه‌مندند.',
+                why: 'روان‌شناسی شخصیت (Personality psychology) به جنبه‌های انگیزشی و فردی رفتار می‌پردازد.',
+                whyOthers: 'سایر گزینه‌ها حوزه‌های دیگری هستند.',
+                examinerLogic: 'روان‌شناسی شخصیت بر انگیزه‌ها و تفاوت‌های فردی تأکید دارد.'
+            }, {
+                id: 'Q06',
+                text: 'What are called the psychologists work primarily with people who have only minor problems, such as those associated with educational or vocational choices?',
+                options: ['Psychotherapist', 'Behavior therapy', 'Counseling', 'Treatment'],
+                answer: 2,
+                type: 'Definition',
+                concept: 'Counseling Psychology',
+                priority: 'A',
+                keyword: 'minor problems, educational or vocational',
+                fa: 'روان‌شناسانی که عمدتاً با افرادی کار می‌کنند که فقط مشکلات جزئی دارند، مانند موارد مرتبط با انتخاب تحصیلی یا شغلی، چه نام دارند؟',
+                why: 'روان‌شناسان مشاوره‌ای (Counseling) با مشکلات جزئی سروکار دارند.',
+                whyOthers: 'سایر گزینه‌ها یا درمان‌های دیگر هستند یا دقیق نیستند.',
+                examinerLogic: 'تفاوت مشاوره و روان‌درمانی بالینی.'
+            }, {
+                id: 'Q07',
+                text: 'What are Industrial psychologists also called?',
+                options: ['Business psychologists', 'Counseling psychologists', 'Engineering psychologists',
+                    'Social psychologists'
+                ],
+                answer: 0,
+                type: 'Concept Recognition',
+                concept: 'Industrial Psychology',
+                priority: 'B',
+                keyword: 'Industrial psychologists, also called',
+                fa: 'روان‌شناسان صنعتی به چه نامی نیز خوانده می‌شوند؟',
+                why: 'روان‌شناسان صنعتی را روان‌شناسان کسب‌وکار (Business psychologists) نیز می‌نامند.',
+                whyOthers: 'سایر گزینه‌ها حوزه‌های دیگری هستند.',
+                examinerLogic: 'روان‌شناسی صنعتی و کسب‌وکار.'
+            }, {
+                id: 'Q08',
+                text: 'Which one is essentially concerned with the use of computers to perform cognitive tasks of the sort that are usually considered evidence of human intelligence?',
+                options: ['Natural intelligence', 'Artificial intelligence', 'Spatial Intelligence',
+                    'Industrial intelligence'
+                ],
+                answer: 1,
+                type: 'Definition',
+                concept: 'Artificial Intelligence',
+                priority: 'B',
+                keyword: 'computers, cognitive tasks, human intelligence',
+                fa: 'کدام یک اساساً به استفاده از رایانه‌ها برای انجام وظایف شناختی از نوعی که معمولاً نشانه هوش انسانی در نظر گرفته می‌شوند، مربوط است؟',
+                why: 'هوش مصنوعی (Artificial intelligence) به استفاده از رایانه‌ها برای انجام وظایف شناختی می‌پردازد.',
+                whyOthers: 'سایر گزینه‌ها انواع دیگر هوش هستند.',
+                examinerLogic: 'هوش مصنوعی یکی از حوزه‌های بین‌رشته‌ای است.'
+            }, {
+                id: 'Q09',
+                text: 'The method was considered the exclusive property of psychologists working in the traditional areas of experimental psychology.',
+                options: ['Statistics', 'Experimental', 'Introspection', 'Subjectivism'],
+                answer: 2,
+                type: 'Concept Recognition',
+                concept: 'Introspection',
+                priority: 'A',
+                keyword: 'exclusive property, traditional areas, experimental psychology',
+                fa: 'این روش به عنوان مالکیت انحصاری روان‌شناسان شاغل در حوزه‌های سنتی روان‌شناسی تجربی در نظر گرفته می‌شد.',
+                why: 'درون‌نگری (Introspection) روش اصلی روان‌شناسی تجربی سنتی بود.',
+                whyOthers: 'سایر گزینه‌ها روش‌های دیگری هستند.',
+                examinerLogic: 'درون‌نگری روش اصلی ساختارگرایی بود.'
+            }, {
+                id: 'Q10',
+                text: 'Which one makes more sensitive and consistent our capacity to observe others and to infer what they are doing?',
+                options: ['Research Methodology', 'Anthropology', 'Scientology', 'Systematic observation'],
+                answer: 3,
+                type: 'Definition',
+                concept: 'Systematic Observation',
+                priority: 'B',
+                keyword: 'observe others, infer',
+                fa: 'کدام یک ظرفیت ما را برای مشاهده دیگران و استنباط آنچه انجام می‌دهند حساس‌تر و منسجم‌تر می‌کند؟',
+                why: 'مشاهده نظام‌مند (Systematic observation) ظرفیت مشاهده و استنباط را افزایش می‌دهد.',
+                whyOthers: 'سایر گزینه‌ها روش‌های دیگری هستند.',
+                examinerLogic: 'مشاهده نظام‌مند یکی از روش‌های تحقیق است.'
+            }, {
+                id: 'Q11',
+                text: 'Who saw the most significant aspect of experience as being its wholeness and interrelatedness?',
+                options: ['Behaviorists', 'Gestaltists', 'Psychoanalysts', 'Cognitivists'],
+                answer: 1,
+                type: 'Theory → Person',
+                concept: 'Gestalt Psychology',
+                priority: 'S',
+                keyword: 'wholeness, interrelatedness',
+                fa: 'چه کسی مهم‌ترین جنبه تجربه را کل‌گرایی و ارتباط متقابل آن می‌دانست؟',
+                why: 'گشتالت‌گرایان (Gestaltists) بر کل‌گرایی و ارتباط متقابل تجربه تأکید داشتند.',
+                whyOthers: 'سایر مکاتب به جنبه‌های دیگر توجه دارند.',
+                examinerLogic: 'گشتالت با واژه wholeness گره خورده است.'
+            }, {
+                id: 'Q12',
+                text: 'Regarding classical conditioning work with dogs, who is one of the cornerstones of modern learning theory?',
+                options: ['Sigmund Freud', 'Thorndike', 'Ivan Pavlov', 'Watson'],
+                answer: 2,
+                type: 'Person → Theory',
+                concept: 'Classical Conditioning',
+                priority: 'S',
+                keyword: 'classical conditioning, dogs',
+                fa: 'در رابطه با کار شرطی‌سازی کلاسیک با سگ‌ها، چه کسی یکی از ارکان نظریه یادگیری مدرن است؟',
+                why: 'ایوان پاولف (Ivan Pavlov) با آزمایشاتش روی سگ‌ها، یکی از ارکان نظریه یادگیری مدرن است.',
+                whyOthers: 'سایر افراد با حوزه‌های دیگر مرتبط هستند.',
+                examinerLogic: 'پاولف و شرطی‌سازی کلاسیک یک ارتباط کلاسیک است.'
+            }, {
+                id: 'Q13',
+                text: 'It often referred to as the third force in modern psychology.',
+                options: ['Industrial psychology', 'Ethnic psychology', 'Humanistic psychology',
+                    'Psychoanalytic psychology'
+                ],
+                answer: 2,
+                type: 'Theory Recognition',
+                concept: 'Humanism',
+                priority: 'S',
+                keyword: 'third force',
+                fa: 'اغلب به عنوان نیروی سوم در روان‌شناسی مدرن از آن یاد می‌شود.',
+                why: 'روان‌شناسی انسان‌گرا (Humanistic psychology) به عنوان نیروی سوم در روان‌شناسی شناخته می‌شود.',
+                whyOthers: 'سایر گزینه‌ها نیروی سوم نیستند.',
+                examinerLogic: 'انسان‌گرایی سومین نیروی روان‌شناسی است.'
+            }, {
+                id: 'Q14',
+                text: 'What is Maslow\'s persistent emphasis?',
+                options: ['Self-expression', 'Self-determination', 'Self-esteem', 'Self-actualization'],
+                answer: 3,
+                type: 'Person → Theory',
+                concept: 'Maslow',
+                priority: 'A',
+                keyword: 'Maslow, emphasis',
+                fa: 'تأکید مداوم مازلو چیست؟',
+                why: 'تأکید مداوم مازلو بر خودشکوفایی (Self-actualization) است.',
+                whyOthers: 'سایر گزینه‌ها جنبه‌های دیگر نظریه مازلو هستند اما تأکید اصلی خودشکوفایی است.',
+                examinerLogic: 'مازلو و سلسله مراتب نیازها، اوج آن خودشکوفایی است.'
+            }, {
+                id: 'Q15',
+                text: 'Which term refers to the Freud\'s belief about the relationship between an infant or child and the parent of the opposite sex?',
+                options: ['Oedipus Complex', 'Inferiority complex', 'Progression Complex', 'Fantasy'],
+                answer: 0,
+                type: 'Definition',
+                concept: 'Psychoanalysis',
+                priority: 'A',
+                keyword: 'Freud, infant, parent, opposite sex',
+                fa: 'کدام اصطلاح به باور فروید در مورد رابطه بین نوزاد یا کودک و والدین جنس مخالف اشاره دارد؟',
+                why: 'عقده ادیپ (Oedipus Complex) به رابطه کودک با والدین جنس مخالف اشاره دارد.',
+                whyOthers: 'سایر گزینه‌ها عقده‌های دیگری هستند.',
+                examinerLogic: 'عقده ادیپ یکی از مفاهیم کلیدی فروید است.'
+            }, {
+                id: 'Q16',
+                text: 'Which one refers to a decrease in response to repeated stimulation?',
+                options: ['Operant', 'Habituation', 'Conditioning', 'Opposite'],
+                answer: 1,
+                type: 'Definition',
+                concept: 'Habituation',
+                priority: 'S',
+                keyword: 'decrease, response, repeated stimulation',
+                fa: 'کدام یک به کاهش پاسخ به تحریک مکرر اشاره دارد؟',
+                why: 'خوگیری (Habituation) کاهش پاسخ به تحریک مکرر است.',
+                whyOthers: 'سایر گزینه‌ها معانی متفاوتی دارند.',
+                examinerLogic: 'خوگیری یکی از مفاهیم پایه یادگیری غیرتداعی‌گرا است.'
+            }, {
+                id: 'Q17',
+                text: 'What prompts different responses to similar stimuli?',
+                options: ['Generalization', 'Discrimination', 'Serendipity', 'Reinforced'],
+                answer: 1,
+                type: 'Definition',
+                concept: 'Discrimination',
+                priority: 'S',
+                keyword: 'different responses, similar stimuli',
+                fa: 'چه چیزی پاسخ‌های متفاوت به محرک‌های مشابه را ایجاد می‌کند؟',
+                why: 'تمایز (Discrimination) پاسخ‌های متفاوت به محرک‌های مشابه را ایجاد می‌کند.',
+                whyOthers: 'سایر گزینه‌ها معانی متفاوتی دارند.',
+                examinerLogic: 'تمایز در مقابل تعمیم یکی از دام‌های اصلی است.'
+            }, {
+                id: 'Q18',
+                text: 'What is an extreme pathological form of conditioned fear called?',
+                options: ['Mental disorder', 'Phobia', 'Irregularity', 'Sick'],
+                answer: 1,
+                type: 'Definition',
+                concept: 'Phobia',
+                priority: 'A',
+                keyword: 'extreme, pathological, conditioned fear',
+                fa: 'شکل آسیب‌شناختی شدید ترس شرطی چه نام دارد؟',
+                why: 'فوبیا (Phobia) شکل شدید و آسیب‌شناختی ترس شرطی است.',
+                whyOthers: 'سایر گزینه‌ها دقیق نیستند.',
+                examinerLogic: 'فوبیا یکی از اختلالات اضطرابی است.'
+            }, {
+                id: 'Q19',
+                text: 'After number of trials with the CS, the UCS is omitted, the learned behavior may continue for a while but eventually will disappear.',
+                options: ['Hidden', 'Appear', 'Arise', 'Extinction'],
+                answer: 3,
+                type: 'Definition',
+                concept: 'Extinction',
+                priority: 'A',
+                keyword: 'CS, UCS omitted, disappear',
+                fa: 'پس از تعدادی آزمایش با CS، UCS حذف می‌شود، رفتار آموخته‌شده ممکن است مدتی ادامه یابد اما در نهایت ناپدید می‌شود.',
+                why: 'این فرآیند خاموشی (Extinction) نام دارد.',
+                whyOthers: 'سایر گزینه‌ها با این فرآیند همخوانی ندارند.',
+                examinerLogic: 'خاموشی یکی از مفاهیم کلیدی شرطی‌سازی است.'
+            }, {
+                id: 'Q20',
+                text: 'Which one did Skinner propose of behavior that would supersede all present known means of controlling behavior?',
+                options: ['Conditioning', 'Happiness', 'Technology', 'Joyfulness'],
+                answer: 2,
+                type: 'Person → Theory',
+                concept: 'Skinner',
+                priority: 'A',
+                keyword: 'Skinner, supersede, controlling behavior',
+                fa: 'اسکینر کدام یک را برای رفتار پیشنهاد کرد که بر تمام روش‌های شناخته‌شده فعلی کنترل رفتار برتری دارد؟',
+                why: 'اسکینر "فناوری رفتار" (Technology of behavior) را پیشنهاد کرد.',
+                whyOthers: 'سایر گزینه‌ها با نظریه اسکینر مرتبط نیستند.',
+                examinerLogic: 'اسکینر به دنبال فناوری کنترل رفتار بود.'
+            }, {
+                id: 'Q21',
+                text: 'Whose thesis is that human beings and thus society are controlled by a haphazard assortment of rewards and punishments?',
+                options: ['Skinner', 'Freud', 'Pavlov', 'Rogers'],
+                answer: 0,
+                type: 'Person → Theory',
+                concept: 'Skinner',
+                priority: 'S',
+                keyword: 'haphazard assortment, rewards and punishments',
+                fa: 'تز چه کسی است که انسان‌ها و در نتیجه جامعه توسط مجموعه تصادفی از پاداش‌ها و تنبیه‌ها کنترل می‌شوند؟',
+                why: 'این تز متعلق به اسکینر (Skinner) است.',
+                whyOthers: 'سایر افراد با نظریه‌های دیگر مرتبط هستند.',
+                examinerLogic: 'اسکینر بر نقش پاداش و تنبیه در کنترل رفتار تأکید دارد.'
+            }, {
+                id: 'Q22',
+                text: 'Which one can establish behaviors?',
+                options: ['Felicity', 'Reinforcers', 'Appropriateness', 'Participation'],
+                answer: 1,
+                type: 'Concept Recognition',
+                concept: 'Reinforcement',
+                priority: 'A',
+                keyword: 'establish behaviors',
+                fa: 'کدام یک می‌تواند رفتارها را ایجاد کند؟',
+                why: 'تقویت‌کننده‌ها (Reinforcers) می‌توانند رفتارها را ایجاد کنند.',
+                whyOthers: 'سایر گزینه‌ها با ایجاد رفتار مرتبط نیستند.',
+                examinerLogic: 'تقویت‌کننده‌ها نقش کلیدی در شرطی‌سازی کنش‌گر دارند.'
+            }, {
+                id: 'Q23',
+                text: 'In which kind of Schedule, the reinforcement is available after a period of time that varies from one reinforcement to the next?',
+                options: ['Variable-Ratio Schedule', 'Fixed-Ratio Schedule', 'Fixed-Interval Schedule',
+                    'Variable-Interval Schedule'
+                ],
+                answer: 3,
+                type: 'Definition',
+                concept: 'Variable-Interval Schedule',
+                priority: 'S',
+                keyword: 'period of time varies, reinforcement',
+                fa: 'در کدام نوع برنامه، تقویت پس از یک دوره زمانی که از یک تقویت به تقویت بعدی متفاوت است، در دسترس است؟',
+                why: 'برنامه فاصله متغیر (Variable-Interval Schedule) این ویژگی را دارد.',
+                whyOthers: 'سایر برنامه‌ها ویژگی‌های متفاوتی دارند.',
+                examinerLogic: 'برنامه‌های تقویت یکی از مفاهیم کلیدی اسکینر است.'
+            }, {
+                id: 'Q24',
+                text: 'Which one refers to the belief that the repetition of a behavior will elicit or prevent an event, results when an individual mistakenly thinks that a certain incidental action or situation is the cause?',
+                options: ['Contiguity', 'Superstition', 'Decision', 'Determination'],
+                answer: 1,
+                type: 'Definition',
+                concept: 'Superstition',
+                priority: 'B',
+                keyword: 'repetition, elicit or prevent, mistakenly',
+                fa: 'کدام یک به این باور اشاره دارد که تکرار یک رفتار باعث ایجاد یا جلوگیری از یک رویداد می‌شود، زمانی که فرد به اشتباه فکر می‌کند که یک عمل یا موقعیت خاص علت است؟',
+                why: 'خرافه (Superstition) این باور اشتباه را توصیف می‌کند.',
+                whyOthers: 'سایر گزینه‌ها با این تعریف همخوانی ندارند.',
+                examinerLogic: 'خرافه یکی از مفاهیم جالب در روان‌شناسی است.'
+            }, {
+                id: 'Q25',
+                text: 'Which one is firmly ingrained in our method of interpersonal and societal control?',
+                options: ['Encouragement', 'Punishment', 'Imitation', 'Fake'],
+                answer: 1,
+                type: 'Concept Recognition',
+                concept: 'Punishment',
+                priority: 'B',
+                keyword: 'ingrained, interpersonal, societal control',
+                fa: 'کدام یک به طور محکم در روش کنترل بین‌فردی و اجتماعی ما ریشه دوانده است؟',
+                why: 'تنبیه (Punishment) به طور محکم در روش‌های کنترل اجتماعی ریشه دارد.',
+                whyOthers: 'سایر گزینه‌ها به این شکل در کنترل اجتماعی ریشه ندارند.',
+                examinerLogic: 'تنبیه یکی از روش‌های قدیمی کنترل اجتماعی است.'
+            }, {
+                id: 'Q26',
+                text: 'What kind of learning were the Harlow studies about?',
+                options: ['Reinforcement learning', 'Insightful learning', 'Always learning', 'Explicit learning'],
+                answer: 1,
+                type: 'Concept Recognition',
+                concept: 'Insightful Learning',
+                priority: 'B',
+                keyword: 'Harlow, learning',
+                fa: 'مطالعات هارلو در مورد چه نوع یادگیری بود؟',
+                why: 'مطالعات هارلو در مورد یادگیری بینش (Insightful learning) بود.',
+                whyOthers: 'سایر گزینه‌ها با مطالعات هارلو مرتبط نیستند.',
+                examinerLogic: 'هارلو به خاطر مطالعاتش در مورد یادگیری بینش شناخته شده است.'
+            }, {
+                id: 'Q27',
+                text: 'Which view of aggression has generally been favored by social psychologists?',
+                options: ['Development', 'Nurturist', 'Span', 'Limited area'],
+                answer: 1,
+                type: 'Concept Recognition',
+                concept: 'Nurturist View',
+                priority: 'B',
+                keyword: 'aggression, social psychologists',
+                fa: 'کدام دیدگاه در مورد پرخاشگری عموماً توسط روان‌شناسان اجتماعی مورد توجه قرار گرفته است؟',
+                why: 'دیدگاه تربیتی (Nurturist view) در مورد پرخاشگری توسط روان‌شناسان اجتماعی مورد توجه قرار گرفته است.',
+                whyOthers: 'سایر گزینه‌ها دیدگاه‌های دیگری هستند.',
+                examinerLogic: 'بحث طبیعت در برابر تربیت در مورد پرخاشگری.'
+            }, {
+                id: 'Q28',
+                text: 'What has been in an impressive series of studies by Solomon Asch?',
+                options: ['Conformity', 'Aggression', 'Divorce', 'Termination'],
+                answer: 0,
+                type: 'Person → Concept',
+                concept: 'Conformity',
+                priority: 'S',
+                keyword: 'Solomon Asch, studies',
+                fa: 'سری مطالعات چشمگیر سولومون اش در مورد چه بود؟',
+                why: 'مطالعات سولومون اش در مورد همنوایی (Conformity) بود.',
+                whyOthers: 'سایر گزینه‌ها با مطالعات اش مرتبط نیستند.',
+                examinerLogic: 'مطالعات اش یکی از معروف‌ترین مطالعات روان‌شناسی اجتماعی است.'
+            }, {
+                id: 'Q29',
+                text: 'What is called this apparent effect a group upon the caution of individual members?',
+                options: ['The effect of practice', 'Reciprocal', 'Composition', 'Risky shift'],
+                answer: 3,
+                type: 'Definition',
+                concept: 'Risky Shift',
+                priority: 'A',
+                keyword: 'group, caution, individual members',
+                fa: 'این اثر ظاهری گروه بر احتیاط اعضای فردی چه نام دارد؟',
+                why: 'تغییر ریسک‌پذیری (Risky shift) اثر گروه بر احتیاط اعضای فردی است.',
+                whyOthers: 'سایر گزینه‌ها با این اثر مرتبط نیستند.',
+                examinerLogic: 'تغییر ریسک‌پذیری یکی از پدیده‌های روان‌شناسی اجتماعی است.'
+            }, {
+                id: 'Q30',
+                text: 'Which one refers to the reluctance of some members of a group to voice criticism?',
+                options: ['Group effect', 'Groupthink', 'Group confrontation', 'Face to face'],
+                answer: 1,
+                type: 'Definition',
+                concept: 'Groupthink',
+                priority: 'A',
+                keyword: 'reluctance, voice criticism',
+                fa: 'کدام یک به عدم تمایل برخی از اعضای گروه برای ابراز انتقاد اشاره دارد؟',
+                why: 'تفکر گروهی (Groupthink) به عدم تمایل به ابراز انتقاد اشاره دارد.',
+                whyOthers: 'سایر گزینه‌ها با این تعریف همخوانی ندارند.',
+                examinerLogic: 'تفکر گروهی یکی از مفاهیم کلیدی روان‌شناسی اجتماعی است.'
+            }],
+            lessons: [{
+                title: '🧠 مفاهیم پایه روان‌شناسی',
+                concepts: [
+                    { name: 'Objectivity', definition: 'Requires precise and understandable definitions.',
+                        fa: 'نیازمند تعاریف دقیق و قابل درک است.', keyword: 'precise' },
+                    { name: 'Developmental Psychology', definition: 'Studies changes over time and age-groups.',
+                        fa: 'تغییرات در طول زمان و گروه‌های سنی را مطالعه می‌کند.', keyword: 'changes over time' },
+                    { name: 'Experimental Psychology', definition: 'Focuses on topics amenable to experimentation.',
+                        fa: 'بر موضوعات قابل آزمایش تمرکز دارد.', keyword: 'experimentation' }
+                ]
+            }, {
+                title: '📚 مکاتب و نظریه‌ها',
+                concepts: [
+                    { name: 'Gestalt', definition: 'Emphasizes wholeness and interrelatedness of experience.',
+                        fa: 'بر کل‌گرایی و ارتباط متقابل تجربه تأکید دارد.', keyword: 'wholeness' },
+                    { name: 'Humanism', definition: 'The third force in psychology, emphasizes growth and self-actualization.',
+                        fa: 'نیروی سوم روان‌شناسی، بر رشد و خودشکوفایی تأکید دارد.', keyword: 'Maslow, self-actualization' },
+                    { name: 'Psychoanalysis', definition: 'Freud\'s theory including Oedipus complex.',
+                        fa: 'نظریه فروید شامل عقده ادیپ.', keyword: 'Freud' }
+                ]
+            }, {
+                title: '🧑‍🤝‍🧑 روان‌شناسی اجتماعی',
+                concepts: [
+                    { name: 'Conformity', definition: 'Changing behavior to fit in with a group.', fa: 'تغییر رفتار برای هماهنگی با گروه.',
+                        keyword: 'Asch' },
+                    { name: 'Groupthink', definition: 'Reluctance to voice criticism in a group.', fa: 'عدم تمایل به ابراز انتقاد در گروه.',
+                        keyword: 'reluctance' },
+                    { name: 'Risky Shift', definition: 'Group effect on caution of individual members.',
+                        fa: 'اثر گروه بر احتیاط اعضای فردی.', keyword: 'caution' }
+                ]
+            }],
+            comparisons: [
+                { a: 'Generalization', aTrigger: 'similar stimuli → similar response', b: 'Discrimination',
+                    bTrigger: 'different stimuli → different response', diff: 'تعمیم: پاسخ مشابه به محرک مشابه | تمایز: پاسخ متفاوت به محرک متفاوت' },
+                { a: 'Classical Conditioning', aTrigger: 'Pavlov, association', b: 'Operant Conditioning',
+                    bTrigger: 'Skinner, consequence', diff: 'کلاسیک: ارتباط محرک‌ها | کنش‌گر: پیامد رفتار' },
+                { a: 'Conformity', aTrigger: 'Asch, social pressure', b: 'Groupthink', bTrigger: 'reluctance to criticize',
+                    diff: 'همنوایی: هماهنگی با گروه | تفکر گروهی: عدم ابراز انتقاد' }
+            ],
+            vocabulary: [
+                { word: 'objectivity', meaning: 'عینیت', en: 'Objectivity = based on facts, not opinions.',
+                    example: 'Objectivity requires precise definitions.' },
+                { word: 'developmental', meaning: 'تحولی', en: 'Developmental = relating to development.',
+                    example: 'Developmental psychology studies changes.' },
+                { word: 'habituation', meaning: 'خوگیری', en: 'Habituation = decreased response to repeated stimulus.',
+                    example: 'After repeated exposure, habituation occurs.' },
+                { word: 'generalization', meaning: 'تعمیم', en: 'Generalization = similar responses to similar stimuli.',
+                    example: 'Stimulus generalization.' },
+                { word: 'discrimination', meaning: 'تمایز', en: 'Discrimination = different responses to different stimuli.',
+                    example: 'Stimulus discrimination.' },
+                { word: 'conformity', meaning: 'همنوایی', en: 'Conformity = changing to fit in with a group.',
+                    example: 'Asch\'s conformity studies.' },
+                { word: 'groupthink', meaning: 'تفکر گروهی', en: 'Groupthink = reluctance to voice criticism.',
+                    example: 'Groupthink leads to poor decisions.' },
+                { word: 'phobia', meaning: 'فوبیا', en: 'Phobia = extreme fear of a specific object or situation.',
+                    example: 'A phobia is a conditioned fear.' }
+            ],
+            traps: [{
+                trigger: 'generalization',
+                concept: 'Generalization',
+                advice: 'تعمیم یعنی پاسخ مشابه به محرک‌های مشابه.',
+                whyExaminer: 'تعمیم و تمایز دو مفهوم متضاد هستند که اغلب با هم اشتباه می‌شوند.'
+            }, {
+                trigger: 'discrimination',
+                concept: 'Discrimination',
+                advice: 'تمایز یعنی پاسخ متفاوت به محرک‌های متفاوت.',
+                whyExaminer: 'تمایز در مقابل تعمیم یکی از دام‌های اصلی است.'
+            }, {
+                trigger: 'Pavlov',
+                concept: 'Classical Conditioning',
+                advice: 'پاولف همیشه با شرطی‌سازی کلاسیک همراه است.',
+                whyExaminer: 'پاولف و شرطی‌سازی کلاسیک یک ارتباط کلاسیک است.'
+            }, {
+                trigger: 'Skinner',
+                concept: 'Operant Conditioning',
+                advice: 'اسکینر همیشه با شرطی‌سازی کنش‌گر همراه است.',
+                whyExaminer: 'اسکینر و شرطی‌سازی کنش‌گر یک ارتباط کلاسیک است.'
+            }, {
+                trigger: 'conformity vs groupthink',
+                concept: 'Conformity vs Groupthink',
+                advice: 'همنوایی: هماهنگی با گروه | تفکر گروهی: عدم ابراز انتقاد',
+                whyExaminer: 'این دو مفهوم در روان‌شناسی اجتماعی اغلب با هم قاطی می‌شوند.'
+            }, {
+                trigger: 'extinction',
+                concept: 'Extinction',
+                advice: 'خاموشی = ناپدید شدن رفتار آموخته‌شده پس از حذف تقویت.',
+                whyExaminer: 'خاموشی یکی از مفاهیم کلیدی شرطی‌سازی است.'
+            }]
+        };
+
+        // ================================================================
+        //  MASTERY TRACKING
+        // ================================================================
+        let masteryData = {};
+
+        // ================================================================
+        //  RENDER FUNCTIONS
+        // ================================================================
+
+        function renderQuestions() {
+            const c = document.getElementById('questionList');
+            c.innerHTML = SERIES.questions.map((q, i) => {
+                const optLabels = ['الف', 'ب', 'ج', 'د'];
+                return `
+                    <div class="card question">
+                        <span class="qnum">${q.id}</span>
+                        <span class="badge ${q.priority === 'S' ? 's' : q.priority === 'A' ? 'a' : 'b'}">${q.priority}</span>
+                        <span class="badge direct" style="margin-right:6px;">${q.type}</span>
+                        <div class="en">${q.text}</div>
+                        <div class="fa">${q.fa}</div>
+                        <div style="margin:6px 0;">
+                            ${q.options.map((o, oi) => `<span style="display:inline-block;margin-left:10px;font-size:13px;${oi === q.answer ? 'color:var(--green);font-weight:bold;' : ''}">${optLabels[oi]}) ${o}</span>`).join('')}
+                        </div>
+                        <div><b>پاسخ:</b> <span class="answer">${q.options[q.answer]}</span></div>
+                        <div style="font-size:13px;color:var(--muted);margin-top:4px;">🔑 ${q.keyword}</div>
+                        <div style="font-size:13px;color:var(--muted);">✅ ${q.why}</div>
+                        <div style="font-size:13px;color:var(--muted);">❌ ${q.whyOthers}</div>
+                        ${q.examinerLogic ? `<div style="font-size:13px;color:var(--pink);margin-top:4px;">🎯 ${q.examinerLogic}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderLessons() {
+            const c = document.getElementById('lessonContainer');
+            c.innerHTML = SERIES.lessons.map(l => `
+                <div class="card">
+                    <div class="card-head"><h3>${l.title}</h3></div>
+                    <div class="grid2">
+                        ${l.concepts.map(con => `
+                            <div class="box">
+                                <h4>${con.name}</h4>
+                                <div class="en">${con.definition}</div>
+                                <div class="fa">${con.fa}</div>
+                                <div style="font-size:13px;color:var(--pink);">🔑 ${con.keyword}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderCompare() {
+            const c = document.getElementById('compareContainer');
+            c.innerHTML = `
+                <div class="card" style="overflow-x:auto;padding:10px 0;">
+                    <table class="compare">
+                        <thead><tr><th>مفهوم A</th><th>نشانه</th><th>در مقابل</th><th>نشانه</th><th>تفاوت</th></tr></thead>
+                        <tbody>
+                            ${SERIES.comparisons.map(cmp => `
+                                <tr>
+                                    <td><strong>${cmp.a}</strong></td>
+                                    <td style="color:var(--muted);font-size:13px;">${cmp.aTrigger}</td>
+                                    <td><span style="background:var(--pink);color:#fff;padding:0 10px;border-radius:30px;font-weight:700;">VS</span></td>
+                                    <td><strong>${cmp.b}</strong></td>
+                                    <td style="color:var(--muted);font-size:13px;">${cmp.diff}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        function renderVocab() {
+            const c = document.getElementById('vocabContainer');
+            c.innerHTML = SERIES.vocabulary.map(v => `
+                <div class="card" style="padding:16px;">
+                    <h4 style="color:var(--pink);font-size:20px;margin:0;">${v.word}</h4>
+                    <div style="color:var(--muted);">${v.meaning}</div>
+                    <div class="en" style="font-size:14px;padding:8px 12px;margin:6px 0;">${v.en}</div>
+                    <div style="font-size:13px;color:var(--muted);">📌 ${v.example}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderTraps() {
+            const c = document.getElementById('trapsContainer');
+            c.innerHTML = SERIES.traps.map(t => `
+                <div class="card trap">
+                    <strong>اگر در سوال دیدی: ${t.trigger}</strong>
+                    <div style="font-size:18px;margin:4px 0;">→ ${t.concept}</div>
+                    <div style="color:var(--muted);">💡 ${t.advice}</div>
+                    <div style="font-size:13px;color:var(--pink);margin-top:4px;">🎯 ${t.whyExaminer}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderMastery() {
+            const c = document.getElementById('masteryContainer');
+            const concepts = [...new Set(SERIES.questions.map(q => q.concept))];
+            concepts.forEach(con => {
+                if (!masteryData[con]) masteryData[con] = { correct: 0, total: 0 };
+            });
+            let html = `<div class="mastery-grid">`;
+            concepts.forEach(con => {
+                const data = masteryData[con] || { correct: 0, total: 0 };
+                const pct = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
+                const color = pct >= 80 ? 'var(--green)' : pct >= 50 ? 'var(--yellow)' : 'var(--pink)';
+                html += `
+                    <div class="mastery-item">
+                        <strong>${con}</strong>
+                        <span style="float:left;font-size:12px;">${pct}%</span>
+                        <div class="bar"><div class="fill" style="width:${pct}%;background:${color};"></div></div>
+                        <div style="font-size:11px;color:var(--muted);">${data.correct}/${data.total}</div>
+                    </div>
+                `;
+            });
+            html += `</div>`;
+            c.innerHTML = html;
+        }
+
+        // ---- SEARCH ----
+        document.getElementById('search').addEventListener('input', function(e) {
+            const q = e.target.value.toLowerCase();
+            document.querySelectorAll('#questionList .question').forEach(c => {
+                const txt = c.textContent.toLowerCase();
+                c.style.display = txt.includes(q) ? 'block' : 'none';
+            });
+        });
+
+        // ---- THEME ----
+        document.getElementById('theme').onclick = function() {
+            const dark = document.documentElement.dataset.theme === 'dark';
+            document.documentElement.dataset.theme = dark ? '' : 'dark';
+            this.textContent = dark ? '🌙 تم شب' : '☀️ تم روز';
+        };
+
+        // ---- NAVIGATION ----
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+                const target = this.getAttribute('href').substring(1);
+                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                document.getElementById(target).classList.add('active');
+                document.getElementById(target).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+        document.querySelector('nav a')?.classList.add('active');
+
+        // ================================================================
+        //  SMART QUIZ ENGINE
+        // ================================================================
+        let quizQuestions = [];
+        let currentQuiz = 0;
+        let quizScore = 0;
+        let quizAnswered = false;
+
+        function buildSmartQuiz() {
+            const priorityOrder = { 'S': 0, 'A': 1, 'B': 2 };
+            const sorted = [...SERIES.questions].sort((a, b) => {
+                const aMastery = masteryData[a.concept] || { correct: 0, total: 0 };
+                const bMastery = masteryData[b.concept] || { correct: 0, total: 0 };
+                const aPct = aMastery.total > 0 ? aMastery.correct / aMastery.total : 0;
+                const bPct = bMastery.total > 0 ? bMastery.correct / bMastery.total : 0;
+                const aPrio = priorityOrder[a.priority] || 2;
+                const bPrio = priorityOrder[b.priority] || 2;
+                const aScore = (1 - aPct) * 0.6 + (1 - aPrio / 2) * 0.4;
+                const bScore = (1 - bPct) * 0.6 + (1 - bPrio / 2) * 0.4;
+                return bScore - aScore;
+            });
+            const count = Math.min(10, sorted.length);
+            quizQuestions = sorted.slice(0, count);
+            currentQuiz = 0;
+            quizScore = 0;
+            quizAnswered = false;
+            renderQuiz();
+        }
+
+        function renderQuiz() {
+            const q = quizQuestions[currentQuiz];
+            if (!q) {
+                document.getElementById('quizQuestion').textContent = '🎉 همه سوالات پاسخ داده شد!';
+                document.getElementById('quizOptions').innerHTML = '';
+                document.getElementById('quizFeedback').textContent = `نمره نهایی: ${quizScore} از ${quizQuestions.length}`;
+                document.getElementById('quizProgress').textContent = `پایان`;
+                document.getElementById('quizScoreFill').style.width = `${(quizScore / quizQuestions.length) * 100}%`;
+                renderMastery();
+                return;
+            }
+            document.getElementById('quizQuestion').textContent = q.text;
+            document.getElementById('quizProgress').textContent = `سوال ${currentQuiz + 1} از ${quizQuestions.length}`;
+            document.getElementById('quizFeedback').textContent = '';
+            document.getElementById('quizScoreFill').style.width = `${(quizScore / quizQuestions.length) * 100}%`;
+            quizAnswered = false;
+
+            const optLabels = ['الف', 'ب', 'ج', 'د'];
+            document.getElementById('quizOptions').innerHTML = q.options.map((o, i) =>
+                `<button class="option" data-i="${i}">${optLabels[i]}) ${o}</button>`
+            ).join('');
+
+            document.querySelectorAll('#quizOptions .option').forEach(btn => {
+                btn.onclick = function() {
+                    if (quizAnswered) return;
+                    quizAnswered = true;
+                    const selected = parseInt(this.dataset.i);
+                    const correct = selected === q.answer;
+                    if (correct) quizScore++;
+
+                    if (!masteryData[q.concept]) masteryData[q.concept] = { correct: 0, total: 0 };
+                    masteryData[q.concept].total++;
+                    if (correct) masteryData[q.concept].correct++;
+
+                    document.querySelectorAll('#quizOptions .option').forEach((b, idx) => {
+                        if (idx === q.answer) b.classList.add('correct');
+                        if (idx === selected && !correct) b.classList.add('wrong');
+                        b.style.cursor = 'default';
+                        b.onclick = null;
+                    });
+
+                    const feedback = document.getElementById('quizFeedback');
+                    feedback.textContent = correct ?
+                        `✅ درست! ${q.why}` :
+                        `❌ پاسخ صحیح: ${q.options[q.answer]}. ${q.why}`;
+                    document.getElementById('quizScoreFill').style.width = `${(quizScore / quizQuestions.length) * 100}%`;
+                    renderMastery();
+                    try {
+                        localStorage.setItem('quizly_mastery_05', JSON.stringify(masteryData));
+                    } catch (e) {}
+                };
+            });
+        }
+
+        document.getElementById('quizNext').onclick = function() {
+            if (currentQuiz < quizQuestions.length - 1) {
+                currentQuiz++;
+                renderQuiz();
+            } else {
+                document.getElementById('quizQuestion').textContent = '🎉 پایان کوییز!';
+                document.getElementById('quizOptions').innerHTML = '';
+                document.getElementById('quizFeedback').textContent = `نمره نهایی: ${quizScore} از ${quizQuestions.length}`;
+                document.getElementById('quizProgress').textContent = `پایان`;
+                document.getElementById('quizScoreFill').style.width = `${(quizScore / quizQuestions.length) * 100}%`;
+                renderMastery();
+            }
+        };
+
+        document.getElementById('quizReset').onclick = function() {
+            buildSmartQuiz();
+        };
+
+        // ================================================================
+        //  INIT
+        // ================================================================
+
+        try {
+            const saved = localStorage.getItem('quizly_mastery_05');
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                SERIES.questions.forEach(q => {
+                    if (parsed[q.concept]) {
+                        masteryData[q.concept] = parsed[q.concept];
+                    }
+                });
+            }
+        } catch (e) {}
+
+        const allConcepts = new Set(SERIES.questions.map(q => q.concept));
+        allConcepts.forEach(con => {
+            if (!masteryData[con]) masteryData[con] = { correct: 0, total: 0 };
+        });
+        document.getElementById('totalConcepts').textContent = allConcepts.size;
+
+        renderQuestions();
+        renderLessons();
+        renderCompare();
+        renderVocab();
+        renderTraps();
+        renderMastery();
+        buildSmartQuiz();
+
+        document.getElementById('totalQ').textContent = SERIES.questions.length;
+        document.getElementById('totalVocab').textContent = SERIES.vocabulary.length;
+        document.getElementById('totalTraps').textContent = SERIES.traps.length;
+    </script>
+</body>
+</html>
