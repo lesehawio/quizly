@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
 <title>Quizly · Metoon Series 01</title>
 <style>
 :root{
@@ -11,274 +11,403 @@
 --green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
 }
 [data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
 [data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
-.app{max-width:1180px;margin:auto;padding:22px}
-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}
-.brand{display:flex;align-items:center;gap:12px}.logo{width:54px;height:54px;border-radius:18px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:var(--shadow)}
-.brand h1{margin:0;font-size:24px}.brand small{color:var(--muted)}
-button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:10px 14px;border-radius:14px;cursor:pointer;font:inherit}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
 button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
-.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:42px 30px;border-radius:32px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.hero:after{content:"01";position:absolute;left:-15px;bottom:-55px;font-size:210px;font-weight:900;opacity:.09;line-height:1}
-.hero h2{margin:0;font-size:38px}.hero p{max-width:760px;opacity:.94;margin:10px 0 20px}
-.pills{display:flex;flex-wrap:wrap;gap:8px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:7px 12px;border-radius:99px;font-size:13px}
-.notice{margin:20px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:16px 20px;border-radius:20px;color:var(--muted)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
-.stat{background:var(--surface);border:1px solid var(--line);padding:17px;border-radius:20px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
-.stat b{display:block;font-size:25px;color:var(--pink)}.stat span{font-size:13px;color:var(--muted)}
-nav{position:sticky;top:8px;z-index:5;display:flex;gap:8px;overflow:auto;background:rgba(255,250,253,.86);backdrop-filter:blur(16px);padding:10px;border:1px solid var(--line);border-radius:20px;margin:18px 0}
-[data-theme=dark] nav{background:rgba(33,19,26,.86)}
-nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:7px 12px;border-radius:12px}nav a:hover{background:var(--soft);color:var(--pink)}
-.section{margin-top:42px}.section-title{font-size:27px;margin-bottom:5px}.section-sub{color:var(--muted);margin-top:0}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:22px;margin:15px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
-.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;flex-wrap:wrap}
-.badge{padding:4px 11px;border-radius:99px;font-size:12px;font-weight:bold}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
-.en{font-family:"Segoe UI",Arial,sans-serif;direction:ltr;text-align:left;background:var(--surface2);border:1px solid var(--line);border-radius:16px;padding:13px 16px;margin:14px 0;font-size:16px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.box{padding:15px;border-radius:18px;background:var(--surface2);border:1px solid var(--line)}
-.box h4{margin:0 0 8px;color:var(--pink)}.vocab{display:flex;flex-wrap:wrap;gap:8px}.word{background:var(--soft);padding:6px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:13px}
-details{background:var(--surface2);border:1px solid var(--line);border-radius:16px;padding:0 16px;margin-top:10px}summary{cursor:pointer;padding:11px 0;font-weight:bold}
-.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"01";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.en{font-family:"Segoe UI",Arial,sans-serif;direction:ltr;text-align:left;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
 .answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
-.compare{width:100%;border-collapse:collapse;margin-top:12px}.compare th,.compare td{border-bottom:1px solid var(--line);padding:10px;text-align:right}.compare th{color:var(--pink)}
-.search{width:100%;padding:15px 18px;border-radius:16px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
-.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:26px;padding:22px}.options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.option{text-align:right}.feedback{margin-top:12px;font-weight:bold;min-height:30px}
-.footer{padding:30px 0;color:var(--muted);text-align:center}
-@media(max-width:760px){.app{padding:14px}.hero{padding:30px 20px}.hero h2{font-size:29px}.stats,.grid2,.options{grid-template-columns:1fr}.section-title{font-size:23px}}
-.logo-icon {
-    width: 72px;
-    height: 72px;
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(12px);
-    border-radius: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border: 1px solid rgba(249,71,121,0.25);
-    box-shadow: 0 10px 30px rgba(249,71,121,0.15);
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
 }
-
-.logo-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 8px;
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.en,.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
 }
 </style>
 </head>
 <body>
 <div class="app">
 <header>
-    
-  <div class="brand"><div class="logo-icon">    <img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" 
-         alt="Quizly Logo"></div><div><h1>Quizly</h1><small>Metoon English · Series 01 Learning Pack</small></div></div>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>Metoon English · Series 01</small></div></div>
   <button id="theme">🌙 تم شب</button>
 </header>
 
 <section class="hero">
   <h2>متون انگلیسی در مشاوره<br>Series 01</h2>
-  <p>این صفحه یک «کلید پاسخ» نیست. هر سؤال به یک واحد یادگیری دوزبانه تبدیل شده تا از روی نمونه‌سؤال، خودِ درس را از صفر بسازی.</p>
-  <div class="pills"><span class="pill">30 سؤال این سری</span><span class="pill">English + فارسی</span><span class="pill">Learning Notes</span><span class="pill">Vocabulary</span><span class="pill">Exam Traps</span><span class="pill">Ready for Series Merge</span></div>
+  <p>هر سؤال به یک واحد یادگیری دوزبانه تبدیل شده تا از روی نمونه‌سؤال، خودِ درس را از صفر بسازی.</p>
+  <div class="pills"><span class="pill">30 سؤال</span><span class="pill">English + فارسی</span><span class="pill">یادداشت‌ها</span><span class="pill">واژگان</span><span class="pill">دام‌ها</span></div>
 </section>
 
-<div class="notice">
-<b>منطق این جزوه:</b> هر مفهومی که در این سری دیده شده اول از خود سؤال شروع می‌شود، بعد توضیح انگلیسی ساده و فارسی می‌گیرد، سپس به کلیدواژه‌ها، تفاوت‌ها و دام‌های همان سؤال وصل می‌شود. در سری‌های بعدی همین ساختار حفظ می‌شود تا بتوان «جدید»، «تکراری» و «زاویه‌ی جدید» را مشخص کرد.
-</div>
+<div class="notice"><b>منطق:</b> هر مفهومی که در این سری دیده شده اول از خود سؤال شروع می‌شود، بعد توضیح انگلیسی و فارسی می‌گیرد، سپس به کلیدواژه‌ها، تفاوت‌ها و دام‌های همان سؤال وصل می‌شود.</div>
 
 <div class="stats">
 <div class="stat"><b>30</b><span>سؤال تحلیل‌شده</span></div>
-<div class="stat"><b>7</b><span>سؤال یادگیری/شرطی‌سازی</span></div>
-<div class="stat"><b>5</b><span>سؤال روش تحقیق</span></div>
-<div class="stat"><b>6+</b><span>واژه و اصطلاح مستقیم</span></div>
+<div class="stat"><b>7</b><span>یادگیری/شرطی‌سازی</span></div>
+<div class="stat"><b>5</b><span>روش تحقیق</span></div>
+<div class="stat"><b>6+</b><span>واژه و اصطلاح</span></div>
 </div>
 
 <nav>
-<a href="#questions">سؤال‌ها</a><a href="#learning">درس‌ها</a><a href="#compare">مقایسه‌ها</a><a href="#vocab">واژگان</a><a href="#traps">دام‌ها</a><a href="#quiz">مینی‌کوییز</a>
+<a href="#questions">سؤال‌ها</a><a href="#learning">درس‌ها</a><a href="#compare">مقایسه</a><a href="#vocab">واژگان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
 </nav>
 
 <section id="questions" class="section">
 <h2 class="section-title">01 · نقشه‌ی سؤال‌ها</h2>
-<p class="section-sub">نسخه‌ی فشرده‌ی خود سؤال‌ها؛ جزئیات آموزشی هر خوشه پایین‌تر آمده است.</p>
-<input id="search" class="search" placeholder="جست‌وجو: Pavlov، conformity، variable، simulate ...">
+<p class="section-sub">نسخه‌ی فشرده‌ی خود سؤال‌ها با ترجمه‌ی فارسی</p>
+<input id="search" class="search" placeholder="جست‌وجو: Pavlov، conformity، variable ...">
 
 <div id="questionList">
+<!-- Q1 -->
 <div class="card question" data-search="objective precise broad subjective vague">
-<span class="qnum">Q01</span><div class="en">Psychological research is objective and repeatable. Objectivity requires definitions that are ______ and understandable to any appropriately trained person.</div>
+<span class="qnum">Q01</span>
+<div class="en">Psychological research is objective and repeatable. Objectivity requires definitions that are ______ and understandable to any appropriately trained person.</div>
+<div class="fa">پژوهش روان‌شناسی عینی و قابل تکرار است. عینیت مستلزم تعاریفی است که ______ و برای هر فرد آموزش‌دیده‌ای قابل درک باشد.</div>
 <b>پاسخ:</b> <span class="answer">precise</span> — دقیق. <span class="badge direct">Vocabulary</span>
 </div>
+
+<!-- Q2 -->
 <div class="card question" data-search="by and large in general">
-<span class="qnum">Q02</span><div class="en">There are a few small things that I don't like about my job, but (by and large) it's very enjoyable. The word "by and large" means ______.</div>
+<span class="qnum">Q02</span>
+<div class="en">There are a few small things that I don't like about my job, but (by and large) it's very enjoyable. The idiom "by and large" means ______.</div>
+<div class="fa">چند چیز کوچک هست که از شغلم خوشم نمی‌آید، اما (به طور کلی) خیلی لذت‌بخش است. اصطلاح "by and large" به چه معناست؟</div>
 <b>پاسخ:</b> <span class="answer">in general</span> — به طور کلی.
 </div>
+
+<!-- Q3 -->
 <div class="card question" data-search="science repeatable cumulative systematic">
-<span class="qnum">Q03</span><div class="en">Which one is NOT a characteristic of scientific studies?</div>
-<b>پاسخ:</b> <span class="answer">dramatic</span> — گزینه‌ی خارج از ویژگی‌های علمی.
+<span class="qnum">Q03</span>
+<div class="en">Which one is NOT a characteristic of scientific studies?</div>
+<div class="fa">کدام یک ویژگی مطالعات علمی نیست؟</div>
+<b>پاسخ:</b> <span class="answer">dramatic</span> — نمایشی.
 </div>
+
+<!-- Q4 -->
 <div class="card question" data-search="experimental psychology science formal natural behavioral">
-<span class="qnum">Q04</span><div class="en">Experimental psychology is on the borderline between physics and ______ sciences.</div>
-<b>پاسخ:</b> <span class="answer">natural</span>.
+<span class="qnum">Q04</span>
+<div class="en">Experimental psychology is on the borderline between physics and ______ sciences.</div>
+<div class="fa">روان‌شناسی تجربی در مرز بین فیزیک و علوم ______ قرار دارد.</div>
+<b>پاسخ:</b> <span class="answer">natural</span> — طبیعی.
 </div>
+
+<!-- Q5 -->
 <div class="card question" data-search="personality psychology behavior">
-<span class="qnum">Q05</span><div class="en">Personality psychologists are particularly interested in the ______ aspects of behavior.</div>
-<b>پاسخ:</b> <span class="answer">individual</span> — جنبه‌های فردی رفتار.
+<span class="qnum">Q05</span>
+<div class="en">Personality psychologists are particularly interested in the ______ aspects of behavior.</div>
+<div class="fa">روان‌شناسان شخصیت به ویژه به جنبه‌های ______ رفتار علاقه‌مندند.</div>
+<b>پاسخ:</b> <span class="answer">individual</span> — فردی.
 </div>
+
+<!-- Q6 -->
 <div class="card question" data-search="study human behavior quantitative qualitative social educational">
-<span class="qnum">Q06</span><div class="en">The primary aim of ______ psychology is to develop mathematical and statistical methods of studying human behavior.</div>
-<b>پاسخ:</b> <span class="answer">quantitative</span>.
+<span class="qnum">Q06</span>
+<div class="en">The primary aim of ______ psychology is to develop mathematical and statistical methods of studying human behavior.</div>
+<div class="fa">هدف اصلی روان‌شناسی ______ توسعه روش‌های ریاضی و آماری برای مطالعه رفتار انسان است.</div>
+<b>پاسخ:</b> <span class="answer">quantitative</span> — کمی.
 </div>
+
+<!-- Q7 -->
 <div class="card question" data-search="relationship psychology law environmental">
-<span class="qnum">Q07</span><div class="en">Which psychologists deal with all aspects of the relationship between psychology and law?</div>
-<b>پاسخ:</b> <span class="answer">forensic psychologists</span>.
+<span class="qnum">Q07</span>
+<div class="en">Which psychologists deal with all aspects of the relationship between psychology and law?</div>
+<div class="fa">کدام روان‌شناسان به تمام جنبه‌های رابطه بین روان‌شناسی و قانون می‌پردازند؟</div>
+<b>پاسخ:</b> <span class="answer">forensic psychologists</span> — روان‌شناسان قانونی.
 </div>
+
+<!-- Q8 -->
 <div class="card question" data-search="simulate imitate">
-<span class="qnum">Q08</span><div class="en">The use of computers to (simulate) thought or other psychological processes has also become a topic of major interest. The word "simulate" means ______.</div>
-<b>پاسخ:</b> <span class="answer">imitate</span> — شبیه‌سازی/تقلید کردن.
+<span class="qnum">Q08</span>
+<div class="en">The use of computers to (simulate) thought or other psychological processes has also become a topic of major interest. The word "simulate" means ______.</div>
+<div class="fa">استفاده از رایانه‌ها برای (شبیه‌سازی) تفکر یا سایر فرآیندهای روان‌شناسی نیز به موضوعی با اهمیت تبدیل شده است. کلمه "simulate" به چه معناست؟</div>
+<b>پاسخ:</b> <span class="answer">imitate</span> — تقلید کردن.
 </div>
+
+<!-- Q9 -->
 <div class="card question" data-search="variable characteristic vary">
-<span class="qnum">Q09</span><div class="en">Which one refers to the characteristic or attribute that may vary in amount or be present or absent?</div>
-<b>پاسخ:</b> <span class="answer">variable</span>.
+<span class="qnum">Q09</span>
+<div class="en">Which one refers to the characteristic or attribute that may vary in amount or be present or absent?</div>
+<div class="fa">کدام یک به ویژگی یا صفتی اشاره دارد که ممکن است در مقدار تغییر کند یا وجود داشته باشد یا نباشد؟</div>
+<b>پاسخ:</b> <span class="answer">variable</span> — متغیر.
 </div>
+
+<!-- Q10 -->
 <div class="card question" data-search="case study uncharted hypotheses variables">
-<span class="qnum">Q10</span><div class="en">When an investigator is working in a relatively uncharted area and has neither good hypotheses nor a firm sense of the key variables, which research method is more useful?</div>
-<b>پاسخ:</b> <span class="answer">case study</span>.
+<span class="qnum">Q10</span>
+<div class="en">When an investigator is working in a relatively uncharted area and has neither good hypotheses nor a firm sense of the key variables, which research method is more useful?</div>
+<div class="fa">وقتی یک محقق در حوزه‌ای نسبتاً ناشناخته کار می‌کند و نه فرضیه خوبی دارد و نه درک محکمی از متغیرهای کلیدی، کدام روش تحقیق مفیدتر است؟</div>
+<b>پاسخ:</b> <span class="answer">case study</span> — مطالعه موردی.
 </div>
+
+<!-- Q11 -->
 <div class="card question" data-search="gestalt wholeness interrelatedness">
-<span class="qnum">Q11</span><div class="en">Which theorists focused on the wholeness and interrelatedness of experience?</div>
-<b>پاسخ:</b> <span class="answer">Gestaltists</span>.
+<span class="qnum">Q11</span>
+<div class="en">Which theorists focused on the wholeness and interrelatedness of experience?</div>
+<div class="fa">کدام نظریه‌پردازان بر کل‌گرایی و ارتباط متقابل تجربه تمرکز داشتند؟</div>
+<b>پاسخ:</b> <span class="answer">Gestaltists</span> — گشتالت‌گرایان.
 </div>
+
+<!-- Q12 -->
 <div class="card question" data-search="significant important">
-<span class="qnum">Q12</span><div class="en">The drug has had no (significant) effect on stopping the spread of the disease. The word "significant" means ______.</div>
-<b>پاسخ:</b> <span class="answer">important</span>.
+<span class="qnum">Q12</span>
+<div class="en">The drug has had no (significant) effect on stopping the spread of the disease. The word "significant" means ______.</div>
+<div class="fa">دارو تأثیر (چندانی) در متوقف کردن گسترش بیماری نداشته است. کلمه "significant" به چه معناست؟</div>
+<b>پاسخ:</b> <span class="answer">important</span> — مهم.
 </div>
+
+<!-- Q13 -->
 <div class="card question" data-search="survey self reported observed behavior group characteristics">
-<span class="qnum">Q13</span><div class="en">Which one is a method of collecting information about a group's characteristics, self-reported and observed behavior, attitudes or opinions, and needs?</div>
-<b>پاسخ:</b> <span class="answer">survey</span>.
+<span class="qnum">Q13</span>
+<div class="en">Which one is a method of collecting information about a group's characteristics, self-reported and observed behavior, attitudes or opinions, and needs?</div>
+<div class="fa">کدام یک روش جمع‌آوری اطلاعات درباره ویژگی‌های یک گروه، رفتار خودگزارش‌دهی و مشاهده‌شده، نگرش‌ها یا عقاید و نیازهاست؟</div>
+<b>پاسخ:</b> <span class="answer">survey</span> — پیمایش.
 </div>
+
+<!-- Q14 -->
 <div class="card question" data-search="two variables related correlational experimental causal">
-<span class="qnum">Q14</span><div class="en">Which one aims at estimating the extent to which two or more variables are related or tend to covary?</div>
-<b>پاسخ:</b> <span class="answer">correlational techniques</span>.
+<span class="qnum">Q14</span>
+<div class="en">Which one aims at estimating the extent to which two or more variables are related or tend to covary?</div>
+<div class="fa">کدام یک با هدف برآورد میزان ارتباط یا هم‌تغییری دو یا چند متغیر است؟</div>
+<b>پاسخ:</b> <span class="answer">correlational techniques</span> — تکنیک‌های همبستگی.
 </div>
+
+<!-- Q15 -->
 <div class="card question" data-search="structuralism united states titchener">
-<span class="qnum">Q15</span><div class="en">Who played a crucial role in introducing Structuralism to the United States?</div>
-<b>پاسخ:</b> <span class="answer">Edward Titchener</span>.
+<span class="qnum">Q15</span>
+<div class="en">Who played a crucial role in introducing Structuralism to the United States?</div>
+<div class="fa">چه کسی نقش کلیدی در معرفی ساختارگرایی به ایالات متحده داشت؟</div>
+<b>پاسخ:</b> <span class="answer">Edward Titchener</span> — ادوارد تیتچنر.
 </div>
+
+<!-- Q16 -->
 <div class="card question" data-search="behavior experience sensation attending learning">
-<span class="qnum">Q16</span><div class="en">Which term is commonly defined as the modification of behavior through experience?</div>
-<b>پاسخ:</b> <span class="answer">learning</span>.
+<span class="qnum">Q16</span>
+<div class="en">Which term is commonly defined as the modification of behavior through experience?</div>
+<div class="fa">کدام اصطلاح معمولاً به عنوان تغییر رفتار از طریق تجربه تعریف می‌شود؟</div>
+<b>پاسخ:</b> <span class="answer">learning</span> — یادگیری.
 </div>
+
+<!-- Q17 -->
 <div class="card question" data-search="pavlov russian physiologist classical conditioning">
-<span class="qnum">Q17</span><div class="en">Which one is proposed by Russian physiologist Ivan Pavlov?</div>
-<b>پاسخ:</b> <span class="answer">classical conditioning</span>.
+<span class="qnum">Q17</span>
+<div class="en">Which one is proposed by Russian physiologist Ivan Pavlov?</div>
+<div class="fa">کدام یک توسط فیزیولوژیست روسی ایوان پاولف مطرح شده است؟</div>
+<b>پاسخ:</b> <span class="answer">classical conditioning</span> — شرطی‌سازی کلاسیک.
 </div>
+
+<!-- Q18 -->
 <div class="card question" data-search="habituation sensitization opposite">
-<span class="qnum">Q18</span><div class="en">Which one is the opposite of sensitization?</div>
-<b>پاسخ:</b> <span class="answer">habituation</span>.
+<span class="qnum">Q18</span>
+<div class="en">Which one is the opposite of sensitization?</div>
+<div class="fa">کدام یک متضاد حساس‌شدن است؟</div>
+<b>پاسخ:</b> <span class="answer">habituation</span> — خوگیری.
 </div>
+
+<!-- Q19 -->
 <div class="card question" data-search="reinforcer stimulus reward value">
-<span class="qnum">Q19</span><div class="en">In classical conditioning, a stimulus that has reward value, either positive or negative, is called a ______.</div>
-<b>پاسخ:</b> <span class="answer">reinforcer</span>.
+<span class="qnum">Q19</span>
+<div class="en">In classical conditioning, a stimulus that has reward value, either positive or negative, is called a ______.</div>
+<div class="fa">در شرطی‌سازی کلاسیک، محرکی که ارزش پاداش دارد، خواه مثبت یا منفی، ______ نامیده می‌شود.</div>
+<b>پاسخ:</b> <span class="answer">reinforcer</span> — تقویت‌کننده.
 </div>
+
+<!-- Q20 -->
 <div class="card question" data-search="trace conditioning conditioned stimulus unconditioned stimulus">
-<span class="qnum">Q20</span><div class="en">In which type of conditioning, the conditioned stimulus, such as a tone, is presented and terminated, and then a short interval is imposed before the presentation of the unconditioned stimulus?</div>
-<b>پاسخ:</b> <span class="answer">trace conditioning</span>.
+<span class="qnum">Q20</span>
+<div class="en">In which type of conditioning, the conditioned stimulus, such as a tone, is presented and terminated, and then a short interval is imposed before the presentation of the unconditioned stimulus?</div>
+<div class="fa">در کدام نوع شرطی‌سازی، محرک شرطی مانند یک صدا ارائه و خاتمه می‌یابد و سپس یک فاصله کوتاه قبل از ارائه محرک غیرشرطی اعمال می‌شود؟</div>
+<b>پاسخ:</b> <span class="answer">trace conditioning</span> — شرطی‌سازی ردگیری.
 </div>
+
+<!-- Q21 -->
 <div class="card question" data-search="insulin hormone blood glucose">
-<span class="qnum">Q21</span><div class="en">Which one is a hormone which is normally present in the bloodstream and regulates cellular uptake of blood sugar and cell metabolism?</div>
-<b>پاسخ:</b> <span class="answer">insulin</span>.
+<span class="qnum">Q21</span>
+<div class="en">Which one is a hormone which is normally present in the bloodstream and regulates cellular uptake of blood sugar and cell metabolism?</div>
+<div class="fa">کدام یک هورمونی است که به طور طبیعی در جریان خون وجود دارد و جذب قند خون توسط سلول‌ها و متابولیسم سلولی را تنظیم می‌کند؟</div>
+<b>پاسخ:</b> <span class="answer">insulin</span> — انسولین.
 </div>
+
+<!-- Q22 -->
 <div class="card question" data-search="skinner operant conditioning">
-<span class="qnum">Q22</span><div class="en">Who developed the concept of operant conditioning?</div>
-<b>پاسخ:</b> <span class="answer">B. F. Skinner</span>.
+<span class="qnum">Q22</span>
+<div class="en">Who developed the concept of operant conditioning?</div>
+<div class="fa">چه کسی مفهوم شرطی‌سازی کنش‌گر را توسعه داد؟</div>
+<b>پاسخ:</b> <span class="answer">B. F. Skinner</span> — بی.اف. اسکینر.
 </div>
+
+<!-- Q23 -->
 <div class="card question" data-search="punishment paired opportunities learn new responses">
-<span class="qnum">Q23</span><div class="en">Punishment may control behavior effectively when it is paired with ______ opportunities to learn new responses to replace old ones.</div>
-<b>پاسخ:</b> <span class="answer">ample</span>.
+<span class="qnum">Q23</span>
+<div class="en">Punishment may control behavior effectively when it is paired with ______ opportunities to learn new responses to replace old ones.</div>
+<div class="fa">تنبیه ممکن است زمانی به طور مؤثر رفتار را کنترل کند که با فرصت‌های ______ برای یادگیری پاسخ‌های جدید جهت جایگزینی پاسخ‌های قدیمی همراه شود.</div>
+<b>پاسخ:</b> <span class="answer">ample</span> — کافی.
 </div>
+
+<!-- Q24 -->
 <div class="card question" data-search="escape learning unpleasant stimulus">
-<span class="qnum">Q24</span><div class="en">Escape learning involves an organism's activity to escape from a(n) ______ stimulus or situation.</div>
-<b>پاسخ:</b> <span class="answer">unpleasant</span>.
+<span class="qnum">Q24</span>
+<div class="en">Escape learning involves an organism's activity to escape from a(n) ______ stimulus or situation.</div>
+<div class="fa">یادگیری گریز شامل فعالیت یک ارگانیسم برای فرار از یک محرک یا موقعیت ______ است.</div>
+<b>پاسخ:</b> <span class="answer">unpleasant</span> — ناخوشایند.
 </div>
+
+<!-- Q25 -->
 <div class="card question" data-search="operant conditioning consequence response">
-<span class="qnum">Q25</span><div class="en">In operant conditioning, the learning of a response normally used is the ______ of response.</div>
-<b>پاسخ:</b> <span class="answer">consequence</span>.
+<span class="qnum">Q25</span>
+<div class="en">In operant conditioning, the learning of a response normally used is the ______ of response.</div>
+<div class="fa">در شرطی‌سازی کنش‌گر، سنجش یادگیری معمولاً ______ پاسخ است.</div>
+<b>پاسخ:</b> <span class="answer">rate</span> — نرخ.
 </div>
+
+<!-- Q26 -->
 <div class="card question" data-search="engram neural substrate memory">
-<span class="qnum">Q26</span><div class="en">Which term refers to neural substrate for storing memories?</div>
-<b>پاسخ:</b> <span class="answer">engram</span>.
+<span class="qnum">Q26</span>
+<div class="en">Which term refers to neural substrate for storing memories?</div>
+<div class="fa">کدام اصطلاح به بستر عصبی برای ذخیره‌سازی خاطرات اشاره دارد؟</div>
+<b>پاسخ:</b> <span class="answer">engram</span> — اثرانگاره.
 </div>
+
+<!-- Q27 -->
 <div class="card question" data-search="heredity environment nature nurture">
-<span class="qnum">Q27</span><div class="en">The nature vs. nurture debate in psychology concerns the relative importance of heredity versus ______ in shaping an individual's behavior.</div>
-<b>پاسخ:</b> <span class="answer">environment</span>.
+<span class="qnum">Q27</span>
+<div class="en">The nature vs. nurture debate in psychology concerns the relative importance of heredity versus ______ in shaping an individual's behavior.</div>
+<div class="fa">بحث طبیعت در برابر تربیت در روان‌شناسی به اهمیت نسبی وراثت در برابر ______ در شکل‌دهی رفتار فرد می‌پردازد.</div>
+<b>پاسخ:</b> <span class="answer">environment</span> — محیط.
 </div>
+
+<!-- Q28 -->
 <div class="card question" data-search="conformity social influence fit group">
-<span class="qnum">Q28</span><div class="en">Which one is a type of social influence involving a change in belief or behavior in order to fit in with a group?</div>
-<b>پاسخ:</b> <span class="answer">conformity</span>.
+<span class="qnum">Q28</span>
+<div class="en">Which one is a type of social influence involving a change in belief or behavior in order to fit in with a group?</div>
+<div class="fa">کدام یک نوعی از تأثیر اجتماعی است که شامل تغییر باور یا رفتار برای هماهنگی با گروه می‌شود؟</div>
+<b>پاسخ:</b> <span class="answer">conformity</span> — همنوایی.
 </div>
+
+<!-- Q29 -->
 <div class="card question" data-search="efficiency obedience role emergency diffusion">
-<span class="qnum">Q29</span><div class="en">When we do what many people ask us to do, we play the role of ______.</div>
-<b>پاسخ:</b> <span class="answer">obedience</span> (بر اساس گزینه‌های این سری).
+<span class="qnum">Q29</span>
+<div class="en">When we do what many people ask us to do, we play the role of ______.</div>
+<div class="fa">وقتی کاری را که بسیاری از مردم از ما می‌خواهند انجام می‌دهیم، نقش ______ را ایفا می‌کنیم.</div>
+<b>پاسخ:</b> <span class="answer">obedience</span> — اطاعت.
 </div>
+
+<!-- Q30 -->
 <div class="card question" data-search="trivial unimportant">
-<span class="qnum">Q30</span><div class="en">Laboratory research is sometimes criticized for being (trivial). The word "trivial" means ______.</div>
-<b>پاسخ:</b> <span class="answer">unimportant</span>.
+<span class="qnum">Q30</span>
+<div class="en">Laboratory research is sometimes criticized for being (trivial). The word "trivial" means ______.</div>
+<div class="fa">پژوهش آزمایشگاهی گاهی به دلیل (سطحی) بودن مورد انتقاد قرار می‌گیرد. کلمه "trivial" به چه معناست؟</div>
+<b>پاسخ:</b> <span class="answer">unimportant</span> — بی‌اهمیت.
 </div>
 </div>
 </section>
 
 <section id="learning" class="section">
-<h2 class="section-title">02 · درس‌های دوزبانه‌ی استخراج‌شده</h2>
+<h2 class="section-title">02 · درس‌های دوزبانه</h2>
 <p class="section-sub">اینجا دیگر فقط جواب حفظ نمی‌شود؛ خود مفهوم یاد گرفته می‌شود.</p>
 
 <div class="card">
-<div class="card-head"><h3>🔥 Learning & Conditioning | یادگیری و شرطی‌سازی</h3><span class="badge s">Priority S · Q16–20, Q22–25</span></div>
+<div class="card-head"><h3>🔥 Learning & Conditioning</h3><span class="badge s">Priority S · Q16–20, Q22–25</span></div>
 <div class="en"><b>Learning</b> is a relatively lasting change in behavior or behavioral potential that results from experience.</div>
-<p><b>یادگیری</b> یعنی تغییری نسبتاً پایدار در رفتار یا توانایی رفتاری که در نتیجه‌ی تجربه ایجاد می‌شود.</p>
+<div class="fa"><b>یادگیری</b> تغییری نسبتاً پایدار در رفتار یا توانایی رفتاری است که در نتیجه تجربه ایجاد می‌شود.</div>
 <div class="grid2">
-<div class="box"><h4>Ivan Pavlov | ایوان پاولف</h4><div class="en">Ivan Pavlov was a Russian physiologist famous for classical conditioning.</div><p><b>کلید امتحانی:</b> Russian physiologist → Pavlov → Classical Conditioning</p></div>
-<div class="box"><h4>B. F. Skinner | بی.اف. اسکینر</h4><div class="en">B. F. Skinner developed the concept of operant conditioning.</div><p><b>کلید امتحانی:</b> Operant conditioning → Skinner → consequences</p></div>
+<div class="box"><h4>Ivan Pavlov</h4><div class="en">Ivan Pavlov was a Russian physiologist famous for classical conditioning.</div><div class="fa">ایوان پاولف فیزیولوژیست روسی مشهور به شرطی‌سازی کلاسیک است.</div><p><b>کلید:</b> Russian physiologist → Pavlov → Classical Conditioning</p></div>
+<div class="box"><h4>B. F. Skinner</h4><div class="en">B. F. Skinner developed the concept of operant conditioning.</div><div class="fa">بی.اف. اسکینر مفهوم شرطی‌سازی کنش‌گر را توسعه داد.</div><p><b>کلید:</b> Operant conditioning → Skinner → consequences</p></div>
 </div>
-<details open><summary>Classical Conditioning | شرطی‌سازی کلاسیک</summary><div class="en">In classical conditioning, learning occurs through an association between stimuli.</div><p>در شرطی‌سازی کلاسیک، یادگیری از طریق ایجاد ارتباط میان محرک‌ها اتفاق می‌افتد. سؤال‌های این سری پاولف، reinforcer و trace conditioning را به این خوشه وصل کرده‌اند.</p></details>
-<details><summary>Operant Conditioning | شرطی‌سازی کنش‌گر</summary><div class="en">In operant conditioning, behavior is shaped by its consequences.</div><p>در شرطی‌سازی کنش‌گر، پیامد رفتار اهمیت دارد. پاسخ‌هایی که پیامد خاصی دارند، احتمالشان برای تکرار می‌تواند تغییر کند.</p></details>
-<details><summary>Habituation vs. Sensitization</summary><div class="en"><b>Habituation:</b> decreased response to a repeated stimulus. <b>Sensitization:</b> increased responsiveness.</div><p>خوگیری = کاهش پاسخ؛ حساس‌شدن = افزایش حساسیت یا پاسخ. در Q18 مستقیماً رابطه‌ی متضاد این دو پرسیده شده است.</p></details>
+<details open><summary>Classical Conditioning</summary><div class="en">In classical conditioning, learning occurs through an association between stimuli.</div><div class="fa">در شرطی‌سازی کلاسیک، یادگیری از طریق ارتباط بین محرک‌ها رخ می‌دهد.</div></details>
+<details><summary>Operant Conditioning</summary><div class="en">In operant conditioning, behavior is shaped by its consequences.</div><div class="fa">در شرطی‌سازی کنش‌گر، رفتار توسط پیامدهایش شکل می‌گیرد.</div></details>
+<details><summary>Habituation vs. Sensitization</summary><div class="en"><b>Habituation:</b> decreased response to a repeated stimulus. <b>Sensitization:</b> increased responsiveness.</div><div class="fa"><b>خوگیری:</b> کاهش پاسخ به محرک تکراری. <b>حساس‌شدن:</b> افزایش پاسخ‌دهی.</div></details>
 <div class="vocab"><span class="word">learning = یادگیری</span><span class="word">stimulus = محرک</span><span class="word">response = پاسخ</span><span class="word">consequence = پیامد</span><span class="word">reinforcer = تقویت‌کننده</span><span class="word">escape = گریز</span><span class="word">unpleasant = ناخوشایند</span></div>
 </div>
 
 <div class="card">
-<div class="card-head"><h3>🔬 Research Methods | روش‌های تحقیق</h3><span class="badge a">Priority A · Q01, Q03, Q09–10, Q13–14</span></div>
+<div class="card-head"><h3>🔬 Research Methods</h3><span class="badge a">Priority A · Q01, Q03, Q09–10, Q13–14</span></div>
 <div class="grid2">
-<div class="box"><h4>Variable | متغیر</h4><div class="en">A variable is a characteristic or attribute that can vary in amount or can be present or absent.</div><p>متغیر ویژگی‌ای است که می‌تواند مقدارهای متفاوت داشته باشد یا وجود/عدم وجود آن تغییر کند.</p></div>
-<div class="box"><h4>Case Study | مطالعه موردی</h4><div class="en">A case study can be useful when an area is relatively uncharted and the investigator has little knowledge of key variables.</div><p>وقتی حوزه ناشناخته است و هنوز فرضیه یا شناخت محکمی از متغیرها نداریم، مطالعه‌ی موردی می‌تواند مفید باشد.</p></div>
-<div class="box"><h4>Survey | پیمایش</h4><div class="en">A survey collects information about characteristics, opinions, attitudes and self-reported behavior.</div><p>پیمایش اطلاعاتی درباره ویژگی‌ها، نگرش‌ها، عقاید و رفتار گزارش‌شده جمع‌آوری می‌کند.</p></div>
-<div class="box"><h4>Correlation | همبستگی</h4><div class="en">Correlational techniques estimate the extent to which variables are related or covary.</div><p>همبستگی میزان رابطه یا هم‌تغییری دو یا چند متغیر را بررسی می‌کند؛ خودش به معنی اثبات علیت نیست.</p></div>
+<div class="box"><h4>Variable</h4><div class="en">A variable is a characteristic or attribute that can vary in amount or can be present or absent.</div><div class="fa">متغیر ویژگی یا صفتی است که می‌تواند در مقدار تغییر کند یا وجود داشته باشد یا نباشد.</div></div>
+<div class="box"><h4>Case Study</h4><div class="en">A case study can be useful when an area is relatively uncharted and the investigator has little knowledge of key variables.</div><div class="fa">مطالعه موردی زمانی مفید است که حوزه نسبتاً ناشناخته باشد و محقق دانش کمی از متغیرهای کلیدی داشته باشد.</div></div>
+<div class="box"><h4>Survey</h4><div class="en">A survey collects information about characteristics, opinions, attitudes and self-reported behavior.</div><div class="fa">پیمایش اطلاعاتی درباره ویژگی‌ها، عقاید، نگرش‌ها و رفتار خودگزارش‌دهی جمع‌آوری می‌کند.</div></div>
+<div class="box"><h4>Correlation</h4><div class="en">Correlational techniques estimate the extent to which variables are related or covary.</div><div class="fa">تکنیک‌های همبستگی میزان ارتباط یا هم‌تغییری متغیرها را برآورد می‌کنند.</div></div>
 </div>
-<details><summary>Objectivity | عینیت</summary><div class="en">Objectivity requires definitions that are precise and understandable to appropriately trained people.</div><p>تعریف علمی باید آن‌قدر دقیق باشد که افراد آموزش‌دیده بتوانند آن را به شکل مشترک بفهمند و به کار ببرند.</p></details>
+<details><summary>Objectivity</summary><div class="en">Objectivity requires definitions that are precise and understandable to appropriately trained people.</div><div class="fa">عینیت مستلزم تعاریفی است که دقیق و برای افراد آموزش‌دیده قابل درک باشد.</div></details>
 </div>
 
 <div class="card">
-<div class="card-head"><h3>🏛 Schools & Fields | مکاتب و حوزه‌ها</h3><span class="badge b">Priority B · Q04–07, Q11, Q15</span></div>
+<div class="card-head"><h3>🏛 Schools & Fields</h3><span class="badge b">Priority B · Q04–07, Q11, Q15</span></div>
 <div class="grid2">
-<div class="box"><h4>Gestalt | گشتالت</h4><div class="en">Gestalt theorists focused on the wholeness and interrelatedness of experience.</div><p><b>کلید طلایی:</b> wholeness / whole → Gestalt</p></div>
-<div class="box"><h4>Structuralism | ساختارگرایی</h4><div class="en">Edward Titchener played a crucial role in introducing Structuralism to the United States.</div><p><b>کلید طلایی:</b> Structuralism → Titchener</p></div>
-<div class="box"><h4>Forensic Psychology | روان‌شناسی قانونی</h4><div class="en">Forensic psychologists deal with the relationship between psychology and law.</div><p><b>کلید:</b> psychology + law → forensic</p></div>
-<div class="box"><h4>Personality Psychology</h4><div class="en">Personality psychology is especially concerned with individual aspects of behavior.</div><p>روان‌شناسی شخصیت روی تفاوت‌ها و جنبه‌های فردی رفتار تمرکز دارد.</p></div>
+<div class="box"><h4>Gestalt</h4><div class="en">Gestalt theorists focused on the wholeness and interrelatedness of experience.</div><div class="fa">نظریه‌پردازان گشتالت بر کل‌گرایی و ارتباط متقابل تجربه تمرکز داشتند.</div><p><b>کلید طلایی:</b> wholeness → Gestalt</p></div>
+<div class="box"><h4>Structuralism</h4><div class="en">Edward Titchener played a crucial role in introducing Structuralism to the United States.</div><div class="fa">ادوارد تیتچنر نقش کلیدی در معرفی ساختارگرایی به ایالات متحده داشت.</div><p><b>کلید طلایی:</b> Structuralism → Titchener</p></div>
+<div class="box"><h4>Forensic Psychology</h4><div class="en">Forensic psychologists deal with the relationship between psychology and law.</div><div class="fa">روان‌شناسان قانونی به رابطه بین روان‌شناسی و قانون می‌پردازند.</div><p><b>کلید:</b> psychology + law → forensic</p></div>
+<div class="box"><h4>Personality Psychology</h4><div class="en">Personality psychology is especially concerned with individual aspects of behavior.</div><div class="fa">روان‌شناسی شخصیت به ویژه به جنبه‌های فردی رفتار می‌پردازد.</div></div>
 </div>
 </div>
 
 <div class="card">
-<div class="card-head"><h3>🧠 Biological & Social Concepts | زیستی و اجتماعی</h3><span class="badge b">Priority B · Q21, Q26–29</span></div>
+<div class="card-head"><h3>🧠 Biological & Social</h3><span class="badge b">Priority B · Q21, Q26–29</span></div>
 <div class="grid2">
-<div class="box"><h4>Insulin | انسولین</h4><div class="en">Insulin is a hormone that regulates cellular uptake of blood glucose and metabolism.</div><p><b>کلید:</b> hormone + blood sugar/glucose → insulin</p></div>
-<div class="box"><h4>Engram | اثرانگاره</h4><div class="en">An engram is a neural or physical substrate associated with the storage of memory.</div><p><b>کلید:</b> neural substrate + memory → engram</p></div>
-<div class="box"><h4>Nature vs. Nurture</h4><div class="en">The debate concerns heredity versus environment in shaping behavior.</div><p><b>heredity = وراثت</b> در برابر <b>environment = محیط</b>.</p></div>
-<div class="box"><h4>Conformity | همنوایی</h4><div class="en">Conformity is a change in belief or behavior in order to fit in with a group.</div><p><b>کلید:</b> fit in + group → conformity</p></div>
+<div class="box"><h4>Insulin</h4><div class="en">Insulin is a hormone that regulates cellular uptake of blood glucose and metabolism.</div><div class="fa">انسولین هورمونی است که جذب گلوکز خون توسط سلول‌ها و متابولیسم را تنظیم می‌کند.</div><p><b>کلید:</b> hormone + blood sugar → insulin</p></div>
+<div class="box"><h4>Engram</h4><div class="en">An engram is a neural or physical substrate associated with the storage of memory.</div><div class="fa">اثرانگاره بستر عصبی یا فیزیکی مرتبط با ذخیره‌سازی حافظه است.</div><p><b>کلید:</b> neural substrate + memory → engram</p></div>
+<div class="box"><h4>Nature vs. Nurture</h4><div class="en">The debate concerns heredity versus environment in shaping behavior.</div><div class="fa">این بحث به وراثت در مقابل محیط در شکل‌دهی رفتار می‌پردازد.</div><p><b>heredity = وراثت</b> در برابر <b>environment = محیط</b></p></div>
+<div class="box"><h4>Conformity</h4><div class="en">Conformity is a change in belief or behavior in order to fit in with a group.</div><div class="fa">همنوایی تغییر باور یا رفتار برای هماهنگی با گروه است.</div><p><b>کلید:</b> fit in + group → conformity</p></div>
 </div>
 </div>
 </section>
 
 <section id="compare" class="section">
-<h2 class="section-title">03 · Compare Zone | چیزهایی که نباید قاطی شوند</h2>
+<h2 class="section-title">03 · Compare Zone</h2>
 <div class="card">
 <table class="compare">
 <thead><tr><th>مفهوم</th><th>نشانه‌ی سؤال</th><th>مقابل/دام</th></tr></thead>
@@ -288,8 +417,8 @@ details{background:var(--surface2);border:1px solid var(--line);border-radius:16
 <tr><td>Habituation</td><td>decreased response</td><td>Sensitization</td></tr>
 <tr><td>Gestalt</td><td>wholeness / interrelatedness</td><td>Structuralism</td></tr>
 <tr><td>Correlation</td><td>related / covary</td><td>Causal techniques</td></tr>
-<tr><td>Survey</td><td>opinions / self-report / group characteristics</td><td>Experimental method</td></tr>
-<tr><td>Conformity</td><td>fit in with a group</td><td>صرفاً هر نوع اطاعت نیست</td></tr>
+<tr><td>Survey</td><td>opinions / self-report</td><td>Experimental method</td></tr>
+<tr><td>Conformity</td><td>fit in with a group</td><td>Obedience</td></tr>
 <tr><td>Engram</td><td>memory trace / neural substrate</td><td>amnesia</td></tr>
 </tbody>
 </table>
@@ -297,27 +426,27 @@ details{background:var(--surface2);border:1px solid var(--line);border-radius:16
 </section>
 
 <section id="vocab" class="section">
-<h2 class="section-title">04 · Direct Vocabulary Bank</h2>
+<h2 class="section-title">04 · Vocabulary Bank</h2>
 <div class="card"><div class="grid2">
-<div class="box"><h4>precise → دقیق</h4><div class="en">Precise definitions are exact and clear.</div></div>
-<div class="box"><h4>by and large → generally</h4><div class="en">By and large = in general.</div></div>
-<div class="box"><h4>significant → important</h4><div class="en">Significant = important.</div></div>
-<div class="box"><h4>simulate → imitate</h4><div class="en">To simulate = to imitate or reproduce.</div></div>
-<div class="box"><h4>trivial → unimportant</h4><div class="en">Trivial = unimportant.</div></div>
-<div class="box"><h4>uncharted → ناشناخته/کم‌بررسی‌شده</h4><div class="en">An uncharted area is an area that has not been explored well.</div></div>
+<div class="box"><h4>precise → دقیق</h4><div class="en">Precise definitions are exact and clear.</div><div class="fa">تعاریف دقیق، صحیح و شفاف هستند.</div></div>
+<div class="box"><h4>by and large → به طور کلی</h4><div class="en">By and large = in general.</div><div class="fa">by and large یعنی به طور کلی.</div></div>
+<div class="box"><h4>significant → مهم</h4><div class="en">Significant = important.</div><div class="fa">significant یعنی مهم.</div></div>
+<div class="box"><h4>simulate → شبیه‌سازی</h4><div class="en">To simulate = to imitate or reproduce.</div><div class="fa">simulate یعنی تقلید یا بازتولید کردن.</div></div>
+<div class="box"><h4>trivial → بی‌اهمیت</h4><div class="en">Trivial = unimportant.</div><div class="fa">trivial یعنی بی‌اهمیت.</div></div>
+<div class="box"><h4>uncharted → ناشناخته</h4><div class="en">An uncharted area is an area that has not been explored well.</div><div class="fa">منطقه ناشناخته منطقه‌ای است که به خوبی کاوش نشده است.</div></div>
 </div></div>
 </section>
 
 <section id="traps" class="section">
-<h2 class="section-title">05 · Exam Traps | دام‌های همین سری</h2>
+<h2 class="section-title">05 · Exam Traps</h2>
 <div class="card trap">
 <h3>1. Keyword Association Trap</h3>
 <p>گاهی فقط یک عبارت کلیدی جواب را روشن می‌کند:</p>
 <div class="vocab"><span class="word">Russian physiologist → Pavlov</span><span class="word">wholeness → Gestalt</span><span class="word">fit in with group → conformity</span><span class="word">blood glucose → insulin</span><span class="word">memory substrate → engram</span></div>
 </div>
 <div class="card trap"><h3>2. Definition → Term</h3><p>Q09، Q10، Q13، Q14 و Q28 بیشتر از این الگو استفاده می‌کنند: تعریف را می‌دهند و از تو اصطلاح می‌خواهند.</p></div>
-<div class="card trap"><h3>3. Direct Vocabulary</h3><p>وقتی سؤال می‌گوید <b>The word "X" means...</b> وارد تحلیل روان‌شناسی نشو؛ مستقیم معنی واژه را پیدا کن.</p></div>
-<div class="card trap"><h3>4. Related but Wrong</h3><p>گزینه‌ها ممکن است همگی واژه‌های واقعی روان‌شناسی باشند، اما سؤال دنبال یک حوزه‌ی خاص است؛ مثل Gestalt در برابر Structuralism یا habituation در برابر conformity.</p></div>
+<div class="card trap"><h3>3. Direct Vocabulary</h3><p>وقتی سؤال می‌گوید <b>The word "X" means...</b> مستقیم معنی واژه را پیدا کن.</p></div>
+<div class="card trap"><h3>4. Related but Wrong</h3><p>گزینه‌ها ممکن است همگی واژه‌های واقعی باشند، اما سؤال دنبال یک حوزه‌ی خاص است.</p></div>
 </section>
 
 <section id="quiz" class="section">
@@ -327,14 +456,14 @@ details{background:var(--surface2);border:1px solid var(--line);border-radius:16
 <div id="quizQuestion" class="en"></div>
 <div id="options" class="options"></div>
 <div id="feedback" class="feedback"></div>
-<button id="next" style="margin-top:8px">سؤال بعدی</button>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سؤال بعدی</button>
 </div>
 </section>
 
 <section class="section">
 <h2 class="section-title">07 · Series Delta</h2>
 <div class="card">
-<p><b>🆕 وضعیت فعلی:</b> این اولین سری است؛ بنابراین تمام مفاهیم فعلاً به عنوان پایه‌ی اولیه ثبت شده‌اند.</p>
+<p><b>🆕 وضعیت فعلی:</b> این اولین سری است؛ تمام مفاهیم فعلاً به عنوان پایه‌ی اولیه ثبت شده‌اند.</p>
 <div class="grid2">
 <div class="box"><h4>برای سری بعدی</h4><p>هر مفهوم جدید → 🆕 New</p><p>همان مفهوم بدون اطلاعات جدید → 🔁 Reinforced</p></div>
 <div class="box"><h4>زاویه‌ی جدید</h4><p>مثلاً اگر Pavlov قبلاً آمده باشد ولی این بار سؤال از CS/US یا Trace Conditioning باشد → 🔄 New Angle</p></div>
@@ -342,7 +471,7 @@ details{background:var(--surface2);border:1px solid var(--line);border-radius:16
 </div>
 </section>
 
-<div class="footer">Quizly · Series 01 · ساخته‌شده از روی همین بانک سؤال · آماده برای ادغام با Series 02, 03, 04...</div>
+<div class="footer">Quizly · Series 01 · آماده برای ادغام با Series 02, 03, 04...</div>
 </div>
 
 <script>
