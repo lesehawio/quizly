@@ -557,14 +557,33 @@
             border-radius: 99px;
             transition: width .6s ease;
         }
-        /* ===== 20. TRAP ===== */
+        /* ===== 20. STUDY MODE ===== */
+        .study-session {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 20px;
+            margin: 12px 0;
+            text-align: center;
+        }
+        .study-session .big {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--pink);
+            display: block;
+        }
+        .study-session .label {
+            color: var(--muted);
+            font-size: 14px;
+        }
+        /* ===== 21. TRAP ===== */
         .trap {
             border-right-color: #e08b17;
         }
         .trap strong {
             color: #b36d00;
         }
-        /* ===== 21. FOOTER ===== */
+        /* ===== 22. FOOTER ===== */
         .footer {
             padding: 20px 0;
             color: var(--muted);
@@ -573,7 +592,7 @@
             border-top: 1px solid var(--line);
             margin-top: 30px;
         }
-        /* ===== 22. RESPONSIVE ===== */
+        /* ===== 23. RESPONSIVE ===== */
         @media (min-width: 520px) {
             .app {
                 padding: 20px;
@@ -665,6 +684,7 @@
                 <span class="pill">واژگان</span>
                 <span class="pill">دام‌ها</span>
                 <span class="pill">کوییز هوشمند</span>
+                <span class="pill">حالت مطالعه</span>
             </div>
         </section>
 
@@ -689,6 +709,7 @@
             <a href="#sec-vocab">واژگان</a>
             <a href="#sec-traps">دام‌ها</a>
             <a href="#sec-quiz">کوییز</a>
+            <a href="#sec-study">مطالعه</a>
             <a href="#sec-delta">سری دلتا</a>
             <a href="#sec-mastery">تسلط</a>
         </nav>
@@ -741,6 +762,23 @@
                 <div id="quizFeedback" class="feedback"></div>
                 <button id="quizNext" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
                 <button id="quizReset" style="margin-top:8px;width:100%;justify-content:center;background:var(--soft);border-color:var(--line)">🔄 شروع مجدد</button>
+            </div>
+        </section>
+
+        <!-- ======================== SECTION: STUDY MODE ======================== -->
+        <section id="sec-study" class="section">
+            <h2 class="section-title">🎓 حالت مطالعه</h2>
+            <p class="section-sub">جلسه مطالعه سریع با محتوای امروز</p>
+            <div class="study-session" id="studySession">
+                <span class="big" id="studyCount">0</span>
+                <span class="label">سوال برای امروز</span>
+                <div style="margin:12px 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+                    <span class="pill" style="background:var(--soft);color:var(--ink);">📚 ۵ درس</span>
+                    <span class="pill" style="background:var(--soft);color:var(--ink);">⚠️ ۳ دام</span>
+                    <span class="pill" style="background:var(--soft);color:var(--ink);">📖 ۴ واژه</span>
+                </div>
+                <button id="startStudy" style="background:var(--pink);color:#fff;border:none;padding:12px 32px;border-radius:40px;font-weight:bold;font-size:16px;">🚀 شروع جلسه</button>
+                <div id="studyProgress" style="margin-top:12px;font-size:13px;color:var(--muted);"></div>
             </div>
         </section>
 
@@ -811,7 +849,8 @@
                 fa: 'کدام یک ویژگی مطالعات علمی نیست؟',
                 why: 'subjective (ذهنی) ویژگی علم نیست؛ علم باید عینی باشد.',
                 whyOthers: 'repeatable, communicable, systematic همگی ویژگی‌های علم هستند.',
-                trap: 'اگر "NOT" دیدی، به دنبال گزینه‌ای باش که با بقیه متفاوت است.'
+                trap: 'اگر "NOT" دیدی، به دنبال گزینه‌ای باش که با بقیه متفاوت است.',
+                examinerLogic: 'طراح سوال با "NOT" می‌خواهد دقت شما را در تشخیص ویژگی‌های علم بسنجد.'
             }, {
                 id: 'Q02',
                 text: 'Physiological psychologists deal with the ways in which the biological processes determine and are affected by ......',
@@ -823,7 +862,8 @@
                 keyword: 'biological processes',
                 fa: 'روان‌شناسان فیزیولوژیک به روش‌هایی می‌پردازند که فرآیندهای زیستی تعیین می‌کنند و تحت تأثیر ...... قرار می‌گیرند.',
                 why: 'روان‌شناسی فیزیولوژیک به رابطه بین فرآیندهای زیستی و رفتار می‌پردازد.',
-                whyOthers: 'سایر گزینه‌ها با بافت سوال همخوانی ندارند.'
+                whyOthers: 'سایر گزینه‌ها با بافت سوال همخوانی ندارند.',
+                examinerLogic: 'ارتباط زیستی-رفتاری یکی از پرتکرارترین مباحث پایه روان‌شناسی است.'
             }, {
                 id: 'Q03',
                 text: 'Personality psychologists are particularly interested in the ...... aspects of behavior.',
@@ -835,7 +875,8 @@
                 keyword: 'personality',
                 fa: 'روان‌شناسان شخصیت به ویژه به جنبه‌های ...... رفتار علاقه‌مندند.',
                 why: 'روان‌شناسی شخصیت بر انگیزه‌ها و تفاوت‌های فردی تمرکز دارد.',
-                whyOthers: 'سایر حوزه‌ها به جنبه‌های دیگر رفتار می‌پردازند.'
+                whyOthers: 'سایر حوزه‌ها به جنبه‌های دیگر رفتار می‌پردازند.',
+                examinerLogic: 'شناخت حوزه‌های مختلف روان‌شناسی برای تمایز آنها ضروری است.'
             }, {
                 id: 'Q04',
                 text: 'Which psychologists deal with all aspects of the relationship between psychology and law?',
@@ -847,7 +888,8 @@
                 keyword: 'psychology and law',
                 fa: 'کدام روان‌شناسان به تمام جنبه‌های رابطه بین روان‌شناسی و قانون می‌پردازند؟',
                 why: 'روان‌شناسان قانونی (forensic) به رابطه روان‌شناسی و قانون می‌پردازند.',
-                whyOthers: 'سایر حوزه‌ها به قانون نمی‌پردازند.'
+                whyOthers: 'سایر حوزه‌ها به قانون نمی‌پردازند.',
+                examinerLogic: 'رابطه روان‌شناسی و قانون یک حوزه تخصصی با کاربردهای عملی است.'
             }, {
                 id: 'Q05',
                 text: 'In which research method, the investigator manipulates an independent variable to see its effect on a dependent variable?',
@@ -859,7 +901,8 @@
                 keyword: 'manipulates',
                 fa: 'در کدام روش تحقیق، محقق یک متغیر مستقل را دستکاری می‌کند تا تأثیر آن را بر متغیر وابسته ببیند؟',
                 why: 'روش آزمایشی (experimental) تنها روشی است که در آن دستکاری متغیر مستقل انجام می‌شود.',
-                whyOthers: 'سایر روش‌ها دستکاری ندارند.'
+                whyOthers: 'سایر روش‌ها دستکاری ندارند.',
+                examinerLogic: 'تشخیص روش آزمایشی از سایر روش‌ها یکی از پرتکرارترین سوالات روش تحقیق است.'
             }, {
                 id: 'Q06',
                 text: 'Which psychologists deal with people who have difficulties with education or career choices?',
@@ -871,7 +914,8 @@
                 keyword: 'education or career',
                 fa: 'کدام روان‌شناسان با افرادی که در تحصیل یا انتخاب شغل مشکل دارند سروکار دارند؟',
                 why: 'روان‌شناسان مشاوره‌ای (counselling) به مشکلات تحصیلی و شغلی کمک می‌کنند.',
-                whyOthers: 'سایر حوزه‌ها به مسائل دیگر می‌پردازند.'
+                whyOthers: 'سایر حوزه‌ها به مسائل دیگر می‌پردازند.',
+                examinerLogic: 'تمایز مشاوره از سایر حوزه‌های روان‌شناسی کاربردی.'
             }, {
                 id: 'Q07',
                 text: 'When an investigator is working in a relatively uncharted area and has neither good hypotheses nor a firm sense of the key variables, which research method is more useful?',
@@ -883,7 +927,8 @@
                 keyword: 'uncharted',
                 fa: 'وقتی محقق در حوزه‌ای نسبتاً ناشناخته کار می‌کند و نه فرضیه خوبی دارد و نه درک محکمی از متغیرهای کلیدی، کدام روش تحقیق مفیدتر است؟',
                 why: 'مطالعه موردی (case study) برای حوزه‌های ناشناخته مناسب است.',
-                whyOthers: 'سایر روش‌ها نیاز به فرضیه یا متغیر مشخص دارند.'
+                whyOthers: 'سایر روش‌ها نیاز به فرضیه یا متغیر مشخص دارند.',
+                examinerLogic: 'کاربرد مطالعه موردی در شرایط خاص و ناشناخته.'
             }, {
                 id: 'Q08',
                 text: 'Which theorists focused on the wholeness and interrelatedness of experience?',
@@ -895,7 +940,8 @@
                 keyword: 'wholeness',
                 fa: 'کدام نظریه‌پردازان بر کل‌گرایی و ارتباط متقابل تجربه تمرکز داشتند؟',
                 why: 'گشتالت‌گرایان (Gestaltists) بر کل‌گرایی و ارتباط اجزا تأکید دارند.',
-                whyOthers: 'سایر مکاتب به جنبه‌های دیگر توجه دارند.'
+                whyOthers: 'سایر مکاتب به جنبه‌های دیگر توجه دارند.',
+                examinerLogic: 'گشتالت با واژه wholeness گره خورده است.'
             }, {
                 id: 'Q09',
                 text: 'Which one is considered as a major behaviorist figure?',
@@ -907,7 +953,8 @@
                 keyword: 'behaviorist',
                 fa: 'کدام یک به عنوان یک شخصیت مهم رفتارگرا محسوب می‌شود؟',
                 why: 'اسکینر (Skinner) یکی از مهم‌ترین چهره‌های رفتارگرایی است.',
-                whyOthers: 'Kurt و Koffka گشتالت‌گرا هستند، Maslow انسان‌گرا است.'
+                whyOthers: 'Kurt و Koffka گشتالت‌گرا هستند، Maslow انسان‌گرا است.',
+                examinerLogic: 'اسکینر و پاولف دو چهره کلیدی در شرطی‌سازی هستند.'
             }, {
                 id: 'Q10',
                 text: 'Asthma has a (significant) impact on the life and well-being of children. The word "significant" means ......',
@@ -919,7 +966,8 @@
                 keyword: 'significant',
                 fa: 'آسم تأثیر (چندانی) بر زندگی و سلامت کودکان دارد. کلمه "significant" به چه معناست؟',
                 why: 'significant به معنی "مهم" (important) است.',
-                whyOthers: 'سایر معانی با بافت سوال همخوانی ندارند.'
+                whyOthers: 'سایر معانی با بافت سوال همخوانی ندارند.',
+                examinerLogic: 'لغات پرتکرار در متون روان‌شناسی.'
             }, {
                 id: 'Q11',
                 text: 'Which school of thought emphasizes the positive aspects of human nature, such as our capacity for psychological growth?',
@@ -931,7 +979,8 @@
                 keyword: 'positive aspects, growth',
                 fa: 'کدام مکتب فکری بر جنبه‌های مثبت طبیعت انسان، مانند ظرفیت ما برای رشد روانی تأکید دارد؟',
                 why: 'انسان‌گرایی (Humanism) بر جنبه‌های مثبت و رشد انسان تأکید دارد.',
-                whyOthers: 'سایر مکاتب به جنبه‌های دیگر می‌پردازند.'
+                whyOthers: 'سایر مکاتب به جنبه‌های دیگر می‌پردازند.',
+                examinerLogic: 'انسان‌گرایی در مقابل رفتارگرایی یکی از دام‌های اصلی است.'
             }, {
                 id: 'Q12',
                 text: 'Industrial psychologists are also called ...... psychologists.',
@@ -943,7 +992,8 @@
                 keyword: 'industrial',
                 fa: 'روان‌شناسان صنعتی به عنوان روان‌شناسان ...... نیز شناخته می‌شوند.',
                 why: 'روان‌شناسان صنعتی را روان‌شناسان کسب‌وکار (business) نیز می‌نامند.',
-                whyOthers: 'سایر حوزه‌ها متفاوت هستند.'
+                whyOthers: 'سایر حوزه‌ها متفاوت هستند.',
+                examinerLogic: 'نام‌های جایگزین حوزه‌های روان‌شناسی.'
             }, {
                 id: 'Q13',
                 text: 'Which one is a method of collecting information about a group\'s characteristics, self-reported and observed behavior, attitudes or opinions, and needs?',
@@ -955,7 +1005,8 @@
                 keyword: 'collecting information',
                 fa: 'کدام یک روش جمع‌آوری اطلاعات درباره ویژگی‌های یک گروه، رفتار خودگزارش‌دهی و مشاهده‌شده، نگرش‌ها یا عقاید و نیازهاست؟',
                 why: 'پیمایش (survey) روش جمع‌آوری اطلاعات از گروه‌هاست.',
-                whyOthers: 'سایر گزینه‌ها روش جمع‌آوری اطلاعات نیستند.'
+                whyOthers: 'سایر گزینه‌ها روش جمع‌آوری اطلاعات نیستند.',
+                examinerLogic: 'تعریف پیمایش یکی از پرتکرارترین سوالات روش تحقیق است.'
             }, {
                 id: 'Q14',
                 text: 'Which one is the characteristic or attribute that the researcher is going to measure, manipulate, and control?',
@@ -967,7 +1018,8 @@
                 keyword: 'measure, manipulate, control',
                 fa: 'کدام یک ویژگی یا صفتی است که محقق قصد اندازه‌گیری، دستکاری و کنترل آن را دارد؟',
                 why: 'متغیر (variable) ویژگی‌ای است که محقق اندازه‌گیری، دستکاری و کنترل می‌کند.',
-                whyOthers: 'سایر گزینه‌ها تعریف متغیر نیستند.'
+                whyOthers: 'سایر گزینه‌ها تعریف متغیر نیستند.',
+                examinerLogic: 'تعریف دقیق متغیر از پایه‌های روش تحقیق است.'
             }, {
                 id: 'Q15',
                 text: 'Which ones are means of estimating the extent to which two or more variables are related or tend to covary?',
@@ -981,7 +1033,8 @@
                 keyword: 'related, covary',
                 fa: 'کدام یک وسیله‌ای برای برآورد میزان ارتباط یا هم‌تغییری دو یا چند متغیر است؟',
                 why: 'تکنیک‌های همبستگی (correlational techniques) میزان ارتباط متغیرها را می‌سنجند.',
-                whyOthers: 'سایر روش‌ها به دنبال رابطه علّی یا مشاهده هستند.'
+                whyOthers: 'سایر روش‌ها به دنبال رابطه علّی یا مشاهده هستند.',
+                examinerLogic: 'همبستگی با علیت تفاوت دارد.'
             }, {
                 id: 'Q16',
                 text: 'Who is known as the father of psychoanalysis?',
@@ -993,7 +1046,8 @@
                 keyword: 'father of psychoanalysis',
                 fa: 'چه کسی به عنوان پدر روان‌کاوی شناخته می‌شود؟',
                 why: 'زیگموند فروید (Sigmund Freud) پدر روان‌کاوی است.',
-                whyOthers: 'سایر افراد با مکاتب دیگر مرتبط هستند.'
+                whyOthers: 'سایر افراد با مکاتب دیگر مرتبط هستند.',
+                examinerLogic: 'فروید و روان‌کاوی یکی از شناخته‌شده‌ترین ارتباطات در روان‌شناسی است.'
             }, {
                 id: 'Q17',
                 text: 'Which ones are considered as positive reinforcements?',
@@ -1007,7 +1061,8 @@
                 keyword: 'positive reinforcements',
                 fa: 'کدام یک به عنوان تقویت‌کننده مثبت در نظر گرفته می‌شوند؟',
                 why: 'تحسین، محبت و نمرات (praise, affection, grades) تقویت‌کننده مثبت هستند.',
-                whyOthers: 'انتقاد، محرک‌های آزارنده و تنبیه تقویت‌کننده منفی هستند.'
+                whyOthers: 'انتقاد، محرک‌های آزارنده و تنبیه تقویت‌کننده منفی هستند.',
+                examinerLogic: 'تشخیص تقویت مثبت از منفی یکی از دام‌های شرطی‌سازی است.'
             }, {
                 id: 'Q18',
                 text: 'Which one is proposed by Russian psychologist Ivan Pavlov?',
@@ -1019,7 +1074,8 @@
                 keyword: 'Pavlov',
                 fa: 'کدام یک توسط روان‌شناس روسی ایوان پاولف مطرح شده است؟',
                 why: 'پاولف (Pavlov) شرطی‌سازی کلاسیک (classical conditioning) را مطرح کرد.',
-                whyOthers: 'سایر گزینه‌ها با پاولف مرتبط نیستند.'
+                whyOthers: 'سایر گزینه‌ها با پاولف مرتبط نیستند.',
+                examinerLogic: 'پاولف همیشه با شرطی‌سازی کلاسیک همراه است.'
             }, {
                 id: 'Q19',
                 text: 'Which one happens when an organism adapts to a certain environment or stimulus?',
@@ -1031,7 +1087,8 @@
                 keyword: 'adapts',
                 fa: 'کدام یک وقتی رخ می‌دهد که یک موجود زنده با یک محیط یا محرک خاص سازگار می‌شود؟',
                 why: 'خوگیری (habituation) زمانی رخ می‌دهد که موجود با محرک سازگار شود و پاسخ کاهش یابد.',
-                whyOthers: 'سایر گزینه‌ها با سازگاری مرتبط نیستند.'
+                whyOthers: 'سایر گزینه‌ها با سازگاری مرتبط نیستند.',
+                examinerLogic: 'خوگیری و حساس‌شدن دو مفهوم متضاد در یادگیری غیرتداعی‌گرا هستند.'
             }, {
                 id: 'Q20',
                 text: 'In classical conditioning, the organism\'s response has no (bearing) on the receipt of reinforcers. The word "bearing" means ......',
@@ -1043,7 +1100,8 @@
                 keyword: 'bearing',
                 fa: 'در شرطی‌سازی کلاسیک، پاسخ موجود زنده تأثیری در دریافت تقویت‌کننده‌ها ندارد. کلمه "bearing" به چه معناست؟',
                 why: 'bearing به معنی "تأثیر" (effect) است.',
-                whyOthers: 'سایر معانی با بافت سوال همخوانی ندارند.'
+                whyOthers: 'سایر معانی با بافت سوال همخوانی ندارند.',
+                examinerLogic: 'لغات هم‌نشین در متون تخصصی روان‌شناسی.'
             }, {
                 id: 'Q21',
                 text: 'Which school of thought is associated with Carl Rogers and Abraham Maslow?',
@@ -1055,7 +1113,8 @@
                 keyword: 'Rogers, Maslow',
                 fa: 'کدام مکتب فکری با کارل راجرز و آبراهام مازلو مرتبط است؟',
                 why: 'راجرز و مازلو از چهره‌های اصلی انسان‌گرایی (Humanism) هستند.',
-                whyOthers: 'سایر مکاتب با افراد دیگر مرتبط هستند.'
+                whyOthers: 'سایر مکاتب با افراد دیگر مرتبط هستند.',
+                examinerLogic: 'انسان‌گرایی با چهره‌های کلیدی خود شناخته می‌شود.'
             }, {
                 id: 'Q22',
                 text: 'In experimental research, the variable that is measured and expected to change is called the ......',
@@ -1067,7 +1126,8 @@
                 keyword: 'measured, expected to change',
                 fa: 'در پژوهش آزمایشی، متغیری که اندازه‌گیری می‌شود و انتظار می‌رود تغییر کند، ...... نامیده می‌شود.',
                 why: 'متغیر وابسته (dependent variable) متغیری است که اندازه‌گیری می‌شود.',
-                whyOthers: 'سایر متغیرها نقش دیگری دارند.'
+                whyOthers: 'سایر متغیرها نقش دیگری دارند.',
+                examinerLogic: 'تشخیص متغیر وابسته از مستقل از مهم‌ترین مباحث روش تحقیق است.'
             }, {
                 id: 'Q23',
                 text: 'Who is considered the founder of structuralism?',
@@ -1079,7 +1139,8 @@
                 keyword: 'founder of structuralism',
                 fa: 'چه کسی به عنوان بنیانگذار ساختارگرایی در نظر گرفته می‌شود؟',
                 why: 'ادوارد تیتچنر (Edward Titchener) بنیانگذار ساختارگرایی است.',
-                whyOthers: 'سایر افراد با مکاتب دیگر مرتبط هستند.'
+                whyOthers: 'سایر افراد با مکاتب دیگر مرتبط هستند.',
+                examinerLogic: 'تیتچنر و ساختارگرایی یک ارتباط کلاسیک در تاریخ روان‌شناسی است.'
             }, {
                 id: 'Q24',
                 text: 'Which school of thought focuses only on observable behavior?',
@@ -1091,7 +1152,8 @@
                 keyword: 'observable behavior',
                 fa: 'کدام مکتب فکری فقط بر رفتار قابل مشاهده تمرکز دارد؟',
                 why: 'رفتارگرایی (Behaviorism) فقط بر رفتار قابل مشاهده تمرکز دارد.',
-                whyOthers: 'سایر مکاتب به جنبه‌های دیگر مانند ذهن یا تجربه می‌پردازند.'
+                whyOthers: 'سایر مکاتب به جنبه‌های دیگر مانند ذهن یا تجربه می‌پردازند.',
+                examinerLogic: 'رفتارگرایی با واژه "observable" گره خورده است.'
             }, {
                 id: 'Q25',
                 text: 'In operant conditioning, behavior is shaped by its ......',
@@ -1103,7 +1165,8 @@
                 keyword: 'operant conditioning',
                 fa: 'در شرطی‌سازی کنش‌گر، رفتار توسط ...... خود شکل می‌گیرد.',
                 why: 'در شرطی‌سازی کنش‌گر، رفتار توسط پیامدها (consequences) شکل می‌گیرد.',
-                whyOthers: 'سایر گزینه‌ها با شرطی‌سازی کلاسیک مرتبط هستند.'
+                whyOthers: 'سایر گزینه‌ها با شرطی‌سازی کلاسیک مرتبط هستند.',
+                examinerLogic: 'اسکینر و پیامدها دو کلیدواژه اصلی شرطی‌سازی کنش‌گر هستند.'
             }, {
                 id: 'Q26',
                 text: 'Cognitive psychology focuses on ......',
@@ -1115,7 +1178,8 @@
                 keyword: 'cognitive',
                 fa: 'روان‌شناسی شناختی بر ...... تمرکز دارد.',
                 why: 'روان‌شناسی شناختی (Cognitive Psychology) بر فرآیندهای ذهنی (mental processes) تمرکز دارد.',
-                whyOthers: 'سایر گزینه‌ها با حوزه‌های دیگر روان‌شناسی مرتبط هستند.'
+                whyOthers: 'سایر گزینه‌ها با حوزه‌های دیگر روان‌شناسی مرتبط هستند.',
+                examinerLogic: 'شناختی در مقابل رفتاری یکی از دام‌های اصلی است.'
             }, {
                 id: 'Q27',
                 text: 'Social psychology is the study of how individuals are influenced by ......',
@@ -1127,7 +1191,8 @@
                 keyword: 'social',
                 fa: 'روان‌شناسی اجتماعی مطالعه چگونگی تأثیرپذیری افراد از ...... است.',
                 why: 'روان‌شناسی اجتماعی (Social Psychology) به تأثیر دیگران بر فرد می‌پردازد.',
-                whyOthers: 'سایر گزینه‌ها با حوزه‌های دیگر مرتبط هستند.'
+                whyOthers: 'سایر گزینه‌ها با حوزه‌های دیگر مرتبط هستند.',
+                examinerLogic: 'اجتماعی یعنی تأثیر دیگران.'
             }, {
                 id: 'Q28',
                 text: 'Developmental psychology examines changes across the ......',
@@ -1139,7 +1204,8 @@
                 keyword: 'developmental',
                 fa: 'روان‌شناسی تحولی تغییرات را در طول ...... بررسی می‌کند.',
                 why: 'روان‌شناسی تحولی (Developmental Psychology) تغییرات را در طول عمر (lifespan) بررسی می‌کند.',
-                whyOthers: 'سایر گزینه‌ها با حوزه‌های دیگر مرتبط هستند.'
+                whyOthers: 'سایر گزینه‌ها با حوزه‌های دیگر مرتبط هستند.',
+                examinerLogic: 'تحولی = تغییرات در طول زمان.'
             }, {
                 id: 'Q29',
                 text: 'Abnormal psychology deals with ......',
@@ -1151,7 +1217,8 @@
                 keyword: 'abnormal',
                 fa: 'روان‌شناسی نابهنجار با ...... سروکار دارد.',
                 why: 'روان‌شناسی نابهنجار (Abnormal Psychology) با اختلالات روانی (mental disorders) سروکار دارد.',
-                whyOthers: 'سایر گزینه‌ها با حوزه‌های دیگر مرتبط هستند.'
+                whyOthers: 'سایر گزینه‌ها با حوزه‌های دیگر مرتبط هستند.',
+                examinerLogic: 'نابهنجار = اختلالات روانی.'
             }, {
                 id: 'Q30',
                 text: 'The study of sensation and perception focuses on how we ...... sensory information.',
@@ -1163,7 +1230,8 @@
                 keyword: 'sensation, perception',
                 fa: 'مطالعه حس و ادراک بر چگونگی ...... اطلاعات حسی توسط ما تمرکز دارد.',
                 why: 'حس و ادراک (Sensation & Perception) به نحوه تفسیر (interpret) اطلاعات حسی می‌پردازد.',
-                whyOthers: 'سایر گزینه‌ها با فرآیند ادراک همخوانی ندارند.'
+                whyOthers: 'سایر گزینه‌ها با فرآیند ادراک همخوانی ندارند.',
+                examinerLogic: 'ادراک یعنی تفسیر اطلاعات حسی.'
             }],
             // ===== LESSONS =====
             lessons: [{
@@ -1226,7 +1294,7 @@
                 { word: 'significant', meaning: 'مهم', en: 'Significant = important.', example: 'The results were significant.' },
                 { word: 'bearing', meaning: 'تأثیر', en: 'Bearing = effect or influence.', example: 'It has no bearing on the issue.' },
                 { word: 'subjective', meaning: 'ذهنی', en: 'Subjective = based on personal opinions.',
-                example: 'This is a subjective judgment.' },
+                    example: 'This is a subjective judgment.' },
                 { word: 'objective', meaning: 'عینی', en: 'Objective = based on facts.', example: 'We need objective data.' },
                 { word: 'reinforcement', meaning: 'تقویت', en: 'Reinforcement = strengthening of behavior.',
                     example: 'Positive reinforcement increases behavior.' },
@@ -1236,16 +1304,22 @@
             // ===== TRAPS =====
             traps: [
                 { trigger: 'observable behavior', concept: 'Behaviorism',
-                    advice: 'اگر سوال به رفتار قابل مشاهده اشاره داشت، پاسخ رفتارگرایی است.' },
+                    advice: 'اگر سوال به رفتار قابل مشاهده اشاره داشت، پاسخ رفتارگرایی است.',
+                    whyExaminer: 'رفتارگرایی یکی از پرتکرارترین دام‌هاست چون با شناختی و انسان‌گرایی قاطی می‌شود.' },
                 { trigger: 'positive growth', concept: 'Humanism',
-                    advice: 'اگر سوال به رشد و جنبه‌های مثبت اشاره داشت، پاسخ انسان‌گرایی است.' },
+                    advice: 'اگر سوال به رشد و جنبه‌های مثبت اشاره داشت، پاسخ انسان‌گرایی است.',
+                    whyExaminer: 'انسان‌گرایی با کلیدواژه‌های "رشد" و "خودشکوفایی" شناخته می‌شود.' },
                 { trigger: 'Pavlov', concept: 'Classical Conditioning',
-                    advice: 'پاولف معمولاً نشانه‌ی Classical Conditioning است.' },
+                    advice: 'پاولف معمولاً نشانه‌ی Classical Conditioning است.',
+                    whyExaminer: 'پاولف و شرطی‌سازی کلاسیک یک ارتباط مستقیم در ذهن طراح سوال است.' },
                 { trigger: 'Skinner', concept: 'Operant Conditioning',
-                    advice: 'اسکینر معمولاً نشانه‌ی Operant Conditioning است.' },
-                { trigger: 'wholeness', concept: 'Gestalt', advice: 'واژه wholeness نشانه گشتالت است.' },
+                    advice: 'اسکینر معمولاً نشانه‌ی Operant Conditioning است.',
+                    whyExaminer: 'اسکینر و شرطی‌سازی کنش‌گر یک ارتباط کلاسیک است.' },
+                { trigger: 'wholeness', concept: 'Gestalt', advice: 'واژه wholeness نشانه گشتالت است.',
+                    whyExaminer: 'گشتالت با "کل‌گرایی" گره خورده است.' },
                 { trigger: 'correlation ≠ causation', concept: 'Correlational Techniques',
-                    advice: 'همبستگی به معنی علیت نیست.' }
+                    advice: 'همبستگی به معنی علیت نیست.',
+                    whyExaminer: 'یکی از رایج‌ترین دام‌ها در روش تحقیق، اشتباه گرفتن همبستگی با علیت است.' }
             ]
         };
 
@@ -1279,6 +1353,7 @@
                         <div style="font-size:13px;color:var(--muted);">✅ ${q.why}</div>
                         <div style="font-size:13px;color:var(--muted);">❌ ${q.whyOthers}</div>
                         ${q.trap ? `<div style="font-size:13px;color:#e08b17;margin-top:4px;">⚠️ ${q.trap}</div>` : ''}
+                        ${q.examinerLogic ? `<div style="font-size:13px;color:var(--pink);margin-top:4px;">🎯 ${q.examinerLogic}</div>` : ''}
                     </div>
                 `;
             }).join('');
@@ -1349,6 +1424,7 @@
                     <strong>اگر در سوال دیدی: ${t.trigger}</strong>
                     <div style="font-size:18px;margin:4px 0;">→ ${t.concept}</div>
                     <div style="color:var(--muted);">💡 ${t.advice}</div>
+                    <div style="font-size:13px;color:var(--pink);margin-top:4px;">🎯 ${t.whyExaminer}</div>
                 </div>
             `).join('');
         }
@@ -1384,6 +1460,13 @@
             c.innerHTML = html;
         }
 
+        // ---- STUDY MODE ----
+        function renderStudy() {
+            const count = SERIES.questions.length;
+            document.getElementById('studyCount').textContent = count;
+            document.getElementById('studyProgress').textContent = `${count} سوال آماده مطالعه است. شروع کن!`;
+        }
+
         // ---- SEARCH ----
         document.getElementById('search').addEventListener('input', function(e) {
             const q = e.target.value.toLowerCase();
@@ -1409,9 +1492,29 @@
                 const target = this.getAttribute('href').substring(1);
                 document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
                 document.getElementById(target).classList.add('active');
+                // scroll to section
+                document.getElementById(target).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             });
         });
         document.querySelector('nav a')?.classList.add('active');
+
+        // ---- STUDY START ----
+        document.getElementById('startStudy').onclick = function() {
+            // show a random question
+            const qs = SERIES.questions;
+            const random = qs[Math.floor(Math.random() * qs.length)];
+            document.getElementById('studyProgress').innerHTML = `
+                <div style="background:var(--surface2);padding:14px;border-radius:16px;text-align:right;margin-top:8px;">
+                    <div class="en">${random.text}</div>
+                    <div style="font-size:13px;color:var(--muted);">🔑 ${random.keyword}</div>
+                    <div style="font-size:13px;color:var(--pink);">📚 ${random.concept}</div>
+                    <button onclick="document.getElementById('studyProgress').innerHTML='✅ مطالعه ادامه دارد...'" style="margin-top:8px;background:var(--soft);border-color:var(--line);">📖 ادامه</button>
+                </div>
+            `;
+        };
 
         // ================================================================
         //  SMART QUIZ ENGINE
@@ -1431,16 +1534,13 @@
                 const bMastery = masteryData[b.concept] || { correct: 0, total: 0 };
                 const aPct = aMastery.total > 0 ? aMastery.correct / aMastery.total : 0;
                 const bPct = bMastery.total > 0 ? bMastery.correct / bMastery.total : 0;
-                // also prioritize S questions
                 const aPrio = priorityOrder[a.priority] || 2;
                 const bPrio = priorityOrder[b.priority] || 2;
-                // combine: low mastery + high priority
                 const aScore = (1 - aPct) * 0.6 + (1 - aPrio / 2) * 0.4;
                 const bScore = (1 - bPct) * 0.6 + (1 - bPrio / 2) * 0.4;
                 return bScore - aScore;
             });
 
-            // take top 10 or all if less
             const count = Math.min(10, sorted.length);
             quizQuestions = sorted.slice(0, count);
             currentQuiz = 0;
@@ -1481,14 +1581,12 @@
                     const correct = selected === q.answer;
                     if (correct) quizScore++;
 
-                    // track mastery
                     if (!masteryData[q.concept]) masteryData[q.concept] = { correct: 0, total: 0 };
                     masteryData[q.concept].total++;
                     if (correct) masteryData[q.concept].correct++;
 
                     quizAttempted.push({ question: q.id, correct });
 
-                    // highlight
                     document.querySelectorAll('#quizOptions .option').forEach((b, idx) => {
                         if (idx === q.answer) b.classList.add('correct');
                         if (idx === selected && !correct) b.classList.add('wrong');
@@ -1502,12 +1600,18 @@
                         `❌ پاسخ صحیح: ${q.options[q.answer]}. ${q.why}`;
                     document.getElementById('quizScoreFill').style.width = `${(quizScore / quizQuestions.length) * 100}%`;
                     renderMastery();
+
+                    // save progress
+                    try {
+                        localStorage.setItem('quizly_mastery', JSON.stringify(masteryData));
+                        localStorage.setItem('quizly_score', quizScore);
+                        localStorage.setItem('quizly_date', new Date().toISOString());
+                    } catch (e) {}
                 };
             });
         }
 
         function updateMasteryStats() {
-            // update stats after quiz
             const uniqueConcepts = new Set(SERIES.questions.map(q => q.concept));
             document.getElementById('totalConcepts').textContent = uniqueConcepts.size;
             renderMastery();
@@ -1518,7 +1622,6 @@
                 currentQuiz++;
                 renderQuiz();
             } else {
-                // show final result
                 document.getElementById('quizQuestion').textContent = '🎉 پایان کوییز!';
                 document.getElementById('quizOptions').innerHTML = '';
                 document.getElementById('quizFeedback').textContent = `نمره نهایی: ${quizScore} از ${quizQuestions.length}`;
@@ -1536,19 +1639,35 @@
         // ================================================================
         //  INIT
         // ================================================================
+
+        // load mastery from localStorage
+        try {
+            const saved = localStorage.getItem('quizly_mastery');
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                // merge with existing concepts
+                SERIES.questions.forEach(q => {
+                    if (parsed[q.concept]) {
+                        masteryData[q.concept] = parsed[q.concept];
+                    }
+                });
+            }
+        } catch (e) {}
+
+        // init mastery for all concepts
+        const allConcepts = new Set(SERIES.questions.map(q => q.concept));
+        allConcepts.forEach(con => {
+            if (!masteryData[con]) masteryData[con] = { correct: 0, total: 0 };
+        });
+        document.getElementById('totalConcepts').textContent = allConcepts.size;
+
         renderQuestions();
         renderLessons();
         renderCompare();
         renderVocab();
         renderTraps();
-
-        // init mastery
-        const uniqueConcepts = new Set(SERIES.questions.map(q => q.concept));
-        uniqueConcepts.forEach(con => {
-            if (!masteryData[con]) masteryData[con] = { correct: 0, total: 0 };
-        });
-        document.getElementById('totalConcepts').textContent = uniqueConcepts.size;
         renderMastery();
+        renderStudy();
 
         // build quiz
         buildSmartQuiz();
