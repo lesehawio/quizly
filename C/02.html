@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مبانی نظری · سری 03</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"03";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مبانی نظری · سری 03</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری و رویکردهای درمانی</h2>
+  <p>تحلیل کامل سوالات با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">28 سوال</span><span class="pill">تلفیق درمانی</span><span class="pill">رویکردها</span><span class="pill">گسستگی</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>28</b><span>سوال</span></div>
+<div class="stat"><b>8</b><span>رویکرد درمانی</span></div>
+<div class="stat"><b>6</b><span>مفهوم تلفیق</span></div>
+<div class="stat"><b>4</b><span>نظریه‌پرداز</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="شناختی رفتاری تلفیقی طرح درمانی فعالانه">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد درمان شناختی رفتاری با گونه‌های تلفیقی آن، درمانگر با چه هدفی بصورت فعالانه یک طرح درمانی را طراحی می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پاسخ به نیازهای ابراز شده مراجع</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکرد شناختی-رفتاری با گونه‌های تلفیقی، درمانگر به جای تحمیل طرح درمانی از پیش تعیین‌شده، بر اساس نیازهای ابراز شده مراجع، طرح درمانی را طراحی می‌کند. این رویکرد مبتنی بر همکاری و توجه به خواسته‌های مراجع است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تقویت رابطه مراجع و درمانگر: اگرچه مهم است اما هدف اصلی طراحی طرح درمانی نیست.<br>
+- هدایت مراجع به سوی دستیابی به راه حل‌ها: نتیجه درمان است نه هدف طراحی طرح.<br>
+<b>نکته کلیدی:</b> در تلفیق شناختی-رفتاری، طراحی طرح درمانی بر اساس نیازهای مراجع است.
+</div>
+</div>
+
+<div class="card question" data-search="اولویت درمان نیاز مراجع">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> در تمامی اشکال درمان چه چیزی باید در اولویت قرار گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نیاز مراجع</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در تمام رویکردهای درمانی، اصل بنیادین این است که درمان باید در خدمت نیازهای مراجع باشد، نه در خدمت نظریه یا ترجیحات درمانگر. این اصل در اخلاق حرفه‌ای و رویکردهای مختلف درمانی مورد تأکید است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رویکرد درمان: باید در خدمت مراجع باشد نه برعکس.<br>
+- مداخلات درمان: ابزارهایی برای پاسخ به نیازهای مراجع هستند.<br>
+- نوع درمان: باید بر اساس نیازهای مراجع انتخاب شود.<br>
+<b>نکته کلیدی:</b> نیاز مراجع در اولویت است، نه نظریه یا روش درمانی.
+</div>
+</div>
+
+<div class="card question" data-search="رویکرد سیستمی مساله محور تلفیقی">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> یکی از کامل‌ترین رویکردهای سیستمی، درمان ...... است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">مساله محور تلفیقی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمان مساله‌محور تلفیقی یکی از کامل‌ترین رویکردهای سیستمی است که با ترکیب رویکردهای مختلف، به حل مسائل مراجع به صورت جامع می‌پردازد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مواجهه: یک تکنیک است نه رویکرد سیستمی کامل.<br>
+- صندلی خالی: تکنیک گشتالت است.<br>
+<b>نکته کلیدی:</b> مساله‌محور تلفیقی = کامل‌ترین رویکرد سیستمی
+</div>
+</div>
+
+<div class="card question" data-search="انسان گرا درک ابزار تغییر">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> کدام رویکرد ضمن بی‌توجهی به تاثیر گذشته در فرایند درمان، درک را ابزاری برای ایجاد تغییر می‌داند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد انسان‌گرا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد انسان‌گرایانه بر زمان حال و خودآگاهی متمرکز است و به گذشته توجه چندانی ندارد. در این رویکرد، افزایش درک و خودآگاهی به عنوان ابزار اصلی تغییر در نظر گرفته می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌تحلیلی: بر گذشته و ناخودآگاه تأکید دارد.<br>
+- رفتاری: بر رفتار و یادگیری متمرکز است.<br>
+- شناختی: بر باورها و شناخت‌ها متمرکز است.<br>
+<b>نکته کلیدی:</b> انسان‌گرایانه = درک + زمان حال (نه گذشته)
+</div>
+</div>
+
+<div class="card question" data-search="روان پویایی کاوش الگو تفسیر">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> در مکتب درمانی روان‌درمانی روان‌پویایی، کاوش در معنای یک الگو از رویدادها یا رفتارها شامل چه چیزی می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تفسیر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در روان‌پویایی، تفسیر یکی از مهم‌ترین تکنیک‌هاست. درمانگر با تفسیر الگوهای رفتاری و رویدادها، به مراجع کمک می‌کند تا معنای پنهان آنها را درک کند. این فرایند شامل کشف ارتباط بین رفتارهای فعلی و تجربیات گذشته است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روشن‌سازی: کمک به مراجع برای شفاف‌سازی احساسات است.<br>
+- موضوع: بخشی از محتوای جلسه است.<br>
+- آموزش: مربوط به رویکردهای آموزشی است.<br>
+<b>نکته کلیدی:</b> کاوش در معنای الگوها = تفسیر
+</div>
+</div>
+
+<div class="card question" data-search="شناختی الگوی تفکر">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> مکتب درمانی شناختی در فرایند مداخلات درمانی فعال چه چیزی را هدف‌گیری می‌کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">الگوی تفکر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد شناختی بر این اصل استوار است که افکار و باورهای افراد تعیین‌کننده احساسات و رفتارهای آنهاست. بنابراین هدف اصلی درمان شناختی، شناسایی و اصلاح الگوهای تفکر ناکارآمد است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اصلاح رفتار: مربوط به رویکرد رفتاری است.<br>
+- هیجان: مربوط به رویکردهای هیجان‌مدار است.<br>
+- ناخودآگاه: مربوط به روان‌پویایی است.<br>
+<b>نکته کلیدی:</b> شناختی = الگوی تفکر
+</div>
+</div>
+
+<div class="card question" data-search="رفتارگرا مهارتهای اجتماعی مداخلات رفتاری">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> یادگیری مهارت‌های اجتماعی و برخورد مؤثرتر با موقعیت‌های مشکل‌آفرین جز مداخلات درمانی کدام رویکرد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رفتارگرا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد رفتارگرایانه بر آموزش مهارت‌ها و تغییر رفتار از طریق یادگیری تأکید دارد. آموزش مهارت‌های اجتماعی و برخورد مؤثر با موقعیت‌ها، از مداخلات اصلی این رویکرد است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌پویایی: بر تحلیل ناخودآگاه متمرکز است.<br>
+- شناخت‌گرا: بر الگوهای تفکر متمرکز است.<br>
+- انسان‌گرا: بر خودآگاهی و رشد شخصی متمرکز است.<br>
+<b>نکته کلیدی:</b> رفتارگرا = مهارت‌آموزی + تغییر رفتار
+</div>
+</div>
+
+<div class="card question" data-search="انسان گرا مداخلات هیجانی">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> مداخلاتی که به هیجان مربوط می‌شوند به طور معمول از کدام مکتب درمانی نشأت می‌گیرند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انسان‌گرا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد انسان‌گرایانه به هیجانات و احساسات مراجع توجه ویژه‌ای دارد. مداخلات هیجانی مانند انعکاس احساس، همدلی و پذیرش، از جمله ابزارهای اصلی این رویکرد هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رفتارگرا: بر رفتار آشکار متمرکز است.<br>
+- روان‌پویایی: بر ناخودآگاه و تعارضات متمرکز است.<br>
+- شناخت‌گرا: بر باورها و شناخت‌ها متمرکز است.<br>
+<b>نکته کلیدی:</b> انسان‌گرا = مداخلات هیجانی
+</div>
+</div>
+
+<div class="card question" data-search="انتقال متقابل روان پویایی تجارب هیجانی">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> انتقال متقابل در طول تاریخ تفکر روان‌پویایی طی سال‌های اخیر، زمینه‌ساز فراهم آوردن چه تجاربی می‌گردد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هیجانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انتقال متقابل به واکنش‌های هیجانی درمانگر نسبت به مراجع اشاره دارد. در سال‌های اخیر، روان‌پویایی بر اهمیت کار با این واکنش‌های هیجانی به عنوان ابزاری برای درک عمیق‌تر مراجع تأکید کرده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شناختی: انتقال متقابل ماهیتاً هیجانی است نه شناختی.<br>
+- رفتاری: رفتار نتیجه هیجانات است نه منشأ آن.<br>
+- یادگیری: فرایند یادگیری در اینجا مطرح نیست.<br>
+<b>نکته کلیدی:</b> انتقال متقابل = تجارب هیجانی
+</div>
+</div>
+
+<div class="card question" data-search="مراجع مدار تداعی آزاد نادرست">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> کدام مورد در خصوص درمان مراجع‌مدار صادق نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تداعی آزاد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تداعی آزاد یکی از تکنیک‌های اصلی روان‌تحلیل‌گری (روان‌پویایی) است و در رویکرد مراجع‌مدار (راجرز) استفاده نمی‌شود. در مراجع‌مدار، تکنیک‌های اصلی شامل همدلی، پذیرش و انعکاس احساس هستند.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- پذیرش بی‌قید و شرط: شرط اساسی مراجع‌مدار است.<br>
+- توجه به مفهوم خویشتن: در مراجع‌مدار مهم است.<br>
+- نقش فعال مراجع: در این رویکرد مراجع فعال است.<br>
+<b>نکته کلیدی:</b> تداعی آزاد = روان‌تحلیل‌گری (نه مراجع‌مدار)
+</div>
+</div>
+
+<div class="card question" data-search="درمانگران با تجربه تلفیق تکنیکی">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> درمانگران با تجربه در مقایسه با درمانگران تازه‌کار بیشتر از چه تکنیکی استفاده می‌کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق تکنیکی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگران با تجربه به دلیل دانش گسترده‌تر و انعطاف‌پذیری بیشتر، از تلفیق تکنیکی (ترکیب تکنیک‌های مختلف) استفاده می‌کنند. آنها می‌توانند بر اساس نیازهای مراجع، از رویکردهای مختلف استفاده کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عوامل مشترک: تازه‌کاران بیشتر به این موارد تکیه می‌کنند.<br>
+- تلفیق جزیی: پیچیده‌تر از توان تازه‌کاران است.<br>
+- همانندسازی: نشانه ناتوانی در نوآوری است.<br>
+<b>نکته کلیدی:</b> تجربه = تلفیق تکنیکی
+</div>
+</div>
+
+<div class="card question" data-search="گسستگی کناره گیری مواجهه">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> زمانی که مراجع از درمانگر، فرآیند درمانی یا هیجانات خود را اجتناب کند، گسستگی از نوع ...... اتفاق افتاده است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">کناره‌گیری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گسستگی کناره‌گیری زمانی رخ می‌دهد که مراجع از درمانگر، فرایند درمان یا هیجانات خود اجتناب می‌کند. این نوع گسستگی با فاصله گرفتن، سکوت و عدم مشارکت فعال مشخص می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مواجهه: نوع دیگر گسستگی است که با رویارویی مشخص می‌شود.<br>
+- کناره‌گیری و مواجهه: ترکیب هر دو نوع است.<br>
+<b>نکته کلیدی:</b> اجتناب = گسستگی کناره‌گیری
+</div>
+</div>
+
+<div class="card question" data-search="درمان شناختی تحلیلی روابط شی">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> کدام رویکرد، روابط شی به روان‌درمانی را با درمان شناختی رفتاری ترکیب می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درمان شناختی تحلیلی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمان شناختی تحلیلی (CAT) یک رویکرد تلفیقی است که مفاهیم روان‌پویایی (روابط شی) را با تکنیک‌های شناختی-رفتاری ترکیب می‌کند. این رویکرد به بررسی الگوهای ارتباطی و شناختی مراجع می‌پردازد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌درمانی رفتاری: فقط بر رفتار متمرکز است.<br>
+- عوامل مشترک: رویکرد تلفیقی خاصی نیست.<br>
+<b>نکته کلیدی:</b> CAT = روابط شی + شناختی-رفتاری
+</div>
+</div>
+
+<div class="card question" data-search="انتقاد گرایی تکنیکی لازاروس">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> چه کسی اصطلاح انتقادگرایی تکنیکی را ابداع نموده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">الزاروس</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آرنولد لازاروس (Arnold Lazarus) اصطلاح "انتقادگرایی تکنیکی" (Technical Eclecticism) را ابداع کرد. او معتقد بود درمانگر باید از تکنیک‌های مختلف رویکردها بدون پایبندی به نظریه خاصی استفاده کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فرانچ: در حوزه تلفیق فعالیت داشته اما ابداع‌کننده این اصطلاح نیست.<br>
+- گرافیلد: از چهره‌های مهم تلفیق است اما این اصطلاح را ابداع نکرده است.<br>
+<b>نکته کلیدی:</b> انتقادگرایی تکنیکی = لازاروس
+</div>
+</div>
+
+<div class="card question" data-search="DBT رفتار درمانی دیالکتیکی لاین هن">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> DBT (رفتار درمانی دیالکتیکی) توسط چه کسی معرفی شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">لاین‌هن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رفتار درمانی دیالکتیکی (Dialectical Behavior Therapy) توسط مارشا لاین‌هن (Marsha Linehan) برای درمان اختلال شخصیت مرزی معرفی شد. این رویکرد ترکیبی از شناخت‌درمانی و مفاهیم دیالکتیکی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فرانک: در حوزه روان‌درمانی فعالیت داشته اما DBT را معرفی نکرده است.<br>
+- پک: ارتباطی با DBT ندارد.<br>
+<b>نکته کلیدی:</b> DBT = لاین‌هن
+</div>
+</div>
+
+<div class="card question" data-search="تفاوت فرهنگی تلفیقی نیازهای منحصر به فرد">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> در اغلب سیستم‌های تلفیقی روان‌درمانی تاکید بر چه مولفه‌ای، زمینه‌ساز تحقیق نیازهای منحصر به فرد هر مراجع خواهد بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تفاوت فرهنگی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در سیستم‌های تلفیقی، توجه به تفاوت‌های فرهنگی به عنوان یکی از مهم‌ترین مولفه‌ها در نظر گرفته می‌شود. این تفاوت‌ها شامل نژاد، قومیت، مذهب، جنسیت و سایر عوامل هویتی است که بر نیازهای مراجع تأثیر می‌گذارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تنظیم دیدگاه‌های دیگر: بخشی از فرایند است اما اصلی‌ترین مولفه نیست.<br>
+- انتظامی‌گرایی: رویکردی محدودکننده است.<br>
+<b>نکته کلیدی:</b> تفاوت فرهنگی = کلید نیازهای منحصر به فرد
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق نظری پایبندی نظری ادغام تکنیک">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> در کدام رویکرد پایبندی جدی به یک موضوع نظری خاص با تعامل برای ادغام تکنیک‌هایی از سایر رویکرد درمانی همراه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق نظری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق نظری (Theoretical Integration) رویکردی است که در آن درمانگر به یک چارچوب نظری خاص پایبند است اما در عین حال از تکنیک‌های سایر رویکردها نیز استفاده می‌کند. این رویکرد به دنبال ایجاد یکپارچگی نظری است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عوامل مشترک: بر عناصر مشترک بین رویکردها تأکید دارد.<br>
+- تفکر تکنیکی: بر تکنیک‌ها متمرکز است نه نظریه.<br>
+<b>نکته کلیدی:</b> تلفیق نظری = پایبندی نظری + ادغام تکنیک
+</div>
+</div>
+
+<div class="card question" data-search="بک نظریه شناختی">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> نظریه‌پردازی که در ارائه نظریه شناختی با عنوان درمان ...... شناخته می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آرون بک (Aaron Beck) بنیان‌گذار درمان شناختی است. او نظریه شناختی را برای درمان افسردگی توسعه داد و بعدها آن را به سایر اختلالات تعمیم داد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌درمانی: عنوان کلی است.<br>
+- رفتارگرا: مربوط به واتسون و اسکینر است.<br>
+- بینش‌محور: مربوط به روان‌پویایی است.<br>
+<b>نکته کلیدی:</b> بک = درمان شناختی
+</div>
+</div>
+
+<div class="card question" data-search="بینش محور روان پویایی درک مراجع">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> کدام رویکرد به دنبال درمان روان‌پویایی و گفتگو درباره موضوعات مورد نگرانی به منظور ارتقاء درک مراجع می‌باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد بینش‌محور</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد بینش‌محور (Insight-oriented) که ریشه در روان‌پویایی دارد، بر افزایش درک و آگاهی مراجع از الگوهای رفتاری و تعارضات خود تأکید دارد. گفتگو و کاوش در موضوعات نگران‌کننده، ابزار اصلی این رویکرد است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رفتار درمانی: بر تغییر رفتار متمرکز است.<br>
+- شناختی رفتاری: بر بازسازی شناختی متمرکز است.<br>
+<b>نکته کلیدی:</b> بینش‌محور = افزایش درک و آگاهی
+</div>
+</div>
+
+<div class="card question" data-search="اشتراک در روان درمانی فرنچ">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> نخستین کسی که به اشتراک در روان‌درمانی اشاره نمود و اصطلاح تاثیر پرنده وجود را ابداع نمود را مشخص نمایید؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فرنچ</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فرنچ (French) یکی از اولین نظریه‌پردازانی بود که به اشتراک‌ها در روان‌درمانی اشاره کرد. او اصطلاح "تاثیر پرنده وجود" (Bird's Eye View Effect) را برای توصیف دیدگاه جامع در درمان ابداع کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فروید: به اشتراک‌ها اشاره نکرده است.<br>
+- سایر گزینه‌ها با این مفهوم مرتبط نیستند.<br>
+<b>نکته کلیدی:</b> فرنچ = اشتراک در روان‌درمانی
+</div>
+</div>
+
+<div class="card question" data-search="اختلالات شخصیتی جدی DBT">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> کدام رویکرد درمانی در مورد اختلالات شخصیتی جدی مانند مشکلات اعتیادی مورد استفاده قرار می‌گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">DBT (رفتار درمانی دیالکتیکی)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رفتار درمانی دیالکتیکی (DBT) به طور خاص برای درمان اختلالات شخصیتی جدی مانند اختلال شخصیت مرزی و مشکلات اعتیادی طراحی شده است. این رویکرد ترکیبی از شناخت‌درمانی و مفاهیم دیالکتیکی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سایر گزینه‌ها رویکردهای عمومی‌تری هستند که برای اختلالات جدی کمتر مؤثرند.<br>
+<b>نکته کلیدی:</b> DBT = اختلالات شخصیتی جدی
+</div>
+</div>
+
+<div class="card question" data-search="فیزیولوژی روان داروشناختی">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> مداخلاتی که به فیزیولوژی می‌پردازند، به طور معمول از کدام رویکرد درمانی نشأت می‌گیرند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌داروشناختی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد روان‌داروشناختی به طور مستقیم به فیزیولوژی و تأثیر داروها بر سیستم عصبی و رفتار می‌پردازد. هر مداخله‌ای که با فیزیولوژی سروکار دارد (دارودرمانی، نوروفیدبک، تحریک مغزی) در این دسته قرار می‌گیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌پویایی: بر ناخودآگاه متمرکز است.<br>
+- شناخت‌درمانی: بر باورها متمرکز است.<br>
+- رفتار درمانی: بر رفتار متمرکز است.<br>
+<b>نکته کلیدی:</b> فیزیولوژی = روان‌داروشناختی
+</div>
+</div>
+
+<div class="card question" data-search="مراجع محور ترجیحات مراجع">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> در کدام رویکرد ترجیحات مراجع، دوره درمان را هدایت می‌کند، نه ترجیحات درمانگر یا دلالت‌های نظری؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مراجع‌محور</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکرد مراجع‌محور (راجرز)، مراجع محور و هدایت‌کننده اصلی درمان است. درمانگر فقط شرایط را فراهم می‌کند و مسیر را مراجع تعیین می‌کند. این اصل یکی از تفاوت‌های اساسی با سایر رویکردهاست.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رابطه‌ای: بر رابطه تأکید دارد اما نه به این شکل.<br>
+- تنظیم تکنیکی: بر تکنیک متمرکز است.<br>
+- روان‌پویایی چرخشی: بر تحلیل متمرکز است.<br>
+<b>نکته کلیدی:</b> مراجع‌محور = هدایت توسط مراجع
+</div>
+</div>
+
+<div class="card question" data-search="عوامل فرهنگی تناسب درمان">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> کدام رویکرد به درمان تناسب بالایی با در نظر گرفتن عوامل فرهنگی طی فرایند در روابط درمانگر و مراجع دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تنظیم روان‌درمانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تنظیم روان‌درمانی (Psychotherapy Adaptation) رویکردی است که بر تطبیق درمان با عوامل فرهنگی، قومی و اجتماعی مراجع تأکید دارد. این رویکرد به درمانگر کمک می‌کند تا با در نظر گرفتن تفاوت‌های فرهنگی، درمان مؤثرتری ارائه دهد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عوامل مشترک: بر عناصر مشترک تأکید دارد.<br>
+- تنظیم نظری: بر نظریه متمرکز است.<br>
+- هماهنگ‌سازی تفکیک: رویکرد خاصی نیست.<br>
+<b>نکته کلیدی:</b> تنظیم روان‌درمانی = تناسب فرهنگی
+</div>
+</div>
+
+<div class="card question" data-search="مدل سه لایه ای روان درمانی">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> کدام مورد جزو مدل سه لایه‌ای روان‌درمانی و شخصیت نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خودآگاهی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مدل سه لایه‌ای روان‌درمانی و شخصیت شامل سه سطح است: ناخودآگاه، شناخت و رفتار. خودآگاهی جزو این مدل نیست و بیشتر به رویکردهای انسان‌گرایانه مربوط است.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- ناخودآگاه: لایه اول مدل.<br>
+- شناخت: لایه دوم مدل.<br>
+- رفتار: لایه سوم مدل.<br>
+<b>نکته کلیدی:</b> خودآگاهی = خارج از مدل سه لایه‌ای
+</div>
+</div>
+
+<div class="card question" data-search="انواع گسستگی کناره گیری مواجهه">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> انواع گسست در رابطه درمانی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کناره‌گیری - مواجهه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گسستگی در رابطه درمانی به دو نوع اصلی تقسیم می‌شود: 1) کناره‌گیری (Withdrawal) که با اجتناب و فاصله گرفتن مشخص می‌شود، و 2) مواجهه (Confrontation) که با رویارویی و چالش مشخص می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کناره‌گیری-مقاومت: مقاومت نوعی از گسستگی نیست.<br>
+- کناره‌گیری-رابطه: رابطه گسستگی نیست.<br>
+<b>نکته کلیدی:</b> گسستگی = کناره‌گیری + مواجهه
+</div>
+</div>
+
+<div class="card question" data-search="مراجع محور مفهوم خویشتن">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> کدام مورد در خصوص درمان مراجع‌مدار صادق است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">توجه به مفهوم خویشتن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکرد مراجع‌مدار، مفهوم خویشتن (Self-concept) یکی از مفاهیم محوری است. راجرز معتقد بود که ناهماهنگی بین خودِ واقعی و خودِ ایده‌آل منشأ بسیاری از مشکلات روانی است.<br>
+<b>چرا گزینه‌های دیگر صادق نیستند؟</b><br>
+- تداعی آزاد: مربوط به روان‌تحلیل‌گری است.<br>
+- پذیرش بی‌قید و شرط: شرط اساسی مراجع‌مدار است.<br>
+- نقش فعال مراجع: در مراجع‌مدار صادق است.<br>
+<b>نکته کلیدی:</b> مفهوم خویشتن = مراجع‌مدار
+</div>
+</div>
+
+<div class="card question" data-search="عوامل مشترک درمانگران تازه کار">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> درمانگران تازه‌کار در مقایسه با درمانگران با تجربه بیشتر بر چه چیزی تکیه می‌کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عوامل مشترک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگران تازه‌کار به دلیل دانش محدودتر و تجربه کمتر، بیشتر به عوامل مشترک (Common Factors) مانند رابطه درمانی، همدلی و حمایت تکیه می‌کنند. با افزایش تجربه، از تکنیک‌های تخصصی‌تر و تلفیق استفاده می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تلفیق تکنیکی: مربوط به درمانگران با تجربه است.<br>
+- تلفیق جزیی: پیچیده‌تر از توان تازه‌کاران است.<br>
+- همانندسازی: نشانه ناتوانی در نوآوری است.<br>
+<b>نکته کلیدی:</b> تازه‌کار = عوامل مشترک
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>رویکردهای اصلی و نشانه‌های تشخیصی</h3></div>
+<div class="grid2">
+<div class="box"><h4>مراجع‌مدار</h4>
+<div class="fa"><b>نشانه‌ها:</b> هدایت توسط مراجع، همدلی، پذیرش، مفهوم خویشتن<br>
+<b>نقش درمانگر:</b> تسهیل‌گر<br>
+<b>تکنیک اصلی:</b> انعکاس احساس</div>
+</div>
+<div class="box"><h4>شناختی-رفتاری</h4>
+<div class="fa"><b>نشانه‌ها:</b> الگوی تفکر، باورهای ناکارآمد، بازسازی شناختی<br>
+<b>نقش درمانگر:</b> فعال و آموزش‌دهنده<br>
+<b>تکنیک اصلی:</b> بازسازی شناختی</div>
+</div>
+<div class="box"><h4>روان‌پویایی</h4>
+<div class="fa"><b>نشانه‌ها:</b> تفسیر، انتقال متقابل، ناخودآگاه<br>
+<b>نقش درمانگر:</b> تحلیل‌گر<br>
+<b>تکنیک اصلی:</b> تفسیر و تعبیر</div>
+</div>
+<div class="box"><h4>انسان‌گرایانه</h4>
+<div class="fa"><b>نشانه‌ها:</b> درک، زمان حال، هیجانات<br>
+<b>نقش درمانگر:</b> همدل و پذیرنده<br>
+<b>تکنیک اصلی:</b> انعکاس احساس</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تلفیق روان‌درمانی</h3></div>
+<div class="grid2">
+<div class="box"><h4>انواع تلفیق</h4>
+<div class="fa"><b>تلفیق تکنیکی:</b> ترکیب تکنیک‌ها (لازاروس)<br>
+<b>تلفیق نظری:</b> پایبندی نظری + ادغام تکنیک<br>
+<b>عوامل مشترک:</b> عناصر مشترک بین رویکردها</div>
+</div>
+<div class="box"><h4>نظریه‌پردازان تلفیق</h4>
+<div class="fa"><b>لازاروس:</b> انتقادگرایی تکنیکی<br>
+<b>لاین‌هن:</b> DBT (رفتار درمانی دیالکتیکی)<br>
+<b>فرنچ:</b> اشتراک در روان‌درمانی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گسستگی در رابطه درمانی</h3></div>
+<div class="grid2">
+<div class="box"><h4>گسستگی کناره‌گیری</h4>
+<div class="fa">اجتناب از درمانگر، فرایند یا هیجانات، فاصله گرفتن، سکوت</div>
+</div>
+<div class="box"><h4>گسستگی مواجهه</h4>
+<div class="fa">رویارویی، چالش، ابراز مخالفت مستقیم</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مدل سه لایه‌ای روان‌درمانی</h3></div>
+<div class="fa"><b>لایه‌ها:</b> ناخودآگاه، شناخت، رفتار</div>
+<div class="fa"><b>خودآگاهی:</b> خارج از این مدل است</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>انتقادگرایی تکنیکی</h3></div>
+<div class="fa"><b>تعریف:</b> رویکردی که در آن درمانگر از تکنیک‌های مختلف رویکردهای درمانی بدون پایبندی به نظریه خاصی استفاده می‌کند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>بنیان‌گذار:</b> آرنولد لازاروس<br>
+<b>ویژگی‌ها:</b><br>
+1. تمرکز بر تکنیک‌ها، نه نظریه‌ها<br>
+2. انعطاف‌پذیری در انتخاب مداخلات<br>
+3. توجه به نیازهای خاص هر مراجع<br>
+<b>اهمیت در آزمون:</b> سوال 14 به این مفهوم پرداخته است.<br>
+<b>سوالات مرتبط:</b> 14
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رفتار درمانی دیالکتیکی (DBT)</h3></div>
+<div class="fa"><b>تعریف:</b> رویکردی تلفیقی که ترکیبی از شناخت‌درمانی و مفاهیم دیالکتیکی است.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>بنیان‌گذار:</b> مارشا لاین‌هن<br>
+<b>کاربرد:</b> اختلالات شخصیتی جدی (به ویژه مرزی) و مشکلات اعتیادی<br>
+<b>ویژگی‌ها:</b><br>
+1. ترکیب پذیرش و تغییر<br>
+2. تأکید بر مهارت‌های تنظیم هیجان<br>
+3. استفاده از مفاهیم دیالکتیکی<br>
+<b>اهمیت در آزمون:</b> سوالات 15 و 21 به این مفهوم پرداخته‌اند.<br>
+<b>سوالات مرتبط:</b> 15، 21
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گسستگی در رابطه درمانی</h3></div>
+<div class="fa"><b>تعریف:</b> اختلال در ارتباط درمانی که به دو نوع اصلی تقسیم می‌شود.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>انواع گسستگی:</b><br>
+1. کناره‌گیری (Withdrawal): اجتناب، فاصله گرفتن، سکوت<br>
+2. مواجهه (Confrontation): رویارویی، چالش، ابراز مخالفت<br>
+<b>اهمیت در آزمون:</b> سوالات 12 و 26 به این مفهوم پرداخته‌اند.<br>
+<b>سوالات مرتبط:</b> 12، 26
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مدل سه لایه‌ای روان‌درمانی</h3></div>
+<div class="fa"><b>تعریف:</b> مدلی که سه سطح اصلی شخصیت و درمان را شامل می‌شود.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>لایه‌ها:</b><br>
+1. ناخودآگاه (روان‌پویایی)<br>
+2. شناخت (شناختی)<br>
+3. رفتار (رفتاری)<br>
+<b>خودآگاهی:</b> خارج از این مدل است و به رویکرد انسان‌گرایانه مربوط می‌شود.<br>
+<b>اهمیت در آزمون:</b> سوال 25 به این مفهوم پرداخته است.<br>
+<b>سوالات مرتبط:</b> 25
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>مراجع‌مدار</td><td>روان‌پویایی</td><td>مراجع‌مدار بر هدایت توسط مراجع، روان‌پویایی بر تحلیل ناخودآگاه</td><td>مراجع محور vs درمانگر محور</td></tr>
+<tr><td>تلفیق تکنیکی</td><td>تلفیق نظری</td><td>تکنیکی = ترکیب تکنیک‌ها، نظری = پایبندی نظری + ادغام</td><td>لازاروس vs رویکرد نظری</td></tr>
+<tr><td>گسستگی کناره‌گیری</td><td>گسستگی مواجهه</td><td>کناره‌گیری = اجتناب، مواجهه = رویارویی</td><td>فرار vs روبرو شدن</td></tr>
+<tr><td>درمانگر با تجربه</td><td>درمانگر تازه‌کار</td><td>با تجربه = تلفیق تکنیکی، تازه‌کار = عوامل مشترک</td><td>پیچیدگی vs سادگی</td></tr>
+<tr><td>شناختی</td><td>رفتاری</td><td>شناختی = الگوی تفکر، رفتاری = مهارت‌آموزی</td><td>ذهن vs عمل</td></tr>
+<tr><td>انسان‌گرا</td><td>رفتارگرا</td><td>انسان‌گرا = هیجانات و درک، رفتارگرا = مهارت‌ها</td><td>احساس vs رفتار</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>آرنولد لازاروس</h3></div>
+<div class="fa"><b>نظریه:</b> انتقادگرایی تکنیکی</div>
+<div class="fa"><b>ایده اصلی:</b> درمانگر باید از تکنیک‌های مختلف رویکردها بدون پایبندی به نظریه خاصی استفاده کند.</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "انتقادگرایی تکنیکی"، "تلفیق تکنیکی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 14</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مارشا لاین‌هن</h3></div>
+<div class="fa"><b>نظریه:</b> رفتار درمانی دیالکتیکی (DBT)</div>
+<div class="fa"><b>ایده اصلی:</b> ترکیب شناخت‌درمانی با مفاهیم دیالکتیکی برای درمان اختلالات شخصیتی جدی.</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "DBT"، "رفتار درمانی دیالکتیکی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 15، 21</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرنچ</h3></div>
+<div class="fa"><b>نظریه:</b> اشتراک در روان‌درمانی</div>
+<div class="fa"><b>ایده اصلی:</b> اشاره به اشتراک‌های بین رویکردهای مختلف و ابداع اصطلاح "تاثیر پرنده وجود".</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "اشتراک در روان‌درمانی"، "تاثیر پرنده وجود"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 20</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آرون بک</h3></div>
+<div class="fa"><b>نظریه:</b> درمان شناختی</div>
+<div class="fa"><b>ایده اصلی:</b> باورهای ناکارآمد منشأ مشکلات روانی هستند و باید اصلاح شوند.</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "درمان شناختی"، "بک"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 18</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارل راجرز</h3></div>
+<div class="fa"><b>نظریه:</b> درمان مراجع‌مدار</div>
+<div class="fa"><b>ایده اصلی:</b> سه شرط اساسی: همدلی، پذیرش بی‌قید و شرط، اصالت. هدایت درمان توسط مراجع.</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "مراجع‌مدار"، "مفهوم خویشتن"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 10، 23، 27</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: مراجع‌مدار و تداعی آزاد</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام مورد در خصوص درمان مراجع‌مدار صادق نیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "پذیرش بی‌قید و شرط" را انتخاب کنی چون این مفهوم در روان‌پویایی هم استفاده می‌شود.</div>
+<div class="fa"><b>پاسخ درست:</b> تداعی آزاد</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> تداعی آزاد تکنیک روان‌تحلیل‌گری است، نه مراجع‌مدار. در مراجع‌مدار از تکنیک‌های دیگری استفاده می‌شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تداعی آزاد = روان‌تحلیل‌گری (نه مراجع‌مدار)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: گسستگی کناره‌گیری</h3>
+<div class="fa"><b>سوال نمونه:</b> زمانی که مراجع از درمانگر یا فرایند درمان اجتناب می‌کند، چه نوع گسستگی رخ داده است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "مواجهه" را انتخاب کنی چون اجتناب به نوعی رویارویی است.</div>
+<div class="fa"><b>پاسخ درست:</b> کناره‌گیری</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> اجتناب با کناره‌گیری مرتبط است، نه مواجهه. مواجهه به معنای رویارویی مستقیم است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اجتناب = کناره‌گیری، رویارویی = مواجهه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: درمانگران با تجربه</h3>
+<div class="fa"><b>سوال نمونه:</b> درمانگران با تجربه بیشتر از چه تکنیکی استفاده می‌کنند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "عوامل مشترک" را انتخاب کنی چون به نظر می‌رسد مهم است.</div>
+<div class="fa"><b>پاسخ درست:</b> تلفیق تکنیکی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> درمانگران تازه‌کار بیشتر به عوامل مشترک تکیه می‌کنند، در حالی که با تجربه‌ها از تلفیق تکنیکی استفاده می‌کنند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تجربه = تلفیق تکنیکی، تازه‌کار = عوامل مشترک
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: مدل سه لایه‌ای</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام مورد جزو مدل سه لایه‌ای روان‌درمانی نیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "ناخودآگاه" را انتخاب کنی چون پیچیده به نظر می‌رسد.</div>
+<div class="fa"><b>پاسخ درست:</b> خودآگاهی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ناخودآگاه جزء لایه‌های مدل است، اما خودآگاهی خارج از این مدل است و به رویکرد انسان‌گرایانه مربوط می‌شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> خودآگاهی ≠ مدل سه لایه‌ای
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: تلفیق نظری</h3>
+<div class="fa"><b>سوال نمونه:</b> در کدام رویکرد پایبندی جدی به نظریه با ادغام تکنیک‌های دیگر همراه است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تلفیق تکنیکی" را انتخاب کنی چون نامش به تکنیک نزدیک است.</div>
+<div class="fa"><b>پاسخ درست:</b> تلفیق نظری</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> تلفیق تکنیکی بر تکنیک متمرکز است، در حالی که تلفیق نظری بر نظریه پایبند است و تکنیک‌ها را ادغام می‌کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تلفیق نظری = پایبندی نظری + ادغام تکنیک
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: اولویت در درمان</h3>
+<div class="fa"><b>سوال نمونه:</b> در تمامی اشکال درمان چه چیزی باید در اولویت قرار گیرد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "رویکرد درمان" را انتخاب کنی چون نظریه مهم است.</div>
+<div class="fa"><b>پاسخ درست:</b> نیاز مراجع</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> رویکرد درمان و نظریه در خدمت مراجع هستند، نه برعکس. نیاز مراجع همیشه در اولویت است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> نیاز مراجع > هر چیز دیگر
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 03 · مبانی نظری · 28 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "در تمامی اشکال درمان چه چیزی باید در اولویت قرار گیرد؟",
+options: ["رویکرد درمان", "نیاز مراجع", "مداخلات درمان", "نوع درمان"],
+answer: 1,
+explanation: "نیاز مراجع همیشه در اولویت است، نه نظریه یا روش درمانی."
+},
+{
+q: "کدام رویکرد ضمن بی‌توجهی به گذشته، درک را ابزاری برای ایجاد تغییر می‌داند؟",
+options: ["روان‌تحلیلی", "انسان‌گرا", "شناختی", "رفتاری"],
+answer: 1,
+explanation: "انسان‌گرایانه بر زمان حال و خودآگاهی متمرکز است."
+},
+{
+q: "کدام مورد در خصوص درمان مراجع‌مدار صادق نیست؟",
+options: ["پذیرش بی‌قید و شرط", "توجه به مفهوم خویشتن", "نقش فعال مراجع", "تداعی آزاد"],
+answer: 3,
+explanation: "تداعی آزاد تکنیک روان‌تحلیل‌گری است، نه مراجع‌مدار."
+},
+{
+q: "درمانگران با تجربه بیشتر از چه تکنیکی استفاده می‌کنند؟",
+options: ["تلفیق تکنیکی", "عوامل مشترک", "تلفیق جزیی", "همانندسازی"],
+answer: 0,
+explanation: "درمانگران با تجربه از تلفیق تکنیکی استفاده می‌کنند."
+},
+{
+q: "انواع گسست در رابطه درمانی کدام است؟",
+options: ["کناره‌گیری-مواجهه", "کناره‌گیری-مقاومت", "کناره‌گیری-رابطه", "مواجهه-رابطه"],
+answer: 0,
+explanation: "گسستگی به دو نوع کناره‌گیری و مواجهه تقسیم می‌شود."
+},
+{
+q: "چه کسی اصطلاح انتقادگرایی تکنیکی را ابداع نموده است؟",
+options: ["الزاروس", "فرنچ", "گرافیلد", "لاین‌هن"],
+answer: 0,
+explanation: "آرنولد لازاروس اصطلاح انتقادگرایی تکنیکی را ابداع کرد."
+},
+{
+q: "DBT (رفتار درمانی دیالکتیکی) توسط چه کسی معرفی شده است؟",
+options: ["فرانک", "بک", "لاین‌هن", "الزاروس"],
+answer: 2,
+explanation: "مارشا لاین‌هن رفتار درمانی دیالکتیکی را معرفی کرد."
+},
+{
+q: "در کدام رویکرد ترجیحات مراجع، دوره درمان را هدایت می‌کند؟",
+options: ["مراجع‌محور", "رابطه‌ای", "تنظیم تکنیکی", "روان‌پویایی چرخشی"],
+answer: 0,
+explanation: "در مراجع‌مدار، مراجع هدایت‌کننده اصلی درمان است."
+},
+{
+q: "کدام مورد جزو مدل سه لایه‌ای روان‌درمانی نیست؟",
+options: ["ناخودآگاه", "شناخت", "رفتار", "خودآگاهی"],
+answer: 3,
+explanation: "خودآگاهی خارج از مدل سه لایه‌ای است."
+},
+{
+q: "مکتب درمانی شناختی در فرایند مداخلات فعال چه چیزی را هدف‌گیری می‌کند؟",
+options: ["اصلاح رفتار", "الگوی تفکر", "هیجان", "ناخودآگاه"],
+answer: 1,
+explanation: "رویکرد شناختی بر الگوی تفکر متمرکز است."
+},
+{
+q: "مداخلات هیجانی از کدام مکتب نشأت می‌گیرند؟",
+options: ["رفتارگرا", "روان‌پویایی", "انسان‌گرا", "شناخت‌گرا"],
+answer: 2,
+explanation: "رویکرد انسان‌گرایانه بر هیجانات و احساسات تأکید دارد."
+},
+{
+q: "یادگیری مهارت‌های اجتماعی جز مداخلات کدام رویکرد است؟",
+options: ["روان‌پویایی", "شناخت‌گرا", "انسان‌گرا", "رفتارگرا"],
+answer: 3,
+explanation: "رویکرد رفتارگرایانه بر مهارت‌آموزی و تغییر رفتار تأکید دارد."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
