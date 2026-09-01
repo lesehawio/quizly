@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره چندفرهنگی · سری 01</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"01";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.en{font-family:"Segoe UI",Arial,sans-serif;direction:ltr;text-align:left;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.en,.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره چندفرهنگی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مسائل و تنوع فرهنگی در مشاوره</h2>
+  <p>تحلیل کامل 30 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">30 سوال</span><span class="pill">70 دقیقه</span><span class="pill">6 رویکرد</span><span class="pill">8 نظریه‌پرداز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>30</b><span>سوال</span></div>
+<div class="stat"><b>6</b><span>رویکرد درمانی</span></div>
+<div class="stat"><b>4</b><span>مکتب</span></div>
+<div class="stat"><b>8</b><span>نظریه‌پرداز</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="انسان‌گرایانه گذشته روان‌پویایی شناختی رفتاری">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> رویکرد انسان‌گرایانه برخلاف کدام نظریه‌ها، ارزش چندانی برای تاثیر گذشته قائل نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌پویایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد انسان‌گرایانه (با ریشه در کارهای راجرز و مازلو) بر رشد فرد در زمان حال، خودشکوفایی و مسئولیت‌پذیری تاکید دارد. این رویکرد به طور مشخص با روان‌پویایی (فروید و پیروان) که بر تجربیات کودکی، ناخودآگاه و تاثیر گذشته متمرکز است، در تضاد قرار می‌گیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شناخت‌گرایی: هرچند بر باورهای فعلی تاکید دارد، اما کاملاً در مقابل انسان‌گرایانه قرار نمی‌گیرد.<br>
+- شناختی-رفتاری: این رویکرد تلفیقی است و با انسان‌گرایانه تضاد بنیادین ندارد.<br>
+- رفتارگرایی: بر رفتار آشکار و یادگیری متمرکز است، نه بر گذشته یا حال.<br>
+<b>نکته کلیدی:</b> هرگاه سوال از "مخالف انسان‌گرایانه" پرسید، پاسخ "روان‌پویایی" است.
+</div>
+</div>
+
+<div class="card question" data-search="مداخالت محیط مکتب سیستم ها">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> مداخالتی که به محیط می‌پردازند به طور معمول از کدام مکتب نشأت می‌گیرند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مکتب سیستم‌ها</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مکتب سیستم‌ها بر این اصل استوار است که رفتار انسان در بستر محیط و سیستم‌های پیرامون (خانواده، اجتماع، سازمان) شکل می‌گیرد. بنابراین هر مداخله‌ای که به محیط می‌پردازد، ریشه در این مکتب دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌پویایی: بر درون‌فردی و ناخودآگاه متمرکز است، نه محیط.<br>
+- هستی‌گرایی: بر معنا، مرگ، آزادی و تنهایی متمرکز است.<br>
+- شناختی-رفتاری: بر شناخت و رفتار فرد متمرکز است، نه سیستم‌های محیطی.<br>
+<b>قانون طلایی:</b> هر سوالی که واژه "محیط" یا "سیستم" دارد، پاسخ "مکتب سیستم‌ها" است.
+</div>
+</div>
+
+<div class="card question" data-search="شناختی رفتاری موثرترین رویکرد تلفیقی">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> به چه دلیلی رویکرد شناختی-رفتاری، موثرترین رویکرد تلفیقی به درمان است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دو کانون رفتار و شناخت را هدف‌گیری می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد شناختی-رفتاری به عنوان یک رویکرد تلفیقی، هر دو بعد اساسی رفتار (بعد رفتاری) و شناخت (بعد ذهنی) را پوشش می‌دهد. این جامعیت، آن را از سایر رویکردهای تک‌بعدی متمایز می‌کند و به آن قدرت تلفیق بیشتری می‌دهد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- "به شناخت و باورهای انسان‌ها اهمیت می‌دهد": این فقط نیمی از قضیه است.<br>
+- "بر روی رفتار تمرکز دارد": این فقط بعد رفتاری را پوشش می‌دهد.<br>
+- گزینه چهارم: پاسخ صحیح است.<br>
+<b>نکته مهم:</b> کلید موفقیت CBT در تلفیق، توجه همزمان به رفتار و شناخت است.
+</div>
+</div>
+
+<div class="card question" data-search="سیستم های درون فردی روان پویایی هم افزایانه">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> کدام نخستین رویکرد عمده‌ای است که موضع سیستم‌های درون‌فردی را اتخاذ کرده است و تغییرات در یک جنبه کارکرد شخص را موثر و منجر به تغییرات غالباً هم‌افزایانه در سایر ابعاد کارکردی می‌داند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد روان‌پویایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فروید با ارائه مدل ساختاری (نهاد، خود، فراخود) و مدل تاپوگرافیک (هشیار، نیمه‌هشیار، ناخودآگاه)، اولین بار سیستم‌های درون‌فردی را مطرح کرد. همچنین اصل "هم‌افزایی" به این معناست که تغییر در یک بخش از شخصیت، به طور خودکار بر سایر بخش‌ها تاثیر مثبت می‌گذارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌تحلیل‌گری: همان روان‌پویایی است.<br>
+- روان‌پویایی چرخشی: یک زیرشاخه است نه اولین رویکرد.<br>
+- شناختی-رفتاری: دیرتر مطرح شده و بر سیستم‌های درون‌فردی متمرکز نیست.<br>
+<b>نکته کلیدی:</b> اولین + سیستم درون‌فردی + هم‌افزایی = روان‌پویایی
+</div>
+</div>
+
+<div class="card question" data-search="سیستم های بین فردی توانبخشی">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> توسعه‌یافته‌ترین رویکردهای سیستمی بین‌فردی در کدام حوزه هستند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">توان‌بخشی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حوزه توان‌بخشی به دلیل ماهیت چندبعدی خود (جسمی، روانی، اجتماعی، شغلی) بیشترین بهره را از رویکردهای سیستمی بین‌فردی برده است. مدل‌های توان‌بخشی مبتنی بر جامعه و رویکردهای تیمی، همگی ریشه در این رویکردها دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تحصیلی و شغلی: اگرچه از سیستم‌ها استفاده می‌کنند، اما به اندازه توان‌بخشی توسعه نیافته‌اند.<br>
+- مشکلات یادگیری: بیشتر بر رویکردهای شناختی-رفتاری متمرکز است.<br>
+- مشاوره خانواده: گرچه سیستمی است اما حوزه توان‌بخشی پیشروتر است.<br>
+<b>نکته:</b> توان‌بخشی پیشگام استفاده از رویکردهای سیستمی بین‌فردی است.
+</div>
+</div>
+
+<div class="card question" data-search="فیزیولوژی روان داروشناختی">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> مداخالتی که به فیزیولوژی می‌پردازند، به طور معمول از کدام رویکرد نشأت می‌گیرند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌داروشناختی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد روان‌داروشناختی به طور مستقیم به فیزیولوژی و تاثیر داروها بر سیستم عصبی و رفتار می‌پردازد. هر مداخله‌ای که با فیزیولوژی سروکار دارد (دارودرمانی، نوروفیدبک، تحریک مغزی) در این دسته قرار می‌گیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- معنادرمانی: بر معنا و هدف زندگی متمرکز است.<br>
+- هستی‌گرایی: بر دغدغه‌های وجودی.<br>
+- روان‌تحلیل‌گری: بر ناخودآگاه و تعارضات.<br>
+<b>قانون:</b> فیزیولوژی = روان‌داروشناختی
+</div>
+</div>
+
+<div class="card question" data-search="انسان گرایانه زمان حال انعکاس احساس">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> رویکرد انسان‌گرایانه، که رویکردی است با تمرکز بر زمان حال، چه چیزی را وسیله‌ای برای ایجاد تغییر می‌داند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انعکاس احساس</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکرد انسان‌گرایانه، انعکاس احساس (بازتاب احساسات مراجع توسط درمانگر) اصلی‌ترین ابزار برای افزایش خودآگاهی و ایجاد تغییر است. درمانگر با انعکاس دقیق احساسات، به مراجع کمک می‌کند تا تجربیات درونی خود را بهتر بشناسد و بپذیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رازداری: یک شرط اخلاقی است نه ابزار تغییر.<br>
+- انعکاس محتوا: در شناختی-رفتاری بیشتر کاربرد دارد.<br>
+- درک مراجع: یک شرط اساسی است نه ابزار تغییر.<br>
+<b>نکته:</b> انعکاس احساس، قلب تکنیک‌های انسان‌گرایانه است.
+</div>
+</div>
+
+<div class="card question" data-search="مراجع مدار دوره درمان مراجع">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد روان‌درمانی مراجع‌مدار، دوره درمان توسط چه عاملی هدایت می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مراجع</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راجرز معتقد است مراجع متخصص زندگی خود است و بهترین کسی است که می‌داند چه مسیری برای رشد او مناسب است. درمانگر فقط شرایط (همدلی، پذیرش، اصالت) را فراهم می‌کند و مسیر را مراجع تعیین می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ترجیحات درمانگر: در این رویکرد درمانگر نظر خود را تحمیل نمی‌کند.<br>
+- ترجیحات مشترک: این رویکرد بر خلاف نظر مشترک، بر نظر مراجع تاکید دارد.<br>
+- دلالت‌های نظری: نظریه در خدمت مراجع است نه برعکس.<br>
+<b>قانون طلایی:</b> مراجع‌مدار = مراجع محور
+</div>
+</div>
+
+<div class="card question" data-search="مراجع مدار نقش درمانگر تسهیل گر">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد مراجع‌مدار، نقش درمانگر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تسهیل‌گر و همدل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکرد راجرز، درمانگر نقش سنتی "متخصص" را ندارد. او با ارائه همدلی، پذیرش بی‌قید و شرط و اصالت، محیطی امن برای رشد مراجع فراهم می‌کند و فرایند خودشکوفایی را تسهیل می‌نماید.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- راهنما: بیش از حد هدایت‌گر است.<br>
+- تحلیل‌گر: مربوط به روان‌پویایی است.<br>
+- آموزش‌دهنده: مربوط به رفتارگرایی است.<br>
+<b>نکته:</b> تسهیل‌گری و همدلی، دو رکن اصلی نقش درمانگر مراجع‌مدار است.
+</div>
+</div>
+
+<div class="card question" data-search="شناخت درمانی تلفیقی بازسازی شناختی">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد شناختی-رفتاری، تاکید اصلی بر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بازسازی شناختی و تغییر رفتار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد شناختی-رفتاری بر دو اصل اساسی استوار است: 1) باورهای ناکارآمد منشأ مشکلات روانی هستند (بعد شناختی) و 2) رفتارهای مشکل‌ساز باید اصلاح شوند (بعد رفتاری). بنابراین بازسازی شناختی و تغییر رفتار دو بال اصلی این رویکرد هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط تغییر رفتار: ناقص است.<br>
+- فقط بازسازی شناختی: ناقص است.<br>
+- کاوش در گذشته: مربوط به روان‌پویایی است.<br>
+<b>نکته:</b> CBT = شناخت + رفتار
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق روان درمانی فرایند محصول واجتل گلدفرید">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> از دیدگاه پل واجتل و ماروین گلدفرید، تفاوت میان تلفیق روان‌درمانی به عنوان یک فرایند با تلفیق روان‌درمانی به عنوان یک محصول چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فرایند موجب کاوش مداوم در روان‌درمانی می‌شود، در حالی که دیدگاه محصول ما را از دیدگاه تلفیقی دور می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> واجتل و گلدفرید بر این باورند که تلفیق یک فرایند پویا و سیال است که نیاز به کاوش و یادگیری مداوم دارد. اما اگر تلفیق را به عنوان یک محصول نهایی (یک روش ثابت) ببینیم، انعطاف‌پذیری خود را از دست می‌دهیم و در واقع از ماهیت تلفیق دور می‌شویم.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گزینه‌های دیگر دیدگاه محصول را مثبت یا فرایند را منفی نشان می‌دهند که با نظر واجتل و گلدفرید در تضاد است.<br>
+<b>نکته کلیدی:</b> تلفیق = فرایند پویا (نه محصول ثابت)
+</div>
+</div>
+
+<div class="card question" data-search="جدیدترین رویکرد تلفیق روان درمانی">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> جدیدترین رویکرد در میان رویکردهای تلفیق روان‌درمانی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق نظری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق نظری جدیدترین رویکرد در حوزه تلفیق روان‌درمانی است که به دنبال ایجاد یک چارچوب نظری واحد برای تبیین رفتار و درمان است. این رویکرد فراتر از جمع‌بندی تکنیک‌ها (تلفیق تکنیکی) رفته و به دنبال وحدت نظری است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تلفیق تکنیکی: قدیمی‌ترین روش تلفیق است.<br>
+- تلفیق سطحی: رویکردی سطحی‌تر است.<br>
+- تلفیق جذبی: رویکردی قدیمی‌تر است.<br>
+<b>قانون:</b> تلفیق نظری = جدیدترین، تلفیق تکنیکی = قدیمی‌ترین
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق روان درمانی فراتر رفتن از مرزها">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> تلاش‌های مختلف در جهت فراتر رفتن از مرزهای رویکردهای تک‌مکتبی و آموختن از سایر دیدگاه‌هاست. توضیح بالا مربوط به کدام گزینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق روان‌درمانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعریف دقیق تلفیق روان‌درمانی، تلاش برای یکپارچه‌سازی رویکردهای مختلف و استفاده از نقاط قوت آنهاست. این تعریف دقیقاً با عبارت "فراتر رفتن از مرزهای رویکردهای تک‌مکتبی و آموختن از سایر دیدگاه‌ها" مطابقت دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تلفیق نظریه‌ها: بخشی از تلفیق روان‌درمانی است.<br>
+- تلفیق اطلاعات درمانگر: مورد خاصی است.<br>
+- تلفیق مکاتب: معادل تلفیق روان‌درمانی است اما عبارت دقیق‌تر همان تلفیق روان‌درمانی است.<br>
+<b>نکته:</b> تلفیق روان‌درمانی = فراتر رفتن از مرزهای تک‌مکتبی
+</div>
+</div>
+
+<div class="card question" data-search="نخستین تلفیق تکنیکی الزاروس">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> نخستین کاری که می‌توان آن را به عنوان تلفیق تکنیکی تلقی کرد توسط چه کسی ارائه شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">الزاروس</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آرنولد لازاروس با ارائه "درمان چندوجهی" (Multimodal Therapy) در دهه 1970، اولین نظام‌مندسازی تلفیق تکنیکی را انجام داد. او بدون پایبندی به یک نظریه خاص، از تکنیک‌های مختلف رویکردها استفاده کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گلدفرید: از پیشگامان تلفیق است اما اولین نبود.<br>
+- سقراط: ربطی به تلفیق روان‌درمانی ندارد.<br>
+- راتر: از نظریه‌پردازان یادگیری اجتماعی است.<br>
+<b>نکته:</b> لازاروس = پدر تلفیق تکنیکی
+</div>
+</div>
+
+<div class="card question" data-search="درمان چندوجهی الزاروس">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> نخستین تلفیق تکنیکی ارائه شده توسط الزاروس به چه شکل درمانی ارائه شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درمان چندوجهی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> لازاروس درمان چندوجهی را بر اساس مدل BASIC ID (رفتار، عواطف، احساسات، تصاویر ذهنی، شناخت‌ها، روابط بین‌فردی، زیست‌شناختی) ارائه کرد. این مدل جامع، اولین تلاش نظام‌مند برای تلفیق تکنیک‌های مختلف بود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مراجع‌محوری: رویکرد راجرز است.<br>
+- معناگرایی: رویکرد فرانکل است.<br>
+- روان‌پویایی: رویکرد فروید است.<br>
+<b>نکته:</b> درمان چندوجهی = اولین تلفیق تکنیکی
+</div>
+</div>
+
+<div class="card question" data-search="گلدفرید واجتل بنیانگذاران تلفیق">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> دو تن از بنیانگذارانی که هر کدام از آنها نقش اساسی در تحولات بعدی درون‌جنبشی تلفیق روان‌درمانی ایفا کردند چه کسانی هستند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ماروین گلدفرید و پل واجتل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ماروین گلدفرید و پل واجتل دو تن از برجسته‌ترین چهره‌های جنبش تلفیق روان‌درمانی هستند. آنها با ارائه مقالات و کتاب‌های متعدد و برگزاری کنفرانس‌های بین‌المللی، نقش کلیدی در تحول و توسعه این حوزه داشته‌اند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اریک فروم و پل واجتل: فروم روانکاو است نه چهره اصلی تلفیق.<br>
+- ویلیام گلاسر و ماروین گلدفرید: گلاسر واقعیت‌درمانی را بنیان نهاده است.<br>
+- پرز و اریک برن: پرز گشتالت و برن TA را بنیان نهاده‌اند.<br>
+<b>نکته:</b> گلدفرید و واجتل = دو ستون تلفیق روان‌درمانی
+</div>
+</div>
+
+<div class="card question" data-search="درمانگر تلفیقی شناختی رفتاری روان پویایی فعال">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> فعالیت درمانگر تلفیقی در مقایسه با یک درمانگر منحصراً شناختی-رفتاری طی جلسات درمان ...... و در مقایسه با یک درمانگر روان‌پویایی صرف ...... است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">کمتر - بیشترفعال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگر شناختی-رفتاری بسیار فعال است (آموزش، تکلیف، بازسازی شناختی) و درمانگر روان‌پویایی نسبتاً منفعل است (تعابیر محدود، گوش دادن). درمانگر تلفیقی در میانه این دو قرار می‌گیرد: از CBT فعال‌تر نیست اما از روان‌پویایی منفعل‌تر نیست.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بیشتر - کمترفعال: برعکس است.<br>
+- کمتر - بازهم کمترفعال: با روان‌پویایی تناقض دارد.<br>
+- بیشتر - بازهم بیشترفعال: با CBT تناقض دارد.<br>
+<b>قانون:</b> تلفیقی = میانه CBT و روان‌پویایی
+</div>
+</div>
+
+<div class="card question" data-search="رویکرد روان تحلیلی سیستم های درون فردی">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> کدام رویکرد برای اولین بار موضع سیستم‌های درون‌فردی را اتخاذ کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد روان‌تحلیلی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فروید با ارائه مدل ساختاری (نهاد، خود، فراخود) و مدل تاپوگرافیک (هشیار، نیمه‌هشیار، ناخودآگاه)، اولین کسی بود که شخصیت را به عنوان یک سیستم پیچیده از اجزای درون‌فردی در نظر گرفت که با یکدیگر تعامل دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌پویایی چرخشی: بعدها مطرح شد.<br>
+- روان‌پویایی: معادل روان‌تحلیلی است اما در این سوال روان‌تحلیلی دقیق‌تر است.<br>
+- شناختی-رفتاری: دیرتر مطرح شد و بر سیستم‌های درون‌فردی متمرکز نیست.<br>
+<b>نکته:</b> فروید = اولین نظریه‌پرداز سیستم‌های درون‌فردی
+</div>
+</div>
+
+<div class="card question" data-search="انسان گرایانه انعکاس احساس">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد انسان‌گرایانه، ابزار اصلی ایجاد تغییر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انعکاس احساس</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکرد انسان‌گرایانه، انعکاس احساس اصلی‌ترین تکنیک است. درمانگر با بازتاب دقیق احساسات مراجع، به او کمک می‌کند تا به خودآگاهی عمیق‌تری دست یابد و این خودآگاهی، موتور تغییر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رازداری: شرط اخلاقی است.<br>
+- انعکاس محتوا: در رویکردهای دیگر بیشتر کاربرد دارد.<br>
+- درک مراجع: شرط اساسی است نه ابزار.<br>
+<b>نکته:</b> انعکاس احساس = ابزار اصلی تغییر در انسان‌گرایانه
+</div>
+</div>
+
+<div class="card question" data-search="مراجع مدار هدایت مراجع">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد مراجع‌مدار، هدایت جلسات درمان بر عهده کیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مراجع</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راجرز به صراحت می‌گوید که مراجع، بهترین متخصص زندگی خود است و جهت‌دهی به جلسات باید بر عهده او باشد. درمانگر فقط شرایط را برای رشد فراهم می‌کند و مراجع است که تصمیم می‌گیرد درباره چه چیزهایی صحبت کند و به کجا برود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- درمانگر: در این رویکرد درمانگر هدایت نمی‌کند.<br>
+- توافق مشترک: این رویکرد بر نظر مراجع تاکید دارد.<br>
+- نظریه: نظریه در خدمت مراجع است.<br>
+<b>قانون:</b> مراجع‌مدار = مراجع محور
+</div>
+</div>
+
+<div class="card question" data-search="روان پویایی تغییر هم افزایانه">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> کدام رویکرد تغییرات در یک جنبه کارکرد شخص را موثر و منجر به تغییرات غالباً هم‌افزایانه در سایر ابعاد کارکردی می‌داند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد روان‌پویایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌پویایی بر این باور است که شخصیت یک کل یکپارچه است و تغییر در هر بخش (مثلاً حل تعارض ناخودآگاه) به طور خودکار بر سایر بخش‌ها تاثیر مثبت می‌گذارد. این اصل "هم‌افزایی" نام دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شناختی-رفتاری: تغییرات در این رویکرد تدریجی و مرحله‌ای است.<br>
+- انسان‌گرایانه: بر رشد کلی تاکید دارد اما اصل هم‌افزایی را مطرح نکرده است.<br>
+- سیستم‌ها: گرچه سیستمی است اما اولین رویکردی نیست که این اصل را مطرح کرده است.<br>
+<b>نکته:</b> هم‌افزایی = ویژگی منحصربه‌فرد روان‌پویایی
+</div>
+</div>
+
+<div class="card question" data-search="معنا درمانی فرانکل">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> مداخالتی که به معنایابی و یافتن هدف در زندگی می‌پردازند، از کدام رویکرد نشأت می‌گیرند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">معنادرمانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ویکتور فرانکل با الهام از تجربیات خود در اردوگاه‌های کار اجباری، معنادرمانی را بنیان نهاد. او معتقد بود نیروی اصلی انگیزشی انسان، "اراده به معنا" است و درمان باید به مراجع کمک کند تا معنا و هدفی برای زندگی خود پیدا کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هستی‌گرایی: اگرچه به معنا می‌پردازد اما معنادرمانی رویکرد تخصصی‌تر است.<br>
+- روان‌تحلیل‌گری: بر تعارضات ناخودآگاه متمرکز است.<br>
+- روان‌داروشناختی: بر فیزیولوژی و دارو متمرکز است.<br>
+<b>نکته:</b> معنا + فرانکل = معنادرمانی
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق تکنیکی قدیمی ترین">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> در تلفیق روان‌درمانی، کدام نوع تلفیق به عنوان قدیمی‌ترین روش شناخته می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق تکنیکی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق تکنیکی از زمان لازاروس (دهه 1970) به عنوان اولین شکل نظام‌مند تلفیق مطرح شد. قبل از آن، درمانگران به صورت غیررسمی از تکنیک‌های مختلف استفاده می‌کردند، اما لازاروس اولین کسی بود که این کار را به صورت نظام‌مند انجام داد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تلفیق نظری: جدیدترین روش است.<br>
+- تلفیق سطحی: روشی سطحی‌تر است.<br>
+- تلفیق جذبی: روشی قدیمی‌تر اما کمتر نظام‌مند است.<br>
+<b>قانون:</b> تلفیق تکنیکی = قدیمی‌ترین، تلفیق نظری = جدیدترین
+</div>
+</div>
+
+<div class="card question" data-search="گلاسر واقعیت درمانی">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از افراد زیر نقشی در توسعه تلفیق روان‌درمانی نداشته است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ویلیام گلاسر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ویلیام گلاسر بنیان‌گذار "واقعیت‌درمانی" است که یک رویکرد مستقل در مشاوره محسوب می‌شود. او نقشی در جنبش تلفیق روان‌درمانی نداشت و رویکرد او بر اساس نظریه انتخاب استوار است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گلدفرید و واجتل: از بنیانگذاران اصلی تلفیق هستند.<br>
+- فروم: در تلفیق روان‌پویایی با سایر رویکردها نقش داشته است.<br>
+<b>نکته:</b> گلاسر = واقعیت‌درمانی (نه تلفیق)
+</div>
+</div>
+
+<div class="card question" data-search="تغییرات هم افزایانه روان پویایی">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> در کدام رویکرد، تغییر در یک جنبه شخصیت منجر به تغییرات هم‌افزایانه در ابعاد دیگر می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌پویایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌پویایی بر یکپارچگی شخصیت و تاثیر متقابل اجزای آن باور دارد. بنابراین هر تغییری در یک بخش (مثلاً حل یک تعارض) به طور طبیعی و خودکار بر سایر بخش‌ها تاثیر مثبت می‌گذارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سایر رویکردها به تغییرات تدریجی و مرحله‌ای باور دارند، نه هم‌افزایانه.<br>
+<b>نکته:</b> هم‌افزایی = نشانه روان‌پویایی
+</div>
+</div>
+
+<div class="card question" data-search="تاریخچه تلفیق روان درمانی">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> تاریخچه تلفیق روان‌درمانی به چه دوره‌ای بازمی‌گردد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دهه 1930</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اولین تلاش‌های جدی برای تلفیق رویکردهای درمانی به دهه 1930 بازمی‌گردد. در این دوره، برخی از روانکاوان مانند کارن هورنای و اریک فروم تلاش کردند تا روان‌تحلیل‌گری را با رویکردهای اجتماعی و فرهنگی تلفیق کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- دهه 1950: زمان ظهور رویکردهای انسان‌گرایانه است.<br>
+- دهه 1960: زمان ظهور رویکردهای شناختی است.<br>
+- دهه 1970: زمان تلفیق تکنیکی لازاروس است.<br>
+<b>نکته:</b> دهه 1930 = شروع تلفیق
+</div>
+</div>
+
+<div class="card question" data-search="انسان گرایی زمان حال">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> رویکرد انسان‌گرایانه بر چه زمانی متمرکز است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">زمان حال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد انسان‌گرایانه بر "اینجا و اکنون" تاکید دارد. راجرز و مازلو معتقد بودند که برای رشد و خودشکوفایی، فرد باید بر تجربیات فعلی خود متمرکز شود، نه اینکه در گذشته یا آینده غرق شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گذشته: مربوط به روان‌پویایی است.<br>
+- آینده: بیشتر مربوط به رویکردهای آینده‌نگر است.<br>
+- هر سه زمان: این درست نیست چون تاکید اصلی بر حال است.<br>
+<b>قانون:</b> انسان‌گرایانه = زمان حال
+</div>
+</div>
+
+<div class="card question" data-search="روان تحلیل گری سیستم ها">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> کدام رویکرد اولین بار به بررسی سیستم‌های درون‌فردی پرداخت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌تحلیل‌گری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فروید با ارائه مدل ساختاری شخصیت (نهاد، خود، فراخود) و تاپوگرافیک (هشیار، نیمه‌هشیار، ناخودآگاه)، اولین نظریه‌پردازی بود که شخصیت را به عنوان یک سیستم درون‌فردی با اجزای تعامل‌کننده توصیف کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌پویایی چرخشی: دیرتر مطرح شد.<br>
+- روان‌پویایی: معادل روان‌تحلیل‌گری است.<br>
+- شناختی-رفتاری: بر سیستم‌های درون‌فردی متمرکز نیست.<br>
+<b>نکته:</b> روان‌تحلیل‌گری = اولین رویکرد سیستم‌های درون‌فردی
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق نظری جدیدترین">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> جدیدترین رویکرد تلفیق روان‌درمانی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق نظری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق نظری جدیدترین رویکرد در حوزه تلفیق است که از دهه 1990 به بعد رواج یافته است. این رویکرد به دنبال ایجاد یک چارچوب نظری واحد و منسجم برای روان‌درمانی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تلفیق تکنیکی: قدیمی‌ترین روش است.<br>
+- تلفیق سطحی: رویکردی سطحی است.<br>
+- تلفیق جذبی: رویکردی قدیمی‌تر است.<br>
+<b>قانون:</b> تلفیق نظری = جدیدترین
+</div>
+</div>
+
+<div class="card question" data-search="شناختی رفتاری موثرترین تلفیق">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> چرا رویکرد شناختی-رفتاری به عنوان موثرترین رویکرد تلفیقی شناخته می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به دلیل هم‌پوشانی با سایر رویکردها و قابلیت تلفیق با آنها</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد شناختی-رفتاری به دلیل ماهیت تلفیقی و انعطاف‌پذیر خود، به راحتی با سایر رویکردها (انسان‌گرایانه، روان‌پویایی، سیستمی) تلفیق می‌شود. این قابلیت تلفیق‌پذیری بالا، آن را به موثرترین رویکرد تلفیقی تبدیل کرده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گزینه‌های دیگر هر کدام بخشی از دلایل را توضیح می‌دهند اما دلیل اصلی، قابلیت تلفیق‌پذیری بالای آن است.<br>
+<b>نکته:</b> CBT = انعطاف‌پذیرترین رویکرد برای تلفیق
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>نظریه‌های اصلی و نشانه‌های تشخیصی</h3></div>
+<div class="grid2">
+<div class="box"><h4>انسان‌گرایانه</h4>
+<div class="fa"><b>نشانه‌ها:</b> زمان حال، خودشکوفایی، انعکاس احساس، مخالف روان‌پویایی<br>
+<b>نظریه‌پردازان:</b> راجرز، مازلو<br>
+<b>تکنیک اصلی:</b> انعکاس احساس</div>
+</div>
+<div class="box"><h4>روان‌پویایی</h4>
+<div class="fa"><b>نشانه‌ها:</b> گذشته، ناخودآگاه، سیستم‌های درون‌فردی، هم‌افزایی<br>
+<b>نظریه‌پردازان:</b> فروید، یونگ<br>
+<b>ویژگی:</b> اولین رویکرد سیستم‌های درون‌فردی</div>
+</div>
+<div class="box"><h4>شناختی-رفتاری</h4>
+<div class="fa"><b>نشانه‌ها:</b> دو کانون رفتار و شناخت، بازسازی شناختی، موثرترین رویکرد تلفیقی<br>
+<b>نظریه‌پردازان:</b> بک، الیس<br>
+<b>ویژگی:</b> بیشترین قابلیت تلفیق</div>
+</div>
+<div class="box"><h4>مراجع‌مدار</h4>
+<div class="fa"><b>نشانه‌ها:</b> هدایت توسط مراجع، همدلی، پذیرش، اصالت<br>
+<b>نظریه‌پرداز:</b> کارل راجرز<br>
+<b>نقش درمانگر:</b> تسهیل‌گر</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تلفیق روان‌درمانی در یک نگاه</h3></div>
+<div class="grid2">
+<div class="box"><h4>انواع تلفیق (به ترتیب قدمت)</h4>
+<div class="fa"><b>قدیمی‌ترین:</b> تلفیق تکنیکی (لازاروس - دهه 1970)<br>
+<b>میانی:</b> تلفیق سطحی، تلفیق جذبی<br>
+<b>جدیدترین:</b> تلفیق نظری (دهه 1990 به بعد)</div>
+</div>
+<div class="box"><h4>بنیانگذاران اصلی</h4>
+<div class="fa"><b>ماروین گلدفرید:</b> پیشگام تلفیق نظری<br>
+<b>پل واجتل:</b> پیشگام تلفیق نظری<br>
+<b>آرنولد لازاروس:</b> پدر تلفیق تکنیکی (درمان چندوجهی)</div>
+</div>
+<div class="box"><h4>دیدگاه فرایند vs محصول</h4>
+<div class="fa"><b>فرایند:</b> کاوش مداوم، یادگیری مستمر، انعطاف‌پذیری<br>
+<b>محصول:</b> محدودیت، ایستایی، دور شدن از تلفیق<br>
+<b>نظریه‌پردازان:</b> واجتل و گلدفرید</div>
+</div>
+<div class="box"><h4>درمان چندوجهی (BASIC ID)</h4>
+<div class="fa"><b>B</b> رفتار - <b>A</b> عواطف - <b>S</b> احساسات - <b>I</b> تصاویر ذهنی - <b>C</b> شناخت‌ها - <b>I</b> روابط بین‌فردی - <b>D</b> زیست‌شناختی<br>
+<b>نظریه‌پرداز:</b> آرنولد لازاروس</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جدول مداخلات و مکاتب</h3></div>
+<div class="grid2">
+<div class="box"><h4>مداخلات محیطی</h4>
+<div class="fa"><b>مکتب:</b> سیستم‌ها<br>
+<b>دلیل:</b> سیستم‌ها بر تعامل فرد با محیط تاکید دارند</div>
+</div>
+<div class="box"><h4>مداخلات فیزیولوژیک</h4>
+<div class="fa"><b>رویکرد:</b> روان‌داروشناختی<br>
+<b>دلیل:</b> این رویکرد به فیزیولوژی و دارو می‌پردازد</div>
+</div>
+<div class="box"><h4>مداخلات معنوی</h4>
+<div class="fa"><b>رویکرد:</b> معنادرمانی (فرانکل)<br>
+<b>دلیل:</b> بر معنا و هدف زندگی تاکید دارد</div>
+</div>
+<div class="box"><h4>رویکردهای سیستمی بین‌فردی</h4>
+<div class="fa"><b>حوزه پیشرو:</b> توان‌بخشی<br>
+<b>دلیل:</b> ماهیت چندبعدی توان‌بخشی</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>سیستم‌های درون‌فردی</h3></div>
+<div class="fa"><b>تعریف:</b> ساختارهای روانی درون فرد که با یکدیگر تعامل دارند و تغییر در هر یک بر سایرین تاثیر می‌گذارد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>منشأ:</b> این مفهوم اولین بار توسط فروید در نظریه روان‌تحلیل‌گری مطرح شد. او با ارائه مدل ساختاری (نهاد، خود، فراخود) و مدل تاپوگرافیک (هشیار، نیمه‌هشیار، ناخودآگاه)، شخصیت را به عنوان یک سیستم پیچیده از اجزای درون‌فردی توصیف کرد.<br>
+<b>اهمیت در آزمون:</b> این مفهوم در سوالات 4، 18 و 28 مورد سنجش قرار گرفته است. هرگاه سوال از "سیستم‌های درون‌فردی" یا "اولین رویکرد" پرسید، پاسخ "روان‌پویایی" یا "روان‌تحلیل‌گری" است.<br>
+<b>سوالات مرتبط:</b> 4، 18، 21، 25، 28
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تغییرات هم‌افزایانه</h3></div>
+<div class="fa"><b>تعریف:</b> تغییری در یک جنبه از شخصیت که به طور خودکار و مثبت بر سایر ابعاد کارکردی تاثیر می‌گذارد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>منشأ:</b> این مفهوم در روان‌پویایی ریشه دارد. روان‌پویایی بر این باور است که شخصیت یک کل یکپارچه است و تغییر در هر بخش، به طور طبیعی بر کل شخصیت تاثیر می‌گذارد.<br>
+<b>اهمیت در آزمون:</b> این مفهوم در سوالات 4، 21 و 25 مطرح شده است. هرگاه سوال از "هم‌افزایی" یا "تغییرات هم‌افزایانه" پرسید، پاسخ "روان‌پویایی" است.<br>
+<b>سوالات مرتبط:</b> 4، 21، 25
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تلفیق فرایندی</h3></div>
+<div class="fa"><b>تعریف:</b> نگاه به تلفیق به عنوان یک فرایند پویا و مداوم که به کاوش و یادگیری مستمر کمک می‌کند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>منشأ:</b> این مفهوم توسط پل واجتل و ماروین گلدفرید مطرح شده است. آنها معتقدند تلفیق یک مقصد نیست، بلکه یک سفر است.<br>
+<b>اهمیت در آزمون:</b> در سوال 11 به طور مستقیم به این تفاوت اشاره شده است. فرایند = کاوش مداوم، محصول = دور شدن از تلفیق.<br>
+<b>سوالات مرتبط:</b> 11
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>درمان چندوجهی (BASIC ID)</h3></div>
+<div class="fa"><b>تعریف:</b> مدلی هفت‌بعدی برای ارزیابی و درمان که توسط آرنولد لازاروس ارائه شده است.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ابعاد BASIC ID:</b><br>
+- B = Behavior (رفتار)<br>
+- A = Affect (عواطف)<br>
+- S = Sensation (احساسات)<br>
+- I = Imagery (تصاویر ذهنی)<br>
+- C = Cognition (شناخت‌ها)<br>
+- I = Interpersonal relationships (روابط بین‌فردی)<br>
+- D = Biological (زیست‌شناختی)<br>
+<b>اهمیت در آزمون:</b> این مفهوم در سوالات 14 و 15 مطرح شده است. لازاروس = اولین تلفیق تکنیکی = درمان چندوجهی.<br>
+<b>سوالات مرتبط:</b> 14، 15
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معنادرمانی</h3></div>
+<div class="fa"><b>تعریف:</b> رویکردی که بر یافتن معنا و هدف در زندگی به عنوان نیروی اصلی انگیزشی انسان تاکید دارد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>بنیان‌گذار:</b> ویکتور فرانکل - روانپزشک اتریشی و بازمانده هولوکاست.<br>
+<b>اصل اساسی:</b> انسان نیروی "اراده به معنا" دارد و فقدان معنا منشأ بسیاری از مشکلات روانی است.<br>
+<b>اهمیت در آزمون:</b> در سوال 22 مطرح شده است. هرگاه سوال از "معنا" یا "هدف زندگی" پرسید، پاسخ "معنادرمانی" است.<br>
+<b>سوالات مرتبط:</b> 22
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>انسان‌گرایانه</td><td>روان‌پویایی</td><td>انسان‌گرایانه بر زمان حال و خودشکوفایی تاکید دارد، روان‌پویایی بر گذشته و ناخودآگاه</td><td>هر سوال مخالف انسان‌گرایانه → روان‌پویایی</td></tr>
+<tr><td>درمانگر تلفیقی</td><td>درمانگر شناختی-رفتاری</td><td>درمانگر تلفیقی کمتر فعال است (میانه روی)</td><td>CBT فعال‌ترین، روان‌پویایی منفعل‌ترین، تلفیقی میانه</td></tr>
+<tr><td>درمانگر تلفیقی</td><td>درمانگر روان‌پویایی</td><td>درمانگر تلفیقی بیشتر فعال است (میانه روی)</td><td>تلفیقی = تعادل بین فعالی و انفعال</td></tr>
+<tr><td>تلفیق فرایندی</td><td>تلفیق محصولی</td><td>فرایند = کاوش و پویایی، محصول = ایستایی و محدودیت</td><td>نظر واجتل و گلدفرید: فرایند برتر</td></tr>
+<tr><td>تلفیق تکنیکی</td><td>تلفیق نظری</td><td>تکنیکی قدیمی‌ترین (لازاروس)، نظری جدیدترین (دهه 1990)</td><td>قدمت: تکنیکی > نظری</td></tr>
+<tr><td>درمان چندوجهی</td><td>مراجع‌مدار</td><td>چندوجهی بر ابعاد مختلف (BASIC ID)، مراجع‌مدار بر رابطه درمانی</td><td>لازاروس vs راجرز</td></tr>
+<tr><td>مداخلات محیطی</td><td>مداخلات فیزیولوژیک</td><td>محیطی = مکتب سیستم‌ها، فیزیولوژیک = روان‌داروشناختی</td><td>محیط ≠ فیزیولوژی</td></tr>
+<tr><td>معنادرمانی</td><td>هستی‌گرایی</td><td>معنادرمانی رویکرد تخصصی معنا، هستی‌گرایی رویکرد فلسفی</td><td>فرانکل = معنادرمانی</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>کارل راجرز</h3></div>
+<div class="fa"><b>رویکرد:</b> مراجع‌مدار (انسان‌گرایانه)</div>
+<div class="fa"><b>ایده اصلی:</b> انسان دارای گرایش فطری به سمت خودشکوفایی است. درمانگر با ارائه همدلی، پذیرش بی‌قید و شرط و اصالت، شرایط را برای رشد فراهم می‌کند.</div>
+<div class="fa"><b>نقش درمانگر:</b> تسهیل‌گر، نه هدایت‌گر</div>
+<div class="fa"><b>نشانه تشخیصی در سوال:</b> "مراجع‌مدار"، "همدلی"، "پذیرش"، "اصالت"، "هدایت توسط مراجع"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 8، 9، 20</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هر سوالی که از "هدایت درمان" یا "نقش درمانگر" در مراجع‌مدار پرسید، پاسخ "مراجع" و "تسهیل‌گر" است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>زیگموند فروید</h3></div>
+<div class="fa"><b>رویکرد:</b> روان‌تحلیل‌گری (روان‌پویایی)</div>
+<div class="fa"><b>ایده اصلی:</b> رفتار انسان توسط تعارضات ناخودآگاه و تجربیات کودکی هدایت می‌شود. شخصیت از سه بخش نهاد، خود و فراخود تشکیل شده است.</div>
+<div class="fa"><b>نقش درمانگر:</b> تحلیل‌گر و تعبیرگر</div>
+<div class="fa"><b>نشانه تشخیصی در سوال:</b> "ناخودآگاه"، "گذشته"، "تعارضات کودکی"، "سیستم‌های درون‌فردی"، "هم‌افزایی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 4، 18، 21، 25، 28</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فروید = اولین نظریه‌پرداز سیستم‌های درون‌فردی. هر سوال "اولین" + "سیستم درون‌فردی" = فروید/روان‌تحلیل‌گری.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آرنولد لازاروس</h3></div>
+<div class="fa"><b>رویکرد:</b> درمان چندوجهی (تلفیق تکنیکی)</div>
+<div class="fa"><b>ایده اصلی:</b> انسان موجودی چندبعدی است و درمان باید به تمام ابعاد (BASIC ID) توجه کند. از تکنیک‌های مختلف رویکردها بدون پایبندی به یک نظریه خاص استفاده می‌کند.</div>
+<div class="fa"><b>نقش درمانگر:</b> فعال و چندوجهی</div>
+<div class="fa"><b>نشانه تشخیصی در سوال:</b> "نخستین تلفیق تکنیکی"، "درمان چندوجهی"، "BASIC ID"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 14، 15</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> لازاروس = پدر تلفیق تکنیکی. هر سوال از "نخستین تلفیق تکنیکی" پرسید، پاسخ "لازاروس" و "درمان چندوجهی" است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ماروین گلدفرید و پل واجتل</h3></div>
+<div class="fa"><b>رویکرد:</b> تلفیق نظری</div>
+<div class="fa"><b>ایده اصلی:</b> تلفیق یک فرایند پویا است، نه محصول نهایی. باید به دنبال چارچوب نظری واحد برای روان‌درمانی بود.</div>
+<div class="fa"><b>نقش درمانگر:</b> کاوشگر و یادگیرنده مداوم</div>
+<div class="fa"><b>نشانه تشخیصی در سوال:</b> "فرایند vs محصول"، "تلفیق نظری"، "کاوش مداوم"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 11، 16</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گلدفرید و واجتل = بنیانگذاران اصلی تلفیق نظری. هر سوال از "تفاوت فرایند و محصول" پرسید، پاسخ آن است که "فرایند = کاوش" و "محصول = دور شدن از تلفیق".
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویکتور فرانکل</h3></div>
+<div class="fa"><b>رویکرد:</b> معنادرمانی</div>
+<div class="fa"><b>ایده اصلی:</b> نیروی اصلی انگیزشی انسان "اراده به معنا" است. درمان باید به مراجع کمک کند تا معنا و هدفی برای زندگی خود پیدا کند.</div>
+<div class="fa"><b>نقش درمانگر:</b> راهنما در مسیر یافتن معنا</div>
+<div class="fa"><b>نشانه تشخیصی در سوال:</b> "معنا"، "هدف زندگی"، "اراده به معنا"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 22</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فرانکل = معنادرمانی. هر سوال از "معنایابی" یا "هدف زندگی" پرسید، پاسخ "معنادرمانی" است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویلیام گلاسر</h3></div>
+<div class="fa"><b>رویکرد:</b> واقعیت‌درمانی (نظریه انتخاب)</div>
+<div class="fa"><b>ایده اصلی:</b> انسان موجودی انتخاب‌گر است و مسئول رفتارهای خود می‌باشد. درمان بر انتخاب‌های فعلی و مسئولیت‌پذیری تاکید دارد.</div>
+<div class="fa"><b>نقش درمانگر:</b> آموزش‌دهنده و هدایت‌گر</div>
+<div class="fa"><b>نشانه تشخیصی در سوال:</b> "واقعیت‌درمانی"، "نظریه انتخاب"، "مسئولیت‌پذیری"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 24</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گلاسر = واقعیت‌درمانی (نه تلفیق). در سوال 24، او گزینه غلط است چون نقشی در تلفیق ندارد.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: انسان‌گرایانه در مقابل روان‌پویایی</h3>
+<div class="fa"><b>سوال نمونه:</b> رویکرد انسان‌گرایانه برخلاف کدام نظریه‌ها، ارزش چندانی برای تاثیر گذشته قائل نیست؟</div>
+<div class="fa"><b>دام:</b> وسوسه می‌شوی "شناختی-رفتاری" را انتخاب کنی چون این رویکرد هم بر حال تاکید دارد.</div>
+<div class="fa"><b>پاسخ درست:</b> روان‌پویایی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> شناختی-رفتاری و انسان‌گرایانه هر دو بر زمان حال تاکید دارند، اما تضاد اصلی انسان‌گرایانه با روان‌پویایی است که بر گذشته متمرکز است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> هر سوال "انسان‌گرایانه در مقابل چه نظریه‌ای" پرسید، پاسخ "روان‌پویایی" است.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: فعالیت درمانگر تلفیقی</h3>
+<div class="fa"><b>سوال نمونه:</b> فعالیت درمانگر تلفیقی در مقایسه با درمانگر شناختی-رفتاری ...... و در مقایسه با درمانگر روان‌پویایی ...... است.</div>
+<div class="fa"><b>دام:</b> ممکن است فکر کنی درمانگر تلفیقی از هر دو فعال‌تر است.</div>
+<div class="fa"><b>پاسخ درست:</b> کمتر - بیشترفعال</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> درمانگر شناختی-رفتاری بسیار فعال (آموزش، تکلیف) و درمانگر روان‌پویایی نسبتاً منفعل (گوش دادن) است. درمانگر تلفیقی در میانه قرار می‌گیرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> ترتیب فعالی: CBT > تلفیقی > روان‌پویایی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: جدیدترین و قدیمی‌ترین تلفیق</h3>
+<div class="fa"><b>سوال نمونه:</b> جدیدترین رویکرد در میان رویکردهای تلفیق روان‌درمانی کدام است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تلفیق تکنیکی" را انتخاب کنی چون بیشتر با آن آشنا هستی.</div>
+<div class="fa"><b>پاسخ درست:</b> تلفیق نظری</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> تلفیق تکنیکی (لازاروس) قدیمی‌ترین و شناخته‌شده‌ترین است، اما تلفیق نظری جدیدترین است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تکنیکی = قدیمی‌ترین، نظری = جدیدترین
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: سیستم‌های درون‌فردی</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام رویکرد اولین بار موضع سیستم‌های درون‌فردی را اتخاذ کرد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "روان‌پویایی چرخشی" را انتخاب کنی چون نامش به سیستم‌ها نزدیک است.</div>
+<div class="fa"><b>پاسخ درست:</b> روان‌تحلیل‌گری (یا روان‌پویایی)</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> روان‌پویایی چرخشی بعدها مطرح شد و اولین رویکرد نبود. فروید (روان‌تحلیل‌گری) اولین کسی بود که سیستم‌های درون‌فردی را مطرح کرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اولین + سیستم درون‌فردی = روان‌تحلیل‌گری/روان‌پویایی (نه چرخشی)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: مداخلات محیطی</h3>
+<div class="fa"><b>سوال نمونه:</b> مداخالتی که به محیط می‌پردازند از کدام مکتب نشأت می‌گیرند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "مکتب شناختی-رفتاری" را انتخاب کنی چون در این رویکرد به محیط هم توجه می‌شود.</div>
+<div class="fa"><b>پاسخ درست:</b> مکتب سیستم‌ها</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> شناختی-رفتاری اگرچه به محیط توجه دارد، اما تمرکز اصلی آن بر شناخت و رفتار فرد است. مکتب سیستم‌ها به طور اختصاصی بر محیط و تعامل فرد با آن تاکید دارد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> محیط = مکتب سیستم‌ها، فیزیولوژی = روان‌داروشناختی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: تلفیق و گلاسر</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام یک از افراد زیر نقشی در توسعه تلفیق روان‌درمانی نداشته است؟</div>
+<div class="fa"><b>دام:</b> ممکن است فکر کنی گلاسر هم در تلفیق نقش داشته است.</div>
+<div class="fa"><b>پاسخ درست:</b> ویلیام گلاسر</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> گلاسر یک نظریه‌پرداز مشهور است، اما رویکرد او (واقعیت‌درمانی) مستقل است و نقشی در جنبش تلفیق نداشته است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> گلاسر = واقعیت‌درمانی (نه تلفیق)
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 01 · مشاوره چندفرهنگی · 30 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "رویکرد انسان‌گرایانه برخلاف کدام نظریه، ارزش چندانی برای تاثیر گذشته قائل نیست؟",
+options: ["روان‌پویایی", "شناختی-رفتاری", "رفتاری", "سیستمی"],
+answer: 0,
+explanation: "انسان‌گرایانه بر زمان حال و خودشکوفایی تاکید دارد و با روان‌پویایی که بر گذشته متمرکز است، تضاد دارد."
+},
+{
+q: "مداخالتی که به محیط می‌پردازند از کدام مکتب نشأت می‌گیرند؟",
+options: ["مکتب سیستم‌ها", "مکتب روان‌پویایی", "مکتب هستی‌گرایی", "مکتب شناختی-رفتاری"],
+answer: 0,
+explanation: "مکتب سیستم‌ها بر تعامل فرد با محیط و سیستم‌های پیرامون تاکید دارد."
+},
+{
+q: "چرا رویکرد شناختی-رفتاری موثرترین رویکرد تلفیقی است؟",
+options: ["به شناخت و باورها اهمیت می‌دهد", "بر روی رفتار تمرکز دارد", "دو کانون رفتار و شناخت را هدف‌گیری می‌کند", "به گذشته اهمیت می‌دهد"],
+answer: 2,
+explanation: "CBT هر دو بعد رفتار و شناخت را پوشش می‌دهد و به همین دلیل جامع‌ترین رویکرد تلفیقی است."
+},
+{
+q: "کدام رویکرد اولین بار موضع سیستم‌های درون‌فردی را اتخاذ کرد؟",
+options: ["روان‌تحلیل‌گری", "روان‌پویایی چرخشی", "روان‌پویایی", "شناختی-رفتاری"],
+answer: 0,
+explanation: "فروید با ارائه مدل ساختاری شخصیت، اولین بار سیستم‌های درون‌فردی را مطرح کرد."
+},
+{
+q: "توسعه‌یافته‌ترین رویکردهای سیستمی بین‌فردی در کدام حوزه هستند؟",
+options: ["تحصیلی و شغلی", "توان‌بخشی", "مشکلات یادگیری", "مشاوره خانواده"],
+answer: 1,
+explanation: "حوزه توان‌بخشی به دلیل ماهیت چندبعدی خود، بیشترین بهره را از رویکردهای سیستمی برده است."
+},
+{
+q: "در رویکرد مراجع‌مدار، دوره درمان توسط چه عاملی هدایت می‌شود؟",
+options: ["ترجیحات درمانگر", "مراجع", "دلالت‌های نظری", "اهداف درمانی"],
+answer: 1,
+explanation: "راجرز معتقد است مراجع متخصص زندگی خود است و مسیر درمان را خود تعیین می‌کند."
+},
+{
+q: "نخستین تلفیق تکنیکی توسط چه کسی ارائه شد؟",
+options: ["گلدفرید", "سقراط", "لازاروس", "راتر"],
+answer: 2,
+explanation: "آرنولد لازاروس با ارائه درمان چندوجهی، اولین تلفیق تکنیکی نظام‌مند را ارائه کرد."
+},
+{
+q: "نخستین تلفیق تکنیکی به چه شکل درمانی ارائه شد؟",
+options: ["درمان چندوجهی", "مراجع‌محوری", "معناگرایی", "روان‌پویایی"],
+answer: 0,
+explanation: "درمان چندوجهی لازاروس با مدل BASIC ID، اولین تلفیق تکنیکی نظام‌مند بود."
+},
+{
+q: "جدیدترین رویکرد تلفیق روان‌درمانی چیست؟",
+options: ["تلفیق نظری", "تلفیق سطحی", "تلفیق تکنیکی", "تلفیق جذبی"],
+answer: 0,
+explanation: "تلفیق نظری جدیدترین رویکرد است که از دهه 1990 به بعد رواج یافته است."
+},
+{
+q: "فعالیت درمانگر تلفیقی در مقایسه با درمانگر روان‌پویایی صرف چگونه است؟",
+options: ["کمتر فعال", "بیشتر فعال", "برابر", "متفاوت"],
+answer: 1,
+explanation: "درمانگر تلفیقی از درمانگر روان‌پویایی (که منفعل‌تر است) فعال‌تر است."
+},
+{
+q: "از دیدگاه واجتل و گلدفرید، تفاوت تلفیق به عنوان فرایند و محصول چیست؟",
+options: ["فرایند = کاوش، محصول = دور شدن از تلفیق", "فرایند = محدودیت، محصول = کاوش", "هردو یکسان هستند", "محصول بهتر از فرایند است"],
+answer: 0,
+explanation: "واجتل و گلدفرید معتقدند تلفیق به عنوان فرایند به کاوش مداوم کمک می‌کند، اما نگاه محصول‌محور ما را از تلفیق دور می‌کند."
+},
+{
+q: "در رویکرد انسان‌گرایانه، ابزار اصلی ایجاد تغییر چیست؟",
+options: ["انعکاس احساس", "رازداری", "انعکاس محتوا", "درک مراجع"],
+answer: 0,
+explanation: "انعکاس احساس اصلی‌ترین تکنیک در رویکرد انسان‌گرایانه برای افزایش خودآگاهی و ایجاد تغییر است."
+},
+{
+q: "مداخالتی که به فیزیولوژی می‌پردازند از کدام رویکرد نشأت می‌گیرند؟",
+options: ["معنادرمانی", "روان‌داروشناختی", "هستی‌گرایی", "روان‌تحلیل‌گری"],
+answer: 1,
+explanation: "روان‌داروشناختی به طور مستقیم به فیزیولوژی و تاثیر داروها بر سیستم عصبی می‌پردازد."
+},
+{
+q: "کدام رویکرد تغییرات هم‌افزایانه در شخصیت را مطرح کرده است؟",
+options: ["شناختی-رفتاری", "انسان‌گرایانه", "روان‌پویایی", "سیستمی"],
+answer: 2,
+explanation: "روان‌پویایی بر این باور است که تغییر در یک بخش شخصیت، به طور هم‌افزایانه بر سایر بخش‌ها تاثیر می‌گذارد."
+},
+{
+q: "بنیان‌گذار معنادرمانی چه کسی است؟",
+options: ["راجرز", "فرانکل", "فروید", "لازاروس"],
+answer: 1,
+explanation: "ویکتور فرانکل با الهام از تجربیات خود در اردوگاه‌های کار اجباری، معنادرمانی را بنیان نهاد."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
