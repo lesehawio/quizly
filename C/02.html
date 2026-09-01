@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره چندفرهنگی · سری 02</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"02";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره چندفرهنگی · سری 02</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مسائل و تنوع فرهنگی در مشاوره</h2>
+  <p>تحلیل کامل 30 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">30 سوال</span><span class="pill">70 دقیقه</span><span class="pill">کد 126214</span><span class="pill">10/10/1403</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>30</b><span>سوال</span></div>
+<div class="stat"><b>4</b><span>رویکرد تلفیق</span></div>
+<div class="stat"><b>6</b><span>نظریه‌پرداز</span></div>
+<div class="stat"><b>3</b><span>عامل مشترک</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="نقش مشترک مراجع و درمانگر اصلاحی هیجانی">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> کدامیک از شیوه‌های زیر توجه بیشتری به نقش مشترک مراجع و درمانگر در تعامل دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اصلاحی_هیجانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد اصلاحی-هیجانی به طور ویژه بر نقش مشترک مراجع و درمانگر در فرایند درمان تاکید دارد. این رویکرد بر تعامل دوسویه و مشارکت هر دو طرف در ایجاد تغییرات هیجانی و اصلاحی تمرکز می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بین شخصی_منش شناختی: بیشتر بر الگوهای بین‌فردی متمرکز است.<br>
+- تحسین‌کننده_ایمنی: رویکرد خاصی نیست.<br>
+- درون روانی_انتقالی: بیشتر بر فرایندهای درون‌فردی و انتقالی متمرکز است.<br>
+<b>نکته کلیدی:</b> اصلاحی-هیجانی = نقش مشترک مراجع و درمانگر
+</div>
+</div>
+
+<div class="card question" data-search="تمرین کار با صندلی تجربه درون جلسه">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> تمرین کار با صندلی مربوط به کدام رویکرد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تجربه درون جلسه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تمرین کار با صندلی (صندلی خالی) یکی از تکنیک‌های اصلی رویکرد تجربه درون جلسه (گشتالت) است که به مراجع کمک می‌کند تا احساسات و تعارضات خود را در لحظه حال تجربه کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تقویت تجارب هیجانی: هدف تکنیک است نه خود تکنیک.<br>
+- استفاده مستقیم از یک مداخله: توصیف کلی است.<br>
+- خلق فضای هیجانی: بخشی از فرایند است.<br>
+<b>نکته کلیدی:</b> صندلی خالی = تجربه درون جلسه (گشتالت)
+</div>
+</div>
+
+<div class="card question" data-search="مداخلات محیطی مکتب سیستم ها">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> مداخلاتی که به محیط می‌پردازند به طور معمول از کدام مکتب نشأت گرفته است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سیستم‌ها</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مکتب سیستم‌ها بر این اصل استوار است که رفتار انسان در بستر محیط و سیستم‌های پیرامون (خانواده، اجتماع، سازمان) شکل می‌گیرد. بنابراین هر مداخله‌ای که به محیط می‌پردازد، ریشه در این مکتب دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پویایی‌ها: بر فرایندهای درون‌فردی متمرکز است.<br>
+- شناخت: بر باورها و شناخت‌ها متمرکز است.<br>
+- رفتار: بر رفتار آشکار متمرکز است.<br>
+<b>نکته کلیدی:</b> محیط = مکتب سیستم‌ها
+</div>
+</div>
+
+<div class="card question" data-search="مداخلات فیزیولوژی روان داروشناختی">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> مداخلاتی که به فیزیولوژی می‌پردازند از کدام رویکرد نشأت گرفته است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌داروشناختی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد روان‌داروشناختی به طور مستقیم به فیزیولوژی و تأثیر داروها بر سیستم عصبی و رفتار می‌پردازد. هر مداخله‌ای که با فیزیولوژی سروکار دارد (دارودرمانی، نوروفیدبک، تحریک مغزی) در این دسته قرار می‌گیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پویایی: بر ناخودآگاه متمرکز است.<br>
+- شناخت: بر باورها متمرکز است.<br>
+- رفتار: بر رفتار آشکار متمرکز است.<br>
+<b>نکته کلیدی:</b> فیزیولوژی = روان‌داروشناختی
+</div>
+</div>
+
+<div class="card question" data-search="مدل چهار مرحله ای بینتم شناسایی پاسخ های مشکل ساز">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> مدل چهار مرحله‌ای بینتم شامل کدامیک از عوامل زیر نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شناسایی عوامل تصویر انتظار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مدل چهار مرحله‌ای بینتم (Beutler) شامل: 1) شناسایی پاسخ‌های مشکل‌ساز، 2) شناسایی ناهم‌خوانی‌ها در میان انتظارات و تجارب، 3) تعیین مشخصات تصویر انتظار که مبتنی بر آن ناهم‌خوانی هستند. شناسایی عوامل تصویر انتظار در این مدل وجود ندارد.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- شناسایی پاسخ‌های مشکل‌ساز: مرحله اول مدل.<br>
+- شناسایی ناهم‌خوانی‌ها: مرحله دوم مدل.<br>
+- تعیین مشخصات تصویر انتظار: مرحله سوم مدل.<br>
+<b>نکته کلیدی:</b> بینتم = مدل چهار مرحله‌ای (بدون شناسایی عوامل تصویر انتظار)
+</div>
+</div>
+
+<div class="card question" data-search="روان درمانی تجویزی باتلر">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> نمونه موردی ارائه شده توسط کدام دانشمند معرف روان‌درمانی تجویزی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">باتلر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> باتلر (Beutler) روان‌درمانی تجویزی (Prescriptive Psychotherapy) را به عنوان دومین رویکرد عمده به انتقادگرایی تکنیکی معرفی کرد. نمونه موردی ارائه شده توسط او نمایانگر این رویکرد است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بامبی: ارتباطی با این حوزه ندارد.<br>
+- بیتمن: در حوزه عوامل مشترک فعالیت داشت.<br>
+- لازاروس: تلفیق تکنیکی را مطرح کرد.<br>
+<b>نکته کلیدی:</b> باتلر = روان‌درمانی تجویزی
+</div>
+</div>
+
+<div class="card question" data-search="باتلر متغیر جورکننده فشردگی درمان">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> باتلر در درون طبقه‌بندی تکنیکی چه چیز را به عنوان یک متغیر جورکننده خاص در رویکرد تجویزی خود معرفی کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فشردگی درمان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> باتلر در رویکرد تجویزی خود، فشردگی درمان (Treatment Intensity) را به عنوان یک متغیر جورکننده خاص معرفی کرد که باید در طراحی درمان مورد توجه قرار گیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- طول درمان: متفاوت از فشردگی است.<br>
+- روش درمان: متغیر دیگری است.<br>
+- مدت درمان: مشابه طول درمان است.<br>
+<b>نکته کلیدی:</b> باتلر = فشردگی درمان (متغیر جورکننده)
+</div>
+</div>
+
+<div class="card question" data-search="رویکرد روان پویایی استراتژی دراز مدت">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> در صورت ارتباط یک رویکرد با نظریه روان‌پویایی، استراتژی مورد استفاده چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دراز مدت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکردهای روان‌پویایی به دلیل تمرکز بر تحلیل ناخودآگاه، تعارضات کودکی و الگوهای عمیق شخصیت، معمولاً به درمان دراز مدت نیاز دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پایدار: مشخصه درمان نیست.<br>
+- گسترده: توصیف مناسبی نیست.<br>
+- کوتاه مدت: مربوط به رویکردهای شناختی-رفتاری است.<br>
+<b>نکته کلیدی:</b> روان‌پویایی = دراز مدت
+</div>
+</div>
+
+<div class="card question" data-search="عوامل مشترک اتحاد درمانی تجربه هیجانی مثبت">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> در مطالعات صورت گرفته دو عامل مشترک اتحاد درمانی و تجربه هیجانی مراجع چه رابطه‌ای با تغییر داشتند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مثبت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مطالعات نشان داده است که اتحاد درمانی و تجربه هیجانی مراجع با تغییرات مثبت در درمان رابطه دارند. این دو عامل از مهم‌ترین عوامل مشترک در موفقیت درمان هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- منفی: برعکس واقعیت است.<br>
+- خنثی: نادرست است.<br>
+- هیچ رابطه‌ای: نادرست است.<br>
+<b>نکته کلیدی:</b> اتحاد درمانی + تجربه هیجانی = رابطه مثبت با تغییر
+</div>
+</div>
+
+<div class="card question" data-search="علامت هشدار نمره پیشرفت پایین تر از 85">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> چه زمانی علامت هشدار به درمانگر داده می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نمره پیشرفت پایین‌تر از 85 باشد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> زمانی که نمره پیشرفت مراجع پایین‌تر از 85 باشد، علامت هشدار به درمانگر داده می‌شود تا در روند درمان تجدید نظر کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پایین‌تر از 75: آستانه بحرانی‌تر است.<br>
+- بالاتر از 85: نشانه پیشرفت خوب است.<br>
+- بالاتر از 75: نشانه پیشرفت متوسط است.<br>
+<b>نکته کلیدی:</b> علامت هشدار = نمره < 85
+</div>
+</div>
+
+<div class="card question" data-search="آستانه شکست درمان پیشرفت پایین تر از 85">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> در کدام آستانه شکست درمان به درستی پیش‌بینی می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پیشرفت آزمون پایین‌تر از 85 باشد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> زمانی که پیشرفت آزمون پایین‌تر از 85 باشد، شکست درمان به درستی پیش‌بینی می‌شود و درمانگر باید مداخلات خود را تغییر دهد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بالاتر از 90: نشانه پیشرفت عالی است.<br>
+- پایین‌تر از 90: هنوز در محدوده قابل قبول است.<br>
+- بالاتر از 85: نشانه پیشرفت خوب است.<br>
+<b>نکته کلیدی:</b> شکست درمان = پیشرفت < 85
+</div>
+</div>
+
+<div class="card question" data-search="واحدهای روان درمانی تکنیک نظریه">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> برای ثبت رویکردهای تلفیق روان‌درمانی مفید است که روان‌درمانی را متشکل از یکسری واحدهای ...... کنیم.</div>
+<b>پاسخ صحیح:</b> <span class="answer">تکنیک/نظریه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برای ثبت و تحلیل رویکردهای تلفیقی، مفید است که روان‌درمانی را به واحدهای تکنیک (مداخلات عملی) و نظریه (چارچوب مفهومی) تقسیم کنیم.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پژوهش/نظریه: پژوهش روش تحقیق است نه واحد درمان.<br>
+- نظریه/پژوهش: ترتیب اشتباه است.<br>
+<b>نکته کلیدی:</b> واحدهای روان‌درمانی = تکنیک + نظریه
+</div>
+</div>
+
+<div class="card question" data-search="عوامل مشترک فرانک">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> مهمترین اثر در حوزه عوامل مشترک که غالباً در ادبیات تلفیق از آن یاد می‌شود، نخستین کار اثرگذار چه کسی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فرانک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جروم فرانک (Jerome Frank) یکی از مهم‌ترین نظریه‌پردازان حوزه عوامل مشترک است. کتاب او "اقناع و درمان" (Persuasion and Healing) تأثیرگذارترین اثر در این حوزه محسوب می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بیتمن: در حوزه دیگر فعالیت دارد.<br>
+- باتلر: روان‌درمانی تجویزی را مطرح کرد.<br>
+- لازاروس: تلفیق تکنیکی را مطرح کرد.<br>
+<b>نکته کلیدی:</b> فرانک = مهم‌ترین اثر در عوامل مشترک
+</div>
+</div>
+
+<div class="card question" data-search="نخستین تلفیق تکنیکی الزاروس چندوجهی">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> نخستین کاری که می‌توان آن را به عنوان تلفیق تکنیکی ارائه کرد توسط چه کسی و به شکل چه درمانی بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">الزاروس_چندوجهی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آرنولد لازاروس در سال 1976 اولین تلفیق تکنیکی را به شکل درمان چندوجهی (Multimodal Therapy) ارائه کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فرانک: در حوزه عوامل مشترک فعالیت داشت.<br>
+<b>نکته کلیدی:</b> لازاروس + درمان چندوجهی = اولین تلفیق تکنیکی
+</div>
+</div>
+
+<div class="card question" data-search="نخستین نمونه تلفیق نظری واجتل">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> کتاب در غالب نخستین نمونه کامل از تلفیق نظری توسط چه کسی نوشته شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">واجتل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پل واجتل (Wachtel) با کتاب "روانکاوی و درمان رفتاری" اولین نمونه کامل از تلفیق نظری را ارائه کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فرانک: در عوامل مشترک فعالیت داشت.<br>
+- لازاروس: در تلفیق تکنیکی فعالیت داشت.<br>
+- باتلر: در روان‌درمانی تجویزی فعالیت داشت.<br>
+<b>نکته کلیدی:</b> واجتل = نخستین تلفیق نظری
+</div>
+</div>
+
+<div class="card question" data-search="آینده تلفیق پژوهش">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> در ارتباط با آینده نظریه همگان اتفاق نظر دارند که کلید تحولات آینده در این حوزه در اختیار کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پژوهش</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در زمینه آینده تلفیق روان‌درمانی، همگان اتفاق نظر دارند که پژوهش و تحقیقات تجربی کلید تحولات آینده در این حوزه هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نظریه: بخشی از فرایند است اما محرک اصلی نیست.<br>
+- مطالعه: کمتر از پژوهش جامعیت دارد.<br>
+- فرضیه: بخشی از پژوهش است.<br>
+<b>نکته کلیدی:</b> آینده تلفیق = پژوهش
+</div>
+</div>
+
+<div class="card question" data-search="اهداف تلفیق روان درمانی فردنگر">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> اهداف در تلفیق روان‌درمانی چگونه هستند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فردنگر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در تلفیق روان‌درمانی، اهداف به صورت فردنگر (Individualized) تعیین می‌شوند و بر اساس نیازهای منحصر به فرد هر مراجع تنظیم می‌گردند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- قانون‌نگر: رویکردی محدودکننده است.<br>
+- برون‌نگر: با فلسفه تلفیق هماهنگ نیست.<br>
+<b>نکته کلیدی:</b> اهداف = فردنگر
+</div>
+</div>
+
+<div class="card question" data-search="درمان تجویزی باتلر عوامل مشترک">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> اگر بخواهیم در ابتدا به رویکرد عوامل مشترک بپردازیم کدام نمونه پیشنهاد می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درمان تجویزی باتلر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اگر بخواهیم به رویکرد عوامل مشترک بپردازیم، درمان تجویزی باتلر به عنوان نمونه‌ای از این رویکرد پیشنهاد می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تلفیق نظری: رویکرد دیگری است.<br>
+- آینده‌نگر بیتمن: مربوط به حوزه دیگر است.<br>
+- نتیجه‌آگاه میلر: ارتباطی ندارد.<br>
+<b>نکته کلیدی:</b> درمان تجویزی باتلر = نمونه عوامل مشترک
+</div>
+</div>
+
+<div class="card question" data-search="مفهوم کلیدی تلفیق رابطه درمان و اتحاد">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> یکی از مفاهیم کلیدی در تلفیق روان‌درمانی اساسی بودن اهمیت ...... و ...... است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">رابطه درمان و اتحاد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در تلفیق روان‌درمانی، رابطه درمانی و اتحاد درمانی از مفاهیم کلیدی و اساسی هستند که بر موفقیت درمان تأثیر می‌گذارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رابطه درمان و درمانجو: تقریباً مشابه است اما اتحاد دقیق‌تر است.<br>
+- رابطه درمان و محیط: محیط اهمیت کمتری دارد.<br>
+- رابطه درمان و درمانگر: یک طرف رابطه است.<br>
+<b>نکته کلیدی:</b> رابطه + اتحاد = مفاهیم کلیدی تلفیق
+</div>
+</div>
+
+<div class="card question" data-search="عوامل مشترک روزن زویک">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> رویکرد عوامل مشترک اولین بار توسط کدامیک مطرح شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روزن‌زویک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روزن‌زویگ (Rosenzweig) اولین کسی بود که رویکرد عوامل مشترک را مطرح کرد و اصطلاح "تاثیر برنده دودو" را ابداع نمود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- باتلر: روان‌درمانی تجویزی را مطرح کرد.<br>
+- فرانک: بعدها در این حوزه فعالیت کرد.<br>
+- گلدفرید: تلفیق نظری را مطرح کرد.<br>
+<b>نکته کلیدی:</b> روزن‌زویک = اولین نظریه‌پرداز عوامل مشترک
+</div>
+</div>
+
+<div class="card question" data-search="اخیرترین رویکرد تلفیق جذبی">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> اخیرترین رویکرد در میان رویکردهای پذیرفته شده به تلفیق روان‌درمانی کدام رویکرد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق جذبی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق جذبی (Assimilative Integration) به عنوان اخیرترین رویکرد در میان رویکردهای پذیرفته شده به تلفیق روان‌درمانی محسوب می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تلفیق نظری: رویکردی میانی است.<br>
+- تلفیق مشترک: وجود خارجی ندارد.<br>
+- تلفیق تکنیکی: قدیمی‌ترین رویکرد است.<br>
+<b>نکته کلیدی:</b> تلفیق جذبی = اخیرترین رویکرد
+</div>
+</div>
+
+<div class="card question" data-search="انجمن SEPI گلدفرید واجتل">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> دو تن از بنیانگذاران انجمن بررسی تلفیق روان‌درمانی (SEPI) که نقش اساسی در تحولات بعدی درون جنبش تلفیق روان‌درمانی ایفا کردند چه کسانی هستند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ماروین گلدفرید و پل واجتل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ماروین گلدفرید و پل واجتل دو تن از بنیانگذاران اصلی انجمن بررسی تلفیق روان‌درمانی (SEPI) هستند که نقش کلیدی در تحولات این حوزه داشته‌اند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گلدفرید به تنهایی: ناقص است.<br>
+- واجتل به تنهایی: ناقص است.<br>
+<b>نکته کلیدی:</b> SEPI = گلدفرید و واجتل
+</div>
+</div>
+
+<div class="card question" data-search="لایه دوم نظریه سه لایه شناختی">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> لایه دوم از نظریه سه لایه شخصیت تلفیق روان‌پویایی جدی است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">شناختی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در نظریه سه لایه شخصیت، لایه دوم لایه شناختی است که شامل باورها، افکار و شناخت‌های فرد می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روحی: در این مدل وجود ندارد.<br>
+- هیجانی: لایه جداگانه‌ای در این مدل نیست.<br>
+<b>نکته کلیدی:</b> لایه دوم = شناختی
+</div>
+</div>
+
+<div class="card question" data-search="درمانگر شناختی رفتاری بیشتر فعال تر">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> درمانگر هر چه به یک رویکرد شناختی-رفتاری نزدیک‌تر باشد، احتمالاً درمانگر ...... خواهد بود.</div>
+<b>پاسخ صحیح:</b> <span class="answer">بیشتر فعال‌تر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگران شناختی-رفتاری بسیار فعال هستند و از تکنیک‌هایی مانند آموزش، تکلیف و بازسازی شناختی استفاده می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کمتر فعال‌تر: مربوط به روان‌پویایی است.<br>
+<b>نکته کلیدی:</b> CBT = فعال‌ترین درمانگران
+</div>
+</div>
+
+<div class="card question" data-search="روان پویایی کمتر فعال">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> درمانگرانی که گرایشات روان‌پویایی بیشتری دارند احتمالاً ...... خواهند بود.</div>
+<b>پاسخ صحیح:</b> <span class="answer">کمتر فعال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگران روان‌پویایی نسبتاً منفعل هستند و بیشتر به گوش دادن، تعبیر و تحلیل محدود می‌پردازند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بیشتر فعال: مربوط به CBT است.<br>
+- انعطاف‌پذیرتر: ویژگی کلی نیست.<br>
+- صبورتر: ویژگی شخصی است.<br>
+<b>نکته کلیدی:</b> روان‌پویایی = کمتر فعال
+</div>
+</div>
+
+<div class="card question" data-search="درمانگر تلفیقی کمتر فعال شناختی رفتاری">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> درمانگر تلفیقی نیز در مقایسه با یک درمانگر منحصراً شناختی-رفتاری ...... و در مقایسه با یک درمانگر روان‌پویایی صرفاً ...... است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">کمتر فعال - بیشتر فعال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگر تلفیقی در میانه CBT (بسیار فعال) و روان‌پویایی (منفعل) قرار می‌گیرد. بنابراین از CBT کمتر فعال و از روان‌پویایی بیشتر فعال است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گزینه‌های دیگر ترتیب را اشتباه ذکر کرده‌اند.<br>
+<b>نکته کلیدی:</b> CBT > تلفیقی > روان‌پویایی (از نظر فعالی)
+</div>
+</div>
+
+<div class="card question" data-search="نیاز مراجع در اولویت">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> تقریباً در تمامی اشکال درمان، نیازهای مراجع باید ...... قرار گیرد.</div>
+<b>پاسخ صحیح:</b> <span class="answer">در اولویت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در تمام رویکردهای درمانی، نیازهای مراجع باید در اولویت قرار گیرد. این اصل بنیادین در اخلاق حرفه‌ای و رویکردهای مختلف درمانی مورد تأکید است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پس از نظرات مشاور: نادرست است.<br>
+- مورد بی‌توجهی: غیراخلاقی است.<br>
+- در حد نرمال: کافی نیست.<br>
+<b>نکته کلیدی:</b> نیاز مراجع در اولویت است
+</div>
+</div>
+
+<div class="card question" data-search="انواع گسست کناره گیری مواجهه">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> انواع گسست در رابطه درمانی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کناره‌گیری - مواجهه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گسستگی در رابطه درمانی به دو نوع اصلی تقسیم می‌شود: 1) کناره‌گیری (Withdrawal) که با اجتناب و فاصله گرفتن مشخص می‌شود، و 2) مواجهه (Confrontation) که با رویارویی و چالش مشخص می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کناره‌گیری-مقاومت: مقاومت نوعی از گسستگی نیست.<br>
+- کناره‌گیری-رابطه: رابطه گسستگی نیست.<br>
+<b>نکته کلیدی:</b> گسستگی = کناره‌گیری + مواجهه
+</div>
+</div>
+
+<div class="card question" data-search="مراجع مدار مفهوم خویشتن">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> کدام مورد در خصوص درمان مراجع‌مدار صادق است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">توجه به مفهوم خویشتن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکرد مراجع‌مدار، مفهوم خویشتن (Self-concept) یکی از مفاهیم محوری است. راجرز معتقد بود که ناهماهنگی بین خودِ واقعی و خودِ ایده‌آل منشأ بسیاری از مشکلات روانی است.<br>
+<b>چرا گزینه‌های دیگر صادق نیستند؟</b><br>
+- تداعی آزاد: مربوط به روان‌تحلیل‌گری است.<br>
+- پذیرش بی‌قید و شرط: شرط اساسی مراجع‌مدار است.<br>
+- نقش فعال مراجع: در مراجع‌مدار صادق است.<br>
+<b>نکته کلیدی:</b> مفهوم خویشتن = مراجع‌مدار
+</div>
+</div>
+
+<div class="card question" data-search="عوامل مشترک درمانگران تازه کار">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> درمانگران تازه‌کار در مقایسه با درمانگران با تجربه بیشتر بر چه چیزی تکیه می‌کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عوامل مشترک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگران تازه‌کار به دلیل دانش محدودتر و تجربه کمتر، بیشتر به عوامل مشترک (Common Factors) مانند رابطه درمانی، همدلی و حمایت تکیه می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تلفیق تکنیکی: مربوط به درمانگران با تجربه است.<br>
+- تلفیق جزیی: پیچیده‌تر از توان تازه‌کاران است.<br>
+- همانندسازی: نشانه ناتوانی در نوآوری است.<br>
+<b>نکته کلیدی:</b> تازه‌کار = عوامل مشترک
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>چهار رویکرد اصلی تلفیق روان‌درمانی</h3></div>
+<div class="grid2">
+<div class="box"><h4>1. عوامل مشترک</h4>
+<div class="fa"><b>بنیان‌گذار:</b> روزن‌زویگ (اولین)، فرانک (مهم‌ترین)<br>
+<b>ایده اصلی:</b> اشتراکات بین رویکردها<br>
+<b>نشانه:</b> تاثیر برنده دودو</div>
+</div>
+<div class="box"><h4>2. تلفیق تکنیکی</h4>
+<div class="fa"><b>بنیان‌گذار:</b> لازاروس (1976)<br>
+<b>ایده اصلی:</b> ترکیب تکنیک‌ها<br>
+<b>نشانه:</b> درمان چندوجهی</div>
+</div>
+<div class="box"><h4>3. تلفیق نظری</h4>
+<div class="fa"><b>بنیان‌گذار:</b> واجتل<br>
+<b>ایده اصلی:</b> یکپارچگی نظری<br>
+<b>نشانه:</b> روانکاوی و درمان رفتاری</div>
+</div>
+<div class="box"><h4>4. تلفیق جذبی</h4>
+<div class="fa"><b>ویژگی:</b> اخیرترین رویکرد<br>
+<b>ایده اصلی:</b> پایبندی به یک رویکرد + استفاده از تکنیک‌های دیگر</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه‌پردازان کلیدی تلفیق</h3></div>
+<div class="grid2">
+<div class="box"><h4>روزن‌زویگ</h4>
+<div class="fa">عوامل مشترک، تاثیر برنده دودو</div>
+</div>
+<div class="box"><h4>لازاروس</h4>
+<div class="fa">تلفیق تکنیکی، درمان چندوجهی</div>
+</div>
+<div class="box"><h4>واجتل</h4>
+<div class="fa">تلفیق نظری، روانکاوی و درمان رفتاری</div>
+</div>
+<div class="box"><h4>باتلر</h4>
+<div class="fa">روان‌درمانی تجویزی، فشردگی درمان</div>
+</div>
+<div class="box"><h4>فرانک</h4>
+<div class="fa">عوامل مشترک، اقناع و درمان</div>
+</div>
+<div class="box"><h4>بینتم</h4>
+<div class="fa">مدل چهار مرحله‌ای</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه سه لایه شخصیت</h3></div>
+<div class="fa"><b>لایه 1:</b> ناخودآگاه</div>
+<div class="fa"><b>لایه 2:</b> شناخت</div>
+<div class="fa"><b>لایه 3:</b> رفتار</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آستانه‌های هشدار در درمان</h3></div>
+<div class="fa"><b>علامت هشدار:</b> نمره پیشرفت < 85</div>
+<div class="fa"><b>شکست درمان:</b> پیشرفت < 85</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فعالی درمانگران (از بیشتر به کمتر)</h3></div>
+<div class="fa"><b>بیشترین فعالی:</b> شناختی-رفتاری</div>
+<div class="fa"><b>میانه:</b> تلفیقی</div>
+<div class="fa"><b>کمترین فعالی:</b> روان‌پویایی</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>مدل چهار مرحله‌ای بینتم</h3></div>
+<div class="fa"><b>تعریف:</b> مدلی برای شناسایی و تحلیل مشکلات مراجع در روان‌درمانی تجویزی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>مراحل:</b><br>
+1. شناسایی پاسخ‌های مشکل‌ساز<br>
+2. شناسایی ناهم‌خوانی‌ها در میان انتظارات و تجارب<br>
+3. تعیین مشخصات تصویر انتظار که مبتنی بر آن ناهم‌خوانی هستند<br>
+<b>نکته:</b> شناسایی عوامل تصویر انتظار در این مدل وجود ندارد.<br>
+<b>سوالات مرتبط:</b> 5
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌درمانی تجویزی</h3></div>
+<div class="fa"><b>تعریف:</b> رویکردی که توسط باتلر به عنوان دومین رویکرد عمده به انتقادگرایی تکنیکی ارائه شد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>بنیان‌گذار:</b> لری باتلر (Larry Beutler)<br>
+<b>متغیر جورکننده:</b> فشردگی درمان (Treatment Intensity)<br>
+<b>ویژگی‌ها:</b> نمونه‌ای از رویکرد عوامل مشترک<br>
+<b>سوالات مرتبط:</b> 6، 7، 18
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل مشترک</h3></div>
+<div class="fa"><b>تعریف:</b> رویکردی که بر اشتراکات بین رویکردهای مختلف روان‌درمانی تأکید دارد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>بنیان‌گذاران:</b> روزن‌زویگ (اولین)، فرانک (مهم‌ترین اثر)<br>
+<b>مفاهیم کلیدی:</b> اتحاد درمانی، تجربه هیجانی (رابطه مثبت با تغییر)<br>
+<b>سوالات مرتبط:</b> 9، 13، 19، 20
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تلفیق جذبی</h3></div>
+<div class="fa"><b>تعریف:</b> اخیرترین رویکرد تلفیقی که در آن درمانگر به یک رویکرد اصلی پایبند است اما از تکنیک‌های دیگر نیز استفاده می‌کند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ویژگی‌ها:</b> پایبندی آشکار به یک گرایش درمانی واحد، استفاده از تکنیک‌های سایر رویکردها<br>
+<b>سوالات مرتبط:</b> 21
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آستانه‌های درمانی</h3></div>
+<div class="fa"><b>تعریف:</b> نقاط هشداردهنده در فرایند درمان برای ارزیابی پیشرفت.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>علامت هشدار:</b> نمره پیشرفت < 85<br>
+<b>شکست درمان:</b> پیشرفت < 85<br>
+<b>سوالات مرتبط:</b> 10، 11
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>عوامل مشترک</td><td>تلفیق تکنیکی</td><td>عوامل مشترک بر اشتراکات، تلفیق تکنیکی بر تکنیک‌ها</td><td>روزن‌زویگ vs لازاروس</td></tr>
+<tr><td>تلفیق تکنیکی</td><td>تلفیق نظری</td><td>تکنیکی = ترکیب تکنیک، نظری = یکپارچگی نظری</td><td>لازاروس vs واجتل</td></tr>
+<tr><td>تلفیق جذبی</td><td>تلفیق تکنیکی</td><td>جذبی = پایبندی به یک رویکرد، تکنیکی = بدون پایبندی</td><td>اخیرترین vs قدیمی‌ترین</td></tr>
+<tr><td>درمانگر CBT</td><td>درمانگر روان‌پویایی</td><td>CBT بسیار فعال، روان‌پویایی کم‌فعال</td><td>فعال‌ترین vs کم‌فعال‌ترین</td></tr>
+<tr><td>درمانگر تلفیقی</td><td>درمانگر CBT</td><td>تلفیقی کمتر فعال از CBT</td><td>CBT > تلفیقی</td></tr>
+<tr><td>درمانگر تلفیقی</td><td>درمانگر روان‌پویایی</td><td>تلفیقی بیشتر فعال از روان‌پویایی</td><td>تلفیقی > روان‌پویایی</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>روزن‌زویگ</h3></div>
+<div class="fa"><b>نظریه:</b> عوامل مشترک</div>
+<div class="fa"><b>ایده اصلی:</b> اشتراکات بین رویکردهای مختلف روان‌درمانی، تاثیر برنده دودو</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "عوامل مشترک"، "تاثیر برنده دودو"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 20</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آرنولد لازاروس</h3></div>
+<div class="fa"><b>نظریه:</b> تلفیق تکنیکی</div>
+<div class="fa"><b>ایده اصلی:</b> استفاده از تکنیک‌های مختلف، درمان چندوجهی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "تلفیق تکنیکی"، "درمان چندوجهی"، "الزاروس"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 14</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لری باتلر</h3></div>
+<div class="fa"><b>نظریه:</b> روان‌درمانی تجویزی</div>
+<div class="fa"><b>ایده اصلی:</b> دومین رویکرد عمده به انتقادگرایی تکنیکی، متغیر جورکننده: فشردگی درمان</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "روان‌درمانی تجویزی"، "باتلر"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 6، 7، 18</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جروم فرانک</h3></div>
+<div class="fa"><b>نظریه:</b> عوامل مشترک</div>
+<div class="fa"><b>ایده اصلی:</b> مهم‌ترین اثر در حوزه عوامل مشترک، کتاب "اقناع و درمان"</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "فرانک"، "عوامل مشترک"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 13</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پل واجتل</h3></div>
+<div class="fa"><b>نظریه:</b> تلفیق نظری</div>
+<div class="fa"><b>ایده اصلی:</b> نخستین نمونه کامل از تلفیق نظری، کتاب "روانکاوی و درمان رفتاری"</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "تلفیق نظری"، "واجتل"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 15</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بینتم</h3></div>
+<div class="fa"><b>نظریه:</b> مدل چهار مرحله‌ای</div>
+<div class="fa"><b>ایده اصلی:</b> ارائه مدل چهار مرحله‌ای برای شناسایی مشکلات مراجع</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "بینتم"، "مدل چهار مرحله‌ای"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 5</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: مدل چهار مرحله‌ای بینتم</h3>
+<div class="fa"><b>سوال نمونه:</b> مدل چهار مرحله‌ای بینتم شامل کدامیک از عوامل زیر نیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "شناسایی پاسخ‌های مشکل‌ساز" را انتخاب کنی چون به نظر می‌رسد در مدل وجود دارد.</div>
+<div class="fa"><b>پاسخ درست:</b> شناسایی عوامل تصویر انتظار</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> شناسایی پاسخ‌های مشکل‌ساز مرحله اول مدل است، اما شناسایی عوامل تصویر انتظار در مدل وجود ندارد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> بینتم = 4 مرحله (بدون شناسایی عوامل تصویر انتظار)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: علامت هشدار و شکست درمان</h3>
+<div class="fa"><b>سوال نمونه:</b> چه زمانی علامت هشدار به درمانگر داده می‌شود؟</div>
+<div class="fa"><b>دام:</b> ممکن است "پایین‌تر از 75" را انتخاب کنی چون عدد کوچک‌تری است و نشانه بدتر شدن است.</div>
+<div class="fa"><b>پاسخ درست:</b> نمره پیشرفت پایین‌تر از 85</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> 85 آستانه هشدار است و 75 آستانه بحرانی‌تر است. علامت هشدار از 85 شروع می‌شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> علامت هشدار = < 85، شکست درمان = < 85
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: فعالی درمانگران</h3>
+<div class="fa"><b>سوال نمونه:</b> درمانگر تلفیقی در مقایسه با درمانگر شناختی-رفتاری چگونه است؟</div>
+<div class="fa"><b>دام:</b> ممکن است فکر کنی درمانگر تلفیقی فعال‌تر است چون از چند رویکرد استفاده می‌کند.</div>
+<div class="fa"><b>پاسخ درست:</b> کمتر فعال</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> درمانگر CBT بسیار فعال است و درمانگر تلفیقی در میانه قرار می‌گیرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> CBT > تلفیقی > روان‌پویایی (از نظر فعالی)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: اخیرترین رویکرد تلفیق</h3>
+<div class="fa"><b>سوال نمونه:</b> اخیرترین رویکرد در میان رویکردهای پذیرفته شده به تلفیق روان‌درمانی کدام است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تلفیق نظری" را انتخاب کنی چون به نظریه اهمیت می‌دهد.</div>
+<div class="fa"><b>پاسخ درست:</b> تلفیق جذبی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> تلفیق نظری رویکرد میانی است، اما تلفیق جذبی اخیرترین رویکرد محسوب می‌شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تلفیق جذبی = اخیرترین رویکرد
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: روان‌درمانی تجویزی</h3>
+<div class="fa"><b>سوال نمونه:</b> نمونه موردی ارائه شده توسط کدام دانشمند معرف روان‌درمانی تجویزی است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "الزاروس" را انتخاب کنی چون او در تلفیق تکنیکی فعالیت داشت.</div>
+<div class="fa"><b>پاسخ درست:</b> باتلر</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> لازاروس تلفیق تکنیکی را مطرح کرد، اما روان‌درمانی تجویزی توسط باتلر ارائه شد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> روان‌درمانی تجویزی = باتلر (نه لازاروس)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: عوامل مشترک</h3>
+<div class="fa"><b>سوال نمونه:</b> رویکرد عوامل مشترک اولین بار توسط کدامیک مطرح شد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "فرانک" را انتخاب کنی چون مهم‌ترین اثر در این حوزه را دارد.</div>
+<div class="fa"><b>پاسخ درست:</b> روزن‌زویگ</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> فرانک مهم‌ترین اثر را دارد اما روزن‌زویگ اولین کسی بود که این رویکرد را مطرح کرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اولین = روزن‌زویگ، مهم‌ترین = فرانک
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 02 · مشاوره چندفرهنگی · 30 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "کدامیک از شیوه‌های زیر توجه بیشتری به نقش مشترک مراجع و درمانگر دارد؟",
+options: ["اصلاحی_هیجانی", "بین شخصی_منش شناختی", "تحسین‌کننده_ایمنی", "درون روانی_انتقالی"],
+answer: 0,
+explanation: "رویکرد اصلاحی-هیجانی بر نقش مشترک مراجع و درمانگر تاکید دارد."
+},
+{
+q: "تمرین کار با صندلی مربوط به کدام رویکرد است؟",
+options: ["تقویت تجارب هیجانی", "استفاده مستقیم از یک مداخله", "خلق فضای هیجانی", "تجربه درون جلسه"],
+answer: 3,
+explanation: "تمرین کار با صندلی (صندلی خالی) مربوط به رویکرد تجربه درون جلسه (گشتالت) است."
+},
+{
+q: "مداخلاتی که به فیزیولوژی می‌پردازند از کدام رویکرد نشأت گرفته است؟",
+options: ["روان‌داروشناختی", "پویایی", "شناخت", "رفتار"],
+answer: 0,
+explanation: "رویکرد روان‌داروشناختی به طور مستقیم به فیزیولوژی می‌پردازد."
+},
+{
+q: "مدل چهار مرحله‌ای بینتم شامل کدامیک از عوامل زیر نیست؟",
+options: ["شناسایی پاسخ‌های مشکل‌ساز", "شناسایی ناهم‌خوانی‌ها", "تعیین مشخصات تصویر انتظار", "شناسایی عوامل تصویر انتظار"],
+answer: 3,
+explanation: "شناسایی عوامل تصویر انتظار در مدل چهار مرحله‌ای بینتم وجود ندارد."
+},
+{
+q: "نمونه موردی روان‌درمانی تجویزی توسط کدام دانشمند ارائه شد؟",
+options: ["بامبی", "بیتمن", "باتلر", "الزاروس"],
+answer: 2,
+explanation: "باتلر روان‌درمانی تجویزی را ارائه کرد."
+},
+{
+q: "باتلر چه متغیری را به عنوان متغیر جورکننده در رویکرد تجویزی خود معرفی کرد؟",
+options: ["فشردگی درمان", "طول درمان", "روش درمان", "مدت درمان"],
+answer: 0,
+explanation: "باتلر فشردگی درمان را به عنوان متغیر جورکننده معرفی کرد."
+},
+{
+q: "چه زمانی علامت هشدار به درمانگر داده می‌شود؟",
+options: ["نمره پیشرفت < 85", "نمره پیشرفت < 75", "نمره پیشرفت > 85", "نمره پیشرفت > 75"],
+answer: 0,
+explanation: "علامت هشدار زمانی داده می‌شود که نمره پیشرفت پایین‌تر از 85 باشد."
+},
+{
+q: "نخستین تلفیق تکنیکی توسط چه کسی و به چه شکلی ارائه شد؟",
+options: ["فرانک_چندوجهی", "لازاروس_چندوجهی", "واجتل_چندوجهی", "باتلر_چندوجهی"],
+answer: 1,
+explanation: "لازاروس اولین تلفیق تکنیکی را به شکل درمان چندوجهی ارائه کرد."
+},
+{
+q: "اخیرترین رویکرد تلفیق روان‌درمانی کدام است؟",
+options: ["تلفیق نظری", "تلفیق مشترک", "تلفیق جذبی", "تلفیق تکنیکی"],
+answer: 2,
+explanation: "تلفیق جذبی اخیرترین رویکرد تلفیق روان‌درمانی است."
+},
+{
+q: "رویکرد عوامل مشترک اولین بار توسط چه کسی مطرح شد؟",
+options: ["باتلر", "روزن‌زویگ", "فرانک", "گلدفرید"],
+answer: 1,
+explanation: "روزن‌زویگ اولین کسی بود که رویکرد عوامل مشترک را مطرح کرد."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
