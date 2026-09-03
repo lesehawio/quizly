@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · تلفیق روان‌درمانی · سری 08</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"08";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>تلفیق روان‌درمانی · سری 08</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>تلفیق روان‌درمانی · شواهد تجربی، کارایی و تحولات آینده</h2>
+  <p>بر اساس کتاب استریکر · شواهد پژوهشی، حوزه‌های کاربرد و چشم‌اندازهای پیش رو</p>
+  <div class="pills"><span class="pill">42 سوال</span><span class="pill">شواهد تجربی</span><span class="pill">کارایی</span><span class="pill">تحولات آینده</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس فصل پنجم و ششم کتاب "تلفیق روان‌درمانی" نوشته جورج استریکر طراحی شده است. شامل شواهد پژوهشی، کارایی رویکردها، حوزه‌های کاربرد و تحولات آینده.</div>
+
+<div class="stats">
+<div class="stat"><b>42</b><span>سوال</span></div>
+<div class="stat"><b>4</b><span>رویکرد اصلی</span></div>
+<div class="stat"><b>7</b><span>حوزه کاربرد</span></div>
+<div class="stat"><b>3</b><span>محور تحولات</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<!-- ==================== شواهد کلی ==================== -->
+
+<div class="card question" data-search="شواهد کلی تلفیق روان درمانی استریکر گلد 2001">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> نتایج مرور استریکر و گلد (2001) در مورد شواهد کارایی تلفیق روان‌درمانی چه بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شواهد قابل توجه در 9 مطالعه، حمایت نسبی در 13 مطالعه و حمایت مقدماتی در 7 مطالعه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> استریکر و گلد (2001) نتیجه گرفتند که شواهد قابل توجهی در حمایت از کارایی تلفیق روان‌درمانی در 9 مطالعه وجود داشته است، درحالی که حمایت نسبی در 13 مطالعه و حمایت مقدماتی نیز در 7 مطالعه مشاهده شده است.<br>
+<b>نکته کلیدی:</b> مجموع 29 مطالعه با سطوح مختلف حمایت
+</div>
+</div>
+
+<div class="card question" data-search="اثربخشی روان درمانی المبرت اوگلس 2004">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> توافق گسترده بر سر اثربخشی روان‌درمانی (المبرت و اوگلس، 2004) چه پیامدی برای رویکرد عوامل مشترک دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شواهد مبنی بر اثربخشی افتراقی رویکردهای مختلف وجود ندارد و این به نفع عوامل مشترک است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> توافق گسترده بر سر اثربخشی روان‌درمانی وجود دارد، اما شواهدی مبنی بر اثربخشی افتراقی رویکردهای مختلف وجود ندارد (ومپولد و دیگران، 1997). این باعث ایجاد اصطلاح "تأثیر پرنده دودو" شده است که بر اساس این درک که عناصر تغییرآفرین کلیدی ناشی از عوامل مشترک هستند، توجیه می‌شود.<br>
+<b>نکته کلیدی:</b> اثربخشی یکسان = حمایت از عوامل مشترک
+</div>
+</div>
+
+<div class="card question" data-search="تاثیر پرنده دودو لابورسکی 1975">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> اصطلاح "تأثیر پرنده دودو" (Dodo Bird Effect) توسط چه کسانی ابداع شد و به چه معناست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">لابورسکی، سینگر و لابورسکی (1975)؛ به این معنا که همه رویکردها برنده‌اند و باید تحسین شوند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصطلاح "تأثیر پرنده دودو" توسط لابورسکی، سینگر و لابورسکی (1975) ابداع شد و به این معناست که همه رویکردها برنده‌اند و باید تحسین شوند. این تأثیر بر اساس این درک که عناصر تغییرآفرین کلیدی ناشی از عوامل مشترک هستند، توجیه می‌شود.<br>
+<b>نکته کلیدی:</b> پرنده دودو = همه رویکردها به یک اندازه مؤثرند
+</div>
+</div>
+
+<!-- ==================== شواهد عوامل مشترک ==================== -->
+
+<div class="card question" data-search="مطالعه ایالردی کرایگ هد 1994 CBT">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> مطالعه ایالردی و کرایگ‌هد (1994) چه یافته‌ای در مورد تغییرات در درمان CBT داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تغییرات در چهار هفته نخست قبل از استفاده از تکنیک‌های خاص اتفاق افتاده بود؛ نشان می‌دهد که رابطه و عوامل مشترک زیربنای تغییر بودند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مطالعه ایالردی و کرایگ‌هد (1994)، تغییرات صورت گرفته در درمان شناختی رفتاری در چهار هفته نخست اتفاق افتاده بودند؛ یعنی قبل آن که تکنیک‌های خاص مورد استفاده قرار گیرند، به طوری که ظاهراً رابطه مبنایی و عواملی از قبیل امیدواری و انتظار، زیربنای تغییر بودند.<br>
+<b>نکته کلیدی:</b> تغییر زودهنگام = عوامل مشترک مهم‌تر از تکنیک‌ها
+</div>
+</div>
+
+<div class="card question" data-search="مطالعه کاستانگوای 1996 اتحاد درمانی تجربه هیجانی">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> مطالعه کاستانگوای و همکاران (1996) چه رابطه‌ای بین عوامل مشترک و تغییر در درمان افسردگی یافت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اتحاد درمانی و تجربه هیجانی مراجع رابطه مثبتی با تغییر داشتند؛ اما پیوند افکار منحرف با هیجانات منفی با تغییر رابطه معکوس داشت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دو عامل مشترک یعنی اتحاد درمانی و تجربه هیجانی مراجع، رابطه مثبتی با تغییر داشتند. با وجود این، یک عامل مشترک خاص که غالباً با CBT مرتبط بوده و مشتمل بر پیوند دادن افکار منحرف با هیجانات منفی است، با تغییر رابطه معکوس داشت.<br>
+<b>نکته کلیدی:</b> اتحاد و تجربه هیجانی = مثبت؛ پیوند افکار-هیجانات = معکوس
+</div>
+</div>
+
+<!-- ==================== شواهد تلفیق تکنیکی ==================== -->
+
+<div class="card question" data-search="درمان چند بعدی الزاروس 1981 حمایت تجربی">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> درمان چندوجهی لازاروس (1981) چه میزان حمایت تجربی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">حمایت‌های تجربی محدود؛ اما سوابق موردی، گزارشات نقلی و مطالعات فاقد کنترل از آن حمایت کرده‌اند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمان چندوجهی توسط لازاروس (1981) ایجاد شد و حمایت‌های تجربی محدودی در مورد آن وجود دارد، هرچند بسیاری از سوابق موردی، گزارشات نقلی و مطالعات فاقد کنترل از این رویکرد حمایت کرده‌اند.<br>
+<b>نکته کلیدی:</b> لازاروس = حمایت تجربی محدود اما حمایت بالینی قابل توجه
+</div>
+</div>
+
+<div class="card question" data-search="روان درمانی تجویزی باتلر هاروود 2000 متغیرهای جور کننده">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> روان‌درمانی تجویزی باتلر بر چه اساسی استوار است و کدام متغیرهای جورکننده بیشترین حمایت تجربی را دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بر مبنایی از پژوهش؛ درونی‌سازی و واکنش‌پذیری دو متغیر با بیشترین حمایت تجربی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌درمانی تجویزی بر مبنایی از پژوهش استوار بوده و حمایت تجربی قابل مالحظه‌ای برای آن وجود دارد. متغیرهای جورکننده بر اساس مرور ادبیات پژوهشی انتخاب شده‌اند و در میان آنها درونی‌سازی و واکنش‌پذیری دو متغیر با بیشترین حمایت تجربی هستند.<br>
+<b>نکته کلیدی:</b> باتلر = پژوهش‌محور، متغیرهای کلیدی = درونی‌سازی و واکنش‌پذیری
+</div>
+</div>
+
+<div class="card question" data-search="برونی سازی CBT درونی سازی روان پویایی">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> بر اساس یافته‌های روان‌درمانی تجویزی، کدام مراجعان با CBT و کدام با روان‌پویایی تناسب دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مراجعان برونی‌ساز با CBT تناسب دارند؛ مراجعان درونی‌ساز با روان‌پویایی عملکرد بهتری دارند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مراجعانی که اقدام به برونی‌سازی می‌کنند، تناسب بیشتری با CBT دارند در حالی‌که مراجعان متمایل به درونی‌سازی در درمان روان‌پویایی عملکرد بهتری را از خود نشان می‌دهند. به همین ترتیب، مراجعانی که از لحاظ واکنش‌پذیری در سطح پایینی هستند با CBT تناسب دارند و مراجعان با واکنش‌پذیری بالا برای روان‌پویایی مناسب‌ترند.<br>
+<b>نکته کلیدی:</b> برونی‌سازی → CBT؛ درونی‌سازی → روان‌پویایی
+</div>
+</div>
+
+<div class="card question" data-search="درمان نتیجه گاه المبرت 2007 QQ-45">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> رویکرد درمان نتیجه‌آگاه (المبرت، 2007) از چه ابزاری برای اندازه‌گیری پیشرفت استفاده می‌کند و چه ویژگی‌هایی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پرسشنامه نتیجه‌ای-45 (QQ-45) که سلامت روانی کلی، نشانه‌ها، کارکرد در نقش اجتماعی و کارکرد بین‌شخصی را اندازه‌گیری می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> QQ-45 سلامت روانی کلی و همچنین نشانه‌ها، کارکرد در نقش اجتماعی و کارکرد بین‌شخصی را اندازه‌گیری می‌کند. هنجارهای تغییر مورد انتظار بر اساس سطح اولیه اختلال تعیین می‌شوند.<br>
+<b>نکته کلیدی:</b> QQ-45 = ۴ حوزه: سلامت کلی، نشانه‌ها، نقش اجتماعی، بین‌شخصی
+</div>
+</div>
+
+<div class="card question" data-search="علامت هشدار QQ-45 آستانه 85 درصد">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد المبرت، چه زمانی علامت هشدار به درمانگر داده می‌شود و چه تأثیری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">زمانی که نمره مراجع به پایین‌تر از 85 درصد گروه هنجاری برسد (علامت قوی‌تر در 90 درصد)؛ مراجعانی که درمانگرشان هشدار دریافت می‌کند نتایج بهتری دارند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> زمانی که نمره پیشرفت مراجع به پایین‌تر از 85 درصد گروه هنجاری کاهش می‌یابد یک علامت هشدار داده می‌شود و علامت قوی‌تر در 90 درصد ارائه می‌شود. مراجعانی که درمانگر آنها این گونه علامت‌های هشدار را دریافت می‌کنند در مقایسه با سایر مراجعان به طور قابل توجهی نتایج را بهبود بخشیده‌اند.<br>
+<b>نکته کلیدی:</b> هشدار = 85% و 90% = بهبود نتایج
+</div>
+</div>
+
+<div class="card question" data-search="دانشمند بالینی محلی استریکر تریپریلر 1995">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> رویکرد المبرت چه صورتبندی از روان‌درمانی را ارائه می‌دهد و چه کسانی آن را مطرح کردند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد دانشمند بالینی محلی (استریکر و تریپریلر، 1995؛ تریپریلر و استریکر، 1998)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد المبرت یک صورتبندی روشن از رویکرد دانشمند بالینی محلی به روان‌درمانی می‌باشد (استریکر و تریپریلر، 1995؛ تریپریلر و استریکر، 1998).<br>
+<b>نکته کلیدی:</b> دانشمند بالینی محلی = ترکیب پژوهش و عمل در هر جلسه
+</div>
+</div>
+
+<!-- ==================== شواهد تلفیق نظری ==================== -->
+
+<div class="card question" data-search="درمان شناختی تحلیلی ریل 2005 شواهد">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> درمان شناختی-تحلیلی (ریل، 2005) چه شواهدی برای کارایی خود دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">RCT ها تأثیرات مثبت در درمان آسم و دیابت نشان داده‌اند؛ مطالعات کنترل نشده تأثیرات مثبت در مراجعان روان‌پزشکی، شخصیت مرزی و بازماندگان آزار نشان داده‌اند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در درمان شناختی-تحلیلی، آزمایشات کنترل شده تصادفی (RCT) تأثیرات مثبتی را در درمان بیماران مبتلا به آسم و دیابت نشان داده‌اند. مطالعات کنترل نشده تأثیرات مثبتی را در درمان مراجعان روان‌پزشکی، مراجعان دارای شخصیت مرزی، و بازماندگان آزار نشان داده‌اند.<br>
+<b>نکته کلیدی:</b> CAT = شواهد برای بیماری‌های جسمی و روانی
+</div>
+</div>
+
+<div class="card question" data-search="روان درمانی فرانظری پروچاسکا دی کلمنته 2005">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> روان‌درمانی فرانظری (پروچاسکا و دی‌کلمنته، 2005) بر چه اساسی استوار است و چه شواهدی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بر اساس مراحل تغییر که فرایندهای مداخالتی با این مراحل متناسب می‌شوند؛ فراتحلیل 47 مطالعه تأثیرات قابل توجه نشان داد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌درمانی فرانظری رویکردی مبتنی بر مراحل تغییر است که در آن فرایندهای مداخالتی با این مراحل متناسب می‌شوند. یک فراتحلیل بر روی 47 مطالعه (روزن، 2000) تأثیرات قابل توجهی را برای متوالی ساختن فرایندها بر اساس مرحله نشان داد.<br>
+<b>نکته کلیدی:</b> فرانظری = مراحل تغییر + فراتحلیل 47 مطالعه
+</div>
+</div>
+
+<!-- ==================== شواهد تلفیق جذبی ==================== -->
+
+<div class="card question" data-search="درمان فرایندی تجربی واتسون 2006 شواهد">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> درمان فرایندی-تجربی (واتسون، 2006) چه شواهدی برای سودمندی خود دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">از دو RCT و چندین مطالعه فرایندی در حمایت از سودمندی خود برخوردار است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یک رویکرد تجربی، یعنی درمان فرایندی-تجربی (واتسون، 2006)، از دو RCT و چندین مطالعه فرایندی در حمایت از سودمندی خود برخوردار است (شان‌باور، 2005).<br>
+<b>نکته کلیدی:</b> واتسون = 2 RCT + مطالعات فرایندی
+</div>
+</div>
+
+<!-- ==================== حوزه‌های کاربرد ==================== -->
+
+<div class="card question" data-search="CBASP مک کلوف 2000 افسردگی">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> سیستم تحلیل شناختی رفتاری روان‌درمانی (CBASP) در درمان افسردگی چه جایگاهی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکردی که اقدام به تلفیق رویکردهای شناختی، رفتاری و بین‌شخصی می‌کند؛ معمولاً نتایج نشان‌دهنده برتری اثربخشی شیوه ترکیبی در مقایسه با کاربرد هر کدام به صورت مستقل است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> CBASP رویکردی است که اقدام به تلفیق رویکردهای شناختی، رفتاری و بین‌شخصی می‌کند. این رویکرد در RCT ها و سایر طرح‌های تحقیقی با سایر رویکردها مقایسه شده و نتایج از برتری آن حکایت دارند. معمولاً نتایج نشان‌دهنده برتری اثربخشی شیوه ترکیبی در مقایسه با کاربرد هر کدام از رویکردها به صورت مستقل بوده است.<br>
+<b>نکته کلیدی:</b> CBASP = ترکیب شناختی + رفتاری + بین‌شخصی
+</div>
+</div>
+
+<div class="card question" data-search="DBT لینهان 2005 اختلال شخصیت مرزی">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> رفتار درمانی دیالکتیکی (DBT) چه شواهدی در درمان اختلال شخصیت مرزی دارد و چه ویژگی‌هایی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">RCT های متعددی کارایی DBT را نشان داده‌اند؛ ترکیبی از رویکردهای غربی (رفتار درمانی) و شرقی (فرایندهای دیالکتیکی، ذهن‌آگاهی) است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مورد اختلال شخصیت مرزی، رفتار درمانی دیالکتیکی (DBT) غالب‌ترین رویکرد است که رویکردهای غربی (رفتار درمانی) و شرقی (فرایندهای دیالکتیکی، ذهن‌آگاهی) را تلفیق می‌کند. RCT های متعددی کارایی DBT را نشان داده‌اند.<br>
+<b>نکته کلیدی:</b> DBT = غربی (رفتاری) + شرقی (ذهن‌آگاهی)
+</div>
+</div>
+
+<div class="card question" data-search="ذهن آگاهی یابر 2003 مرور">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> مطالعه مروری یابر (2003) در مورد ذهن‌آگاهی چه نتیجه‌ای داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ذهن‌آگاهی در مورد طیف گسترده‌ای از اختلالات نتایج بسیار امیدوارکننده‌ای داشته است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خود ذهن‌آگاهی در مورد طیف گسترده‌ای از اختلالات مورد مطالعه قرار گرفته و یک مطالعه مروری (یابر، 2003) نتایج بسیار امیدوارکننده‌ای در این زمینه داشته است.<br>
+<b>نکته کلیدی:</b> ذهن‌آگاهی = امیدوارکننده برای طیف گسترده اختلالات
+</div>
+</div>
+
+<div class="card question" data-search="درمان واحد آلن 2003 اختلال شخصیت مرزی">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> درمان واحد (آلن، 2003) در درمان اختلال شخصیت مرزی چه جایگاهی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکردی مبتنی بر تلفیق رویکردهای شناختی، رفتاری، روان‌پویایی و سیستم‌های خانوادگی؛ شواهد امیدوارکننده نشان می‌دهد اما هنوز شواهد تجربی وجود ندارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمان واحد (آلن، 2003) رویکردی به اختلال شخصیت مرزی است که مبتنی بر تلفیق رویکردهای شناختی، رفتاری، روان‌پویایی و سیستم‌های خانوادگی بوده و هنوز شواهد امیدوارکننده نشان می‌دهد، هرچند هنوز شواهد تجربی در مورد آن وجود ندارد.<br>
+<b>نکته کلیدی:</b> درمان واحد = ۴ رویکرد ترکیبی، شواهد تجربی در دست نیست
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق روان پویایی جذبی اختلال شخصیت مرزی گلد استریکر 1993">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> تلفیق روان‌پویایی جذبی چه جایگاهی در درمان اختلالات شخصیت دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به عنوان رویکردی که به طور اخص برای اختلالات شخصیت مفید است شناخته می‌شود (گلد و استریکر، 1993)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق روان‌پویایی جذبی به عنوان رویکردی که به طور اخص برای اختلالات شخصیت مفید است، شناخته می‌شود (گلد و استریکر، 1993).<br>
+<b>نکته کلیدی:</b> تلفیق جذبی = مفید برای اختلالات شخصیت
+</div>
+</div>
+
+<div class="card question" data-search="ولفی 2005 اختلالات اضطرابی شواهد">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> رویکرد ولفی (2005) برای اختلالات اضطرابی چه ویژگی‌هایی دارد و چه شواهدی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق رویکردهای شناختی-رفتاری، روان‌پویایی و انسان‌گرایی؛ شواهد تجربی ناچیز هستند اما تالش‌ها خالقانه و امیدوارکننده هستند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ولفی (2005) در یک تالش جهت تلفیق که مشتمل بر رویکردهای شناختی-رفتاری، روان‌پویایی و انسان‌گرایی می‌باشد، اختلالات اضطرابی را مورد هدف قرار داده است. شواهد تجربی ناچیز هستند اما تالش‌ها خالقانه و امیدوارکننده هستند.<br>
+<b>نکته کلیدی:</b> ولفی = ۳ رویکرد ترکیبی، شواهد ناچیز اما امیدوارکننده
+</div>
+</div>
+
+<div class="card question" data-search="کودکان تلفیق کونرتی 1993 کیت 1990">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> وضعیت تلفیق روان‌درمانی در حوزه کودکان و بزرگسالان سالمند چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بخش عمده تالش‌ها بر روی بزرگسالان متمرکز بوده؛ کودکان و سالمندان با وجود نیاز به انعطاف‌پذیری، به جز چند استثنا (کونرتی، 1993؛ کیت، 1990؛ پاپوچیس و پاسمن، 1993) مطالعه نشده‌اند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بخش عمده تالش‌ها در جهت تلفیق بر روی بزرگسالان متمرکز بوده است. درمان کودکان با توجه به نیازهای متنوع، حوزه‌ای بسیار مناسب برای تلفیق است اما به جز چند مورد استثنا (کونرتی، 1993؛ کیت، 1990) پوشش داده نشده است. بزرگسالان سالمند نیز مستلزم انعطاف‌پذیری هستند اما هنوز به طور گسترده مطالعه نشده‌اند (پاپوچیس و پاسمن، 1993).<br>
+<b>نکته کلیدی:</b> کودکان و سالمندان = حوزه‌های مغفول در تلفیق
+</div>
+</div>
+
+<div class="card question" data-search="حوزه های کمتر مطالعه شده اختلالات ارگانیک درد مزمن روانی شدید">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> چه حوزه‌هایی از کاربرد تلفیق روان‌درمانی هنوز پیشرفت چندانی نداشته است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اختلالات ارگانیک (بکر، 1993)، درد مزمن (دورکین و گریزاک، 1993) و اختلال روانی شدید (هلاکامپ، 1993)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حوزه‌هایی که در آنها انعطاف‌پذیری ضروری است اما تلفیق هنوز پیشرفت چندانی نداشته است شامل اختلالات ارگانیک (بکر، 1993)، درد مزمن (دورکین و گریزاک، 1993) و اختلال روانی شدید (هلاکامپ، 1993) هستند. هنوز شواهد چندانی در این حوزه‌ها در اختیار نداریم.<br>
+<b>نکته کلیدی:</b> ۳ حوزه مغفول = ارگانیک، درد مزمن، روانی شدید
+</div>
+</div>
+
+<!-- ==================== تحولات آینده ==================== -->
+
+<div class="card question" data-search="گفتگوی گلدفرید واجتل 2004 SEPI">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> گفتگوی گلدفرید و واجتل در سال 2004 در SEPI به چه موضوعی پرداخت و تفاوت دیدگاه آنها چه بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تفاوت میان تلفیق به عنوان فرایند یا محصول؛ فرایند = کاوش مداوم، محصول = درمان تلفیقی (محصول در سطح بین‌المللی مطلوب‌تر است)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یکی از نکات مورد بحث، تفاوت میان تلفیق روان‌درمانی به عنوان یک فرایند یا به عنوان یک محصول بود. فرایند موجب کاوش مداوم در روان‌درمانی می‌شود در حالی که دیدگاه محصول، ما را به یک (یا چند) درمان تلفیقی می‌رساند؛ هدفی که به نظر می‌رسد در سطح بین‌المللی در مقایسه با آمریکای شمالی مطلوبیت بیشتری دارد.<br>
+<b>نکته کلیدی:</b> استریکر = فرایند را ترجیح می‌دهد؛ بین‌المللی = محصول را ترجیح می‌دهد
+</div>
+</div>
+
+<div class="card question" data-search="مرحله تامل در تلفیق پروچاسکا دی کلمنته 2005">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> پروچاسکا و دی‌کلمنته (2005) ادعا کردند که تلفیق روان‌درمانی در چه مرحله‌ای قرار دارد و باید به کجا حرکت کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در مرحله تأمل قرار دارد و باید به سمت اقدام حرکت کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پروچاسکا و دی‌کلمنته (2005) اشاره کرده‌اند که در حال حاضر تلفیق روان‌درمانی در یک مرحله تأمل قرار دارد و باید به سمت اقدام حرکت کند.<br>
+<b>نکته کلیدی:</b> تأمل → اقدام = حرکت آینده تلفیق
+</div>
+</div>
+
+<div class="card question" data-search="دیدگاه گسترده تر در تلفیق یوبانکس کارتر 2005">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> بر اساس نظرخواهی یوبانکس-کارتر و همکاران (2005)، چه درون‌مایه‌هایی برای تحولات آینده تلفیق شناسایی شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1) ضرورت اتخاذ یک دیدگاه گسترده‌تر (تلفیق با علوم شناختی، اجتماعی، رشد و اعصاب)، 2) توجه به طبقه اجتماعی و تفاوت‌های فرهنگی، 3) تمرکز بر نقاط قوت مراجع</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درون‌مایه‌های با اهمیت شامل: ضرورت اتخاذ یک دیدگاه گسترده‌تر در مورد تلفیق (تلفیق با علوم شناختی، روان‌شناسی اجتماعی، روان‌شناسی رشد و علوم اعصاب)، نیازمند تلفیق منابع تأثیرگذار مانند طبقه اجتماعی و تفاوت‌های فرهنگی، و تمرکز بر نقاط قوت مراجع به جای تمرکز صرف بر آسیب‌شناسی روانی.<br>
+<b>نکته کلیدی:</b> ۳ محور = علوم پایه، عوامل اجتماعی-فرهنگی، نقاط قوت
+</div>
+</div>
+
+<div class="card question" data-search="زبان مشترک عاری از اصطلاحات اختصاصی دالارد میلر 1950">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> دستیابی به چه هدفی در تحولات آینده تلفیق مدنظر است و یادآور کارهای چه کسانی خواهد بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دستیابی به یک زبان مشترک عاری از اصطلاحات اختصاصی؛ یادآور کارهای پیشگامانه دالارد و میلر (1950)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دستیابی به یک زبان مشترک عاری از اصطلاحات اختصاصی به ارتباطات میان گروه‌هایی که غالباً نفع چندانی از پیشرفت‌های یکدیگر نمی‌برند کمک کرده و یادآور کارهای پیشگامانه دالارد و میلر (1950) در سالیان دور خواهد بود.<br>
+<b>نکته کلیدی:</b> زبان مشترک = هدف آینده، الهام از دالارد و میلر
+</div>
+</div>
+
+<div class="card question" data-search="کتاب های راهنمای تلفیق یوبانکس کارتر 2005">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> هدف از تألیف کتاب‌های راهنمایی برای درمانگران در حوزه تلفیق چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تسهیل دسترسی هر درمانگر به نظرات و نقش دیگران و آسان کردن ارجاع‌های مناسب، نه همگون کردن درمانگران</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هدف این قبیل کتاب‌های راهنما، نه همگون کردن درمانگران بلکه تسهیل دسترسی هر درمانگر (در فرآیند تحقق یک سبک فردی) به نظرات و نقش دیگران و آسان کردن ارجاع‌های مناسب در موارد عدم تناسب بهینه در میان درمانگران و مراجعان می‌باشد.<br>
+<b>نکته کلیدی:</b> کتاب‌های راهنما = تسهیل سبک فردی، نه همگون‌سازی
+</div>
+</div>
+
+<div class="card question" data-search="تحولات پژوهشی تحقیقات فرایندی شبکه های عملی پژوهشی">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> چه تحولاتی در عرصه پژوهشی برای آینده تلفیق پیش‌بینی شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1) ضرورت توجه بیشتر به تحقیقات فرایندی، 2) اندازه‌گیری سطح مهارت درمانگر، 3) نقش شبکه‌های عملی-پژوهشی، 4) شکل‌گیری روش‌شناسی کیفی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تحولات در عرصه پژوهشی شامل ضرورت توجه بیشتر به تحقیقات فرایندی، اندازه‌گیری سطح مهارت درمانگر، نقش شبکه‌های عملی-پژوهشی (ولف، 2005) که ارتباطات میان درمانگران فعال در حوزه عملی و پژوهشگران را تسهیل می‌کند، و شکل‌گیری روش‌شناسی کیفی (پاتون، 2002) است.<br>
+<b>نکته کلیدی:</b> ۴ محور پژوهشی = فرایندی، مهارت، شبکه‌ها، کیفی
+</div>
+</div>
+
+<div class="card question" data-search="آینده نظریه استراتژی های بالینی گلدفرید 1980">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> در مورد آینده نظریه در تلفیق روان‌درمانی چه اتفاق نظری وجود دارد و راه مفیدتر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اتفاق نظر دارد که کلید تحولات آینده در اختیار پژوهش است نه نظریه؛ تمرکز بر استراتژی‌های بالینی (گلدفرید، 1980) راهی مفیدتر از تکثر نظریه‌ها است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تقریباً همگان اتفاق نظر دارند که کلید تحولات آینده در این حوزه در اختیار پژوهش است نه نظریه. جستجو برای یافتن یک نظریه زیربنایی واحد همانند جستجو برای یافتن جام مقدس بوده است. تمرکز بر استراتژی‌های بالینی (گلدفرید، 1980) در مقایسه با تکثر بیشتر نظریه‌ها، راهی مفیدتر و بالقوه تلفیقی‌تر برای تحولات آینده خواهد بود.<br>
+<b>نکته کلیدی:</b> آینده = پژوهش، نه نظریه؛ استراتژی‌های بالینی = مفیدتر
+</div>
+</div>
+
+<div class="card question" data-search="آموزش تلفیق استراتژی تدریجی یا انسجام بخش">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> چه اختلاف نظری در حیطه آموزش و تربیت تلفیق وجود دارد و موضع استریکر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اختلاف بر سر شروع زودهنگام تلفیق vs آموزش گرایشات مجزا و سپس تلفیق؛ استریکر استراتژی جایگزین (آموزش مجزا سپس تلفیق) را ترجیح می‌دهد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همچنان بر سر این موضوع که آیا برنامه‌های آموزشی باید از همان ابتدا بر تلفیق متمرکز شوند یا این‌که باید ابتدا به آموزش گرایشات مجزا بپردازند، اختلاف‌نظر وجود دارد. استریکر استراتژی جایگزین (آموزش گرایشات مجزا و سپس تلفیق) را ترجیح می‌دهد.<br>
+<b>نکته کلیدی:</b> استریکر = آموزش مجزا → تلفیق (نه شروع زودهنگام)
+</div>
+</div>
+
+<div class="card question" data-search="طبقه بندی جدید درمان مراجع مدار">
+<span class="qnum">سوال 31</span>
+<div class="fa"><b>متن سوال:</b> چه رویکردی به عنوان جدی‌ترین نامزد برای طبقه جدید تلفیق روان‌درمانی مطرح است و در چه طبقه‌ای قرار می‌گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درمان مراجع‌مدار (میلر، دانکن و هابل، 2005)؛ به طور معمول به عنوان رویکرد عوامل مشترک (و گاهی تلفیق تکنیکی) تلقی می‌شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جدی‌ترین نامزدی که به عنوان یک طبقه جدید مطرح می‌شود رویکردی است که به عنوان درمان مراجع‌مدار (میلر، دانکن و هابل، 2005) شناخته شده و به طور معمول به عنوان یک رویکرد عوامل مشترک تلقی می‌گردد (هرچند گاهی اوقات در درون تلفیق تکنیکی گنجانده می‌شود).<br>
+<b>نکته کلیدی:</b> مراجع‌مدار = نامزد طبقه جدید، معمولاً در عوامل مشترک
+</div>
+</div>
+
+<div class="card question" data-search="تعداد رویکردهای روان درمانی 400 هی 2001">
+<span class="qnum">سوال 32</span>
+<div class="fa"><b>متن سوال:</b> تلفیق روان‌درمانی چگونه با تعداد زیاد رویکردهای روان‌درمانی (400 رویکرد) برخورد می‌کند و چه دیدگاه‌هایی وجود دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با شناسایی اشتراکات میان رویکردها به شیوه‌ای قابل مدیریت‌تر برخورد می‌کند؛ یک‌کاسه‌گران تعداد کم‌تر و انشعاب‌گرایان تفاوت‌های بیشتری می‌بینند (هی، 2001)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق روان‌درمانی با شناسایی اشتراکات میان رویکردهای مختلف، با تعدد رویکردها به شیوه‌ای قابل مدیریت‌تر برخورد خواهد کرد. برای کسانی که روش یک‌کاسه کردن را در پیش می‌گیرند، تعداد رویکردها چندان زیاد نیست در حالی که انشعاب‌گرایان تفاوت‌های بیشتری را شاهد هستند (هی، 2001).<br>
+<b>نکته کلیدی:</b> یک‌کاسه‌گران vs انشعاب‌گرایان (هی، 2001)
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق رویکردهای تلفیقی استریکر گلد 2006">
+<span class="qnum">سوال 33</span>
+<div class="fa"><b>متن سوال:</b> استریکر و گلد (2006) در مورد آینده طبقه‌بندی رویکردهای تلفیقی چه ادعایی دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خود تلفیق روان‌درمانی نیز یک فرایند تلفیق را از سر می‌گذارد؛ طبقه‌بندی‌های سنتی با کم‌رنگ شدن مرزها در حال محو شدن هستند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> استریکر و گلد (2006) اشاره کرده‌اند که خود تلفیق روان‌درمانی نیز یک فرایند تلفیق را از سر می‌گذارد به طوری که طبقه‌بندی‌های سنتی از رویکردهای تلفیقی با کم‌رنگ شدن مرزهای میان این طبقات، در حال محو شدن بوده و ضرورت مفهوم‌سازی تلاش‌های تلفیق‌نگرانه به شیوه‌ای جدید را ایجاب می‌کنند.<br>
+<b>نکته کلیدی:</b> تلفیق رویکردهای تلفیقی = آینده طبقه‌بندی
+</div>
+</div>
+
+<!-- ==================== خلاصه و جمع‌بندی ==================== -->
+
+<div class="card question" data-search="شواهد تلفیق جذبی هیلسنروث سالیوان 2008">
+<span class="qnum">سوال 34</span>
+<div class="fa"><b>متن سوال:</b> برای تلفیق روان‌پویایی جذبی چه شواهدی وجود دارد و چه استثنایی در این زمینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به جز کارهای هیلسنروث و سالیوان (2008) شواهد سنتی چندانی وجود ندارد؛ اما کاربردهای بالینی قابل توجه آن را امیدوارکننده نشان می‌دهد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برای تلفیق روان‌پویایی جذبی، به جز کارهای هیلسنروث و سالیوان (2008) شواهد سنتی چندانی وجود ندارد اما کاربردهای بالینی قابل توجه، آن را امیدوارکننده نشان می‌دهند.<br>
+<b>نکته کلیدی:</b> تلفیق جذبی = شواهد محدود اما کاربرد بالینی بالا
+</div>
+</div>
+
+<div class="card question" data-search="تأثیر پرنده دودو وومپولد 1997">
+<span class="qnum">سوال 35</span>
+<div class="fa"><b>متن سوال:</b> بر اساس وومپولد و دیگران (1997)، کدام عامل بزرگ‌ترین منبع واریانس در تغییر مراجع است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عوامل مشترک (به ویژه رابطه درمانی) بزرگ‌ترین منبع واریانس در تغییر مراجع هستند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> به نظر می‌رسد که در میان بسیاری از محققان اتفاق‌نظر وجود دارد که عوامل مشترک بزرگ‌ترین منبع واریانس در تغییر مراجع هستند (وومپولد و دیگران، 1997) و این به ویژه در مواقعی که رابطه درمانی به عنوان یکی از این عوامل مشترک تلقی می‌شود، صادق خواهد بود.<br>
+<b>نکته کلیدی:</b> عوامل مشترک = بزرگ‌ترین منبع تغییر
+</div>
+</div>
+
+<div class="card question" data-search="مدل دانشمند متخصص رایمی 1950">
+<span class="qnum">سوال 36</span>
+<div class="fa"><b>متن سوال:</b> تحقق مدل مطلوب دانشمند-متخصص (درمانگر) توسط چه کسانی مطرح شد و چه الزاماتی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رایمی (1950)؛ حاصل کار مشترک درمانگران و محققان مختلف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تحقق مدل مطلوب دانشمند-متخصص (درمانگر) می‌تواند حاصل کار مشترک درمانگران و محققان مختلف باشد و چنین تالش‌هایی می‌تواند زمینه‌ساز تحقق این مدل باشد (رایمی، 1950).<br>
+<b>نکته کلیدی:</b> دانشمند-متخصص = همکاری درمانگران و محققان
+</div>
+</div>
+
+<div class="card question" data-search="آینده پژوهش فرایندی شبکه های عملی پژوهشی ولف 2005">
+<span class="qnum">سوال 37</span>
+<div class="fa"><b>متن سوال:</b> شبکه‌های عملی-پژوهشی چه نقشی در آینده تلفیق روان‌درمانی خواهند داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ارتباطات میان درمانگران فعال در حوزه عملی و پژوهشگران خلاق را تسهیل می‌کنند (ولف، 2005)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اکنون آگاهی چشمگیری از نقش بالقوه شبکه‌های عملی-پژوهشی وجود دارد (ولف، 2005) و این یک منبع فعالیت است که واقعاً ارتباطات میان درمانگران فعال در حوزه عملی و پژوهشگران خلاق را تسهیل خواهد کرد.<br>
+<b>نکته کلیدی:</b> شبکه‌های عملی-پژوهشی = پل بین عمل و پژوهش
+</div>
+</div>
+
+<div class="card question" data-search="روش شناسی کیفی پاتون 2002">
+<span class="qnum">سوال 38</span>
+<div class="fa"><b>متن سوال:</b> چه روش‌شناسی جدیدی به عنوان منبع اطلاعات در مورد تعامل درمانی پیشنهاد شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روش‌شناسی کیفی (پاتون، 2002)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هر چند در فصل حاضر به این موضوع پرداخته نشده است ولی ما می‌توانیم شکل‌گیری روش‌شناسی کیفی (پاتون، 2002) را به عنوان یک منبع اضافی از اطلاعات در مورد تعامل درمانی مورد توجه قرار دهیم.<br>
+<b>نکته کلیدی:</b> روش‌شناسی کیفی = منبع جدید اطلاعات
+</div>
+</div>
+
+<div class="card question" data-search="دانشجویان یقین بر ابهام گلد 2005">
+<span class="qnum">سوال 39</span>
+<div class="fa"><b>متن سوال:</b> چه نگرشی در دانشجویان نسبت به یقین و ابهام وجود دارد و باید در آموزش چگونه مورد توجه قرار گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دانشجویان یقین را بر ابهام ترجیح می‌دهند (گلد، 2005)؛ این نگرش باید در صورت مطرح شدن در هر مقطعی از فرایند آموزش مورد توجه قرار گیرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> باید به یاد داشته باشیم که دانشجویان یقین را بر ابهام ترجیح می‌دهند (گلد، 2005) و این نگرشی است که باید در صورت مطرح شدن در هر مقطعی از فرایند آموزش مورد توجه قرار گیرد.<br>
+<b>نکته کلیدی:</b> دانشجویان = ترجیح یقین بر ابهام
+</div>
+</div>
+
+<div class="card question" data-search="حمایت از تلفیق جذبی در اختلالات شخصیت">
+<span class="qnum">سوال 40</span>
+<div class="fa"><b>متن سوال:</b> تلفیق روان‌پویایی جذبی در چه حوزه‌ای بیشترین کاربرد را دارد و چه حمایتی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بیشترین کاربرد در اختلالات شخصیت؛ کاربردهای بالینی قابل توجه آن را امیدوارکننده نشان می‌دهد (گلد و استریکر، 1993)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق روان‌پویایی جذبی به عنوان رویکردی که به طور اخص برای اختلالات شخصیت مفید است شناخته می‌شود (گلد و استریکر، 1993). کاربردهای بالینی قابل توجه آن را امیدوارکننده نشان می‌دهند.<br>
+<b>نکته کلیدی:</b> تلفیق جذبی = اختلالات شخصیت، کاربرد بالینی بالا
+</div>
+</div>
+
+<div class="card question" data-search="المبرت 2007 بازخورد مراجع تعیین مداخلات">
+<span class="qnum">سوال 41</span>
+<div class="fa"><b>متن سوال:</b> ایده استفاده از بازخورد مراجع به منظور تعیین مداخلات در رویکرد المبرت (2007) چه ارزشی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شواهد استنباطی در مورد ارزش سؤال از مراجع درباره پیشرفت‌ها و پاسخ دادن به این بازخورد؛ نشان می‌دهد که تحقیق می‌تواند فعالانه به انتخاب مداخلات کمک کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ایده استفاده از بازخورد مراجع به منظور تعیین مداخلات در رویکرد المبرت (2007) به بهترین وجه تحقق پیدا کرده است. پژوهش او برخی شواهد استنباطی را در مورد ارزش سؤال از مراجع درباره پیشرفت‌هایش و پاسخ دادن به این بازخورد فراهم می‌کند. همچنین نشان می‌دهد که تحقیق می‌تواند فعالانه به انتخاب مداخلات توسط درمانگر کمک کند.<br>
+<b>نکته کلیدی:</b> بازخورد مراجع = راهنمای انتخاب مداخلات
+</div>
+</div>
+
+<div class="card question" data-search="انباشتگی نظری بر تحقق استوار">
+<span class="qnum">سوال 42</span>
+<div class="fa"><b>متن سوال:</b> در مورد انباشتگی نظری در تلفیق روان‌درمانی چه نکته‌ای مطرح شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تمرکز بر استراتژی‌های بالینی (گلدفرید، 1980) در مقایسه با تکثر نظریه‌ها مفیدتر است؛ این به ویژه در صورتی که انباشتگی نظری بر تحقق استوار نباشد، صادق است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تمرکز بر استراتژی‌های بالینی (گلدفرید، 1980) در مقایسه با تکثر بیشتر نظریه‌ها، راهی مفیدتر و بالقوه تلفیقی‌تر برای تحولات آینده خواهد بود و این به ویژه در صورتی که انباشتگی نظری بر تحقق استوار نباشد، صادق است.<br>
+<b>نکته کلیدی:</b> استراتژی‌های بالینی > تکثر نظریه‌ها (به ویژه اگر انباشتگی بی‌ثمر باشد)
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>شواهد کلی تلفیق (استریکر و گلد، 2001)</h3></div>
+<div class="fa"><b>9 مطالعه:</b> شواهد قابل توجه</div>
+<div class="fa"><b>13 مطالعه:</b> حمایت نسبی</div>
+<div class="fa"><b>7 مطالعه:</b> حمایت مقدماتی</div>
+<div class="fa"><b>مجموع:</b> 29 مطالعه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تأثیر پرنده دودو</h3></div>
+<div class="fa"><b>ابداع:</b> لابورسکی، سینگر و لابورسکی (1975)</div>
+<div class="fa"><b>معنا:</b> همه رویکردها برنده‌اند و باید تحسین شوند</div>
+<div class="fa"><b>توجیه:</b> عناصر تغییرآفرین کلیدی ناشی از عوامل مشترک هستند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>متغیرهای جورکننده در روان‌درمانی تجویزی (باتلر)</h3></div>
+<div class="fa"><b>برونی‌سازی:</b> → تناسب با CBT</div>
+<div class="fa"><b>درونی‌سازی:</b> → تناسب با روان‌پویایی</div>
+<div class="fa"><b>واکنش‌پذیری پایین:</b> → تناسب با CBT</div>
+<div class="fa"><b>واکنش‌پذیری بالا:</b> → تناسب با روان‌پویایی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>QQ-45 (المبرت، 2007)</h3></div>
+<div class="fa"><b>4 حوزه:</b> سلامت روانی کلی، نشانه‌ها، نقش اجتماعی، کارکرد بین‌شخصی</div>
+<div class="fa"><b>هشدار:</b> 85% و 90% گروه هنجاری</div>
+<div class="fa"><b>تأثیر:</b> بهبود نتایج با دریافت هشدار</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تحولات آینده (یوبانکس-کارتر و همکاران، 2005)</h3></div>
+<div class="fa"><b>۳ محور:</b> ۱) علوم پایه (شناختی، اجتماعی، رشد، اعصاب)، ۲) عوامل اجتماعی-فرهنگی، ۳) نقاط قوت مراجع</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آموزش تلفیق</h3></div>
+<div class="fa"><b>مدل تدریجی:</b> شروع از ابتدا</div>
+<div class="fa"><b>مدل انسجام‌بخش:</b> آموزش مجزا سپس تلفیق (ترجیح استریکر)</div>
+<div class="fa"><b>نکته:</b> دانشجویان یقین را بر ابهام ترجیح می‌دهند (گلد، 2005)</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>تأثیر پرنده دودو (Dodo Bird Effect)</h3></div>
+<div class="fa"><b>تعریف:</b> یافته‌ای که نشان می‌دهد رویکردهای مختلف روان‌درمانی نتایج مشابهی دارند</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>منبع:</b> لابورسکی، سینگر و لابورسکی (1975)<br>
+<b>توجیه:</b> عناصر تغییرآفرین کلیدی ناشی از عوامل مشترک (مانند رابطه درمانی) هستند<br>
+<b>اهمیت:</b> حمایت از رویکرد عوامل مشترک و تلفیق
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌درمانی تجویزی (باتلر)</h3></div>
+<div class="fa"><b>تعریف:</b> رویکردی در تلفیق تکنیکی که بر جور کردن درمان با مراجع تأکید دارد</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>مبنای پژوهش:</b> متغیرهای جورکننده بر اساس مرور ادبیات پژوهشی انتخاب شده‌اند<br>
+<b>متغیرهای کلیدی:</b> درونی‌سازی، برونی‌سازی، واکنش‌پذیری<br>
+<b>حمایت تجربی:</b> قابل مالحظه
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رویکرد نتیجه‌آگاه / دانشمند بالینی محلی</h3></div>
+<div class="fa"><b>ابزار:</b> پرسشنامه نتیجه‌ای-45 (QQ-45)</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>فرایند:</b> اندازه‌گیری منظم → مقایسه با هنجارها → هشدار در 85%/90% → اصلاح درمان<br>
+<b>نتیجه:</b> بهبود چشمگیر نتایج<br>
+<b>صورتبندی:</b> دانشمند بالینی محلی (استریکر و تریپریلر، 1995)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تحولات آینده تلفیق (چشم‌انداز)</h3></div>
+<div class="fa"><b>فرایند vs محصول:</b> استریکر = فرایند؛ بین‌المللی = محصول</div>
+<div class="fa"><b>مرحله فعلی:</b> تأمل (پروچاسکا و دی‌کلمنته، 2005)</div>
+<div class="fa"><b>حرکت:</b> به سمت اقدام</div>
+<div class="fa"><b>۳ محور:</b> علوم پایه، عوامل اجتماعی-فرهنگی، نقاط قوت مراجع</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>زبان مشترک در تلفیق</h3></div>
+<div class="fa"><b>هدف:</b> دستیابی به زبان عاری از اصطلاحات اختصاصی</div>
+<div class="fa"><b>الهام:</b> کارهای دالارد و میلر (1950)</div>
+<div class="fa"><b>نتیجه:</b> تسهیل ارتباط میان گروه‌ها و ارجاع‌های مناسب</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>فرایند (استریکر)</td><td>محصول (بین‌المللی)</td><td>کاوش مداوم vs درمان تلفیقی</td><td>استریکر فرایند را ترجیح می‌دهد</td></tr>
+<tr><td>برونی‌سازی</td><td>درونی‌سازی</td><td>CBT vs روان‌پویایی</td><td>باتلر (2000)</td></tr>
+<tr><td>واکنش‌پذیری پایین</td><td>واکنش‌پذیری بالا</td><td>CBT vs روان‌پویایی</td><td>باتلر (2000)</td></tr>
+<tr><td>آموزش تدریجی</td><td>آموزش انسجام‌بخش</td><td>تلفیق از ابتدا vs ابتدا مجزا سپس تلفیق</td><td>استریکر انسجام‌بخش را ترجیح می‌دهد</td></tr>
+<tr><td>یک‌کاسه‌گران</td><td>انشعاب‌گرایان</td><td>تعداد کم رویکردها vs تعداد زیاد</td><td>هی (2001)</td></tr>
+<tr><td>عوامل مشترک</td><td>تکنیک‌های خاص</td><td>منبع اصلی تغییر vs تأثیر کمتر</td><td>وومپولد و دیگران (1997)</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و مفاهیم کلیدی</h2>
+
+<div class="card">
+<div class="card-head"><h3>لابورسکی، سینگر و لابورسکی (1975)</h3></div>
+<div class="fa"><b>مفهوم:</b> تأثیر پرنده دودو</div>
+<div class="fa"><b>ایده اصلی:</b> همه رویکردها برنده‌اند و باید تحسین شوند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>باتلر و هاروود (2000)</h3></div>
+<div class="fa"><b>مفهوم:</b> روان‌درمانی تجویزی</div>
+<div class="fa"><b>ایده اصلی:</b> جور کردن درمان با مراجع؛ متغیرهای کلیدی: درونی‌سازی، برونی‌سازی، واکنش‌پذیری</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>المبرت (2007)</h3></div>
+<div class="fa"><b>مفهوم:</b> رویکرد نتیجه‌آگاه</div>
+<div class="fa"><b>ابزار:</b> QQ-45؛ هشدار در 85% و 90%</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>استریکر و تریپریلر (1995)</h3></div>
+<div class="fa"><b>مفهوم:</b> دانشمند بالینی محلی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گلدفرید و واجتل (2004)</h3></div>
+<div class="fa"><b>بحث:</b> فرایند vs محصول در تلفیق</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>یوبانکس-کارتر و همکاران (2005)</h3></div>
+<div class="fa"><b>محورهای آینده:</b> علوم پایه، عوامل اجتماعی-فرهنگی، نقاط قوت</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گلد (2005)</h3></div>
+<div class="fa"><b>نکته:</b> دانشجویان یقین را بر ابهام ترجیح می‌دهند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هی (2001)</h3></div>
+<div class="fa"><b>مفهوم:</b> یک‌کاسه‌گران vs انشعاب‌گرایان</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: تأثیر پرنده دودو</h3>
+<div class="fa"><b>سوال نمونه:</b> تأثیر پرنده دودو به چه معناست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "برتری یک رویکرد خاص" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> همه رویکردها به یک اندازه مؤثرند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> پرنده دودو = برابری اثربخشی رویکردها
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: تغییرات در CBT</h3>
+<div class="fa"><b>سوال نمونه:</b> مطالعه ایالردی و کرایگ‌هد چه یافته‌ای داشت؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تغییرات در اواخر درمان" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تغییرات در چهار هفته نخست (قبل از تکنیک‌ها).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تغییر زودهنگام = عوامل مشترک، نه تکنیک‌ها
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: متغیرهای جورکننده باتلر</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام مراجعان با CBT تناسب دارند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "درونی‌سازان" را انتخاب کنی (برعکس).</div>
+<div class="fa"><b>پاسخ درست:</b> برونی‌سازان و واکنش‌پذیری پایین.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> برونی‌سازی + واکنش‌پذیری پایین → CBT
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: آستانه‌های QQ-45</h3>
+<div class="fa"><b>سوال نمونه:</b> علامت هشدار در QQ-45 در چه آستانه‌ای داده می‌شود؟</div>
+<div class="fa"><b>دام:</b> ممکن است "50%" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> 85% (علامت قوی‌تر در 90%).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> هشدار = 85% و 90%
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: فرایند vs محصول</h3>
+<div class="fa"><b>سوال نمونه:</b> استریکر کدام دیدگاه را در تلفیق ترجیح می‌دهد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "محصول" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> فرایند (کاوش مداوم).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> استریکر = فرایند، بین‌المللی = محصول
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: مرحله تلفیق</h3>
+<div class="fa"><b>سوال نمونه:</b> پروچاسکا و دی‌کلمنته تلفیق را در چه مرحله‌ای می‌دانند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "اقدام" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تأمل (باید به سمت اقدام حرکت کند).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تأمل → اقدام (حرکت آینده)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: زبان مشترک</h3>
+<div class="fa"><b>سوال نمونه:</b> هدف از زبان مشترک در تلفیق چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "همگون کردن درمانگران" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تسهیل ارتباط و ارجاع‌های مناسب.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> زبان مشترک = تسهیل، نه همگون‌سازی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 8: یک‌کاسه‌گران vs انشعاب‌گرایان</h3>
+<div class="fa"><b>سوال نمونه:</b> انشعاب‌گرایان در مورد تعداد رویکردها چه دیدگاهی دارند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تعداد کم" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تفاوت‌های بیشتری می‌بینند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> یک‌کاسه‌گران = کم، انشعاب‌گرایان = زیاد
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 9: آموزش تلفیق</h3>
+<div class="fa"><b>سوال نمونه:</b> استریکر کدام مدل آموزش تلفیق را ترجیح می‌دهد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تدریجی (از ابتدا)" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> انسجام‌بخش (ابتدا مجزا، سپس تلفیق).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> استریکر = انسجام‌بخش، نه تدریجی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 10: دانشجویان و یقین</h3>
+<div class="fa"><b>سوال نمونه:</b> دانشجویان چه چیزی را بر چه چیزی ترجیح می‌دهند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "ابهام بر یقین" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> یقین را بر ابهام ترجیح می‌دهند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> دانشجویان = یقین > ابهام (گلد، 2005)
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 08 · تلفیق روان‌درمانی · 42 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "تأثیر پرنده دودو به چه معناست؟",
+options: ["یک رویکرد خاص برتر است", "همه رویکردها به یک اندازه مؤثرند", "پرندگان در درمان نقش دارند", "درمان باید کوتاه باشد"],
+answer: 1,
+explanation: "تأثیر پرنده دودو به این معناست که همه رویکردها برنده‌اند و باید تحسین شوند؛ بر اساس این درک که عناصر تغییرآفرین کلیدی ناشی از عوامل مشترک هستند."
+},
+{
+q: "مطالعه ایالردی و کرایگ‌هد (1994) چه یافته‌ای در مورد تغییرات در CBT داشت؟",
+options: ["تغییرات در اواخر درمان اتفاق افتاد", "تغییرات در چهار هفته نخست قبل از تکنیک‌ها اتفاق افتاد", "هیچ تغییری رخ نداد", "تکنیک‌ها عامل اصلی تغییر بودند"],
+answer: 1,
+explanation: "تغییرات در چهار هفته نخست قبل از استفاده از تکنیک‌های خاص اتفاق افتاده بود؛ نشان می‌دهد که رابطه و عوامل مشترک زیربنای تغییر بودند."
+},
+{
+q: "در روان‌درمانی تجویزی باتلر، کدام مراجعان با CBT تناسب دارند؟",
+options: ["درونی‌سازان", "برونی‌سازان و واکنش‌پذیری پایین", "واکنش‌پذیری بالا", "همه مراجعان"],
+answer: 1,
+explanation: "مراجعان برونی‌ساز با CBT تناسب دارند و مراجعان با واکنش‌پذیری پایین نیز با CBT تناسب دارند."
+},
+{
+q: "آستانه هشدار در پرسشنامه QQ-45 المبرت چند درصد است؟",
+options: ["50%", "75%", "85%", "95%"],
+answer: 2,
+explanation: "علامت هشدار در 85% گروه هنجاری داده می‌شود و علامت قوی‌تر در 90% ارائه می‌شود."
+},
+{
+q: "استریکر کدام دیدگاه را در مورد تلفیق روان‌درمانی ترجیح می‌دهد؟",
+options: ["محصول", "فرایند", "هر دو", "هیچکدام"],
+answer: 1,
+explanation: "استریکر کاوش مداوم (فرایند) را ترجیح می‌دهد، در حالی که در سطح بین‌المللی محصول مطلوب‌تر است."
+},
+{
+q: "پروچاسکا و دی‌کلمنته (2005) تلفیق روان‌درمانی را در چه مرحله‌ای می‌دانند؟",
+options: ["اقدام", "تأمل", "پایان", "شروع"],
+answer: 1,
+explanation: "آنها اشاره کرده‌اند که تلفیق روان‌درمانی در مرحله تأمل قرار دارد و باید به سمت اقدام حرکت کند."
+},
+{
+q: "چه حوزه‌هایی از کاربرد تلفیق هنوز پیشرفت چندانی نداشته است؟",
+options: ["افسردگی و اضطراب", "اختلالات ارگانیک، درد مزمن و روانی شدید", "اختلالات شخصیت", "همه حوزه‌ها"],
+answer: 1,
+explanation: "اختلالات ارگانیک (بکر، 1993)، درد مزمن (دورکین و گریزاک، 1993) و اختلال روانی شدید (هلاکامپ، 1993) هنوز پیشرفت چندانی نداشته‌اند."
+},
+{
+q: "چه رویکردی به عنوان جدی‌ترین نامزد برای طبقه جدید تلفیق مطرح است؟",
+options: ["CBT", "DBT", "درمان مراجع‌مدار", "روان‌پویایی"],
+answer: 2,
+explanation: "درمان مراجع‌مدار (میلر، دانکن و هابل، 2005) جدی‌ترین نامزد برای طبقه جدید است."
+},
+{
+q: "استریکر کدام مدل آموزش تلفیق را ترجیح می‌دهد؟",
+options: ["تدریجی (از ابتدا)", "انسجام‌بخش (ابتدا مجزا سپس تلفیق)", "هر دو", "هیچکدام"],
+answer: 1,
+explanation: "استریکر استراتژی جایگزین (آموزش گرایشات مجزا و سپس تلفیق) را ترجیح می‌دهد."
+},
+{
+q: "بر اساس گلد (2005)، دانشجویان چه چیزی را ترجیح می‌دهند؟",
+options: ["ابهام بر یقین", "یقین بر ابهام", "هیچکدام", "هر دو به یک اندازه"],
+answer: 1,
+explanation: "دانشجویان یقین را بر ابهام ترجیح می‌دهند و این نگرشی است که باید در آموزش مورد توجه قرار گیرد."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
