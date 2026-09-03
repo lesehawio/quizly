@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · تلفیق روان‌درمانی · سری 05</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"05";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>تلفیق روان‌درمانی · سری 05</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>تلفیق روان‌درمانی · مقدمه و تاریخچه</h2>
+  <p>بر اساس کتاب استریکر · تحلیل کامل سوالات با پاسخنامه تشریحی</p>
+  <div class="pills"><span class="pill">38 سوال</span><span class="pill">مقدمه</span><span class="pill">تاریخچه</span><span class="pill">نظریه‌پردازان</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس فصل اول کتاب "تلفیق روان‌درمانی" نوشته جورج استریکر طراحی شده است. تمام سوالات غیرتکراری و از کل متن مقدمه و تاریخچه استخراج شده‌اند.</div>
+
+<div class="stats">
+<div class="stat"><b>38</b><span>سوال</span></div>
+<div class="stat"><b>4</b><span>رویکرد تلفیق</span></div>
+<div class="stat"><b>14</b><span>نظریه‌پرداز</span></div>
+<div class="stat"><b>3</b><span>لایه شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<!-- ==================== مقدمه ==================== -->
+
+<div class="card question" data-search="تلفیق روان درمانی تعریف باز بودن">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> تلفیق روان‌درمانی شامل چه تلاش‌هایی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلاش برای نگریستن به ورای محدوده رویکردهای تک‌مکتبی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق روان‌درمانی شامل تلاش‌هایی است که از محدوده رویکردهای تک‌مکتبی فراتر رفته و به دنبال یادگیری از سایر دیدگاه‌هاست. مشخصه آن باز بودن نسبت به شیوه‌های مختلف تلفیق نظریه‌ها و تکنیک‌های متفاوت است.<br>
+<b>نکته کلیدی:</b> تلفیق = فراتر رفتن از رویکردهای تک‌مکتبی
+</div>
+</div>
+
+<div class="card question" data-search="تفاوت تلفیق روان درمانی روان درمانی تلفیقی فرایند محصول">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> تفاوت اصلی بین "تلفیق روان‌درمانی" و "روان‌درمانی تلفیقی" چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق روان‌درمانی به فرایند اشاره دارد، روان‌درمانی تلفیقی به محصول</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق روان‌درمانی به فرایندی اشاره دارد که طی آن نظریه‌ها و تکنیک‌های مختلف بررسی می‌شوند، در حالی که روان‌درمانی تلفیقی به یک رویکرد تثبیت شده و محصول نهایی اشاره دارد.<br>
+<b>نکته کلیدی:</b> تلفیق = فرایند، روان‌درمانی تلفیقی = محصول
+</div>
+</div>
+
+<div class="card question" data-search="استریکر 1994 فرایند رویکرد">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> استریکر (1994) کدام رویکرد را در مورد تلفیق روان‌درمانی ترجیح می‌دهد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">متمرکز شدن بر فرایند به جای محدود شدن به یک رویکرد واحد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> استریکر رویکرد دوم را ترجیح می‌دهد که بر فرایند تلفیق متمرکز است تا این‌که خود را به یک رویکرد مورد توافق محدود کند.<br>
+<b>نکته کلیدی:</b> استریکر = ترجیح فرایند بر محصول
+</div>
+</div>
+
+<div class="card question" data-search="تفاوت تلفیق التقاط نظریه تکنیک">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> تفاوت اساسی تلفیق روان‌درمانی با التقاط‌گرایی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق به رابطه بین نظریه و تکنیک توجه می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق روان‌درمانی برخلاف التقاط‌گرایی، به رابطه بین نظریه و تکنیک توجه می‌کند. در التقاط‌گرایی، مداخلات صرفاً بر اساس کارایی ظاهری انتخاب می‌شوند بدون نیاز به مبنای نظری.<br>
+<b>نکته کلیدی:</b> تلفیق = نظریه + تکنیک، التقاط = صرفاً تکنیک
+</div>
+</div>
+
+<div class="card question" data-search="نورکراس 2005 تلفیق سطح بالاتر نظریه">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> به گفته نورکراس و دیگران (2005)، اکثریت درمانگران تلفیق را چگونه می‌بینند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به عنوان رویکردی سطح بالاتر به نظریه، نه فقدان یک نظریه هدایت‌کننده</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اکثریت قابل توجهی از درمانگرانی که از تلفیق روان‌درمانی استفاده می‌کنند، اصطلاح تلفیق را بر التقاط‌گرایی ترجیح می‌دهند و تلفیق را یک رویکرد سطح بالاتر به نظریه می‌دانند نه فقدان یک نظریه هدایت‌کننده.<br>
+<b>نکته کلیدی:</b> تلفیق = سطح بالاتر نظریه
+</div>
+</div>
+
+<div class="card question" data-search="نظریه نقش تلفیق جذبی تکنیکی عوامل مشترک نظری">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> نقش نظریه در رویکردهای مختلف تلفیق چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در تلفیق نظری و جذبی غالب است، در عوامل مشترک کم‌رنگ و در تلفیق تکنیکی وجود ندارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نظریه در تلفیق نظری و تلفیق جذبی نقش بسیار مهمی دارد، در رویکرد عوامل مشترک نقش کم‌رنگ‌تری دارد و در تلفیق تکنیکی عمدتاً وجود ندارد.<br>
+<b>نکته کلیدی:</b> نظریه = غالب در نظری و جذبی، غایب در تکنیکی
+</div>
+</div>
+
+<div class="card question" data-search="مرزهای نظریه تکنیک نفوذپذیر بافت">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> در مورد مرزهای بین نظریه‌ها و تکنیک‌ها چه نکته‌ای مطرح شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مرزها نفوذپذیر هستند اما انتقال تکنیک از یک سیستم به سیستم دیگر، بافت کاربرد آن را تغییر می‌دهد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هرچند مرزهای بین نظریه‌ها و تکنیک‌ها نفوذپذیرند، انتقال یک تکنیک از یک سیستم به سیستم دیگر، بافت به کارگیری آن و در نتیجه معنا و سودمندی آن را تغییر می‌دهد.<br>
+<b>نکته کلیدی:</b> تکنیک‌ها در بافت نظری جدید معنا می‌یابند
+</div>
+</div>
+
+<div class="card question" data-search="انعطاف پذیری تلفیق فرهنگی تنوع">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> چه ویژگی تلفیق روان‌درمانی آن را برای برخورد با ملاحظات فرهنگی مناسب می‌سازد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انعطاف‌پذیری ذاتی در متناسب‌سازی مداخلات با نیازهای مراجعان مختلف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انعطاف‌پذیری ذاتی تلفیق روان‌درمانی آن را برای برخورد با ملاحظات فرهنگی بسیار مناسب می‌سازد، زیرا هر رویکردی که مداخلات را برای پاسخگویی به نیازهای مراجعان مختلف متناسب می‌سازد، این توانایی را دارد که مداخلات را با توجه به عوامل فرهنگی نیز مناسب‌سازی کند.<br>
+<b>نکته کلیدی:</b> تلفیق = مناسب‌سازی فرهنگی به دلیل انعطاف‌پذیری
+</div>
+</div>
+
+<div class="card question" data-search="دلایل افزایش توجه به تلفیق گلد 1993">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> گلد (1993) به چه عواملی به عنوان دلایل افزایش توجه به تلفیق روان‌درمانی اشاره کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کثرت عوامل روان‌داروشناختی مؤثر، تأکید بر تبیین‌های زیستی و دخالت‌های اقتصادی و بالینی سیستم مراقبت مدیریت شده</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گلد به کثرت عامل‌های روان‌داروشناختی مؤثر، افزایش تأکید بر تبیین‌های زیستی آسیب‌شناسی روانی و دخالت‌های اقتصادی و بالینی سیستم مراقبت مدیریت شده به عنوان سایر دلایل افزایش توجه به تلفیق روان‌درمانی اشاره می‌کند.<br>
+<b>نکته کلیدی:</b> گلد = ۳ دلیل: داروشناختی، زیستی، اقتصادی
+</div>
+</div>
+
+<div class="card question" data-search="استریکر و گلد 2007 رویکردها">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> استریکر و گلد (2007) برای آشناسازی خواننده با اصطلاحات تلفیق چه کاری انجام دادند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هر کدام از رویکردها را به طور مختصر و ساده تعریف کردند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> استریکر و گلد به منظور آشناسازی خواننده با اصطلاحات، هر کدام از رویکردهای تلفیق را به طور مختصر و ساده تعریف کردند.<br>
+<b>نکته کلیدی:</b> استریکر و گلد = تعریف مختصر رویکردها
+</div>
+</div>
+
+<div class="card question" data-search="استریکر ترجیح تلفیق جذبی">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> استریکر کدام رویکرد تلفیق را ترجیح می‌دهد و چرا؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق جذبی را ترجیح می‌دهد، اما تأکید دارد که درک جامعی از کل حوزه به خواننده داده شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> استریکر تلفیق جذبی را ترجیح می‌دهد، اما این را یک ترجیح شخصی می‌داند و تأکید دارد که درک جامعی از کل حوزه تلفیق روان‌درمانی به خواننده داده شود نه یک تمرکز محدود بر یک ترجیح شخصی.<br>
+<b>نکته کلیدی:</b> استریکر = تلفیق جذبی (ترجیح شخصی) + درک جامع
+</div>
+</div>
+
+<div class="card question" data-search="نورکراس 2005 تلفیق جذبی نوظهورترین">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> تلفیق جذبی به عنوان چه چیزی به رسمیت شناخته شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به عنوان نوظهورترین مسیر در جهت تلفیق روان‌درمانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق جذبی به عنوان نوظهورترین مسیر در جهت تلفیق روان‌درمانی به رسمیت شناخته شده است (نورکراس و دیگران، 2005).<br>
+<b>نکته کلیدی:</b> تلفیق جذبی = نوظهورترین مسیر
+</div>
+</div>
+
+<div class="card question" data-search="تعریف عوامل مشترک تکنیکی نظری جذبی">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> تعریف هر یک از چهار رویکرد تلفیق را به ترتیب بیان کنید.</div>
+<b>پاسخ صحیح:</b> <span class="answer">عوامل مشترک: شناسایی جنبه‌های مشترک در اکثر سیستم‌ها؛ تلفیق تکنیکی: ترکیب تکنیک‌ها بدون توجه به نظریه؛ تلفیق نظری: تدوین چارچوب نظری فرادست؛ تلفیق جذبی: ترکیب درمان‌ها با درک نظری واحد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> این تعاریف دقیقاً مطابق متن کتاب است:<br>
+- عوامل مشترک: شناسایی جنبه‌هایی که در اغلب سیستم‌های درمانی وجود دارند.<br>
+- تلفیق تکنیکی: ترکیبی از تکنیک‌های برگرفته از سیستم‌های مختلف بدون توجه به رویکرد نظری.<br>
+- تلفیق نظری: تدوین چارچوب نظری فرادست از دامنه گسترده‌ای از چارچوب‌های مختلف.<br>
+- تلفیق جذبی: ترکیب درمان‌های گرفته شده از رویکردهای مختلف با هدایت یک درک نظری واحد.<br>
+<b>نکته کلیدی:</b> هر رویکرد تعریف مشخص خود را دارد
+</div>
+</div>
+
+<!-- ==================== تاریخچه ==================== -->
+
+<div class="card question" data-search="منشأ اصلی ایده تغییرات روانی اجتماعی فرانک 1961">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> به گفته نویسنده، تغییرات ناشی از تأثیرات روانی‌اجتماعی چه ویژگی‌ای دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تاریخچه‌ای طولانی و بین‌فرهنگی دارند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نویسنده اشاره می‌کند که تغییرات ناشی از تأثیرات روانی‌اجتماعی، تاریخچه‌ای طولانی و بین‌فرهنگی دارد و این نکته زیربنای برخی از مهم‌ترین کارها در حوزه عوامل مشترک است.<br>
+<b>نکته کلیدی:</b> تأثیرات روانی‌اجتماعی = تاریخچه طولانی و بین‌فرهنگی
+</div>
+</div>
+
+<div class="card question" data-search="دوره معاصر واجتل 1977 روانکاوی درمان رفتاری">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> نقطه شروع دوران مدرن تلفیق روان‌درمانی با انتشار کدام کتاب مشخص گردید؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روانکاوی و درمان رفتاری (واجتل، 1977)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> واجتل در سال 1977 کتاب "روانکاوی و درمان رفتاری" را منتشر کرد که طلیعه‌دار دوران مدرن تلفیق روان‌درمانی محسوب می‌شود.<br>
+<b>نکته کلیدی:</b> واجتل 1977 = آغاز دوره معاصر تلفیق
+</div>
+</div>
+
+<div class="card question" data-search="فرنچ 1933 شباهت روانکاوی شرطی سازی پاولفی">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> فرنچ در سال 1933 به چه شباهت‌هایی اشاره کرد و این کار چه اهمیتی داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شباهت بین مفاهیم روان‌کاوی (سرکوبی) و شرطی‌سازی پاولفی (خاموشی) که به ضرورت مصالحه بین فعالیت بالینی و یافته‌های تحقیقی منجر شد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فرنچ در گفتاری که با اقبال عام مواجه نشد، به شباهت‌هایی میان مفاهیم روان‌کاوی و شرطی‌سازی پاولفی اشاره کرد که به ضرورت برقراری مصالحه میان فعالیت بالینی با یافته‌های تحقیقی منجر شد.<br>
+<b>نکته کلیدی:</b> فرنچ = اولین تلاش برای تلفیق نظری
+</div>
+</div>
+
+<div class="card question" data-search="روزن زویگ 1936 اشتراکات تاثیر برنده دودو">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> روزن‌زویگ در سال 1936 چه اصطلاحی را برای اشاره به نتایج مشابه رویکردهای مختلف ابداع کرد و عوامل مشترک مورد نظر او چه بودند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تاثیر برنده دودو؛ شامل شخصیت درمانگر، توانایی القای امید، و ارائه تفسیرهایی که راه‌های جایگزین را فراهم می‌کردند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روزن‌زویگ نخستین کسی بود که به اشتراکات در روان‌درمانی اشاره کرد و اصطلاح "تاثیر برنده دودو" را برای اشاره به نتایج مشابه رویکردهای مختلف ابداع نمود. عوامل مشترک شامل شخصیت درمانگر، توانایی القای امید، و ارائه تفسیرهایی که راه‌های جایگزین را فراهم می‌کردند، بود.<br>
+<b>نکته کلیدی:</b> روزن‌زویگ = بنیان‌گذار عوامل مشترک و تاثیر برنده دودو
+</div>
+</div>
+
+<div class="card question" data-search="الکساندر فرنچ 1946 تجربه هیجانی اصلاحی">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> الکساندر و فرنچ در سال 1946 چه مفهوم اساسی را در تلفیق روان‌درمانی مطرح کردند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تجربه هیجانی اصلاحی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> الکساندر و فرنچ مفهوم "تجربه هیجانی اصلاحی" را برای اشاره به توانایی مراجع در تجربه مجدد روابط دشوار در قالب یک رابطه انتقالی با درمانگر مطرح کردند.<br>
+<b>نکته کلیدی:</b> الکساندر و فرنچ = تجربه هیجانی اصلاحی
+</div>
+</div>
+
+<div class="card question" data-search="الکساندر فرنچ بینش تغییر چرخشی">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> الکساندر و فرنچ چه ایده بدعت‌آمیزی را مطرح کردند که بعداً در کار واچتل (1977) نیز منعکس شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نه تنها بینش منجر به تغییر می‌شود، بلکه تغییر نیز می‌تواند بینش به دنبال داشته باشد (چرخش علّیت)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> الکساندر و فرنچ ایده چرخشی را مطرح کردند که بر اساس آن نه تنها بینش منجر به تغییر می‌شود، بلکه تغییر نیز می‌تواند بینش به دنبال داشته باشد.<br>
+<b>نکته کلیدی:</b> الکساندر و فرنچ = چرخش علّیت (بینش ↔ تغییر)
+</div>
+</div>
+
+<div class="card question" data-search="دالارد میلر 1950 یادگیری روانکاوی">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> دالارد و میلر در سال 1950 چه کاری انجام دادند و چه اهمیتی داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">برگردان مفاهیم روان‌کاوی در قالب نظریه یادگیری که به عوامل مشترک زیربنایی اشاره کرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دالارد و میلر کتاب مهمی نوشتند که به نظر می‌رسید برگردان مفاهیم روان‌کاوی در قالب نظریه یادگیری باشد. آنها به برخی عوامل مشترک که زیربنای هر دو رویکرد به تغییر رفتار هستند، اشاره نمودند.<br>
+<b>نکته کلیدی:</b> دالارد و میلر = برگردان روان‌کاوی به زبان یادگیری
+</div>
+</div>
+
+<div class="card question" data-search="فرانک 1961 عوامل مشترک جامع فرهنگی">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> کتاب برجسته فرانک (1961) چه ویژگی منحصر‌به‌فردی در میان کارهای حوزه تلفیق روان‌درمانی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">جامعیت فرهنگی و بررسی اشتراکات میان فرایندهای تغییر در فرهنگ‌های مختلف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اثر فرانک به لحاظ فرهنگی از تمامی کارهای حوزه تلفیق روان‌درمانی جامع‌تر است، زیرا او اشتراکات میان فرایندهای تغییر از قبیل روان‌درمانی، شستشوی مغزی، تغییر مذهب و تأثیرات دارونما را شناسایی کرد.<br>
+<b>نکته کلیدی:</b> فرانک = جامعیت فرهنگی در عوامل مشترک
+</div>
+</div>
+
+<div class="card question" data-search="فرانک عوامل مشترک انتظار تغییر امید">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> عوامل مشترک اولیه فرانک شامل چه مواردی بود و اصطلاحات افسانه و مناسک چه کاربردی دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شامل انتظار تغییر، ایجاد امید، برانگیختگی هیجانی، تشویق تغییر و تجربه هیجانی اصلاحی؛ اصطلاحات افسانه و مناسک برای اشاره به اشتراکات میان روان‌درمانی و سایر فرایندهای تغییر ضروری هستند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عوامل مشترک فرانک شامل انتظار تغییر، ایجاد امید، برانگیختگی هیجانی، تشویق تغییر خارج از خودِ فرایند تغییر و تجربه هیجانی اصلاحی بودند. اصطلاحات افسانه و مناسک برای اشاره به اشتراکات میان روان‌درمانی و سایر فرایندهای تغییر ضروری هستند.<br>
+<b>نکته کلیدی:</b> فرانک = ۵ عامل مشترک اولیه
+</div>
+</div>
+
+<div class="card question" data-search="لاندن 1964 اقدام محور بینش محور 400">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> لاندن در سال 1964 چه ادعای مهمی در مورد مکاتب روان‌درمانی مطرح کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">علیرغم بیش از 400 مکتب، فقط دو رویکرد وجود دارد: اقدام‌محور و بینش‌محور</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> لاندن در یک انحراف آشکار از الگوی معمول، ادعا کرد که فقط دو رویکرد وجود دارد: رویکردهای اقدام‌محور (مانند رفتار درمانی) و رویکردهای بینش‌محور (مانند روان‌پویایی).<br>
+<b>نکته کلیدی:</b> لاندن = دو رویکرد اصلی: اقدام‌محور و بینش‌محور
+</div>
+</div>
+
+<div class="card question" data-search="لازاروس 1967 1976 درمان چندوجهی BASIC-ID">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> درمان چندوجهی لازاروس چه ویژگی‌هایی دارد و سرواژه BASIC-ID به چه حوزه‌هایی اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در زیر چتر نظریه یادگیری اجتماعی سازمان‌دهی شده؛ BASIC-ID شامل رفتار، عاطفه، حس، تصویرسازی، شناخت، کارکرد بین‌شخصی و داروهاست</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> لازاروس درمان چندوجهی را در زیر چتر کلی نظریه یادگیری اجتماعی سازمان‌دهی کرد. سرواژه BASIC-ID نشان‌دهنده هفت حوزه اصلی کارکرد انسانی است.<br>
+<b>نکته کلیدی:</b> BASIC-ID = ۷ حوزه اصلی در درمان چندوجهی
+</div>
+</div>
+
+<div class="card question" data-search="بک 1979 CBT شناخت درمانی رفتاری تلفیق نظری">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> چرا کارهای بک در تاریخ تلفیق روان‌درمانی اهمیت دارد و CBT چه جایگاهی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بک نخستین سیستم کاملاً تحقق‌یافته از تلفیق نظری را ایجاد کرد؛ CBT به عنوان یک رویکرد منحصر‌به‌فرد تلقی می‌شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بک نخستین سیستم کاملاً تحقق‌یافته از تلفیق نظری را با افزودن مفاهیم علم شناختی به حوزه بسط‌یافته رفتار درمانی ایجاد کرد. اکنون CBT به عنوان یک رویکرد منحصربه‌فرد به روان‌درمانی تلقی می‌شود تا یک تلاش تلفیقی.<br>
+<b>نکته کلیدی:</b> بک = نخستین تلفیق نظری کامل که به رویکرد مستقل تبدیل شد
+</div>
+</div>
+
+<div class="card question" data-search="مارمور 1969 1971 یادگیری روانکاوی">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> مارمور در سال‌های 1969 و 1971 چه نتیجه‌ای در مورد رابطه روان‌کاوی و نظریه یادگیری گرفت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اصول اساسی یادگیری در هر دو رویکرد وجود دارند و نباید به عنوان دیدگاه‌های رقیب تلقی شوند، بلکه باید مکمل یکدیگر باشند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مارمور با بررسی دقیق رابطه بین روان‌کاوی و نظریه یادگیری دریافت که اصول اساسی یادگیری در تمامی دو رویکرد وجود دارند. او نتیجه‌گیری کرد که این دیدگاه‌ها نباید به عنوان رقیب تلقی شوند، بلکه باید مکمل یکدیگر باشند.<br>
+<b>نکته کلیدی:</b> مارمور = روان‌کاوی و یادگیری مکمل یکدیگرند
+</div>
+</div>
+
+<div class="card question" data-search="واچتل 1977 روانکاوی درمان رفتاری چرخشی سیستم ها 1997">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> اهمیت کتاب واچتل (1977) در چیست و چه تحولی در ویراست دوم (1997) ایجاد شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ترکیب نظری و تکنیکی روان‌کاوی و رفتاردرمانی با رویکرد چرخشی؛ در ویراست دوم نظریه سیستم‌ها نیز اضافه شد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> واچتل با کتاب خود یک ترکیب نظری و تکنیکی از درمان رفتاری و روان‌کاوی ارائه داد. در ویراست دوم (1997)، نظریه سیستم‌ها را نیز در تلفیق خود گنجاند.<br>
+<b>نکته کلیدی:</b> واچتل = روان‌پویایی چرخشی، ویراست دوم + نظریه سیستم‌ها
+</div>
+</div>
+
+<div class="card question" data-search="گلدفرید 1980 عوامل مشترک استراتژی بالینی">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> گلدفرید در سال 1980 چه پیشنهادی در مورد عوامل مشترک ارائه کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">توجه به سطح میانجی استراتژی‌های بالینی به جای تکنیک یا نظریه محض</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گلدفرید به جای جستجوی عوامل مشترک در سطح تکنیک یا نظریه، توجه به سطح میانجی استراتژی‌های بالینی را پیشنهاد کرد. این استراتژی‌ها شامل فرایندهایی مانند ارائه بازخورد و تجارب هیجانی اصلاحی بودند.<br>
+<b>نکته کلیدی:</b> گلدفرید = استراتژی‌های بالینی به عنوان سطح میانجی
+</div>
+</div>
+
+<div class="card question" data-search="SEPI 1983 انجمن بررسی تلفیق">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> انجمن بررسی تلفیق روان‌درمانی (SEPI) در چه سالی تأسیس شد و چه نقشی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1983، سازمانی بین‌المللی که کنفرانس سالانه برگزار کرده و مجله تلفیق روان‌درمانی را منتشر می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> SEPI در سال 1983 تأسیس شد و به سازمانی بین‌المللی تبدیل شده که یک کنفرانس سالانه میزبانی کرده و مجله تلفیق روان‌درمانی را به عنوان فصل‌نامه عرضه‌کننده جدیدترین مشارکت‌ها منتشر می‌سازد.<br>
+<b>نکته کلیدی:</b> SEPI = 1983، سازمان بین‌المللی تلفیق روان‌درمانی
+</div>
+</div>
+
+<div class="card question" data-search="پروچاسکا دی کلمنته فرانظریه ای مراحل تغییر">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> رویکرد فرانظریه‌ای پروچاسکا و دی‌کلمنته به کدام رویکرد تلفیق نزدیک‌تر است و مراحل تغییر آن کدامند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق نظری؛ مراحل: پیش‌تأملی، تأمل، آمادگی، اقدام و نگهداری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد فرانظریه‌ای را می‌توان به عنوان بخشی از تلفیق نظری طبقه‌بندی کرد، زیرا یک فرانظریه از فرایند روان‌درمانی ارائه می‌دهد. مراحل تغییر شامل پیش‌تأملی، تأمل، آمادگی، اقدام و نگهداری است.<br>
+<b>نکته کلیدی:</b> پروچاسکا = فرانظریه‌ای، مراحل: ۵ مرحله تغییر
+</div>
+</div>
+
+<div class="card question" data-search="مسر وینوکور 1984 هشدار جهان بینی متناقض">
+<span class="qnum">سوال 31</span>
+<div class="fa"><b>متن سوال:</b> مسر و وینوکور در سال 1984 چه هشداری در مورد تلفیق روان‌درمانی دادند و چگونه به سؤال خود پاسخ دادند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق رویکردهایی که جهان‌بینی‌های متناقضی دارند دشوار است؛ با اشاره به میزان تلاش مکاتب برای ادغام سطحی و این که دیدگاه‌های متناقض امکان تصویر کامل‌تری از مراجع را فراهم می‌کنند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مسر و وینوکور هشدار دادند که تلفیق رویکردهایی که جهان‌بینی‌ها و دیدگاه‌های متناقضی دارند، دشوار است. آنها با اشاره به میزان تلاش مکاتب برای ادغام سطحی و این که دیدگاه‌های متناقض امکان دستیابی به تصویر کامل‌تری از مراجع را فراهم می‌کنند، به سؤال خود پاسخ دادند.<br>
+<b>نکته کلیدی:</b> مسر و وینوکور = چالش جهان‌بینی‌های متناقض
+</div>
+</div>
+
+<div class="card question" data-search="باتلر 1990 روان درمانی تجویزی">
+<span class="qnum">سوال 32</span>
+<div class="fa"><b>متن سوال:</b> روان‌درمانی تجویزی باتلر بر چه اساسی استوار است و با رویکردهای مبتنی بر تشخیص چه تفاوتی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بر یافته‌های پژوهشی و جور کردن درمان با مراجع خاص استوار است؛ در تضاد با رویکردهای مبتنی بر طبقه‌بندی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌درمانی تجویزی بر یافته‌های پژوهشی برای انتخاب مداخله‌ای که بهترین تناسب را با علائم یک مراجع خاص دارد، متکی است. این با رویکردهای مبتنی بر طبقه‌بندی که به شکل یکسانی در مورد مراجعان مختلف اجرا می‌شوند، در تضاد آشکار است.<br>
+<b>نکته کلیدی:</b> باتلر = روان‌درمانی تجویزی، جور کردن درمان با مراجع خاص
+</div>
+</div>
+
+<div class="card question" data-search="ترتیب رویکردها عوامل مشترک تکنیکی نظری جذبی">
+<span class="qnum">سوال 33</span>
+<div class="fa"><b>متن سوال:</b> چهار رویکرد اصلی تلفیق روان‌درمانی به ترتیب شناسایی و بسط یافتن آنها کدامند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عوامل مشترک، تلفیق تکنیکی، تلفیق نظری، تلفیق جذبی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> به ترتیب: 1) عوامل مشترک (روزن‌زویگ، 1936)، 2) تلفیق تکنیکی (لازاروس، 1976)، 3) تلفیق نظری (واجتل، 1977؛ گلدفرید، 1980)، 4) تلفیق جذبی (مسر، 1993).<br>
+<b>نکته کلیدی:</b> ترتیب تاریخی: عوامل مشترک → تکنیکی → نظری → جذبی
+</div>
+</div>
+
+<div class="card question" data-search="استریکر گلد 2006 تلفیق رویکردها طبقه بندی">
+<span class="qnum">سوال 34</span>
+<div class="fa"><b>متن سوال:</b> استریکر و گلد (2006) چه ادعایی در مورد سیستم طبقه‌بندی رویکردهای تلفیق دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سیستم طبقه‌بندی موجود ممکن است ارزش خود را از دست داده و در آستانه تلفیق رویکردهای تلفیقی قرار گرفته‌ایم</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> استریکر و گلد ادعا کردند که ممکن است سیستم طبقه‌بندی موجود ارزش خود را از دست داده و ما در آستانه تلفیق رویکردهای تلفیقی قرار گرفته‌ایم. خطوط میان رویکردها پیوسته کم‌رنگ‌تر شده و طبقه‌بندی دشوارتر می‌گردد.<br>
+<b>نکته کلیدی:</b> استریکر و گلد = پایان عصر طبقه‌بندی؟
+</div>
+</div>
+
+<div class="card question" data-search="ارزش پایدار تلفیق خلاقیت مراجع">
+<span class="qnum">سوال 35</span>
+<div class="fa"><b>متن سوال:</b> به نظر استریکر، سهم پایدار تلفیق روان‌درمانی در چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایجاد رویکرد خلاقانه به روان‌درمانی بدون تبعیت کورکورانه از چارچوب نظری خاص و توجه ویژه به نیازهای مراجعان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> استریکر معتقد است که سهم پایدار تلفیق روان‌درمانی در ایجاد رویکرد خلاقانه به روان‌درمانی بدون تبعیت کورکورانه از یک چارچوب نظری خاص و توجه ویژه به نیازهای مراجعان است.<br>
+<b>نکته کلیدی:</b> سهم پایدار تلفیق = خلاقیت + توجه به مراجع
+</div>
+</div>
+
+<div class="card question" data-search="DBT لینهان دیالکتیک ذهن آگاهی">
+<span class="qnum">سوال 36</span>
+<div class="fa"><b>متن سوال:</b> رفتار درمانی دیالکتیکی (DBT) چه ویژگی‌هایی دارد و برای چه اختلالی معرفی شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ترکیب مداخلات رفتاری سنتی با ذهن‌آگاهی (ذن)؛ برای اختلال شخصیت مرزی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> DBT بسیاری از مداخلات رفتاری سنتی را با ذهن‌آگاهی مرتبط با سنت ذن ترکیب می‌کند. این رویکرد در ابتدا برای درمان اختلال شخصیت مرزی که نسبت به درمان‌های قبلی مقاوم نشان داده بود، معرفی گردید.<br>
+<b>نکته کلیدی:</b> DBT = رفتار درمانی + ذهن‌آگاهی، برای اختلال شخصیت مرزی
+</div>
+</div>
+
+<div class="card question" data-search="درمان مراجع مدار دانکن میلر">
+<span class="qnum">سوال 37</span>
+<div class="fa"><b>متن سوال:</b> رویکرد درمان مراجع‌مدار (نتیجه‌آگاه) در کدام طبقه از تلفیق قرار می‌گیرد و چه ویژگی‌هایی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در طبقه عوامل مشترک؛ توسط ترجیحات مراجع و نظریه تغییر هدایت می‌شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد درمان مراجع‌مدار در طبقه عوامل مشترک قرار گرفته است. در این رویکرد، درمان به وسیله ترجیحات مراجع و نظریه تغییر هدایت می‌شود که با نتایج حاصل از این فرایند کامل می‌گردد.<br>
+<b>نکته کلیدی:</b> درمان مراجع‌مدار = عوامل مشترک، هدایت توسط مراجع
+</div>
+</div>
+
+<div class="card question" data-search="رویکردهای معاصر جدید ولفی فوشا">
+<span class="qnum">سوال 38</span>
+<div class="fa"><b>متن سوال:</b> چه رویکردهای جدیدی در حوزه تلفیق روان‌درمانی ظهور کرده‌اند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق روش‌های انسان‌گرا و تجربی (واتسون)، اصول فلسفی و معرفت‌شناسی (آنجین)، متغیرهای سیاسی و فرهنگی (کونسولی و چویی)، روان‌درمانی پویای تجربی تسریع شده (فوشا)، و رویکرد ولفی برای اختلالات اضطرابی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کتاب موردپژوهی استریکر و گلد (2006) علاوه بر رویکردهای آشنا، شامل مشارکت‌های جدیدی است: تلفیق روش‌های انسان‌گرا و تجربی (واتسون)، اصول فلسفی و معرفت‌شناسی (آنجین)، متغیرهای سیاسی و فرهنگی (کونسولی و چویی)، روان‌درمانی پویای تجربی تسریع شده (فوشا، 2002) که بر عاطفه تأکید دارد، و رویکرد ولفی (2005) برای اختلالات اضطرابی.<br>
+<b>نکته کلیدی:</b> رویکردهای جدید = انسان‌گرا، فلسفی، فرهنگی، عاطفه‌محور، اختصاصی
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>چهار رویکرد اصلی تلفیق روان‌درمانی</h3></div>
+<div class="grid2">
+<div class="box"><h4>1. عوامل مشترک</h4>
+<div class="fa"><b>بنیان‌گذار:</b> روزن‌زویگ (1936)<br>
+<b>ایده اصلی:</b> اشتراکات بین رویکردها<br>
+<b>نشانه:</b> تاثیر برنده دودو</div>
+</div>
+<div class="box"><h4>2. تلفیق تکنیکی</h4>
+<div class="fa"><b>بنیان‌گذار:</b> لازاروس (1976)<br>
+<b>ایده اصلی:</b> ترکیب تکنیک‌ها<br>
+<b>نشانه:</b> درمان چندوجهی (BASIC-ID)</div>
+</div>
+<div class="box"><h4>3. تلفیق نظری</h4>
+<div class="fa"><b>بنیان‌گذار:</b> واجتل، گلدفرید<br>
+<b>ایده اصلی:</b> یکپارچگی نظری<br>
+<b>نشانه:</b> روان‌پویایی چرخشی، SEPI</div>
+</div>
+<div class="box"><h4>4. تلفیق جذبی</h4>
+<div class="fa"><b>بنیان‌گذار:</b> مسر (1993)<br>
+<b>ایده اصلی:</b> پایبندی به یک رویکرد + استفاده از تکنیک‌های دیگر<br>
+<b>نشانه:</b> جدیدترین رویکرد</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه‌پردازان کلیدی و سال‌های مهم</h3></div>
+<div class="grid2">
+<div class="box"><h4>فرنچ (1933)</h4>
+<div class="fa">شباهت روانکاوی و شرطی‌سازی پاولفی</div>
+</div>
+<div class="box"><h4>روزن‌زویگ (1936)</h4>
+<div class="fa">عوامل مشترک، تاثیر برنده دودو</div>
+</div>
+<div class="box"><h4>الکساندر و فرنچ (1946)</h4>
+<div class="fa">تجربه هیجانی اصلاحی، چرخش علّیت</div>
+</div>
+<div class="box"><h4>دالارد و میلر (1950)</h4>
+<div class="fa">برگردان روانکاوی به زبان یادگیری</div>
+</div>
+<div class="box"><h4>فرانک (1961)</h4>
+<div class="fa">عوامل مشترک با جامعیت فرهنگی</div>
+</div>
+<div class="box"><h4>لاندن (1964)</h4>
+<div class="fa">دو رویکرد: اقدام‌محور و بینش‌محور</div>
+</div>
+<div class="box"><h4>لازاروس (1976)</h4>
+<div class="fa">تلفیق تکنیکی، BASIC-ID</div>
+</div>
+<div class="box"><h4>واجتل (1977)</h4>
+<div class="fa">روان‌پویایی چرخشی، آغاز دوره معاصر</div>
+</div>
+<div class="box"><h4>بک (1979)</h4>
+<div class="fa">نخستین تلفیق نظری کامل (CBT)</div>
+</div>
+<div class="box"><h4>گلدفرید (1980)</h4>
+<div class="fa">استراتژی‌های بالینی، SEPI</div>
+</div>
+<div class="box"><h4>مسر و وینوکور (1984)</h4>
+<div class="fa">چالش جهان‌بینی‌های متناقض</div>
+</div>
+<div class="box"><h4>باتلر (1990)</h4>
+<div class="fa">روان‌درمانی تجویزی</div>
+</div>
+<div class="box"><h4>مسر (1993)</h4>
+<div class="fa">تلفیق جذبی</div>
+</div>
+<div class="box"><h4>لینهان (1993)</h4>
+<div class="fa">DBT، اختلال شخصیت مرزی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه سه لایه شخصیت</h3></div>
+<div class="fa"><b>لایه 1:</b> ناخودآگاه</div>
+<div class="fa"><b>لایه 2:</b> شناخت</div>
+<div class="fa"><b>لایه 3:</b> رفتار</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">این مدل پایه‌گذار تلفیق روان‌پویایی جدی است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل مشترک (۷ عنصر کلیدی)</h3></div>
+<div class="fa">۱. اتحاد درمانی</div>
+<div class="fa">۲. مواجهه با دشواری‌های قبلی</div>
+<div class="fa">۳. تجربه هیجانی اصلاحی</div>
+<div class="fa">۴. انتظارات مثبت (ایمان و امید)</div>
+<div class="fa">۵. ویژگی‌های مفید درمانگر (توجه، همدلی، توجه مثبت)</div>
+<div class="fa">۶. ارائه منطق زیربنایی</div>
+<div class="fa">۷. رویه‌های درمانی نظام‌مند یا مناسک</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>تلفیق روان‌درمانی (تعریف)</h3></div>
+<div class="fa"><b>تعریف:</b> شامل تلاش‌های مختلف برای نگریستن به ورای محدوده رویکردهای تک‌مکتبی است تا مشخص شود که از سایر دیدگاه‌ها چه می‌توان آموخت.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>مشخصه:</b> باز بودن نسبت به شیوه‌های مختلف تلفیق نظریه‌ها و تکنیک‌های متفاوت.<br>
+<b>تفاوت با روان‌درمانی تلفیقی:</b> اولی به فرایند اشاره دارد، دومی به محصول.<br>
+<b>تفاوت با التقاط‌گرایی:</b> تلفیق به رابطه بین نظریه و تکنیک توجه می‌کند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل مشترک (Common Factors)</h3></div>
+<div class="fa"><b>بنیان‌گذار:</b> روزن‌زویگ (1936)</div>
+<div class="fa"><b>ایده اصلی:</b> اشتراکات بین رویکردهای مختلف روان‌درمانی</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>مفهوم کلیدی:</b> تاثیر برنده دودو (Dodo Bird Effect)<br>
+<b>جامعیت فرهنگی:</b> فرانک (1961)<br>
+<b>استراتژی‌های بالینی:</b> گلدفرید (1980)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تلفیق تکنیکی (Technical Eclecticism)</h3></div>
+<div class="fa"><b>بنیان‌گذار:</b> لازاروس (1976)</div>
+<div class="fa"><b>ایده اصلی:</b> استفاده از تکنیک‌های مختلف بدون پایبندی نظری</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>نشانه:</b> درمان چندوجهی با سرواژه BASIC-ID<br>
+<b>نظریه سازمان‌دهنده:</b> یادگیری اجتماعی<br>
+<b>دومین رویکرد:</b> باتلر با روان‌درمانی تجویزی (1990)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تلفیق نظری (Theoretical Integration)</h3></div>
+<div class="fa"><b>بنیان‌گذاران:</b> واجتل (1977)، گلدفرید (1980)</div>
+<div class="fa"><b>ایده اصلی:</b> یکپارچگی نظری بین رویکردهای مختلف</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>روان‌پویایی چرخشی:</b> واجتل (1977)<br>
+<b>SEPI:</b> انجمن بررسی تلفیق روان‌درمانی (1983)<br>
+<b>چالش:</b> جهان‌بینی‌های متناقض (مسر و وینوکور، 1984)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تلفیق جذبی (Assimilative Integration)</h3></div>
+<div class="fa"><b>بنیان‌گذار:</b> مسر (1993)</div>
+<div class="fa"><b>ایده اصلی:</b> پایبندی به یک رویکرد اصلی + استفاده از تکنیک‌های دیگر</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>ویژگی:</b> جدیدترین رویکرد پذیرفته شده<br>
+<b>کاربرد:</b> تلفیق روان‌پویایی جذبی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تجربه هیجانی اصلاحی (Corrective Emotional Experience)</h3></div>
+<div class="fa"><b>بنیان‌گذاران:</b> الکساندر و فرنچ (1946)</div>
+<div class="fa"><b>تعریف:</b> موقعیتی که در آن یک دشواری قدیمی به شیوه جدید و مطلوب‌تری تجربه می‌شود</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>اهمیت:</b> یکی از عوامل مشترک کلیدی در تمام رویکردهای درمانی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌پویایی چرخشی (Cyclical Psychodynamics)</h3></div>
+<div class="fa"><b>بنیان‌گذار:</b> واجتل (1977)</div>
+<div class="fa"><b>ایده اصلی:</b> چرخش علّیت - تغییرات در انگیزش ناخودآگاه بر رفتار تأثیر می‌گذارند و بالعکس</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تلفیق:</b> روانکاوی + رفتاردرمانی + نظریه سیستم‌ها (1997)<br>
+<b>تأکید:</b> بر تجربه فعلی به جای سابقه گذشته
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>تلفیق روان‌درمانی</td><td>روان‌درمانی تلفیقی</td><td>فرایند vs محصول</td><td>استریکر فرایند را ترجیح می‌دهد</td></tr>
+<tr><td>تلفیق روان‌درمانی</td><td>التقاط‌گرایی</td><td>توجه به نظریه vs صرفاً تکنیک</td><td>الزاروس خود را التقاطی می‌داند</td></tr>
+<tr><td>عوامل مشترک</td><td>تلفیق تکنیکی</td><td>اشتراکات vs ترکیب تکنیک‌ها</td><td>روزن‌زویگ vs لازاروس</td></tr>
+<tr><td>تلفیق تکنیکی</td><td>تلفیق نظری</td><td>ترکیب تکنیک vs یکپارچگی نظری</td><td>لازاروس vs واجتل/گلدفرید</td></tr>
+<tr><td>تلفیق جذبی</td><td>تلفیق تکنیکی</td><td>پایبندی نظری vs بدون پایبندی</td><td>جدیدترین vs قدیمی‌ترین</td></tr>
+<tr><td>الکساندر و فرنچ</td><td>واچتل</td><td>تجربه هیجانی اصلاحی vs روان‌پویایی چرخشی</td><td>هر دو بر چرخش علّیت تأکید دارند</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>روزن‌زویگ (1936)</h3></div>
+<div class="fa"><b>نظریه:</b> عوامل مشترک</div>
+<div class="fa"><b>ایده اصلی:</b> اشتراکات بین رویکردهای مختلف، تاثیر برنده دودو</div>
+<div class="fa"><b>عوامل مشترک:</b> شخصیت درمانگر، القای امید، تفسیرهای جایگزین</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "عوامل مشترک"، "تاثیر برنده دودو"، "نخستین اشاره به اشتراکات"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرنچ (1933)</h3></div>
+<div class="fa"><b>نظریه:</b> تلفیق نظری اولیه</div>
+<div class="fa"><b>ایده اصلی:</b> شباهت بین سرکوبی روان‌کاوی و خاموشی پاولفی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "شباهت روانکاوی و شرطی‌سازی"، "مصالحه بالینی و تحقیق"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>الکساندر و فرنچ (1946)</h3></div>
+<div class="fa"><b>نظریه:</b> تجربه هیجانی اصلاحی</div>
+<div class="fa"><b>ایده اصلی:</b> بازآموزی عاطفی در بافت جدید، چرخش علّیت</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "تجربه هیجانی اصلاحی"، "چرخش بین تغییر و بینش"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دالارد و میلر (1950)</h3></div>
+<div class="fa"><b>نظریه:</b> برگردان روانکاوی به زبان یادگیری</div>
+<div class="fa"><b>ایده اصلی:</b> عوامل مشترک زیربنایی در هر دو رویکرد</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "برگردان مفاهیم روانکاوی"، "نظریه یادگیری"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرانک (1961)</h3></div>
+<div class="fa"><b>نظریه:</b> عوامل مشترک با جامعیت فرهنگی</div>
+<div class="fa"><b>ایده اصلی:</b> اشتراکات میان فرایندهای تغییر در فرهنگ‌های مختلف</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "جامعیت فرهنگی"، "عوامل مشترک فرافرهنگی"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لاندن (1964)</h3></div>
+<div class="fa"><b>نظریه:</b> دو رویکرد اقدام‌محور و بینش‌محور</div>
+<div class="fa"><b>ایده اصلی:</b> علیرغم 400 مکتب، فقط دو رویکرد اصلی وجود دارد</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "اقدام‌محور"، "بینش‌محور"، "انحراف از الگوی 400 موردی"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لازاروس (1976)</h3></div>
+<div class="fa"><b>نظریه:</b> تلفیق تکنیکی (انتقادگرایی تکنیکی)</div>
+<div class="fa"><b>ایده اصلی:</b> درمان چندوجهی با BASIC-ID، نظریه سازمان‌دهنده: یادگیری اجتماعی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "تلفیق تکنیکی"، "BASIC-ID"، "درمان چندوجهی"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بک (1979)</h3></div>
+<div class="fa"><b>نظریه:</b> درمان شناختی-رفتاری (CBT)</div>
+<div class="fa"><b>ایده اصلی:</b> نخستین سیستم کامل تلفیق نظری</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "CBT"، "نخستین تلفیق نظری کامل"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>واجتل (1977)</h3></div>
+<div class="fa"><b>نظریه:</b> روان‌پویایی چرخشی</div>
+<div class="fa"><b>ایده اصلی:</b> ترکیب روانکاوی و رفتاردرمانی با رویکرد چرخشی، نظریه سیستم‌ها (1997)</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "روانکاوی و درمان رفتاری"، "روان‌پویایی چرخشی"، "آغاز دوره معاصر"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گلدفرید (1980)</h3></div>
+<div class="fa"><b>نظریه:</b> استراتژی‌های بالینی، تلفیق نظری</div>
+<div class="fa"><b>ایده اصلی:</b> توجه به سطح میانجی استراتژی‌های بالینی، بنیان‌گذار SEPI</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "استراتژی‌های بالینی"، "SEPI"، "سطح میانجی"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مسر و وینوکور (1984)</h3></div>
+<div class="fa"><b>نظریه:</b> چالش‌های تلفیق نظری</div>
+<div class="fa"><b>ایده اصلی:</b> هشدار در مورد جهان‌بینی‌های متناقض</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "جهان‌بینی‌های متناقض"، "چالش تلفیق نظری"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>باتلر (1990)</h3></div>
+<div class="fa"><b>نظریه:</b> روان‌درمانی تجویزی</div>
+<div class="fa"><b>ایده اصلی:</b> جور کردن درمان با مراجع خاص بر اساس پژوهش</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "روان‌درمانی تجویزی"، "جور کردن درمان"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مسر (1993)</h3></div>
+<div class="fa"><b>نظریه:</b> تلفیق جذبی</div>
+<div class="fa"><b>ایده اصلی:</b> جدیدترین رویکرد، پایبندی به یک رویکرد اصلی با استفاده از تکنیک‌های دیگر</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "تلفیق جذبی"، "جدیدترین رویکرد"، "پایبندی نظری"</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لینهان (1993)</h3></div>
+<div class="fa"><b>نظریه:</b> رفتار درمانی دیالکتیکی (DBT)</div>
+<div class="fa"><b>ایده اصلی:</b> ترکیب رفتار درمانی با ذهن‌آگاهی (ذن)</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "DBT"، "ذهن‌آگاهی"، "اختلال شخصیت مرزی"</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: تلفیق روان‌درمانی یا روان‌درمانی تلفیقی؟</h3>
+<div class="fa"><b>سوال نمونه:</b> تفاوت بین "تلفیق روان‌درمانی" و "روان‌درمانی تلفیقی" چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است فکر کنی این دو اصطلاح معادل هم هستند.</div>
+<div class="fa"><b>پاسخ درست:</b> اولی به فرایند اشاره دارد، دومی به محصول.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تلفیق = فرایند، روان‌درمانی تلفیقی = محصول
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: تلفیق یا التقاط؟</h3>
+<div class="fa"><b>سوال نمونه:</b> تفاوت تلفیق روان‌درمانی با التقاط‌گرایی چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است فکر کنی هر دو یعنی استفاده از تکنیک‌های مختلف.</div>
+<div class="fa"><b>پاسخ درست:</b> تلفیق به رابطه بین نظریه و تکنیک توجه می‌کند، التقاط صرفاً به کارایی ظاهری.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تلفیق = نظریه + تکنیک، التقاط = صرفاً تکنیک
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: سال‌های مهم</h3>
+<div class="fa"><b>سوال نمونه:</b> نقطه شروع دوران مدرن تلفیق روان‌درمانی چه سالی است؟</div>
+<div class="fa"><b>دام:</b> ممکن است سال 1976 (لازاروس) یا 1961 (فرانک) را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> 1977 (واجتل - روانکاوی و درمان رفتاری).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> 1977 = واجتل = آغاز دوره معاصر تلفیق
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: تاثیر برنده دودو</h3>
+<div class="fa"><b>سوال نمونه:</b> چه کسی اصطلاح تاثیر برنده دودو را ابداع کرد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "فرانک" را انتخاب کنی چون کتاب معروفی در این زمینه دارد.</div>
+<div class="fa"><b>پاسخ درست:</b> روزن‌زویگ.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> روزن‌زویگ = تاثیر برنده دودو (1936)، فرانک = جامعیت فرهنگی (1961)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: ترتیب رویکردها</h3>
+<div class="fa"><b>سوال نمونه:</b> چهار رویکرد اصلی تلفیق به ترتیب کدامند؟</div>
+<div class="fa"><b>دام:</b> ممکن است ترتیب را اشتباه بزنی یا تلفیق جذبی را قبل از تلفیق نظری قرار دهی.</div>
+<div class="fa"><b>پاسخ درست:</b> عوامل مشترک → تلفیق تکنیکی → تلفیق نظری → تلفیق جذبی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> عوامل مشترک (1936) → تکنیکی (1976) → نظری (1977) → جذبی (1993)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: لایه‌های شخصیت</h3>
+<div class="fa"><b>سوال نمونه:</b> لایه دوم نظریه سه لایه شخصیت چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "ناخودآگاه" را انتخاب کنی چون اولین لایه است.</div>
+<div class="fa"><b>پاسخ درست:</b> شناخت (لایه اول: ناخودآگاه، لایه دوم: شناخت، لایه سوم: رفتار).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> لایه 1 = ناخودآگاه، لایه 2 = شناخت، لایه 3 = رفتار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: BASIC-ID</h3>
+<div class="fa"><b>سوال نمونه:</b> سرواژه BASIC-ID به چه حوزه‌هایی اشاره دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است برخی از حروف را فراموش کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> B=رفتار، A=عاطفه، S=حس، I=تصویرسازی، C=شناخت، I=بین‌شخصی، D=داروها.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> BASIC-ID = ۷ حوزه اصلی کارکرد انسانی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 8: دو رویکرد لاندن</h3>
+<div class="fa"><b>سوال نمونه:</b> لاندن در سال 1964 چه ادعایی کرد؟</div>
+<div class="fa"><b>دام:</b> ممکن است فکر کنی او هم مانند دیگران به بیش از 400 مکتب اشاره کرد.</div>
+<div class="fa"><b>پاسخ درست:</b> او در انحراف از الگوی معمول، فقط دو رویکرد (اقدام‌محور و بینش‌محور) را مطرح کرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> لاندن = انحراف از 400 مکتب، دو رویکرد
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 9: نقش نظریه در رویکردها</h3>
+<div class="fa"><b>سوال نمونه:</b> در کدام رویکرد، نظریه اصلاً وجود ندارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "عوامل مشترک" را انتخاب کنی چون نقش نظریه کم‌رنگ است.</div>
+<div class="fa"><b>پاسخ درست:</b> تلفیق تکنیکی (نظریه در آن اصلاً وجود ندارد).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> نظریه = غالب در نظری و جذبی، کم‌رنگ در عوامل مشترک، غایب در تکنیکی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 10: CBT به عنوان تلفیق یا رویکرد مستقل</h3>
+<div class="fa"><b>سوال نمونه:</b> CBT به عنوان چه چیزی تلقی می‌شود؟</div>
+<div class="fa"><b>دام:</b> ممکن است فکر کنی CBT یک تلاش تلفیقی است.</div>
+<div class="fa"><b>پاسخ درست:</b> CBT به عنوان یک رویکرد منحصربه‌فرد به روان‌درمانی تلقی می‌شود تا یک تلاش تلفیقی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> CBT = رویکرد مستقل، نه تلاش تلفیقی
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 05 · تلفیق روان‌درمانی · 38 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "چه کسی اصطلاح تاثیر برنده دودو را ابداع کرد؟",
+options: ["فرانک", "روزن‌زویگ", "الزاروس", "مسمر"],
+answer: 1,
+explanation: "روزن‌زویگ در سال 1936 نخستین کسی بود که به اشتراکات در روان‌درمانی اشاره کرد و اصطلاح تاثیر برنده دودو را ابداع نمود."
+},
+{
+q: "نقطه شروع دوران مدرن تلفیق روان‌درمانی با انتشار کدام کتاب مشخص شد؟",
+options: ["عوامل مشترک (فرانک، 1961)", "روانکاوی و درمان رفتاری (واجتل، 1977)", "درمان چندوجهی (لازاروس، 1976)", "تلفیق جذبی (مسر، 1993)"],
+answer: 1,
+explanation: "واجتل در سال 1977 کتاب 'روانکاوی و درمان رفتاری' را منتشر کرد که طلیعه‌دار دوران مدرن تلفیق روان‌درمانی محسوب می‌شود."
+},
+{
+q: "تفاوت اصلی تلفیق روان‌درمانی با روان‌درمانی تلفیقی چیست؟",
+options: ["هیچ تفاوتی ندارند", "تلفیق به فرایند اشاره دارد، تلفیقی به محصول", "تلفیقی قدیمی‌تر است", "تلفیق فقط نظری است"],
+answer: 1,
+explanation: "تلفیق روان‌درمانی به فرایند بررسی نظریه‌ها و تکنیک‌ها اشاره دارد، در حالی که روان‌درمانی تلفیقی به یک رویکرد تثبیت شده و محصول نهایی اشاره دارد."
+},
+{
+q: "تفاوت اساسی تلفیق روان‌درمانی با التقاط‌گرایی چیست؟",
+options: ["تلفیق از تکنیک‌های بیشتری استفاده می‌کند", "التقاط قدیمی‌تر است", "تلفیق به رابطه بین نظریه و تکنیک توجه می‌کند", "هیچ تفاوتی ندارند"],
+answer: 2,
+explanation: "تلفیق روان‌درمانی برخلاف التقاط‌گرایی، به رابطه بین نظریه و تکنیک توجه می‌کند. در التقاط، مداخلات صرفاً بر اساس کارایی ظاهری انتخاب می‌شوند."
+},
+{
+q: "چهار رویکرد اصلی تلفیق روان‌درمانی به ترتیب کدامند؟",
+options: ["عوامل مشترک، تلفیق تکنیکی، تلفیق نظری، تلفیق جذبی", "تلفیق تکنیکی، عوامل مشترک، تلفیق نظری، تلفیق جذبی", "عوامل مشترک، تلفیق نظری، تلفیق تکنیکی، تلفیق جذبی", "تلفیق جذبی، تلفیق نظری، تلفیق تکنیکی، عوامل مشترک"],
+answer: 0,
+explanation: "ترتیب صحیح بر اساس شناسایی و بسط یافتن: عوامل مشترک (1936)، تلفیق تکنیکی (1976)، تلفیق نظری (1977)، تلفیق جذبی (1993)."
+},
+{
+q: "کدام رویکرد به عنوان جدیدترین رویکرد تلفیق شناخته می‌شود؟",
+options: ["عوامل مشترک", "تلفیق تکنیکی", "تلفیق نظری", "تلفیق جذبی"],
+answer: 3,
+explanation: "تلفیق جذبی که توسط مسر در سال 1993 معرفی شد، جدیدترین رویکرد پذیرفته شده در حوزه تلفیق روان‌درمانی است."
+},
+{
+q: "الکساندر و فرنچ در سال 1946 چه مفهومی را در تلفیق روان‌درمانی مطرح کردند؟",
+options: ["تاثیر برنده دودو", "تجربه هیجانی اصلاحی", "درمان چندوجهی", "روان‌پویایی چرخشی"],
+answer: 1,
+explanation: "الکساندر و فرنچ مفهوم 'تجربه هیجانی اصلاحی' را مطرح کردند که به توانایی مراجع در تجربه مجدد روابط دشوار در قالب یک رابطه انتقالی با درمانگر اشاره دارد."
+},
+{
+q: "لایه دوم نظریه سه لایه شخصیت چیست؟",
+options: ["ناخودآگاه", "شناخت", "رفتار", "هیجان"],
+answer: 1,
+explanation: "در نظریه سه لایه شخصیت، لایه اول ناخودآگاه، لایه دوم شناخت و لایه سوم رفتار است."
+},
+{
+q: "سرواژه BASIC-ID در درمان چندوجهی لازاروس به چند حوزه اشاره دارد؟",
+options: ["۵ حوزه", "۶ حوزه", "۷ حوزه", "۸ حوزه"],
+answer: 2,
+explanation: "BASIC-ID به هفت حوزه اشاره دارد: Behavior (رفتار)، Affect (عاطفه)، Sensation (حس)، Imagery (تصویرسازی)، Cognition (شناخت)، Interpersonal (بین‌شخصی)، Drugs (داروها)."
+},
+{
+q: "چه کسی برای نخستین بار تلفیق تکنیکی را در سال 1976 ارائه کرد؟",
+options: ["گلدفرید", "الزاروس", "واجتل", "مسر"],
+answer: 1,
+explanation: "آرنولد لازاروس در سال 1976 اولین تلفیق تکنیکی را با درمان چندوجهی ارائه کرد."
+},
+{
+q: "در کدام رویکرد تلفیق، نقش نظریه اصلاً وجود ندارد؟",
+options: ["عوامل مشترک", "تلفیق تکنیکی", "تلفیق نظری", "تلفیق جذبی"],
+answer: 1,
+explanation: "در تلفیق تکنیکی، نظریه نقشی ندارد و صرفاً بر ترکیب تکنیک‌ها بدون مبنای نظری تأکید می‌شود."
+},
+{
+q: "چه کسی در سال 1964 ادعا کرد که فقط دو رویکرد اقدام‌محور و بینش‌محور وجود دارد؟",
+options: ["فرانک", "روزن‌زویگ", "لاندن", "دالارد و میلر"],
+answer: 2,
+explanation: "لاندن در سال 1964 در انحراف از الگوی بیش از 400 مکتب، ادعا کرد که فقط دو رویکرد اصلی وجود دارد: اقدام‌محور و بینش‌محور."
+},
+{
+q: "انجمن بررسی تلفیق روان‌درمانی (SEPI) در چه سالی تأسیس شد؟",
+options: ["1977", "1980", "1983", "1993"],
+answer: 2,
+explanation: "SEPI در سال 1983 تأسیس شد و به سازمانی بین‌المللی تبدیل شد که کنفرانس سالانه برگزار کرده و مجله تلفیق روان‌درمانی را منتشر می‌کند."
+},
+{
+q: "چه کسی نخستین سیستم کاملاً تحقق‌یافته از تلفیق نظری را ایجاد کرد؟",
+options: ["لازاروس", "بک", "واجتل", "گلدفرید"],
+answer: 1,
+explanation: "بک با افزودن علم شناختی به رفتار درمانی، نخستین سیستم کامل تلفیق نظری را ایجاد کرد که امروزه به عنوان CBT شناخته می‌شود."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
