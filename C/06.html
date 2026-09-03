@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · تلفیق روان‌درمانی · سری 06</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"06";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>تلفیق روان‌درمانی · سری 06</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>تلفیق روان‌درمانی · نظریه، اهداف، رابطه و مداخلات</h2>
+  <p>بر اساس کتاب استریکر · تحلیل کامل سوالات با پاسخنامه تشریحی</p>
+  <div class="pills"><span class="pill">40 سوال</span><span class="pill">مدل سه‌لایه</span><span class="pill">رابطه درمانی</span><span class="pill">ABCDEF</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس فصل سوم کتاب "تلفیق روان‌درمانی" نوشته جورج استریکر طراحی شده است. شامل نظریه، مدل سه‌لایه، اهداف، رابطه درمانی، مداخلات خاص و تنوع فرهنگی.</div>
+
+<div class="stats">
+<div class="stat"><b>40</b><span>سوال</span></div>
+<div class="stat"><b>3</b><span>لایه شخصیت</span></div>
+<div class="stat"><b>6</b><span>حوزه ABCDEF</span></div>
+<div class="stat"><b>3</b><span>شیوه تعاملی</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<!-- ==================== نظریه و مدل سه‌لایه ==================== -->
+
+<div class="card question" data-search="فرانظریه گشودگی رویکردهای نظری تکنیکی">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> در صورت فقدان یک نظریه واحد بزرگ، فرانظریه تلفیق روان‌درمانی چه چیزی را توصیه می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">حالت گشودگی و تمایل جهت متوازن کردن رویکردهای نظری و تکنیکی مختلف به منظور ارائه بهترین خدمت به مراجع</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در صورت فقدان یک نظریه واحد بزرگ، باید یک حالت گشودگی و تمایل جهت متوازن کردن رویکردهای نظری و تکنیکی مختلف به منظور ارائه بهترین خدمت به مراجع وجود داشته باشد.<br>
+<b>نکته کلیدی:</b> فرانظریه تلفیق = گشودگی و توازن میان رویکردها
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق روان پویایی جذبی استریکر گلد">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> استریکر در این فصل بر کدام رویکرد تلفیق تمرکز می‌کند و ویژگی اصلی آن چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق روان‌پویایی جذبی؛ مبتنی بر نظریه روان‌پویایی رابطه‌ای که مداخلات شناختی، رفتاری، تجربی و سیستم‌ها را جذب می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> استریکر بر روی تلفیق روان‌پویایی جذبی تمرکز می‌کند که یک نظریه روان‌پویایی رابطه‌ای را به عنوان سازمان‌دهنده دارد و مداخلات تکنیکی مختلف را جذب می‌نماید.<br>
+<b>نکته کلیدی:</b> تلفیق روان‌پویایی جذبی = نظریه رابطه‌ای + جذب مداخلات دیگر
+</div>
+</div>
+
+<div class="card question" data-search="مدل رابطه ای دوشخصی میتچل 1988">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> مدل روان‌پویایی مورد استفاده در تلفیق جذبی استریکر چه ویژگی‌هایی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مدل رابطه‌ای دوشخصی (میتچل، 1988) با تأکید بر منابع بین‌شخصی به جای منابع زیستی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مدل روان‌پویایی مورد استفاده، مدل رابطه‌ای دوشخصی است که بر منابع بین‌شخصی تأکید دارد و خود روان‌کاوی رابطه‌ای در درون حوزه روان‌پویایی، تلفیقی محسوب می‌شود.<br>
+<b>نکته کلیدی:</b> مدل رابطه‌ای = دوشخصی، تأکید بر بین‌شخصی، تلفیقی در درون روان‌پویایی
+</div>
+</div>
+
+<div class="card question" data-search="مدل سه لایه ای مثلث رفتار شناخت ناخودآگاه">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> مدل سه‌لایه‌ای روان‌درمانی و شخصیت (گلد و استریکر، 1993) چگونه مفهوم‌سازی شده است و هر لایه شامل چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به صورت مثلثی که به سه بخش تقسیم شده: لایه ۱ (رفتار)، لایه ۲ (شناخت، هیجان، ادراک و حس)، لایه ۳ (فرایندهای ناخودآگاه شامل تصاویر ذهنی، بازنمایی‌ها، انگیزه‌ها و تعارضات)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سه لایه به صورت مثلثی مفهوم‌سازی می‌شوند: بخش بالایی (لایه ۱) با رفتار، بخش میانی (لایه ۲) با شناخت، هیجان، ادراک و حس، و قاعده مثلث (لایه ۳) با فرایندهای ناخودآگاه شامل تصاویر ذهنی، بازنمایی‌های دیگران، انگیزه‌ها و تعارضات سروکار دارد.<br>
+<b>نکته کلیدی:</b> لایه ۱ = رفتار، لایه ۲ = شناخت/هیجان، لایه ۳ = ناخودآگاه
+</div>
+</div>
+
+<div class="card question" data-search="علیت چرخشی لایه ها ارتباط متقابل">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> بر اساس مدل سه‌لایه‌ای، علیت میان لایه‌ها چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به شکل چرخشی و نه خطی؛ هر لایه در درون دو لایه دیگر انعکاس دارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برخلاف مدل روان‌پویایی سنتی که علیت را خطی از پایین به بالا می‌داند، در مدل سه‌لایه‌ای علیت به شکل چرخشی بوده و هر لایه در درون دو لایه دیگر انعکاس دارد.<br>
+<b>نکته کلیدی:</b> علیت = چرخشی، نه خطی
+</div>
+</div>
+
+<div class="card question" data-search="نقطه ورود تغییر هر لایه">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> از چرخشی بودن مدل سه‌لایه‌ای چه نتیجه‌ای گرفته می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نقطه ورود اهمیتی ندارد، زیرا تغییر در هر لایه می‌تواند موجب تغییر در سایر لایه‌ها شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از چرخشی بودن چنین برداشت می‌شود که نقطه ورود اهمیتی ندارد، زیرا تغییر در هر لایه می‌تواند موجب تغییر در سایر لایه‌ها شود.<br>
+<b>نکته کلیدی:</b> نقطه ورود به سیستم = نامهم
+</div>
+</div>
+
+<div class="card question" data-search="مدل مثلث بافت فرهنگی روابط">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> مدل سه‌لایه‌ای اصلی چه نقصانی دارد که در شکل بسط‌یافته اصلاح شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مثلث مورد نظر مستقل از بافت فرهنگی و روابط با دیگران در نظر گرفته شده بود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نقصان اصلی این است که مثلث مورد نظر مستقل و نه مرتبط با بسیاری از مثلث‌های دیگر (بافت فرهنگی و روابط با دیگران) تلقی می‌گردید که در مدل بسط‌یافته اصلاح شده است.<br>
+<b>نکته کلیدی:</b> نقصان مدل اصلی = نادیده گرفتن بافت فرهنگی و روابط
+</div>
+</div>
+
+<!-- ==================== اهداف ==================== -->
+
+<div class="card question" data-search="اهداف تلفیق بهبود ماهیت">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> هدف کلی تلفیق روان‌درمانی چیست و ماهیت بهبود به چه چیزی بستگی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کمک به مراجع در جهت بهبود؛ ماهیت بهبود به نوع خاص تلفیق روان‌درمانی مورد استفاده بستگی دارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هدف تلفیق روان‌درمانی به طور کلی‌تر، کمک به مراجع در جهت بهبود است. ماهیت بهبودی به نوع خاص تلفیق روان‌درمانی مورد استفاده بستگی دارد.<br>
+<b>نکته کلیدی:</b> هدف = بهبود؛ ماهیت بهبود = وابسته به رویکرد تلفیقی
+</div>
+</div>
+
+<div class="card question" data-search="اهداف خاص رایزنی مشترک">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> اهداف خاص درمانی چگونه تعیین می‌شوند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">از طریق یک فرایند رایزنی مشترک در میان درمانگر و مراجع</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اهداف خاص باید از طریق یک فرایند رایزنی مشترک در میان درمانگر و مراجع تعیین شوند.<br>
+<b>نکته کلیدی:</b> تعیین اهداف = رایزنی مشترک درمانگر و مراجع
+</div>
+</div>
+
+<div class="card question" data-search="اهداف آشکار فرایندی درمانگر">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> چه تمایزی میان اهداف مراجع و درمانگر وجود دارد و چگونه باید با آن برخورد کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تمایز بین اهداف آشکار مراجع (تغییر رفتار) و اهداف فرایندی پنهان‌تر درمانگر (درک)؛ درمانگر باید موضوع را برای مراجع توضیح دهد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مهم است که میان اهداف آشکار مراجع (تغییر رفتار) و اهداف فرایندی پنهان‌تر درمانگر (درکی که ممکن است برای رسیدن به تغییر رفتار ضروری باشد) تمایز قائل شد. درمانگر باید موضوع را برای مراجع توضیح دهد.<br>
+<b>نکته کلیدی:</b> اهداف آشکار (مراجع) vs اهداف فرایندی (درمانگر)
+</div>
+</div>
+
+<div class="card question" data-search="کانون تمرکز نظریه غالب">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> کانون تمرکز درمان به وسیله چه چیزی تعیین می‌شود و در رویکردهای مختلف چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به وسیله نظریه غالب در مدل تلفیقی تعیین می‌شود؛ در روان‌پویایی درک، در شناختی-رفتاری تغییر شناختی، در تجربی اهداف تجربی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کانون تمرکز درمان به وسیله نظریه غالب تعیین می‌شود. در روان‌پویایی درک، در شناختی-رفتاری تغییر شناختی، در تجربی اهداف تجربی هستند.<br>
+<b>نکته کلیدی:</b> نظریه غالب = تعیین‌کننده کانون تمرکز
+</div>
+</div>
+
+<div class="card question" data-search="اهداف فردنگر قانون نگر">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> ویژگی اصلی اهداف در تلفیق روان‌درمانی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اهداف فردنگر هستند تا قانون‌نگر؛ هر درمانی با نیازهای خاص هر مراجع فردی متناسب می‌گردد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اهداف در تلفیق روان‌درمانی فردنگر هستند تا قانون‌نگر. هر درمانی با نیازهای خاص هر مراجع فردی متناسب می‌گردد و در نتیجه هر درمانی یک سری از اهداف خاص تعیین شده توسط مراجع را دنبال می‌کند.<br>
+<b>نکته کلیدی:</b> اهداف = فردنگر (Individualized)
+</div>
+</div>
+
+<!-- ==================== ABCDEF ==================== -->
+
+<div class="card question" data-search="ABCDEF سر واژه یادبار اهداف آموزشی">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> سرواژه ABCDEF که استریکر برای اهداف آموزشی طراحی کرده، به چه حوزه‌هایی دلالت دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">A=هیجان، B=رفتار، C=شناخت، D=پویایی، E=محیط، F=فیزیولوژی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سرواژه ABCDEF بر حروف زیر دلالت دارد: Affect (هیجان)، Behavior (رفتار)، Cognition (شناخت)، Dynamics (پویایی)، Environment (محیط)، Physiology (فیزیولوژی).<br>
+<b>نکته کلیدی:</b> ABCDEF = ۶ حوزه اصلی کارکرد انسانی
+</div>
+</div>
+
+<div class="card question" data-search="ABCDEF شباهت BASIC-ID تفاوت">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> سرواژه ABCDEF چه شباهت‌ها و تفاوت‌هایی با BASIC-ID لازاروس دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شباهت در حوزه‌های اصلی؛ تفاوت در این که ABCDEF شامل پویایی‌ها (ناخودآگاه) می‌شود اما BASIC-ID از آن احتراز می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ABCDEF شباهت‌هایی آشکار با BASIC-ID در درمان چندوجهی دارد. با وجود این، لازاروس از هر گونه ارجاع به ناخودآگاه احتراز می‌کند، در حالی که ABCDEF شامل پویایی‌ها (ناخودآگاه) می‌شود.<br>
+<b>نکته کلیدی:</b> ABCDEF = BASIC-ID + پویایی‌ها (ناخودآگاه)
+</div>
+</div>
+
+<div class="card question" data-search="مدل چرخشی ABCDEF تاثیر متقابل">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> مدل چرخشی در سرواژه ABCDEF به چه معناست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هر کدام از حوزه‌ها بر سایرین تأثیرگذار بوده و در سراسر طول درمان انعکاس دارند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هیچ گونه اشاره ضمنی به جهت‌گیری خطی وجود ندارد و مدل چرخشی مورد تأیید رویکرد سه‌لایه‌ای در این‌جا نیز صادق است، زیرا هر کدام از حوزه‌ها بر سایرین تأثیرگذار بوده و در سراسر طول درمان انعکاس دارند.<br>
+<b>نکته کلیدی:</b> ABCDEF = چرخشی، تأثیر متقابل حوزه‌ها
+</div>
+</div>
+
+<!-- ==================== مفاهیم کلیدی: رابطه درمانی ==================== -->
+
+<div class="card question" data-search="رابطه درمانی کلیدی فروش املاک">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> نویسنده برای تأکید بر اهمیت رابطه درمانی از چه تشبیهی استفاده کرده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همانند فروش املاک که به موقعیت بستگی دارد، روان‌درمانی به رابطه، رابطه، رابطه وابسته است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نویسنده می‌گوید: "درست به همان صورتی که فروش املاک به موقعیت، موقعیت، موقعیت بستگی دارد، فعالیت روان‌درمانی نیز به رابطه، رابطه، رابطه وابسته است."<br>
+<b>نکته کلیدی:</b> رابطه درمانی = حیاتی‌ترین عامل
+</div>
+</div>
+
+<div class="card question" data-search="رابطه درمانی مشارکت آموزشی سقراطی تعلیمی">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> رابطه درمانی به عنوان یک مشارکت آموزشی چگونه توصیف شده است و چه رویکردهایی برای آن وجود دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مراجع برای یادگیری نحوه متفاوت بودن می‌آید و درمانگر مسئولیت آموزش را می‌پذیرد؛ رویکردهای سقراطی و تعلیمی هر دو وجود دارند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رابطه درمانی را می‌توان به عنوان یک مشارکت آموزشی توصیف کرد که در آن مراجع به منظور یادگیری نحوه متفاوت بودن به درمان می‌آید و درمانگر مسئولیت آموزش دادن را می‌پذیرد. این آموزش لزوماً بر هیچ گونه موضع تعلیمی خاص دلالت نداشته و رویکردهای سقراطی و همچنین آموزشی برای آن وجود دارد.<br>
+<b>نکته کلیدی:</b> رابطه = مشارکت آموزشی، سقراطی و تعلیمی
+</div>
+</div>
+
+<div class="card question" data-search="درمانگران شناختی رفتاری روان پویایی تلفیقی">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> درمانگران تلفیقی در مقایسه با درمانگران شناختی-رفتاری و روان‌پویایی در مورد موضع آموزشی چه تفاوتی دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درمانگران تلفیقی می‌توانند بین موضع آموزشی و سقراطی حرکت کنند بدون تأثیر ناموزون بر رابطه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگران شناختی-رفتاری موضع آموزشی و روان‌پویایی موضع سقراطی را ترجیح می‌دهند. بخشی از مهارت در تلفیق، حرکت از یک موضع به موضع دیگر بدون تأثیر ناموزون بر رابطه است.<br>
+<b>نکته کلیدی:</b> تلفیقی = توانایی حرکت بین موضع‌های آموزشی و سقراطی
+</div>
+</div>
+
+<div class="card question" data-search="اتحاد درمانی بوردین 1979 هدف ابزار پیوند">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> اتحاد درمانی بر اساس بوردین (1979) شامل چه مؤلفه‌هایی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">توافق بر سر یک هدف، توافق بر سر ابزارهای تحقق آن هدف، و برقراری یک پیوند به منظور تسهیل دو مؤلفه نخست</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بوردین مؤلفه‌های ضروری اتحاد را مشتمل بر توافق بر سر یک هدف، توافق بر سر ابزارهای تحقق آن هدف و برقراری یک پیوند به منظور تسهیل دو مؤلفه نخست دانسته است.<br>
+<b>نکته کلیدی:</b> اتحاد = توافق هدف + توافق ابزار + پیوند
+</div>
+</div>
+
+<div class="card question" data-search="رابطه به عنوان مبنا یا ابزار تغییر">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> تفاوت رویکردها در استفاده از رابطه درمانی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">برخی از رابطه به عنوان مبنایی برای سایر مداخلات استفاده می‌کنند، برخی دیگر آن را به عنوان ابزاری برای تغییر به کار می‌برند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برخی از درمانگران از رابطه به عنوان مبنایی برای سایر مداخلات استفاده می‌کنند، در حالی‌که برخی دیگر آن را به عنوان ابزاری برای تغییر به کار می‌برند. درمانگران تلفیقی خود را در نقطه‌ای بر روی این پیوستار قرار می‌دهند.<br>
+<b>نکته کلیدی:</b> رابطه = مبنا (برای برخی) یا ابزار (برای برخی دیگر)
+</div>
+</div>
+
+<!-- ==================== گسستگی در اتحاد ==================== -->
+
+<div class="card question" data-search="گسستگی اتحاد کناره گیری مواجهه سافران">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> دو نوع گسستگی در اتحاد کدامند و هر کدام چه ویژگی‌هایی دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کناره‌گیری (اجتناب مراجع از درمانگر، فرایند یا هیجانات) و مواجهه (ابراز مستقیم خشم یا نارضایتی)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گسستگی از نوع کناره‌گیری زمانی اتفاق می‌افتد که مراجع از درمانگر، فرایند درمانی یا هیجانات خود اجتناب می‌کند. گسستگی از نوع مواجهه به وسیله ابراز مستقیم خشم یا نارضایتی مشخص می‌گردد.<br>
+<b>نکته کلیدی:</b> گسستگی = کناره‌گیری (اجتناب) یا مواجهه (ابراز خشم)
+</div>
+</div>
+
+<div class="card question" data-search="گسستگی ظریف اتحاد کاذب">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> یک گسستگی ظریف از نوع کناره‌گیری چگونه مشخص می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با یک اتحاد کاذب که در آن مراجع به نظر می‌رسد در مسیر انجام کارها حرکت می‌کند اما واقعاً هیچ گونه مشارکت واقعی در فرایند درمان وجود ندارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یک گسستگی ظریف از نوع کناره‌گیری می‌تواند با یک اتحاد کاذب مشخص گردد که در آن به نظر می‌رسد مراجع در مسیر انجام کارهایی که از او خواسته شده است حرکت می‌کند، اما واقعاً هیچ گونه مشارکت واقعی در فرایند درمان وجود ندارد.<br>
+<b>نکته کلیدی:</b> گسستگی ظریف = اتحاد کاذب، مشارکت ظاهری بدون واقعیت
+</div>
+</div>
+
+<div class="card question" data-search="رفع گسستگی همدلی سرزنش">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> برای رفع گسستگی در اتحاد چه رویکردی مؤثرتر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همدلی با انگیزه‌های مراجع و اجتناب از سرزنش؛ توجه به نقش احتمالی درمانگر در فقدان استحکام اتحاد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> به نظر می‌رسد که همدلی با انگیزه‌های مراجع برای حفظ اتحاد مؤثرتر باشد. مهم است که از سرزنش مراجع برای این وضعیت اجتناب کرده و به نقش احتمالی درمانگر نیز در فقدان استحکام اتحاد توجه داشته باشیم.<br>
+<b>نکته کلیدی:</b> رفع گسستگی = همدلی + اجتناب از سرزنش + توجه به نقش درمانگر
+</div>
+</div>
+
+<!-- ==================== فعال‌سازی و تجربه هیجانی اصلاحی ==================== -->
+
+<div class="card question" data-search="فعال سازی تکرار تجربه قبلی">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> فعال‌سازی در روان‌درمانی به چه معناست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">زمانی که مراجع یک تجربه قبلی را تکرار می‌کند (در این مورد به همراه درمانگر)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یک فعال‌سازی زمانی اتفاق می‌افتد که مراجع یک تجربه قبلی را تکرار می‌کند – در این مورد به همراه درمانگر – اما این تکرار در بسیاری از روابط دیگر در زندگی وی نیز روی می‌دهد.<br>
+<b>نکته کلیدی:</b> فعال‌سازی = تکرار الگوهای رابطه‌ای قدیمی در درمان
+</div>
+</div>
+
+<div class="card question" data-search="تجربه هیجانی اصلاحی پاسخ متفاوت">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> تجربه هیجانی اصلاحی چگونه رخ می‌دهد و چه تأثیری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درمانگر از مشارکت در فعال‌سازی امتناع کرده و به شیوه‌ای جدید و مثبت‌تر پاسخ می‌دهد؛ مراجع می‌آموزد که دیگران لزوماً ترد کننده نیستند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگر از مشارکت در فعال‌سازی و پاسخ‌دهی به شیوه‌ای تردکننده امتناع نموده و در عوض به شیوه‌ای جدید و مثبت‌تر پاسخ می‌دهد. مراجع درمی‌یابد که دیگران لزوماً تردکننده نیستند.<br>
+<b>نکته کلیدی:</b> تجربه اصلاحی = پاسخ جدید به جای پاسخ تکراری
+</div>
+</div>
+
+<div class="card question" data-search="انتقال فرافکنی تحریف خلق شیوه رابطه">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> تفاوت برداشت قدیمی‌تر و جدیدتر (رابطه‌ای) از انتقال چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">برداشت قدیمی: فرافکنی نگرش‌های مرتبط با تجارب قبلی به درمانگر؛ برداشت جدید (رابطه‌ای): خلق یک شیوه برقراری رابطه توسط مراجع به همراه درمانگر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برداشت قدیمی‌تر بر نشأت‌گرفتن انتقال از مراجع دلالت داشته (گرینسون، 1967). برداشت جدیدتر و رابطه‌ای (میتچل، 1988) بر این نکته دلالت دارد که انتقال نه یک تحریف مبتنی بر فرافکنی بلکه خلق یک شیوه برقراری رابطه توسط مراجع به همراه درمانگر است.<br>
+<b>نکته کلیدی:</b> انتقال قدیمی = فرافکنی؛ انتقال جدید (رابطه‌ای) = خلق شیوه رابطه
+</div>
+</div>
+
+<div class="card question" data-search="انتقال متقابل احساسات درمانگر منبع اطلاعات">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> در مدل رابطه‌ای، انتقال متقابل چگونه تلقی می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به عنوان مجموع و محتوای تمام احساسات درمانگر در مورد مراجع؛ به عنوان منبع اطلاعات در مورد سبک رابطه‌ای مراجع</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مدل رابطه‌ای (میتچل، 1988) از انتقال متقابل به عنوان مجموع و محتوای تمام احساسات درمانگر در مورد مراجع یاد می‌شود. دیگر از انتقال متقابل اجتناب نمی‌شود و به عنوان منبع اطلاعات در مورد سبک رابطه‌ای مراجع تلقی می‌گردد.<br>
+<b>نکته کلیدی:</b> انتقال متقابل = منبع اطلاعات، نه آلودگی
+</div>
+</div>
+
+<div class="card question" data-search="رقص کژکار همدستی واجتل">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> واجتل (1997) از چه اصطلاحی برای توصیف الگوی رابطه‌ای کژکار استفاده می‌کند و درمانگر تلفیقی چگونه با آن برخورد می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">"همدستی"؛ درمانگر با مقاومت در مقابل کشش برای محدود کردن الگوها، فرصت تجربه اصلاحی و آزمودن الگوهای جدید را فراهم می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> واجتل از اصطلاح "همدستی" برای توصیف الگوی کژکار استفاده می‌کند. درمانگر تلفیقی با بالاترین توانایی در کشف فعال‌سازی‌ها و آماده‌سازی برای مقابله با فشارهای تغییر، این ترکیب را برای مراجع تواناتر می‌سازد.<br>
+<b>نکته کلیدی:</b> همدستی = الگوی کژکار؛ درمانگر = مقاومت در برابر همدستی
+</div>
+</div>
+
+<!-- ==================== مشارکت مراجع ==================== -->
+
+<div class="card question" data-search="مقاومت واکنش عدم پذیرش مراجع بد">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> نگرش جدید نسبت به مقاومت مراجع چیست و چگونه می‌توان از آن بهره برد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مقاومت به عنوان دوست و نه دشمن درمان تلقی می‌شود؛ سرنخ‌هایی در مورد آنچه در درمان باید تغییر کند فراهم می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در سال‌های اخیر دیدگاه نسبت به مقاومت تغییر کرده است. از آن پس، مقاومت می‌تواند به عنوان دوست و نه دشمن درمان تلقی شود، زیرا سرنخ‌هایی در مورد آنچه که در درمان باید تغییر کند فراهم می‌کند.<br>
+<b>نکته کلیدی:</b> مقاومت = دوست درمان، منبع اطلاعات
+</div>
+</div>
+
+<div class="card question" data-search="مداخله غیر اتهام آمیز فعال سازی">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> درمانگر چگونه می‌تواند با یک مراجع مقاوم به شیوه‌ای غیراتهام‌آمیز برخورد کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با پرسیدن این که او چه کاری انجام داده که موجب آزردگی مراجع شده است (مداخله غیر اتهام‌آمیز)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگر ممکن است در پاسخ به کناره‌گیری مراجع از خود بپرسد که او چه کاری انجام داده که موجب آزردگی مراجع شده است. این مداخله غیر اتهام‌آمیز ممکن است مراجع را در شناسایی نقش خود در تعامل یاری دهد.<br>
+<b>نکته کلیدی:</b> مداخله غیر اتهام‌آمیز = پرسش از نقش خود درمانگر
+</div>
+</div>
+
+<!-- ==================== نقش رابطه ==================== -->
+
+<div class="card question" data-search="گلد 1996 فضای هیجانی موضع تعاملی داده های تعاملی">
+<span class="qnum">سوال 31</span>
+<div class="fa"><b>متن سوال:</b> گلد (1996) سه عامل اساسی در تعامل رابطه درمانی را چه مواردی شناسایی کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فضای هیجانی تعامل، موضع تعاملی و نقش داده‌های تعاملی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گلد با شناسایی سه عامل اساسی در تعامل، نقش رابطه درمانی را مورد توجه قرار داد: فضای هیجانی تعامل، موضع تعاملی و نقش داده‌های تعاملی.<br>
+<b>نکته کلیدی:</b> سه عامل گلد = فضای هیجانی، موضع تعاملی، داده‌های تعاملی
+</div>
+</div>
+
+<div class="card question" data-search="فضای هیجانی گرم پذیرا همدلانه">
+<span class="qnum">سوال 32</span>
+<div class="fa"><b>متن سوال:</b> در مورد فضای هیجانی در تلفیق روان‌درمانی چه اتفاق نظری وجود دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">یک محیط همدلانه، پذیرا و گرم بیشترین تناسب را با پیشرفت درمانی دارد؛ درمانگران روان‌پویایی و شناختی-رفتاری هر دو به سمت این موضع حرکت کرده‌اند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اتفاق نظر روشنی وجود دارد که یک محیط همدلانه، پذیرا و گرم بیشترین تناسب را با پیشرفت درمانی دارد. درمانگران روان‌پویایی (که در ابتدا در یک مدل فرویدی بینش‌محور حضور دور و غیرابرازگر داشتند) و درمانگران شناختی-رفتاری (که زمانی عمدتاً تکنیک‌مدار بودند) هر دو به سمت یک موضع درگیری هیجانی بیشتر حرکت کرده‌اند.<br>
+<b>نکته کلیدی:</b> فضای هیجانی = همدلانه، پذیرا، گرم (اتفاق نظر)
+</div>
+</div>
+
+<div class="card question" data-search="موضع تعاملی تجربه گرایی مشارکتی بک">
+<span class="qnum">سوال 33</span>
+<div class="fa"><b>متن سوال:</b> موضع تعاملی مطلوب در تلفیق روان‌درمانی چیست و بک آن را چگونه توصیف کرده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تجربه‌گرایی مشارکتی؛ درمانگر بسته به شرایط هم آموزشی و هم اکتشافی، هم رهنمودی و هم غیررهنمودی است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکردهای مختلف تلفیق بر حول موضع "تجربه‌گرایی مشارکتی" (بک و دیگران، 1979) توافق دارند. درمانگر ترغیب می‌شود که بسته به شرایط درمانی هم آموزشی و هم اکتشافی، هم رهنمودی و هم غیر رهنمودی باشد.<br>
+<b>نکته کلیدی:</b> موضع تعاملی = تجربه‌گرایی مشارکتی (انعطاف‌پذیر)
+</div>
+</div>
+
+<div class="card question" data-search="شیوه های تعاملی درون روانی انتقالی بین شخصی تحسین کننده">
+<span class="qnum">سوال 34</span>
+<div class="fa"><b>متن سوال:</b> سه شیوه برخورد با داده‌های تعاملی از نظر گلد (1996) کدامند و هر کدام چه ویژگی‌هایی دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1) درون‌روانی-انتقالی (بر تعیین‌کننده‌های ناخودآگاه)، 2) بین‌شخصی-منش‌شناختی (بر نقش مشترک درمانگر و مراجع)، 3) تحسین‌کننده-ایمنی (بر رابطه واقعی)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گلد سه شیوه را شناسایی کرده: شیوه درون‌روانی-انتقالی (بر تعیین‌کننده‌های ناخودآگاه)، شیوه بین‌شخصی-منش‌شناختی (بر نقش مشترک مراجع و درمانگر)، و شیوه تحسین‌کننده-ایمنی (بر رابطه واقعی).<br>
+<b>نکته کلیدی:</b> سه شیوه = درون‌روانی، بین‌شخصی، تحسین‌کننده
+</div>
+</div>
+
+<!-- ==================== مداخلات خاص ==================== -->
+
+<div class="card question" data-search="مداخله خاص گوش دادن عدم پاسخ">
+<span class="qnum">سوال 35</span>
+<div class="fa"><b>متن سوال:</b> برداشت وسیع از مداخله در روان‌درمانی شامل چه مواردی می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هر کاری که درمانگر انجام می‌دهد، شامل اقدامات چشمگیر (پیشنهاد فعالیت) و فعالیت‌های ظریف (گوش دادن دقیق، انتخاب آگاهانه عدم پاسخ)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مداخلات خاص بر هر کاری که روان‌درمانگر انجام می‌دهد دلالت دارد. این شامل اقدامات چشمگیر (پیشنهاد فعالیت به مراجع) و همچنین فعالیت‌های ظریف (گوش دادن دقیق یا انتخاب آگاهانه عدم پاسخ) می‌باشد.<br>
+<b>نکته کلیدی:</b> مداخله = هر کاری که درمانگر انجام می‌دهد (حتی سکوت)
+</div>
+</div>
+
+<div class="card question" data-search="مداخلات هیجانی انسان گرا فضای هیجانی کار با صندلی">
+<span class="qnum">سوال 36</span>
+<div class="fa"><b>متن سوال:</b> دو رویکرد برای تقویت تجارب هیجانی در درمان چیست و تکنیک کار با صندلی چه نقشی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1) خلق فضای هیجانی (تحسین، شرایط راجرز)، 2) استفاده مستقیم از مداخله (کار با صندلی)؛ کار با صندلی شامل تکنیک‌های صندلی خالی و دو صندلی است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دو رویکرد متفاوت: رویکرد نخست شامل خلق یک فضای هیجانی است که در آن مراجع احساس آزادی و ایمنی می‌کند. رویکرد دوم شامل استفاده مستقیم از یک مداخله یا تمرین درمانی (کار با صندلی) است که شامل تکنیک‌های صندلی خالی و دو صندلی می‌شود.<br>
+<b>نکته کلیدی:</b> تقویت هیجان = فضای ایمن + کار با صندلی
+</div>
+</div>
+
+<div class="card question" data-search="مداخلات رفتاری آموزش مهارت حل مساله جور کردن">
+<span class="qnum">سوال 37</span>
+<div class="fa"><b>متن سوال:</b> رویکردهای مختلف به مداخلات رفتاری در تلفیق روان‌درمانی کدامند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آموزش مهارت‌های حل مسأله (کودکان)، آموزش آرمیدگی و ابراز وجود (بزرگسالان)، رویکرد رهنمودی، رویکردهای تجویزی (جور کردن درمان با مراجع)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد به یادگیری مهارت‌ها شامل آموزش در زمینه‌های خاص حل مسأله (به ویژه در کودکان) و در بزرگسالان یادگیری مهارت‌های خاص (آموزش آرمیدگی، ابراز وجود، تمرین رفتاری) است. رویکردهای تجویزی سعی دارند تکنیک درمانی را با ویژگی‌های خاص مراجع جور کنند.<br>
+<b>نکته کلیدی:</b> مداخلات رفتاری = آموزش مهارت + جور کردن
+</div>
+</div>
+
+<div class="card question" data-search="مداخلات شناختی به چالش کشیدن طرح واره تکلیف">
+<span class="qnum">سوال 38</span>
+<div class="fa"><b>متن سوال:</b> مداخلات شناختی در تلفیق روان‌درمانی چه ویژگی‌هایی دارند و چه تکنیک‌هایی در آنها به کار می‌روند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مداخلات فعال که الگوهای تفکر را هدف‌گیری می‌کنند؛ شامل به چالش کشیدن الگوهای تفکر کژکار، استفاده از تکلیف، و کار با طرح‌واره‌ها</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکردهای شناختی مداخلاتی فعال هستند که الگوهای تفکر را هدف‌گیری می‌کنند. تکنیک‌ها شامل به چالش کشیدن الگوهای تفکر کژکار (الیس، 1962)، استفاده از تکلیف، و کار با طرح‌واره‌ها (یانگ، 1999) می‌شوند.<br>
+<b>نکته کلیدی:</b> مداخلات شناختی = به چالش کشیدن باورها + تکلیف
+</div>
+</div>
+
+<div class="card question" data-search="مداخلات پویایی تفسیر مواجهه روشن سازی">
+<span class="qnum">سوال 39</span>
+<div class="fa"><b>متن سوال:</b> مداخلات روان‌پویایی شامل چه استراتژی‌هایی است و تفاوت آنها با مداخلات شناختی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شامل تفسیر، مواجهه و روشن‌سازی؛ تفاوت عمدتاً زبانی است و ابزارهای استفاده شده شباهت‌هایی با یکدیگر دارند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مداخلات روان‌پویایی شامل تفسیر (دادن معنای جدید به الگوی رفتاری)، مواجهه (اشاره به رفتار کژکار) و روشن‌سازی (کاوش در معنای الگو) است. تفاوت میان یک الگوی منش شناختی و یک طرح‌واره شناختی احتمالاً به ترجیح زبانی مربوط می‌شود.<br>
+<b>نکته کلیدی:</b> مداخلات روان‌پویایی = تفسیر، مواجهه، روشن‌سازی
+</div>
+</div>
+
+<!-- ==================== محیط، فیزیولوژی و تنوع ==================== -->
+
+<div class="card question" data-search="مداخلات محیطی سیستم ها درمان مساله محور تلفیقی">
+<span class="qnum">سوال 40</span>
+<div class="fa"><b>متن سوال:</b> مداخلات محیطی در تلفیق روان‌درمانی از چه مکتبی نشأت می‌گیرند و رویکردهای مرتبط کدامند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">از مکتب درمانی سیستم‌ها؛ شامل درمان مسأله‌محور تلفیقی (پینسوف)، درمان واحد (آلن)، و رویکرد سیستم‌های بین‌فردی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مداخلات محیطی از مکتب درمانی سیستم‌ها نشأت می‌گیرند. سیستم‌ها را می‌توان در سطوح مختلفی مدنظر قرار داد (درون فردی، میان فردی، فرهنگی). رویکردهای مرتبط شامل درمان مسأله‌محور تلفیقی (پینسوف، 2005) و درمان واحد (آلن، 2006) هستند.<br>
+<b>نکته کلیدی:</b> مداخلات محیطی = سیستم‌ها در سطوح مختلف
+</div>
+</div>
+
+<div class="card question" data-search="تنوع فرهنگی ابعاد کد اخلاقی">
+<span class="qnum">سوال 41</span>
+<div class="fa"><b>متن سوال:</b> کد اخلاقی انجمن روان‌شناسی آمریکا (2002) چه ابعادی از تنوع را فهرست می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سن، جنسیت، هویت جنسی، نژاد، قومیت، فرهنگ، خاستگاه ملی، مذهب، گرایش جنسی، ناتوانی، زبان و جایگاه اجتماعی اقتصادی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کد اخلاقی انجمن روان‌شناسی آمریکا موارد "سن، جنسیت، هویت جنسی، نژاد، قومیت، فرهنگ، خاستگاه ملی، مذهب، گرایش جنسی، ناتوانی، زبان و جایگاه اجتماعی اقتصادی" را فهرست می‌کند.<br>
+<b>نکته کلیدی:</b> تنوع = ۱۲ بعد مختلف
+</div>
+</div>
+
+<div class="card question" data-search="انعطاف پذیری تلفیق تنوع فرهنگی">
+<span class="qnum">سوال 42</span>
+<div class="fa"><b>متن سوال:</b> چرا تلفیق روان‌درمانی برای انطباق با نیازهای دامنه متنوعی از مراجعان امیدوارکننده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به دلیل انعطاف‌پذیری و تمایل آن برای سازگاری با شرایط مختلف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق روان‌درمانی به دلیل انعطاف‌پذیری و تمایل آن برای سازگاری با شرایط مختلف، به لحاظ توانایی انطباق با نیازهای دامنه متنوعی از مراجعان امیدوارکننده نشان می‌دهد.<br>
+<b>نکته کلیدی:</b> تلفیق = انعطاف‌پذیری برای تنوع فرهنگی
+</div>
+</div>
+
+<div class="card question" data-search="درمان فمینیستی تلفیقی تساوی توانمندسازی">
+<span class="qnum">سوال 43</span>
+<div class="fa"><b>متن سوال:</b> درمان فمینیستی چه ویژگی‌هایی دارد و چرا یک رویکرد تلفیقی محسوب می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکردی تلفیقی که بر مسایل فرهنگی و رابطه‌ای تمرکز کرده و با تأکید بر تساوی و بهره‌گیری از بسیاری رویکردهای مختلف، به توانمندسازی زنان می‌پردازد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمان فمینیستی (انز، 2004) ضرورتاً یک رویکرد تلفیقی به حساب می‌آید که بر مسایل فرهنگی و رابطه‌ای تمرکز کرده و با تأکید بر تساوی و بهره‌گیری از بسیاری رویکردهای مختلف، برای تحقق اهداف خود در صدد توانمندسازی زنان است.<br>
+<b>نکته کلیدی:</b> درمان فمینیستی = تلفیقی، فرهنگی، توانمندساز
+</div>
+</div>
+
+<div class="card question" data-search="سمپوزیوم بین المللی واجتل 2008 تلفیق جهانی">
+<span class="qnum">سوال 44</span>
+<div class="fa"><b>متن سوال:</b> سمپوزیوم بین‌المللی که توسط واجتل (2008) جمع‌بندی شد، چه کشورهایی را پوشش داد و چه تفاوت‌هایی مشاهده شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایالات متحده، پرتغال، سوئد، آلمان، آرژانتین، شیلی و ژاپن؛ تفاوت در کانون تأکید (آمریکا بر روان‌پویایی و شناختی-رفتاری، ایرلند بر انسان‌گرا)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> واجتل سمپوزیومی با رویکرد بین‌المللی در حوزه تلفیق روان‌درمانی جمع‌بندی کرد که شامل ایالات متحده، پرتغال، سوئد، آلمان، آرژانتین، شیلی و ژاپن بود. تفاوت‌های چشمگیری در کانون تأکید مشاهده شد (آمریکا بر روان‌پویایی و شناختی-رفتاری، ایرلند بر انسان‌گرا).<br>
+<b>نکته کلیدی:</b> تلفیق = رویکردهای متفاوت در فرهنگ‌های مختلف
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>مدل سه‌لایه‌ای شخصیت (گلد و استریکر، 1993)</h3></div>
+<div class="fa"><b>لایه ۱ (بالا):</b> رفتار</div>
+<div class="fa"><b>لایه ۲ (میانی):</b> شناخت، هیجان، ادراک، حس</div>
+<div class="fa"><b>لایه ۳ (قاعده):</b> فرایندهای ناخودآگاه (تصاویر ذهنی، بازنمایی‌ها، انگیزه‌ها، تعارضات)</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته کلیدی:</b> علیت = چرخشی (نه خطی)؛ نقطه ورود = نامهم
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سرواژه ABCDEF (استریکر)</h3></div>
+<div class="grid2">
+<div class="box"><h4>A</h4><div class="fa">Affect · هیجان</div></div>
+<div class="box"><h4>B</h4><div class="fa">Behavior · رفتار</div></div>
+<div class="box"><h4>C</h4><div class="fa">Cognition · شناخت</div></div>
+<div class="box"><h4>D</h4><div class="fa">Dynamics · پویایی</div></div>
+<div class="box"><h4>E</h4><div class="fa">Environment · محیط</div></div>
+<div class="box"><h4>F</h4><div class="fa">Physiology · فیزیولوژی</div></div>
+</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> ABCDEF = BASIC-ID + پویایی‌ها (ناخودآگاه)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه شیوه تعاملی (گلد، 1996)</h3></div>
+<div class="fa"><b>1. درون‌روانی-انتقالی:</b> تعیین‌کننده‌های ناخودآگاه، تفسیر، بینش</div>
+<div class="fa"><b>2. بین‌شخصی-منش‌شناختی:</b> نقش مشترک درمانگر و مراجع، فعال‌سازی، تجربه اصلاحی</div>
+<div class="fa"><b>3. تحسین‌کننده-ایمنی:</b> رابطه واقعی، تأیید، تحسین</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اتحاد درمانی (بوردین، 1979)</h3></div>
+<div class="fa"><b>سه مؤلفه:</b> ۱. توافق بر سر هدف، ۲. توافق بر سر ابزار، ۳. برقراری پیوند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گسستگی در اتحاد (سافران و همکاران، 2006)</h3></div>
+<div class="fa"><b>نوع ۱ - کناره‌گیری:</b> اجتناب از درمانگر، فرایند یا هیجانات</div>
+<div class="fa"><b>نوع ۲ - مواجهه:</b> ابراز مستقیم خشم یا نارضایتی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهداف در تلفیق</h3></div>
+<div class="fa"><b>ویژگی:</b> فردنگر (Individualized)، نه قانون‌نگر</div>
+<div class="fa"><b>تعیین:</b> از طریق رایزنی مشترک درمانگر و مراجع</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>مدل سه‌لایه‌ای (Three-Level Model)</h3></div>
+<div class="fa"><b>تعریف:</b> مدلی برای مفهوم‌سازی شخصیت و روان‌درمانی که شامل سه لایه به هم پیوسته است.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>لایه‌ها:</b><br>
+• لایه ۱: رفتار (قابل مشاهده‌ترین سطح)<br>
+• لایه ۲: شناخت، هیجان، ادراک و حس (سطح میانی)<br>
+• لایه ۳: فرایندهای ناخودآگاه (عمیق‌ترین سطح)<br>
+<b>ویژگی کلیدی:</b> علیت چرخشی؛ تغییر در هر لایه بر سایر لایه‌ها تأثیر می‌گذارد
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابطه درمانی (Therapeutic Relationship)</h3></div>
+<div class="fa"><b>تعریف:</b> مشارکت آموزشی که در آن مراجع برای یادگیری نحوه متفاوت بودن به درمان می‌آید.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>مؤلفه‌ها (بوردین):</b> توافق بر هدف، توافق بر ابزار، پیوند<br>
+<b>نقش:</b> مبنا یا ابزار تغییر (بسته به رویکرد)<br>
+<b>تشبیه:</b> همانند "موقعیت، موقعیت، موقعیت" در فروش املاک
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فعال‌سازی و تجربه هیجانی اصلاحی</h3></div>
+<div class="fa"><b>فعال‌سازی:</b> تکرار تجارب قبلی در رابطه درمانی</div>
+<div class="fa"><b>تجربه هیجانی اصلاحی:</b> پاسخ جدید و مثبت درمانگر به جای پاسخ تکراری</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>اهمیت:</b> یکی از اصلی‌ترین جنبه‌های شفابخش روان‌درمانی<br>
+<b>تعمیم:</b> مراجع می‌آموزد که دیگران لزوماً تردکننده نیستند
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انتقال و انتقال متقابل (رابطه‌ای)</h3></div>
+<div class="fa"><b>انتقال (میتچل، 1988):</b> خلق یک شیوه برقراری رابطه توسط مراجع به همراه درمانگر</div>
+<div class="fa"><b>انتقال متقابل (رابطه‌ای):</b> مجموع و محتوای تمام احساسات درمانگر در مورد مراجع</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تفاوت با دیدگاه سنتی:</b> انتقال متقابل به عنوان منبع اطلاعات تلقی می‌شود، نه آلودگی درمان
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه شیوه تعاملی (گلد، 1996)</h3></div>
+<div class="fa"><b>درون‌روانی-انتقالی:</b> بر تعیین‌کننده‌های ناخودآگاه و تفسیر</div>
+<div class="fa"><b>بین‌شخصی-منش‌شناختی:</b> بر نقش مشترک درمانگر و مراجع، فعال‌سازی</div>
+<div class="fa"><b>تحسین‌کننده-ایمنی:</b> بر رابطه واقعی و تأیید</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سرواژه ABCDEF</h3></div>
+<div class="fa"><b>کاربرد:</b> یادآوری دامنه کامل دغدغه‌ها در تلفیق روان‌درمانی</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تفاوت با BASIC-ID:</b> ABCDEF شامل پویایی‌ها (ناخودآگاه) می‌شود اما BASIC-ID از آن احتراز می‌کند<br>
+<b>مدل:</b> چرخشی و تأثیر متقابل
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>علیت سنتی (روان‌پویایی)</td><td>علیت چرخشی (مدل سه‌لایه)</td><td>خطی از پایین به بالا vs چرخشی</td><td>نقطه ورود نامهم</td></tr>
+<tr><td>ABCDEF</td><td>BASIC-ID</td><td>شامل پویایی‌ها vs احتراز از ناخودآگاه</td><td>استریکر vs لازاروس</td></tr>
+<tr><td>انتقال سنتی</td><td>انتقال رابطه‌ای</td><td>فرافکنی vs خلق شیوه رابطه</td><td>گرینسون vs میتچل</td></tr>
+<tr><td>انتقال متقابل سنتی</td><td>انتقال متقابل رابطه‌ای</td><td>آلودگی درمان vs منبع اطلاعات</td><td>اجتناب vs استفاده</td></tr>
+<tr><td>رابطه به عنوان مبنا</td><td>رابطه به عنوان ابزار</td><td>زمینه برای مداخلات vs خود مداخله</td><td>انسان‌گرا vs شناختی-رفتاری</td></tr>
+<tr><td>گسستگی کناره‌گیری</td><td>گسستگی مواجهه</td><td>اجتناب vs ابراز خشم</td><td>سافران و همکاران (2006)</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و مفاهیم کلیدی</h2>
+
+<div class="card">
+<div class="card-head"><h3>استریکر و گلد (1993، 2001، 2006)</h3></div>
+<div class="fa"><b>نظریه:</b> تلفیق روان‌پویایی جذبی</div>
+<div class="fa"><b>مدل:</b> مدل سه‌لایه‌ای شخصیت (رفتار، شناخت/هیجان، ناخودآگاه)</div>
+<div class="fa"><b>سرواژه:</b> ABCDEF</div>
+<div class="fa"><b>مفهوم:</b> علیت چرخشی، فردنگر بودن اهداف</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>میتچل (1988)</h3></div>
+<div class="fa"><b>نظریه:</b> مدل رابطه‌ای دوشخصی</div>
+<div class="fa"><b>ایده اصلی:</b> انتقال = خلق شیوه رابطه، نه تحریف؛ انتقال متقابل = منبع اطلاعات</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بوردین (1979)</h3></div>
+<div class="fa"><b>نظریه:</b> اتحاد درمانی</div>
+<div class="fa"><b>مؤلفه‌ها:</b> توافق بر هدف، توافق بر ابزار، پیوند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سافران و همکاران (2006)</h3></div>
+<div class="fa"><b>نظریه:</b> گسستگی در اتحاد</div>
+<div class="fa"><b>انواع:</b> کناره‌گیری (اجتناب) و مواجهه (ابراز خشم)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>واچتل (1997)</h3></div>
+<div class="fa"><b>نظریه:</b> روان‌پویایی چرخشی، همدستی</div>
+<div class="fa"><b>ایده اصلی:</b> الگوهای کژکار در روابط، همدستی در آنها</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بک و دیگران (1979)</h3></div>
+<div class="fa"><b>نظریه:</b> تجربه‌گرایی مشارکتی</div>
+<div class="fa"><b>ایده اصلی:</b> موضع تعاملی متوازن (آموزشی/اکتشافی، رهنمودی/غیر رهنمودی)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گلد (1996)</h3></div>
+<div class="fa"><b>نظریه:</b> سه عامل تعامل و سه شیوه تعاملی</div>
+<div class="fa"><b>عوامل:</b> فضای هیجانی، موضع تعاملی، داده‌های تعاملی</div>
+<div class="fa"><b>شیوه‌ها:</b> درون‌روانی-انتقالی، بین‌شخصی-منش‌شناختی، تحسین‌کننده-ایمنی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>الیس (1962)</h3></div>
+<div class="fa"><b>نظریه:</b> درمان عقلانی هیجانی (ABC)</div>
+<div class="fa"><b>ایده اصلی:</b> به چالش کشیدن الگوهای تفکر کژکار</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: علیت در مدل سه‌لایه</h3>
+<div class="fa"><b>سوال نمونه:</b> در مدل سه‌لایه‌ای، علیت چگونه است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "خطی از پایین به بالا" را انتخاب کنی (مدل سنتی).</div>
+<div class="fa"><b>پاسخ درست:</b> چرخشی؛ هر لایه در دو لایه دیگر انعکاس دارد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> مدل سنتی = خطی، مدل سه‌لایه = چرخشی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: ترتیب لایه‌ها</h3>
+<div class="fa"><b>سوال نمونه:</b> لایه دوم در مدل سه‌لایه چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "ناخودآگاه" را انتخاب کنی (که لایه سوم است).</div>
+<div class="fa"><b>پاسخ درست:</b> شناخت، هیجان، ادراک و حس (لایه میانی).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> لایه ۱ = رفتار، لایه ۲ = شناخت/هیجان، لایه ۳ = ناخودآگاه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: ABCDEF یا BASIC-ID</h3>
+<div class="fa"><b>سوال نمونه:</b> تفاوت ABCDEF با BASIC-ID چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است فکر کنی هر دو یکسان هستند.</div>
+<div class="fa"><b>پاسخ درست:</b> ABCDEF شامل پویایی‌ها (ناخودآگاه) می‌شود اما BASIC-ID از آن احتراز می‌کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> ABCDEF = BASIC-ID + D (پویایی‌ها)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: انتقال در مدل رابطه‌ای</h3>
+<div class="fa"><b>سوال نمونه:</b> در مدل رابطه‌ای میتچل، انتقال چگونه تعریف می‌شود؟</div>
+<div class="fa"><b>دام:</b> ممکن است "فرافکنی نگرش‌های قبلی" را انتخاب کنی (تعریف سنتی).</div>
+<div class="fa"><b>پاسخ درست:</b> خلق یک شیوه برقراری رابطه توسط مراجع به همراه درمانگر.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> انتقال سنتی = فرافکنی، انتقال رابطه‌ای = خلق شیوه رابطه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: گسستگی در اتحاد</h3>
+<div class="fa"><b>سوال نمونه:</b> گسستگی از نوع کناره‌گیری چه ویژگی دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "ابراز مستقیم خشم" را انتخاب کنی (ویژگی مواجهه).</div>
+<div class="fa"><b>پاسخ درست:</b> اجتناب مراجع از درمانگر، فرایند یا هیجانات.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> کناره‌گیری = اجتناب، مواجهه = ابراز خشم
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: نقش رابطه درمانی</h3>
+<div class="fa"><b>سوال نمونه:</b> تفاوت استفاده از رابطه به عنوان مبنا یا ابزار چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است فکر کنی این دو معادل هم هستند.</div>
+<div class="fa"><b>پاسخ درست:</b> مبنا = زمینه برای مداخلات، ابزار = خود مداخله.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> مبنا (انسان‌گرا) vs ابزار (شناختی-رفتاری)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: اهداف فردنگر</h3>
+<div class="fa"><b>سوال نمونه:</b> اهداف در تلفیق روان‌درمانی چه ویژگی دارند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "قانون‌نگر" را انتخاب کنی (برعکس).</div>
+<div class="fa"><b>پاسخ درست:</b> فردنگر (متناسب با هر مراجع).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اهداف = فردنگر، نه قانون‌نگر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 8: سه شیوه تعاملی</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام شیوه بر نقش مشترک درمانگر و مراجع تأکید دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "درون‌روانی-انتقالی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> بین‌شخصی-منش‌شناختی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> درون‌روانی = ناخودآگاه، بین‌شخصی = مشترک، تحسین‌کننده = رابطه واقعی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 9: فضای هیجانی</h3>
+<div class="fa"><b>سوال نمونه:</b> چه فضای هیجانی بیشترین تناسب را با پیشرفت درمانی دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "بی‌طرف و خنثی" را انتخاب کنی (مدل فرویدی سنتی).</div>
+<div class="fa"><b>پاسخ درست:</b> همدلانه، پذیرا و گرم.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> فضای هیجانی = گرم، همدلانه، پذیرا
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 10: درمان فمینیستی</h3>
+<div class="fa"><b>سوال نمونه:</b> درمان فمینیستی چه رویکردی به تلفیق دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است آن را یک رویکرد تک‌مکتبی بدانی.</div>
+<div class="fa"><b>پاسخ درست:</b> ضرورتاً یک رویکرد تلفیقی که بر مسایل فرهنگی و رابطه‌ای تمرکز دارد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> درمان فمینیستی = تلفیقی، فرهنگی، توانمندساز
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 06 · تلفیق روان‌درمانی · 40+ سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "در مدل سه‌لایه‌ای، علیت بین لایه‌ها چگونه است؟",
+options: ["خطی از پایین به بالا", "خطی از بالا به پایین", "چرخشی", "یک طرفه"],
+answer: 2,
+explanation: "در مدل سه‌لایه‌ای، علیت به شکل چرخشی بوده و هر لایه در درون دو لایه دیگر انعکاس دارد."
+},
+{
+q: "لایه دوم در مدل سه‌لایه‌ای شامل چه مواردی است؟",
+options: ["رفتار", "شناخت، هیجان، ادراک و حس", "فرایندهای ناخودآگاه", "فقط شناخت"],
+answer: 1,
+explanation: "لایه دوم (میانی) شامل شناخت، هیجان، ادراک و حس است."
+},
+{
+q: "سرواژه ABCDEF که استریکر طراحی کرده، شامل کدام حوزه‌هاست؟",
+options: ["رفتار، عاطفه، شناخت، پویایی، محیط، فیزیولوژی", "رفتار، عاطفه، شناخت، دارو، محیط، خانواده", "هیجان، رفتار، شناخت، پویایی، محیط، فیزیولوژی", "هیجان، رفتار، شناخت، دارو، محیط، خانواده"],
+answer: 2,
+explanation: "ABCDEF شامل: A=هیجان، B=رفتار، C=شناخت، D=پویایی، E=محیط، F=فیزیولوژی است."
+},
+{
+q: "تفاوت ABCDEF با BASIC-ID در چیست؟",
+options: ["هیچ تفاوتی ندارند", "ABCDEF شامل پویایی‌ها (ناخودآگاه) می‌شود", "BASIC-ID شامل فیزیولوژی می‌شود", "ABCDEF مختص کودکان است"],
+answer: 1,
+explanation: "ABCDEF شامل پویایی‌ها (ناخودآگاه) می‌شود اما BASIC-ID از هر گونه ارجاع به ناخودآگاه احتراز می‌کند."
+},
+{
+q: "اتحاد درمانی بر اساس بوردین (1979) شامل چه مؤلفه‌هایی است؟",
+options: ["توافق بر هدف، توافق بر ابزار، پیوند", "همدلی، توجه مثبت، اصالت", "تفسیر، مواجهه، روشن‌سازی", "فعال‌سازی، تجربه اصلاحی، انتقال"],
+answer: 0,
+explanation: "بوردین مؤلفه‌های اتحاد را مشتمل بر توافق بر سر یک هدف، توافق بر سر ابزارها و برقراری یک پیوند دانسته است."
+},
+{
+q: "دو نوع گسستگی در اتحاد کدامند؟",
+options: ["کناره‌گیری و مواجهه", "فعال‌سازی و تجربه اصلاحی", "انتقال و انتقال متقابل", "مقاومت و عدم پذیرش"],
+answer: 0,
+explanation: "گسستگی از نوع کناره‌گیری (اجتناب) و گسستگی از نوع مواجهه (ابراز مستقیم خشم یا نارضایتی)."
+},
+{
+q: "در مدل رابطه‌ای میتچل، انتقال چگونه تعریف می‌شود؟",
+options: ["فرافکنی نگرش‌های قبلی به درمانگر", "خلق یک شیوه برقراری رابطه توسط مراجع به همراه درمانگر", "تحریف شناختی", "واکنش به درمانگر"],
+answer: 1,
+explanation: "در مدل رابطه‌ای، انتقال نه یک تحریف مبتنی بر فرافکنی بلکه خلق یک شیوه برقراری رابطه توسط مراجع به همراه درمانگر است."
+},
+{
+q: "اهداف در تلفیق روان‌درمانی چه ویژگی دارند؟",
+options: ["قانون‌نگر", "فردنگر", "همگانی", "از پیش تعیین شده"],
+answer: 1,
+explanation: "اهداف در تلفیق روان‌درمانی فردنگر هستند تا قانون‌نگر؛ هر درمانی با نیازهای خاص هر مراجع فردی متناسب می‌گردد."
+},
+{
+q: "سه شیوه تعاملی گلد (1996) کدامند؟",
+options: ["فرویدی، یونگی، آدلری", "درون‌روانی-انتقالی، بین‌شخصی-منش‌شناختی، تحسین‌کننده-ایمنی", "شناختی، رفتاری، انسانی", "فردی، گروهی، خانوادگی"],
+answer: 1,
+explanation: "سه شیوه عبارتند از: درون‌روانی-انتقالی، بین‌شخصی-منش‌شناختی، و تحسین‌کننده-ایمنی."
+},
+{
+q: "نگرش جدید نسبت به مقاومت مراجع چیست؟",
+options: ["به عنوان دشمن درمان", "به عنوان دوست درمان و منبع اطلاعات", "به عنوان نشانه شکست درمان", "به عنوان عدم صلاحیت مراجع"],
+answer: 1,
+explanation: "مقاومت می‌تواند به عنوان دوست و نه دشمن درمان تلقی شود، زیرا سرنخ‌هایی در مورد آنچه که در درمان باید تغییر کند فراهم می‌کند."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
