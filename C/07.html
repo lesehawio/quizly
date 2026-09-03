@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · تلفیق روان‌درمانی · سری 07</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"07";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>تلفیق روان‌درمانی · سری 07</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>تلفیق روان‌درمانی · فرایند درمان، موارد بالینی و موانع</h2>
+  <p>بر اساس کتاب استریکر · تحلیل کامل با نمونه‌های موردی و پاسخنامه تشریحی</p>
+  <div class="pills"><span class="pill">48 سوال</span><span class="pill">موارد بالینی</span><span class="pill">فرایند درمان</span><span class="pill">موانع و چالش‌ها</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس فصل چهارم کتاب "تلفیق روان‌درمانی" نوشته جورج استریکر طراحی شده است. شامل نمونه‌های موردی از رویکردهای مختلف، موانع درمانی و چالش‌های یادگیری تلفیق.</div>
+
+<div class="stats">
+<div class="stat"><b>48</b><span>سوال</span></div>
+<div class="stat"><b>5</b><span>نمونه موردی</span></div>
+<div class="stat"><b>4</b><span>رویکرد تلفیق</span></div>
+<div class="stat"><b>3</b><span>موانع اصلی</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<!-- ==================== مقدمه و نمونه موردی عوامل مشترک ==================== -->
+
+<div class="card question" data-search="نمونه موردی عوامل مشترک بیتمن آینده تصویر انتظار">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد بیتمن، چه مفهومی به عنوان عامل مشترک تلفیق‌کننده در نظر گرفته شده است و "تصویر انتظار" چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آینده به عنوان عامل مشترک تلفیق‌کننده؛ تصویر انتظار = فیلم ذهنی آینده شخص در مورد هر مراجع</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بیتمن مراجع را یک مخلوق غایت‌شناختی تلقی کرده و تمامی نظریه‌ها را در تأکیدشان بر آینده مراجع متحد می‌داند. تصویر انتظار یا فیلم ذهنی آینده شخص در مورد هر مراجع اهمیت حیاتی دارد.<br>
+<b>نکته کلیدی:</b> بیتمن = آینده به عنوان عامل مشترک، تصویر انتظار = فیلم ذهنی آینده
+</div>
+</div>
+
+<div class="card question" data-search="مدل چهار مرحله ای بیتمن شناسایی پاسخ های مشکل ساز">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> مدل چهار مرحله‌ای بیتمن برای تغییر تصویرهای انتظار شامل چه مراحلی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1) شناسایی پاسخ‌های مشکل‌ساز؛ 2) شناسایی ناهمخوانی‌ها در میان انتظارات و تجارب؛ 3) تعیین مشخصات تصویر انتظار مبتنی بر ناهمخوانی؛ 4) تغییر انتظارات یا تجارب برای حل ناهمخوانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مدل بیتمن شامل چهار مرحله است که به ترتیب به شناسایی پاسخ‌های مشکل‌ساز، شناسایی ناهمخوانی‌ها، تعیین مشخصات تصویر انتظار و تغییر انتظارات یا تجارب می‌پردازد.<br>
+<b>نکته کلیدی:</b> مدل ۴ مرحله‌ای بیتمن = شناسایی → ناهمخوانی → تصویر انتظار → تغییر
+</div>
+</div>
+
+<div class="card question" data-search="کتی بیتمن فقدان صندلی خالی تکلیف منزل">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> در نمونه موردی کتی (بیتمن و دیگران، 2006)، چه موضوعی به عنوان درون‌مایه بسیار مهم شناسایی شد و چه تکلیفی به او داده شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درون‌مایه فقدان؛ تکلیف منزل: تهیه یک خط زمانی برای تجارب فقدان خود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در نمونه کتی، درون‌مایه فقدان به عنوان یک موضوع بسیار مهم شناسایی شد و به عنوان تکلیف منزل از او خواسته شد که یک خط زمانی را برای تجارب فقدان خود تهیه نماید.<br>
+<b>نکته کلیدی:</b> کتی = فقدان به عنوان موضوع اصلی، خط زمانی فقدان‌ها
+</div>
+</div>
+
+<div class="card question" data-search="تمرین صندلی خالی کتی عذرخواهی">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> کتی پس از تهیه خط زمانی فقدان‌ها، چه تمرینی انجام داد و چه احساسی داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تمرین صندلی خالی با افراد متوفی؛ احساس می‌کرد که مرگ آنها به دلیل بدشانسی او بوده و از آنها عذرخواهی می‌کرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کتی به انجام یک تمرین صندلی خالی پرداخت که در آن با هر کدام از افراد متوفی صحبت کرده و از آنها معذرت‌خواهی می‌کرد. او احساس می‌کرد که مرگ این افراد به دلیل بدشانسی او بوده است.<br>
+<b>نکته کلیدی:</b> صندلی خالی = تمرین عذرخواهی از متوفیان
+</div>
+</div>
+
+<div class="card question" data-search="روابط عاطفی کتی کوتاه مدت ترس از فقدان">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> چرا کتی روابط عاطفی خود را کوتاه‌مدت نگه می‌داشت و چه عاملی باعث تغییر الگوی او شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به دلیل ترس از فقدان؛ تضاد میان تجربیات اولیه و تجارب فعلی او را وادار به ساخت انتظاراتی جدید برای تجارب آینده کرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کتی روابط خود را به صورت زودهنگام خاتمه می‌داد زیرا از فقدان می‌ترسید. تضاد میان تجربیات اولیه و تجارب فعلی او را وادار به ساخت انتظاراتی جدید برای تجارب آینده کرد.<br>
+<b>نکته کلیدی:</b> ترس از فقدان = عامل کوتاه‌مدت بودن روابط
+</div>
+</div>
+
+<!-- ==================== نمونه موردی تلفیق تکنیکی ==================== -->
+
+<div class="card question" data-search="نمونه موردی تلفیق تکنیکی فرانک باتلر روان درمانی تجویزی">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> نمونه موردی فرانک در رویکرد باتلر نشان‌دهنده کدام رویکرد تلفیق است و مشکل اصلی او چه بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق تکنیکی (روان‌درمانی تجویزی)؛ سوء مصرف ماده، بدهکاری و تهدید همسر به ترک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نمونه موردی فرانک توسط باتلر ارائه شده و معرف روان‌درمانی تجویزی (تلفیق تکنیکی) است. مشکلات اصلی او شامل سوء مصرف ماده، بدهکاری و تهدید همسر به ترک بود.<br>
+<b>نکته کلیدی:</b> فرانک = تلفیق تکنیکی، سوء مصرف ماده + مشکلات مالی
+</div>
+</div>
+
+<div class="card question" data-search="فرانک ارزیابی روان شناختی درون سازی برون سازی">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> در نمونه موردی فرانک، چه ویژگی‌هایی در ارزیابی اولیه شناسایی شد و چگونه درمان طراحی گردید؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سبک برون‌سازی (سوء مصرف ماده) و درون‌سازی (گرایش به خودکشی)؛ هدف اولیه کنترل تکانه (برون‌سازی) و سپس تقویت بینش (درون‌سازی)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فرانک از هر دو ویژگی برون‌سازی (سوء مصرف ماده) و درون‌سازی (گرایش به خودکشی) برخوردار بود. هدف اولیه درمان، رفتار برون‌سازی (کنترل تکانه) بود اما تقویت بینش در درازمدت نیز برنامه‌ریزی گردید.<br>
+<b>نکته کلیدی:</b> برون‌سازی (کنترل تکانه) + درون‌سازی (بینش)
+</div>
+</div>
+
+<div class="card question" data-search="سطح مقاومت فرانک مداخله رهنمودی">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> سطح مقاومت فرانک چگونه ارزیابی شد و درمانگر چگونه به آن پاسخ داد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سطح مقاومت متوسط به پایین؛ نشان می‌داد که او به تلاش‌های رهنمودی پاسخ خواهد داد؛ با افزایش مقاومت، سطح اقدامات رهنمودی کاهش می‌یافت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سطح مقاومت فرانک متوسط به پایین بود که نشان می‌داد او به تلاش‌های رهنمودی پاسخ خواهد داد. زمانی که درمانگر افزایش مقاومت را حس می‌کرد، سطح اقدامات رهنمودی کاهش می‌یافت.<br>
+<b>نکته کلیدی:</b> مقاومت پایین = پاسخ به رهنمود؛ افزایش مقاومت = کاهش رهنمود
+</div>
+</div>
+
+<div class="card question" data-search="مداخلات متناوب آشفتگی حمایت آرامش مواجهه">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> در درمان فرانک، مداخلات به چه صورت ارائه می‌شدند و چه فلسفه‌ای پشت آن بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به طور متناوب؛ هرگاه فرانک دچار آشفتگی می‌شد از او حمایت می‌شد و هرگاه آرام بود از مواجهه استفاده می‌شد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مداخلات به طور متناوب ارائه می‌شدند و هرگاه فرانک دچار آشفتگی می‌شد، از وی حمایت به عمل می‌آمد و هرگاه آرام بود، از مواجهه استفاده می‌شد. بدون مقدار کمی اضطراب، هیچ گونه احساس نیاز به درمان وجود نخواهد داشت.<br>
+<b>نکته کلیدی:</b> مدیریت متناوب حمایت و مواجهه = حفظ انگیزه و جلوگیری از خروج از درمان
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق تکنیکی در مقایسه با تلفیق جذبی ابزار ارزیابی">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> تفاوت تلفیق تکنیکی با تلفیق روان‌پویایی جذبی در نمونه موردی فرانک چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق تکنیکی از مجموعه مفصل‌تری از ابزارهای ارزیابی اولیه استفاده می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تلفیق تکنیکی در مقایسه با تلفیق روان‌پویایی جذبی از مجموعه مفصل‌تری از ابزارهای ارزیابی اولیه استفاده می‌کند. نتایج این ارزیابی و نه یک رویکرد نظری زیربنایی است که به درمان انسجام می‌بخشد.<br>
+<b>نکته کلیدی:</b> تلفیق تکنیکی = ارزیابی مفصل‌تر، کمتر نظری
+</div>
+</div>
+
+<!-- ==================== نمونه موردی تلفیق نظری ==================== -->
+
+<div class="card question" data-search="نمونه موردی تلفیق نظری جان واجتل روان پویایی چرخشی">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> نمونه موردی جان (واجتل، کروک و مک‌کینی، 2005) معرف کدام رویکرد تلفیق است و مشکل اصلی او چه بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق نظری (روان‌پویایی چرخشی)؛ اضطراب امتحان ناشی از فشار خانواده برای عالی بودن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جان یک روان‌شناس سرشناس بود که علیرغم نقش برجسته‌اش در گذراندن امتحان کسب مدرک خود ناموفق بود. دغدغه او (اضطراب امتحان) از یک پیش‌زمینه خانوادگی ناشی می‌شد که به جای قابلیت، بر عالی بودن تأکید داشت.<br>
+<b>نکته کلیدی:</b> جان = اضطراب امتحان، فشار والدین برای عالی بودن
+</div>
+</div>
+
+<div class="card question" data-search="جان دغدغه موقعیت اجتماعی نسبت دادن به والدین">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> در درمان جان، درمانگر چگونه به او کمک کرد تا به دغدغه‌های خود در مورد موقعیت اجتماعی اذعان کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با نسبت دادن دغدغه‌های موقعیت به والدین و نه خود او؛ این تأیید ملایم به جان امکان داد به آنها اذعان کرده و با آنها برخورد نماید</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جان در حالت خودآگاه دغدغه کم‌تری در مورد موقعیت داشت و نسبت دادن منشأ این دغدغه‌ها به والدین به وی امکان داد به آنها اذعان کرده و با آنها برخورد نماید.<br>
+<b>نکته کلیدی:</b> نسبت دادن به والدین = کاهش دفاع و افزایش پذیرش
+</div>
+</div>
+
+<div class="card question" data-search="رویکرد دو لایه به اضطراب جان بینش حساسیت زدایی">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> رویکرد درمانی به اضطراب جان چگونه بود و از چه تکنیک‌هایی استفاده شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد دو لایه: 1) بررسی پویایی‌های منجر به قصور در آماده‌سازی، 2) حساسیت‌زدایی منظم برای برخورد مستقیم با اضطراب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد درمانی به اضطراب دو لایه بود: نخست، پویایی‌هایی که منجر به قصور جان در آماده شدن می‌شدند مورد بررسی قرار گرفتند. در همان حال، از طریق حساسیت‌زدایی منظم به طور مستقیم با اضطراب برخورد شد.<br>
+<b>نکته کلیدی:</b> دو لایه = پویایی‌ها (بینش) + حساسیت‌زدایی (رفتاری)
+</div>
+</div>
+
+<div class="card question" data-search="تصویر ذهنی پلنگ جان ترس از توانایی پرخاشگری">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> تصویر ذهنی پلنگ در درمان جان چه معنایی داشت و چگونه به او کمک کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نماد ترس از توانایی و پرخاشگری خود وی؛ به عنوان یک نماد نظری دقیق بسط داده شد و جان آن را به عنوان نماد خود تلقی نمود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تصویر ذهنی پلنگ با ترس جان از توانایی و پرخاشگری خود وی ارتباط داشت. از طریق ترکیب یک پیوند همدلانه با پویایی‌های جان و توانایی استفاده از توصیه‌ای که مؤثر واقع گردید، جان این نماد را به عنوان نماد خود تلقی نمود.<br>
+<b>نکته کلیدی:</b> پلنگ = نماد ترس از توانایی و پرخاشگری خود
+</div>
+</div>
+
+<div class="card question" data-search="ماهیت چرخشی درمان جان بینش تغییر رفتار">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> ماهیت چرخشی درمان جان چگونه بود و چه پیامدهایی داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بینش به ادغام مداخلات رفتاری منجر شد، آن هم تغییر رفتار را به دنبال داشت و آن هم به نوبه خود موجب افزایش بینش گردید</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ماهیت چرخشی این درمان کاملاً آشکار است. بینشی که در ابتدا حاصل گردید به ادغام مداخلات رفتاری منجر شده و به آنها شکل داد، که آن هم تغییر رفتار را به دنبال داشت و آن هم به نوبه خود موجب افزایش بینش گردید.<br>
+<b>نکته کلیدی:</b> چرخش = بینش → رفتار → بینش بیشتر
+</div>
+</div>
+
+<!-- ==================== نمونه موردی تلفیق جذبی ==================== -->
+
+<div class="card question" data-search="نمونه موردی تلفیق جذبی اسکار استریکر">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> نمونه موردی اسکار (استریکر) معرف کدام رویکرد تلفیق است و ویژگی‌های اصلی او چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلفیق روان‌پویایی جذبی؛ مرد 82 ساله با ازدواج 60 ساله ناراضی، احساس ناکامی و خشم نسبت به گذشته</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اسکار یک نمونه از تلفیق روان‌پویایی جذبی است. او مرد 82 ساله‌ای است که تقریباً به مدت یک سال به صورت هفتگی به استریکر مراجعه کرده است. حدود 60 سال از ازدواج او می‌گذرد و او احساس ناکامی و خشم نسبت به گذشته دارد.<br>
+<b>نکته کلیدی:</b> اسکار = تلفیق روان‌پویایی جذبی، نارضایتی زناشویی و خشم از گذشته
+</div>
+</div>
+
+<div class="card question" data-search="اسکار ناتوانی ابراز تکانه خشونت حمله وحشتزدگی">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> اسکار در مورد ابراز تکانه‌های خود چه مشکلی داشت و این چگونه بر زندگی او تأثیر گذاشته بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ناتوانی در ابراز تکانه‌های بی‌رحمانه نسبت به دیگران؛ هرگاه تکانه‌ای برای مقابله به مثل احساس می‌کرد، خود را در آستانه حمله وحشتزدگی می‌دید</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اسکار بر ناتوانی‌اش برای ابراز تکانه‌های بی‌رحمانه خود نسبت به دیگران متمرکز بود. هرگاه تکانه‌ای برای مقابله به مثل احساس می‌کرد، خود را در آستانه دچار شدن به یک حمله وحشتزدگی می‌دید.<br>
+<b>نکته کلیدی:</b> خشونت = مترادف با ابراز وجود برای اسکار
+</div>
+</div>
+
+<div class="card question" data-search="اسکار روابط نامشروع پوشش نیاز به پذیرش">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> انگیزه اصلی اسکار در روابط نامشروع چه بود و دغدغه اولیه او چه پوششی برای آن بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انگیزه اصلی: حس پذیرش، راحتی، ایمنی و مهرورزی؛ دغدغه اولیه در مورد رابطه جنسی پوششی بر نیاز وی به پذیرش بود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انگیزه اصلی اسکار در روابط نامشروع همیشه یک حس پذیرش، راحتی، ایمنی و مهرورزی بوده است. دغدغه اولیه او در مورد رابطه جنسی پوششی بر نیاز وی به پذیرش بود.<br>
+<b>نکته کلیدی:</b> پذیرش = نیاز اصلی، رابطه جنسی = پوشش
+</div>
+</div>
+
+<div class="card question" data-search="اسکار زره محکم ناتوانی دوست داشتن">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> نظر روان‌کاو قبلی در مورد اسکار چه بود و اسکار چه پاسخی به درمان فعلی داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌کاو گفته بود او فاقد توانایی دوست داشتن است؛ اسکار درمانگر فعلی را مهربان، حمایتی و باهوش توصیف کرد اما فاقد بینش نافذ</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پاسخ اسکار به درمان قبلی بر یک اظهارنظر مطرح شده توسط یک روان‌کاو در 50 سال قبل که به وی گفته بود او فاقد توانایی دوست داشتن است، متمرکز بود. اسکار درمانگر فعلی را مهربان، حمایتی و باهوش توصیف کرد اما فاقد بینش نافذ.<br>
+<b>نکته کلیدی:</b> درمانگر قبلی = ناتوانی در دوست داشتن؛ درمانگر فعلی = مهربان اما فاقد بینش
+</div>
+</div>
+
+<div class="card question" data-search="اسکار عالم صغیر روابط نیاز به اطمینان خاطر">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> اسکار چگونه رابطه خود با درمانگر را به عنوان یک عالم صغیر از روابط معمول خود نشان می‌داد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با ابراز امیدواری برای آن که بتواند چیزی به زندگی درمانگر اضافه کند و پرسیدن مکرر از درمانگر در مورد بینش‌ها و پیشنهادات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اسکار تمام جلسات را با ابراز امیدواری برای آن که بتواند چیزی به زندگی درمانگر اضافه کند خاتمه می‌داد و به طور مکرر از درمانگر می‌پرسید که چه بینش‌هایی را می‌تواند برای وی فراهم کند و چه پیشنهاداتی دارد.<br>
+<b>نکته کلیدی:</b> اسکار = نیاز به اطمینان خاطر از طریق رابطه با درمانگر
+</div>
+</div>
+
+<div class="card question" data-search="اسکار درمان خاطره پردازی باتلر 1963">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> در کار با اسکار، از چه رویکردی برای بزرگسالان مسن استفاده شد و چه نکته‌ای در مورد سن وی اهمیت داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درمان خاطره‌پردازی (باتلر، 1963)؛ سن وی بر الگوهای بسیار ریشه‌دار و چشم‌انداز محدود به آینده دلالت داشت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در کار با اسکار توجه به سن وی ضروری بود، زیرا مورد او بر الگوهای بسیار ریشه‌دار و چشم‌اندازی بسیار محدود در مورد آینده دلالت داشت. از درمان خاطره‌پردازی (باتلر، 1963) استفاده شد.<br>
+<b>نکته کلیدی:</b> خاطره‌پردازی = رویکرد مناسب برای سالمندان
+</div>
+</div>
+
+<!-- ==================== نمونه موردی روان‌درمانی مراجع‌مدار ==================== -->
+
+<div class="card question" data-search="نمونه موردی مراجع مدار ریچارد گلد تلفیق با ابتکار عمل مراجع">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> نمونه موردی ریچارد (گلد، 2006) معرف کدام رویکرد است و ویژگی اصلی آن چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌درمانی مراجع‌مدار (تلفیق با ابتکار عمل مراجع)؛ ترجیحات مراجع دوره درمان را هدایت می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نمونه موردی ریچارد معرف رویکرد روان‌درمانی مراجع‌مدار است که گلد از آن با عنوان "تلفیق با ابتکار عمل مراجع" یاد می‌کند. در این رویکرد، ترجیحات مراجع دوره درمان را هدایت می‌کند.<br>
+<b>نکته کلیدی:</b> ریچارد = مراجع‌مدار، ابتکار عمل با مراجع
+</div>
+</div>
+
+<div class="card question" data-search="ریچارد بی میلی برای مطرح کردن رویکرد درمانی با پدر">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> بی‌میلی اولیه ریچارد برای مطرح کردن موضوع رویکرد درمانی با درمانگر به چه چیزی مرتبط بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به رابطه وی با پدرش که هیچ گونه مخالفتی را تحمل نمی‌کرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بی‌میلی اولیه ریچارد برای مطرح کردن موضوع رویکرد درمانی با درمانگر تا زمان درخواست درمانگر از وی برای انجام این کار، با رابطه وی با پدرش که هیچ گونه مخالفت‌ی را تحمل نمی‌کرد، ارتباط داده شد.<br>
+<b>نکته کلیدی:</b> الگوی رابطه با پدر = عدم تحمل مخالفت
+</div>
+</div>
+
+<div class="card question" data-search="ریچارد کار با صندلی خالی انتقال متقابل">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> ریچارد چه پیشنهادی برای کار بر روی رابطه با پدرش داد و درمانگر چگونه به آن پاسخ داد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پیشنهاد استفاده از تکنیک کار با صندلی خالی؛ درمانگر به جای رفتار دفاعی، انتقال متقابل را پذیرفت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ریچارد پیشنهاد کرد که به منظور کار بر روی رابطه وی با پدرش از یک تکنیک تجربی، یعنی کار با صندلی خالی استفاده شود. گلد به جای رفتار دفاعی یا تفسیری، انتقال متقابل را که بخش جدایی‌ناپذیری از این کوتاهی وی بود، پذیرفت.<br>
+<b>نکته کلیدی:</b> پذیرش انتقال متقابل = تقویت اتحاد درمانی
+</div>
+</div>
+
+<div class="card question" data-search="ریچارد ارجاع به درمانگر جنسی اجتناب از جنگ قدرت">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> در مرحله پایانی درمان ریچارد، چگونه به موضوع اضطراب عملکردی و خشم او پرداخته شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درمانگر ریچارد را به درمانگر جنسی ارجاع داد؛ این کار از بروز جنگ قدرت جلوگیری کرد و به بررسی ثمربخش مسأله پویا انجامید</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گلد ریچارد را به منظور کار بر روی مشکل عملکرد جنسی به درمانگر جنسی ارجاع داد. این ارجاع از بروز جنگ قدرت جلوگیری کرده و به بررسی ثمربخش مسأله پویا در زمانی که ریچارد مایل به انجام این کار بود، انجامید.<br>
+<b>نکته کلیدی:</b> ارجاع = اجتناب از جنگ قدرت + بررسی بعدی پویایی‌ها
+</div>
+</div>
+
+<!-- ==================== تنوع و نقش رابطه درمانی ==================== -->
+
+<div class="card question" data-search="تنوع در تلفیق روان درمانی بازنمایی فرهنگ قومیت">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> وضعیت توجه به تنوع (فرهنگ و قومیت) در نمونه‌های موردی تلفیق روان‌درمانی چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نمونه‌های موردی با اعضای گروه‌های متفاوت قومی یا فرهنگی نادر است؛ استثنائات شامل کارهای فرانکلین و همکاران و ایوی و بروکس-هریس است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نمونه‌های موردی معدودی که شامل اعضای گروه‌های متفاوت قومی یا فرهنگی باشند، وجود دارد. استثنائات مهم شامل کارهایی است که به طور خاص این گروه‌ها را هدف قرار داده‌اند (فرانکلین و همکاران، 1993؛ ایوی و بروکس-هریس، 2005).<br>
+<b>نکته کلیدی:</b> تنوع = کاستی در بازنمایی، استثنائات محدود
+</div>
+</div>
+
+<div class="card question" data-search="ایوی بروکس هریس مراحل هویت سطوح رشدی تلفیق تکنیکی">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> رویکرد ایوی و بروکس-هریس (2005) برای کار با مراجعان متنوع چه ویژگی‌هایی دارد و در کدام طبقه قرار می‌گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بر اساس مراحل هویت، سطوح رشدی و ابعاد کانونی؛ در طبقه تلفیق تکنیکی قرار می‌گیرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ایوی و بروکس-هریس یک رویکرد خوش‌ساخت را در کار با مراجعان متنوع بر اساس مراحل هویت، سطوح رشدی و ابعاد کانونی ارائه می‌دهند که در آن رویکردهای نظری مختلف برای مراحل متفاوت مناسب تلقی می‌شوند. بهترین طبقه‌بندی برای کارهای آنها در قالب تلفیق تکنیکی خواهد بود.<br>
+<b>نکته کلیدی:</b> ایوی و بروکس-هریس = تلفیق تکنیکی برای تنوع فرهنگی
+</div>
+</div>
+
+<div class="card question" data-search="نقش رابطه درمانی در تلفیق جذبی عالم صغیر">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> در تلفیق روان‌پویایی جذبی، رابطه میان درمانگر و مراجع چگونه تلقی می‌شود و هدف آن چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به عنوان یک عالم صغیر از تمام روابط مراجع؛ درک الگوهای رابطه با درمانگر به روشن ساختن الگوهای مشابه در رابطه با دیگران کمک می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رابطه میان درمانگر و مراجع به عنوان یک عالم صغیر از تمام روابط مراجع به حساب می‌آید و به همین دلیل درک الگوهای رابطه مراجع با درمانگر به روشن ساختن الگوهای مشابه در رابطه با دیگران کمک می‌کند.<br>
+<b>نکته کلیدی:</b> عالم صغیر = رابطه درمانی بازتابنده روابط دیگر
+</div>
+</div>
+
+<div class="card question" data-search="رابطه مبنا ابزار تغییر تلفیق جذبی">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> تفاوت رویکردهای مختلف به تلفیق در استفاده از رابطه درمانی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در برخی رویکردها رابطه مبنا است (شناختی-رفتاری)؛ در برخی دیگر رابطه ابزار تغییر است (روان‌پویایی)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکردهای شناختی-رفتاری، رابطه اساس و مبنایی است که هرگونه پیشرفتی باید بر آن استوار باشد. در رویکردهای روان‌پویایی، رابطه می‌تواند وسیله‌ای باشد که تغییر از طریق آن اتفاق می‌افتد.<br>
+<b>نکته کلیدی:</b> رابطه = مبنا (شناختی-رفتاری) یا ابزار (روان‌پویایی)
+</div>
+</div>
+
+<!-- ==================== مدل‌های فعالیت درمانگر ==================== -->
+
+<div class="card question" data-search="فعالیت درمانگر تلفیق نظری CBASP مک کلوف">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> فعالیت درمانگر در رویکردهای مختلف تلفیق چگونه است و CBASP چه ویژگی‌هایی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در تلفیق نظری به نظریه‌های تلفیق شده بستگی دارد؛ CBASP (مک‌کلوف، 2000) با ارزیابی سوابق رشدی و اندازه‌گیری منظم، درمانگر را فعال‌تر می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فعالیت درمانگر در تلفیق نظری به نظریه‌هایی که تلفیق نموده و نظریه غالب در مدل تلفیقی وی بستگی دارد. CBASP یک سیستم تحلیل شناختی-رفتاری است که در آن اندازه‌گیری منظم یک مؤلفه بااهمیت بوده و به درگیر ساختن فعالانه مراجع کمک می‌کند.<br>
+<b>نکته کلیدی:</b> CBASP = فعال‌تر، ارزیابی منظم، درگیری مراجع
+</div>
+</div>
+
+<div class="card question" data-search="رویکرد نتیجه آگاه عوامل مشترک ارزیابی جاری">
+<span class="qnum">سوال 31</span>
+<div class="fa"><b>متن سوال:</b> رویکرد نتیجه‌آگاه در تلفیق عوامل مشترک (میلر و دیگران، 2005) چه ویژگی‌هایی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بر فرایند ارزیابی جاری اتکا دارد؛ درمانگر کاملاً فعال است اما سرنخ‌های خود را از مراجع می‌گیرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد نتیجه‌آگاه به طور عمده بر فرایند ارزیابی جاری اتکا دارد. درمانگر کاملاً فعال است، اما سرنخ‌های خود را در تعیین طرح درمانی از مراجع می‌گیرد.<br>
+<b>نکته کلیدی:</b> نتیجه‌آگاه = ارزیابی جاری + فعال با سرنخ از مراجع
+</div>
+</div>
+
+<div class="card question" data-search="تضاد با رویکرد تک مکتبی نظریه تعیین کننده">
+<span class="qnum">سوال 32</span>
+<div class="fa"><b>متن سوال:</b> رویکردهای تلفیقی در مورد تعیین ماهیت فعالیت درمانگر با رویکردهای تک‌مکتبی چه تفاوتی دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در رویکردهای تلفیقی، مراجع تعیین می‌کند کدام وضعیت مناسب‌تر است؛ در رویکردهای تک‌مکتبی، نظریه و نه رابطه درمانی تعیین‌کننده است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکردهای تلفیقی، مراجع تعیین می‌کند کدام یک از وضعیت‌های فعالیت یا عدم فعالیت در یک زمان خاص مناسب‌تر خواهند بود. این با رویکرد تک‌مکتبی که در آن نظریه و نه رابطه درمانی و ویژگی‌های مراجع ماهیت فعالیت درمانگر را تعیین می‌کند، در تضاد است.<br>
+<b>نکته کلیدی:</b> تلفیقی = مراجع تعیین‌کننده، تک‌مکتبی = نظریه تعیین‌کننده
+</div>
+</div>
+
+<!-- ==================== نقش مراجع ==================== -->
+
+<div class="card question" data-search="نیازهای مراجع در اولویت درمان شناختی رفتاری روان پویایی">
+<span class="qnum">سوال 33</span>
+<div class="fa"><b>متن سوال:</b> نقش مراجع در رویکردهای مختلف تلفیق چگونه است و چه تفاوتی بین درمان شناختی-رفتاری و روان‌پویایی وجود دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در تمام اشکال درمان نیازهای مراجع در اولویت است؛ درمانگر CBT فعالانه طرح درمانی طراحی می‌کند، روان‌پویایی کمتر فعال است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تقریباً در تمامی اشکال درمان، نیازهای مراجع باید در اولویت قرار گیرند. در درمان CBT، درمانگر فعالانه یک طرح درمانی طراحی می‌کند، اما این کار را در پاسخ به نیازهای ابراز شده مراجع انجام می‌دهد. در روان‌پویایی، درمانگر کم‌تر فعال است.<br>
+<b>نکته کلیدی:</b> نیاز مراجع = اولویت مشترک؛ فعالی = CBT > روان‌پویایی
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق جذبی مراجع به عنوان عالم صغیر">
+<span class="qnum">سوال 34</span>
+<div class="fa"><b>متن سوال:</b> در تلفیق روان‌پویایی جذبی، مراجع در چه جایگاهی قرار دارد و درمانگر چگونه به او پاسخ می‌دهد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مراجع در کانون تمرکز قرار دارد (رابطه به عنوان عالم صغیر)؛ درمانگر با گوش دادن سنتی یا مداخلات فعال‌تر به تناسب ضرورت پاسخ می‌دهد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در تلفیق روان‌پویایی جذبی، موضوع مهم رابطه درمانی به عنوان یک عالم صغیر از شیوه مراجع در برقراری رابطه، مراجع را در کانون تمرکز قرار داده و درمانگر نیز در موضع پاسخ‌دهی به مراجع (خواه با تکنیک گوش دادن سنتی یا مداخلات فعال‌تر) قرار می‌گیرد.<br>
+<b>نکته کلیدی:</b> مراجع = کانون تمرکز، درمانگر = پاسخ‌دهنده متناسب
+</div>
+</div>
+
+<div class="card question" data-search="رویکرد عوامل مشترک امیدواری انتظار مراجع">
+<span class="qnum">سوال 35</span>
+<div class="fa"><b>متن سوال:</b> رویکرد عوامل مشترک چگونه مراجع را در فرایند درمانی برجسته می‌سازد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با تأکید بر ایجاد امیدواری، درگیری هیجانی با مراجع و انتظارات مراجع در مورد تغییر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد عوامل مشترک غالباً اهمیت اساسی مراجع را برجسته می‌سازد. فرانک (1961) به ایجاد امیدواری، درگیری هیجانی با مراجع و انتظارات مراجع در مورد تغییر اشاره کرده است. بیتمن نیز بر انتظارات مراجع از آینده تأکید دارد.<br>
+<b>نکته کلیدی:</b> عوامل مشترک = امیدواری، درگیری هیجانی، انتظارات
+</div>
+</div>
+
+<!-- ==================== استراتژی‌های کوتاه‌مدت و درازمدت ==================== -->
+
+<div class="card question" data-search="استراتژی کوتاه مدت درازمدت وابستگی به دوز هووارد">
+<span class="qnum">سوال 36</span>
+<div class="fa"><b>متن سوال:</b> چه عواملی بر کوتاه‌مدت یا درازمدت بودن درمان تأثیر می‌گذارند و "رابطه وابسته به دوز" چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تمرکز بر نشانه = کوتاه‌مدت؛ تمرکز بر تغییر شخصیت = درازمدت؛ رابطه وابسته به دوز = بسیاری از مراجعان تغییر نشانه‌ها را در 8-16 جلسه نشان می‌دهند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هرچه درمان تمرکز بیشتری بر نشانه داشته باشد، کوتاه‌مدت‌تر است. هر اندازه که درمان بر تغییر شخصیت تمرکز نماید، درازمدت‌تر است. یک رابطه وابسته به دوز در روان‌درمانی وجود دارد (هووارد و همکاران، 1986).<br>
+<b>نکته کلیدی:</b> نشانه = کوتاه‌مدت؛ شخصیت = درازمدت؛ دوز-پاسخ
+</div>
+</div>
+
+<div class="card question" data-search="انتخاب مراجع برای درمان درازمدت اختلالات شدید">
+<span class="qnum">سوال 37</span>
+<div class="fa"><b>متن سوال:</b> چه مراجعانی برای درمان‌های کوتاه‌مدت مناسب نیستند و چه معیارهایی برای انتخاب وجود دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مراجعان با اختلال شدید، اختلالات شخصیتی جدی، مشکلات اعتیادی یا گرایشات خودکشی‌گرایانه مناسب نیستند؛ انتخاب مراجع باید با دقت صورت گیرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکردهای کوتاه‌مدت در مورد مراجعانی که دچار اختلال شدید هستند، آنهایی که به اختلالات شخصیتی جدی مبتلایند، کسانی که از مشکلات اعتیادی رنج می‌برند یا گرایشات خودکشی‌گرایانه دارند، مورد استفاده قرار نخواهند گرفت. انتخاب مراجع باید با دقت صورت گیرد.<br>
+<b>نکته کلیدی:</b> کوتاه‌مدت = مناسب برای مراجعان سالم‌تر و با انگیزه بیشتر
+</div>
+</div>
+
+<div class="card question" data-search="اصالح درمان درازمدت به کوتاه مدت کاهش نشانه">
+<span class="qnum">سوال 38</span>
+<div class="fa"><b>متن سوال:</b> برای اصالح یک درمان درازمدت به کوتاه‌مدت، چه پارامترهایی باید تغییر کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هدف درمان باید تثبیت شده و بر کاهش نشانه‌ها متمرکز گردد؛ درمانگر فعال‌تر بوده و ارائه فعالانه همدلی نیز تکنیک سودمندی است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هدف درمان باید تثبیت شده و بر کاهش نشانه‌ها متمرکز گردد. درمانگر از آنچه که به طور معمول در درمان‌های درازمدت دیده می‌شود، فعال‌تر است. ارائه فعالانه همدلی نیز تکنیک سودمندی است.<br>
+<b>نکته کلیدی:</b> کاهش نشانه = هدف؛ فعال‌تر بودن = ضرورت
+</div>
+</div>
+
+<!-- ==================== نمونه موردی رابرت (مبدل‌پوشی) ==================== -->
+
+<div class="card question" data-search="نمونه موردی رابرت مبدل پوشی استریکر">
+<span class="qnum">سوال 39</span>
+<div class="fa"><b>متن سوال:</b> نمونه موردی رابرت چه مشکلاتی داشت و چه موضوعی به عنوان مشکل عنوان‌شده در هم‌تنیده با تفاوت‌های فرهنگی بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">افسردگی، مبدل‌پوشی، الکلیسم اصالح‌شده، روابط زناشویی در آستانه فروپاشی، احساس بی‌کفایتی و گوشه‌گیری؛ مبدل‌پوشی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رابرت یک مرد افسرده مبدل‌پوش، الکلی اصالح‌شده، با یک رابطه زناشویی در آستانه فروپاشی، احساسات شدید بی‌کفایتی و گوشه‌گیری بود. مشکل عنوان‌شده او که با تفاوت‌های فرهنگی درهم‌تنیده بود، مبدل‌پوشی بود.<br>
+<b>نکته کلیدی:</b> رابرت = مبدل‌پوشی + افسردگی + الکلیسم
+</div>
+</div>
+
+<div class="card question" data-search="رابرت مبدل پوشی راه فرار احساس بد">
+<span class="qnum">سوال 40</span>
+<div class="fa"><b>متن سوال:</b> رابرت از مبدل‌پوشی به عنوان چه چیزی استفاده می‌کرد و چرا حذف آن بدون کاهش احساسات بد ممکن نبود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به عنوان راه فرار از احساسات بد؛ احتمالاً سلب کردن این راه فرار قبل از کاهش احساسات بد، موجب افزایش افسردگی می‌شد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رابرت از مبدل‌پوشی به عنوان یک راه فرار از احساسات بد استفاده می‌کرد. احتمالاً سلب کردن این راه فرار قبل از کاهش احساسات بد وی در مورد خود، موجب افزایش افسردگی او می‌شد.<br>
+<b>نکته کلیدی:</b> مبدل‌پوشی = راه فرار؛ حذف تدریجی = ضروری
+</div>
+</div>
+
+<div class="card question" data-search="رابرت رابرتا ابزار جلب توجه حالت احساسی">
+<span class="qnum">سوال 41</span>
+<div class="fa"><b>متن سوال:</b> درمانگر چگونه به رابرت کمک کرد تا رابطه خود با "رابرتا" را تغییر دهد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با توضیح این که رابرتا صرفاً یک ابزار جلب توجه برای ایجاد یک حالت احساسی است تا یک شخصیت اصیل؛ این کار به رابرت اجازه داد محدودیت‌های این شخصیت را بررسی کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگر به رابرت توضیح داد که رابرتا صرفاً یک ابزار جلب توجه برای ایجاد یک حالت احساسی است تا یک شخصیت اصیل و ترجیحی. این کار به رابرت اجازه داد محدودیت‌های این شخصیت را بررسی کند.<br>
+<b>نکته کلیدی:</b> رابرتا = ابزار، نه شخصیت؛ بررسی محدودیت‌ها
+</div>
+</div>
+
+<div class="card question" data-search="رابرت احساسات مطلوب خشم مسدود شدگی">
+<span class="qnum">سوال 42</span>
+<div class="fa"><b>متن سوال:</b> تمرکز اولیه درمان بر روی چه حوزه‌ای بود و چه مشکلی در این زمینه وجود داشت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تمرکز بر احساسات (به ویژه خشم)؛ مسدودشدگی احساسات بسیار چشمگیر بود و باعث محدود شدن امکان تجربه هر گونه احساس مطلوب شده بود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یکی از رویکردهای اولیه به درمان، یک تمرکز مستمر بر روی احساسات او بود. احساس غالب او خشم بود که تا سرحد دیوانگی شدت می‌یافت. مسدودشدگی احساسات بسیار چشمگیر بود.<br>
+<b>نکته کلیدی:</b> خشم = احساس غالب؛ مسدودشدگی = مانع تجربه احساسات مطلوب
+</div>
+</div>
+
+<div class="card question" data-search="رابرت تغییرات رفتاری شناختی تجربه هیجانی اصلاحی">
+<span class="qnum">سوال 43</span>
+<div class="fa"><b>متن سوال:</b> چه عاملی به عنوان اساسی‌ترین جنبه درمان رابرت شناسایی شد و چگونه به تغییرات او کمک کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تجربه هیجانی اصلاحی؛ درک تدریجی او از خود به عنوان یک فرد سزاوار ارزش از طریق پاسخ‌های غیرقضاوتی درمانگر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اساسی‌ترین جنبه از درمان رابرت، درک تدریجی او از خود به عنوان یک فرد سزاوار ارزش بود. پاسخ‌های درمانگر (گوش دادن بدون دست انداختن، ایستادن در کنار او، اجازه دادن به او برای حفظ اقدامات خودپذیر) باعث شد که او خود را به عنوان یک شخص ارزشمند احساس کند.<br>
+<b>نکته کلیدی:</b> تجربه هیجانی اصلاحی = پایه تغییرات رابرت
+</div>
+</div>
+
+<div class="card question" data-search="تکنیک های رابرت تمرکز بر احساسات نقش رهنمودی استعاره">
+<span class="qnum">سوال 44</span>
+<div class="fa"><b>متن سوال:</b> سه تکنیک اصلی به کار گرفته شده در درمان رابرت چه بودند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1) تمرکز بر احساسات، 2) نقش رهنمودی (مانند یک پدر خوب)، 3) استفاده از استعاره برای پیوند دادن گذشته با زمان حال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بخش عمده‌ای از مطالب مربوط به رابرت نشان‌دهنده سه تکنیک به کار گرفته شده به صورت مختلط در طی درمان است: تکنیک نخست، تمرکز بر روی احساسات؛ ثانیاً، نقش نسبتاً رهنمودی؛ و در نهایت، استفاده از استعاره برای پیوند دادن گذشته با زمان حال.<br>
+<b>نکته کلیدی:</b> سه تکنیک = احساسات، رهنمود، استعاره
+</div>
+</div>
+
+<!-- ==================== موانع و مشکلات ==================== -->
+
+<div class="card question" data-search="موانع تلفیق روان درمانی دو موضوع مراجع درمانگر">
+<span class="qnum">سوال 45</span>
+<div class="fa"><b>متن سوال:</b> دو دسته اصلی موانع مرتبط با تلفیق روان‌درمانی کدامند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1) موانع مرتبط با درمان (برخی مراجعان و مشکلات)، 2) موانع مرتبط با درمانگر (یادگیری و به کارگیری رویکرد)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دو موضوع مجزا وجود دارد که باید به عنوان موانع یا مشکلات مرتبط با تلفیق روان‌درمانی مورد توجه قرار گیرند: موضوع اول در درمان و دشواری‌هایی که ممکن است در هنگام به کارگیری آن در مورد برخی از مراجعان یا برخی از مشکلات بروز پیدا کند؛ موضوع دوم به درمانگر و مشکلاتی که ممکن است در یادگیری و به کارگیری رویکرد تلفیق روی دهد.<br>
+<b>نکته کلیدی:</b> موانع = مراجع/مشکل + درمانگر/یادگیری
+</div>
+</div>
+
+<div class="card question" data-search="موانع درمانی رویکرد آینده نگر بیتمن خودکشی گرا">
+<span class="qnum">سوال 46</span>
+<div class="fa"><b>متن سوال:</b> رویکرد آینده‌نگر بیتمن برای چه مراجعانی مناسب نیست و برای چه مراجعانی بهترین کاربرد را دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مناسب نیست برای مراجعان خودکشی‌گرا یا آنهایی که مشکلاتشان فقط به دارو پاسخ می‌دهد؛ بهترین کاربرد برای مراجعانی با واکنش‌پذیری و درون‌سازی بالا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد آینده‌نگر بیتمن برای مراجعانی که واقعاً خودکشی‌گرا هستند یا آنهایی که مشکلاتشان فقط به دارو پاسخ می‌دهند، مناسب نخواهد بود. بهترین کاربرد این رویکرد در مورد مراجعانی خواهد بود که در مکانیسم‌های سازگاری خود واکنش‌پذیری و درون‌سازی بالایی را نشان می‌دهند.<br>
+<b>نکته کلیدی:</b> بیتمن = مناسب برای واکنش‌پذیری و درون‌سازی بالا، نه برای خودکشی‌گرایان
+</div>
+</div>
+
+<div class="card question" data-search="سه سؤال باتلر جور کردن درمان ویژگی های مراجع">
+<span class="qnum">سوال 47</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد تجویزی باتلر، برای جور کردن درمان با مراجع باید به چه سه سؤالی پاسخ داده شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1) کدام متغیرها و ویژگی‌های مراجع و درمان با تغییر مفید ارتباط دارند؟ 2) کدام ترکیبات ویژگی‌ها بهترین پیش‌بینی‌کننده منافع هستند؟ 3) نقش نسبی هر کدام از عوامل مراجع، درمان، رابطه و جور کردن چیست؟</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> باتلر و همکاران (2006) سه سؤال را مطرح می‌کنند: 1) کدام متغیرها و ویژگی‌ها با تغییر درمانی مفید ارتباط دارند؟ 2) کدام ترکیبات ویژگی‌ها بهترین پیش‌بینی‌کننده و تسهیل‌کننده منافع درمانی هستند؟ 3) نقش نسبی هر کدام از عوامل مراجع، درمان، رابطه و جور کردن مراجع با درمان در وقوع پیشرفت کدام است؟<br>
+<b>نکته کلیدی:</b> سه سؤال باتلر = متغیرها، ترکیبات، نقش‌های نسبی
+</div>
+</div>
+
+<!-- ==================== چالش‌های یادگیری تلفیق ==================== -->
+
+<div class="card question" data-search="چالش های یادگیری تلفیق دو مدل آموزش نورکراس هالجین">
+<span class="qnum">سوال 48</span>
+<div class="fa"><b>متن سوال:</b> دو مدل اصلی آموزش تلفیق روان‌درمانی (نورکراس و هالجین، 2005) کدامند و استریکر کدام را ترجیح می‌دهد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مدل اول: آموزش تلفیق در اوایل برنامه با استمرار در سراسر دوره؛ مدل دوم: آموزش رویکردهای فردی و سپس تلفیق به عنوان تجربه انسجام‌بخش (استریکر این را ترجیح می‌دهد)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دو مدل اصلی تهیه شده‌اند: مدل نخست با آموزش تلفیق در همان اوایل برنامه شروع شده و با استمرار آن در سراسر دوره ادامه می‌یابد. مدل جایگزین مشتمل بر آموزش رویکردهای درمانی فردی در شروع برنامه و سپس استفاده از تلفیق به عنوان یک تجربه انسجام‌بخش است. استریکر رویکرد دوم را ترجیح می‌دهد.<br>
+<b>نکته کلیدی:</b> دو مدل = تدریجی (از ابتدا) vs انسجام‌بخش (در انتها)؛ استریکر = انسجام‌بخش
+</div>
+</div>
+
+<div class="card question" data-search="چالش های درمانگر یادگیری تکنیک های جدید عدم قطعیت">
+<span class="qnum">سوال 49</span>
+<div class="fa"><b>متن سوال:</b> چه چالش‌هایی برای درمانگری که به سمت تلفیق حرکت می‌کند وجود دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">یادگیری تکنیک‌های جدید (شناختی-رفتاری و تجربی)، یکدست کردن آنها، و یادگیری زندگی با عدم قطعیت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگر باید چیزهای جدید بسیاری را هم از طریق مطالعه و هم از طریق رایزنی با همکاران بیاموزد. برخی تکنیک‌ها بسیار مفید بودند و برخی دیگر کم‌ثمر نشان دادند. همچنین درمانگر باید یاد بگیرد که با عدم قطعیت زندگی کند.<br>
+<b>نکته کلیدی:</b> چالش‌های درمانگر = یادگیری، یکدست‌سازی، تحمل عدم قطعیت
+</div>
+</div>
+
+<div class="card question" data-search="سیر تکامل درمانگر تک مکتبی به تلفیق">
+<span class="qnum">سوال 50</span>
+<div class="fa"><b>متن سوال:</b> سیر تکامل یک درمانگر از رویکرد تک‌مکتبی به تلفیق چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آموزش تک‌مکتبی (قطعیت) → تشخیص ناکافی بودن → تلفیق تکنیکی → تلفیق جذبی → تلفیق نظری یا مدل منحصر به فرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکردهای تک‌مکتبی یک حس قطعیت به دانشجو می‌دهند. زمانی که آموزش با واقعیت تقارن پیدا کرده و دانشجو می‌فهمد که آنچه آموخته مؤثر اما ناکافی است، به سمت تلفیق حرکت می‌کند. ممکن است ابتدا از تلفیق تکنیکی استفاده شود، سپس تلفیق جذبی و در نهایت تلفیق نظری یا یک مدل منحصر به فرد.<br>
+<b>نکته کلیدی:</b> سیر تکامل = تک‌مکتبی → تکنیکی → جذبی → نظری/منحصر‌به‌فرد
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>چهار نمونه موردی کلیدی</h3></div>
+<div class="grid2">
+<div class="box"><h4>کتی (عوامل مشترک)</h4>
+<div class="fa">بیتمن · آینده به عنوان عامل مشترک · تصویر انتظار · خط زمانی فقدان‌ها · صندلی خالی</div>
+</div>
+<div class="box"><h4>فرانک (تلفیق تکنیکی)</h4>
+<div class="fa">باتلر · روان‌درمانی تجویزی · سوء مصرف ماده · ارزیابی برون‌سازی/درون‌سازی · مدیریت مقاومت</div>
+</div>
+<div class="box"><h4>جان (تلفیق نظری)</h4>
+<div class="fa">واجتل · روان‌پویایی چرخشی · اضطراب امتحان · حساسیت‌زدایی + بینش · تصویر پلنگ</div>
+</div>
+<div class="box"><h4>اسکار (تلفیق جذبی)</h4>
+<div class="fa">استریکر · عالم صغیر · ناتوانی در ابراز خشونت · خاطره‌پردازی · تجربه اصلاحی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رویکرد مراجع‌مدار (ریچارد)</h3></div>
+<div class="fa"><b>ویژگی:</b> تلفیق با ابتکار عمل مراجع</div>
+<div class="fa"><b>نکته کلیدی:</b> ترجیحات مراجع دوره درمان را هدایت می‌کند</div>
+<div class="fa"><b>مثال:</b> ریچارد پیشنهاد کار با صندلی خالی برای رابطه با پدر داد</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>موانع تلفیق روان‌درمانی</h3></div>
+<div class="fa"><b>موانع مربوط به درمان:</b> برخی مراجعان (خودکشی‌گرا، اختلالات شدید) مناسب برخی رویکردها نیستند</div>
+<div class="fa"><b>موانع مربوط به درمانگر:</b> یادگیری تکنیک‌های جدید، یکدست‌سازی، تحمل عدم قطعیت</div>
+<div class="fa"><b>دو مدل آموزش:</b> تدریجی (از ابتدا) vs انسجام‌بخش (در انتها)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه سؤال باتلر در روان‌درمانی تجویزی</h3></div>
+<div class="fa">۱. کدام متغیرها و ویژگی‌های مراجع و درمان با تغییر مفید ارتباط دارند؟</div>
+<div class="fa">۲. کدام ترکیبات ویژگی‌ها بهترین پیش‌بینی‌کننده منافع هستند؟</div>
+<div class="fa">۳. نقش نسبی هر کدام از عوامل مراجع، درمان، رابطه و جور کردن چیست؟</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>استراتژی‌های کوتاه‌مدت و درازمدت</h3></div>
+<div class="fa"><b>کوتاه‌مدت:</b> تمرکز بر نشانه، مراجعان سالم‌تر، درمانگر فعال‌تر</div>
+<div class="fa"><b>درازمدت:</b> تمرکز بر تغییر شخصیت، مراجعان با اختلالات شدید، درمانگر کم‌فعال‌تر</div>
+<div class="fa"><b>رابطه وابسته به دوز:</b> بیشتر مراجعان تغییر را در ۸-۱۶ جلسه نشان می‌دهند</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>تصویر انتظار (بیتمن)</h3></div>
+<div class="fa"><b>تعریف:</b> فیلم ذهنی آینده شخص در مورد هر مراجع</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>اهمیت:</b> تغییر تصویرهای انتظار مربوط به گذشته و ساخت توأم تصویرهای انتظار جدیدتر و سالم‌تر، فرایند کلیدی در رویکرد بیتمن است.<br>
+<b>مدل ۴ مرحله‌ای:</b> شناسایی پاسخ‌های مشکل‌ساز → شناسایی ناهمخوانی‌ها → تعیین مشخصات تصویر انتظار → تغییر انتظارات یا تجارب
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌درمانی تجویزی (باتلر)</h3></div>
+<div class="fa"><b>تعریف:</b> رویکردی در تلفیق تکنیکی که بر جور کردن درمان با مراجع خاص تأکید دارد</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>ویژگی‌ها:</b><br>
+• ارزیابی اولیه جامع (برون‌سازی/درون‌سازی، سطح مقاومت)<br>
+• جور کردن مداخلات با ویژگی‌های مراجع<br>
+• مدیریت متناوب حمایت و مواجهه<br>
+• سه سؤال کلیدی برای جور کردن درمان
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌پویایی چرخشی (واجتل)</h3></div>
+<div class="fa"><b>تعریف:</b> رویکرد تلفیق نظری که روان‌کاوی و رفتاردرمانی را با رویکرد چرخشی ترکیب می‌کند</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>ویژگی‌ها:</b><br>
+• ماهیت چرخشی: بینش → رفتار → بینش بیشتر<br>
+• ترکیب کاوش در تجارب درونی با مداخلات مستقیم<br>
+• استفاده از نمادها و استعاره‌ها<br>
+• بینش به عنوان ابزاری برای ایجاد (نه تخریب) عزت‌نفس
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عالم صغیر (Microcosm)</h3></div>
+<div class="fa"><b>تعریف:</b> رابطه درمانی به عنوان بازتابی از تمام روابط مراجع</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>کاربرد در تلفیق جذبی:</b><br>
+• درک الگوهای رابطه با درمانگر → روشن‌سازی الگوهای مشابه با دیگران<br>
+• مراجع همواره در صدد فعال‌سازی الگوهای قدیمی است<br>
+• وظیفه درمانگر: شناسایی الگو، مقاومت در برابر فعال‌سازی، فراهم‌آوری تجربه اصلاحی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>درمان خاطره‌پردازی (باتلر، 1963)</h3></div>
+<div class="fa"><b>تعریف:</b> رویکردی برای بزرگسالان مسن که بر مرور خاطرات و یافتن معنا در آنها تأکید دارد</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>کاربرد:</b> در نمونه موردی اسکار (82 ساله) برای پرداختن به الگوهای ریشه‌دار و چشم‌انداز محدود به آینده
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابطه وابسته به دوز (هووارد و همکاران، 1986)</h3></div>
+<div class="fa"><b>تعریف:</b> رابطه بین تعداد جلسات درمان و بهبودی</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>یافته‌ها:</b><br>
+• بسیاری از مراجعان تغییر نشانه‌ها را در ۸-۱۶ جلسه نشان می‌دهند<br>
+• گروه بیشتری در دوره‌های طولانی‌تر تغییرات را نشان می‌دهند<br>
+• تغییرات در عواملی غیر از نشانه‌ها به دوره‌های طولانی نیاز دارد
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>بیتمن (عوامل مشترک)</td><td>باتلر (تلفیق تکنیکی)</td><td>آینده به عنوان عامل مشترک vs ارزیابی و جور کردن</td><td>بیتمن = غایت‌شناختی، باتلر = تجویزی</td></tr>
+<tr><td>واجتل (تلفیق نظری)</td><td>استریکر (تلفیق جذبی)</td><td>تلفیق کامل نظری vs پایبندی به نظریه اصلی</td><td>هر دو روان‌پویایی دارند اما جذبی پایبندتر است</td></tr>
+<tr><td>رابطه به عنوان مبنا</td><td>رابطه به عنوان ابزار</td><td>زمینه برای مداخلات vs خود مداخله</td><td>شناختی-رفتاری vs روان‌پویایی</td></tr>
+<tr><td>درمان کوتاه‌مدت</td><td>درمان درازمدت</td><td>تمرکز بر نشانه vs تغییر شخصیت</td><td>۸-۱۶ جلسه vs دوره‌های طولانی‌تر</td></tr>
+<tr><td>تک‌مکتبی</td><td>تلفیقی</td><td>نظریه تعیین‌کننده فعالیت vs مراجع تعیین‌کننده</td><td>قطعیت vs انعطاف‌پذیری</td></tr>
+<tr><td>مدل آموزش تدریجی</td><td>مدل آموزش انسجام‌بخش</td><td>تلفیق از ابتدا vs ابتدا تک‌مکتبی سپس تلفیق</td><td>استریکر انسجام‌بخش را ترجیح می‌دهد</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و مفاهیم کلیدی</h2>
+
+<div class="card">
+<div class="card-head"><h3>بیتمن (۲۰۰۵، ۲۰۰۶)</h3></div>
+<div class="fa"><b>نظریه:</b> عوامل مشترک با تمرکز بر آینده</div>
+<div class="fa"><b>ایده اصلی:</b> تصویر انتظار (فیلم ذهنی آینده)، مدل ۴ مرحله‌ای</div>
+<div class="fa"><b>نمونه موردی:</b> کتی (فقدان، خط زمانی، صندلی خالی)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>باتلر (۲۰۰۵، ۲۰۰۶)</h3></div>
+<div class="fa"><b>نظریه:</b> روان‌درمانی تجویزی (تلفیق تکنیکی)</div>
+<div class="fa"><b>ایده اصلی:</b> جور کردن درمان با ویژگی‌های مراجع، سه سؤال کلیدی</div>
+<div class="fa"><b>نمونه موردی:</b> فرانک (سوء مصرف ماده، ارزیابی برون‌سازی/درون‌سازی)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>واجتل (۲۰۰۵)</h3></div>
+<div class="fa"><b>نظریه:</b> روان‌پویایی چرخشی (تلفیق نظری)</div>
+<div class="fa"><b>ایده اصلی:</b> چرخش بین‌ش و رفتار، استفاده از نمادها</div>
+<div class="fa"><b>نمونه موردی:</b> جان (اضطراب امتحان، تصویر پلنگ)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>استریکر (۲۰۰۶)</h3></div>
+<div class="fa"><b>نظریه:</b> تلفیق روان‌پویایی جذبی</div>
+<div class="fa"><b>ایده اصلی:</b> عالم صغیر، مدل سه‌لایه، تجربه هیجانی اصلاحی</div>
+<div class="fa"><b>نمونه موردی:</b> اسکار (۸۲ ساله، خشم، روابط نامشروع)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گلد (۲۰۰۶)</h3></div>
+<div class="fa"><b>نظریه:</b> تلفیق با ابتکار عمل مراجع</div>
+<div class="fa"><b>ایده اصلی:</b> ترجیحات مراجع دوره درمان را هدایت می‌کند</div>
+<div class="fa"><b>نمونه موردی:</b> ریچارد (کار با صندلی خالی، ارجاع به درمانگر جنسی)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرانک (۱۹۶۱)</h3></div>
+<div class="fa"><b>نظریه:</b> عوامل مشترک</div>
+<div class="fa"><b>ایده اصلی:</b> ایجاد امیدواری، درگیری هیجانی، انتظارات مراجع</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هووارد و همکاران (۱۹۸۶)</h3></div>
+<div class="fa"><b>نظریه:</b> رابطه وابسته به دوز</div>
+<div class="fa"><b>ایده اصلی:</b> ۸-۱۶ جلسه برای تغییر نشانه‌ها</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: تصویر انتظار بیتمن</h3>
+<div class="fa"><b>سوال نمونه:</b> تصویر انتظار در رویکرد بیتمن چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تصویر ذهنی از گذشته" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> فیلم ذهنی آینده شخص در مورد هر مراجع.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تصویر انتظار = فیلم ذهنی آینده، نه گذشته
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: مدل ۴ مرحله‌ای بیتمن</h3>
+<div class="fa"><b>سوال نمونه:</b> مرحله سوم مدل ۴ مرحله‌ای بیتمن چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تغییر انتظارات" را انتخاب کنی (مرحله چهارم).</div>
+<div class="fa"><b>پاسخ درست:</b> تعیین مشخصات تصویر انتظار مبتنی بر ناهمخوانی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> مرحله ۳ = تعیین مشخصات تصویر انتظار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: تفاوت تلفیق تکنیکی و جذبی</h3>
+<div class="fa"><b>سوال نمونه:</b> تفاوت تلفیق تکنیکی با تلفیق جذبی در نمونه فرانک چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تکنیکی نظریه دارد" را انتخاب کنی (برعکس).</div>
+<div class="fa"><b>پاسخ درست:</b> تلفیق تکنیکی از ابزارهای ارزیابی مفصل‌تری استفاده می‌کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تکنیکی = ارزیابی مفصل‌تر، جذبی = پایبندی نظری
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: تصویر پلنگ در درمان جان</h3>
+<div class="fa"><b>سوال نمونه:</b> تصویر پلنگ در درمان جان نشان‌دهنده چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "ترس از پلنگ" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ترس از توانایی و پرخاشگری خود وی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> پلنگ = نماد ترس از توانایی خود، نه حیوان واقعی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: عالم صغیر در تلفیق جذبی</h3>
+<div class="fa"><b>سوال نمونه:</b> عالم صغیر در تلفیق جذبی به چه معناست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "جهان کوچک درمانگر" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> رابطه درمانی به عنوان بازتابی از تمام روابط مراجع.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> عالم صغیر = رابطه درمانی = بازتاب روابط دیگر مراجع
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: موانع تلفیق</h3>
+<div class="fa"><b>سوال نمونه:</b> دو دسته موانع تلفیق کدامند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "نظری و عملی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> موانع مربوط به درمان (مراجع) و موانع مربوط به درمانگر (یادگیری).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> موانع = مراجع/مشکل + درمانگر/یادگیری
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: سه سؤال باتلر</h3>
+<div class="fa"><b>سوال نمونه:</b> سؤال سوم باتلر در روان‌درمانی تجویزی چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "کدام متغیرها با تغییر ارتباط دارند" را انتخاب کنی (سؤال اول).</div>
+<div class="fa"><b>پاسخ درست:</b> نقش نسبی هر کدام از عوامل مراجع، درمان، رابطه و جور کردن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> سؤال ۳ = نقش‌های نسبی عوامل مختلف
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 8: رابطه وابسته به دوز</h3>
+<div class="fa"><b>سوال نمونه:</b> رابطه وابسته به دوز نشان‌دهنده چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "هرچه درمان طولانی‌تر، بهتر" را انتخاب کنی (ساده‌سازی).</div>
+<div class="fa"><b>پاسخ درست:</b> بسیاری از مراجعان تغییر نشانه‌ها را در ۸-۱۶ جلسه نشان می‌دهند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> دوز = ۸-۱۶ جلسه برای تغییر نشانه‌ها
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 9: دو مدل آموزش تلفیق</h3>
+<div class="fa"><b>سوال نمونه:</b> استریکر کدام مدل آموزش تلفیق را ترجیح می‌دهد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تدریجی (از ابتدا)" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> مدل انسجام‌بخش (ابتدا تک‌مکتبی، سپس تلفیق).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> استریکر = انسجام‌بخش، نه تدریجی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 10: سیر تکامل درمانگر</h3>
+<div class="fa"><b>سوال نمونه:</b> سیر تکامل یک درمانگر از تک‌مکتبی به تلفیق چگونه است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تک‌مکتبی → نظری → تکنیکی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تک‌مکتبی → تکنیکی → جذبی → نظری/منحصر‌به‌فرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تک‌مکتبی → تکنیکی → جذبی → نظری
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 07 · تلفیق روان‌درمانی · 50 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "در رویکرد بیتمن، چه چیزی به عنوان عامل مشترک تلفیق‌کننده در نظر گرفته شده است؟",
+options: ["گذشته", "آینده", "حال", "خانواده"],
+answer: 1,
+explanation: "بیتمن مراجع را یک مخلوق غایت‌شناختی تلقی کرده و تمامی نظریه‌ها را در تأکیدشان بر آینده مراجع متحد می‌داند."
+},
+{
+q: "مدل چهار مرحله‌ای بیتمن برای تغییر تصویرهای انتظار شامل کدام مراحل است؟",
+options: ["شناسایی → ناهمخوانی → تصویر انتظار → تغییر", "ارزیابی → تشخیص → درمان → پیگیری", "آگاهی → بینش → رفتار → تغییر", "مواجهه → اصلاح → تعمیم → تثبیت"],
+answer: 0,
+explanation: "مراحل عبارتند از: 1) شناسایی پاسخ‌های مشکل‌ساز، 2) شناسایی ناهمخوانی‌ها، 3) تعیین مشخصات تصویر انتظار، 4) تغییر انتظارات یا تجارب."
+},
+{
+q: "در نمونه موردی کتی، چه موضوعی به عنوان درون‌مایه بسیار مهم شناسایی شد؟",
+options: ["خشونت", "فقدان", "عزت نفس پایین", "اضطراب جدایی"],
+answer: 1,
+explanation: "در نمونه کتی، درون‌مایه فقدان به عنوان یک موضوع بسیار مهم شناسایی شد و او خط زمانی فقدان‌ها را تهیه کرد."
+},
+{
+q: "در نمونه موردی فرانک (باتلر)، سطح مقاومت او چگونه ارزیابی شد؟",
+options: ["بالا", "متوسط به پایین", "بسیار پایین", "متغیر"],
+answer: 1,
+explanation: "سطح مقاومت فرانک متوسط به پایین بود که نشان می‌داد او به تلاش‌های رهنمودی درمانگر پاسخ خواهد داد."
+},
+{
+q: "در نمونه موردی جان (واجتل)، تصویر ذهنی پلنگ نشان‌دهنده چه بود؟",
+options: ["ترس از حیوانات", "ترس از توانایی و پرخاشگری خود", "خاطره کودکی", "نماد قدرت"],
+answer: 1,
+explanation: "تصویر ذهنی پلنگ با ترس جان از توانایی و پرخاشگری خود وی ارتباط داشت."
+},
+{
+q: "در تلفیق روان‌پویایی جذبی، رابطه درمانی به عنوان چه چیزی تلقی می‌شود؟",
+options: ["یک ابزار فنی", "یک عالم صغیر از روابط مراجع", "یک مانع درمانی", "یک هدف نهایی"],
+answer: 1,
+explanation: "رابطه میان درمانگر و مراجع به عنوان یک عالم صغیر از تمام روابط مراجع به حساب می‌آید."
+},
+{
+q: "دو دسته اصلی موانع مرتبط با تلفیق روان‌درمانی کدامند؟",
+options: ["نظری و عملی", "مراجع و درمانگر", "فردی و اجتماعی", "اخلاقی و قانونی"],
+answer: 1,
+explanation: "موانع شامل: 1) موانع مرتبط با درمان (برخی مراجعان و مشکلات)، 2) موانع مرتبط با درمانگر (یادگیری و به کارگیری رویکرد) است."
+},
+{
+q: "استریکر کدام مدل آموزش تلفیق روان‌درمانی را ترجیح می‌دهد؟",
+options: ["مدل تدریجی (از ابتدا)", "مدل انسجام‌بخش (در انتها)", "مدل ترکیبی", "مدل فشرده"],
+answer: 1,
+explanation: "استریکر مدل انسجام‌بخش را ترجیح می‌دهد که مشتمل بر آموزش رویکردهای فردی در شروع برنامه و سپس استفاده از تلفیق به عنوان تجربه انسجام‌بخش است."
+},
+{
+q: "رابطه وابسته به دوز در روان‌درمانی نشان‌دهنده چیست؟",
+options: ["هرچه درمان طولانی‌تر، بهتر", "بسیاری از مراجعان تغییر را در ۸-۱۶ جلسه نشان می‌دهند", "دوز دارو مهم است", "مدت درمان به تشخیص بستگی دارد"],
+answer: 1,
+explanation: "رابطه وابسته به دوز نشان می‌دهد که بسیاری از مراجعان تغییر نشانه‌ها را در طی یک دوره زمانی نسبتاً کوتاه (۸-۱۶ جلسه) نشان می‌دهند."
+},
+{
+q: "سیر تکامل یک درمانگر از رویکرد تک‌مکتبی به تلفیق چگونه است؟",
+options: ["تک‌مکتبی → نظری → تکنیکی", "تک‌مکتبی → تکنیکی → جذبی → نظری", "تک‌مکتبی → جذبی → تکنیکی", "تک‌مکتبی → عوامل مشترک → تکنیکی"],
+answer: 1,
+explanation: "سیر تکامل: آموزش تک‌مکتبی (قطعیت) → تشخیص ناکافی بودن → تلفیق تکنیکی → تلفیق جذبی → تلفیق نظری یا مدل منحصر به فرد."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
