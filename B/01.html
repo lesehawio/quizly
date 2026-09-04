@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره گروهی نظری · سری 02</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"02";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره گروهی نظری · سری 02</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری راهنمایی و مشاوره گروهی</h2>
+  <p>تحلیل کامل 30 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">30 سوال</span><span class="pill">گروه‌شناسی</span><span class="pill">نظریه‌پردازان</span><span class="pill">مراحل گروه</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>30</b><span>سوال</span></div>
+<div class="stat"><b>6</b><span>نظریه‌پرداز</span></div>
+<div class="stat"><b>4</b><span>نوع گروه</span></div>
+<div class="stat"><b>4</b><span>مرحله گروه</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="براون گروه قدرت خلاق">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> به اعتقاد کدام یک از افراد زیر، گروه‌ها قدرت زیادی برای قرار دادن افراد در مسیرهای خلاق‌تر و شاداب‌تر زندگی دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">براون</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> براون (Brown) از نظریه‌پردازانی است که به قدرت گروه‌ها در ایجاد مسیرهای خلاق‌تر و شاداب‌تر برای زندگی اعتقاد دارد. او بر نقش مثبت گروه‌ها در رشد و شکوفایی افراد تأکید می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ترنر: در حوزه دیگری فعالیت دارد.<br>
+- کوری: در زمینه مشاوره گروهی فعالیت دارد اما این جمله مربوط به براون است.<br>
+- پالس: ارتباطی با این موضوع ندارد.<br>
+<b>نکته کلیدی:</b> براون = قدرت گروه در مسیرهای خلاق و شاداب
+</div>
+</div>
+
+<div class="card question" data-search="گروه های تی گسترش یافته رویارویی">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> از نگاه روانشناسان شکل گسترش‌یافته گروه‌های تی (T-groups) کدام گروه‌ها می‌باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویارویی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های تی (T-groups) یا گروه‌های آموزش حساسیت، به مرور زمان گسترش یافتند و به گروه‌های رویارویی (Encounter Groups) تبدیل شدند که بر مواجهه با احساسات و تعاملات بین‌فردی تأکید دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آموزشی: بخشی از گروه‌های تی هستند اما شکل گسترش‌یافته آنها نیستند.<br>
+- مشاوره همسایگان: نوع دیگری از گروه‌ها هستند.<br>
+- اجتماعی: گروه‌های عمومی‌تری هستند.<br>
+<b>نکته کلیدی:</b> گروه‌های تی → گروه‌های رویارویی
+</div>
+</div>
+
+<div class="card question" data-search="ناپایدارترین گروه اجتماعی گروه انبوه خلق">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> ابتدایی‌ترین و ناپایدارترین گروه اجتماعی کدام یک از گروه‌های زیر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه انبوه خلق</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه انبوه خلق (Crowd) ابتدایی‌ترین و ناپایدارترین شکل گروه اجتماعی است. این گروه‌ها فاقد ساختار، هدف مشترک و تعامل پایدار هستند و به صورت موقت و خودجوش شکل می‌گیرند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گروه هموسل: پایدارتر است.<br>
+- گروه همسالان: دارای تعامل و ساختار است.<br>
+- گروه هم شکل: دارای شباهت‌های مشخص است.<br>
+<b>نکته کلیدی:</b> انبوه خلق = ابتدایی‌ترین و ناپایدارترین گروه
+</div>
+</div>
+
+<div class="card question" data-search="اتحادیه های کارگری گروه فشار">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> اتحادیه‌های مختلف کارگری و کشاورزی که تحت عنوان دفاع از حقوق صنفی ایجاد می‌شوند، جزء کدام یک از انواع گروه‌های زیر می‌باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فشار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اتحادیه‌های کارگری و کشاورزی که برای دفاع از حقوق صنفی تشکیل می‌شوند، گروه‌های فشار (Pressure Groups) هستند. این گروه‌ها با استفاده از قدرت جمعی خود، سعی در تأثیرگذاری بر تصمیم‌گیری‌ها و سیاست‌ها دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خودیاری: برای کمک به خود تشکیل می‌شوند.<br>
+- انجمن‌ها: معمولاً غیرسیاسی هستند.<br>
+- یادگیری: برای آموزش تشکیل می‌شوند.<br>
+<b>نکته کلیدی:</b> اتحادیه‌های کارگری = گروه فشار
+</div>
+</div>
+
+<div class="card question" data-search="بیون نظریه روابط شیء کلاین">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از افراد زیر واکنش گروه را به نظریه روابط شیء ملاکی کلاین پیوند داده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ویلفرد بیون</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ویلفرد بیون (Wilfred Bion) روان‌کاو بریتانیایی، واکنش‌های گروهی را به نظریه روابط شیء ملاکی کلاین پیوند داد. او مفاهیمی مانند فرضیه‌های اساسی گروه (Basic Assumptions) را مطرح کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- لوئیس وندر: در حوزه دیگری فعالیت دارد.<br>
+- ساموئل اسلوسون: در زمینه گروه‌های کوچک فعالیت دارد.<br>
+- کورت لوین: بنیان‌گذار پویایی‌های گروهی است اما این ارتباط را ایجاد نکرده است.<br>
+<b>نکته کلیدی:</b> بیون = ارتباط واکنش گروه با نظریه روابط شیء کلاین
+</div>
+</div>
+
+<div class="card question" data-search="نامتجانسهای متعصب طرد از گروه">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> کدام افراد گزینه‌ی مناسبی برای طرد شدن از سوی اعضای گروه هستند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نامتجانس‌های متعصب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نامتجانس‌های متعصب (Intolerant Deviants) افرادی هستند که با تعصب به مخالفت با هنجارهای گروه می‌پردازند و به دلیل رفتارهای مخرب خود، گزینه‌های مناسبی برای طرد شدن از سوی اعضای گروه هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- انحصارطلب‌ها: ممکن است طرد شوند اما نه به این شدت.<br>
+- خودشیفته‌ها: ممکن است در گروه مشکل ایجاد کنند اما لزوماً طرد نمی‌شوند.<br>
+- بیمارانی با وضعیت خاص: نیاز به حمایت دارند نه طرد.<br>
+<b>نکته کلیدی:</b> نامتجانس‌های متعصب = گزینه مناسب طرد
+</div>
+</div>
+
+<div class="card question" data-search="پایه ای ترین وظیفه رهبر گروه ایجاد جلسات">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> پایه‌ای‌ترین وظیفه رهبر گروه کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایجاد و تشکیل جلسات گروه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پایه‌ای‌ترین وظیفه رهبر گروه، ایجاد و تشکیل جلسات گروه است. بدون تشکیل جلسات، هیچ فعالیت گروهی امکان‌پذیر نیست. این وظیفه مبنای سایر وظایف رهبری است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شناسایی آفات: از وظایف مهم است اما پایه‌ای‌ترین نیست.<br>
+- مشارکت در تشکیل جلسات: مشارکت کافی نیست.<br>
+- برنامه‌ریزی و اجرا: مرحله بعد از تشکیل جلسات است.<br>
+<b>نکته کلیدی:</b> پایه‌ای‌ترین وظیفه رهبر = ایجاد جلسات
+</div>
+</div>
+
+<div class="card question" data-search="اهداف پنهان مراحل تکامل گروه کوری مرحله انتقال">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> اهداف پنهان و آشکار نشده اعضا یکی از مسائل مهم در کدام یک از مراحل تکامل گروه از دیدگاه کوری (۲۰۰۲) می‌باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انتقال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از دیدگاه کوری (Corey) در مرحله انتقال (Transition Stage)، اهداف پنهان و آشکار نشده اعضا یکی از مسائل مهم است. در این مرحله، اعضا ممکن است اهداف شخصی خود را که با اهداف گروه هماهنگ نیست، دنبال کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پایان: در مرحله پایانی، اهداف آشکار شده‌اند.<br>
+- کار: در مرحله کار، اهداف روشن است.<br>
+- آغازین: در مرحله آغازین، اهداف هنوز شکل نگرفته‌اند.<br>
+<b>نکته کلیدی:</b> کوری = اهداف پنهان در مرحله انتقال
+</div>
+</div>
+
+<div class="card question" data-search="تعارضات منجر به انحلال گروه تعارض فراینده">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> به آن دسته از تعارضاتی گفته می‌شود که می‌تواند به گروه صدمه جدی وارد کرده یا منجر به انحلال گروه شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فراینده</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعارضات فراینده (Process Conflict) تعارضاتی هستند که بر سر روش‌ها، رویه‌ها و فرایندهای گروه رخ می‌دهند و می‌توانند به گروه صدمه جدی وارد کرده یا منجر به انحلال آن شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- درخواست مانده: مربوط به مسائل حل‌نشده است.<br>
+- وابسته: تعارضات مربوط به وابستگی است.<br>
+- کاذب: تعارضات سطحی است.<br>
+<b>نکته کلیدی:</b> تعارض فراینده = تهدیدکننده بقای گروه
+</div>
+</div>
+
+<div class="card question" data-search="مولفه های شناختی درمان اصلاح افکار">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> کدام عامل جزء مولفه‌های شناختی درمان است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اصلاح افکار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصلاح افکار (Cognitive Restructuring) یکی از مولفه‌های اصلی درمان‌های شناختی است. در این رویکرد، هدف شناسایی و اصلاح باورها و افکار ناکارآمد است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- محبت: مربوط به درمان‌های انسان‌گرایانه است.<br>
+- تصمیم: مربوط به رویکردهای دیگر است.<br>
+- پذیرش: مربوط به درمان‌های پذیرش محور است.<br>
+<b>نکته کلیدی:</b> مولفه شناختی = اصلاح افکار
+</div>
+</div>
+
+<div class="card question" data-search="تمثیل درب نیمه باز کمد تکنیک گشتالتی دونکه کردن">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> تمثیل «درب نیمه باز کمد» در کدام یک از تکنیک‌های زیر استفاده می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گشتالتی دونکه کردن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تمثیل «درب نیمه باز کمد» در تکنیک گشتالتی دونکه کردن (Donking) استفاده می‌شود. این تکنیک به عضو گروه کمک می‌کند تا با ایجاد وقفه در الگوهای فکری و رفتاری تکراری، به بینش جدیدی دست یابد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مبالغه کردن: تکنیک دیگری در گشتالت است.<br>
+- استفاده از اشیاء: تکنیک جداگانه‌ای است.<br>
+- مورد پذیرش قرار گرفتن: مربوط به رویکردهای دیگر است.<br>
+<b>نکته کلیدی:</b> درب نیمه باز کمد = تکنیک گشتالتی دونکه کردن
+</div>
+</div>
+
+<div class="card question" data-search="نمونه نخستین اضطراب فروید ضربه تولد">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> از نظر فروید نمونه نخستین تمام اضطراب‌ها چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ضربه تولد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فروید معتقد بود که اولین تجربه اضطراب در هنگام تولد رخ می‌دهد. ضربه تولد (Birth Trauma) به عنوان نمونه نخستین تمام اضطراب‌ها در نظر گرفته می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تعارض: منشأ اضطراب است اما نمونه نخستین نیست.<br>
+- اضطراب بیرونی: نوعی اضطراب است.<br>
+- اضطراب اخلاقی: نوعی اضطراب است.<br>
+<b>نکته کلیدی:</b> فروید = ضربه تولد = نمونه نخستین اضطراب
+</div>
+</div>
+
+<div class="card question" data-search="خنثی سازی ارتكاب عمل مغایر با اخلاق ابطال">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> در کدام مکانیسم، فرد پس از ارتکاب عمل مغایر با اخلاق در صدد خنثی‌سازی آن بر می‌آید؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ابطال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ابطال (Undoing) یکی از مکانیسم‌های دفاعی است که در آن فرد سعی می‌کند با انجام عملی خلاف عمل قبلی، اثر آن را خنثی کند. مثلاً فردی که به کسی توهین کرده، بعداً با تعریف و تمجید از او سعی در جبران دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- برگشت: به معنای بازگشت به مراحل قبلی رشد است.<br>
+- همانندسازی: به معنای همسان شدن با دیگران است.<br>
+- وارونه‌سازی: به معنای تبدیل یک احساس به عکس آن است.<br>
+<b>نکته کلیدی:</b> خنثی‌سازی عمل خلاف اخلاق = ابطال
+</div>
+</div>
+
+<div class="card question" data-search="اساسی ترین مفهوم آدلر علاقه اجتماعی">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> اساسی‌ترین مفهوم نظریه آدلری که کاربرد مهمی در مشاوره گروهی دارد کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">علاقه اجتماعی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> علاقه اجتماعی (Social Interest) اساسی‌ترین مفهوم در نظریه آدلر است. آدلر معتقد بود که سلامت روانی فرد به میزان علاقه اجتماعی او بستگی دارد. این مفهوم در مشاوره گروهی کاربرد بسیار مهمی دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- احساس حقارت: مهم است اما اساسی‌ترین نیست.<br>
+- میل به برتری: مهم است اما اساسی‌ترین نیست.<br>
+- سبک زندگی: مهم است اما اساسی‌ترین نیست.<br>
+<b>نکته کلیدی:</b> آدلر = علاقه اجتماعی = اساسی‌ترین مفهوم
+</div>
+</div>
+
+<div class="card question" data-search="فنون گروه آدلری دکمه فشار حق انتخاب">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> در کدام یک از فنون و روش‌های گروه آدلری به اعضا کمک می‌شود تا تشخیص دهند که آنها در محرک‌های مورد توجه و یادآوری، دارای حق انتخاب هستند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دکمه فشار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تکنیک دکمه فشار (Push Button) در رویکرد آدلری به اعضا کمک می‌کند تا متوجه شوند که در مواجهه با محرک‌های مختلف، حق انتخاب دارند و می‌توانند پاسخ‌های خود را کنترل کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بررسی منظومه خانوادگی: برای درک الگوهای خانوادگی است.<br>
+- استفاده از خاطرات اولیه: برای کشف باورهای اولیه است.<br>
+- تشویق کردن اعضا: برای افزایش اعتماد به نفس است.<br>
+<b>نکته کلیدی:</b> دکمه فشار = حق انتخاب در محرک‌ها
+</div>
+</div>
+
+<div class="card question" data-search="سبک تماس در گشتالت هم آمیزی پذیرفته شدن">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> این سبک از تماس در نظریه گشتالت بیشتر در افرادی که میل به پذیرفته شدن در آنها زیاد است، دیده می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هم‌آمیزی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هم‌آمیزی (Confluence) یکی از سبک‌های تماس در نظریه گشتالت است که در آن فرد به دلیل میل شدید به پذیرفته شدن، مرزهای خود را با دیگران ادغام می‌کند و هویت خود را از دست می‌دهد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- انحراف: یعنی دور شدن از تماس.<br>
+- برگرداندن به خود: یعنی انجام کارها برای خود.<br>
+- فرافکنی: یعنی نسبت دادن صفات خود به دیگران.<br>
+<b>نکته کلیدی:</b> هم‌آمیزی = میل به پذیرفته شدن + ادغام مرزها
+</div>
+</div>
+
+<div class="card question" data-search="گشتالت درمانی شناسایی ترس پنهان بزرگنمایی">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> در رویکرد گشتالت درمانی این فن می‌تواند یک فن مفید برای کمک به عضو گروه در شناسایی یک ترس پنهان می‌باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بزرگنمایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تکنیک بزرگنمایی (Exaggeration) در گشتالت درمانی به عضو گروه کمک می‌کند تا با اغراق در حرکات، ژست‌ها یا کلمات خود، به ترس‌ها و احساسات پنهان خود دست یابد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- دور چرخیدن: برای تغییر دیدگاه است.<br>
+- عمل رویا: برای تفسیر رویاها است.<br>
+- صندلی داغ: برای مواجهه با تعارضات است.<br>
+<b>نکته کلیدی:</b> بزرگنمایی = شناسایی ترس پنهان
+</div>
+</div>
+
+<div class="card question" data-search="روان نمایشی مورنو">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> رویکرد روان‌نمایشی توسط چه کسی ابداع شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مورنو</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جاکوب مورنو (Jacob Moreno) بنیان‌گذار روان‌نمایشی (سایکودراما) است. او این روش را در اوایل قرن بیستم برای کمک به افراد در بیان احساسات و حل تعارضات از طریق نقش‌آفرینی ابداع کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- لوبین: ارتباطی با روان‌نمایشی ندارد.<br>
+- یالوم: در گروه‌درمانی وجودی فعالیت داشت.<br>
+- برن: بنیان‌گذار تحلیل رفتار متقابل است.<br>
+<b>نکته کلیدی:</b> روان‌نمایشی = مورنو
+</div>
+</div>
+
+<div class="card question" data-search="مهمترین بخش سایکودراما پروتاگونیست">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> مهمترین بخش سایکودراما چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پروتاگونیست</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پروتاگونیست (قهرمان) مهم‌ترین بخش سایکودراما است. او شخص اصلی است که مسئله خود را روی صحنه اجرا می‌کند و سایر اعضا به او کمک می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رهبر: تسهیل‌گر است اما مهم‌ترین بخش نیست.<br>
+- صحنه: بستر اجراست.<br>
+- موضوع: محتوای اجراست.<br>
+<b>نکته کلیدی:</b> پروتاگونیست = مهم‌ترین بخش سایکودراما
+</div>
+</div>
+
+<div class="card question" data-search="گروه درمانی سالمندان فنون مواجهه">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> در رابطه با گروه درمانی سالمندان رهبر گروه باید توجه داشته باشد که از ...... استفاده نکند.</div>
+<b>پاسخ صحیح:</b> <span class="answer">فنون مواجهه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در گروه درمانی سالمندان، به دلیل حساسیت‌های عاطفی و جسمی این گروه، رهبر باید از فنون مواجهه (Confrontation) که می‌تواند برای آنها آسیب‌زا باشد، خودداری کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روش‌های تشویقی: مفید هستند.<br>
+- بیان احساسات تنهایی: مفید است.<br>
+- جملات ناتمام: مفید است.<br>
+<b>نکته کلیدی:</b> سالمندان = اجتناب از فنون مواجهه
+</div>
+</div>
+
+<div class="card question" data-search="فن روان نمایشی فرافکنی به آینه پروتاگونیست">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> در کدام فن روان‌نمایشی پروتاگونیست قادر به بیان مسئله خود نیست و یاریگر به جای او ایفای نقش می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فرافکنی به آینه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در تکنیک فرافکنی به آینه (Mirror Projection)، وقتی پروتاگونیست قادر به بیان مسئله خود نیست، یاریگر (Auxiliary) به جای او ایفای نقش می‌کند تا پروتاگونیست بتواند خود را از بیرون مشاهده کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آینه: پروتاگونیست خود را در آینه می‌بیند.<br>
+- خودگویی: پروتاگونیست با خودش صحبت می‌کند.<br>
+- توهم‌نمایی: برای خلق تصاویر ذهنی است.<br>
+<b>نکته کلیدی:</b> فرافکنی به آینه = یاریگر به جای پروتاگونیست
+</div>
+</div>
+
+<div class="card question" data-search="شرط اساسی رهبر گروه شخص محور اصالت">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> همخوانی گفته‌های درمانگر با تجربه و احساسات او مربوط به کدام شرط اساسی رهبر گروه در رویکرد شخص محور می‌باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اصالت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصالت (Genuineness) یا هماهنگی، یکی از سه شرط اساسی راجرز در رویکرد شخص محور است. به این معنا که گفته‌های درمانگر باید با تجربه و احساسات واقعی او همخوانی داشته باشد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- توجه مثبت مشروط: شرط نیست.<br>
+- همدلی: درک احساسات مراجع است.<br>
+- پذیرش نامشروط: پذیرش بدون قید و شرط است.<br>
+<b>نکته کلیدی:</b> همخوانی گفته‌ها با احساسات = اصالت
+</div>
+</div>
+
+<div class="card question" data-search="کین همدلی متمرکز بر هیجان">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> کین، معتقد است چه عاملی به مراجعین کمک می‌کند تا به تجربه خود توجه کنند و به آن ارج نهند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همدلی متمرکز بر هیجان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کین (Kahn) معتقد است که همدلی متمرکز بر هیجان (Emotion-Focused Empathy) به مراجعین کمک می‌کند تا به تجربه خود توجه کنند و به آن ارزش بدهند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- توصیف احساسات گذشته: رویکرد دیگر است.<br>
+- شرایط ارزش: مربوط به راجرز است.<br>
+- رویارویی: تکنیک دیگری است.<br>
+<b>نکته کلیدی:</b> کین = همدلی متمرکز بر هیجان
+</div>
+</div>
+
+<div class="card question" data-search="هدف مشاوره گروهی تحلیل تبادلی الگوی آموزشی">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> هدف از مشاوره گروهی در این رویکرد این است که اعضای گروه در قالب یک الگوی آموزشی خودشان را ارزیابی کرده، از افکار و اعمال خود آگاه شوند.</div>
+<b>پاسخ صحیح:</b> <span class="answer">REBT رویکرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در رویکرد REBT (عقلی-هیجانی-رفتاری) الیس، هدف مشاوره گروهی این است که اعضا در قالب یک الگوی آموزشی، خود را ارزیابی کرده و از افکار و اعمال خود آگاه شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تحلیل تبادلی: بر تحلیل رفتار متقابل متمرکز است.<br>
+- رویکرد شخص محور: بر خودشکوفایی متمرکز است.<br>
+<b>نکته کلیدی:</b> REBT = الگوی آموزشی + خودارزیابی
+</div>
+</div>
+
+<div class="card question" data-search="حالت من والدینی بایدها الزام ها">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> کدام حالت من در برگیرنده تمام بایدها، الزام‌ها و سایر قوانین زندگی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">والدینی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در تحلیل رفتار متقابل (TA)، حالت من والدینی (Parent) شامل تمام بایدها، الزام‌ها، قوانین و ارزش‌هایی است که فرد از والدین و جامعه آموخته است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کودکی: شامل احساسات و خلاقیت است.<br>
+- پردازشگر: در این مدل وجود ندارد.<br>
+- بالغ: شامل تفکر منطقی و واقع‌بینانه است.<br>
+<b>نکته کلیدی:</b> بایدها و الزام‌ها = حالت من والدینی
+</div>
+</div>
+
+<div class="card question" data-search="موضع اساسی زندگی من خوب نیستم تو خوب نیستی ناامید">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> بر اساس رویکرد تحلیل تبادلی در کدام موضع اساسی زندگی، فرد ناامید و بی‌هدف است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">من خوب نیستم-تو خوب نیستی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در تحلیل رفتار متقابل، موضع «من خوب نیستم-تو خوب نیستی» (I'm not OK - You're not OK) نشان‌دهنده ناامیدی، بی‌هدفی و افسردگی عمیق است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- من خوب نیستم-تو خوب هستی: نشانه احساس حقارت است.<br>
+- من خوب هستم-تو خوب نیستی: نشانه برتری‌طلبی است.<br>
+- من خوب هستم-تو خوب هستی: نشانه سلامت روان است.<br>
+<b>نکته کلیدی:</b> ناامیدی و بی‌هدفی = من خوب نیستم-تو خوب نیستی
+</div>
+</div>
+
+<div class="card question" data-search="هویت از دیدگاه درمانی تحلیل تبادلی">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> در کدام دیدگاه مفهوم هویت از دیدگاه درمانی مورد بررسی قرار گرفته است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تحلیل تبادلی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در تحلیل رفتار متقابل (TA)، مفهوم هویت از دیدگاه درمانی مورد بررسی قرار می‌گیرد و بر اساس حالت‌های من (والد، بالغ، کودک) تحلیل می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- واقعیت درمانی: بر مسئولیت و انتخاب متمرکز است.<br>
+- راه حل محور: بر راه‌حل‌ها متمرکز است.<br>
+- عقلی هیجانی: بر باورها متمرکز است.<br>
+<b>نکته کلیدی:</b> هویت از دیدگاه درمانی = تحلیل تبادلی
+</div>
+</div>
+
+<div class="card question" data-search="رویکرد راه حل محور چهارچوب دهی مجدد">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> در کدام یک از فنون و روش‌های رویکرد راه حل محور، اعضاء قادر می‌شوند معنای جدیدی را که برای تغییر ضروری‌تر است را انتخاب کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">چهارچوب دهی مجدد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> چهارچوب دهی مجدد (Reframing) در رویکرد راه حل محور به اعضا کمک می‌کند تا از زاویه دیگری به مسائل نگاه کنند و معنای جدیدی را انتخاب کنند که برای تغییر ضروری است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سوالات: ابزار اصلی رویکرد است.<br>
+- تحسین کردن: برای افزایش اعتماد به نفس است.<br>
+- تکلیف تعجب‌انگیز: برای ایجاد تغییر ناگهانی است.<br>
+<b>نکته کلیدی:</b> چهارچوب دهی مجدد = انتخاب معنای جدید
+</div>
+</div>
+
+<div class="card question" data-search="اهداف مشاوره نوجوانان کشف تعارض های مدرسه">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> کشف تعارض‌های مربوط به مدرسه و کمک به بهبود رشد تحصیلی، مفهوم‌سازی عشق و تعهد از اهداف مشاوره با کدام یک از گروه‌های زیر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نوجوانان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کشف تعارض‌های مربوط به مدرسه، کمک به رشد تحصیلی و مفهوم‌سازی عشق و تعهد از اهداف مشاوره با نوجوانان است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کودکان: اهداف متفاوتی دارند.<br>
+- جوانان: اهداف متفاوتی دارند.<br>
+- وابسته به جنسیت: گروه خاصی است.<br>
+<b>نکته کلیدی:</b> تعارض مدرسه + عشق و تعهد = اهداف مشاوره نوجوانان
+</div>
+</div>
+
+<div class="card question" data-search="مهمترین هدیه مشاوران به سوگواران همدلی">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> مهم‌ترین هدیه‌ای که مشاوران می‌توانند به افراد سوگوار بدهند چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایجاد همدلی با سوگواران</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همدلی (Empathy) مهم‌ترین هدیه‌ای است که مشاوران می‌توانند به افراد سوگوار بدهند. همدلی به سوگواران کمک می‌کند تا احساس درک شدن کنند و در فرایند سوگ، حمایت عاطفی دریافت کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تشویق به بازیابی خاطرات: مفید است اما مهم‌ترین نیست.<br>
+- ایجاد شناخت دقیق از فرایند سوگ: مفید است اما به اندازه همدلی مهم نیست.<br>
+- انکار رویداد سوگ: رویکردی نادرست و آسیب‌زا است.<br>
+<b>نکته کلیدی:</b> مهم‌ترین هدیه به سوگواران = همدلی
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>انواع گروه‌ها</h3></div>
+<div class="grid2">
+<div class="box"><h4>گروه فشار</h4>
+<div class="fa">اتحادیه‌های کارگری و کشاورزی</div>
+</div>
+<div class="box"><h4>گروه رویارویی</h4>
+<div class="fa">شکل گسترش‌یافته گروه‌های تی</div>
+</div>
+<div class="box"><h4>گروه انبوه خلق</h4>
+<div class="fa">ابتدایی‌ترین و ناپایدارترین گروه</div>
+</div>
+<div class="box"><h4>گروه خودیاری</h4>
+<div class="fa">برای کمک به خود تشکیل می‌شوند</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه‌پردازان کلیدی</h3></div>
+<div class="grid2">
+<div class="box"><h4>براون</h4>
+<div class="fa">قدرت گروه در مسیرهای خلاق</div>
+</div>
+<div class="box"><h4>بیون</h4>
+<div class="fa">پیوند واکنش گروه با روابط شیء کلاین</div>
+</div>
+<div class="box"><h4>کوری</h4>
+<div class="fa">اهداف پنهان در مرحله انتقال</div>
+</div>
+<div class="box"><h4>لوین</h4>
+<div class="fa">بنیان‌گذار پویایی‌های گروهی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراحل تکامل گروه (کوری)</h3></div>
+<div class="fa"><b>مرحله انتقال:</b> اهداف پنهان و آشکار نشده اعضا</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعارضات گروهی</h3></div>
+<div class="fa"><b>تعارض فراینده:</b> تهدیدکننده بقای گروه و باعث انحلال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>همدلی در سوگ</h3></div>
+<div class="fa"><b>مهم‌ترین هدیه به سوگواران:</b> ایجاد همدلی</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>گروه‌های تی و رویارویی</h3></div>
+<div class="fa"><b>تعریف:</b> گروه‌های تی (T-groups) یا گروه‌های آموزش حساسیت، گروه‌هایی هستند که بر افزایش خودآگاهی و حساسیت نسبت به دیگران تأکید دارند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>شکل گسترش‌یافته:</b> گروه‌های رویارویی (Encounter Groups)<br>
+<b>ویژگی‌ها:</b> تمرکز بر تعاملات بین‌فردی و مواجهه با احساسات<br>
+<b>سوالات مرتبط:</b> 2
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گروه انبوه خلق</h3></div>
+<div class="fa"><b>تعریف:</b> ابتدایی‌ترین و ناپایدارترین شکل گروه اجتماعی که به صورت موقت و خودجوش شکل می‌گیرد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ویژگی‌ها:</b> فاقد ساختار، هدف مشترک و تعامل پایدار<br>
+<b>سوالات مرتبط:</b> 3
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گروه فشار</h3></div>
+<div class="fa"><b>تعریف:</b> گروه‌هایی که برای تأثیرگذاری بر تصمیم‌گیری‌ها و سیاست‌ها تشکیل می‌شوند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>مثال:</b> اتحادیه‌های کارگری و کشاورزی<br>
+<b>سوالات مرتبط:</b> 4
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراحل تکامل گروه (کوری)</h3></div>
+<div class="fa"><b>تعریف:</b> مدل کوری برای مراحل رشد گروه</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>مرحله انتقال:</b> اهداف پنهان و آشکار نشده اعضا<br>
+<b>اهمیت:</b> شناخت اهداف پنهان برای پیشرفت گروه ضروری است.<br>
+<b>سوالات مرتبط:</b> 8
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>همدلی در سوگ</h3></div>
+<div class="fa"><b>تعریف:</b> مهم‌ترین هدیه مشاوران به افراد سوگوار</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>اهمیت:</b> همدلی به سوگواران کمک می‌کند تا احساس درک شدن کنند.<br>
+<b>سوالات مرتبط:</b> 30
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعارض فراینده</h3></div>
+<div class="fa"><b>تعریف:</b> تعارضاتی که بر سر روش‌ها و فرایندهای گروه رخ می‌دهند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>نتیجه:</b> می‌تواند به گروه صدمه جدی وارد کرده یا منجر به انحلال شود.<br>
+<b>سوالات مرتبط:</b> 9
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اصلاح افکار</h3></div>
+<div class="fa"><b>تعریف:</b> یکی از مولفه‌های اصلی درمان شناختی</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>هدف:</b> شناسایی و اصلاح باورها و افکار ناکارآمد<br>
+<b>سوالات مرتبط:</b> 10
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دکمه فشار (آدلر)</h3></div>
+<div class="fa"><b>تعریف:</b> تکنیکی که به اعضا کمک می‌کند تا در محرک‌های مختلف حق انتخاب خود را تشخیص دهند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>کاربرد:</b> کمک به اعضا برای کنترل پاسخ‌های خود در مواجهه با محرک‌ها<br>
+<b>سوالات مرتبط:</b> 15
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هم‌آمیزی (گشتالت)</h3></div>
+<div class="fa"><b>تعریف:</b> سبکی از تماس که در آن فرد مرزهای خود را با دیگران ادغام می‌کند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ویژگی‌ها:</b> میل شدید به پذیرفته شدن، از دست دادن هویت فردی، ادغام مرزها<br>
+<b>سوالات مرتبط:</b> 16
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرافکنی به آینه (سایکودراما)</h3></div>
+<div class="fa"><b>تعریف:</b> تکنیکی که در آن یاریگر به جای پروتاگونیست ایفای نقش می‌کند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>کاربرد:</b> زمانی که پروتاگونیست قادر به بیان مسئله خود نیست، یاریگر نقش او را بازی می‌کند.<br>
+<b>سوالات مرتبط:</b> 21
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>موضع‌های زندگی در TA</h3></div>
+<div class="fa"><b>تعریف:</b> چهار موضع اساسی که نگرش فرد به خود و دیگران را نشان می‌دهد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>موضع‌ها:</b><br>
+1. من خوب هستم-تو خوب هستی (سلامت)<br>
+2. من خوب نیستم-تو خوب هستی (حقارت)<br>
+3. من خوب هستم-تو خوب نیستی (برتری)<br>
+4. من خوب نیستم-تو خوب نیستی (ناامیدی)<br>
+<b>سوالات مرتبط:</b> 26
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>گروه تی</td><td>گروه رویارویی</td><td>تی = آموزش حساسیت، رویارویی = شکل گسترش‌یافته</td><td>تی → رویارویی</td></tr>
+<tr><td>انبوه خلق</td><td>گروه همسالان</td><td>انبوه خلق ناپایدار، همسالان دارای ساختار</td><td>ابتدایی‌ترین vs پایدار</td></tr>
+<tr><td>گروه فشار</td><td>گروه خودیاری</td><td>فشار = تأثیرگذاری سیاسی، خودیاری = کمک به خود</td><td>سیاسی vs شخصی</td></tr>
+<tr><td>تعارض فراینده</td><td>تعارض کاذب</td><td>فراینده = تهدیدکننده، کاذب = سطحی</td><td>انحلال vs سطحی</td></tr>
+<tr><td>گشتالت</td><td>روان‌نمایشی</td><td>گشتالت بر خودآگاهی، روان‌نمایشی بر نقش‌آفرینی</td><td>پرز vs مورنو</td></tr>
+<tr><td>تحلیل تبادلی</td><td>شخص محور</td><td>TA بر حالت‌های من، شخص محور بر رابطه درمانی</td><td>برن vs راجرز</td></tr>
+<tr><td>ابطال</td><td>وارونه‌سازی</td><td>ابطال = خنثی‌سازی عمل، وارونه‌سازی = تبدیل احساس</td><td>عمل vs احساس</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>براون</h3></div>
+<div class="fa"><b>ایده اصلی:</b> گروه‌ها قدرت زیادی برای قرار دادن افراد در مسیرهای خلاق‌تر و شاداب‌تر دارند.</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "براون"، "قدرت گروه"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 1</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویلفرد بیون</h3></div>
+<div class="fa"><b>ایده اصلی:</b> پیوند واکنش گروه با نظریه روابط شیء ملاکی کلاین</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "بیون"، "روابط شیء"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 5</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جرالد کوری</h3></div>
+<div class="fa"><b>ایده اصلی:</b> اهداف پنهان اعضا در مرحله انتقال</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "کوری"، "مرحله انتقال"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 8</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>زیگموند فروید</h3></div>
+<div class="fa"><b>ایده اصلی:</b> ضربه تولد = نمونه نخستین اضطراب</div>
+<div class="fa"><b>مکانیسم دفاعی:</b> ابطال</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "ضربه تولد"، "نمونه نخستین اضطراب"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 12، 13</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آلفرد آدلر</h3></div>
+<div class="fa"><b>ایده اصلی:</b> علاقه اجتماعی = اساسی‌ترین مفهوم</div>
+<div class="fa"><b>تکنیک:</b> دکمه فشار</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "علاقه اجتماعی"، "دکمه فشار"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 14، 15</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فریتز پرز</h3></div>
+<div class="fa"><b>ایده اصلی:</b> هم‌آمیزی، بزرگنمایی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "گشتالت"، "هم‌آمیزی"، "بزرگنمایی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 16، 17</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جاکوب مورنو</h3></div>
+<div class="fa"><b>ایده اصلی:</b> پروتاگونیست = مهم‌ترین بخش</div>
+<div class="fa"><b>تکنیک:</b> فرافکنی به آینه</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "روان‌نمایشی"، "پروتاگونیست"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 18، 19، 21</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اریک برن</h3></div>
+<div class="fa"><b>ایده اصلی:</b> حالت‌های من: والد، بالغ، کودک</div>
+<div class="fa"><b>موضع‌های زندگی:</b> چهار موضع اساسی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "تحلیل تبادلی"، "والدینی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 25، 26، 27</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارل راجرز</h3></div>
+<div class="fa"><b>شرایط اساسی:</b> اصالت، همدلی، پذیرش نامشروط</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "شخص محور"، "اصالت"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 22</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آلبرت الیس</h3></div>
+<div class="fa"><b>ایده اصلی:</b> REBT، الگوی آموزشی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "REBT"، "الگوی آموزشی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 24</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: گروه‌های تی و رویارویی</h3>
+<div class="fa"><b>سوال نمونه:</b> شکل گسترش‌یافته گروه‌های تی کدام است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "آموزشی" را انتخاب کنی چون تی مخفف Training است.</div>
+<div class="fa"><b>پاسخ درست:</b> رویارویی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> تی مخفف Training است اما گروه‌های تی به گروه‌های رویارویی گسترش یافتند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تی → رویارویی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: ابتدایی‌ترین گروه</h3>
+<div class="fa"><b>سوال نمونه:</b> ابتدایی‌ترین و ناپایدارترین گروه کدام است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "همسالان" را انتخاب کنی چون در بسیاری از جوامع رایج است.</div>
+<div class="fa"><b>پاسخ درست:</b> انبوه خلق</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> گروه همسالان دارای ساختار است اما انبوه خلق فاقد ساختار است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> انبوه خلق = ابتدایی‌ترین و ناپایدارترین
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: اهداف پنهان</h3>
+<div class="fa"><b>سوال نمونه:</b> اهداف پنهان اعضا در کدام مرحله اهمیت دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "آغازین" را انتخاب کنی چون در ابتدا اهداف مشخص نیست.</div>
+<div class="fa"><b>پاسخ درست:</b> انتقال</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> در مرحله آغازین اهداف هنوز شکل نگرفته‌اند، اما در مرحله انتقال اهداف پنهان آشکار می‌شوند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اهداف پنهان = مرحله انتقال (کوری)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: تعارض منجر به انحلال</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام تعارض باعث انحلال گروه می‌شود؟</div>
+<div class="fa"><b>دام:</b> ممکن است "کاذب" را انتخاب کنی چون کاذب به معنای غیرواقعی است.</div>
+<div class="fa"><b>پاسخ درست:</b> فراینده</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> تعارض کاذب سطحی است اما تعارض فراینده تهدیدکننده است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> فراینده = تهدیدکننده بقای گروه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: مهم‌ترین هدیه به سوگواران</h3>
+<div class="fa"><b>سوال نمونه:</b> مهم‌ترین هدیه مشاوران به سوگواران چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تشویق به بازیابی خاطرات" را انتخاب کنی چون به پردازش سوگ کمک می‌کند.</div>
+<div class="fa"><b>پاسخ درست:</b> ایجاد همدلی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> بازیابی خاطرات مفید است اما همدلی مهم‌ترین و تأثیرگذارترین عامل است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> مهم‌ترین هدیه به سوگواران = همدلی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: اساسی‌ترین مفهوم آدلر</h3>
+<div class="fa"><b>سوال نمونه:</b> اساسی‌ترین مفهوم نظریه آدلری کدام است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "احساس حقارت" را انتخاب کنی چون معروف‌ترین مفهوم آدلر است.</div>
+<div class="fa"><b>پاسخ درست:</b> علاقه اجتماعی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> احساس حقارت معروف است اما اساسی‌ترین مفهوم، علاقه اجتماعی است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> آدلر = علاقه اجتماعی (اساسی‌ترین مفهوم)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: هم‌آمیزی در گشتالت</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام سبک تماس در گشتالت با میل به پذیرفته شدن مرتبط است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "فرافکنی" را انتخاب کنی چون در روابط اجتماعی رایج است.</div>
+<div class="fa"><b>پاسخ درست:</b> هم‌آمیزی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> فرافکنی نسبت دادن صفات است، اما هم‌آمیزی با میل به پذیرفته شدن مرتبط است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> هم‌آمیزی = میل به پذیرفته شدن + ادغام مرزها
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 8: موضع ناامیدی در TA</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام موضع زندگی نشان‌دهنده ناامیدی و بی‌هدفی است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "من خوب نیستم-تو خوب هستی" را انتخاب کنی چون احساس حقارت دارد.</div>
+<div class="fa"><b>پاسخ درست:</b> من خوب نیستم-تو خوب نیستی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> هر دو موضع احساس منفی دارند، اما اولی ناامیدی عمیق‌تری را نشان می‌دهد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> ناامیدی و بی‌هدفی = من خوب نیستم-تو خوب نیستی
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 02 · مشاوره گروهی نظری · 30 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "به اعتقاد کدام نظریه‌پرداز، گروه‌ها قدرت قرار دادن افراد در مسیرهای خلاق را دارند؟",
+options: ["براون", "ترنر", "کوری", "پالس"],
+answer: 0,
+explanation: "براون به قدرت گروه‌ها در ایجاد مسیرهای خلاق و شاداب اعتقاد دارد."
+},
+{
+q: "شکل گسترش‌یافته گروه‌های تی کدام است؟",
+options: ["آموزشی", "رویارویی", "مشاوره همسایگان", "اجتماعی"],
+answer: 1,
+explanation: "گروه‌های تی به گروه‌های رویارویی گسترش یافتند."
+},
+{
+q: "ابتدایی‌ترین و ناپایدارترین گروه اجتماعی کدام است؟",
+options: ["گروه هموسل", "گروه انبوه خلق", "گروه همسالان", "گروه هم شکل"],
+answer: 1,
+explanation: "گروه انبوه خلق ابتدایی‌ترین و ناپایدارترین گروه است."
+},
+{
+q: "اتحادیه‌های کارگری و کشاورزی جزء کدام گروه‌ها هستند؟",
+options: ["خودیاری", "انجمن‌ها", "فشار", "یادگیری"],
+answer: 2,
+explanation: "اتحادیه‌های کارگری گروه‌های فشار هستند."
+},
+{
+q: "چه کسی واکنش گروه را به نظریه روابط شیء کلاین پیوند داده است؟",
+options: ["بیون", "وندر", "اسلوسون", "لوین"],
+answer: 0,
+explanation: "ویلفرد بیون واکنش گروه را با نظریه روابط شیء کلاین پیوند داد."
+},
+{
+q: "کدام افراد گزینه مناسبی برای طرد از گروه هستند؟",
+options: ["انحصارطلب‌ها", "خودشیفته‌ها", "نامتجانس‌های متعصب", "بیماران خاص"],
+answer: 2,
+explanation: "نامتجانس‌های متعصب به دلیل رفتار مخرب طرد می‌شوند."
+},
+{
+q: "پایه‌ای‌ترین وظیفه رهبر گروه چیست؟",
+options: ["شناسایی آفات", "مشارکت در تشکیل جلسات", "ایجاد جلسات", "برنامه‌ریزی"],
+answer: 2,
+explanation: "ایجاد و تشکیل جلسات پایه‌ای‌ترین وظیفه رهبر است."
+},
+{
+q: "اهداف پنهان اعضا در کدام مرحله از دیدگاه کوری اهمیت دارد؟",
+options: ["انتقال", "پایان", "کار", "آغازین"],
+answer: 0,
+explanation: "اهداف پنهان در مرحله انتقال از دیدگاه کوری اهمیت دارد."
+},
+{
+q: "کدام تعارض می‌تواند به انحلال گروه منجر شود؟",
+options: ["درخواست مانده", "فراینده", "وابسته", "کاذب"],
+answer: 1,
+explanation: "تعارض فراینده تهدیدکننده بقای گروه است."
+},
+{
+q: "کدام عامل مولفه شناختی درمان است؟",
+options: ["محبت", "اصلاح افکار", "تصمیم", "پذیرش"],
+answer: 1,
+explanation: "اصلاح افکار یکی از مولفه‌های اصلی درمان شناختی است."
+},
+{
+q: "تمثیل «درب نیمه باز کمد» در کدام تکنیک استفاده می‌شود؟",
+options: ["مبالغه کردن", "گشتالتی دونکه کردن", "استفاده از اشیاء", "مورد پذیرش قرار گرفتن"],
+answer: 1,
+explanation: "تمثیل درب نیمه باز کمد در تکنیک گشتالتی دونکه کردن استفاده می‌شود."
+},
+{
+q: "از نظر فروید نمونه نخستین تمام اضطراب‌ها چیست؟",
+options: ["تعارض", "ضربه تولد", "اضطراب بیرونی", "اضطراب اخلاقی"],
+answer: 1,
+explanation: "فروید معتقد بود که ضربه تولد نمونه نخستین تمام اضطراب‌ها است."
+},
+{
+q: "فرد پس از ارتکاب عمل خلاف اخلاق، در صدد خنثی‌سازی آن بر می‌آید. این کدام مکانیسم دفاعی است؟",
+options: ["برگشت", "همانندسازی", "وارونه‌سازی", "ابطال"],
+answer: 3,
+explanation: "ابطال مکانیسمی است که فرد سعی می‌کند عمل خلاف اخلاق را خنثی کند."
+},
+{
+q: "اساسی‌ترین مفهوم نظریه آدلر کدام است؟",
+options: ["احساس حقارت", "علاقه اجتماعی", "میل به برتری", "سبک زندگی"],
+answer: 1,
+explanation: "علاقه اجتماعی اساسی‌ترین مفهوم در نظریه آدلر است."
+},
+{
+q: "در کدام فن آدلری به اعضا کمک می‌شود تا حق انتخاب خود را تشخیص دهند؟",
+options: ["بررسی منظومه خانوادگی", "استفاده از خاطرات اولیه", "تشویق کردن اعضا", "دکمه فشار"],
+answer: 3,
+explanation: "تکنیک دکمه فشار به اعضا کمک می‌کند تا حق انتخاب خود را تشخیص دهند."
+},
+{
+q: "کدام سبک تماس در گشتالت با میل به پذیرفته شدن مرتبط است؟",
+options: ["انحراف", "برگرداندن به خود", "هم‌آمیزی", "فرافکنی"],
+answer: 2,
+explanation: "هم‌آمیزی با میل به پذیرفته شدن و ادغام مرزها مرتبط است."
+},
+{
+q: "کدام تکنیک گشتالت به شناسایی ترس پنهان کمک می‌کند؟",
+options: ["دور چرخیدن", "عمل رویا", "بزرگنمایی", "صندلی داغ"],
+answer: 2,
+explanation: "تکنیک بزرگنمایی به شناسایی ترس پنهان کمک می‌کند."
+},
+{
+q: "روان‌نمایشی توسط چه کسی ابداع شد؟",
+options: ["لوبین", "مورنو", "یالوم", "برن"],
+answer: 1,
+explanation: "جاکوب مورنو بنیان‌گذار روان‌نمایشی است."
+},
+{
+q: "مهم‌ترین بخش سایکودراما چیست؟",
+options: ["پروتاگونیست", "رهبر", "صحنه", "موضوع"],
+answer: 0,
+explanation: "پروتاگونیست مهم‌ترین بخش سایکودراما است."
+},
+{
+q: "در گروه درمانی سالمندان از کدام تکنیک باید خودداری کرد؟",
+options: ["روش‌های تشویقی", "بیان احساسات تنهایی", "فنون مواجهه", "جملات ناتمام"],
+answer: 2,
+explanation: "در گروه درمانی سالمندان باید از فنون مواجهه خودداری کرد."
+},
+{
+q: "در کدام فن روان‌نمایشی یاریگر به جای پروتاگونیست نقش بازی می‌کند؟",
+options: ["آینه", "خودگویی", "فرافکنی به آینه", "توهم‌نمایی"],
+answer: 2,
+explanation: "در فرافکنی به آینه، یاریگر به جای پروتاگونیست نقش بازی می‌کند."
+},
+{
+q: "همخوانی گفته‌های درمانگر با احساسات او مربوط به کدام شرط است؟",
+options: ["توجه مثبت مشروط", "همدلی", "اصالت", "پذیرش نامشروط"],
+answer: 2,
+explanation: "اصالت یعنی همخوانی گفته‌های درمانگر با احساسات او."
+},
+{
+q: "کین برای توجه مراجع به تجربه خود بر چه چیزی تاکید دارد؟",
+options: ["توصیف احساسات گذشته", "همدلی متمرکز بر هیجان", "شرایط ارزش", "رویارویی"],
+answer: 1,
+explanation: "کین بر همدلی متمرکز بر هیجان تاکید دارد."
+},
+{
+q: "کدام رویکرد بر الگوی آموزشی در مشاوره گروهی تاکید دارد؟",
+options: ["تحلیل تبادلی", "شخص محور", "REBT", "روان‌نمایشی"],
+answer: 2,
+explanation: "REBT بر الگوی آموزشی و خودارزیابی تاکید دارد."
+},
+{
+q: "کدام حالت من در برگیرنده بایدها و الزام‌ها است؟",
+options: ["کودکی", "پردازشگر", "بالغ", "والدینی"],
+answer: 3,
+explanation: "حالت من والدینی شامل بایدها و الزام‌ها است."
+},
+{
+q: "کدام موضع زندگی نشان‌دهنده ناامیدی و بی‌هدفی است؟",
+options: ["من خوب نیستم-تو خوب هستی", "من خوب هستم-تو خوب نیستی", "من خوب نیستم-تو خوب نیستی", "من خوب هستم-تو خوب هستی"],
+answer: 2,
+explanation: "موضع «من خوب نیستم-تو خوب نیستی» نشان‌دهنده ناامیدی است."
+},
+{
+q: "مفهوم هویت از دیدگاه درمانی در کدام رویکرد بررسی می‌شود؟",
+options: ["واقعیت درمانی", "راه حل محور", "عقلی هیجانی", "تحلیل تبادلی"],
+answer: 3,
+explanation: "در تحلیل تبادلی، مفهوم هویت از دیدگاه درمانی بررسی می‌شود."
+},
+{
+q: "در کدام فن راه حل محور، اعضا معنای جدیدی برای تغییر انتخاب می‌کنند؟",
+options: ["سوالات", "چهارچوب دهی مجدد", "تحسین کردن", "تکلیف تعجب‌انگیز"],
+answer: 1,
+explanation: "چهارچوب دهی مجدد به اعضا کمک می‌کند معنای جدیدی انتخاب کنند."
+},
+{
+q: "اهداف مشاوره نوجوانان شامل کدام موارد است؟",
+options: ["مهارت‌های زندگی", "تعارض مدرسه و عشق", "انتخاب شغل", "مدیریت خشم"],
+answer: 1,
+explanation: "تعارض مدرسه و مفهوم‌سازی عشق از اهداف مشاوره نوجوانان است."
+},
+{
+q: "مهم‌ترین هدیه مشاوران به سوگواران چیست؟",
+options: ["تشویق به بازیابی خاطرات", "ایجاد شناخت از سوگ", "انکار رویداد سوگ", "ایجاد همدلی"],
+answer: 3,
+explanation: "همدلی مهم‌ترین هدیه به افراد سوگوار است."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
