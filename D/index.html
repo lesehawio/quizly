@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Quizly — جزوه‌های 30جزء </title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brand: #fb5180;
+  --brand-2: #ff7fa0;
+  --bg: #0a0a0f;
+  --card: rgba(255,255,255,0.03);
+  --muted: #8a8a8a;
+  --text: #e9e9ea;
+  --maxw: 980px;
+  --shadow-1: 0 10px 30px rgba(0,0,0,0.6);
+  --accent: 0 14px 40px rgba(251,81,128,0.12);
+  --ease: cubic-bezier(.2,.9,.2,1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Vazirmatn", system-ui, -apple-system, sans-serif;
+  background:
+    radial-gradient(900px 420px at 8% 12%, rgba(251, 81, 128, 0.06), transparent 60%),
+    radial-gradient(700px 360px at 92% 88%, rgba(255, 127, 160, 0.04), transparent 60%),
+    #0a0a0f;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 14px;
+  transition: background .35s var(--ease), color .35s var(--ease);
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 14px;
+  width: 100%;
+  max-width: var(--maxw);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  box-shadow: var(--shadow-1);
+  backdrop-filter: blur(8px) saturate(120%);
+  z-index: 60;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.logo-wrap {
+  width: 104px;
+  height: 104px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  transition: transform .6s var(--ease), box-shadow .45s;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.logo-wrap:hover {
+  transform: translateY(-8px) rotate(-3deg) scale(1.04);
+  box-shadow: var(--accent);
+}
+
+.logo {
+  width: 76px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 40% at 20% 20%, rgba(255, 255, 255, 0.08), transparent 60%),
+    linear-gradient(120deg, rgba(251, 81, 128, 0.04), rgba(255, 127, 160, 0.02));
+  mix-blend-mode: screen;
+  filter: blur(10px);
+  opacity: 0.6;
+}
+
+.header-title h1 {
+  font-size: 1.45rem;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.header-title p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.header-title .sub {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 0.75rem;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+/* Panel */
+.panel {
+  width: 100%;
+  max-width: var(--maxw);
+  background: rgba(18, 18, 22, 0.6);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: background .35s var(--ease), box-shadow .35s;
+  backdrop-filter: blur(10px);
+  max-height: 65vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Search Box */
+.search-wrapper {
+  padding: 8px 4px 16px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.search-wrapper .search-icon {
+  color: var(--muted);
+  opacity: 0.4;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.search-wrapper input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-wrapper input::placeholder {
+  color: var(--muted);
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+.search-wrapper input:focus {
+  border-color: rgba(251, 81, 128, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(251, 81, 128, 0.03);
+}
+
+.search-wrapper .result-count {
+  color: var(--muted);
+  font-size: 0.75rem;
+  opacity: 0.4;
+  white-space: nowrap;
+  font-weight: 300;
+  min-width: 50px;
+  text-align: left;
+}
+
+/* Scrollable Container */
+.scroll-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+  margin-top: 12px;
+}
+
+/* Custom Scrollbar */
+.scroll-container::-webkit-scrollbar {
+  width: 4px;
+}
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 100px;
+}
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+  transition: all 0.4s var(--ease);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-height: 76px;
+}
+
+.menu-card.hidden {
+  display: none;
+}
+
+.menu-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(251, 81, 128, 0.02), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.menu-card:hover::before {
+  opacity: 1;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.menu-card:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Icon */
+.menu-card .icon-wrap {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.menu-card:hover .icon-wrap {
+  transform: scale(1.05) rotate(-3deg);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-card .icon-wrap svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.menu-card:hover .icon-wrap svg {
+  stroke: rgba(255, 255, 255, 0.85);
+}
+
+/* Color accents */
+.menu-card:nth-child(1) .icon-wrap { border-color: rgba(233, 30, 99, 0.3); }
+.menu-card:nth-child(1):hover .icon-wrap { border-color: rgba(233, 30, 99, 0.5); }
+.menu-card:nth-child(2) .icon-wrap { border-color: rgba(33, 150, 243, 0.3); }
+.menu-card:nth-child(2):hover .icon-wrap { border-color: rgba(33, 150, 243, 0.5); }
+.menu-card:nth-child(3) .icon-wrap { border-color: rgba(255, 152, 0, 0.3); }
+.menu-card:nth-child(3):hover .icon-wrap { border-color: rgba(255, 152, 0, 0.5); }
+.menu-card:nth-child(4) .icon-wrap { border-color: rgba(76, 175, 80, 0.3); }
+.menu-card:nth-child(4):hover .icon-wrap { border-color: rgba(76, 175, 80, 0.5); }
+.menu-card:nth-child(5) .icon-wrap { border-color: rgba(156, 39, 176, 0.3); }
+.menu-card:nth-child(5):hover .icon-wrap { border-color: rgba(156, 39, 176, 0.5); }
+.menu-card:nth-child(6) .icon-wrap { border-color: rgba(0, 188, 212, 0.3); }
+.menu-card:nth-child(6):hover .icon-wrap { border-color: rgba(0, 188, 212, 0.5); }
+.menu-card:nth-child(7) .icon-wrap { border-color: rgba(255, 87, 34, 0.3); }
+.menu-card:nth-child(7):hover .icon-wrap { border-color: rgba(255, 87, 34, 0.5); }
+.menu-card:nth-child(8) .icon-wrap { border-color: rgba(96, 125, 139, 0.3); }
+.menu-card:nth-child(8):hover .icon-wrap { border-color: rgba(96, 125, 139, 0.5); }
+
+.menu-card .info {
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-card .title {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.menu-card .sub {
+  color: var(--muted);
+  font-size: 0.7rem;
+  margin-top: 2px;
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+.menu-card .arrow {
+  color: rgba(255, 255, 255, 0.06);
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateX(-8px);
+  flex-shrink: 0;
+}
+
+.menu-card:hover .arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  opacity: 0.3;
+  font-weight: 300;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.empty-state.visible {
+  display: block;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  max-width: var(--maxw);
+  text-align: center;
+  color: var(--muted);
+  padding: 12px 0 30px;
+  font-size: 0.85rem;
+  opacity: 0.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  .header-title h1 { font-size: 1.1rem; }
+  .logo-wrap { width: 70px; height: 70px; }
+  .logo { width: 50px; }
+  .menu-card { min-height: 60px; padding: 14px; }
+  .menu-card .icon-wrap { width: 38px; height: 38px; min-width: 38px; }
+  .menu-card .icon-wrap svg { width: 18px; height: 18px; }
+  .menu-card .title { font-size: 0.85rem; }
+  .search-wrapper input { font-size: 0.85rem; padding: 8px 14px; }
+}
+
+@media (max-width: 480px) {
+  .header { gap: 10px; padding: 10px; }
+  .logo-wrap { width: 56px; height: 56px; }
+  .logo { width: 40px; }
+  .header-title h1 { font-size: 0.9rem; }
+  .header-title p { font-size: 0.7rem; }
+  .header-title .sub { font-size: 0.6rem; }
+  .panel { padding: 14px; }
+  .menu-card { padding: 10px 12px; min-height: 52px; gap: 10px; }
+  .menu-card .icon-wrap { width: 34px; height: 34px; min-width: 34px; border-radius: 10px; }
+  .menu-card .icon-wrap svg { width: 16px; height: 16px; }
+  .menu-card .title { font-size: 0.75rem; }
+  .menu-card .sub { font-size: 0.6rem; }
+  .search-wrapper { gap: 8px; padding: 4px 0 12px 0; }
+  .search-wrapper input { font-size: 0.8rem; padding: 6px 12px; border-radius: 10px; }
+  .search-wrapper .result-count { font-size: 0.65rem; min-width: 30px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" role="banner">
+  <div class="logo-wrap">
+    <img class="logo" src="https://uploadkon.ir/uploads/7e2d29_25Quizly.png" alt="Quizly Logo" loading="lazy">
+    <div class="logo-overlay" aria-hidden="true"></div>
+  </div>
+  <div class="header-title">
+    <h1>📚 جزوه‌های حفظ 30 جزء  </h1>
+    <p>برگرفته از نمونه سوالات</p>
+    <div class="sub">جستجو و انتخاب کنید</div>
+  </div>
+</header>
+
+<!-- Panel -->
+<main class="panel">
+  <!-- Search Box -->
+  <div class="search-wrapper">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="جستجوی جزوه ..." />
+    <span class="result-count" id="resultCount">۰</span>
+  </div>
+
+  <!-- Scrollable Container -->
+  <div class="scroll-container">
+    <div class="menu-grid" id="menuGrid">
+      
+      <!-- جزوه ۱ -->
+      <a href="01.html" class="menu-card" data-title="جزوه 1">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 1</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+      <a href="02.html" class="menu-card" data-title="جزوه 2">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 2</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+      <a href="03.html" class="menu-card" data-title="جزوه 3">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 3</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+     <a href="04.html" class="menu-card" data-title="جزوه 4">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 4</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+      <a href="05.html" class="menu-card" data-title="جزوه 5">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 5</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+          
+      <a href="06.html" class="menu-card" data-title="جزوه 6">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 6</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+     <a href="07.html" class="menu-card" data-title="جزوه 7">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 7</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+           <a href="08.html" class="menu-card" data-title="جزوه 8">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 8</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+           <a href="09.html" class="menu-card" data-title="جزوه 9">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 9</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="10.html" class="menu-card" data-title="جزوه 10">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 10</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="11.html" class="menu-card" data-title="جزوه 11">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="11"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 11</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="12.html" class="menu-card" data-title="جزوه 12">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 12</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="13.html" class="menu-card" data-title="جزوه 13">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 13</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="14.html" class="menu-card" data-title="جزوه 14">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 14</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="15.html" class="menu-card" data-title="جزوه 15">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 15</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="16.html" class="menu-card" data-title="جزوه 16">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 16</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="17.html" class="menu-card" data-title="جزوه 17">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 17</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="18.html" class="menu-card" data-title="جزوه 18">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 18</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="19.html" class="menu-card" data-title="جزوه 19">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 19</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="20.html" class="menu-card" data-title="جزوه 20">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 20</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="21.html" class="menu-card" data-title="جزوه 21">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 21</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+                 <a href="22.html" class="menu-card" data-title="جزوه 22">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div class="info">
+          <div class="title">جزوه 22</div>
+          <div class="sub">نمونه سوالات</div>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+
+
+    </div>
+        
+
+
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState">✦ هیچ جزوه‌ای با این جستجو یافت نشد</div>
+  </div>
+</main>
+
+<footer>با 💗 Quizly — جزوه‌های مسائل تنوع فرهنگی در مشاوره</footer>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+const menuGrid = document.getElementById('menuGrid');
+const cards = menuGrid.querySelectorAll('.menu-card');
+const emptyState = document.getElementById('emptyState');
+const resultCount = document.getElementById('resultCount');
+
+function filterCards(searchTerm) {
+  const term = searchTerm.trim().toLowerCase();
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    const title = card.getAttribute('data-title') || '';
+    const match = title.toLowerCase().includes(term) || (term === '');
+
+    if (match) {
+      card.classList.remove('hidden');
+      visibleCount++;
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+
+  if (visibleCount === 0 && term !== '') {
+    emptyState.classList.add('visible');
+  } else {
+    emptyState.classList.remove('visible');
+  }
+
+  resultCount.textContent = visibleCount;
+}
+
+searchInput.addEventListener('input', (e) => filterCards(e.target.value));
+filterCards('');
+resultCount.textContent = cards.length;
+</script>
+</body>
+</html>
