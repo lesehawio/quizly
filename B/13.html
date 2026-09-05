@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره گروهی نظری · سری 13</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"13";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره گروهی نظری · سری 13</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری راهنمایی و مشاوره گروهی</h2>
+  <p>تحلیل کامل 100 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">100 سوال</span><span class="pill">5 فصل</span><span class="pill">نظریه‌پردازان</span><span class="pill">مراحل گروه</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>100</b><span>سوال</span></div>
+<div class="stat"><b>8</b><span>نظریه‌پرداز</span></div>
+<div class="stat"><b>5</b><span>فصل</span></div>
+<div class="stat"><b>4</b><span>مرحله گروه</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<!-- فصل اول: کلیات (سوالات 1 تا 13) -->
+
+<div class="card question" data-search="پرات 1932 مشاوره گروهی">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> مشاوره گروه‌ها توسط چه کسی و در چه سالی روی داده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پرات، 1932</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جوزف پرت (Pratt) در سال 1932 اولین گروه مشاوره را برای بیماران سل تشکیل داد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پرات، 1905: سال اشتباه است.<br>
+- موزون، 1932: نام اشتباه است.<br>
+- اسلارسون: در حوزه کودکان فعالیت داشت.<br>
+<b>نکته کلیدی:</b> پرت، 1932 = آغاز مشاوره گروهی
+</div>
+</div>
+
+<div class="card question" data-search="گروه درمانی واقعیت درمانی">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> گروه‌درمانی با کدام رویکرد انطباق دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">واقعیت درمانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه درمانی با رویکرد واقعیت درمانی (Reality Therapy) انطباق دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عقلانی، عاطفی: رویکرد دیگری است.<br>
+<b>نکته کلیدی:</b> گروه درمانی = واقعیت درمانی
+</div>
+</div>
+
+<div class="card question" data-search="گروه های مختلف 1960 تا 1970">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> در چه سالی گروه‌های مختلف در اجتماع مردم آمریکا به‌خوبی رواج یافت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1960 تا 1970</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های مختلف در دهه 1960 تا 1970 در آمریکا رواج یافتند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 1980-1990: دیرتر است.<br>
+<b>نکته کلیدی:</b> رواج گروه‌ها = 1960-1970
+</div>
+</div>
+
+<div class="card question" data-search="کنش متقابل بین اعضا تعریف گروه">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> نتیجه باعث می‌شود تعدادی از افراد را یک گروه بدانیم، بیش از همه چه چیزی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کنش متقابل بین اعضا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کنش متقابل (Interaction) بین اعضا مهم‌ترین عامل در تعریف گروه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اندازه گروه: عامل اصلی نیست.<br>
+<b>نکته کلیدی:</b> کنش متقابل = تعریف گروه
+</div>
+</div>
+
+<div class="card question" data-search="تقسیم بندی گروه ها نوع شکل گیری و هدف">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> تقسیم‌بندی کارهای گروهی به چهار شکل (گروه‌درمانی، روان‌درمانی، مشاوره گروهی و راهنمایی گروهی) بیش از همه به چه دلیلی بوده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نوع شکل‌گیری و هدف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تقسیم‌بندی بر اساس نوع شکل‌گیری و هدف گروه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اندازه گروه: ملاک نیست.<br>
+- مشکل مداری و علت تشکیل: بخشی از هدف است.<br>
+- درمانی یا آموزشی: نتیجه است.<br>
+<b>نکته کلیدی:</b> تقسیم‌بندی = نوع شکل‌گیری و هدف
+</div>
+</div>
+
+<div class="card question" data-search="کوری بازسازی نظام شخصیت">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> بنابر نظر کوری گروه‌های روان‌درمانی درواقع چه کاری انجام می‌دهند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بازسازی نظام شخصیت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کوری معتقد است گروه‌های روان‌درمانی به بازسازی نظام شخصیت (Personality Reconstruction) می‌پردازند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بهبود احساسات شخصی: هدف مشاوره است.<br>
+<b>نکته کلیدی:</b> روان‌درمانی = بازسازی شخصیت
+</div>
+</div>
+
+<div class="card question" data-search="تفاوت مشاوره گروهی با رواندرمانی بررسی رفتار احساس افکار">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه در مورد تفاوت‌های مشاوره گروهی با روان‌درمانی گروه درست نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در مشاوره گروهی رفتار، احساس و افکار بررسی نمی‌شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مشاوره گروهی نیز رفتار، احساس و افکار بررسی می‌شود.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- در مشاوره گروهی مشکلات مطرح می‌شوند: درست است.<br>
+- راهنمایی گروهی عرضه اطلاعات است: درست است.<br>
+- روان‌درمانی با درمان اختلالات روبه‌روست: درست است.<br>
+<b>نکته کلیدی:</b> مشاوره = بررسی رفتار، احساس و افکار
+</div>
+</div>
+
+<div class="card question" data-search="ویژگی راهنمایی گروهی همه موارد">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> ویژگی راهنمایی گروهی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راهنمایی گروهی سازمان‌یافته، جنبه پیشگیرانه دارد و آموزشی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> راهنمایی گروهی = سازمان‌یافته + پیشگیرانه + آموزشی
+</div>
+</div>
+
+<div class="card question" data-search="سایکودراما مورنو">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از روان‌شناسان سایکودراما (روان نمایشی) را وارد عرصه درمان‌های گروهی کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ژاکوب ال مورنو</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ژاکوب مورنو (Moreno) سایکودراما را وارد عرصه درمان‌های گروهی کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فروید: روان‌تحلیل‌گری را مطرح کرد.<br>
+- پرت: گروه درمانی سل را مطرح کرد.<br>
+- وندر: در حوزه دیگری فعالیت داشت.<br>
+<b>نکته کلیدی:</b> مورنو = سایکودراما
+</div>
+</div>
+
+<div class="card question" data-search="گروه های T کورت لوین">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> گروه‌های آموزشی (گروه‌های T) نخستین بار توسط چه کسی ایجاد شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کورت لوین</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های T توسط کورت لوین (Lewin) ایجاد شد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کوری: نظریه‌پرداز مشاوره گروهی است.<br>
+- یالوم: عوامل درمانی گروهی را مطرح کرد.<br>
+- مورنو: سایکودراما را مطرح کرد.<br>
+<b>نکته کلیدی:</b> گروه‌های T = لوین
+</div>
+</div>
+
+<div class="card question" data-search="گروه های همسالان هم زبانی">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> از ویژگی‌های این گروه‌ها هم‌زبانی اعضا با رهبر یا مشاور هم سن خود است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه‌های همسالان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های همسالان (Peer Groups) با هم‌زبانی اعضا با رهبر هم سن خود مشخص می‌شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رویارویی: نوع دیگری است.<br>
+- اختیاری: نوع دیگری است.<br>
+- انبوه خلق: ابتدایی‌ترین گروه است.<br>
+<b>نکته کلیدی:</b> همسالان = هم‌زبانی
+</div>
+</div>
+
+<div class="card question" data-search="گروه های T رشد شخصی">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> به کدام‌یک از گروه‌ها گروه رشد شخصی نیز می‌گویند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه‌های T</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های T به عنوان گروه رشد شخصی نیز شناخته می‌شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- با ساختار: نوع دیگری است.<br>
+- رویارویی: شکل گسترش‌یافته است.<br>
+- خودیاری: نوع دیگری است.<br>
+<b>نکته کلیدی:</b> گروه‌های T = رشد شخصی
+</div>
+</div>
+
+<div class="card question" data-search="گروه های AA خودیاری">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> گروه‌های AA جزء کدام دسته از گروه‌ها هستند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه خودیاری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های AA (الکلی‌های گمنام) جزء گروه‌های خودیاری (Self-Help) هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- یادگیری: نوع دیگری است.<br>
+- داوطلبانه: ویژگی است.<br>
+<b>نکته کلیدی:</b> AA = خودیاری
+</div>
+</div>
+
+<!-- فصل دوم: تشکیل گروه (سوالات 14 تا 22) -->
+
+<div class="card question" data-search="هدف اولیه درمان های گروهی رشد فردی">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> هدف اولیه درمان‌های گروهی چه باید باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رشد فردی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هدف اولیه درمان‌های گروهی رشد فردی (Personal Growth) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تغییر افراد: نتیجه است.<br>
+- حل مشکلات: بخشی از هدف است.<br>
+- رعایت قوانین: شرط است.<br>
+<b>نکته کلیدی:</b> رشد فردی = هدف اولیه
+</div>
+</div>
+
+<div class="card question" data-search="ویژگی رهبر گروه سازش پذیری و همنوایی">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از ویژگی‌های رهبر گروه نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سازش‌پذیری و همنوایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سازش‌پذیری و همنوایی (Conformity) از ویژگی‌های رهبر گروه نیست.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- یاری‌گر و کمک‌کننده: ویژگی رهبر است.<br>
+- مهارت ارتباط مؤثر: ویژگی رهبر است.<br>
+- اعتمادبه‌نفس بالا: ویژگی رهبر است.<br>
+<b>نکته کلیدی:</b> همنوایی ≠ ویژگی رهبر
+</div>
+</div>
+
+<div class="card question" data-search="اولین اقدام رهبر گروه دریافت مجوز قانونی">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> اولین اقدام رهبر گروه چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دریافت مجوز قانونی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اولین اقدام رهبر گروه دریافت مجوز قانونی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- جذب اعضا: بعد از مجوز است.<br>
+- برآورد هزینه: مرحله بعدی است.<br>
+- برآورد تعداد اعضا: مرحله بعدی است.<br>
+<b>نکته کلیدی:</b> اولین اقدام = مجوز قانونی
+</div>
+</div>
+
+<div class="card question" data-search="تشکیل گروه خصوصی یا دولتی">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> در مورد تشکیل گروه کدام گزینه صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">می‌تواند خصوصی یا دولتی باشد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تشکیل گروه می‌تواند خصوصی یا دولتی باشد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط خصوصی: نادرست است.<br>
+- فقط دولتی: نادرست است.<br>
+- فقط سازمان‌های مردم‌نهاد: نادرست است.<br>
+<b>نکته کلیدی:</b> گروه = خصوصی یا دولتی
+</div>
+</div>
+
+<div class="card question" data-search="موانع اثربخشی رهبر دلبستگی به نقش">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از موانع اثربخشی رهبر گروه محسوب نمی‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دلبستگی به نقش و وظایف خود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دلبستگی به نقش و وظایف، مانع اثربخشی نیست.<br>
+<b>چرا گزینه‌های دیگر موانع هستند؟</b><br>
+- برخورد دوگانه با اعضا: مانع است.<br>
+- رقابت با اعضا: مانع است.<br>
+- دوری از اهداف اولیه: مانع است.<br>
+<b>نکته کلیدی:</b> دلبستگی به نقش ≠ مانع اثربخشی
+</div>
+</div>
+
+<div class="card question" data-search="مکان برگزاری گروه بزرگ و زیبا">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه در مورد مکان برگزاری گروه صحیح نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به‌اندازه کافی بزرگ و زیبا باشد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> زیبایی مکان شرط نیست، بلکه آرامش و امنیت مهم است.<br>
+<b>چرا گزینه‌های دیگر صحیح هستند؟</b><br>
+- نور و دمای کافی: لازم است.<br>
+- آرام و ساکت: لازم است.<br>
+- احساس امنیت: لازم است.<br>
+<b>نکته کلیدی:</b> زیبایی ≠ شرط مکان گروه
+</div>
+</div>
+
+<div class="card question" data-search="گروه درمانی بلندمدت 6 ماه">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> گروه درمانی بلندمدت تا چه زمانی ادامه دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">6 ماه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه درمانی بلندمدت تا 6 ماه ادامه دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 2-3 ماه: کوتاه‌مدت است.<br>
+- 3-5 ماه: متوسط است.<br>
+- 8 ماه: طولانی‌تر است.<br>
+<b>نکته کلیدی:</b> بلندمدت = 6 ماه
+</div>
+</div>
+
+<div class="card question" data-search="خودشیفته ها برای گروه نامناسب همه موارد">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> چرا خودشیفته‌ها برای گروه نامناسب‌اند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خودشیفته‌ها انتقادپذیر نیستند، انتظار اطاعت دارند و خود را استثنایی می‌دانند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> خودشیفته = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="قواعد گروه با توجه به مکان گروه">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه در مورد قواعد حاکم بر گروه صحیح نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با توجه به مکان گروه نوشته می‌شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> قواعد گروه بر اساس نیازهای گروه نوشته می‌شود، نه مکان.<br>
+<b>چرا گزینه‌های دیگر صحیح هستند؟</b><br>
+- شفاف و مشخص: لازم است.<br>
+- پایبندی الزامی: لازم است.<br>
+- توسط رهبر اعلام می‌شود: معمول است.<br>
+<b>نکته کلیدی:</b> قواعد ≠ مکان گروه
+</div>
+</div>
+
+<!-- فصل سوم: مراحل گروه (سوالات 23 تا 41) -->
+
+<div class="card question" data-search="مراحل گروه مکاشفه انتقال عمل پایان">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه مراحل یک گروه را به ترتیب نشان می‌دهد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مکاشفه، انتقال، عمل، پایان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ترتیب مراحل گروه: مکاشفه (Exploration)، انتقال (Transition)، عمل (Action)، پایان (Termination).<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ترتیب‌های دیگر نادرست است.<br>
+<b>نکته کلیدی:</b> ترتیب مراحل = مکاشفه، انتقال، عمل، پایان
+</div>
+</div>
+
+<div class="card question" data-search="ترس های اعضا مرحله مکاشفه">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> در کدام‌یک از مراحل گروه ترس‌های اعضا شایع‌تر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مکاشفه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مرحله مکاشفه، ترس‌های اعضا شایع‌تر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- انتقال: تعارض شایع است.<br>
+- پایان: جمع‌بندی است.<br>
+- عمل: تغییر است.<br>
+<b>نکته کلیدی:</b> ترس = مرحله مکاشفه
+</div>
+</div>
+
+<div class="card question" data-search="تاکمن مراحل میانی">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> طبق مراحل تاکمن در کدام مرحله رهبر گروه با آشفتگی، مقاومت و هیجانات منفی روبه‌رو خواهد شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مراحل میانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مراحل میانی گروه، رهبر با آشفتگی، مقاومت و هیجانات منفی مواجه می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اول: مرحله شکل‌گیری است.<br>
+- سوم: مرحله هنجارسازی است.<br>
+- آخرین: مرحله پایانی است.<br>
+<b>نکته کلیدی:</b> آشفتگی و مقاومت = مراحل میانی
+</div>
+</div>
+
+<div class="card question" data-search="کوری مرحله انتقال بحران">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> از نظر کوری مرحله انتقال چه نام دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بحران</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از نظر کوری، مرحله انتقال بحران (Crisis) نام دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مکاشفه: مرحله اول است.<br>
+- عمل: مرحله سوم است.<br>
+- اختتام: مرحله آخر است.<br>
+<b>نکته کلیدی:</b> انتقال = بحران
+</div>
+</div>
+
+<div class="card question" data-search="تعارض کاذب تفسیر جایگاه">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> کدام نوع از تعارض ناشی از تفسیر جایگاه یا اعمال یک فرد توسط دیگران خواهد بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کاذب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعارض کاذب (False Conflict) ناشی از تفسیر جایگاه یا اعمال یک فرد توسط دیگران است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- وابسته: مربوط به وابستگی است.<br>
+- فرایند: مربوط به روش‌هاست.<br>
+- دوسوگرا: مربوط به تردید است.<br>
+<b>نکته کلیدی:</b> تعارض کاذب = تفسیر جایگاه
+</div>
+</div>
+
+<div class="card question" data-search="وظایف رهبر مراحل آغازین برخورد با انحصارطلب سکوت قواعد">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> وظایف رهبر گروه در مراحل آغازین شامل چه مواردی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">برخورد با افراد انحصارطلب، برخورد با سکوت، ایجاد قواعد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مراحل آغازین، رهبر باید با افراد انحصارطلب و سکوت برخورد کرده و قواعد را ایجاد کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تقسیم مسئولیت‌ها: در مراحل بعدی است.<br>
+- گوش دادن فعال: در همه مراحل است.<br>
+<b>نکته کلیدی:</b> مراحل آغازین = برخورد با انحصارطلب، سکوت، قواعد
+</div>
+</div>
+
+<div class="card question" data-search="بیوتلر مقاومت عدم شناخت">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> از نظر بیوتلر مقاومت چگونه شکل خواهد گرفت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عدم شناخت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از نظر بیوتلر، مقاومت ناشی از عدم شناخت (Lack of Awareness) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عدم آزادی: عامل دیگر است.<br>
+- عدم همدلی: عامل دیگر است.<br>
+- عدم تعامل: عامل دیگر است.<br>
+<b>نکته کلیدی:</b> مقاومت = عدم شناخت
+</div>
+</div>
+
+<div class="card question" data-search="حلقه اعضای فعال سکوت">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> فن حلقه اعضای فعال در برخورد با کدام مشکل گروهی مؤثر خواهد بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سکوت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فن حلقه اعضای فعال برای برخورد با سکوت (Silence) مؤثر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پرحرفی: نیاز به فن دیگر دارد.<br>
+- انحصارطلبی: نیاز به فن دیگر دارد.<br>
+- مقاومت: نیاز به فن دیگر دارد.<br>
+<b>نکته کلیدی:</b> حلقه اعضای فعال = سکوت
+</div>
+</div>
+
+<div class="card question" data-search="اضطراب تعارض مقاومت مرحله انتقال">
+<span class="qnum">سوال 31</span>
+<div class="fa"><b>متن سوال:</b> وجود اضطراب، تعارض و مقاومت از ویژگی‌های کدام‌یک از مراحل گروه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انتقال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اضطراب، تعارض و مقاومت ویژگی‌های مرحله انتقال است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آغازین: ترس شایع است.<br>
+- عمل: تغییر شایع است.<br>
+- پایان: جمع‌بندی است.<br>
+<b>نکته کلیدی:</b> اضطراب و تعارض = انتقال
+</div>
+</div>
+
+<div class="card question" data-search="بازشدن یخ گروه مرحله آغازین">
+<span class="qnum">سوال 32</span>
+<div class="fa"><b>متن سوال:</b> در کدام‌یک از مراحل گروهی اصطلاح «بازشدن یخ گروه» کاربرد دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آغازین</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصطلاح "بازشدن یخ گروه" در مرحله آغازین کاربرد دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- انتقال: تعارض است.<br>
+- عمل: تغییر است.<br>
+- پایان: جمع‌بندی است.<br>
+<b>نکته کلیدی:</b> بازشدن یخ = مرحله آغازین
+</div>
+</div>
+
+<div class="card question" data-search="گروه های کارآمد همه موارد">
+<span class="qnum">سوال 33</span>
+<div class="fa"><b>متن سوال:</b> کدام عامل از ویژگی‌های گروه‌های کارآمد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های کارآمد دارای خوش‌بینی و ارزیابی مداوم هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> گروه کارآمد = خوش‌بینی + ارزیابی مداوم
+</div>
+</div>
+
+<div class="card question" data-search="مهمترین علت اثربخشی گروه رهبری">
+<span class="qnum">سوال 34</span>
+<div class="fa"><b>متن سوال:</b> مهم‌ترین علت اثربخشی گروه کدام عامل است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رهبری گروه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مهم‌ترین علت اثربخشی گروه، رهبری گروه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مکان گروه: نقش کمتری دارد.<br>
+<b>نکته کلیدی:</b> اثربخشی گروه = رهبری
+</div>
+</div>
+
+<div class="card question" data-search="افراد خجالتی یادگیری مشاهده ای">
+<span class="qnum">سوال 35</span>
+<div class="fa"><b>متن سوال:</b> کدام روش می‌تواند برای افراد خجالتی مؤثر باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">یادگیری مشاهده‌ای</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یادگیری مشاهده‌ای (Observational Learning) برای افراد خجالتی مؤثر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فنون حلقه: برای سکوت است.<br>
+- پس‌خوراند گروهی: برای همه است.<br>
+- تخلیه هیجانی: برای کاهش تنش است.<br>
+<b>نکته کلیدی:</b> افراد خجالتی = یادگیری مشاهده‌ای
+</div>
+</div>
+
+<div class="card question" data-search="وحدت گروهی مرحله انسجام">
+<span class="qnum">سوال 36</span>
+<div class="fa"><b>متن سوال:</b> رسیدن گروه به احساس وحدت گروهی در چه مرحله‌ای اتفاق می‌افتد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انسجام</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رسیدن به وحدت گروهی در مرحله انسجام (Cohesion) اتفاق می‌افتد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- انتقال: تعارض است.<br>
+- اجرا: عمل است.<br>
+- پایان: جمع‌بندی است.<br>
+<b>نکته کلیدی:</b> وحدت گروهی = انسجام
+</div>
+</div>
+
+<div class="card question" data-search="ابراز مشکلات مرحله اجرا">
+<span class="qnum">سوال 37</span>
+<div class="fa"><b>متن سوال:</b> در کدام مرحله از مراحل گروه اعضا شروع به ابراز مشکلات می‌کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اجرا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مرحله اجرا (Action)، اعضا شروع به ابراز مشکلات می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آغازین: ترس است.<br>
+- انتقال: تعارض است.<br>
+- پایان: جمع‌بندی است.<br>
+<b>نکته کلیدی:</b> ابراز مشکلات = مرحله اجرا
+</div>
+</div>
+
+<div class="card question" data-search="خود فاش سازی افراد ساکت">
+<span class="qnum">سوال 38</span>
+<div class="fa"><b>متن سوال:</b> چه کسانی از خود فاش‌سازی کمترین بهره را می‌برند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">افراد ساکت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> افراد ساکت از خود فاش‌سازی کمترین بهره را می‌برند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- افراد جسور: بهره می‌برند.<br>
+<b>نکته کلیدی:</b> ساکت = کمترین بهره از خود فاش‌سازی
+</div>
+</div>
+
+<div class="card question" data-search="خودارزیابی عامل تغییر در مرحله عمل نیست">
+<span class="qnum">سوال 39</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از عوامل تغییر در مرحله عمل نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خودارزیابی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خودارزیابی (Self-Evaluation) عامل تغییر در مرحله عمل نیست.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- امیدواری و خوش‌بینی: عامل تغییر است.<br>
+- تخلیه هیجانی: عامل تغییر است.<br>
+<b>نکته کلیدی:</b> خودارزیابی ≠ عامل تغییر در عمل
+</div>
+</div>
+
+<div class="card question" data-search="خود فاش سازی مؤلفه عاطفی نیست">
+<span class="qnum">سوال 40</span>
+<div class="fa"><b>متن سوال:</b> کدام عامل جزء مؤلفه‌های عاطفی درمان نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خود فاش‌سازی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خود فاش‌سازی جزء مؤلفه‌های عاطفی درمان نیست.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- محبت: مؤلفه عاطفی است.<br>
+- صمیمیت: مؤلفه عاطفی است.<br>
+<b>نکته کلیدی:</b> خود فاش‌سازی ≠ مؤلفه عاطفی
+</div>
+</div>
+
+<div class="card question" data-search="جمع بندی خودشناسی">
+<span class="qnum">سوال 41</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از فنون و روش‌های مرحله پایانی بیش از همه به خودشناسی افراد کمک می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">جمع‌بندی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جمع‌بندی (Summary) بیش از همه به خودشناسی کمک می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- برگه نظرات: برای بازخورد است.<br>
+- بیان تجارب: برای به اشتراک گذاری است.<br>
+- پیگیری: برای ادامه است.<br>
+<b>نکته کلیدی:</b> خودشناسی = جمع‌بندی
+</div>
+</div>
+
+<!-- فصل چهارم: رویکردهای نظری (سوالات 42 تا 66) -->
+
+<div class="card question" data-search="یادگیری رویکردها چارچوب فکری و عملی">
+<span class="qnum">سوال 42</span>
+<div class="fa"><b>متن سوال:</b> به دلیل یادگیری رویکردهای مختلف در گروه درمانی اهمیت دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">داشتن چارچوب فکری و عملی توسط اعضا و رهبر گروه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یادگیری رویکردها به داشتن چارچوب فکری و عملی کمک می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عدم سوگیری: نتیجه است.<br>
+- اهمیت تاریخی: بخشی است.<br>
+- سودمندی در عمل: نتیجه است.<br>
+<b>نکته کلیدی:</b> رویکردها = چارچوب فکری و عملی
+</div>
+</div>
+
+<div class="card question" data-search="هدف گروه های روان تحلیلی بازسازی شخصیت">
+<span class="qnum">سوال 43</span>
+<div class="fa"><b>متن سوال:</b> هدف نهایی گروه‌های روان تحلیلی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بازسازی نظام شخصیتی اعضا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هدف نهایی روان‌تحلیلی، بازسازی نظام شخصیتی اعضا است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تحلیل گذشته: وسیله است.<br>
+- تحلیل مقاومت: بخشی از فرایند است.<br>
+- تداعی آزاد: تکنیک است.<br>
+<b>نکته کلیدی:</b> روان‌تحلیلی = بازسازی شخصیت
+</div>
+</div>
+
+<div class="card question" data-search="فرافکنی فن روان تحلیلی نیست">
+<span class="qnum">سوال 44</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از فنون و روش‌های روان تحلیلی به‌شمار نمی‌آید؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فرافکنی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فرافکنی (Projection) فن روان‌تحلیلی نیست.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- تحلیل رؤیاها: فن روان‌تحلیلی است.<br>
+- تداعی آزاد: فن روان‌تحلیلی است.<br>
+- تفسیر: فن روان‌تحلیلی است.<br>
+<b>نکته کلیدی:</b> فرافکنی ≠ فن روان‌تحلیلی
+</div>
+</div>
+
+<div class="card question" data-search="آدلر نیروهای اجتماعی">
+<span class="qnum">سوال 45</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از نظریه‌پردازان معتقد است افراد اساساً توسط نیروهای اجتماعی برانگیخته می‌شوند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آدلر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آدلر معتقد است افراد توسط نیروهای اجتماعی برانگیخته می‌شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فروید: بر ناخودآگاه تأکید دارد.<br>
+- الیس: بر باورها تأکید دارد.<br>
+- برن: بر حالت‌های من تأکید دارد.<br>
+<b>نکته کلیدی:</b> آدلر = نیروهای اجتماعی
+</div>
+</div>
+
+<div class="card question" data-search="منشأ پیشرفت و تمدن علاقه اجتماعی">
+<span class="qnum">سوال 46</span>
+<div class="fa"><b>متن سوال:</b> از نظر آدلر منشأ پیشرفت و تمدن بشر کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">علاقه اجتماعی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از نظر آدلر، منشأ پیشرفت و تمدن بشر علاقه اجتماعی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- احساس حقارت: محرک است.<br>
+- میل به برتری: محرک است.<br>
+- سبک زندگی: نتیجه است.<br>
+<b>نکته کلیدی:</b> علاقه اجتماعی = منشأ تمدن
+</div>
+</div>
+
+<div class="card question" data-search="دیدگاه پدیدارشناسی همه موارد">
+<span class="qnum">سوال 47</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه دیدگاهی مبتنی بر پدیدارشناسی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکردهای وجودی، گشتالتی و آدلری مبتنی بر پدیدارشناسی هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> پدیدارشناسی = وجودی + گشتالتی + آدلری
+</div>
+</div>
+
+<div class="card question" data-search="آخرین مرحله گروه آدلری جهت گیری مجدد">
+<span class="qnum">سوال 48</span>
+<div class="fa"><b>متن سوال:</b> آخرین مرحله از فرایند گروه آدلری چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">جهت‌گیری مجدد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آخرین مرحله گروه آدلری، جهت‌گیری مجدد (Reorientation) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آگاهی و بینش: مرحله قبل است.<br>
+- رابطه حسنه: مرحله اول است.<br>
+- تحلیل و سنجش: مرحله دوم است.<br>
+<b>نکته کلیدی:</b> آدلر = جهت‌گیری مجدد
+</div>
+</div>
+
+<div class="card question" data-search="گشتالت کار ناتمام">
+<span class="qnum">سوال 49</span>
+<div class="fa"><b>متن سوال:</b> وقتی یکی از اعضا می‌گوید "من از کینه و دشمنی می‌ترسم" و رهبر از او می‌خواهد تا در مورد این ترس با اعضای گروه صحبت کند، رهبر گروه با کدام یک از مفاهیم کلیدی گشتالتی عمل کرده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کار ناتمام</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> صحبت در مورد ترس، به معنای کار ناتمام (Unfinished Business) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خودگردانی ارگانیزمی: مفهوم دیگر است.<br>
+- نظریه میدانی: مفهوم دیگر است.<br>
+- بن‌بست: مفهوم دیگر است.<br>
+<b>نکته کلیدی:</b> کار ناتمام = گشتالت
+</div>
+</div>
+
+<div class="card question" data-search="پذیرش باورها درون فکنی">
+<span class="qnum">سوال 50</span>
+<div class="fa"><b>متن سوال:</b> پذیرش باورهای دیگران بدون انطباق با استانداردهای درونی چه نامیده می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">درون‌فکنی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درون‌فکنی (Introjection) یعنی پذیرش باورهای دیگران بدون انطباق.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- برون‌فکنی: نسبت دادن به دیگران است.<br>
+- انحراف: دور شدن است.<br>
+- هم‌آمیزی: ادغام مرزها است.<br>
+<b>نکته کلیدی:</b> درون‌فکنی = پذیرش باورهای دیگران
+</div>
+</div>
+
+<div class="card question" data-search="نظریه نقش اجتماعی روان نمایشی">
+<span class="qnum">سوال 51</span>
+<div class="fa"><b>متن سوال:</b> نظریه نقش اجتماعی توسط مبدع کدام رویکرد مطرح شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان نمایشی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نظریه نقش اجتماعی توسط مورنو در رویکرد روان‌نمایشی مطرح شد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گشتالتی: بر خودآگاهی تأکید دارد.<br>
+- آدلری: بر علاقه اجتماعی تأکید دارد.<br>
+- تحلیلی: بر ناخودآگاه تأکید دارد.<br>
+<b>نکته کلیدی:</b> نقش اجتماعی = روان‌نمایشی
+</div>
+</div>
+
+<div class="card question" data-search="خودانگیختگی مورنو رویارویی همراه با سرزندگی">
+<span class="qnum">سوال 52</span>
+<div class="fa"><b>متن سوال:</b> کدام تعریف مفهوم خودانگیختگی مورنو را بهتر توصیف می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویارویی همراه با سرزندگی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خودانگیختگی به معنای رویارویی همراه با سرزندگی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- علاقه به تعامل: بخشی است.<br>
+- رفتارهای ناگهانی: اشتباه است.<br>
+- احساس تعلق: بخشی است.<br>
+<b>نکته کلیدی:</b> خودانگیختگی = رویارویی همراه با سرزندگی
+</div>
+</div>
+
+<div class="card question" data-search="تلفیق شیوه ها روان نمایشی">
+<span class="qnum">سوال 53</span>
+<div class="fa"><b>متن سوال:</b> تلفیق شیوه‌های رفتاری، انسانی و روان‌پویشی از نقاط قوت کدام رویکرد محسوب می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان نمایشی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌نمایشی شیوه‌های رفتاری، انسانی و روان‌پویشی را تلفیق می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گشتالتی: بر آگاهی تأکید دارد.<br>
+- آدلری: بر علاقه اجتماعی تأکید دارد.<br>
+- تحلیلی: بر ناخودآگاه تأکید دارد.<br>
+<b>نکته کلیدی:</b> تلفیق شیوه‌ها = روان‌نمایشی
+</div>
+</div>
+
+<div class="card question" data-search="تسهیل گر بودن رهبر شخص محور">
+<span class="qnum">سوال 54</span>
+<div class="fa"><b>متن سوال:</b> کدام رویکرد بیش از بقیه به تسهیل‌گر بودن رهبر اعتقاد دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شخص محور</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد شخص محور بیش از همه به تسهیل‌گر بودن رهبر اعتقاد دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- واقعیت درمانی: بر هدایت تأکید دارد.<br>
+- تحلیلی: بر تفسیر تأکید دارد.<br>
+- راه حل محور: بر راه‌حل تأکید دارد.<br>
+<b>نکته کلیدی:</b> شخص محور = تسهیل‌گر
+</div>
+</div>
+
+<div class="card question" data-search="اصالت همخوانی تجارب با احساسات درونی">
+<span class="qnum">سوال 55</span>
+<div class="fa"><b>متن سوال:</b> مفهوم کلیدی اصالت در رویکرد شخص محور به چه معناست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همخوانی تجارب با احساسات درونی رهبر گروه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصالت یعنی همخوانی تجارب با احساسات درونی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پذیرا بودن: بخشی است.<br>
+- تأیید اعضا: بخشی است.<br>
+- خلوص نیت: بخشی است.<br>
+<b>نکته کلیدی:</b> اصالت = همخوانی
+</div>
+</div>
+
+<div class="card question" data-search="مرحله اول شخص محور آشفتگی">
+<span class="qnum">سوال 56</span>
+<div class="fa"><b>متن سوال:</b> اولین مرحله از فرایند گروه شخص محور کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آشفتگی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اولین مرحله شخص محور، آشفتگی (Confusion) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بیان اطلاعات: مرحله بعد است.<br>
+- ابراز احساسات: مرحله بعد است.<br>
+- آرامیدگی: مرحله آخر است.<br>
+<b>نکته کلیدی:</b> شخص محور = آشفتگی
+</div>
+</div>
+
+<div class="card question" data-search="هدف تحلیل تبادلی خودمختاری">
+<span class="qnum">سوال 57</span>
+<div class="fa"><b>متن سوال:</b> هدف از گروه‌های تحلیل تبادلی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خودمختاری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هدف گروه‌های تحلیل تبادلی، خودمختاری (Autonomy) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تغییر رفتار: وسیله است.<br>
+- بازسازی شخصیت: در روان‌تحلیلی است.<br>
+- تعدیل: بخشی است.<br>
+<b>نکته کلیدی:</b> تحلیل تبادلی = خودمختاری
+</div>
+</div>
+
+<div class="card question" data-search="نوازش منبع برانگیختگی">
+<span class="qnum">سوال 58</span>
+<div class="fa"><b>متن سوال:</b> در تحلیل تبادلی هرگونه نیاز به قدردانی یا منبع برانگیختگی را چه می‌نامند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نوازش</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نوازش (Stroke) یعنی نیاز به قدردانی یا منبع برانگیختگی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سوق‌دهنده: مفهوم دیگر است.<br>
+- بازی: مجموعه تبادلات است.<br>
+- تبادل: واحد ارتباط است.<br>
+<b>نکته کلیدی:</b> نوازش = قدردانی
+</div>
+</div>
+
+<div class="card question" data-search="نقاط قوت تحلیل تبادلی همه موارد">
+<span class="qnum">سوال 59</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از نقاط قوت رویکرد تحلیل تبادلی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد صحیح است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تحلیل تبادلی دارای رهاشدن از پیام‌های قدیمی، تساوی‌طلبی و زبان واضح است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> تحلیل تبادلی = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="واقعیت درمانی تغییر به سمت رفتار اثربخش">
+<span class="qnum">سوال 60</span>
+<div class="fa"><b>متن سوال:</b> تمرکز اصلی رویکرد واقعیت درمانی بر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تغییر رفتارها به‌سوی رفتار اثربخش</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> واقعیت درمانی بر تغییر رفتار به‌سوی رفتار اثربخش متمرکز است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مواجهه با عقاید غیرمنطقی: مربوط به REBT است.<br>
+- پذیرش خویشتن: مربوط به انسان‌گرایانه است.<br>
+- خودمختاری: هدف است.<br>
+<b>نکته کلیدی:</b> واقعیت درمانی = تغییر رفتار اثربخش
+</div>
+</div>
+
+<div class="card question" data-search="عقلانی عاطفی مربی روانشناختی">
+<span class="qnum">سوال 61</span>
+<div class="fa"><b>متن سوال:</b> در کدام رویکرد رهبر نقش مربی روان‌شناختی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عقلانی، عاطفی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در REBT، رهبر نقش مربی روان‌شناختی دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شخص محور: تسهیل‌گر است.<br>
+- تحلیل تبادلی: تحلیل‌گر است.<br>
+<b>نکته کلیدی:</b> REBT = مربی روان‌شناختی
+</div>
+</div>
+
+<div class="card question" data-search="نظریه کنترل واقعیت درمانی">
+<span class="qnum">سوال 62</span>
+<div class="fa"><b>متن سوال:</b> نظریه کنترل مبنایی برای ایجاد کدام رویکرد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">واقعیت درمانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نظریه کنترل (Control Theory) مبنای واقعیت درمانی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- راه‌حل محور: بر راه‌حل تأکید دارد.<br>
+- تحلیل تبادلی: بر حالت‌های من تأکید دارد.<br>
+- گشتالتی: بر آگاهی تأکید دارد.<br>
+<b>نکته کلیدی:</b> نظریه کنترل = واقعیت درمانی
+</div>
+</div>
+
+<div class="card question" data-search="هدف واقعیت درمانی تغییر و انتخاب رفتارهای واقع بینانه">
+<span class="qnum">سوال 63</span>
+<div class="fa"><b>متن سوال:</b> هدف از مشاوره گروهی با رویکرد واقعیت درمانی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تغییر و انتخاب رفتارهای واقع‌بینانه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هدف واقعیت درمانی، تغییر و انتخاب رفتارهای واقع‌بینانه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خودمختاری: هدف تحلیل تبادلی است.<br>
+- ایفای نقش سالم: نتیجه است.<br>
+- پاسخ به نیازها: فرایند است.<br>
+<b>نکته کلیدی:</b> واقعیت درمانی = رفتارهای واقع‌بینانه
+</div>
+</div>
+
+<div class="card question" data-search="تکنیک شوخی شکستن یخ گروه">
+<span class="qnum">سوال 64</span>
+<div class="fa"><b>متن سوال:</b> استفاده از تکنیک شوخی در واقعیت درمانی به چه منظور صورت می‌گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به‌دلیل شکستن یخ گروه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تکنیک شوخی برای شکستن یخ گروه در واقعیت درمانی استفاده می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- به عنوان مسیر راحتی: بخشی است.<br>
+- کاهش ناامیدی: بخشی است.<br>
+<b>نکته کلیدی:</b> شوخی = شکستن یخ
+</div>
+</div>
+
+<div class="card question" data-search="راه حل محور از موقعیت فعلی">
+<span class="qnum">سوال 65</span>
+<div class="fa"><b>متن سوال:</b> درمانگران راه‌حل محور کار خود را از کجا شروع می‌کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">از همان موقعیتی که افراد در آن هستند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگران راه‌حل محور از موقعیت فعلی افراد شروع می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- از گذشته: مربوط به روان‌تحلیلی است.<br>
+- از برنامه آینده: در مراحل بعد است.<br>
+- از موقعیت‌های دشوار: در مراحل بعد است.<br>
+<b>نکته کلیدی:</b> راه‌حل محور = موقعیت فعلی
+</div>
+</div>
+
+<div class="card question" data-search="مرحله اول راه حل محور تنظیم آهنگ گروه">
+<span class="qnum">سوال 66</span>
+<div class="fa"><b>متن سوال:</b> اولین مرحله از فرایند گروه‌درمانی راه‌حل محور کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تنظیم آهنگ گروه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اولین مرحله راه‌حل محور، تنظیم آهنگ گروه (Pacing) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تعیین اهداف: مرحله بعد است.<br>
+- تعیین نیازها: مرحله بعد است.<br>
+- ایجاد امنیت: در همه مراحل است.<br>
+<b>نکته کلیدی:</b> راه‌حل محور = تنظیم آهنگ
+</div>
+</div>
+
+<!-- فصل پنجم: گروه‌های خاص (سوالات 67 تا 100) -->
+
+<div class="card question" data-search="تدوین طرح گروه خاص همه موارد">
+<span class="qnum">سوال 67</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از ویژگی‌های تدوین طرح برای یک گروه خاص است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد صحیح است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تدوین طرح نیاز به آگاهی از قوانین، توجه به سن و ویژگی‌های رهبر دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> تدوین طرح = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="هدف مشاوره زنان همه موارد">
+<span class="qnum">سوال 68</span>
+<div class="fa"><b>متن سوال:</b> هدف از مشاوره گروهی زنان به‌طورکلی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مشاوره گروهی زنان به کسب استقلال، خودباوری و شادکامی کمک می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> مشاوره زنان = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="نکات قانونی مشاوره کودکان همه موارد">
+<span class="qnum">سوال 69</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از گزینه‌های ذیل مرتبط با نکات قانونی مشاوره گروهی با کودکان است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نکات قانونی شامل عدم تأکید بر حفظ اطلاعات، تأکید بر اجازه کتبی و توجه به قوانین است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> نکات قانونی = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="مشاوره کودکان در شرایط عادی پیشگیری">
+<span class="qnum">سوال 70</span>
+<div class="fa"><b>متن سوال:</b> هدف از مشاوره گروهی کودکان در شرایط عادی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پیشگیری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در شرایط عادی، هدف مشاوره کودکان پیشگیری (Prevention) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شناسایی: در شرایط خاص است.<br>
+<b>نکته کلیدی:</b> شرایط عادی = پیشگیری
+</div>
+</div>
+
+<div class="card question" data-search="اقدامات اولیه در کار با کودکان اخذ رضایت نامه">
+<span class="qnum">سوال 71</span>
+<div class="fa"><b>متن سوال:</b> از مهم‌ترین اقدامات اولیه پس از تعیین اهداف گروه‌درمانی در کار با کودکان چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اخذ رضایت‌نامه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اخذ رضایت‌نامه (Consent) از مهم‌ترین اقدامات اولیه در کار با کودکان است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ملاقات با والدین: بخشی است.<br>
+<b>نکته کلیدی:</b> رضایت‌نامه = اقدام اولیه
+</div>
+</div>
+
+<div class="card question" data-search="بهترین سن نوجوانی 12-17 سالگی">
+<span class="qnum">سوال 72</span>
+<div class="fa"><b>متن سوال:</b> بهترین سن مؤثر گروه درمانی نوجوانی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">12-17 سالگی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بهترین سن گروه درمانی نوجوانی 12 تا 17 سالگی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 18-15 سالگی: بخشی از آن است.<br>
+- 16-21 سالگی: جوانی است.<br>
+<b>نکته کلیدی:</b> نوجوانی = 12-17 سالگی
+</div>
+</div>
+
+<div class="card question" data-search="ویژگی کار با سالمندان همه موارد">
+<span class="qnum">سوال 73</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه از ویژگی‌های کار با سالمندان است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کار با سالمندان شامل آهسته پیش رفتن، بازیابی هویت و شرکت در فعالیت‌های پرهیجان است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> سالمندان = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="ایدز ننگ اجتماعی">
+<span class="qnum">سوال 74</span>
+<div class="fa"><b>متن سوال:</b> در بیماری ایدز کدام ویژگی روانی نمود بیشتری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ننگ اجتماعی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در بیماری ایدز، ننگ اجتماعی (Social Stigma) نمود بیشتری دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- جستجوی هویت: در نوجوانی است.<br>
+- ضعف حافظه: در سالمندی است.<br>
+- فقدان: در سوگ است.<br>
+<b>نکته کلیدی:</b> ایدز = ننگ اجتماعی
+</div>
+</div>
+
+<div class="card question" data-search="آزار جنسی همه موارد">
+<span class="qnum">سوال 75</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از گزینه‌های ذیل ناشی از آزار دیدن جنسی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آزار جنسی باعث کاهش عزت‌نفس، هویت منفی و بدکاری جنسی می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> آزار جنسی = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="مشاوره سوگ ایجاد شناخت دقیق">
+<span class="qnum">سوال 76</span>
+<div class="fa"><b>متن سوال:</b> مهم‌ترین اقدام در مشاوره سوگ به سوگواران چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایجاد شناخت دقیق از فرایند سوگ</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مهم‌ترین اقدام در مشاوره سوگ، ایجاد شناخت دقیق از فرایند سوگ است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تشویق به بازیابی خاطرات: بخشی است.<br>
+- انکار رویداد: نادرست است.<br>
+- ایجاد همدلی: مهم است اما شناخت مهم‌تر است.<br>
+<b>نکته کلیدی:</b> سوگ = شناخت فرایند
+</div>
+</div>
+
+<div class="card question" data-search="پیگیری آزاردیدگان جنسی 6-12 هفته">
+<span class="qnum">سوال 77</span>
+<div class="fa"><b>متن سوال:</b> بهترین زمان برای پیگیری جلسات آزاردیدگان جنسی چه زمانی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">6-12 هفته</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بهترین زمان برای پیگیری جلسات آزاردیدگان جنسی 6 تا 12 هفته است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- یک سال: طولانی است.<br>
+- چهار ماه: طولانی است.<br>
+- شش ماه: طولانی است.<br>
+<b>نکته کلیدی:</b> آزاردیدگان = 6-12 هفته
+</div>
+</div>
+
+<!-- سوالات 78 تا 100 -->
+
+<div class="card question" data-search="ویژگی های سالمندان شرکت در فعالیت های پرهیجان">
+<span class="qnum">سوال 78</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه از ویژگی‌های کار با سالمندان نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شرکت در فعالیت‌های پرهیجان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شرکت در فعالیت‌های پرهیجان از ویژگی‌های کار با سالمندان نیست.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- آهسته پیش رفتن: ویژگی سالمندان است.<br>
+- بازیابی هویت: ویژگی سالمندان است.<br>
+<b>نکته کلیدی:</b> پرهیجان ≠ ویژگی سالمندان
+</div>
+</div>
+
+<div class="card question" data-search="بیماران جسمی توجه به محدودیت های جسمی">
+<span class="qnum">سوال 79</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با بیماران جسمی، کدام عامل مهم‌تر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">توجه به محدودیت‌های جسمی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مشاوره با بیماران جسمی، توجه به محدودیت‌های جسمی مهم‌تر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> بیماران جسمی = محدودیت‌های جسمی
+</div>
+</div>
+
+<div class="card question" data-search="گروه های وابسته به جنسیت زنان و مردان">
+<span class="qnum">سوال 80</span>
+<div class="fa"><b>متن سوال:</b> گروه‌های وابسته به جنسیت به چه گروه‌هایی گفته می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه‌های زنان و مردان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های وابسته به جنسیت شامل گروه‌های زنان و مردان است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> وابسته به جنسیت = زنان و مردان
+</div>
+</div>
+
+<div class="card question" data-search="مشاوره کودکان نقش والدین همکاری با درمانگر">
+<span class="qnum">سوال 81</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با کودکان، نقش والدین چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همکاری با درمانگر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نقش والدین در مشاوره کودکان، همکاری با درمانگر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> والدین = همکاری با درمانگر
+</div>
+</div>
+
+<div class="card question" data-search="نوجوانان ایجاد فضای امن">
+<span class="qnum">سوال 82</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر در مشاوره گروهی با نوجوانان مهم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایجاد فضای امن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ایجاد فضای امن در مشاوره با نوجوانان مهم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> نوجوانان = فضای امن
+</div>
+</div>
+
+<div class="card question" data-search="سالمندان یادآوری خاطرات">
+<span class="qnum">سوال 83</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با سالمندان، چه رویکردی مؤثرتر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد یادآوری خاطرات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد یادآوری خاطرات (Reminiscence) در مشاوره با سالمندان مؤثرتر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> سالمندان = یادآوری خاطرات
+</div>
+</div>
+
+<div class="card question" data-search="ایدز کاهش انگ اجتماعی">
+<span class="qnum">سوال 84</span>
+<div class="fa"><b>متن سوال:</b> هدف از مشاوره گروهی با بیماران ایدز چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کاهش انگ اجتماعی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هدف مشاوره با بیماران ایدز، کاهش انگ اجتماعی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> ایدز = کاهش انگ اجتماعی
+</div>
+</div>
+
+<div class="card question" data-search="سوگ بیان احساسات">
+<span class="qnum">سوال 85</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر در مشاوره سوگ مؤثر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بیان احساسات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بیان احساسات در مشاوره سوگ مؤثر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> سوگ = بیان احساسات
+</div>
+</div>
+
+<div class="card question" data-search="آزاردیدگان جنسی بازسازی اعتماد به نفس">
+<span class="qnum">سوال 86</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با آزاردیدگان جنسی، چه موضوعی مهم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بازسازی اعتماد به نفس</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بازسازی اعتماد به نفس در مشاوره با آزاردیدگان جنسی مهم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> آزاردیدگان = بازسازی اعتماد به نفس
+</div>
+</div>
+
+<div class="card question" data-search="اندازه گروه کودکان 3-5 نفر">
+<span class="qnum">سوال 87</span>
+<div class="fa"><b>متن سوال:</b> بهترین اندازه گروه برای کودکان چند نفر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">3-5 نفر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بهترین اندازه گروه برای کودکان 3 تا 5 نفر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> کودکان = 3-5 نفر
+</div>
+</div>
+
+<div class="card question" data-search="مدت جلسات نوجوانان 45-60 دقیقه">
+<span class="qnum">سوال 88</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با نوجوانان، چه مدت جلسات مناسب است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">45-60 دقیقه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مدت جلسات نوجوانان 45 تا 60 دقیقه مناسب است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> نوجوانان = 45-60 دقیقه
+</div>
+</div>
+
+<div class="card question" data-search="سالمندان سرعت کم جلسات">
+<span class="qnum">سوال 89</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر در مشاوره گروهی با سالمندان باید رعایت شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سرعت کم جلسات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سرعت کم جلسات در مشاوره با سالمندان باید رعایت شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> سالمندان = سرعت کم
+</div>
+</div>
+
+<div class="card question" data-search="بیماران جسمی سازگاری با بیماری">
+<span class="qnum">سوال 90</span>
+<div class="fa"><b>متن سوال:</b> هدف از مشاوره گروهی با بیماران جسمی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سازگاری با بیماری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هدف مشاوره با بیماران جسمی، سازگاری با بیماری است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> بیماران جسمی = سازگاری با بیماری
+</div>
+</div>
+
+<div class="card question" data-search="ایدز رویکرد حمایتی">
+<span class="qnum">سوال 91</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با بیماران ایدز، کدام رویکرد مؤثر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد حمایتی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد حمایتی (Supportive) در مشاوره با بیماران ایدز مؤثر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> ایدز = رویکرد حمایتی
+</div>
+</div>
+
+<div class="card question" data-search="سوگ انکار فقدان">
+<span class="qnum">سوال 92</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر در مشاوره سوگ باید اجتناب شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انکار فقدان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انکار فقدان در مشاوره سوگ باید اجتناب شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> سوگ = اجتناب از انکار
+</div>
+</div>
+
+<div class="card question" data-search="آزاردیدگان جنسی 6-12 هفته">
+<span class="qnum">سوال 93</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با آزاردیدگان جنسی، چه مدت جلسات مناسب است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">6-12 هفته</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مدت جلسات آزاردیدگان جنسی 6 تا 12 هفته است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> آزاردیدگان = 6-12 هفته
+</div>
+</div>
+
+<div class="card question" data-search="کودکان استفاده از بازی">
+<span class="qnum">سوال 94</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر در مشاوره گروهی با کودکان باید رعایت شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">استفاده از بازی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> استفاده از بازی در مشاوره با کودکان باید رعایت شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> کودکان = استفاده از بازی
+</div>
+</div>
+
+<div class="card question" data-search="نوجوانان هویت یابی">
+<span class="qnum">سوال 95</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با نوجوانان، کدام موضوع مهم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هویت‌یابی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هویت‌یابی (Identity Formation) در مشاوره با نوجوانان مهم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> نوجوانان = هویت‌یابی
+</div>
+</div>
+
+<div class="card question" data-search="سالمندان تنهایی">
+<span class="qnum">سوال 96</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با سالمندان، کدام موضوع مهم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تنهایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تنهایی (Loneliness) در مشاوره با سالمندان مهم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> سالمندان = تنهایی
+</div>
+</div>
+
+<div class="card question" data-search="بیماران جسمی کاهش اضطراب">
+<span class="qnum">سوال 97</span>
+<div class="fa"><b>متن سوال:</b> هدف از مشاوره گروهی با بیماران جسمی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کاهش اضطراب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کاهش اضطراب هدف مشاوره با بیماران جسمی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> بیماران جسمی = کاهش اضطراب
+</div>
+</div>
+
+<div class="card question" data-search="ایدز حمایت اجتماعی">
+<span class="qnum">سوال 98</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با بیماران ایدز، کدام موضوع مهم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">حمایت اجتماعی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حمایت اجتماعی (Social Support) در مشاوره با بیماران ایدز مهم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> ایدز = حمایت اجتماعی
+</div>
+</div>
+
+<div class="card question" data-search="سوگ پذیرش فقدان">
+<span class="qnum">سوال 99</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره سوگ، کدام مرحله مهم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پذیرش فقدان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پذیرش فقدان (Acceptance) در مشاوره سوگ مهم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> سوگ = پذیرش فقدان
+</div>
+</div>
+
+<div class="card question" data-search="آزاردیدگان جنسی بازیابی اعتماد به نفس">
+<span class="qnum">سوال 100</span>
+<div class="fa"><b>متن سوال:</b> در مشاوره گروهی با آزاردیدگان جنسی، کدام هدف مهم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بازیابی اعتماد به نفس</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بازیابی اعتماد به نفس هدف مهم مشاوره با آزاردیدگان جنسی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+<b>نکته کلیدی:</b> آزاردیدگان = بازیابی اعتماد به نفس
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>تاریخچه و مفاهیم بنیادین</h3></div>
+<div class="grid2">
+<div class="box"><h4>مشاوره گروهی</h4>
+<div class="fa">پرات، 1932</div>
+</div>
+<div class="box"><h4>سایکودراما</h4>
+<div class="fa">مورنو</div>
+</div>
+<div class="box"><h4>گروه‌های T</h4>
+<div class="fa">لوین</div>
+</div>
+<div class="box"><h4>گروه‌های AA</h4>
+<div class="fa">خودیاری</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراحل گروه</h3></div>
+<div class="grid2">
+<div class="box"><h4>ترتیب مراحل</h4>
+<div class="fa">مکاشفه، انتقال، عمل، پایان</div>
+</div>
+<div class="box"><h4>مرحله انتقال</h4>
+<div class="fa">بحران، اضطراب، تعارض</div>
+</div>
+<div class="box"><h4>مرحله مکاشفه</h4>
+<div class="fa">ترس شایع است</div>
+</div>
+<div class="box"><h4>مرحله انسجام</h4>
+<div class="fa">وحدت گروهی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رویکردهای نظری</h3></div>
+<div class="grid2">
+<div class="box"><h4>روان‌تحلیلی</h4>
+<div class="fa">بازسازی شخصیت</div>
+</div>
+<div class="box"><h4>آدلری</h4>
+<div class="fa">علاقه اجتماعی</div>
+</div>
+<div class="box"><h4>شخص محور</h4>
+<div class="fa">تسهیل‌گر</div>
+</div>
+<div class="box"><h4>واقعیت درمانی</h4>
+<div class="fa">تغییر رفتار اثربخش</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گروه‌های خاص</h3></div>
+<div class="grid2">
+<div class="box"><h4>نوجوانان</h4>
+<div class="fa">12-17 سالگی</div>
+</div>
+<div class="box"><h4>سالمندان</h4>
+<div class="fa">یادآوری خاطرات</div>
+</div>
+<div class="box"><h4>کودکان</h4>
+<div class="fa">3-5 نفر، بازی</div>
+</div>
+<div class="box"><h4>آزاردیدگان</h4>
+<div class="fa">6-12 هفته پیگیری</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت مشاوره گروهی و روان‌درمانی</h3></div>
+<div class="fa"><b>تعریف:</b> مشاوره گروهی بر مشکلات و رشد، روان‌درمانی بر بازسازی شخصیت تمرکز دارد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>مشاوره:</b> بررسی رفتار، احساس و افکار<br>
+<b>روان‌درمانی:</b> بازسازی نظام شخصیت<br>
+<b>سوالات مرتبط:</b> 7، 43
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراحل گروه</h3></div>
+<div class="fa"><b>تعریف:</b> مراحل تکامل گروه از آغاز تا پایان.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ترتیب:</b> مکاشفه، انتقال، عمل، پایان<br>
+<b>مرحله انتقال:</b> بحران، اضطراب، تعارض<br>
+<b>مرحله مکاشفه:</b> ترس شایع است<br>
+<b>سوالات مرتبط:</b> 23، 24، 26، 31
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رویکردهای نظری</h3></div>
+<div class="fa"><b>تعریف:</b> مکاتب و نظریه‌های مختلف در گروه درمانی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>روان‌تحلیلی:</b> بازسازی شخصیت، تداعی آزاد<br>
+<b>آدلری:</b> علاقه اجتماعی، جهت‌گیری مجدد<br>
+<b>شخص محور:</b> تسهیل‌گر، اصالت<br>
+<b>واقعیت درمانی:</b> تغییر رفتار اثربخش<br>
+<b>سوالات مرتبط:</b> 43-66
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گروه‌های خاص</h3></div>
+<div class="fa"><b>تعریف:</b> گروه‌های ویژه با ویژگی‌های خاص.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>کودکان:</b> 3-5 نفر، استفاده از بازی<br>
+<b>نوجوانان:</b> 12-17 سال، 45-60 دقیقه<br>
+<b>سالمندان:</b> یادآوری خاطرات، سرعت کم<br>
+<b>آزاردیدگان:</b> 6-12 هفته پیگیری<br>
+<b>سوالات مرتبط:</b> 67-100
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>مشاوره گروهی</td><td>روان‌درمانی</td><td>مشاوره = رشد، روان‌درمانی = بازسازی</td><td>رشد vs بازسازی</td></tr>
+<tr><td>مرحله مکاشفه</td><td>مرحله انتقال</td><td>مکاشفه = ترس، انتقال = تعارض</td><td>ترس vs تعارض</td></tr>
+<tr><td>شخص محور</td><td>واقعیت درمانی</td><td>شخص محور = تسهیل‌گر، واقعیت = هدایت‌گر</td><td>تسهیل vs هدایت</td></tr>
+<tr><td>روان‌تحلیلی</td><td>آدلری</td><td>روان‌تحلیلی = ناخودآگاه، آدلری = اجتماعی</td><td>ناخودآگاه vs اجتماعی</td></tr>
+<tr><td>کودکان</td><td>نوجوانان</td><td>کودکان = 3-5 نفر، نوجوانان = 12-17 سال</td><td>3-5 vs 12-17</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>جوزف پرت</h3></div>
+<div class="fa"><b>ایده اصلی:</b> اولین گروه مشاوره (1932) برای بیماران سل</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "پرات"، "سل"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 1</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ژاکوب مورنو</h3></div>
+<div class="fa"><b>ایده اصلی:</b> سایکودراما، نظریه نقش اجتماعی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "مورنو"، "سایکودراما"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 9، 51، 52</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کورت لوین</h3></div>
+<div class="fa"><b>ایده اصلی:</b> گروه‌های T</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "لوین"، "گروه‌های T"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 10</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آلفرد آدلر</h3></div>
+<div class="fa"><b>ایده اصلی:</b> علاقه اجتماعی، نیروهای اجتماعی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "آدلر"، "علاقه اجتماعی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 45، 46، 48</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارل راجرز</h3></div>
+<div class="fa"><b>ایده اصلی:</b> شخص محور، تسهیل‌گر، اصالت</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "راجرز"، "شخص محور"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 54، 55، 56</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویلیام گلاسر</h3></div>
+<div class="fa"><b>ایده اصلی:</b> واقعیت درمانی، نظریه کنترل</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "گلاسر"، "واقعیت درمانی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 60، 62، 63</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اریک برن</h3></div>
+<div class="fa"><b>ایده اصلی:</b> تحلیل تبادلی، نوازش</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "برن"، "تحلیل تبادلی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 57، 58، 59</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جرالد کوری</h3></div>
+<div class="fa"><b>ایده اصلی:</b> روان‌درمانی = بازسازی شخصیت</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "کوری"، "بازسازی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 6</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: پرت و سال</h3>
+<div class="fa"><b>سوال نمونه:</b> مشاوره گروهی توسط چه کسی و در چه سالی روی داد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "پرات، 1905" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> پرت، 1932</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> 1932 سال دقیق شروع مشاوره گروهی است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> پرت = 1932
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: مراحل گروه</h3>
+<div class="fa"><b>سوال نمونه:</b> ترتیب مراحل گروه کدام است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "انتقال، مکاشفه، عمل، پایان" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> مکاشفه، انتقال، عمل، پایان</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ترتیب صحیح از مکاشفه شروع می‌شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> مکاشفه ← انتقال ← عمل ← پایان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: هدف روان‌تحلیلی</h3>
+<div class="fa"><b>سوال نمونه:</b> هدف نهایی گروه‌های روان تحلیلی چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "تحلیل گذشته" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> بازسازی نظام شخصیتی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> تحلیل گذشته وسیله است، نه هدف نهایی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> روان‌تحلیلی = بازسازی شخصیت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: اصالت</h3>
+<div class="fa"><b>سوال نمونه:</b> اصالت در شخص محور به چه معناست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "پذیرا بودن" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> همخوانی تجارب با احساسات درونی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> پذیرا بودن بخشی است، اما اصالت یعنی همخوانی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اصالت = همخوانی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: هدف واقعیت درمانی</h3>
+<div class="fa"><b>سوال نمونه:</b> هدف واقعیت درمانی چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "خودمختاری" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تغییر رفتارهای واقع‌بینانه</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> خودمختاری هدف تحلیل تبادلی است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> واقعیت درمانی = رفتار واقع‌بینانه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: سن نوجوانان</h3>
+<div class="fa"><b>سوال نمونه:</b> بهترین سن گروه درمانی نوجوانی چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "18-15 سالگی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> 12-17 سالگی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> 12-17 سالگی دقیق‌ترین محدوده است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> نوجوانان = 12-17 سال
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: مشاوره سوگ</h3>
+<div class="fa"><b>سوال نمونه:</b> مهم‌ترین اقدام در مشاوره سوگ چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "ایجاد همدلی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ایجاد شناخت دقیق از فرایند سوگ</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> همدلی مهم است اما شناخت فرایند مهم‌تر است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> سوگ = شناخت فرایند
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 13 · مشاوره گروهی نظری · 100 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "مشاوره گروهی توسط چه کسی و در چه سالی روی داد؟",
+options: ["پرات، 1905", "پرات، 1932", "موزون، 1932", "اسلارسون"],
+answer: 1,
+explanation: "پرات در 1932 اولین گروه مشاوره را تشکیل داد."
+},
+{
+q: "ترتیب مراحل گروه کدام است؟",
+options: ["انتقال، مکاشفه، عمل، پایان", "مکاشفه، انتقال، عمل، پایان", "مکاشفه، عمل، انتقال، پایان", "انتقال، عمل، مکاشفه، پایان"],
+answer: 1,
+explanation: "مراحل گروه به ترتیب: مکاشفه، انتقال، عمل، پایان."
+},
+{
+q: "هدف نهایی گروه‌های روان تحلیلی چیست؟",
+options: ["تحلیل گذشته", "بازسازی شخصیت", "تحلیل مقاومت", "تداعی آزاد"],
+answer: 1,
+explanation: "هدف روان‌تحلیلی بازسازی نظام شخصیتی است."
+},
+{
+q: "اصالت در شخص محور به چه معناست؟",
+options: ["پذیرا بودن", "همخوانی تجارب با احساسات", "تأیید اعضا", "خلوص نیت"],
+answer: 1,
+explanation: "اصالت یعنی همخوانی تجارب با احساسات درونی."
+},
+{
+q: "هدف واقعیت درمانی چیست؟",
+options: ["خودمختاری", "تغییر رفتار واقع‌بینانه", "پذیرش خویشتن", "مواجهه با عقاید"],
+answer: 1,
+explanation: "واقعیت درمانی به دنبال تغییر رفتار واقع‌بینانه است."
+},
+{
+q: "بهترین سن گروه درمانی نوجوانی چیست؟",
+options: ["12-17 سالگی", "18-15 سالگی", "16-21 سالگی", "20-25 سالگی"],
+answer: 0,
+explanation: "بهترین سن نوجوانی 12-17 سالگی است."
+},
+{
+q: "مهم‌ترین اقدام در مشاوره سوگ چیست؟",
+options: ["ایجاد همدلی", "شناخت فرایند سوگ", "انکار رویداد", "بازیابی خاطرات"],
+answer: 1,
+explanation: "شناخت فرایند سوگ مهم‌ترین اقدام است."
+},
+{
+q: "گروه‌های T توسط چه کسی ایجاد شد؟",
+options: ["کوری", "یالوم", "لوین", "مورنو"],
+answer: 2,
+explanation: "کورت لوین گروه‌های T را ایجاد کرد."
+},
+{
+q: "سایکودراما توسط چه کسی وارد درمان شد؟",
+options: ["فروید", "پرات", "واندر", "مورنو"],
+answer: 3,
+explanation: "مورنو سایکودراما را وارد درمان کرد."
+},
+{
+q: "بهترین اندازه گروه برای کودکان چند نفر است؟",
+options: ["3-5 نفر", "6-8 نفر", "10-12 نفر", "15-20 نفر"],
+answer: 0,
+explanation: "اندازه گروه کودکان 3-5 نفر است."
+},
+{
+q: "مرحله انتقال از نظر کوری چه نام دارد؟",
+options: ["بحران", "مکاشفه", "عمل", "اختتام"],
+answer: 0,
+explanation: "کوری مرحله انتقال را بحران می‌نامد."
+},
+{
+q: "علاقه اجتماعی از نظر چه کسی منشأ تمدن است؟",
+options: ["فروید", "آدلر", "الیس", "برن"],
+answer: 1,
+explanation: "آدلر علاقه اجتماعی را منشأ تمدن می‌داند."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
