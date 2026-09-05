@@ -1,0 +1,999 @@
+ <!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره گروهی نظری · سری 20</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"20";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره گروهی نظری · سری 20</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری راهنمایی و مشاوره گروهی</h2>
+  <p>تحلیل کامل 35 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">35 سوال</span><span class="pill">تشکیل گروه</span><span class="pill">ترکیب گروه</span><span class="pill">مدت و جلسات</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>35</b><span>سوال</span></div>
+<div class="stat"><b>4</b><span>مؤلفه گروه</span></div>
+<div class="stat"><b>3</b><span>نوع گروه</span></div>
+<div class="stat"><b>5</b><span>معیار پذیرش</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="مؤلفه های تشکیل گروه تشخیص نهایی نیست">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از مؤلفه‌های تشکیل گروه نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تشخیص نهایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تشخیص نهایی از مؤلفه‌های تشکیل گروه نیست. مؤلفه‌های اصلی شامل تعیین اهداف، ترکیب گروه و محیط درمان هستند.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- تعیین اهداف: مؤلفه اصلی است.<br>
+- ترکیب گروه: مؤلفه اصلی است.<br>
+- محیط درمان: مؤلفه اصلی است.<br>
+<b>نکته کلیدی:</b> تشخیص نهایی ≠ مؤلفه تشکیل گروه
+</div>
+</div>
+
+<div class="card question" data-search="مراجعان نباید پذیرفته شوند خودشیفته">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از مراجعان نباید در گروه درمانی پویا پذیرفته شوند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بیماران خودشیفته</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بیماران خودشیفته به دلیل نیاز شدید به توجه و عدم توانایی در همدلی، برای گروه درمانی پویا مناسب نیستند.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- افراد با انگیزه بالا: مناسب هستند.<br>
+- افراد با محبوبیت بالا: مناسب هستند.<br>
+- افراد مایل به تغییر: مناسب هستند.<br>
+<b>نکته کلیدی:</b> خودشیفته = نامناسب برای گروه درمانی
+</div>
+</div>
+
+<div class="card question" data-search="موارد منع پذیرش افسردگی خفیف نیست">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از اختلالات زیر جزو موارد منع پذیرش در گروه درمانی پویا نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">افسردگی خفیف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> افسردگی خفیف جزو موارد منع پذیرش نیست.<br>
+<b>چرا گزینه‌های دیگر منع هستند؟</b><br>
+- پارانوئید: منع پذیرش است.<br>
+- هیپوکندریا: منع پذیرش است.<br>
+- خودکشی: منع پذیرش است.<br>
+<b>نکته کلیدی:</b> افسردگی خفیف ≠ منع پذیرش
+</div>
+</div>
+
+<div class="card question" data-search="هیپوکندریا اشتغال ذهنی درباره سلامت">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> هیپوکندریا چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اختلالی که با اشتغال ذهنی و وسواس‌گونه فرد درباره وضع سلامت خود مشخص می‌شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هیپوکندریا با اشتغال ذهنی و وسواس درباره سلامت مشخص می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند？</b><br>
+- اختلال شخصیت: نوع دیگری است.<br>
+- اختلال خلقی: نوع دیگری است.<br>
+- اختلال اضطرابی: نوع دیگری است.<br>
+<b>نکته کلیدی:</b> هیپوکندریا = اشتغال ذهنی درباره سلامت
+</div>
+</div>
+
+<div class="card question" data-search="معیارهای پذیرش همه موارد">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از معیارهای پذیرش در گروه درمانی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انگیزه، محبوبیت و نظر درمانگر همه از معیارهای پذیرش هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> معیارهای پذیرش = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="فشار دیگران مناسب نیستند">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> مراجعانی که با فشار دیگران در گروه شرکت می‌کنند، چه ویژگی‌ای دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اعضای مناسبی نیستند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مراجعانی که با فشار دیگران می‌آیند، انگیزه کافی ندارند و اعضای مناسبی نیستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اعضای مناسبی هستند: نادرست است.<br>
+- بهترین اعضا هستند: نادرست است.<br>
+- تأثیری ندارد: نادرست است.<br>
+<b>نکته کلیدی:</b> فشار دیگران = نامناسب بودن
+</div>
+</div>
+
+<div class="card question" data-search="کسانی که بیشترین بهره را می برند همه موارد">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> کسانی که از گروه بیشترین بهره را می‌برند، چه ویژگی‌هایی دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بیشترین بهره‌برندگان مایل به تغییر، خود را در درک احساسات ضعیف می‌بینند و گروه را فرصتی برای تصحیح ضعف‌ها می‌دانند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> بیشترین بهره = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="شرکت در گروه مستلزم وقت پول انرژی">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> شرکت در گروه مستلزم چه مواردی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">وقت، پول، انرژی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شرکت در گروه نیاز به وقت، پول و انرژی دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط وقت: ناقص است.<br>
+- فقط پول: ناقص است.<br>
+- فقط انرژی: ناقص است.<br>
+<b>نکته کلیدی:</b> شرکت در گروه = وقت + پول + انرژی
+</div>
+</div>
+
+<div class="card question" data-search="ناراحتی های احتمالی همه موارد">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از ناراحتی‌های احتمالی شرکت در گروه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اضطراب، ناکامی، دلسردی و طرد شدن همه ناراحتی‌های احتمالی هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> ناراحتی‌ها = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="تنوع در سن همه موارد">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> در ترکیب گروه، تنوع در سن چه تأثیری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تنوع سنی می‌تواند به جامعه طبیعی نزدیک‌تر کند، همفهمی را کاهش دهد و تسهیل در انتقال با تجربیات باشد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> تنوع سنی = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="اختلاف سن بزرگسال 10 سال">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> در گروه بزرگسال، اختلاف سن چند سال مشکلی ایجاد نمی‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۱۰ سال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در گروه بزرگسال، اختلاف سن تا ۱۰ سال مشکلی ایجاد نمی‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 5 سال: کمتر است.<br>
+- 15 سال: بیشتر است.<br>
+- 20 سال: بیشتر است.<br>
+<b>نکته کلیدی:</b> بزرگسال = ۱۰ سال اختلاف
+</div>
+</div>
+
+<div class="card question" data-search="فاصله سنی زیاد در گروه نوجوان مشکلساز است">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> فاصله سنی زیاد در کدام گروه مشکلساز است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه نوجوان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فاصله سنی زیاد در گروه نوجوان مشکلساز است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بزرگسال: تا ۱۰ سال مشکلی ندارد.<br>
+- سالمندان: مشکلی ندارد.<br>
+- کودکان: مشکلی ندارد.<br>
+<b>نکته کلیدی:</b> نوجوان = فاصله سنی مشکلساز
+</div>
+</div>
+
+<div class="card question" data-search="تعارض والدین و فرزندان حضور هر دو دسته">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> اگر هدف گروه کار تعارض فی‌مابین والدین و فرزندان باشد، چه ترکیبی لازم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">حضور هر دو دسته (والدین و فرزندان) در گروه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برای حل تعارض والدین و فرزندان، حضور هر دو دسته لازم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط والدین: ناقص است.<br>
+- فقط فرزندان: ناقص است.<br>
+- گروه جداگانه: ناقص است.<br>
+<b>نکته کلیدی:</b> تعارض والدین-فرزندان = حضور هر دو
+</div>
+</div>
+
+<div class="card question" data-search="ترکیب صحیح گروه همه موارد">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> برای ترکیب صحیح گروه، چه عواملی باید در نظر گرفته شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سن، جنسیت، بلوغ، تشخیص و پیش‌بینی رفتار آینده همه باید در نظر گرفته شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> ترکیب گروه = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="برای ایجاد تغییر قدری اختلاف لازم است">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> برای ایجاد تغییر، چه چیزی بین فرد و جو یا فرهنگ حاکم بر گروه لازم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">قدری اختلاف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> قدری اختلاف برای ایجاد تغییر بین فرد و جو گروه لازم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تشابه کامل: مانع تغییر است.<br>
+- همسانی: مانع تغییر است.<br>
+- یکنواختی: مانع تغییر است.<br>
+<b>نکته کلیدی:</b> تغییر = قدری اختلاف
+</div>
+</div>
+
+<div class="card question" data-search="تعادل و انتخاب افراد مکمل">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> برای حل مسئله تجانس و عدم تجانس در گروه، چه راهکاری پیشنهاد می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تعادل و انتخاب افراد در قطب‌های مختلف و مکمل یکدیگر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعادل با انتخاب افراد مکمل در قطب‌های مختلف بهترین راهکار است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- انتخاب کاملاً مشابه: یکنواختی است.<br>
+- انتخاب کاملاً متفاوت: عدم تعادل است.<br>
+- عدم توجه: نادرست است.<br>
+<b>نکته کلیدی:</b> تجانس = تعادل و مکمل
+</div>
+</div>
+
+<div class="card question" data-search="فرد سلطه جو و سلطه طلب مباحث گرم تر">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> داشتن فرد سلطه‌جو در کنار فرد سلطه‌طلب چه تأثیری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مباحث گروه گرم‌تر می‌شود و الگوهای متنوعی برای اعضا فراهم می‌شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حضور سلطه‌جو و سلطه‌طلب مباحث را گرم‌تر می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- باعث درگیری: ممکن است اما نکته اصلی نیست.<br>
+- تأثیری ندارد: نادرست است.<br>
+- تعطیل می‌کند: نادرست است.<br>
+<b>نکته کلیدی:</b> سلطه‌جو + سلطه‌طلب = مباحث گرم‌تر
+</div>
+</div>
+
+<div class="card question" data-search="اعضا مضطرب تر گروه کوچکتر">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> هر چه اعضا مضطرب‌تر و مشکلاتشان عمیق‌تر باشد، گروه باید چگونه باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کوچک‌تر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> با افزایش اضطراب و عمق مشکلات، گروه باید کوچک‌تر شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بزرگ‌تر: برعکس است.<br>
+- متوسط: کافی نیست.<br>
+- تفاوتی ندارد: نادرست است.<br>
+<b>نکته کلیدی:</b> اضطراب بیشتر = گروه کوچک‌تر
+</div>
+</div>
+
+<div class="card question" data-search="گروه رشد یا رواندرمانی 7 نفر">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> تعداد مناسب برای یک گروه رشد یا روان‌درمانی چند نفر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۷ نفر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعداد مناسب برای گروه رشد یا روان‌درمانی ۷ نفر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 3 نفر: کم است.<br>
+- 5 نفر: کم است.<br>
+- 10 نفر: زیاد است.<br>
+<b>نکته کلیدی:</b> گروه رشد/روان‌درمانی = ۷ نفر
+</div>
+</div>
+
+<div class="card question" data-search="گروه راهنمایی تا 50 نفر">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> گروه راهنمایی که جنبه آموزشی دارد، چند نفر می‌تواند باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تا ۵۰ نفر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه راهنمایی آموزشی می‌تواند تا ۵۰ نفر باشد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- حداکثر 10 نفر: کم است.<br>
+- حداکثر 20 نفر: کم است.<br>
+- حداکثر 5 نفر: کم است.<br>
+<b>نکته کلیدی:</b> راهنمایی آموزشی = تا ۵۰ نفر
+</div>
+</div>
+
+<div class="card question" data-search="گروه های بزرگ مشارکت کاهش می یابد">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> در گروه‌های بزرگ، نسبت مشارکت هر عضو چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کاهش می‌یابد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در گروه‌های بزرگ، مشارکت هر عضو کاهش می‌یابد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- افزایش: برعکس است.<br>
+- ثابت: نادرست است.<br>
+- دو برابر: نادرست است.<br>
+<b>نکته کلیدی:</b> گروه بزرگ = مشارکت کمتر
+</div>
+</div>
+
+<div class="card question" data-search="گروه 5-8 نفره مشارکت فعال ترین عضو افزایش">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> در گروه‌های پنج تا هشت نفری، مشارکت فعال‌ترین عضو نسبت به سایر اعضا چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">افزایش می‌یابد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در گروه‌های ۵-۸ نفره، مشارکت فعال‌ترین عضو افزایش می‌یابد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کاهش: برعکس است.<br>
+- ثابت: نادرست است.<br>
+- حذف: نادرست است.<br>
+<b>نکته کلیدی:</b> ۵-۸ نفر = مشارکت فعال‌ترین عضو بیشتر
+</div>
+</div>
+
+<div class="card question" data-search="کسانی که خود را مهم تر می دانند صدر مجلس">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> در گروه‌های اجتماعی، کسانی که خود را مهم‌تر تلقی می‌کنند، کدام محل را انتخاب می‌کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">صدر مجلس</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> افرادی که خود را مهم‌تر می‌دانند، صدر مجلس را انتخاب می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گوشه اتاق: افراد کم‌رو.<br>
+- کنار در: افراد مضطرب.<br>
+- انتهای اتاق: افراد منفعل.<br>
+<b>نکته کلیدی:</b> خودمهم‌پندار = صدر مجلس
+</div>
+</div>
+
+<div class="card question" data-search="بهترین طرز نشستن دور میز گرد">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> در گروه‌های درمانی، بهترین طرز نشستن اعضا چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دور یک میز گرد (که بالا و پایین نداشته باشد)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بهترین آرایش دور یک میز گرد بدون بالا و پایین است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روبه‌روی هم: ایجاد تقابل.<br>
+- کنار هم: محدود کننده است.<br>
+- پشت سر هم: غیرحرفه‌ای است.<br>
+<b>نکته کلیدی:</b> آرایش درمانی = میز گرد
+</div>
+</div>
+
+<div class="card question" data-search="تماس چشمی با بعضی اهمیت و کنترل بیشتر">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> اگر درمانگر فقط با بعضی از افراد تماس چشمی داشته باشد، چه پیامی منتقل می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به آن شخص اهمیت و قدرت کنترل بیشتری می‌دهد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تماس چشمی انتخابی نشانه اهمیت و قدرت کنترل بیشتر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هیچ پیامی: نادرست است.<br>
+- بی‌احترامی: نادرست است.<br>
+- دوستی: نادرست است.<br>
+<b>نکته کلیدی:</b> تماس چشمی انتخابی = اهمیت و کنترل
+</div>
+</div>
+
+<div class="card question" data-search="مدت نشست 80-90 دقیقه">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> مدت زمان مناسب برای نشست‌های گروهی چقدر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۸۰-۹۰ دقیقه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مدت مناسب نشست‌های گروهی ۸۰-۹۰ دقیقه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 30-40 دقیقه: کم است.<br>
+- 50 دقیقه: کم است.<br>
+- 2 ساعت: زیاد است.<br>
+<b>نکته کلیدی:</b> نشست گروهی = ۸۰-۹۰ دقیقه
+</div>
+</div>
+
+<div class="card question" data-search="راندمان بعد از 2 ساعت کاهش می یابد">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> راندمان گروه بعد از چند ساعت، به علت خستگی اعضا، رو به کاهش است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۲ ساعت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راندمان گروه بعد از ۲ ساعت به دلیل خستگی کاهش می‌یابد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 1 ساعت: زود است.<br>
+- 1.5 ساعت: زود است.<br>
+- 3 ساعت: دیر است.<br>
+<b>نکته کلیدی:</b> کاهش راندمان = بعد از ۲ ساعت
+</div>
+</div>
+
+<div class="card question" data-search="جلسات معتادان 1.5 ساعت">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> جلسات گروه‌های معتادان معمولاً چند ساعت است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۱/۵ ساعت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جلسات گروه‌های معتادان معمولاً ۱/۵ ساعت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 1 ساعت: کم است.<br>
+- 2 ساعت: زیاد است.<br>
+- 3 ساعت: زیاد است.<br>
+<b>نکته کلیدی:</b> معتادان = ۱/۵ ساعت
+</div>
+</div>
+
+<div class="card question" data-search="گروه های ماراتون 24-48 ساعت">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> گروه‌های ماراتون با جلسات ممتد چند ساعته برگزار می‌شوند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۲۴-۴۸ ساعت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های ماراتون ۲۴ تا ۴۸ ساعت برگزار می‌شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 12-24 ساعت: کم است.<br>
+- 8-12 ساعت: کم است.<br>
+- 48-72 ساعت: زیاد است.<br>
+<b>نکته کلیدی:</b> ماراتون = ۲۴-۴۸ ساعت
+</div>
+</div>
+
+<div class="card question" data-search="ماراتون گشودن ضمیر باطن مواجهه مشارکت">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> گروه‌های ماراتون بر چه چیزی تأکید دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گشودن ضمیر باطن (ابراز خویش)، مواجهه و رویارویی و مشارکت اعضا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ماراتون بر گشودن ضمیر، مواجهه و مشارکت تأکید دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط سخنرانی: نادرست است.<br>
+- فقط مطالعه: نادرست است.<br>
+- فقط تمرینات فیزیکی: نادرست است.<br>
+<b>نکته کلیدی:</b> ماراتون = گشودن ضمیر + مواجهه + مشارکت
+</div>
+</div>
+
+<div class="card question" data-search="مزایای ماراتون همه موارد">
+<span class="qnum">سوال 31</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از مزایای گروه‌های ماراتون است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه موارد مزایای ماراتون هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> مزایای ماراتون = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="عیب ماراتون تغییر ایجاد نمی کند">
+<span class="qnum">سوال 32</span>
+<div class="fa"><b>متن سوال:</b> یکی از عیب‌های گروه‌های ماراتون چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تغییر ایجاد نمی‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یکی از عیب‌های ماراتون این است که تغییر ایجاد نمی‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خیلی طولانی است: ویژگی است.<br>
+- هزینه زیاد: ویژگی است.<br>
+- نیاز به فضای بزرگ: ویژگی است.<br>
+<b>نکته کلیدی:</b> عیب ماراتون = تغییر ایجاد نمی‌کند
+</div>
+</div>
+
+<div class="card question" data-search="فراوانی جلسات یک جلسه در هفته">
+<span class="qnum">سوال 33</span>
+<div class="fa"><b>متن سوال:</b> حد متوسط مطلوب برای فراوانی جلسات گروه‌های درمانی چند جلسه در هفته است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">یک جلسه در هفته</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حد متوسط مطلوب یک جلسه در هفته است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- دو جلسه: زیاد است.<br>
+- سه جلسه: زیاد است.<br>
+- هر روز: زیاد است.<br>
+<b>نکته کلیدی:</b> فراوانی جلسات = یک جلسه در هفته
+</div>
+</div>
+
+<div class="card question" data-search="عمر گروه 8-10 جلسه">
+<span class="qnum">سوال 34</span>
+<div class="fa"><b>متن سوال:</b> عمر گروه درمانی معمولاً چند جلسه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۸-۱۰ جلسه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عمر گروه درمانی معمولاً ۸ تا ۱۰ جلسه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 4-6 جلسه: کم است.<br>
+- 12-15 جلسه: زیاد است.<br>
+- 20-30 جلسه: زیاد است.<br>
+<b>نکته کلیدی:</b> عمر گروه درمانی = ۸-۱۰ جلسه
+</div>
+</div>
+
+<div class="card question" data-search="جلسات معتادان 32 جلسه">
+<span class="qnum">سوال 35</span>
+<div class="fa"><b>متن سوال:</b> تعداد جلسات گروه معتادان چند جلسه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۳۲ جلسه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعداد جلسات گروه معتادان ۳۲ جلسه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 16 جلسه: کم است.<br>
+- 24 جلسه: کم است.<br>
+- 40 جلسه: زیاد است.<br>
+<b>نکته کلیدی:</b> معتادان = ۳۲ جلسه
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>تشکیل گروه</h3></div>
+<div class="grid2">
+<div class="box"><h4>مؤلفه‌ها</h4>
+<div class="fa">اهداف، ترکیب، محیط</div>
+</div>
+<div class="box"><h4>معیارهای پذیرش</h4>
+<div class="fa">انگیزه، محبوبیت، نظر درمانگر</div>
+</div>
+<div class="box"><h4>موارد منع</h4>
+<div class="fa">خودشیفته، پارانوئید، هیپوکندریا، خودکشی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ترکیب گروه</h3></div>
+<div class="grid2">
+<div class="box"><h4>اندازه گروه</h4>
+<div class="fa">رشد/روان‌درمانی: ۷ نفر</div>
+</div>
+<div class="box"><h4>راهنمایی آموزشی</h4>
+<div class="fa">تا ۵۰ نفر</div>
+</div>
+<div class="box"><h4>اختلاف سن</h4>
+<div class="fa">بزرگسال: ۱۰ سال</div>
+</div>
+<div class="box"><h4>نوجوان</h4>
+<div class="fa">فاصله سنی مشکلساز</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>زمان جلسات</h3></div>
+<div class="grid2">
+<div class="box"><h4>مدت نشست</h4>
+<div class="fa">۸۰-۹۰ دقیقه</div>
+</div>
+<div class="box"><h4>ماراتون</h4>
+<div class="fa">۲۴-۴۸ ساعت</div>
+</div>
+<div class="box"><h4>فراوانی</h4>
+<div class="fa">یک جلسه در هفته</div>
+</div>
+<div class="box"><h4>عمر گروه</h4>
+<div class="fa">۸-۱۰ جلسه</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>مؤلفه‌های تشکیل گروه</h3></div>
+<div class="fa"><b>تعریف:</b> عناصر اساسی برای تشکیل یک گروه درمانی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>مؤلفه‌ها:</b> تعیین اهداف، ترکیب گروه، محیط درمان<br>
+<b>غیر مؤلفه:</b> تشخیص نهایی<br>
+<b>سوالات مرتبط:</b> 1
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معیارهای پذیرش و موارد منع</h3></div>
+<div class="fa"><b>تعریف:</b> شرایط پذیرش و عدم پذیرش در گروه درمانی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>معیارها:</b> انگیزه، محبوبیت، نظر درمانگر<br>
+<b>موارد منع:</b> خودشیفته، پارانوئید، هیپوکندریا، خودکشی<br>
+<b>سوالات مرتبط:</b> 2، 3، 5، 6، 7
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اندازه و ترکیب گروه</h3></div>
+<div class="fa"><b>تعریف:</b> تعداد و تنوع اعضای گروه.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>گروه رشد/روان‌درمانی:</b> ۷ نفر<br>
+<b>گروه راهنمایی:</b> تا ۵۰ نفر<br>
+<b>اختلاف سن بزرگسال:</b> ۱۰ سال<br>
+<b>سوالات مرتبط:</b> 10، 11، 12، 18، 19، 20
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>زمان و جلسات</h3></div>
+<div class="fa"><b>تعریف:</b> مدت، فراوانی و عمر گروه.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>مدت نشست:</b> ۸۰-۹۰ دقیقه<br>
+<b>ماراتون:</b> ۲۴-۴۸ ساعت، تأکید بر گشودن ضمیر<br>
+<b>فراوانی:</b> یک جلسه در هفته<br>
+<b>عمر گروه:</b> ۸-۱۰ جلسه<br>
+<b>سوالات مرتبط:</b> 26، 27، 28، 29، 30، 31، 32، 33، 34، 35
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>گروه رشد</td><td>گروه راهنمایی</td><td>رشد = ۷ نفر، راهنمایی = تا ۵۰ نفر</td><td>۷ vs ۵۰</td></tr>
+<tr><td>اختلاف سن بزرگسال</td><td>اختلاف سن نوجوان</td><td>بزرگسال = ۱۰ سال، نوجوان = مشکلساز</td><td>۱۰ سال vs مشکلساز</td></tr>
+<tr><td>مدت نشست</td><td>ماراتون</td><td>نشست = ۸۰-۹۰ دقیقه، ماراتون = ۲۴-۴۸ ساعت</td><td>دقیقه vs ساعت</td></tr>
+<tr><td>عمر گروه</td><td>جلسات معتادان</td><td>عمر = ۸-۱۰، معتادان = ۳۲</td><td>۸-۱۰ vs ۳۲</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">05 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: مؤلفه‌های تشکیل گروه</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام یک مؤلفه تشکیل گروه نیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "محیط درمان" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تشخیص نهایی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> محیط درمان مؤلفه است، تشخیص نهایی نیست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تشخیص نهایی ≠ مؤلفه تشکیل گروه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: موارد منع پذیرش</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام اختلال منع پذیرش نیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "پارانوئید" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> افسردگی خفیف</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> پارانوئید منع است، افسردگی خفیف نیست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> افسردگی خفیف ≠ منع پذیرش
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: اختلاف سن</h3>
+<div class="fa"><b>سوال نمونه:</b> اختلاف سن در بزرگسال چقدر مشکلی ایجاد نمی‌کند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۵ سال" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۱۰ سال</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۱۰ سال حد مجاز است، ۵ سال کمتر است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> بزرگسال = ۱۰ سال
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: تعداد گروه رشد</h3>
+<div class="fa"><b>سوال نمونه:</b> تعداد مناسب برای گروه رشد چند نفر است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۵ نفر" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۷ نفر</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۷ نفر تعداد مناسب است، ۵ نفر کم است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> گروه رشد = ۷ نفر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: مدت نشست</h3>
+<div class="fa"><b>سوال نمونه:</b> مدت نشست گروهی چقدر است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۵۰ دقیقه" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۸۰-۹۰ دقیقه</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۵۰ دقیقه کمتر است، ۸۰-۹۰ دقیقه مناسب است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> نشست گروهی = ۸۰-۹۰ دقیقه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: ماراتون</h3>
+<div class="fa"><b>سوال نمونه:</b> مدت ماراتون چند ساعت است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۱۲-۲۴ ساعت" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۲۴-۴۸ ساعت</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۲۴-۴۸ ساعت مدت استاندارد است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> ماراتون = ۲۴-۴۸ ساعت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: جلسات معتادان</h3>
+<div class="fa"><b>سوال نمونه:</b> تعداد جلسات معتادان چند جلسه است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۲۴ جلسه" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۳۲ جلسه</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۳۲ جلسه تعداد دقیق است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> معتادان = ۳۲ جلسه
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">06 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 20 · مشاوره گروهی نظری · 35 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "کدام یک مؤلفه تشکیل گروه نیست؟",
+options: ["تعیین اهداف", "ترکیب گروه", "تشخیص نهایی", "محیط درمان"],
+answer: 2,
+explanation: "تشخیص نهایی مؤلفه تشکیل گروه نیست."
+},
+{
+q: "کدام مراجع نباید در گروه پویا پذیرفته شود؟",
+options: ["انگیزه بالا", "خودشیفته", "محبوب", "مایل به تغییر"],
+answer: 1,
+explanation: "بیماران خودشیفته نباید پذیرفته شوند."
+},
+{
+q: "کدام اختلال منع پذیرش نیست؟",
+options: ["پارانوئید", "هیپوکندریا", "افسردگی خفیف", "خودکشی"],
+answer: 2,
+explanation: "افسردگی خفیف منع پذیرش نیست."
+},
+{
+q: "هیپوکندریا چیست؟",
+options: ["اشتغال ذهنی درباره سلامت", "اختلال شخصیت", "اختلال خلقی", "اختلال اضطرابی"],
+answer: 0,
+explanation: "هیپوکندریا اشتغال ذهنی درباره سلامت است."
+},
+{
+q: "معیارهای پذیرش کدام است؟",
+options: ["انگیزه", "محبوبیت", "نظر درمانگر", "همه موارد"],
+answer: 3,
+explanation: "همه موارد معیارهای پذیرش هستند."
+},
+{
+q: "با فشار دیگران چه ویژگی دارند؟",
+options: ["مناسب", "نامناسب", "بهترین", "تأثیری ندارد"],
+answer: 1,
+explanation: "با فشار دیگران نامناسب هستند."
+},
+{
+q: "اختلاف سن در بزرگسال چند سال مشکلی ایجاد نمی‌کند؟",
+options: ["۵ سال", "۱۰ سال", "۱۵ سال", "۲۰ سال"],
+answer: 1,
+explanation: "تا ۱۰ سال مشکلی ایجاد نمی‌کند."
+},
+{
+q: "فاصله سنی زیاد در کدام گروه مشکلساز است؟",
+options: ["بزرگسال", "نوجوان", "سالمندان", "کودکان"],
+answer: 1,
+explanation: "در گروه نوجوان مشکلساز است."
+},
+{
+q: "تعداد مناسب گروه رشد چند نفر است؟",
+options: ["۳ نفر", "۵ نفر", "۷ نفر", "۱۰ نفر"],
+answer: 2,
+explanation: "گروه رشد ۷ نفر است."
+},
+{
+q: "گروه راهنمایی آموزشی تا چند نفر؟",
+options: ["۱۰ نفر", "۲۰ نفر", "۵۰ نفر", "۵ نفر"],
+answer: 2,
+explanation: "گروه راهنمایی تا ۵۰ نفر است."
+},
+{
+q: "بهترین طرز نشستن در گروه درمانی چیست؟",
+options: ["روبه‌روی هم", "دور میز گرد", "کنار هم", "پشت سر هم"],
+answer: 1,
+explanation: "دور میز گرد بهترین است."
+},
+{
+q: "مدت نشست گروهی چقدر است؟",
+options: ["۳۰-۴۰ دقیقه", "۵۰ دقیقه", "۸۰-۹۰ دقیقه", "۲ ساعت"],
+answer: 2,
+explanation: "مدت نشست ۸۰-۹۰ دقیقه است."
+},
+{
+q: "گروه ماراتون چند ساعت است؟",
+options: ["۱۲-۲۴ ساعت", "۲۴-۴۸ ساعت", "۸-۱۲ ساعت", "۴۸-۷۲ ساعت"],
+answer: 1,
+explanation: "ماراتون ۲۴-۴۸ ساعت است."
+},
+{
+q: "فراوانی جلسات درمانی چند جلسه در هفته است؟",
+options: ["یک جلسه", "دو جلسه", "سه جلسه", "هر روز"],
+answer: 0,
+explanation: "یک جلسه در هفته مناسب است."
+},
+{
+q: "عمر گروه درمانی چند جلسه است؟",
+options: ["۴-۶ جلسه", "۸-۱۰ جلسه", "۱۲-۱۵ جلسه", "۲۰-۳۰ جلسه"],
+answer: 1,
+explanation: "عمر گروه ۸-۱۰ جلسه است."
+},
+{
+q: "تعداد جلسات معتادان چند جلسه است؟",
+options: ["۱۶ جلسه", "۲۴ جلسه", "۳۲ جلسه", "۴۰ جلسه"],
+answer: 2,
+explanation: "معتادان ۳۲ جلسه است."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
