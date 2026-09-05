@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره گروهی نظری · سری 21</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"21";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره گروهی نظری · سری 21</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری راهنمایی و مشاوره گروهی</h2>
+  <p>تحلیل کامل 35 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">35 سوال</span><span class="pill">بازی درمانی</span><span class="pill">کودکان</span><span class="pill">گروه درمانی فعالیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>35</b><span>سوال</span></div>
+<div class="stat"><b>3</b><span>گروه سنی</span></div>
+<div class="stat"><b>5</b><span>اصل بازی درمانی</span></div>
+<div class="stat"><b>4</b><span>نوع گروه</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="بازی درمانی گروهی 3-9 سال">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> بازی درمانی گروهی برای کودکان در چه بازه سنی مناسب است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۳-۹ سال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بازی درمانی گروهی برای کودکان ۳ تا ۹ سال مناسب است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 3-6 سال: محدوده کمتری است.<br>
+- 6-12 سال: برای گروه درمانی فعالیت مناسب است.<br>
+- 9-12 سال: برای گروه درمانی فعالیت مناسب است.<br>
+<b>نکته کلیدی:</b> بازی درمانی = ۳-۹ سال
+</div>
+</div>
+
+<div class="card question" data-search="نوجوان سن بازی درمانی زیاد شرایط متفاوت">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> نوجوانی که سنش برای بازی درمانی زیاد و برای مصاحبه کم است، تحت چه شرایطی قرار می‌گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تحت شرایط متفاوتی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نوجوانی که بین دو گروه سنی قرار می‌گیرد، تحت شرایط متفاوتی درمان می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- از درمان خارج می‌شود: نادرست است.<br>
+- به گروه بزرگسالان ملحق می‌شود: نادرست است.<br>
+- درمان دارویی: نادرست است.<br>
+<b>نکته کلیدی:</b> نوجوان حدفاصل = شرایط متفاوت
+</div>
+</div>
+
+<div class="card question" data-search="گروه درمانی کودکان پذیرش تغییر رفتار">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> گروه درمانی کودکان بر چه فرضی استوار است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کودکان در مقابل پذیرش، رفتار خود را تغییر می‌دهند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه درمانی کودکان بر این فرض استوار است که کودکان در برابر پذیرش، رفتار خود را تغییر می‌دهند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ذاتاً تغییرناپذیر: نادرست است.<br>
+- به تنهایی تغییر: نادرست است.<br>
+- نیاز به دارو: نادرست است.<br>
+<b>نکته کلیدی:</b> گروه درمانی کودکان = پذیرش → تغییر رفتار
+</div>
+</div>
+
+<div class="card question" data-search="تمنای پذیرش از رابطه مادر">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> تمنای پذیرش در کودکان از چه چیزی سرچشمه می‌گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">از رابطه مطلوب اولیه مادر یا جانشین او</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تمنای پذیرش در کودکان از رابطه مطلوب اولیه با مادر سرچشمه می‌گیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رابطه با پدر: ثانویه است.<br>
+- روابط با همسالان: بعداً شکل می‌گیرد.<br>
+- مدرسه: بعداً شکل می‌گیرد.<br>
+<b>نکته کلیدی:</b> تمنای پذیرش = رابطه مادر
+</div>
+</div>
+
+<div class="card question" data-search="شرط پذیرش عطش اجتماعی">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> شرط اساسی پذیرفته شدن در گروه بازی درمانی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">برخورداری از عطش اجتماعی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شرط اساسی پذیرش در بازی درمانی، عطش اجتماعی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هوش بالا: شرط نیست.<br>
+- ثروت خانواده: شرط نیست.<br>
+- نمرات تحصیلی: شرط نیست.<br>
+<b>نکته کلیدی:</b> عطش اجتماعی = شرط پذیرش
+</div>
+</div>
+
+<div class="card question" data-search="کودکان با نشانه های مرضی غیرمشابه">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> کودکان با نشانه‌های مرضی چگونه باید در گروه قرار گیرند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">غیرمشابه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کودکان با نشانه‌های مرضی باید به صورت غیرمشابه در گروه قرار گیرند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مشابه: نادرست است.<br>
+- همگی یکسان: نادرست است.<br>
+- تصادفی: نادرست است.<br>
+<b>نکته کلیدی:</b> نشانه‌های مرضی = غیرمشابه
+</div>
+</div>
+
+<div class="card question" data-search="همگروهی اختلاف سن 12 ماه">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> در گروه بازی درمانی، همگروهی‌ها نباید بیش از چند ماه با هم اختلاف سن داشته باشند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۱۲ ماه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همگروهی‌ها نباید بیش از ۱۲ ماه اختلاف سن داشته باشند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 6 ماه: کمتر است.<br>
+- 18 ماه: بیشتر است.<br>
+- 24 ماه: بیشتر است.<br>
+<b>نکته کلیدی:</b> اختلاف سن = حداکثر ۱۲ ماه
+</div>
+</div>
+
+<div class="card question" data-search="اختلاف سن کمتر بهتر">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> هر چه اختلاف سن در گروه بازی درمانی کمتر باشد، چه تأثیری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بهتر است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هر چه اختلاف سن کمتر باشد، بهتر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بدتر است: برعکس است.<br>
+- تأثیری ندارد: نادرست است.<br>
+- بستگی دارد: نادرست است.<br>
+<b>نکته کلیدی:</b> اختلاف سن کمتر = بهتر
+</div>
+</div>
+
+<div class="card question" data-search="جنسیت قبل از مدرسه مختلط">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> در مورد جنسیت گروه بازی درمانی قبل از سن مدرسه، چه توصیه‌ای می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه مختلط (پسر و دختر)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> قبل از سن مدرسه، گروه مختلط توصیه می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- همجنس: برای دوران مدرسه است.<br>
+- فقط پسر: نادرست است.<br>
+- فقط دختر: نادرست است.<br>
+<b>نکته کلیدی:</b> قبل از مدرسه = مختلط
+</div>
+</div>
+
+<div class="card question" data-search="گروه مختلط برای بدون خواهر و برادر">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> گروه مختلط قبل از سن مدرسه برای چه کودکانی مفید است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پسرهای بدون خواهر و دخترهای بدون برادر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه مختلط برای پسرهای بدون خواهر و دخترهای بدون برادر مفید است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط پسرها: نادرست است.<br>
+- فقط دخترها: نادرست است.<br>
+- دارای خواهر و برادر: نیاز کمتری دارند.<br>
+<b>نکته کلیدی:</b> مختلط = بدون خواهر/برادر
+</div>
+</div>
+
+<div class="card question" data-search="دوران مدرسه همجنس">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> در دوران مدرسه، گروه بازی درمانی از نظر جنسیت چگونه باید باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همجنس</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در دوران مدرسه، گروه باید همجنس باشد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مختلط: برای قبل از مدرسه است.<br>
+- فقط پسر: نادرست است.<br>
+- فقط دختر: نادرست است.<br>
+<b>نکته کلیدی:</b> دوران مدرسه = همجنس
+</div>
+</div>
+
+<div class="card question" data-search="گروه عقب مانده متجانس">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> گروه عقب‌مانده باید در چه نوع گروهی قرار گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه متجانس (همگن)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه عقب‌مانده باید در گروه متجانس (همگن) قرار گیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ناهمگن: برای گروه‌های دیگر است.<br>
+- مختلط: برای گروه‌های دیگر است.<br>
+- بزرگ: اندازه است.<br>
+<b>نکته کلیدی:</b> عقب‌مانده = متجانس
+</div>
+</div>
+
+<div class="card question" data-search="تعداد اعضای بازی درمانی 5 نفر">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> تعداد اعضای گروه بازی درمانی نباید بیش از چند نفر باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۵ نفر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعداد اعضای بازی درمانی نباید بیش از ۵ نفر باشد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 3 نفر: کم است.<br>
+- 4 نفر: کم است.<br>
+- 7 نفر: زیاد است.<br>
+<b>نکته کلیدی:</b> بازی درمانی = حداکثر ۵ نفر
+</div>
+</div>
+
+<div class="card question" data-search="حضور سایر کودکان تنش را زایل می کند">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> در بازی درمانی گروهی، حضور سایر کودکان چه تأثیری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تنش را زایل و مشارکت را تحریک می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حضور سایر کودکان تنش را زایل و مشارکت را تحریک می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تنش را افزایش: برعکس است.<br>
+- مشارکت را کاهش: برعکس است.<br>
+- تأثیری ندارد: نادرست است.<br>
+<b>نکته کلیدی:</b> حضور کودکان = کاهش تنش + افزایش مشارکت
+</div>
+</div>
+
+<div class="card question" data-search="تکیه درمان بر تک کودک">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> در بازی درمانی گروهی، تکیه درمان بر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بر تک کودک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در بازی درمانی گروهی، تکیه درمان بر تک کودک است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بر کل گروه: در گروه درمانی است.<br>
+- بر والدین: در خانواده درمانی است.<br>
+- بر درمانگر: نادرست است.<br>
+<b>نکته کلیدی:</b> بازی درمانی = تکیه بر تک کودک
+</div>
+</div>
+
+<div class="card question" data-search="دو وسیله برون ریزی بازی و گفتار">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> دو وسیله برای برون‌ریزی از طریق بازی درمانی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بازی و گفتار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دو وسیله برون‌ریزی در بازی درمانی، بازی و گفتار است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نقاشی و موسیقی: روش‌های دیگر است.<br>
+- ورزش و هنر: روش‌های دیگر است.<br>
+- نوشتن و خواندن: روش‌های دیگر است.<br>
+<b>نکته کلیدی:</b> برون‌ریزی = بازی + گفتار
+</div>
+</div>
+
+<div class="card question" data-search="درمان فردی تداعی آزاد کلامی">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> در درمان فردی، بازی بیشتر شبیه چه چیزی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تداعی آزاد کلامی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در درمان فردی، بازی شبیه تداعی آزاد کلامی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مصاحبه بالینی: ساختارمند است.<br>
+- آزمون هوش: استاندارد است.<br>
+- تمرین رفتاری: هدفمند است.<br>
+<b>نکته کلیدی:</b> درمان فردی = تداعی آزاد
+</div>
+</div>
+
+<div class="card question" data-search="بصیرت از طریق تجربه رابطه">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> کودکان در بازی درمانی چگونه به بصیرت می‌رسند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">از طریق تجربه رابطه با دیگران</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کودکان از طریق تجربه رابطه با دیگران به بصیرت می‌رسند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سخنرانی درمانگر: نادرست است.<br>
+- کتاب خواندن: نادرست است.<br>
+- تماشای فیلم: نادرست است.<br>
+<b>نکته کلیدی:</b> بصیرت = تجربه رابطه
+</div>
+</div>
+
+<div class="card question" data-search="روان نژندی معلول تعارضات ناخودآگاه">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> روان‌نژندی معلول چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تعارضات ناخودآگاه برای حل تکانه‌های جنسی و پرخاشگرانه نسبت به والدین</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌نژندی معلول یعنی تعارضات ناخودآگاه برای حل تکانه‌های جنسی و پرخاشگرانه.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عوامل ژنتیکی: نادرست است.<br>
+- کمبود ویتامین: نادرست است.<br>
+- آسیب مغزی: نادرست است.<br>
+<b>نکته کلیدی:</b> روان‌نژندی = تعارضات ناخودآگاه
+</div>
+</div>
+
+<div class="card question" data-search="والایش نشانه بلوغ">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> والایش (تصعید) در بازی درمانی نشانه چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نشانه بلوغ</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> والایش (تصعید) در بازی درمانی نشانه بلوغ است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نشانه بیماری: نادرست است.<br>
+- نشانه عقب‌ماندگی: نادرست است.<br>
+- نشانه پرخاشگری: نادرست است.<br>
+<b>نکته کلیدی:</b> والایش = نشانه بلوغ
+</div>
+</div>
+
+<div class="card question" data-search="حل اختلاف مذاکره و قانع سازی">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> برای حل اختلاف کودکان بر سر یک وسیله، درمانگران از چه فنونی استفاده می‌کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مذاکره و قانع‌سازی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگران از مذاکره و قانع‌سازی برای حل اختلاف استفاده می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- زور و تهدید: نامناسب است.<br>
+- تنبیه: نامناسب است.<br>
+- حذف وسیله: نامناسب است.<br>
+<b>نکته کلیدی:</b> حل اختلاف = مذاکره و قانع‌سازی
+</div>
+</div>
+
+<div class="card question" data-search="اتاق کوچک نزدیکی بیش از حد و خصومت">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> اتاق کوچک در بازی درمانی چه تأثیری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نزدیکی بیش از حد را تحمیل می‌کند و تولید خصومت می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اتاق کوچک نزدیکی بیش از حد را تحمیل و خصومت تولید می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آرامش: نادرست است.<br>
+- مشارکت: نادرست است.<br>
+- کاهش ترس: نادرست است.<br>
+<b>نکته کلیدی:</b> اتاق کوچک = نزدیکی تحمیلی + خصومت
+</div>
+</div>
+
+<div class="card question" data-search="اتاق کوچک کودکان منزوی فرو می روند">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> در اتاق کوچک، کودکان منزوی چه رفتاری نشان می‌دهند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بیشتر در خود فرو می‌روند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در اتاق کوچک، کودکان منزوی بیشتر در خود فرو می‌روند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اجتماعی‌تر می‌شوند: نادرست است.<br>
+- پرخاشگر می‌شوند: نادرست است.<br>
+- آرام می‌شوند: نادرست است.<br>
+<b>نکته کلیدی:</b> اتاق کوچک = کودکان منزوی منزوی‌تر
+</div>
+</div>
+
+<div class="card question" data-search="سالن بزرگ کودک پرخاشگر را تشویق می کند">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> سالن بزرگ در بازی درمانی چه تأثیری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کودک پرخاشگر را تشویق به دویدن و بازی‌های خشن می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سالن بزرگ کودک پرخاشگر را به دویدن و بازی‌های خشن تشویق می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کودکان منزوی را اجتماعی می‌کند: نادرست است.<br>
+- همه را آرام می‌کند: نادرست است.<br>
+- تأثیری ندارد: نادرست است.<br>
+<b>نکته کلیدی:</b> سالن بزرگ = تشویق پرخاشگری
+</div>
+</div>
+
+<div class="card question" data-search="اندازه اتاق بازی 6 در 6 متر">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> اندازه مناسب اتاق بازی گروهی چند متر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۶ در ۶ متر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اندازه مناسب اتاق بازی ۶ در ۶ متر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 3 در 3 متر: کوچک است.<br>
+- 10 در 10 متر: بزرگ است.<br>
+- 4 در 4 متر: کوچک است.<br>
+<b>نکته کلیدی:</b> اتاق بازی = ۶×۶ متر
+</div>
+</div>
+
+<div class="card question" data-search="ورود به بازی درمانی طرد تلقی می شود">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> کودک ورود به بازی درمانی را چه تلقی می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">طرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کودک ورود به بازی درمانی را طرد تلقی می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پذیرش: برعکس است.<br>
+- تنبیه: نادرست است.<br>
+- پاداش: نادرست است.<br>
+<b>نکته کلیدی:</b> ورود به بازی = طرد
+</div>
+</div>
+
+<div class="card question" data-search="پادزهر طرد پذیرش کامل">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> پادزهر درمانی طرد در بازی درمانی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پذیرش کامل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پادزهر طرد در بازی درمانی، پذیرش کامل است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تنبیه: نادرست است.<br>
+- تهدید: نادرست است.<br>
+- پاداش: نادرست است.<br>
+<b>نکته کلیدی:</b> پادزهر طرد = پذیرش کامل
+</div>
+</div>
+
+<div class="card question" data-search="آزادی در بازی درمانی قبول سمبولیک احساسات">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> آزادی در بازی درمانی به چه معناست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">قبول بی‌قید و شرط سمبولیک تمام احساسات، خیال‌پردازی‌ها، افکار و آرزوها</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آزادی یعنی قبول سمبولیک همه احساسات و افکار.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اجازه رفتار مخرب: نادرست است.<br>
+- بدون محدودیت: نادرست است.<br>
+- آزادی کامل بدون مرز: نادرست است.<br>
+<b>نکته کلیدی:</b> آزادی = قبول سمبولیک
+</div>
+</div>
+
+<div class="card question" data-search="ویژگی های درمانگر همهمی با کودکان قلباً جوان">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> ویژگی‌های درمانگر بازی درمانگر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">استعداد همهمی با کودکان، قلباً جوان بودن، آزاد بودن از عکس‌العمل‌های رایج نسبت به کثیفی و تخریب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگر باید همهمی با کودکان داشته باشد، قلباً جوان باشد و از واکنش‌های رایج به کثیفی و تخریب آزاد باشد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سخت‌گیر و جدی: نادرست است.<br>
+- فقط نظارت: نادرست است.<br>
+- بی‌تفاوت: نادرست است.<br>
+<b>نکته کلیدی:</b> درمانگر = همهمی، جوانی، آزاد از واکنش‌ها
+</div>
+</div>
+
+<div class="card question" data-search="گروه درمانی فعالیت 8-12 سال">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> گروه درمانی فعالیت (اسلاوسون) برای چه گروه سنی طراحی شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۸-۱۲ سال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه درمانی فعالیت برای کودکان ۸ تا ۱۲ سال طراحی شده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 3-6 سال: بازی درمانی است.<br>
+- 12-15 سال: نوجوانان است.<br>
+- 15-18 سال: گروه بزرگسالان است.<br>
+<b>نکته کلیدی:</b> اسلاوسون = ۸-۱۲ سال
+</div>
+</div>
+
+<div class="card question" data-search="گروه فعالیت اختلالات رفتاری و تصحیح منش">
+<span class="qnum">سوال 31</span>
+<div class="fa"><b>متن سوال:</b> گروه درمانی فعالیت (اسلاوسون) عمدتاً در چه اختلالاتی به کار می‌رود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اختلالات رفتاری و تصحیح منش</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه درمانی فعالیت در اختلالات رفتاری و تصحیح منش به کار می‌رود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌پریشی شدید: برای گروه درمانی فعالیت مناسب نیست.<br>
+- اختلالات خلقی: در رویکردهای دیگر است.<br>
+- اختلالات اضطرابی: در رویکردهای دیگر است.<br>
+<b>نکته کلیدی:</b> اسلاوسون = اختلالات رفتاری
+</div>
+</div>
+
+<div class="card question" data-search="نقش درمانگر در فعالیت بیطرف ثبت رفتار">
+<span class="qnum">سوال 32</span>
+<div class="fa"><b>متن سوال:</b> در گروه درمانی فعالیت (اسلاوسون)، نقش درمانگر چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بی‌طرف، نه تعبیر و نه تفسیر می‌کند ولی معنی هر رفتار را ثبت می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگر بی‌طرف است، تعبیر و تفسیر نمی‌کند اما رفتارها را ثبت می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فعال و مداخله‌گر: در رویکردهای دیگر است.<br>
+- فقط ناظر: ناقص است.<br>
+- فقط دارو: نادرست است.<br>
+<b>نکته کلیدی:</b> اسلاوسون = بی‌طرف + ثبت رفتار
+</div>
+</div>
+
+<div class="card question" data-search="تعداد گروه فعالیت 6 نفر بعد 8 نفر">
+<span class="qnum">سوال 33</span>
+<div class="fa"><b>متن سوال:</b> تعداد مناسب در گروه درمانی فعالیت (اسلاوسون) چند نفر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۶ نفر (در مراحل بعد ۸ نفر)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعداد مناسب ۶ نفر و در مراحل بعد ۸ نفر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 3 نفر: کم است.<br>
+- 10 نفر: زیاد است.<br>
+- 12 نفر: زیاد است.<br>
+<b>نکته کلیدی:</b> اسلاوسون = ۶ نفر (بعد ۸ نفر)
+</div>
+</div>
+
+<div class="card question" data-search="تفاوت سنی در فعالیت 2 سال">
+<span class="qnum">سوال 34</span>
+<div class="fa"><b>متن سوال:</b> تفاوت سنی در گروه فعالیت (اسلاوسون) چند سال است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۲ سال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تفاوت سنی در گروه فعالیت ۲ سال است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 1 سال: کمتر است.<br>
+- 3 سال: بیشتر است.<br>
+- 4 سال: بیشتر است.<br>
+<b>نکته کلیدی:</b> اسلاوسون = ۲ سال تفاوت سنی
+</div>
+</div>
+
+<div class="card question" data-search="ترکیب گروه اسلاوسون دو تحریک گر سه آرام و منزوی سه بینابین">
+<span class="qnum">سوال 35</span>
+<div class="fa"><b>متن سوال:</b> یک گروه متعادل در روش اسلاوسون از چه ترکیبی تشکیل می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دو تحریک‌گر، سه آرام‌کننده و منزوی، و سه کودک بینابین</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ترکیب متعادل شامل دو تحریک‌گر، سه آرام‌کننده و منزوی، و سه بینابین است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- همه تحریک‌گر: نادرست است.<br>
+- همه آرام‌کننده: نادرست است.<br>
+- همه منزوی: نادرست است.<br>
+<b>نکته کلیدی:</b> اسلاوسون = ۲+۳+۳
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>بازی درمانی گروهی</h3></div>
+<div class="grid2">
+<div class="box"><h4>گروه سنی</h4>
+<div class="fa">۳-۹ سال</div>
+</div>
+<div class="box"><h4>تعداد اعضا</h4>
+<div class="fa">حداکثر ۵ نفر</div>
+</div>
+<div class="box"><h4>اختلاف سن</h4>
+<div class="fa">حداکثر ۱۲ ماه</div>
+</div>
+<div class="box"><h4>جنسیت قبل از مدرسه</h4>
+<div class="fa">مختلط</div>
+</div>
+<div class="box"><h4>جنسیت دوران مدرسه</h4>
+<div class="fa">همجنس</div>
+</div>
+<div class="box"><h4>اندازه اتاق</h4>
+<div class="fa">۶×۶ متر</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گروه درمانی فعالیت (اسلاوسون)</h3></div>
+<div class="grid2">
+<div class="box"><h4>گروه سنی</h4>
+<div class="fa">۸-۱۲ سال</div>
+</div>
+<div class="box"><h4>تعداد اعضا</h4>
+<div class="fa">۶ نفر (بعد ۸ نفر)</div>
+</div>
+<div class="box"><h4>تفاوت سنی</h4>
+<div class="fa">۲ سال</div>
+</div>
+<div class="box"><h4>ترکیب متعادل</h4>
+<div class="fa">۲ تحریک‌گر + ۳ آرام و منزوی + ۳ بینابین</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفاهیم کلیدی</h3></div>
+<div class="grid2">
+<div class="box"><h4>پادزهر طرد</h4>
+<div class="fa">پذیرش کامل</div>
+</div>
+<div class="box"><h4>آزادی در بازی</h4>
+<div class="fa">قبول سمبولیک احساسات</div>
+</div>
+<div class="box"><h4>والایش</h4>
+<div class="fa">نشانه بلوغ</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>بازی درمانی گروهی</h3></div>
+<div class="fa"><b>تعریف:</b> روش درمانی برای کودکان ۳-۹ سال از طریق بازی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>سن:</b> ۳-۹ سال<br>
+<b>تعداد:</b> حداکثر ۵ نفر<br>
+<b>اختلاف سن:</b> حداکثر ۱۲ ماه<br>
+<b>جنسیت قبل مدرسه:</b> مختلط<br>
+<b>جنسیت دوران مدرسه:</b> همجنس<br>
+<b>اتاق:</b> ۶×۶ متر<br>
+<b>سوالات مرتبط:</b> 1، 7، 8، 9، 11، 13، 25
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گروه درمانی فعالیت (اسلاوسون)</h3></div>
+<div class="fa"><b>تعریف:</b> روش درمانی برای کودکان ۸-۱۲ سال با اختلالات رفتاری.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>سن:</b> ۸-۱۲ سال<br>
+<b>تعداد:</b> ۶ نفر (بعد ۸ نفر)<br>
+<b>تفاوت سنی:</b> ۲ سال<br>
+<b>ترکیب متعادل:</b> ۲ تحریک‌گر + ۳ آرام و منزوی + ۳ بینابین<br>
+<b>نقش درمانگر:</b> بی‌طرف، ثبت رفتار<br>
+<b>سوالات مرتبط:</b> 30، 31، 32، 33، 34، 35
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفاهیم کلیدی بازی درمانی</h3></div>
+<div class="fa"><b>تعریف:</b> مفاهیم اساسی در بازی درمانی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>تمنای پذیرش:</b> از رابطه مادر<br>
+<b>عطش اجتماعی:</b> شرط پذیرش<br>
+<b>پادزهر طرد:</b> پذیرش کامل<br>
+<b>آزادی:</b> قبول سمبولیک احساسات<br>
+<b>والایش:</b> نشانه بلوغ<br>
+<b>سوالات مرتبط:</b> 4، 5، 20، 26، 27، 28
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>بازی درمانی</td><td>گروه درمانی فعالیت</td><td>بازی = ۳-۹ سال، فعالیت = ۸-۱۲ سال</td><td>۳-۹ vs ۸-۱۲</td></tr>
+<tr><td>جنسیت قبل مدرسه</td><td>جنسیت دوران مدرسه</td><td>قبل = مختلط، دوران = همجنس</td><td>مختلط vs همجنس</td></tr>
+<tr><td>اتاق کوچک</td><td>اتاق بزرگ</td><td>کوچک = خصومت، بزرگ = پرخاشگری</td><td>خصومت vs پرخاشگری</td></tr>
+<tr><td>طرد</td><td>پذیرش کامل</td><td>طرد = احساس اولیه، پذیرش = پادزهر</td><td>طرد vs پذیرش</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">05 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: سن بازی درمانی</h3>
+<div class="fa"><b>سوال نمونه:</b> بازی درمانی گروهی برای چه سنی مناسب است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۳-۶ سال" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۳-۹ سال</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۳-۶ محدوده کمتری است، ۳-۹ صحیح است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> بازی درمانی = ۳-۹ سال
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: اختلاف سن در بازی</h3>
+<div class="fa"><b>سوال نمونه:</b> همگروهی‌ها نباید بیش از چند ماه اختلاف سن داشته باشند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۶ ماه" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۱۲ ماه</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۱۲ ماه حد مجاز است، ۶ ماه کمتر است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> بازی = حداکثر ۱۲ ماه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: جنسیت گروه</h3>
+<div class="fa"><b>سوال نمونه:</b> در دوران مدرسه گروه باید چگونه باشد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "مختلط" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> همجنس</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> مختلط برای قبل از مدرسه است، همجنس برای دوران مدرسه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> دوران مدرسه = همجنس
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: تعداد بازی درمانی</h3>
+<div class="fa"><b>سوال نمونه:</b> تعداد اعضای بازی درمانی نباید بیش از چند نفر باشد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۷ نفر" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۵ نفر</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۷ نفر برای گروه رشد است، ۵ نفر برای بازی درمانی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> بازی درمانی = ۵ نفر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: اندازه اتاق</h3>
+<div class="fa"><b>سوال نمونه:</b> اندازه مناسب اتاق بازی چند متر است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۴×۴ متر" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۶×۶ متر</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۴×۴ کوچک است، ۶×۶ مناسب است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اتاق بازی = ۶×۶ متر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: تفاوت سنی اسلاوسون</h3>
+<div class="fa"><b>سوال نمونه:</b> تفاوت سنی در گروه اسلاوسون چند سال است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۱ سال" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۲ سال</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۲ سال تفاوت مجاز در اسلاوسون است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اسلاوسون = ۲ سال
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: ترکیب اسلاوسون</h3>
+<div class="fa"><b>سوال نمونه:</b> ترکیب متعادل اسلاوسون چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "همه تحریک‌گر" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ۲ تحریک‌گر + ۳ آرام و منزوی + ۳ بینابین</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ترکیب متعادل نیاز به تنوع دارد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اسلاوسون = ۲+۳+۳
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">06 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 21 · مشاوره گروهی نظری · 35 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "بازی درمانی گروهی برای چه سنی مناسب است؟",
+options: ["۳-۶ سال", "۳-۹ سال", "۶-۱۲ سال", "۹-۱۲ سال"],
+answer: 1,
+explanation: "بازی درمانی برای ۳-۹ سال مناسب است."
+},
+{
+q: "تعداد اعضای بازی درمانی نباید بیش از چند نفر باشد؟",
+options: ["۳ نفر", "۴ نفر", "۵ نفر", "۷ نفر"],
+answer: 2,
+explanation: "بازی درمانی حداکثر ۵ نفر است."
+},
+{
+q: "همگروهی‌ها نباید بیش از چند ماه اختلاف سن داشته باشند؟",
+options: ["۶ ماه", "۱۲ ماه", "۱۸ ماه", "۲۴ ماه"],
+answer: 1,
+explanation: "اختلاف سن حداکثر ۱۲ ماه است."
+},
+{
+q: "در دوران مدرسه گروه باید چگونه باشد؟",
+options: ["مختلط", "همجنس", "فقط پسر", "فقط دختر"],
+answer: 1,
+explanation: "دوران مدرسه گروه همجنس است."
+},
+{
+q: "اندازه مناسب اتاق بازی چند متر است؟",
+options: ["۳×۳ متر", "۶×۶ متر", "۱۰×۱۰ متر", "۴×۴ متر"],
+answer: 1,
+explanation: "اندازه اتاق ۶×۶ متر است."
+},
+{
+q: "گروه درمانی فعالیت برای چه سنی است؟",
+options: ["۳-۶ سال", "۸-۱۲ سال", "۱۲-۱۵ سال", "۱۵-۱۸ سال"],
+answer: 1,
+explanation: "اسلاوسون برای ۸-۱۲ سال است."
+},
+{
+q: "تعداد مناسب در اسلاوسون چند نفر است؟",
+options: ["۳ نفر", "۶ نفر (بعد ۸)", "۱۰ نفر", "۱۲ نفر"],
+answer: 1,
+explanation: "اسلاوسون ۶ نفر (بعد ۸ نفر) است."
+},
+{
+q: "تفاوت سنی در اسلاوسون چند سال است؟",
+options: ["۱ سال", "۲ سال", "۳ سال", "۴ سال"],
+answer: 1,
+explanation: "تفاوت سنی ۲ سال است."
+},
+{
+q: "ترکیب متعادل اسلاوسون چیست؟",
+options: ["۲+۳+۳", "همه تحریک‌گر", "همه آرام‌کننده", "همه منزوی"],
+answer: 0,
+explanation: "ترکیب: ۲ تحریک‌گر + ۳ آرام و منزوی + ۳ بینابین."
+},
+{
+q: "پادزهر طرد در بازی درمانی چیست؟",
+options: ["پذیرش کامل", "تنبیه", "تهدید", "پاداش"],
+answer: 0,
+explanation: "پادزهر طرد، پذیرش کامل است."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
