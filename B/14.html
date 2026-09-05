@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره گروهی نظری · سری 14</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"14";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره گروهی نظری · سری 14</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری راهنمایی و مشاوره گروهی</h2>
+  <p>تحلیل کامل 20 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">20 سوال</span><span class="pill">راهنمایی گروهی</span><span class="pill">تاریخچه</span><span class="pill">نظریه‌پردازان</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>20</b><span>سوال</span></div>
+<div class="stat"><b>6</b><span>نظریه‌پرداز</span></div>
+<div class="stat"><b>3</b><span>دوره تاریخی</span></div>
+<div class="stat"><b>4</b><span>مفهوم کلیدی</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="راهنمایی گروهی عرضه اطلاعات فرد محورانه">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> راهنمایی گروهی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فرایند عرضه اطلاعات فرد-محورانه به مراجعان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راهنمایی گروهی فرایند عرضه اطلاعات فرد-محورانه به مراجعان است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فرایند درمان اختلالات شدید: مربوط به روان‌درمانی است.<br>
+- بازسازی شخصیت: مربوط به روان‌تحلیل‌گری است.<br>
+- تحلیل ناخودآگاه: مربوط به روان‌کاوی است.<br>
+<b>نکته کلیدی:</b> راهنمایی = عرضه اطلاعات
+</div>
+</div>
+
+<div class="card question" data-search="خصوصیات مراجعان راهنمایی می دانند چه می خواهند نمی دانند چگونه">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از خصوصیات مراجعان در راهنمایی گروهی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">می‌دانند چه می‌خواهند ولی نمی‌دانند چگونه به آن برسند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در راهنمایی گروهی، مراجعان می‌دانند چه می‌خواهند ولی نمی‌دانند چگونه به آن برسند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نمی‌دانند چه می‌خواهند: در مشاوره شایع است.<br>
+- اصلاً نیازی ندارند: نادرست است.<br>
+- اختلالات شدید: مربوط به روان‌درمانی است.<br>
+<b>نکته کلیدی:</b> راهنمایی = هدف می‌دانند، راه نمی‌دانند
+</div>
+</div>
+
+<div class="card question" data-search="ماهیت راهنمایی پیشگیرانه و تکاملی">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> ماهیت راهنمایی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پیشگیرانه و تکاملی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ماهیت راهنمایی پیشگیرانه (Preventive) و تکاملی (Developmental) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- درمانی و جبرانی: مربوط به مشاوره است.<br>
+- تصحیحی و توانبخشی: مربوط به روان‌درمانی است.<br>
+- روانکاوانه و تحلیلی: مربوط به روان‌کاوی است.<br>
+<b>نکته کلیدی:</b> راهنمایی = پیشگیرانه و تکاملی
+</div>
+</div>
+
+<div class="card question" data-search="ماهیت رابطه مشاوره ای جبرانی یا تصحیحی">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> ماهیت رابطه مشاوره‌ای چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ماهیتاً جبرانی یا تصحیحی است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ماهیت رابطه مشاوره‌ای جبرانی یا تصحیحی (Remedial) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پیشگیرانه: مربوط به راهنمایی است.<br>
+- آموزشی صرف: ناقص است.<br>
+- دارویی: مربوط به روان‌پزشکی است.<br>
+<b>نکته کلیدی:</b> مشاوره = جبرانی یا تصحیحی
+</div>
+</div>
+
+<div class="card question" data-search="روان درمانی محصول تجربیات زندگی">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> روان‌درمانی بر چه اعتقادی استوار است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">احساسات، برداشت‌ها، نگرش‌ها و رفتارها محصول تجربیات زندگی و یاد گرفته شده هستند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌درمانی بر این اعتقاد استوار است که احساسات، برداشت‌ها، نگرش‌ها و رفتارها محصول تجربیات زندگی و یاد گرفته شده هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ذاتی و مادرزادی: نادرست است.<br>
+- ریشه ژنتیکی: نادرست است.<br>
+- فقط دارودرمانی: نادرست است.<br>
+<b>نکته کلیدی:</b> روان‌درمانی = محصول یادگیری
+</div>
+</div>
+
+<div class="card question" data-search="انحراف از دید اجتماع زیر پا گذاشتن ارزش ها">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> از دید اجتماع، چه افرادی دارای انحراف تلقی می‌شوند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">افرادی که ارزش‌ها و معیارهای عمومًا مورد قبول را زیر پا می‌گذارند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از دید اجتماع، انحراف یعنی زیر پا گذاشتن ارزش‌ها و معیارهای عمومی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کاملاً هنجار: انحراف نیست.<br>
+- ثروتمند: ربطی به انحراف ندارد.<br>
+- تحصیلات عالی: ربطی به انحراف ندارد.<br>
+<b>نکته کلیدی:</b> انحراف = زیر پا گذاشتن ارزش‌ها
+</div>
+</div>
+
+<div class="card question" data-search="کارل یونگ یافتن جهان بینی">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> به گفته کارل یونگ، مشکل اصلی بیمارانش (۳۵ سال به بالا) چه بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">یافتن یک جهان‌بینی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> به گفته یونگ، مشکل اصلی بیماران بالای 35 سال، یافتن یک جهان‌بینی (Worldview) بود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مشکل اقتصادی: ربطی به گفته یونگ ندارد.<br>
+- مشکل جسمانی: ربطی به گفته یونگ ندارد.<br>
+- مشکل خانوادگی: ربطی به گفته یونگ ندارد.<br>
+<b>نکته کلیدی:</b> یونگ = جهان‌بینی
+</div>
+</div>
+
+<div class="card question" data-search="قبل از رنسانس مذهب کاملترین نهاد">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> قبل از رنسانس در اروپا، کامل‌ترین و مدون‌ترین نهاد برای نیازهای بشری چه بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مذهب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> قبل از رنسانس، مذهب کامل‌ترین نهاد برای نیازهای بشری بود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- علم: بعد از رنسانس اهمیت یافت.<br>
+- فلسفه: کمتر از مذهب نهادینه بود.<br>
+- سیاست: در سطح دیگری بود.<br>
+<b>نکته کلیدی:</b> قبل از رنسانس = مذهب
+</div>
+</div>
+
+<div class="card question" data-search="پس از رنسانس کمرنگ شدن مذهب خلأ ارزشی">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> پس از رنسانس در غرب، چه پدیده‌ای رخ داد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نقش مذهب کمرنگ شد و خلأ ارزشی ایجاد شد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پس از رنسانس، نقش مذهب کمرنگ شد و خلأ ارزشی ایجاد شد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نقش مذهب پررنگ‌تر شد: برعکس است.<br>
+- همه بی‌دین شدند: افراطی است.<br>
+- علم جایگزین کامل شد: کامل نبود.<br>
+<b>نکته کلیدی:</b> پس از رنسانس = خلأ ارزشی
+</div>
+</div>
+
+<div class="card question" data-search="مشاوره روحانی روحانیون آموزش دیده">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> شاخه جدیدی که در آن روحانیون آموزش‌دیده به ارائه خدمات روان‌درمانی می‌پردازند، چه نام دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مشاوره روحانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مشاوره روحانی (Pastoral Counseling) شاخه‌ای است که در آن روحانیون آموزش‌دیده به روان‌درمانی می‌پردازند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌درمانی پزشکی: توسط پزشکان انجام می‌شود.<br>
+- روان‌کاوی: توسط روانکاوان انجام می‌شود.<br>
+- رفتاردرمانی: رویکرد دیگری است.<br>
+<b>نکته کلیدی:</b> روحانیون = مشاوره روحانی
+</div>
+</div>
+
+<div class="card question" data-search="درمان گروهی مورینو">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> اصطلاح «درمان گروهی» اولین بار توسط چه کسی به کار برده شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مورینو</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصطلاح درمان گروهی (Group Therapy) اولین بار توسط مورینو به کار برده شد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فروید: روان‌کاوی را مطرح کرد.<br>
+- پرت: گروه درمانی سل را مطرح کرد.<br>
+- راجرز: شخص محور را مطرح کرد.<br>
+<b>نکته کلیدی:</b> درمان گروهی = مورینو
+</div>
+</div>
+
+<div class="card question" data-search="راهنمایی گروهی 1931">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> اولین بار اصطلاح «راهنمایی گروهی» در چه سالی به کار برده شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1931</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصطلاح راهنمایی گروهی (Group Guidance) اولین بار در سال 1931 به کار برده شد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 1905: سال شروع کار پرت است.<br>
+- 1932: سال پایان کار پرت است.<br>
+- 1940: سال بعدی است.<br>
+<b>نکته کلیدی:</b> راهنمایی گروهی = 1931
+</div>
+</div>
+
+<div class="card question" data-search="راهنمایی گروهی ریچارد آلن">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> اولین بار اصطلاح «راهنمایی گروهی» توسط چه کسی به کار برده شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ریچارد آلن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ریچارد آلن (Richard Allen) اولین بار اصطلاح راهنمایی گروهی را به کار برد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- پرت: گروه درمانی سل را مطرح کرد.<br>
+- مورینو: درمان گروهی را مطرح کرد.<br>
+- فروید: روان‌کاوی را مطرح کرد.<br>
+<b>نکته کلیدی:</b> راهنمایی گروهی = ریچارد آلن
+</div>
+</div>
+
+<div class="card question" data-search="جوزف پرت 1905">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> کارهای جوزف پرت در زمینه روان‌درمانی گروهی از چه سالی آغاز شد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1905</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جوزف پرت کارهای خود را در زمینه روان‌درمانی گروهی از سال 1905 آغاز کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 1932: سال پایان کار پرت است.<br>
+- 1910: سال دیگری است.<br>
+- 1950: دوره شکوفایی است.<br>
+<b>نکته کلیدی:</b> پرت = 1905 (شروع)
+</div>
+</div>
+
+<div class="card question" data-search="جوزف پرت 1932 پایان">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> کارهای جوزف پرت در زمینه روان‌درمانی گروهی تا چه سالی ادامه یافت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1932</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کارهای جوزف پرت در زمینه روان‌درمانی گروهی تا سال 1932 ادامه یافت.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 1905: سال شروع است.<br>
+- 1931: سال راهنمایی گروهی است.<br>
+- 1945: سال بعدی است.<br>
+<b>نکته کلیدی:</b> پرت = 1932 (پایان)
+</div>
+</div>
+
+<div class="card question" data-search="دوره دوم شکوفایی پیشرفت سریع">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> دوره دوم (شکوفایی) مشاوره و روان‌درمانی گروهی با چه پدیده‌ای مشخص می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پیشرفت سریع و شکوفایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دوره دوم با پیشرفت سریع و شکوفایی مشخص می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کاهش تعداد کتب: در دوره اول بود.<br>
+- تعطیلی مراکز: نادرست است.<br>
+- بازگشت به روش‌های سنتی: نادرست است.<br>
+<b>نکته کلیدی:</b> دوره دوم = شکوفایی
+</div>
+</div>
+
+<div class="card question" data-search="قبل از شکوفایی 34 کتاب">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> قبل از دوره شکوفایی، تعداد کتب منتشرشده در زمینه مشاوره و روان‌درمانی گروهی چند کتاب بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فقط ۳۴ کتاب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> قبل از دوره شکوفایی، فقط ۳۴ کتاب در این زمینه منتشر شده بود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بیش از 1000 کتاب: مربوط به بعد از شکوفایی است.<br>
+- حدود 500 کتاب: نادرست است.<br>
+- هیچ کتابی: نادرست است.<br>
+<b>نکته کلیدی:</b> قبل از شکوفایی = 34 کتاب
+</div>
+</div>
+
+<div class="card question" data-search="کارل یونگ در دوره شکوفایی نیست">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از افراد زیر از نام‌های برجسته در دوره شکوفایی روان‌درمانی گروهی نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کارل یونگ</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کارل یونگ در دوره شکوفایی روان‌درمانی گروهی مطرح نبود.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- ناتان اکرمن: از چهره‌های دوره شکوفایی است.<br>
+- اریک برن: از چهره‌های دوره شکوفایی است.<br>
+- فریتز پرلز: از چهره‌های دوره شکوفایی است.<br>
+<b>نکته کلیدی:</b> یونگ ≠ دوره شکوفایی
+</div>
+</div>
+
+<div class="card question" data-search="شوروی ایوانف">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> در شوروی، کدام شخصیت در حوزه روان‌درمانی گروهی مطرح بود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایوانف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در شوروی، ایوانف (Ivanov) در حوزه روان‌درمانی گروهی مطرح بود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فروید: در اتریش مطرح بود.<br>
+- مورینو: در آمریکا مطرح بود.<br>
+- راجرز: در آمریکا مطرح بود.<br>
+<b>نکته کلیدی:</b> شوروی = ایوانف
+</div>
+</div>
+
+<div class="card question" data-search="روان درمانی به عنوان نهاد تصریح ارزش ها">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از جمله مفاهیم مطرح در روان‌درمانی به عنوان یک نهاد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تصریح ارزش‌ها و کمک به فرد برای روشن شدن ارزش‌های خود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌درمانی به عنوان یک نهاد شامل تصریح ارزش‌ها و کمک به روشن شدن ارزش‌های فرد است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط درمان دارویی: محدود است.<br>
+- نادیده گرفتن نیازهای معنوی: نادرست است.<br>
+- تمرکز صرف بر رفتار: محدود است.<br>
+<b>نکته کلیدی:</b> روان‌درمانی نهاد = تصریح ارزش‌ها
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت راهنمایی، مشاوره، روان‌درمانی</h3></div>
+<div class="grid2">
+<div class="box"><h4>راهنمایی</h4>
+<div class="fa">عرضه اطلاعات، پیشگیرانه، تکاملی</div>
+</div>
+<div class="box"><h4>مشاوره</h4>
+<div class="fa">جبرانی، تصحیحی</div>
+</div>
+<div class="box"><h4>روان‌درمانی</h4>
+<div class="fa">محصول یادگیری، بازسازی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تاریخچه</h3></div>
+<div class="grid2">
+<div class="box"><h4>پرت</h4>
+<div class="fa">1905-1932، بیماران سل</div>
+</div>
+<div class="box"><h4>مورینو</h4>
+<div class="fa">درمان گروهی</div>
+</div>
+<div class="box"><h4>ریچارد آلن</h4>
+<div class="fa">راهنمایی گروهی (1931)</div>
+</div>
+<div class="box"><h4>دوره شکوفایی</h4>
+<div class="fa">پس از 1932، پیشرفت سریع</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه‌پردازان</h3></div>
+<div class="grid2">
+<div class="box"><h4>یونگ</h4>
+<div class="fa">جهان‌بینی برای بیماران 35+</div>
+</div>
+<div class="box"><h4>ایوانف</h4>
+<div class="fa">شوروی</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>راهنمایی گروهی</h3></div>
+<div class="fa"><b>تعریف:</b> فرایند عرضه اطلاعات فرد-محورانه به مراجعان.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ویژگی‌ها:</b> پیشگیرانه، تکاملی<br>
+<b>مراجعان:</b> می‌دانند چه می‌خواهند ولی نمی‌دانند چگونه<br>
+<b>سوالات مرتبط:</b> 1، 2، 3
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مشاوره</h3></div>
+<div class="fa"><b>تعریف:</b> رابطه جبرانی یا تصحیحی برای کمک به حل مشکلات.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ماهیت:</b> جبرانی یا تصحیحی<br>
+<b>سوالات مرتبط:</b> 4
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌درمانی</h3></div>
+<div class="fa"><b>تعریف:</b> تغییر رفتار و شخصیت بر اساس تجربیات یادگیری.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>اصل:</b> رفتارها محصول تجربیات زندگی هستند<br>
+<b>نهاد:</b> تصریح ارزش‌ها<br>
+<b>سوالات مرتبط:</b> 5، 20
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تاریخچه روان‌درمانی گروهی</h3></div>
+<div class="fa"><b>تعریف:</b> سیر تحول روان‌درمانی گروهی از ابتدا تا شکوفایی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>پرت:</b> 1905-1932<br>
+<b>راهنمایی گروهی:</b> 1931، ریچارد آلن<br>
+<b>درمان گروهی:</b> مورینو<br>
+<b>دوره شکوفایی:</b> بعد از 1932<br>
+<b>سوالات مرتبط:</b> 11-19
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رنسانس و نقش مذهب</h3></div>
+<div class="fa"><b>تعریف:</b> تغییرات اجتماعی پس از رنسانس و تأثیر آن بر روان‌درمانی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>قبل از رنسانس:</b> مذهب کامل‌ترین نهاد<br>
+<b>بعد از رنسانس:</b> خلأ ارزشی<br>
+<b>مشاوره روحانی:</b> روحانیون آموزش‌دیده<br>
+<b>سوالات مرتبط:</b> 8، 9، 10
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>راهنمایی</td><td>مشاوره</td><td>راهنمایی = پیشگیرانه، مشاوره = جبرانی</td><td>پیشگیری vs جبران</td></tr>
+<tr><td>مشاوره</td><td>روان‌درمانی</td><td>مشاوره = جبرانی، روان‌درمانی = تغییر عمیق</td><td>جبران vs تغییر</td></tr>
+<tr><td>پرت</td><td>ریچارد آلن</td><td>پرت = بیماران سل، آلن = راهنمایی گروهی</td><td>سل vs راهنمایی</td></tr>
+<tr><td>مورینو</td><td>آلن</td><td>مورینو = درمان گروهی، آلن = راهنمایی گروهی</td><td>درمان vs راهنمایی</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>جوزف پرت</h3></div>
+<div class="fa"><b>ایده اصلی:</b> روان‌درمانی گروهی برای بیماران سل (1905-1932)</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "پرت"، "سل"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 14، 15</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ریچارد آلن</h3></div>
+<div class="fa"><b>ایده اصلی:</b> اصطلاح راهنمایی گروهی (1931)</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "آلن"، "راهنمایی گروهی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 12، 13</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جاکوب مورینو</h3></div>
+<div class="fa"><b>ایده اصلی:</b> اصطلاح درمان گروهی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "مورینو"، "درمان گروهی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 11</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارل یونگ</h3></div>
+<div class="fa"><b>ایده اصلی:</b> یافتن جهان‌بینی برای بیماران 35+</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "یونگ"، "جهان‌بینی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 7</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ایوانف</h3></div>
+<div class="fa"><b>ایده اصلی:</b> روان‌درمانی گروهی در شوروی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "ایوانف"، "شوروی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 19</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ناتان اکرمن</h3></div>
+<div class="fa"><b>ایده اصلی:</b> خانواده‌درمانی، دوره شکوفایی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "اکرمن"، "خانواده"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 18</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اریک برن</h3></div>
+<div class="fa"><b>ایده اصلی:</b> تحلیل تبادلی، دوره شکوفایی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "برن"، "تحلیل تبادلی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 18</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فریتز پرلز</h3></div>
+<div class="fa"><b>ایده اصلی:</b> گشتالت درمانی، دوره شکوفایی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "پرلز"، "گشتالت"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 18</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: راهنمایی و مشاوره</h3>
+<div class="fa"><b>سوال نمونه:</b> ماهیت راهنمایی چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "درمانی و جبرانی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> پیشگیرانه و تکاملی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> درمانی و جبرانی مربوط به مشاوره است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> راهنمایی = پیشگیرانه، مشاوره = جبرانی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: سال 1932</h3>
+<div class="fa"><b>سوال نمونه:</b> راهنمایی گروهی در چه سالی مطرح شد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "1932" را انتخاب کنی (سال پایان کار پرت).</div>
+<div class="fa"><b>پاسخ درست:</b> 1931</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> 1931 سال مطرح شدن راهنمایی گروهی است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> راهنمایی = 1931، پرت = 1905-1932
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: یونگ و دوره شکوفایی</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام یک در دوره شکوفایی نیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "اریک برن" را انتخاب کنی چون جوان‌تر است.</div>
+<div class="fa"><b>پاسخ درست:</b> کارل یونگ</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> یونگ در دوره شکوفایی مطرح نبود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> یونگ ≠ دوره شکوفایی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: پرت و سال شروع</h3>
+<div class="fa"><b>سوال نمونه:</b> کارهای پرت از چه سالی آغاز شد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "1932" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> 1905</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> 1905 سال شروع و 1932 سال پایان است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> پرت = 1905 شروع، 1932 پایان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: خصوصیات مراجعان</h3>
+<div class="fa"><b>سوال نمونه:</b> مراجعان راهنمایی چه خصوصیتی دارند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "نمی‌دانند چه می‌خواهند" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> می‌دانند چه می‌خواهند ولی نمی‌دانند چگونه</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> "نمی‌دانند چه می‌خواهند" در مشاوره است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> راهنمایی = هدف می‌دانند، راه نمی‌دانند
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: روان‌درمانی به عنوان نهاد</h3>
+<div class="fa"><b>سوال نمونه:</b> روان‌درمانی به عنوان نهاد شامل چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "فقط درمان دارویی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تصریح ارزش‌ها</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> روان‌درمانی فراتر از دارو است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> روان‌درمانی = تصریح ارزش‌ها
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 14 · مشاوره گروهی نظری · 20 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "راهنمایی گروهی چیست؟",
+options: ["درمان اختلالات شدید", "عرضه اطلاعات فرد-محورانه", "بازسازی شخصیت", "تحلیل ناخودآگاه"],
+answer: 1,
+explanation: "راهنمایی گروهی فرایند عرضه اطلاعات است."
+},
+{
+q: "ماهیت راهنمایی چیست؟",
+options: ["درمانی و جبرانی", "پیشگیرانه و تکاملی", "تصحیحی و توانبخشی", "روانکاوانه"],
+answer: 1,
+explanation: "ماهیت راهنمایی پیشگیرانه و تکاملی است."
+},
+{
+q: "ماهیت مشاوره چیست؟",
+options: ["پیشگیرانه", "جبرانی یا تصحیحی", "آموزشی", "دارویی"],
+answer: 1,
+explanation: "ماهیت مشاوره جبرانی یا تصحیحی است."
+},
+{
+q: "روان‌درمانی بر چه اعتقادی استوار است؟",
+options: ["رفتارها ذاتی هستند", "رفتارها محصول یادگیری هستند", "ریشه ژنتیکی دارند", "فقط دارو درمانی"],
+answer: 1,
+explanation: "روان‌درمانی بر محصول یادگیری بودن رفتارها استوار است."
+},
+{
+q: "یونگ مشکل اصلی بیماران 35+ را چه می‌دانست؟",
+options: ["اقتصاد", "جهان‌بینی", "جسمانی", "خانوادگی"],
+answer: 1,
+explanation: "یونگ معتقد بود مشکل اصلی یافتن جهان‌بینی است."
+},
+{
+q: "قبل از رنسانس کامل‌ترین نهاد چه بود؟",
+options: ["علم", "فلسفه", "مذهب", "سیاست"],
+answer: 2,
+explanation: "قبل از رنسانس مذهب کامل‌ترین نهاد بود."
+},
+{
+q: "پس از رنسانس چه اتفاقی افتاد؟",
+options: ["مذهب پررنگ‌تر شد", "خلأ ارزشی ایجاد شد", "همه بی‌دین شدند", "علم جایگزین کامل شد"],
+answer: 1,
+explanation: "پس از رنسانس خلأ ارزشی ایجاد شد."
+},
+{
+q: "روحانیون آموزش‌دیده به چه خدماتی می‌پردازند؟",
+options: ["روان‌درمانی پزشکی", "مشاوره روحانی", "روان‌کاوی", "رفتاردرمانی"],
+answer: 1,
+explanation: "روحانیون آموزش‌دیده به مشاوره روحانی می‌پردازند."
+},
+{
+q: "درمان گروهی توسط چه کسی مطرح شد؟",
+options: ["فروید", "مورینو", "پرت", "راجرز"],
+answer: 1,
+explanation: "مورینو اصطلاح درمان گروهی را مطرح کرد."
+},
+{
+q: "راهنمایی گروهی در چه سالی مطرح شد؟",
+options: ["1905", "1932", "1931", "1940"],
+answer: 2,
+explanation: "راهنمایی گروهی در سال 1931 مطرح شد."
+},
+{
+q: "راهنمایی گروهی توسط چه کسی مطرح شد؟",
+options: ["پرت", "آلن", "مورینو", "فروید"],
+answer: 1,
+explanation: "ریچارد آلن راهنمایی گروهی را مطرح کرد."
+},
+{
+q: "کارهای پرت از چه سالی آغاز شد؟",
+options: ["1905", "1932", "1931", "1910"],
+answer: 0,
+explanation: "پرت کارهای خود را از 1905 آغاز کرد."
+},
+{
+q: "کارهای پرت تا چه سالی ادامه یافت؟",
+options: ["1905", "1932", "1931", "1945"],
+answer: 1,
+explanation: "کارهای پرت تا 1932 ادامه یافت."
+},
+{
+q: "قبل از دوره شکوفایی چند کتاب منتشر شد؟",
+options: ["بیش از 1000", "فقط 34", "حدود 500", "هیچ"],
+answer: 1,
+explanation: "قبل از شکوفایی فقط 34 کتاب منتشر شد."
+},
+{
+q: "کدام یک در دوره شکوفایی نیست؟",
+options: ["اکرمن", "برن", "یونگ", "پرلز"],
+answer: 2,
+explanation: "یونگ در دوره شکوفایی مطرح نبود."
+},
+{
+q: "در شوروی چه کسی مطرح بود؟",
+options: ["فروید", "ایوانف", "مورینو", "راجرز"],
+answer: 1,
+explanation: "در شوروی ایوانف مطرح بود."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
