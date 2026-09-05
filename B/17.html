@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره گروهی نظری · سری 17</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"17";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره گروهی نظری · سری 17</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری راهنمایی و مشاوره گروهی</h2>
+  <p>تحلیل کامل 25 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">25 سوال</span><span class="pill">رویکرد وجودی</span><span class="pill">نظریه انتخاب</span><span class="pill">سلسله مراتب نیازها</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>25</b><span>سوال</span></div>
+<div class="stat"><b>5</b><span>نیاز اساسی</span></div>
+<div class="stat"><b>3</b><span>نظریه‌پرداز</span></div>
+<div class="stat"><b>5</b><span>سطح نیاز</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="رویکرد وجودی اگزیستانسیال هستی گرایانه">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> رویکرد وجودی (اگزیستانسیال) در روان‌درمانی با چه نام‌های دیگری شناخته می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌درمانی اگزیستانسیال یا هستی‌گرایانه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد وجودی با نام روان‌درمانی اگزیستانسیال یا هستی‌گرایانه شناخته می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌شناسی تحلیلی: مربوط به یونگ است.<br>
+- رفتاردرمانی: رویکرد دیگری است.<br>
+- روان‌کاوی: مربوط به فروید است.<br>
+<b>نکته کلیدی:</b> وجودی = اگزیستانسیال یا هستی‌گرایانه
+</div>
+</div>
+
+<div class="card question" data-search="دلواپسی های وجودی ریشه در هستی انسان">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> رویکرد وجودی بر چه دلواپسی‌هایی تمرکز می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دلواپسی‌هایی که در هستی انسان ریشه دارند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویکرد وجودی بر دلواپسی‌های بنیادین هستی انسان تمرکز دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اقتصادی: مربوط به اقتصاد است.<br>
+- سیاسی: مربوط به سیاست است.<br>
+- روزمره: سطحی است.<br>
+<b>نکته کلیدی:</b> وجودی = دلواپسی‌های هستی
+</div>
+</div>
+
+<div class="card question" data-search="یالوم روان پویه شناسی نیروهای ناخودآگاه و خودآگاه">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> به گفته اروین یالوم، روان‌پویه‌شناسی هر فرد شامل چه چیزهایی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نیروها، انگیزه‌ها و ترس‌های ناخودآگاه و خودآگاه که در درونش به کنش مشغول‌اند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یالوم معتقد است روان‌پویه‌شناسی شامل نیروها، انگیزه‌ها و ترس‌های ناخودآگاه و خودآگاه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط نیروهای خودآگاه: ناقص است.<br>
+- فقط ترس‌های ناخودآگاه: ناقص است.<br>
+- فقط انگیزه‌های خودآگاه: ناقص است.<br>
+<b>نکته کلیدی:</b> یالوم = نیروهای ناخودآگاه و خودآگاه
+</div>
+</div>
+
+<div class="card question" data-search="روان درمانی پویانگر روبیدن دلواپسی های روزمره">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> در روان‌درمانی‌های پویانگر، تأکید بر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روبیدن و کنار زدن دلواپسی‌های روزمره و تفکر عمیق فرد درباره موقعیتش</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌درمانی‌های پویانگر بر کنار زدن دلواپسی‌های روزمره و تفکر عمیق تأکید دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط درمان دارویی: محدود است.<br>
+- نادیده گرفتن احساسات: نادرست است.<br>
+- تمرکز بر گذشته دور: در روان‌کاوی است.<br>
+<b>نکته کلیدی:</b> پویانگر = روبیدن دلواپسی‌های روزمره
+</div>
+</div>
+
+<div class="card question" data-search="واقعیت درمانی نظریه انتخاب">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> واقعیت درمانی بر اساس کدام نظریه استوار است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نظریه انتخاب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> واقعیت درمانی بر اساس نظریه انتخاب (Choice Theory) استوار است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- یادگیری اجتماعی: مربوط به بندورا است.<br>
+- روان‌کاوی: مربوط به فروید است.<br>
+- رفتارگرایی: مربوط به واتسون است.<br>
+<b>نکته کلیدی:</b> واقعیت درمانی = نظریه انتخاب
+</div>
+</div>
+
+<div class="card question" data-search="تئوری انتخاب 5 نیاز اساسی">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> بنابر تئوری انتخاب، انسان‌ها با چند نیاز اساسی به دنیا می‌آیند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۵ نیاز</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انسان‌ها با ۵ نیاز اساسی به دنیا می‌آیند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۳ نیاز: ناقص است.<br>
+- ۴ نیاز: ناقص است.<br>
+- ۷ نیاز: بیش از حد است.<br>
+<b>نکته کلیدی:</b> تئوری انتخاب = ۵ نیاز
+</div>
+</div>
+
+<div class="card question" data-search="نیازهای اساسی ثروت و قدرت نیست">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از نیازهای اساسی انسان در تئوری انتخاب نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ثروت و قدرت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ثروت و قدرت از نیازهای اساسی تئوری انتخاب نیستند.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- عشق و احساس تعلق: نیاز اساسی است.<br>
+- پیشرفت و خودشکوفایی: نیاز اساسی است.<br>
+- آزادی: نیاز اساسی است.<br>
+<b>نکته کلیدی:</b> ثروت و قدرت ≠ نیاز اساسی
+</div>
+</div>
+
+<div class="card question" data-search="نیازهای اساسی عشق تعلق پیشرفت آزادی تفریح بقا">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> نیازهای اساسی انسان در تئوری انتخاب کدام‌اند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عشق و احساس تعلق، پیشرفت و خودشکوفایی، آزادی، تفریح، بقا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نیازهای اساسی شامل عشق و تعلق، پیشرفت، آزادی، تفریح و بقا هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عشق، ثروت، قدرت، آزادی، بقا: ثروت و قدرت درست نیستند.<br>
+- غذا، مسکن، پوشاک: نیازهای فیزیولوژیک هستند.<br>
+- پیشرفت، قدرت، ثروت: نادرست است.<br>
+<b>نکته کلیدی:</b> نیازها = عشق، پیشرفت، آزادی، تفریح، بقا
+</div>
+</div>
+
+<div class="card question" data-search="رفتارها برای ارضای نیازهای اساسی">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> تمامی رفتارهای ما به چه منظوری انجام می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">برای ارضای موفق نیازهای اساسی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تمام رفتارها برای ارضای نیازهای اساسی انجام می‌شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کسب ثروت: یکی از روش‌هاست.<br>
+- قدرت: یکی از روش‌هاست.<br>
+- شهرت: یکی از روش‌هاست.<br>
+<b>نکته کلیدی:</b> رفتار = ارضای نیازها
+</div>
+</div>
+
+<div class="card question" data-search="ارضای نشدن نیازها رنج">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> اگر نتوانیم نیازهای خود را آن‌گونه که دوست داریم ارضا کنیم، چه اتفاقی می‌افتد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رنج خواهیم برد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ارضا نشدن نیازها باعث رنج می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خوشحال خواهیم شد: برعکس است.<br>
+- موفق‌تر خواهیم شد: برعکس است.<br>
+- هیچ اتفاقی نمی‌افتد: نادرست است.<br>
+<b>نکته کلیدی:</b> ارضا نشدن نیازها = رنج
+</div>
+</div>
+
+<div class="card question" data-search="رنج تلاشی برای ارضای نیاز">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> «رنج» ناشی از ارضا نشدن نیازها، خود نوعی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلاشی برای ارضای همان نیاز</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رنج ناشی از ارضا نشدن نیازها، تلاشی برای ارضای آن نیاز است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نشانه شکست: نادرست است.<br>
+- پایان راه: نادرست است.<br>
+- بیماری روانی: نادرست است.<br>
+<b>نکته کلیدی:</b> رنج = تلاش برای ارضای نیاز
+</div>
+</div>
+
+<div class="card question" data-search="واقعیت درمانی رویکرد فرایندمدار">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> واقعیت درمانی چه نوع رویکردی محسوب می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رویکرد فرایندمدار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> واقعیت درمانی یک رویکرد فرایندمدار (Process-oriented) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نتیجه‌مدار: نادرست است.<br>
+- محتوامدار: نادرست است.<br>
+- گذشته‌نگر: در روان‌کاوی است.<br>
+<b>نکته کلیدی:</b> واقعیت درمانی = فرایندمدار
+</div>
+</div>
+
+<div class="card question" data-search="مازلو پایین ترین سطح نیازهای فیزیولوژیک">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> از نظر مازلو، کدام یک از نیازهای زیر در پایین‌ترین سطح سلسله مراتب قرار دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نیازهای فیزیولوژیک (بقا)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نیازهای فیزیولوژیک در پایین‌ترین سطح سلسله مراتب مزلو قرار دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خودشکوفایی: بالاترین سطح است.<br>
+- احترام: سطح چهارم است.<br>
+- تعلق: سطح سوم است.<br>
+<b>نکته کلیدی:</b> پایین‌ترین سطح = فیزیولوژیک
+</div>
+</div>
+
+<div class="card question" data-search="مازلو بالاترین سطح خودشکوفایی">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> از نظر مازلو، کدام یک از نیازهای زیر در بالاترین سطح سلسله مراتب قرار دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نیاز به خودشکوفایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خودشکوفایی در بالاترین سطح سلسله مراتب مزلو قرار دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- امنیت: سطح دوم است.<br>
+- عشق و تعلق: سطح سوم است.<br>
+- فیزیولوژیک: پایین‌ترین سطح است.<br>
+<b>نکته کلیدی:</b> بالاترین سطح = خودشکوفایی
+</div>
+</div>
+
+<div class="card question" data-search="اولین نیاز فیزیولوژیک">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> بر اساس سلسله مراتب نیازهای مازلو، فرد ابتدا باید کدام نیاز را ارضا کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نیازهای فیزیولوژیک (بقا)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فرد ابتدا باید نیازهای فیزیولوژیک را ارضا کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خودشکوفایی: آخرین نیاز است.<br>
+- احترام: سطح چهارم است.<br>
+- تعلق: سطح سوم است.<br>
+<b>نکته کلیدی:</b> ابتدا = فیزیولوژیک
+</div>
+</div>
+
+<div class="card question" data-search="نیازها و روابط اثر متقابل">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> نیازها و روابط چه تأثیری بر یکدیگر دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بر هم اثر متقابل دارند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نیازها و روابط بر هم اثر متقابل دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هیچ تأثیری ندارند: نادرست است.<br>
+- فقط نیازها بر روابط تأثیر دارند: ناقص است.<br>
+- فقط روابط بر نیازها تأثیر دارند: ناقص است.<br>
+<b>نکته کلیدی:</b> نیازها و روابط = اثر متقابل
+</div>
+</div>
+
+<div class="card question" data-search="شخصیت در رابطه بین نیازها و روابط شکل می گیرد">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> شخصیت و رفتار فرد در چه رابطه‌ای شکل منحصر‌به‌فرد خود را پیدا می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در رابطه بین نیازها و روابط</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شخصیت در رابطه بین نیازها و روابط شکل می‌گیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- با جامعه: یکی از عوامل است.<br>
+- با پول: نادرست است.<br>
+- با شغل: یکی از عوامل است.<br>
+<b>نکته کلیدی:</b> شخصیت = نیازها و روابط
+</div>
+</div>
+
+<div class="card question" data-search="نمودار نیازها روابط تکامل چهارچوب روابط شخصیت هویت مفهوم خویشتن">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> در نمودار «نیازها، روابط و تکامل»، کدام یک از موارد زیر در کنار یکدیگر قرار دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">چهارچوب روابط، شخصیت، هویت، مفهوم خویشتن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در نمودار، چهارچوب روابط، شخصیت، هویت و مفهوم خویشتن در کنار یکدیگر قرار دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نیازها، ثروت، قدرت: نادرست است.<br>
+- خانواده، شغل، تحصیلات: نادرست است.<br>
+- گذشته، حال، آینده: نادرست است.<br>
+<b>نکته کلیدی:</b> نمودار = چهارچوب روابط، شخصیت، هویت، مفهوم خویشتن
+</div>
+</div>
+
+<div class="card question" data-search="سازگاری زیرمجموعه شخصیت">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> در نمودار «نیازها، روابط و تکامل»، «سازگاری» در چه ارتباطی با «شخصیت» قرار دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سازگاری زیرمجموعه شخصیت است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سازگاری زیرمجموعه شخصیت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شخصیت زیرمجموعه سازگاری است: برعکس است.<br>
+- هیچ ارتباطی ندارند: نادرست است.<br>
+- معادل یکدیگر هستند: نادرست است.<br>
+<b>نکته کلیدی:</b> سازگاری ⊂ شخصیت
+</div>
+</div>
+
+<div class="card question" data-search="واقعیت درمانی گامهای مشخص">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> بر اساس تئوری انتخاب، واقعیت درمانی به مشاور در چه کاری کمک می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در انجام مشاوره با گام‌های مشخص</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> واقعیت درمانی به مشاور در انجام مشاوره با گام‌های مشخص کمک می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تجویز دارو: در روان‌پزشکی است.<br>
+- تشخیص بیماری: در روان‌پزشکی است.<br>
+- جراحی: در پزشکی است.<br>
+<b>نکته کلیدی:</b> واقعیت درمانی = گام‌های مشخص
+</div>
+</div>
+
+<div class="card question" data-search="رقابت نیاز اساسی نیست">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از گزینه‌های زیر جزء نیازهای اساسی انسان در تئوری انتخاب نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رقابت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رقابت جزء نیازهای اساسی تئوری انتخاب نیست.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- تفریح: نیاز اساسی است.<br>
+- بقا: نیاز اساسی است.<br>
+- پیشرفت: نیاز اساسی است.<br>
+<b>نکته کلیدی:</b> رقابت ≠ نیاز اساسی
+</div>
+</div>
+
+<div class="card question" data-search="یالوم رویکرد وجودی">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> رویکرد وجودی (اگزیستانسیال) توسط کدام نظریه‌پرداز در حوزه روان‌درمانی گروهی مطرح شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اروین یالوم</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اروین یالوم رویکرد وجودی را در روان‌درمانی گروهی مطرح کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فروید: روان‌کاوی را مطرح کرد.<br>
+- مازلو: سلسله نیازها را مطرح کرد.<br>
+- گلاسر: واقعیت درمانی را مطرح کرد.<br>
+<b>نکته کلیدی:</b> یالوم = رویکرد وجودی
+</div>
+</div>
+
+<div class="card question" data-search="واقعیت درمانی گلاسر">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> واقعیت درمانی توسط چه کسی مطرح شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ویلیام گلاسر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ویلیام گلاسر واقعیت درمانی را مطرح کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- یالوم: رویکرد وجودی را مطرح کرد.<br>
+- مازلو: سلسله نیازها را مطرح کرد.<br>
+- راجرز: شخص محور را مطرح کرد.<br>
+<b>نکته کلیدی:</b> گلاسر = واقعیت درمانی
+</div>
+</div>
+
+<div class="card question" data-search="عشق و تعلق سطح سوم مزلو">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> در سلسله مراتب نیازهای مازلو، نیاز به «عشق و تعلق» در چه سطحی قرار دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سطح سوم (میانی)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نیاز به عشق و تعلق در سطح سوم (میانی) سلسله مراتب مزلو قرار دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سطح اول: فیزیولوژیک است.<br>
+- سطح دوم: امنیت است.<br>
+- سطح پنجم: خودشکوفایی است.<br>
+<b>نکته کلیدی:</b> عشق و تعلق = سطح سوم
+</div>
+</div>
+
+<div class="card question" data-search="مفهوم خویشتن چهارچوب روابط شخصیت هویت">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> بر اساس نمودار «نیازها، روابط و تکامل»، «مفهوم خویشتن» در کنار کدام مفاهیم قرار دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">چهارچوب روابط، شخصیت، هویت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مفهوم خویشتن در کنار چهارچوب روابط، شخصیت و هویت قرار دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط شخصیت: ناقص است.<br>
+- فقط هویت: ناقص است.<br>
+- فقط چهارچوب روابط: ناقص است.<br>
+<b>نکته کلیدی:</b> مفهوم خویشتن = چهارچوب روابط، شخصیت، هویت
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>رویکرد وجودی (یالوم)</h3></div>
+<div class="fa"><b>نام دیگر:</b> اگزیستانسیال یا هستی‌گرایانه</div>
+<div class="fa"><b>تمرکز:</b> دلواپسی‌های ریشه‌دار در هستی انسان</div>
+<div class="fa"><b>روان‌پویه‌شناسی:</b> نیروهای ناخودآگاه و خودآگاه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه انتخاب (گلاسر)</h3></div>
+<div class="fa"><b>تعداد نیازها:</b> ۵ نیاز اساسی</div>
+<div class="fa"><b>نیازها:</b> عشق و تعلق، پیشرفت، آزادی، تفریح، بقا</div>
+<div class="fa"><b>غیر نیاز:</b> ثروت، قدرت، رقابت</div>
+<div class="fa"><b>نوع رویکرد:</b> فرایندمدار</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سلسله مراتب نیازهای مازلو</h3></div>
+<div class="grid2">
+<div class="box"><h4>سطح 1</h4>
+<div class="fa">فیزیولوژیک (بقا)</div>
+</div>
+<div class="box"><h4>سطح 2</h4>
+<div class="fa">امنیت</div>
+</div>
+<div class="box"><h4>سطح 3</h4>
+<div class="fa">عشق و تعلق</div>
+</div>
+<div class="box"><h4>سطح 4</h4>
+<div class="fa">احترام</div>
+</div>
+<div class="box"><h4>سطح 5</h4>
+<div class="fa">خودشکوفایی</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>رویکرد وجودی</h3></div>
+<div class="fa"><b>تعریف:</b> رویکردی که بر دلواپسی‌های بنیادین هستی انسان تمرکز دارد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>نظریه‌پرداز:</b> اروین یالوم<br>
+<b>تمرکز:</b> دلواپسی‌های هستی<br>
+<b>سوالات مرتبط:</b> 1، 2، 3، 4، 22
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه انتخاب (واقعیت درمانی)</h3></div>
+<div class="fa"><b>تعریف:</b> نظریه‌ای که بر انتخاب و مسئولیت فردی تأکید دارد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>نظریه‌پرداز:</b> ویلیام گلاسر<br>
+<b>نیازها:</b> عشق و تعلق، پیشرفت، آزادی، تفریح، بقا<br>
+<b>غیر نیاز:</b> ثروت، قدرت، رقابت<br>
+<b>نوع:</b> فرایندمدار<br>
+<b>سوالات مرتبط:</b> 5، 6، 7، 8، 9، 10، 11، 12، 20، 21، 23
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سلسله مراتب نیازهای مازلو</h3></div>
+<div class="fa"><b>تعریف:</b> نظریه‌ای که نیازهای انسان را در سطوح مختلف طبقه‌بندی می‌کند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>نظریه‌پرداز:</b> آبراهام مازلو<br>
+<b>پایین‌ترین سطح:</b> فیزیولوژیک<br>
+<b>بالاترین سطح:</b> خودشکوفایی<br>
+<b>سطح عشق و تعلق:</b> سوم (میانی)<br>
+<b>سوالات مرتبط:</b> 13، 14، 15، 24
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نمودار نیازها، روابط و تکامل</h3></div>
+<div class="fa"><b>تعریف:</b> مدلی که ارتباط بین نیازها، روابط و شخصیت را نشان می‌دهد.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>مفاهیم:</b> چهارچوب روابط، شخصیت، هویت، مفهوم خویشتن<br>
+<b>سازگاری:</b> زیرمجموعه شخصیت<br>
+<b>سوالات مرتبط:</b> 16، 17، 18، 19، 25
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>رویکرد وجودی</td><td>واقعیت درمانی</td><td>وجودی = هستی، واقعیت = انتخاب</td><td>هستی vs انتخاب</td></tr>
+<tr><td>نظریه انتخاب</td><td>سلسله مراتب مازلو</td><td>انتخاب = ۵ نیاز، مازلو = ۵ سطح</td><td>نیاز vs سطح</td></tr>
+<tr><td>نیاز به عشق</td><td>نیاز به بقا</td><td>عشق = سطح سوم، بقا = سطح اول</td><td>سوم vs اول</td></tr>
+<tr><td>یالوم</td><td>گلاسر</td><td>یالوم = وجودی، گلاسر = واقعیت</td><td>وجودی vs واقعیت</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>اروین یالوم</h3></div>
+<div class="fa"><b>ایده اصلی:</b> رویکرد وجودی در روان‌درمانی گروهی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "یالوم"، "وجودی"، "اگزیستانسیال"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 1، 2، 3، 4، 22</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویلیام گلاسر</h3></div>
+<div class="fa"><b>ایده اصلی:</b> نظریه انتخاب، واقعیت درمانی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "گلاسر"، "واقعیت درمانی"، "نظریه انتخاب"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 5، 6، 7، 8، 9، 10، 11، 12، 20، 21， 23</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آبراهام مازلو</h3></div>
+<div class="fa"><b>ایده اصلی:</b> سلسله مراتب نیازها</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "مازلو"، "سلسله مراتب"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 13， 14， 15， 24</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: تعداد نیازهای تئوری انتخاب</h3>
+<div class="fa"><b>سوال نمونه:</b> انسان‌ها با چند نیاز اساسی به دنیا می‌آیند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "۴ نیاز" را انتخاب کنی (چهارچوب WDEP).</div>
+<div class="fa"><b>پاسخ درست:</b> ۵ نیاز</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ۴ نیاز مربوط به WDEP است، اما نیازهای اساسی ۵ عدد هستند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تئوری انتخاب = ۵ نیاز
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: نیازهای اساسی</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام یک نیاز اساسی نیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "پیشرفت" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ثروت و قدرت</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> پیشرفت یک نیاز اساسی است، ثروت و قدرت نیستند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> نیازها = عشق، پیشرفت، آزادی، تفریح، بقا
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: رنج</h3>
+<div class="fa"><b>سوال نمونه:</b> رنج ناشی از ارضا نشدن نیازها چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "بیماری روانی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تلاشی برای ارضای همان نیاز</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> رنج یک سیگنال است، نه بیماری.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> رنج = تلاش برای ارضای نیاز
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: سطح عشق و تعلق</h3>
+<div class="fa"><b>سوال نمونه:</b> عشق و تعلق در چه سطحی است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "سطح دوم" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> سطح سوم</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> سطح دوم مربوط به امنیت است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> عشق و تعلق = سطح سوم
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: واقعیت درمانی</h3>
+<div class="fa"><b>سوال نمونه:</b> واقعیت درمانی چه نوع رویکردی است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "نتیجه‌مدار" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> فرایندمدار</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> واقعیت درمانی بر فرایند تأکید دارد، نه نتیجه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> واقعیت درمانی = فرایندمدار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: سازگاری و شخصیت</h3>
+<div class="fa"><b>سوال نمونه:</b> سازگاری در چه ارتباطی با شخصیت است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "شخصیت زیرمجموعه سازگاری است" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> سازگاری زیرمجموعه شخصیت است</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> شخصیت بزرگ‌تر از سازگاری است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> سازگاری ⊂ شخصیت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: رویکرد وجودی</h3>
+<div class="fa"><b>سوال نمونه:</b> رویکرد وجودی بر چه چیزی تمرکز دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "دلواپسی‌های روزمره" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> دلواپسی‌های هستی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> دلواپسی‌های روزمره در رویکردهای دیگر است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> وجودی = دلواپسی‌های هستی
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 17 · مشاوره گروهی نظری · 25 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "رویکرد وجودی با چه نام دیگری شناخته می‌شود؟",
+options: ["تحلیلی", "اگزیستانسیال", "رفتاری", "روان‌کاوی"],
+answer: 1,
+explanation: "رویکرد وجودی اگزیستانسیال یا هستی‌گرایانه نام دارد."
+},
+{
+q: "تئوری انتخاب چند نیاز اساسی دارد؟",
+options: ["۳ نیاز", "۴ نیاز", "۵ نیاز", "۷ نیاز"],
+answer: 2,
+explanation: "تئوری انتخاب ۵ نیاز اساسی دارد."
+},
+{
+q: "کدام یک نیاز اساسی نیست؟",
+options: ["عشق و تعلق", "پیشرفت", "ثروت و قدرت", "آزادی"],
+answer: 2,
+explanation: "ثروت و قدرت نیاز اساسی نیستند."
+},
+{
+q: "رنج ناشی از ارضا نشدن نیازها چیست؟",
+options: ["شکست", "پایان راه", "تلاش برای ارضای نیاز", "بیماری"],
+answer: 2,
+explanation: "رنج تلاشی برای ارضای همان نیاز است."
+},
+{
+q: "پایین‌ترین سطح سلسله مراتب مزلو چیست؟",
+options: ["خودشکوفایی", "احترام", "فیزیولوژیک", "تعلق"],
+answer: 2,
+explanation: "نیازهای فیزیولوژیک در پایین‌ترین سطح هستند."
+},
+{
+q: "بالاترین سطح سلسله مراتب مزلو چیست؟",
+options: ["امنیت", "عشق", "خودشکوفایی", "فیزیولوژیک"],
+answer: 2,
+explanation: "خودشکوفایی در بالاترین سطح است."
+},
+{
+q: "عشق و تعلق در چه سطحی است؟",
+options: ["اول", "دوم", "سوم", "پنجم"],
+answer: 2,
+explanation: "عشق و تعلق در سطح سوم است."
+},
+{
+q: "واقعیت درمانی چه نوع رویکردی است؟",
+options: ["نتیجه‌مدار", "فرایندمدار", "محتوامدار", "گذشته‌نگر"],
+answer: 1,
+explanation: "واقعیت درمانی فرایندمدار است."
+},
+{
+q: "سازگاری در چه ارتباطی با شخصیت است؟",
+options: ["زیرمجموعه شخصیت", "زیرمجموعه سازگاری", "معادل", "بی‌ارتباط"],
+answer: 0,
+explanation: "سازگاری زیرمجموعه شخصیت است."
+},
+{
+q: "رویکرد وجودی توسط چه کسی مطرح شد؟",
+options: ["فروید", "یالوم", "مازلو", "گلاسر"],
+answer: 1,
+explanation: "یالوم رویکرد وجودی را مطرح کرد."
+},
+{
+q: "واقعیت درمانی توسط چه کسی مطرح شد؟",
+options: ["یالوم", "گلاسر", "مازلو", "راجرز"],
+answer: 1,
+explanation: "گلاسر واقعیت درمانی را مطرح کرد."
+},
+{
+q: "نیازهای اساسی تئوری انتخاب کدام‌اند؟",
+options: ["عشق، ثروت، قدرت، آزادی", "عشق، پیشرفت، آزادی، تفریح، بقا", "غذا، مسکن، پوشاک", "پیشرفت، قدرت، ثروت"],
+answer: 1,
+explanation: "نیازها: عشق، پیشرفت، آزادی، تفریح، بقا."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
