@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره گروهی نظری · سری 18</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"18";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره گروهی نظری · سری 18</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری راهنمایی و مشاوره گروهی</h2>
+  <p>تحلیل کامل 28 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">28 سوال</span><span class="pill">مراحل گروه</span><span class="pill">آمیزش</span><span class="pill">انتقال</span><span class="pill">کار</span><span class="pill">اختتام</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>28</b><span>سوال</span></div>
+<div class="stat"><b>4</b><span>مرحله اصلی</span></div>
+<div class="stat"><b>3</b><span>بخش فعالیت</span></div>
+<div class="stat"><b>4</b><span>اصل زیربنایی</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="مراحل دشوار آغاز و پایان">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> مراحل دشوار در حیات یک گروه کدام‌اند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آغاز و پایان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آغاز و پایان گروه دشوارترین مراحل هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- میانه و پایان: میانه دشوار نیست.<br>
+- آغاز و میانه: پایان نیز دشوار است.<br>
+- فقط پایان: آغاز نیز دشوار است.<br>
+<b>نکته کلیدی:</b> دشوارترین مراحل = آغاز و پایان
+</div>
+</div>
+
+<div class="card question" data-search="آغاز گروه اضطراب و ترس">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> آغاز گروه معمولاً با چه حالتی همراه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اضطراب و ترس</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آغاز گروه با اضطراب و ترس همراه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شادی و نشاط: در مراحل بعدی است.<br>
+- بی‌تفاوتی: نادرست است.<br>
+- خشم: در مراحل میانی است.<br>
+<b>نکته کلیدی:</b> آغاز = اضطراب و ترس
+</div>
+</div>
+
+<div class="card question" data-search="پایان گروه تأسف و دلهره">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> پایان گروه معمولاً با چه حالتی همراه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آمیخته‌ای از تأسف ترک کردن و دلهره آغازی تازه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پایان گروه با تأسف ترک کردن و دلهره آغازی تازه همراه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شادی کامل: نادرست است.<br>
+- بی‌تفاوتی: نادرست است.<br>
+- خشم: نادرست است.<br>
+<b>نکته کلیدی:</b> پایان = تأسف و دلهره
+</div>
+</div>
+
+<div class="card question" data-search="مراحل ساده تر آمیزش انتقال کار اختتام">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> مراحل ساده‌تر گروه به ترتیب کدام‌اند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آمیزش، انتقال، کار، اختتام</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ترتیب مراحل ساده‌تر: آمیزش، انتقال، کار، اختتام.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ترتیب‌های دیگر نادرست است.<br>
+<b>نکته کلیدی:</b> ترتیب = آمیزش، انتقال، کار، اختتام
+</div>
+</div>
+
+<div class="card question" data-search="مراحل تکامل گرم شدن فعالیت اختتام">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> مراحل تکامل فرایند گروه به صورت اجمالی و عمیق‌تر کدام‌اند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گرم شدن، فعالیت، اختتام</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مراحل تکامل فرایند گروه: گرم شدن، فعالیت، اختتام.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آمیزش، انتقال، کار: ناقص است.<br>
+- آغاز، میانه، پایان: بسیار کلی است.<br>
+- ورود، خروج، پایان: نادرست است.<br>
+<b>نکته کلیدی:</b> تکامل = گرم شدن، فعالیت، اختتام
+</div>
+</div>
+
+<div class="card question" data-search="گرم شدن آشنایی با شرایط تازه">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> در مرحله گرم شدن (آمیزش)، افراد چه کاری انجام می‌دهند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آشنایی گروه با شرایط تازه و داخل کردن خود در آن، آمادگی جسمی و روانی برای شرکت در فعالیت تازه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مرحله گرم شدن، افراد با شرایط تازه آشنا شده و خود را آماده می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- حل مشکلات اصلی: در مرحله کار است.<br>
+- خاتمه کار: در مرحله اختتام است.<br>
+- ارزیابی عملکرد: در مرحله اختتام است.<br>
+<b>نکته کلیدی:</b> گرم شدن = آشنایی و آمادگی
+</div>
+</div>
+
+<div class="card question" data-search="مرحله فعالیت عروج و افول">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> مرحله فعالیت از دو بخش تشکیل شده است. کدام‌اند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عروج و افول</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مرحله فعالیت از دو بخش عروج و افول تشکیل شده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آغاز و پایان: کلی است.<br>
+- گرم شدن و سرد شدن: نادرست است.<br>
+- ورود و خروج: نادرست است.<br>
+<b>نکته کلیدی:</b> فعالیت = عروج و افول
+</div>
+</div>
+
+<div class="card question" data-search="عروج طولانی تر">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> در مرحله فعالیت، کدام بخش طولانی‌تر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عروج</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عروج طولانی‌تر از افول است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- افول: کوتاه‌تر است.<br>
+- هر دو به یک اندازه: نادرست است.<br>
+- بستگی به نوع گروه دارد: نادرست است.<br>
+<b>نکته کلیدی:</b> عروج = طولانی‌تر
+</div>
+</div>
+
+<div class="card question" data-search="افول کوتاه تر">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> در مرحله فعالیت، کدام بخش کوتاه‌تر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">افول</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> افول کوتاه‌تر از عروج است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عروج: طولانی‌تر است.<br>
+- هر دو به یک اندازه: نادرست است.<br>
+- بستگی به نوع گروه دارد: نادرست است.<br>
+<b>نکته کلیدی:</b> افول = کوتاه‌تر
+</div>
+</div>
+
+<div class="card question" data-search="تداوم رشته عاطفی با فعالیت متفاوت">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> تداوم رشته عاطفی با رشته فعالیت چه تفاوتی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آهنگ پاسخ یا واکنش عاطفی با پاسخ عقلی یا فعالیت متفاوت است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پاسخ عاطفی با پاسخ عقلی یا فعالیت متفاوت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر دو یکسان هستند: نادرست است.<br>
+- رشته عاطفی کوتاه‌تر: نادرست است.<br>
+- رشته فعالیت طولانی‌تر: نادرست است.<br>
+<b>نکته کلیدی:</b> عاطفی ≠ فعالیت
+</div>
+</div>
+
+<div class="card question" data-search="سطح عاطفی در فعالیت به دلیل عدم آشنایی">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> سطح عاطفی در مرحله فعالیت به چه دلیل بسیار بالاست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به دلیل عدم آشنایی با فعالیت جدید</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سطح عاطفی به دلیل عدم آشنایی با فعالیت جدید بالاست.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آشنایی کامل: باعث کاهش عاطفه می‌شود.<br>
+- خستگی: عامل اصلی نیست.<br>
+- بی‌علاقگی: نادرست است.<br>
+<b>نکته کلیدی:</b> عدم آشنایی = سطح عاطفی بالا
+</div>
+</div>
+
+<div class="card question" data-search="پس از خاتمه کار فعالیت عاطفی برای هضم">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> پس از خاتمه کار، فعالیت عاطفی ممکن است همچنان شدید باشد. چرا؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">برای هضم و تطابق با آن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پس از خاتمه کار، فعالیت عاطفی برای هضم و تطابق ادامه می‌یابد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خوشحالی: بخشی است.<br>
+- ناراحتی: بخشی است.<br>
+- پایان گروه: نادرست است.<br>
+<b>نکته کلیدی:</b> ادامه عاطفه = هضم و تطابق
+</div>
+</div>
+
+<div class="card question" data-search="عدم اختتام احساس گنگ و تردید">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> اگر مرحله اختتام انجام نشود، افراد با چه احساسی گروه را ترک می‌کنند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">احساسی گنگ و تردید نسبت به ارزش و بامعنا بودن فعالیت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عدم اختتام باعث احساس گنگ و تردید می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رضایت کامل: نتیجه اختتام است.<br>
+- خوشحالی: نتیجه اختتام است.<br>
+- بی‌تفاوتی: نادرست است.<br>
+<b>نکته کلیدی:</b> بدون اختتام = احساس گنگ و تردید
+</div>
+</div>
+
+<div class="card question" data-search="اختتام موفق رضایت بیشتر">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> هرچه مرحله اختتام با موفقیت بیشتری انجام شود، چه اتفاقی می‌افتد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رضایت اعضای گروه از فعالیت بیشتر است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اختتام موفق باعث رضایت بیشتر اعضا می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رضایت کمتر: برعکس است.<br>
+- ترک زودتر: نادرست است.<br>
+- هیچ تأثیری: نادرست است.<br>
+<b>نکته کلیدی:</b> اختتام موفق = رضایت بیشتر
+</div>
+</div>
+
+<div class="card question" data-search="مرحله انتقال در مرحله قبل آغاز می شود">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> مرحله انتقال چه زمانی آغاز می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در مرحله قبل (آمیزش)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مرحله انتقال در مرحله قبل (آمیزش) آغاز می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- در مرحله کار: دیر است.<br>
+- در مرحله اختتام: دیر است.<br>
+- پس از پایان: نادرست است.<br>
+<b>نکته کلیدی:</b> انتقال = در آمیزش آغاز می‌شود
+</div>
+</div>
+
+<div class="card question" data-search="ورود به تعامل تنش و اضطراب">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> وارد شدن به مرحله تعامل و بسط رابطه معمولاً با چه حالتی همراه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تنش و اضطراب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ورود به تعامل با تنش و اضطراب همراه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آرامش کامل: در مراحل بعدی است.<br>
+- بی‌تفاوتی: نادرست است.<br>
+- شادی: در مراحل بعدی است.<br>
+<b>نکته کلیدی:</b> تعامل = تنش و اضطراب
+</div>
+</div>
+
+<div class="card question" data-search="ریزش گروه شدت اضطراب در انتقال">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> یکی از دلایل ریزش گروه چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شدت اضطراب در مرحله انتقال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ریزش گروه به دلیل شدت اضطراب در مرحله انتقال است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- موفقیت گروه: باعث ریزش نمی‌شود.<br>
+- پایان جلسات: طبیعی است.<br>
+- تغییر رهبر: ممکن است اما اصلی نیست.<br>
+<b>نکته کلیدی:</b> ریزش = اضطراب در انتقال
+</div>
+</div>
+
+<div class="card question" data-search="اعتماد بیشتر آمیزش بیشتر">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> هرچه اعتماد نسبت به اعضا بیشتر باشد، چه اتفاقی می‌افتد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آمیزش بیشتر می‌شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> افزایش اعتماد باعث آمیزش بیشتر می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آمیزش کمتر: برعکس است.<br>
+- پایان گروه: نادرست است.<br>
+- خروج اعضا: نادرست است.<br>
+<b>نکته کلیدی:</b> اعتماد = آمیزش بیشتر
+</div>
+</div>
+
+<div class="card question" data-search="افزایش اعتماد نگرش و مهارت مشاور">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> افزایش اعتماد به چه چیزی بستگی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نگرش و مهارت مشاور در برخورد با مقاومت، ابهام و تردید</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> افزایش اعتماد به نگرش و مهارت مشاور بستگی دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تعداد اعضا: عامل اصلی نیست.<br>
+- مکان برگزاری: عامل اصلی نیست.<br>
+- مدت زمان: عامل اصلی نیست.<br>
+<b>نکته کلیدی:</b> اعتماد = نگرش و مهارت مشاور
+</div>
+</div>
+
+<div class="card question" data-search="راه حل ها متعدد اصل انتقال نیست">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از اصول زیربنایی مرحله انتقال نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">راه حل‌ها متعدد است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> "راه حل‌ها متعدد است" از اصول مرحله کار است، نه انتقال.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- مزایای باز بودن: اصل انتقال است.<br>
+- درک رفتار خود: اصل انتقال است.<br>
+- مسئولیت رفتار: اصل انتقال است.<br>
+<b>نکته کلیدی:</b> راه حل متعدد = مرحله کار (نه انتقال)
+</div>
+</div>
+
+<div class="card question" data-search="مرحله کار برآورد خود فرد">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> در مرحله کار، صحبت روی رفتار و اعمال ناموفق معمولاً از کجا شروع می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با برآورد خود فرد از رفتارش</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مرحله کار، صحبت از برآورد خود فرد شروع می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نظر دیگران: پس از خودارزیابی است.<br>
+- نظر رهبر: پس از خودارزیابی است.<br>
+- ارزیابی بیرونی: پس از خودارزیابی است.<br>
+<b>نکته کلیدی:</b> مرحله کار = برآورد خود فرد
+</div>
+</div>
+
+<div class="card question" data-search="مرحله کار دلبستگی و وابستگی بیشتر">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> در مرحله کار، چه احساسی بین افراد افزایش می‌یابد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دلبستگی نسبت به هم و احساس وابستگی بیشتر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در مرحله کار، دلبستگی و وابستگی افزایش می‌یابد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بی‌تفاوتی: در مراحل اولیه است.<br>
+- خشم: در مرحله انتقال است.<br>
+- رقابت: در مرحله انتقال است.<br>
+<b>نکته کلیدی:</b> کار = دلبستگی و وابستگی
+</div>
+</div>
+
+<div class="card question" data-search="اصول مرحله کار همه موارد">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از اصول زیربنایی مرحله کار است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه گزینه‌ها از اصول مرحله کار هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> کار = لازمه تغییر عمل، راه حل متعدد، ملزم شدن به تغییر
+</div>
+</div>
+
+<div class="card question" data-search="مشکل در عمل نشست انفرادی">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> اگر شخصی در عمل به یادگیری‌های جدید برایش مشکل باشد، مشاور باید چه کاری انجام دهد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در نشست‌های انفرادی علل آن را بررسی کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مشاور باید علل مشکل را در نشست انفرادی بررسی کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خارج کردن: اقدام افراطی است.<br>
+- نادیده گرفتن: غیرحرفه‌ای است.<br>
+- تجویز دارو: در حیطه مشاور نیست.<br>
+<b>نکته کلیدی:</b> مشکل در عمل = نشست انفرادی
+</div>
+</div>
+
+<div class="card question" data-search="شناخت و قبول خود کاستن حالت دفاعی">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> لازمه شناخت و قبول خود چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کاستن حالت دفاعی (باز بودن)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شناخت خود نیاز به کاستن حالت دفاعی دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- افزایش حالت دفاعی: مانع شناخت است.<br>
+- انکار نقاط ضعف: مانع شناخت است.<br>
+- فقط تمرکز بر نقاط قوت: ناقص است.<br>
+<b>نکته کلیدی:</b> شناخت خود = کاستن حالت دفاعی
+</div>
+</div>
+
+<div class="card question" data-search="باز بودن کاهش دفاعی و ترس">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> باز بودن به چه معناست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">حالت دفاعی کمتری داشته باشد، ترس کمتری از طرد شدن داشته باشد، نسبت به انتقاد حساسیت کمتری داشته باشد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> باز بودن یعنی کاهش دفاعی، کاهش ترس از طرد و کاهش حساسیت به انتقاد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- همیشه موافق بودن: باز بودن نیست.<br>
+- هرگز انتقاد نکردن: باز بودن نیست.<br>
+- فقط گوش دادن: باز بودن نیست.<br>
+<b>نکته کلیدی:</b> باز بودن = کاهش دفاعی و ترس
+</div>
+</div>
+
+<div class="card question" data-search="نتیجه مشاوره باز بودن در برابر بازخورد">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> یکی از مهم‌ترین نتایج مشاوره گروهی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اعضا باز بودن در مقابل بازخورد و ارزیابی دیگران را بیاموزند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مهم‌ترین نتیجه، یادگیری باز بودن در برابر بازخورد است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- همیشه موافق بودن: نادرست است.<br>
+- هرگز انتقاد نکردن: نادرست است.<br>
+- فقط به خود فکر کردن: نادرست است.<br>
+<b>نکته کلیدی:</b> مشاوره = باز بودن در برابر بازخورد
+</div>
+</div>
+
+<div class="card question" data-search="یادگیری های تازه در زندگی روزمره">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> در مرحله کار، اعضا باید فرصت داشته باشند تا یادگیری‌های تازه را در چه زمینه‌ای به کار گیرند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در زندگی روزمره</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یادگیری‌های تازه باید در زندگی روزمره به کار گرفته شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط در جلسات گروه: ناقص است.<br>
+- فقط در محیط کار: محدود است.<br>
+- فقط در خانواده: محدود است.<br>
+<b>نکته کلیدی:</b> یادگیری = کاربرد در زندگی روزمره
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>مراحل گروه</h3></div>
+<div class="grid2">
+<div class="box"><h4>مراحل ساده‌تر</h4>
+<div class="fa">آمیزش، انتقال، کار، اختتام</div>
+</div>
+<div class="box"><h4>مراحل تکامل</h4>
+<div class="fa">گرم شدن، فعالیت، اختتام</div>
+</div>
+<div class="box"><h4>بخش‌های فعالیت</h4>
+<div class="fa">عروج (طولانی‌تر) و افول (کوتاه‌تر)</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویژگی‌های مراحل</h3></div>
+<div class="grid2">
+<div class="box"><h4>آغاز</h4>
+<div class="fa">اضطراب و ترس</div>
+</div>
+<div class="box"><h4>پایان</h4>
+<div class="fa">تأسف و دلهره</div>
+</div>
+<div class="box"><h4>گرم شدن</h4>
+<div class="fa">آشنایی با شرایط تازه</div>
+</div>
+<div class="box"><h4>انتقال</h4>
+<div class="fa">تنش، اضطراب، ریزش</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اصول زیربنایی</h3></div>
+<div class="grid2">
+<div class="box"><h4>مرحله انتقال</h4>
+<div class="fa">باز بودن، درک رفتار، مسئولیت</div>
+</div>
+<div class="box"><h4>مرحله کار</h4>
+<div class="fa">لازمه تغییر عمل، راه حل متعدد، ملزم شدن به تغییر</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفاهیم کلیدی</h3></div>
+<div class="grid2">
+<div class="box"><h4>باز بودن</h4>
+<div class="fa">کاهش دفاعی، کاهش ترس از طرد</div>
+</div>
+<div class="box"><h4>نتیجه مشاوره</h4>
+<div class="fa">باز بودن در برابر بازخورد</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>مراحل گروه</h3></div>
+<div class="fa"><b>تعریف:</b> مراحل تکامل گروه از آغاز تا پایان.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>مراحل ساده‌تر:</b> آمیزش، انتقال، کار، اختتام<br>
+<b>مراحل تکامل:</b> گرم شدن، فعالیت، اختتام<br>
+<b>بخش‌های فعالیت:</b> عروج (طولانی) و افول (کوتاه)<br>
+<b>دشوارترین:</b> آغاز و پایان<br>
+<b>سوالات مرتبط:</b> 1، 4، 5، 7، 8، 9
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویژگی‌های مراحل</h3></div>
+<div class="fa"><b>تعریف:</b> حالات و احساسات غالب در هر مرحله.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>آغاز:</b> اضطراب و ترس<br>
+<b>پایان:</b> تأسف و دلهره<br>
+<b>گرم شدن:</b> آشنایی با شرایط تازه<br>
+<b>انتقال:</b> تنش، اضطراب، ریزش<br>
+<b>کار:</b> دلبستگی و وابستگی<br>
+<b>سوالات مرتبط:</b> 2، 3، 6، 16، 17، 22
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اصول زیربنایی</h3></div>
+<div class="fa"><b>تعریف:</b> اصول حاکم بر هر مرحله.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>مرحله انتقال:</b> باز بودن، درک رفتار، مسئولیت<br>
+<b>مرحله کار:</b> لازمه تغییر عمل، راه حل متعدد، ملزم شدن به تغییر<br>
+<b>سوالات مرتبط:</b> 20، 23
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>باز بودن</h3></div>
+<div class="fa"><b>تعریف:</b> حالت پذیرش و کاهش دفاعی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ویژگی‌ها:</b> کاهش دفاعی، کاهش ترس از طرد، کاهش حساسیت به انتقاد<br>
+<b>نتیجه مشاوره:</b> یادگیری باز بودن در برابر بازخورد<br>
+<b>سوالات مرتبط:</b> 25، 26، 27
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>آغاز گروه</td><td>پایان گروه</td><td>آغاز = اضطراب، پایان = تأسف</td><td>اضطراب vs تأسف</td></tr>
+<tr><td>عروج</td><td>افول</td><td>عروج = طولانی‌تر، افول = کوتاه‌تر</td><td>طولانی vs کوتاه</td></tr>
+<tr><td>مرحله انتقال</td><td>مرحله کار</td><td>انتقال = تنش، کار = دلبستگی</td><td>تنش vs دلبستگی</td></tr>
+<tr><td>اصل انتقال</td><td>اصل کار</td><td>انتقال = باز بودن، کار = تغییر</td><td>باز بودن vs تغییر</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">05 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: مراحل دشوار</h3>
+<div class="fa"><b>سوال نمونه:</b> مراحل دشوار در حیات گروه کدام‌اند؟</div>
+<div class="fa"><b>دام:</b> ممکن است "آغاز و میانه" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> آغاز و پایان</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> میانه دشوار نیست، آغاز و پایان دشوار هستند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> دشوارترین = آغاز و پایان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: عروج و افول</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام بخش طولانی‌تر است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "افول" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> عروج</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> عروج طولانی‌تر و افول کوتاه‌تر است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> عروج = طولانی‌تر، افول = کوتاه‌تر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: اصول انتقال</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام یک اصل انتقال نیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "مزایای باز بودن" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> راه حل‌ها متعدد است</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> راه حل متعدد اصل مرحله کار است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> راه حل متعدد = مرحله کار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: عدم اختتام</h3>
+<div class="fa"><b>سوال نمونه:</b> بدون اختتام چه احساسی ایجاد می‌شود؟</div>
+<div class="fa"><b>دام:</b> ممکن است "رضایت کامل" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> احساس گنگ و تردید</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> رضایت نتیجه اختتام است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> بدون اختتام = گنگ و تردید
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: ریزش گروه</h3>
+<div class="fa"><b>سوال نمونه:</b> دلیل ریزش گروه چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "پایان جلسات" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> شدت اضطراب در انتقال</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> پایان جلسات طبیعی است، ریزش ناشی از اضطراب است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> ریزش = اضطراب در انتقال
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: شروع صحبت در کار</h3>
+<div class="fa"><b>سوال نمونه:</b> صحبت از کجا شروع می‌شود؟</div>
+<div class="fa"><b>دام:</b> ممکن است "نظر رهبر" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> برآورد خود فرد</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> خودارزیابی اولین قدم است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> کار = برآورد خود فرد
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: باز بودن</h3>
+<div class="fa"><b>سوال نمونه:</b> باز بودن به چه معناست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "همیشه موافق بودن" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> کاهش دفاعی و ترس</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> موافق بودن نشانه باز بودن نیست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> باز بودن = کاهش دفاعی و ترس
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">06 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 18 · مشاوره گروهی نظری · 28 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "مراحل دشوار گروه کدام‌اند؟",
+options: ["میانه و پایان", "آغاز و پایان", "آغاز و میانه", "فقط پایان"],
+answer: 1,
+explanation: "آغاز و پایان دشوارترین مراحل هستند."
+},
+{
+q: "آغاز گروه با چه حالتی همراه است؟",
+options: ["اضطراب و ترس", "شادی و نشاط", "بی‌تفاوتی", "خشم"],
+answer: 0,
+explanation: "آغاز با اضطراب و ترس همراه است."
+},
+{
+q: "پایان گروه با چه حالتی همراه است؟",
+options: ["تأسف و دلهره", "شادی کامل", "بی‌تفاوتی", "خشم"],
+answer: 0,
+explanation: "پایان با تأسف و دلهره همراه است."
+},
+{
+q: "مراحل ساده‌تر گروه کدام‌اند؟",
+options: ["آمیزش، انتقال، کار، اختتام", "انتقال، آمیزش، کار، اختتام", "کار، آمیزش، انتقال، اختتام", "اختتام، کار، انتقال، آمیزش"],
+answer: 0,
+explanation: "ترتیب: آمیزش، انتقال، کار، اختتام."
+},
+{
+q: "مراحل تکامل فرایند گروه کدام‌اند؟",
+options: ["گرم شدن، فعالیت، اختتام", "آمیزش، انتقال، کار", "آغاز، میانه، پایان", "ورود، خروج، پایان"],
+answer: 0,
+explanation: "تکامل: گرم شدن، فعالیت، اختتام."
+},
+{
+q: "مرحله فعالیت از چه دو بخشی تشکیل شده است؟",
+options: ["عروج و افول", "آغاز و پایان", "گرم شدن و سرد شدن", "ورود و خروج"],
+answer: 0,
+explanation: "فعالیت از عروج و افول تشکیل شده است."
+},
+{
+q: "کدام بخش طولانی‌تر است؟",
+options: ["عروج", "افول", "هر دو برابر", "بستگی دارد"],
+answer: 0,
+explanation: "عروج طولانی‌تر است."
+},
+{
+q: "کدام بخش کوتاه‌تر است؟",
+options: ["عروج", "افول", "هر دو برابر", "بستگی دارد"],
+answer: 1,
+explanation: "افول کوتاه‌تر است."
+},
+{
+q: "سطح عاطفی در فعالیت به چه دلیل بالاست؟",
+options: ["عدم آشنایی", "آشنایی کامل", "خستگی", "بی‌علاقگی"],
+answer: 0,
+explanation: "به دلیل عدم آشنایی با فعالیت جدید."
+},
+{
+q: "پس از خاتمه کار، فعالیت عاطفی برای چیست؟",
+options: ["هضم و تطابق", "خوشحالی", "ناراحتی", "پایان گروه"],
+answer: 0,
+explanation: "برای هضم و تطابق با آن."
+},
+{
+q: "بدون اختتام چه احساسی ایجاد می‌شود؟",
+options: ["گنگ و تردید", "رضایت", "خوشحالی", "بی‌تفاوتی"],
+answer: 0,
+explanation: "احساس گنگ و تردید ایجاد می‌شود."
+},
+{
+q: "مرحله انتقال چه زمانی آغاز می‌شود؟",
+options: ["در آمیزش", "در کار", "در اختتام", "پس از پایان"],
+answer: 0,
+explanation: "در مرحله قبل (آمیزش) آغاز می‌شود."
+},
+{
+q: "ورود به تعامل با چه حالتی همراه است؟",
+options: ["تنش و اضطراب", "آرامش", "بی‌تفاوتی", "شادی"],
+answer: 0,
+explanation: "با تنش و اضطراب همراه است."
+},
+{
+q: "دلیل ریزش گروه چیست؟",
+options: ["اضطراب در انتقال", "موفقیت", "پایان جلسات", "تغییر رهبر"],
+answer: 0,
+explanation: "به دلیل شدت اضطراب در مرحله انتقال."
+},
+{
+q: "اعتماد بیشتر باعث چه می‌شود؟",
+options: ["آمیزش بیشتر", "آمیزش کمتر", "پایان گروه", "خروج اعضا"],
+answer: 0,
+explanation: "اعتماد بیشتر باعث آمیزش بیشتر می‌شود."
+},
+{
+q: "افزایش اعتماد به چه چیزی بستگی دارد؟",
+options: ["مهارت مشاور", "تعداد اعضا", "مکان", "مدت زمان"],
+answer: 0,
+explanation: "به نگرش و مهارت مشاور بستگی دارد."
+},
+{
+q: "کدام یک اصل انتقال نیست؟",
+options: ["راه حل متعدد", "باز بودن", "درک رفتار", "مسئولیت"],
+answer: 0,
+explanation: "راه حل متعدد اصل مرحله کار است."
+},
+{
+q: "در کار صحبت از کجا شروع می‌شود؟",
+options: ["برآورد خود فرد", "نظر دیگران", "نظر رهبر", "ارزیابی بیرونی"],
+answer: 0,
+explanation: "با برآورد خود فرد شروع می‌شود."
+},
+{
+q: "در کار چه احساسی افزایش می‌یابد؟",
+options: ["دلبستگی", "بی‌تفاوتی", "خشم", "رقابت"],
+answer: 0,
+explanation: "دلبستگی و وابستگی افزایش می‌یابد."
+},
+{
+q: "اصول کار کدام است؟",
+options: ["همه موارد", "لازمه تغییر عمل", "راه حل متعدد", "ملزم شدن به تغییر"],
+answer: 0,
+explanation: "همه موارد از اصول کار هستند."
+},
+{
+q: "مشکل در عمل با چه کاری بررسی می‌شود؟",
+options: ["نشست انفرادی", "خارج کردن", "نادیده گرفتن", "دارو"],
+answer: 0,
+explanation: "با نشست انفرادی علل آن بررسی می‌شود."
+},
+{
+q: "شناخت خود نیاز به چه دارد؟",
+options: ["کاستن دفاعی", "افزایش دفاعی", "انکار", "تمرکز بر نقاط قوت"],
+answer: 0,
+explanation: "نیاز به کاستن حالت دفاعی دارد."
+},
+{
+q: "باز بودن به چه معناست؟",
+options: ["کاهش دفاعی و ترس", "همیشه موافق بودن", "هرگز انتقاد نکردن", "فقط گوش دادن"],
+answer: 0,
+explanation: "یعنی کاهش دفاعی، کاهش ترس از طرد."
+},
+{
+q: "نتیجه مشاوره گروهی چیست؟",
+options: ["باز بودن در برابر بازخورد", "همیشه موافق بودن", "هرگز انتقاد نکردن", "فقط به خود فکر کردن"],
+answer: 0,
+explanation: "یادگیری باز بودن در برابر بازخورد."
+},
+{
+q: "یادگیری‌های تازه در کجا به کار می‌رود؟",
+options: ["زندگی روزمره", "جلسات گروه", "محیط کار", "خانواده"],
+answer: 0,
+explanation: "در زندگی روزمره به کار می‌رود."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
