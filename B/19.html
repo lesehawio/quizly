@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره گروهی نظری · سری 19</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"19";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره گروهی نظری · سری 19</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری راهنمایی و مشاوره گروهی</h2>
+  <p>تحلیل کامل 50 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">50 سوال</span><span class="pill">عوامل درمانی</span><span class="pill">الگوهای رفتاری</span><span class="pill">اگزیستانسیالیسم</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>50</b><span>سوال</span></div>
+<div class="stat"><b>12</b><span>عامل درمانی</span></div>
+<div class="stat"><b>6</b><span>نظریه‌پرداز</span></div>
+<div class="stat"><b>4</b><span>الگوی رفتاری</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="نگهداشتن بیمار ایجاد امید">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از عوامل درمانی برای نگه داشتن بیمار در برنامه درمان ضروری است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایجاد امید</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ایجاد امید (Instillation of Hope) برای نگه داشتن بیمار در برنامه درمان ضروری است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عمومیت: احساس مشترک بودن است.<br>
+- انتقال اطلاعات: آموزش است.<br>
+- نوعدوستی: کمک به دیگران است.<br>
+<b>نکته کلیدی:</b> ایجاد امید = نگهداشتن بیمار
+</div>
+</div>
+
+<div class="card question" data-search="اعتقاد به شیوه درمان اثر درمانی">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> اعتقاد به شیوه درمان، خود چه اثری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اثر درمانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اعتقاد به شیوه درمان خود اثر درمانی (Therapeutic Effect) دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اثر منفی: نادرست است.<br>
+- بی‌اثر است: نادرست است.<br>
+- اثر دارویی: مربوط به دارو است.<br>
+<b>نکته کلیدی:</b> اعتقاد به درمان = اثر درمانی
+</div>
+</div>
+
+<div class="card question" data-search="عمومیت مشکلات مشترک">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> درک این که همه مشکل دارند و منحصر به فرد بودن باعث انزوا می‌شود، به کدام عامل درمانی مربوط است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عمومیت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عمومیت (Universality) یعنی درک مشترک بودن مشکلات.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ایجاد امید: ایجاد خوش‌بینی است.<br>
+- انتقال اطلاعات: آموزش است.<br>
+- نوعدوستی: کمک به دیگران است.<br>
+<b>نکته کلیدی:</b> عمومیت = مشکلات مشترک
+</div>
+</div>
+
+<div class="card question" data-search="انتقال اطلاعات تعلیم درمانگر">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> کدام عامل درمانی شامل تعلیم درمانگر در زمینه سلامت روانی، بیماری روانی و دینامیسم‌های روانی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انتقال اطلاعات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انتقال اطلاعات (Imparting Information) شامل تعلیم درمانگر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نوعدوستی: کمک به دیگران است.<br>
+- ایجاد امید: ایجاد خوش‌بینی است.<br>
+- کاتارسیس: تخلیه هیجانی است.<br>
+<b>نکته کلیدی:</b> انتقال اطلاعات = تعلیم درمانگر
+</div>
+</div>
+
+<div class="card question" data-search="انتقال اطلاعات رفع ابهام">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> انتقال اطلاعات چه کمکی به بیماران می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رفع ابهام و سردرگمی که تولید اضطراب می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انتقال اطلاعات به رفع ابهام و سردرگمی کمک می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- افزایش اضطراب: برعکس است.<br>
+- ایجاد وابستگی: نادرست است.<br>
+- کاهش عزت نفس: نادرست است.<br>
+<b>نکته کلیدی:</b> انتقال اطلاعات = رفع ابهام
+</div>
+</div>
+
+<div class="card question" data-search="نوعدوستی عزت نفس">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> حمایت کردن بیماران از هم و مفید بودن برای دیگران در جلسات، چه تأثیری دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عزت نفس را بالا می‌برد و باعث بیرون آمدن فرد از خود می‌شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حمایت از دیگران عزت نفس را بالا می‌برد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عزت نفس پایین می‌آید: برعکس است.<br>
+- انزوا: برعکس است.<br>
+- بدون تأثیر: نادرست است.<br>
+<b>نکته کلیدی:</b> نوعدوستی = افزایش عزت نفس
+</div>
+</div>
+
+<div class="card question" data-search="نوعدوستی کمک به دیگران">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> کدام عامل درمانی به عنوان «نوعدوستی» شناخته می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کمک به دیگران در جلسات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نوعدوستی (Altruism) یعنی کمک به دیگران در جلسات.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- دریافت اطلاعات: انتقال اطلاعات است.<br>
+- ایجاد امید: عامل دیگر است.<br>
+- درک مشکلات مشترک: عمومیت است.<br>
+<b>نکته کلیدی:</b> نوعدوستی = کمک به دیگران
+</div>
+</div>
+
+<div class="card question" data-search="مرور تصحیحی دو درمانگر مرد و زن">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> مرور تصحیحی گروه اولیه (خانواده) در کدام شرایط بیشتر مؤثر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">زمانی که گروه دو درمانگر مرد و زن داشته باشد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دو درمانگر مرد و زن بیشتر مؤثر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تک درمانگر: کمتر مؤثر است.<br>
+- گروه بزرگ: عامل اصلی نیست.<br>
+- گروه کوچک: عامل اصلی نیست.<br>
+<b>نکته کلیدی:</b> مرور تصحیحی = دو درمانگر مرد و زن
+</div>
+</div>
+
+<div class="card question" data-search="الگوی وابستگی و درماندگی">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از الگوهای رفتاری متأثر از خانواده، نشان‌دهنده وابستگی و درماندگی در مقابل رهبر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بیمار در مقابل رهبر، وابسته و درمانده است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> این الگو نشان‌دهنده وابستگی و درماندگی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- منازعه: الگوی دیگر است.<br>
+- ایجاد شکاف: الگوی دیگر است.<br>
+- همدستی: الگوی دیگر است.<br>
+<b>نکته کلیدی:</b> وابستگی و درماندگی = الگوی متأثر از خانواده
+</div>
+</div>
+
+<div class="card question" data-search="وابستگی ناشی از قدرت والدین">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> کدام الگوی رفتاری متأثر از خانواده، ناشی از احساس درونی‌شده قدرت والدین است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">وابستگی و درماندگی در مقابل رهبر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> وابستگی ناشی از قدرت والدین است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رقابت: الگوی دیگر است.<br>
+- منازعه: الگوی دیگر است.<br>
+- همدستی: الگوی دیگر است.<br>
+<b>نکته کلیدی:</b> وابستگی = قدرت والدین
+</div>
+</div>
+
+<div class="card question" data-search="منازعه با رهبر سد راه مقاصد">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> در کدام الگوی رفتاری، بیمار رهبر را سد راه مقاصد خود می‌بیند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">منازعه با رهبر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در الگوی منازعه، رهبر سد راه مقاصد است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- وابستگی: الگوی دیگر است.<br>
+- ایجاد شکاف: الگوی دیگر است.<br>
+- همدستی: الگوی دیگر است.<br>
+<b>نکته کلیدی:</b> منازعه = سد راه مقاصد
+</div>
+</div>
+
+<div class="card question" data-search="رشد مهارت های اجتماعی تکوین مهارت ها">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> رشد مهارت‌های اجتماعی در گروه درمانی به چه معناست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تکوین مهارت‌های اساسی اجتماعی و یافتن ریشه‌های عدم موفقیت در مراودات اجتماعی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رشد مهارت‌های اجتماعی شامل تکوین مهارت‌های اساسی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط یادگیری تئوری: ناقص است.<br>
+- افزایش اطلاعات پزشکی: نادرست است.<br>
+- کاهش ارتباطات: برعکس است.<br>
+<b>نکته کلیدی:</b> مهارت اجتماعی = تکوین مهارت‌ها
+</div>
+</div>
+
+<div class="card question" data-search="یادگیری جانشین رفتار تقلیدی">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> یادگیری از رفتارهای درمانگر یا بیماران دیگر در گروه چه نام دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رفتار تقلیدی (یادگیری جانشین)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یادگیری جانشین (Vicarious Learning) یا رفتار تقلیدی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- یادگیری مستقیم: نوع دیگر است.<br>
+- یادگیری شرطی: نوع دیگر است.<br>
+- یادگیری شناختی: نوع دیگر است.<br>
+<b>نکته کلیدی:</b> یادگیری جانشین = رفتار تقلیدی
+</div>
+</div>
+
+<div class="card question" data-search="یادگیری همنشینانه روابط و تصحیح عاطفی">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> مفهوم اساسی در یادگیری همنشینانه (درون‌گروهی) چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اهمیت روابط همنشینانه و تصحیح عاطفی تجربیات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> یادگیری همنشینانه بر روابط و تصحیح عاطفی تأکید دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط یادگیری تئوری: ناقص است.<br>
+- افزایش اطلاعات: ناقص است.<br>
+- کاهش ارتباطات: برعکس است.<br>
+<b>نکته کلیدی:</b> یادگیری همنشینانه = روابط و تصحیح عاطفی
+</div>
+</div>
+
+<div class="card question" data-search="تسهیل کننده های تجربه تصحیحی همه موارد">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از تسهیل‌کنندگان تجربه تصحیحی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه موارد تسهیل‌کننده تجربه تصحیحی هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> تجربه تصحیحی = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="رویداد تکان دهنده مثبت همه موارد">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> در یک رویداد تکان‌دهنده در گروه، کدام ویژگی نشان‌دهنده تأثیر مثبت آن است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه ویژگی‌ها نشان‌دهنده تأثیر مثبت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> رویداد تکان‌دهنده مثبت = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="پس از رویداد موفق احساس آزادی">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> پس از یک رویداد تکان‌دهنده موفق، بیمار به چه چیزی دست می‌یابد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">احساس آزادی از بندها و محدودیت‌های درونی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> رویداد موفق باعث احساس آزادی می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- احساس شکست: برعکس است.<br>
+- افزایش اضطراب: برعکس است.<br>
+- کاهش عزت نفس: برعکس است.<br>
+<b>نکته کلیدی:</b> رویداد موفق = احساس آزادی
+</div>
+</div>
+
+<div class="card question" data-search="رویداد تصحیحی مثبت همه موارد">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> ویژگی‌های یک رویداد تصحیحی مثبت چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه ویژگی‌ها برای رویداد تصحیحی مثبت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> رویداد تصحیحی مثبت = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="جهان کوچک اجتماعی رفتار مشابه خارج از گروه">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> گروه به عنوان «جهان کوچک اجتماعی» چه ویژگی‌ای دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اعضا همان رفتاری را که با دیگران در خارج از گروه دارند، در گروه نشان می‌دهند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه بازتابی از رفتار خارج از گروه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رفتار متفاوت: نادرست است.<br>
+- فقط رفتار مثبت: نادرست است.<br>
+- بدون ارتباط: نادرست است.<br>
+<b>نکته کلیدی:</b> جهان کوچک اجتماعی = رفتار مشابه
+</div>
+</div>
+
+<div class="card question" data-search="زیربنای روان درمانی رفتار بیمارگونه در گروه">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> زیربنای روان‌درمانی در گروه چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اعضا رفتار بیمارگونه خود را در گروه نشان می‌دهند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> زیربنای درمان، نمایش رفتار بیمارگونه است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط رفتار سالم: نادرست است.<br>
+- بدون مشکل: نادرست است.<br>
+- فقط کمک: نادرست است.<br>
+<b>نکته کلیدی:</b> زیربنای درمان = رفتار بیمارگونه
+</div>
+</div>
+
+<div class="card question" data-search="ریشه آسیب شناسی روابط ناسالم">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> ریشه‌های آسیب‌شناسی روانی در چه چیزی نهفته است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روابط ناسالم گروه همنشینانه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ریشه آسیب‌شناسی در روابط ناسالم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عوامل ژنتیکی: نادرست است.<br>
+- کمبود اطلاعات: نادرست است.<br>
+- مسائل اقتصادی: نادرست است.<br>
+<b>نکته کلیدی:</b> آسیب‌شناسی = روابط ناسالم
+</div>
+</div>
+
+<div class="card question" data-search="برخورد عاطفی تر اثر بیشتر">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> هر چه برخوردها در گروه عاطفی‌تر باشد، اثر آن‌ها چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بیشتر است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برخوردهای عاطفی تأثیر بیشتری دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کمتر است: برعکس است.<br>
+- بی‌اثر است: نادرست است.<br>
+- بدون تأثیر: نادرست است.<br>
+<b>نکته کلیدی:</b> عاطفی = اثر بیشتر
+</div>
+</div>
+
+<div class="card question" data-search="برخورد عقلانی اثر کمتر">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> هر چه برخوردها در گروه عقلانی‌تر باشد، اثر آن‌ها چگونه است？</div>
+<b>پاسخ صحیح:</b> <span class="answer">کمتر است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برخوردهای عقلانی تأثیر کمتری دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بیشتر است: برعکس است.<br>
+- یکسان است: نادرست است.<br>
+- تأثیر بیشتری: برعکس است.<br>
+<b>نکته کلیدی:</b> عقلانی = اثر کمتر
+</div>
+</div>
+
+<div class="card question" data-search="وظایف رفتار درمانگر تجویز دارو نیست">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از وظایف رفتار درمانگر نیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تجویز دارو</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تجویز دارو وظیفه رفتار درمانگر نیست.<br>
+<b>چرا گزینه‌های دیگر درست هستند؟</b><br>
+- ارائه بازخورد: وظیفه است.<br>
+- تشویق به مشاهده خویش: وظیفه است.<br>
+- تصریح مسئولیت: وظیفه است.<br>
+<b>نکته کلیدی:</b> رفتار درمانگر ≠ تجویز دارو
+</div>
+</div>
+
+<div class="card question" data-search="انتقال مسخ ذهنی روابط">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> انتقال (Transference) در گروه درمانی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نوعی مسخ ذهنی روابط همنشینانه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انتقال نوعی مسخ ذهنی روابط است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- یادگیری جدید: نادرست است.<br>
+- رفتار مثبت: نادرست است.<br>
+- درمان دارویی: نادرست است.<br>
+<b>نکته کلیدی:</b> انتقال = مسخ ذهنی روابط
+</div>
+</div>
+
+<div class="card question" data-search="تصورات ذهنی از والدین معلمان">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> درمانگر برای بسیاری از بیماران تجسم تصورات ذهنی آن‌ها از چه کسانی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">والدین، معلمان، بالادستی‌ها</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> درمانگر تجسم تصورات از والدین و بالادستی‌هاست.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- همسالان: نادرست است.<br>
+- دوستان: نادرست است.<br>
+- همکاران: نادرست است.<br>
+<b>نکته کلیدی:</b> درمانگر = والدین، معلمان، بالادستی‌ها
+</div>
+</div>
+
+<div class="card question" data-search="بصیرت کشف مهم درباره خود">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> بصیرت در گروه درمانی یعنی چه؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">وقتی فرد چیز مهمی راجع به خود کشف کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بصیرت یعنی کشف مهم درباره خود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- یادگیری اطلاعات: نادرست است.<br>
+- مصرف دارو: نادرست است.<br>
+- دوست شدن: نادرست است.<br>
+<b>نکته کلیدی:</b> بصیرت = کشف درباره خود
+</div>
+</div>
+
+<div class="card question" data-search="بصیرت همه موارد">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> از طریق بصیرت، فرد به چه چیزی پی می‌برد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بصیرت شامل همه موارد است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> بصیرت = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="همبستگی گروهی معادل همدلی">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> همبستگی گروهی در گروه درمانی معادل چه چیزی در درمان فردی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رابطه یا همدلی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همبستگی گروهی معادل رابطه یا همدلی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- دارودرمانی: نادرست است.<br>
+- تشخیص: نادرست است.<br>
+- ارزیابی: نادرست است.<br>
+<b>نکته کلیدی:</b> همبستگی = رابطه/همدلی
+</div>
+</div>
+
+<div class="card question" data-search="همبستگی پیش شرط درمان">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> همبستگی گروهی به خودی خود چه نوع عاملی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">یک پیش‌شرط لازم برای درمان مؤثر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همبستگی پیش‌شرط درمان مؤثر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عامل درمانی: نه، پیش‌شرط است.<br>
+- عامل منفی: نادرست است.<br>
+- بی‌اثر: نادرست است.<br>
+<b>نکته کلیدی:</b> همبستگی = پیش‌شرط درمان
+</div>
+</div>
+
+<div class="card question" data-search="کارکوف همدلی پذیرش صداقت">
+<span class="qnum">سوال 31</span>
+<div class="fa"><b>متن سوال:</b> به گفته کارکوف، یک درمانگر موفق با بیماران خود چه نوع رابطه‌ای برقرار می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رابطه توام با همدلی، پذیرش و صداقت (خود بودن)</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کارکوف بر همدلی، پذیرش و صداقت تأکید دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رسمی و خشک: نادرست است.<br>
+- مبتنی بر قدرت: نادرست است.<br>
+- مبتنی بر ترس: نادرست است.<br>
+<b>نکته کلیدی:</b> کارکوف = همدلی، پذیرش، صداقت
+</div>
+</div>
+
+<div class="card question" data-search="راجرز اولین اتفاق احساس آزادی">
+<span class="qnum">سوال 32</span>
+<div class="fa"><b>متن سوال:</b> به گفته کارل راجرز، وقتی شرایط یک رابطه ایده‌ال وجود داشته باشد، اولین اتفاق چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بیمار برای بیان احساسات و تجربیاتش احساس آزادی می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اولین اتفاق، احساس آزادی برای بیان است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- درمان فوری: نادرست است.<br>
+- مصرف دارو: نادرست است.<br>
+- ترک گروه: نادرست است.<br>
+<b>نکته کلیدی:</b> راجرز = احساس آزادی
+</div>
+</div>
+
+<div class="card question" data-search="راجرز ناهمخوانی تجربیات با خویشتن">
+<span class="qnum">سوال 33</span>
+<div class="fa"><b>متن سوال:</b> در فرآیند درمان از نظر راجرز، بیمار به چه چیزی پی می‌برد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به ناهمخوانی تجربیات خود با مفهومی که از خویشتن دارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بیمار به ناهمخوانی تجربیات پی می‌برد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هماهنگی کامل: برعکس است.<br>
+- بی‌نیازی: نادرست است.<br>
+- نیاز به دارو: نادرست است.<br>
+<b>نکته کلیدی:</b> راجرز = ناهمخوانی
+</div>
+</div>
+
+<div class="card question" data-search="میل به تحقق خویشتن رشد و شکوفایی">
+<span class="qnum">سوال 34</span>
+<div class="fa"><b>متن سوال:</b> در نظریه راجرز، مفهوم «میل به تحقق خویشتن» به چه معناست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تمایل ذاتی انسان برای رشد و شکوفایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> میل به تحقق خویشتن یعنی رشد و شکوفایی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ثروت: نادرست است.<br>
+- قدرت: نادرست است.<br>
+- شهرت: نادرست است.<br>
+<b>نکته کلیدی:</b> تحقق خویشتن = رشد و شکوفایی
+</div>
+</div>
+
+<div class="card question" data-search="هامبورگ دو مسئله روابط و ارزش شخصی">
+<span class="qnum">سوال 35</span>
+<div class="fa"><b>متن سوال:</b> به گفته هامبورگ، دو مسئله عام در تمام افرادی که به دنبال کمک می‌آیند کدام‌اند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دشواری ایجاد و حفظ روابط همنشینانه معنادار و دشواری حفظ احساس ارزش شخصی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دو مسئله روابط و ارزش شخصی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مالی و شغلی: نادرست است.<br>
+- جسمانی و روحی: نادرست است.<br>
+- خانوادگی و تحصیلی: نادرست است.<br>
+<b>نکته کلیدی:</b> هامبورگ = روابط و ارزش شخصی
+</div>
+</div>
+
+<div class="card question" data-search="میلر همبستگی عزت نفس و عزت اجتماعی">
+<span class="qnum">سوال 36</span>
+<div class="fa"><b>متن سوال:</b> به گفته میلر، بین عزت نفس و عزت اجتماعی چه رابطه‌ای وجود دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همبستگی وجود دارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عزت نفس و عزت اجتماعی همبستگی دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هیچ رابطه‌ای: نادرست است.<br>
+- رابطه معکوس: نادرست است.<br>
+- رابطه پیچیده: نادرست است.<br>
+<b>نکته کلیدی:</b> میلر = همبستگی
+</div>
+</div>
+
+<div class="card question" data-search="سالیوان خود تأییدهای درونی شده">
+<span class="qnum">سوال 37</span>
+<div class="fa"><b>متن سوال:</b> به گفته سالیوان، خود (Self) ساخته چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تأییدهای درونی‌شده</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خود از تأییدهای درونی‌شده ساخته می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ژنتیک: نادرست است.<br>
+- محیط فیزیکی: نادرست است.<br>
+- تغذیه: نادرست است.<br>
+<b>نکته کلیدی:</b> سالیوان = تأییدهای درونی‌شده
+</div>
+</div>
+
+<div class="card question" data-search="تأثیرپذیری از عزت اجتماعی همه موارد">
+<span class="qnum">سوال 38</span>
+<div class="fa"><b>متن سوال:</b> میزان تأثیرپذیری فرد از عزت اجتماعی خود در گروه به چه عواملی بستگی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه عوامل مؤثر هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> تأثیرپذیری = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="محبوبیت در گروه همه موارد">
+<span class="qnum">سوال 39</span>
+<div class="fa"><b>متن سوال:</b> چه عواملی با محبوبیت در گروه همبستگی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه عوامل با محبوبیت همبستگی دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> محبوبیت = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="نامحبوب ترین افراد بی انعطافی تعصب">
+<span class="qnum">سوال 40</span>
+<div class="fa"><b>متن سوال:</b> مشخصه نامحبوب‌ترین افراد در گروه چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بی‌انعطافی، تعصب، عدم درون‌نگری و حداقل آمیزش با گروه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نامحبوب‌ترین افراد بی‌انعطاف و متعصب هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ابراز خویش: محبوبیت است.<br>
+- سازگاری بالا: محبوبیت است.<br>
+- کمک به دیگران: محبوبیت است.<br>
+<b>نکته کلیدی:</b> نامحبوب = بی‌انعطافی، تعصب
+</div>
+</div>
+
+<div class="card question" data-search="کاتارسیس پدیده گروهی و اجتماعی">
+<span class="qnum">سوال 41</span>
+<div class="fa"><b>متن سوال:</b> کاتارسیس (تخلیه هیجانی) چه نوع پدیده‌ای است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">یک پدیده گروهی و اجتماعی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کاتارسیس پدیده گروهی و اجتماعی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فردی: نادرست است.<br>
+- دارویی: نادرست است.<br>
+- جسمانی: نادرست است.<br>
+<b>نکته کلیدی:</b> کاتارسیس = پدیده گروهی
+</div>
+</div>
+
+<div class="card question" data-search="کاتارسیس باید مهار و هدایت شود">
+<span class="qnum">سوال 42</span>
+<div class="fa"><b>متن سوال:</b> کاتارسیس برای تبدیل شدن به یک پدیده درمانی به چه چیزی نیاز دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">باید مهار شود و هدایت شود و در محیط امن بروز کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کاتارسیس نیاز به مهار، هدایت و محیط امن دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بدون مهار: خطرناک است.<br>
+- محیط ناامن: خطرناک است.<br>
+- انفرادی: نادرست است.<br>
+<b>نکته کلیدی:</b> کاتارسیس = مهار و هدایت
+</div>
+</div>
+
+<div class="card question" data-search="گروه خنثی دستپاچگی و خجالت">
+<span class="qnum">سوال 43</span>
+<div class="fa"><b>متن سوال:</b> در زمان برون‌ریزی احساسات منفی، چه اتفاقی می‌افتد اگر گروه خنثی باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شخص دست‌پاچه می‌شود و خجالت می‌کشد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه خنثی باعث دست‌پاچگی می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آرامش: نادرست است.<br>
+- درمان: نادرست است.<br>
+- قدرت: نادرست است.<br>
+<b>نکته کلیدی:</b> گروه خنثی = دست‌پاچگی
+</div>
+</div>
+
+<div class="card question" data-search="جلوگیری از صدمه روانی نگذاشتن انباشت احساسات">
+<span class="qnum">سوال 44</span>
+<div class="fa"><b>متن سوال:</b> برای جلوگیری از صدمه روانی در زمان بروز احساسات منفی، درمانگر باید چه کاری انجام دهد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نگذارد احساسات منفی گروه نسبت به هم انباشته شود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نباید اجازه انباشت احساسات منفی داد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نادیده گرفتن: خطرناک است.<br>
+- دامن زدن: خطرناک است.<br>
+- سرکوب: خطرناک است.<br>
+<b>نکته کلیدی:</b> پیشگیری از صدمه = عدم انباشت
+</div>
+</div>
+
+<div class="card question" data-search="منابع تحقیق عوامل درمانی همه موارد">
+<span class="qnum">سوال 45</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از منابع مهم برای تحقیق در زمینه عوامل درمانی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه موارد منابع تحقیق هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر کدام به تنهایی ناقص است.<br>
+<b>نکته کلیدی:</b> منابع تحقیق = همه موارد
+</div>
+</div>
+
+<div class="card question" data-search="اگزیستانسیالیسم در مقابل فروید و واتسون">
+<span class="qnum">سوال 46</span>
+<div class="fa"><b>متن سوال:</b> نهضت اگزیستانسیالیسم در مقابل چه دیدگاه‌هایی شکل گرفت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌کاوی فروید و رفتارگرایی واتسون</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اگزیستانسیالیسم در مقابل فروید و واتسون شکل گرفت.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روان‌شناسی مثبت‌گرا: نادرست است.<br>
+- شناختی: نادرست است.<br>
+- تکاملی: نادرست است.<br>
+<b>نکته کلیدی:</b> اگزیستانسیالیسم = مقابل فروید و واتسون
+</div>
+</div>
+
+<div class="card question" data-search="نیروی سوم مازلو و راجرز">
+<span class="qnum">سوال 47</span>
+<div class="fa"><b>متن سوال:</b> اگزیستانسیالیسم به عنوان «نیروی سوم» در روان‌شناسی شناخته می‌شود. کدام نظریه‌پردازان جزئی از آن هستند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مازلو و کارل راجرز</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مازلو و راجرز جزئی از نیروی سوم هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فروید و یونگ: نیروی اول هستند.<br>
+- واتسون و اسکینر: نیروی دوم هستند.<br>
+- پاولف و بندورا: رفتارگرایان هستند.<br>
+<b>نکته کلیدی:</b> نیروی سوم = مازلو و راجرز
+</div>
+</div>
+
+<div class="card question" data-search="ریشه اگزیستانسیالیسم شلینگ">
+<span class="qnum">سوال 48</span>
+<div class="fa"><b>متن سوال:</b> ریشه نهضت اگزیستانسیالیسم در سخنرانی‌های چه کسی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شلینگ</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ریشه اگزیستانسیالیسم در سخنرانی‌های شلینگ است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هگل: فیلسوف دیگر است.<br>
+- نیچه: فیلسوف دیگر است.<br>
+- کی‌یرکگور: فیلسوف دیگر است.<br>
+<b>نکته کلیدی:</b> شلینگ = ریشه اگزیستانسیالیسم
+</div>
+</div>
+
+<div class="card question" data-search="انسان موجودی در حال تبلور">
+<span class="qnum">سوال 49</span>
+<div class="fa"><b>متن سوال:</b> وجودگرایی (اگزیستانسیالیسم) انسان را به عنوان چه موجودی تلقی می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">موجودی در حال تبلور و شدن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انسان موجودی در حال تبلور است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ثابت: نادرست است.<br>
+- تعیین‌شده توسط محیط: نادرست است.<br>
+- تعیین‌شده توسط ژنتیک: نادرست است.<br>
+<b>نکته کلیدی:</b> وجودگرایی = موجودی در حال تبلور
+</div>
+</div>
+
+<div class="card question" data-search="مفاهیم کلیدی اگزیستانسیالیسم">
+<span class="qnum">سوال 50</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر از مفاهیم کلیدی اگزیستانسیالیسم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شدن، واقعیت مرگ، اضطراب، رنج، تنهایی، آزاد بودن، حق انتخاب، مسئول بودن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> این مفاهیم کلیدی اگزیستانسیالیسم هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ثبات، امنیت، ثروت: نادرست است.<br>
+- موفقیت، شهرت: نادرست است.<br>
+- رقابت، برتری: نادرست است.<br>
+<b>نکته کلیدی:</b> اگزیستانسیالیسم = شدن، مرگ، اضطراب، رنج، تنهایی، آزادی، انتخاب، مسئولیت
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>عوامل درمانی کلیدی</h3></div>
+<div class="grid2">
+<div class="box"><h4>ایجاد امید</h4>
+<div class="fa">نگهداشتن بیمار در درمان</div>
+</div>
+<div class="box"><h4>عمومیت</h4>
+<div class="fa">مشکلات مشترک، کاهش انزوا</div>
+</div>
+<div class="box"><h4>انتقال اطلاعات</h4>
+<div class="fa">تعلیم درمانگر، رفع ابهام</div>
+</div>
+<div class="box"><h4>نوعدوستی</h4>
+<div class="fa">کمک به دیگران، افزایش عزت نفس</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>الگوهای رفتاری متأثر از خانواده</h3></div>
+<div class="grid2">
+<div class="box"><h4>وابستگی</h4>
+<div class="fa">درماندگی در مقابل رهبر</div>
+</div>
+<div class="box"><h4>منازعه</h4>
+<div class="fa">رهبر سد راه مقاصد</div>
+</div>
+<div class="box"><h4>ایجاد شکاف</h4>
+<div class="fa">بین درمانگران</div>
+</div>
+<div class="box"><h4>همدستی</h4>
+<div class="fa">با سایر اعضا</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفاهیم کلیدی</h3></div>
+<div class="grid2">
+<div class="box"><h4>انتقال</h4>
+<div class="fa">مسخ ذهنی روابط</div>
+</div>
+<div class="box"><h4>بصیرت</h4>
+<div class="fa">کشف درباره خود</div>
+</div>
+<div class="box"><h4>همبستگی</h4>
+<div class="fa">پیش‌شرط درمان</div>
+</div>
+<div class="box"><h4>کاتارسیس</h4>
+<div class="fa">پدیده گروهی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اگزیستانسیالیسم</h3></div>
+<div class="fa"><b>نیروی سوم:</b> مازلو و راجرز</div>
+<div class="fa"><b>انسان:</b> موجودی در حال تبلور</div>
+<div class="fa"><b>مفاهیم:</b> شدن، مرگ، اضطراب، رنج، تنهایی، آزادی، انتخاب، مسئولیت</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>عوامل درمانی</h3></div>
+<div class="fa"><b>تعریف:</b> عناصر مؤثر در فرایند درمان گروهی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ایجاد امید:</b> نگهداشتن بیمار<br>
+<b>عمومیت:</b> مشکلات مشترک<br>
+<b>انتقال اطلاعات:</b> تعلیم و رفع ابهام<br>
+<b>نوعدوستی:</b> کمک به دیگران<br>
+<b>سوالات مرتبط:</b> 1، 2، 3، 4، 5، 6، 7
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>الگوهای رفتاری متأثر از خانواده</h3></div>
+<div class="fa"><b>تعریف:</b> الگوهای رفتاری که ریشه در تجربیات خانوادگی دارند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>وابستگی:</b> درماندگی در مقابل رهبر<br>
+<b>منازعه:</b> رهبر سد راه مقاصد<br>
+<b>سوالات مرتبط:</b> 9، 10، 11
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انتقال و بصیرت</h3></div>
+<div class="fa"><b>تعریف:</b> مفاهیم کلیدی در روان‌درمانی پویانگر.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>انتقال:</b> مسخ ذهنی روابط همنشینانه<br>
+<b>بصیرت:</b> کشف مهم درباره خود<br>
+<b>سوالات مرتبط:</b> 25، 26، 27، 28
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>همبستگی گروهی</h3></div>
+<div class="fa"><b>تعریف:</b> پیوند و انسجام بین اعضای گروه.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>معادل در فردی:</b> رابطه یا همدلی<br>
+<b>نقش:</b> پیش‌شرط درمان مؤثر<br>
+<b>سوالات مرتبط:</b> 29، 30
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اگزیستانسیالیسم</h3></div>
+<div class="fa"><b>تعریف:</b> نهضت فلسفی و روان‌شناسی به عنوان نیروی سوم.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>نظریه‌پردازان:</b> مازلو، راجرز<br>
+<b>انسان:</b> موجودی در حال تبلور<br>
+<b>مفاهیم کلیدی:</b> شدن، مرگ، اضطراب، رنج، تنهایی، آزادی، انتخاب، مسئولیت<br>
+<b>سوالات مرتبط:</b> 46، 47، 48، 49، 50
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>عمومیت</td><td>نوعدوستی</td><td>عمومیت = مشکلات مشترک، نوعدوستی = کمک</td><td>مشترک vs کمک</td></tr>
+<tr><td>انتقال اطلاعات</td><td>ایجاد امید</td><td>انتقال = آموزش، ایجاد امید = خوش‌بینی</td><td>آموزش vs خوش‌بینی</td></tr>
+<tr><td>وابستگی</td><td>منازعه</td><td>وابستگی = درماندگی، منازعه = سد راه</td><td>درماندگی vs سد راه</td></tr>
+<tr><td>همبستگی</td><td>کاتارسیس</td><td>همبستگی = پیوند، کاتارسیس = تخلیه</td><td>پیوند vs تخلیه</td></tr>
+<tr><td>برخورد عاطفی</td><td>برخورد عقلانی</td><td>عاطفی = اثر بیشتر، عقلانی = اثر کمتر</td><td>بیشتر vs کمتر</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>کارل راجرز</h3></div>
+<div class="fa"><b>ایده اصلی:</b> رابطه ایده‌ال، احساس آزادی، ناهمخوانی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "راجرز"، "احساس آزادی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 32، 33، 34</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارکوف</h3></div>
+<div class="fa"><b>ایده اصلی:</b> همدلی، پذیرش و صداقت</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "کارکوف"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 31</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هامبورگ</h3></div>
+<div class="fa"><b>ایده اصلی:</b> دو مسئله روابط و ارزش شخصی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "هامبورگ"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 35</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>میلر</h3></div>
+<div class="fa"><b>ایده اصلی:</b> همبستگی عزت نفس و عزت اجتماعی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "میلر"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 36</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سالیوان</h3></div>
+<div class="fa"><b>ایده اصلی:</b> خود = تأییدهای درونی‌شده</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "سالیوان"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 37</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شلینگ</h3></div>
+<div class="fa"><b>ایده اصلی:</b> ریشه اگزیستانسیالیسم</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "شلینگ"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 48</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: عمومیت و نوعدوستی</h3>
+<div class="fa"><b>سوال نمونه:</b> درک مشکلات مشترک مربوط به کدام عامل است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "نوعدوستی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> عمومیت</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> نوعدوستی کمک به دیگران است، عمومیت مشکلات مشترک است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> عمومیت = مشکلات مشترک
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: ایجاد امید</h3>
+<div class="fa"><b>سوال نمونه:</b> چه عاملی بیمار را در درمان نگه می‌دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "همبستگی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> ایجاد امید</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> همبستگی پیش‌شرط است، ایجاد امید نگه‌دارنده است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> نگهداشتن بیمار = ایجاد امید
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: الگوی وابستگی</h3>
+<div class="fa"><b>سوال نمونه:</b> وابستگی ناشی از چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "رقابت" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> قدرت والدین</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> رقابت الگوی دیگر است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> وابستگی = قدرت والدین
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: همبستگی</h3>
+<div class="fa"><b>سوال نمونه:</b> همبستگی چه نوع عاملی است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "عامل درمانی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> پیش‌شرط درمان</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> همبستگی شرط لازم است، نه خود درمان.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> همبستگی = پیش‌شرط
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: برخورد عاطفی و عقلانی</h3>
+<div class="fa"><b>سوال نمونه:</b> کدام برخورد اثر بیشتری دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "عقلانی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> عاطفی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> برخوردهای عاطفی تأثیر بیشتری دارند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> عاطفی = اثر بیشتر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: کاتارسیس</h3>
+<div class="fa"><b>سوال نمونه:</b> کاتارسیس چه نوع پدیده‌ای است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "فردی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> گروهی و اجتماعی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> کاتارسیس در بستر گروه رخ می‌دهد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> کاتارسیس = پدیده گروهی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: نیروی سوم</h3>
+<div class="fa"><b>سوال نمونه:</b> نیروی سوم شامل چه کسانی است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "فروید و یونگ" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> مازلو و راجرز</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> فروید و یونگ نیروی اول هستند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> نیروی سوم = مازلو و راجرز
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 19 · مشاوره گروهی نظری · 50 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "چه عاملی بیمار را در درمان نگه می‌دارد؟",
+options: ["عمومیت", "ایجاد امید", "انتقال اطلاعات", "نوعدوستی"],
+answer: 1,
+explanation: "ایجاد امید برای نگهداشتن بیمار ضروری است."
+},
+{
+q: "درک مشکلات مشترک مربوط به کدام عامل است؟",
+options: ["ایجاد امید", "انتقال اطلاعات", "عمومیت", "نوعدوستی"],
+answer: 2,
+explanation: "عمومیت یعنی درک مشکلات مشترک."
+},
+{
+q: "انتقال اطلاعات چه تأثیری دارد؟",
+options: ["افزایش اضطراب", "رفع ابهام", "ایجاد وابستگی", "کاهش عزت نفس"],
+answer: 1,
+explanation: "انتقال اطلاعات به رفع ابهام کمک می‌کند."
+},
+{
+q: "نوعدوستی چه تأثیری دارد؟",
+options: ["کاهش عزت نفس", "افزایش عزت نفس", "انزوا", "بدون تأثیر"],
+answer: 1,
+explanation: "نوعدوستی عزت نفس را بالا می‌برد."
+},
+{
+q: "الگوی وابستگی نشانه چیست؟",
+options: ["رقابت", "درماندگی", "منازعه", "همدستی"],
+answer: 1,
+explanation: "وابستگی نشانه درماندگی در مقابل رهبر است."
+},
+{
+q: "منازعه با رهبر یعنی چه؟",
+options: ["وابستگی", "سد راه مقاصد", "همدستی", "رقابت"],
+answer: 1,
+explanation: "در منازعه، رهبر سد راه مقاصد است."
+},
+{
+q: "همبستگی در گروه معادل چیست؟",
+options: ["دارو", "رابطه/همدلی", "تشخیص", "ارزیابی"],
+answer: 1,
+explanation: "همبستگی معادل رابطه یا همدلی در فردی است."
+},
+{
+q: "همبستگی چه نوع عاملی است؟",
+options: ["عامل درمانی", "پیش‌شرط درمان", "عامل منفی", "بی‌اثر"],
+answer: 1,
+explanation: "همبستگی پیش‌شرط درمان مؤثر است."
+},
+{
+q: "کاتارسیس چه نوع پدیده‌ای است؟",
+options: ["فردی", "گروهی", "دارویی", "جسمانی"],
+answer: 1,
+explanation: "کاتارسیس پدیده گروهی و اجتماعی است."
+},
+{
+q: "چه برخوردی اثر بیشتری دارد؟",
+options: ["عقلانی", "عاطفی", "همانند", "هیچ"],
+answer: 1,
+explanation: "برخوردهای عاطفی اثر بیشتری دارند."
+},
+{
+q: "نیروی سوم شامل چه کسانی است؟",
+options: ["فروید و یونگ", "مازلو و راجرز", "واتسون و اسکینر", "پاولف و بندورا"],
+answer: 1,
+explanation: "مازلو و راجرز نیروی سوم هستند."
+},
+{
+q: "وجودگرایی انسان را چه می‌داند؟",
+options: ["ثابت", "در حال تبلور", "تعیین‌شده", "ژنتیکی"],
+answer: 1,
+explanation: "انسان موجودی در حال تبلور است."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
