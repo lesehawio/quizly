@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره گروهی نظری · سری 10</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"10";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره گروهی نظری · سری 10</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی نظری راهنمایی و مشاوره گروهی</h2>
+  <p>تحلیل کامل 30 سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">30 سوال</span><span class="pill">راهنمایی و مشاوره</span><span class="pill">چارچوب روابط</span><span class="pill">نیازها</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>30</b><span>سوال</span></div>
+<div class="stat"><b>8</b><span>نظریه‌پرداز</span></div>
+<div class="stat"><b>4</b><span>ربع چارچوب</span></div>
+<div class="stat"><b>5</b><span>مرحله گروه</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">01 · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، نظریه‌پردازان...">
+
+<div id="questionList">
+
+<div class="card question" data-search="مشکلات عاطفی شدید رواندرمانی">
+<span class="qnum">سوال 1</span>
+<div class="fa"><b>متن سوال:</b> در کار با مراجعانی که مشکلات عاطفی شدید داشته و رفتار نابهنجار دارند، کدام مورد استفاده قرار می‌گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روان‌درمانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در کار با مراجعانی که مشکلات عاطفی شدید و رفتار نابهنجار دارند، روان‌درمانی (Psychotherapy) استفاده می‌شود که عمیق‌ترین سطح مداخله است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- راهنمایی: برای مسائل سطحی و آموزشی است.<br>
+- مشاوره: برای مسائل متوسط است.<br>
+- راهنمایی گروهی: برای مسائل گروهی است.<br>
+<b>نکته کلیدی:</b> مشکلات شدید = روان‌درمانی
+</div>
+</div>
+
+<div class="card question" data-search="تمرکز کار راهنمایی محیط مشاوره شخصیت رواندرمانی احساسات">
+<span class="qnum">سوال 2</span>
+<div class="fa"><b>متن سوال:</b> تمرکز کار در راهنمایی ................. در مشاوره ................. در روان‌درمانی ................. است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">محیط، شخصیت، احساسات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تمرکز راهنمایی بر محیط (Environmental)، مشاوره بر شخصیت (Personality) و روان‌درمانی بر احساسات (Emotions) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شخصیت، محیط، احساسات: ترتیب اشتباه است.<br>
+- شخصیت، شخصیت، محیط: نادرست است.<br>
+- محیط، احساسات، شخصیت: نادرست است.<br>
+<b>نکته کلیدی:</b> راهنمایی = محیط، مشاوره = شخصیت، روان‌درمانی = احساسات
+</div>
+</div>
+
+<div class="card question" data-search="تاثیر گروه بر فرد مسمر">
+<span class="qnum">سوال 3</span>
+<div class="fa"><b>متن سوال:</b> تاثیر گروه بر فرد، از چه زمانی مورد توجه و تاکید قرار گرفت؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مسمر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فرانتس مسمر (Mesmer) اولین کسی بود که به تاثیر گروه بر فرد توجه کرد و از هیپنوتیزم گروهی استفاده نمود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آدلر: بر روانشناسی فردی تأکید دارد.<br>
+- مورینو: پدر روان‌درمانی گروهی است.<br>
+- آلن: در حوزه دیگری فعالیت داشت.<br>
+<b>نکته کلیدی:</b> مسمر = اولین توجه به تاثیر گروه
+</div>
+</div>
+
+<div class="card question" data-search="پدر رواندرمانی گروهی مورینو">
+<span class="qnum">سوال 4</span>
+<div class="fa"><b>متن سوال:</b> پدر روان‌درمانی گروهی چه کسی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مورینو</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جاکوب مورینو (Moreno) به عنوان پدر روان‌درمانی گروهی شناخته می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آدلر: روانشناسی فردی را مطرح کرد.<br>
+- آلن: در حوزه دیگری فعالیت داشت.<br>
+- مسمر: هیپنوتیزم را مطرح کرد.<br>
+<b>نکته کلیدی:</b> مورینو = پدر روان‌درمانی گروهی
+</div>
+</div>
+
+<div class="card question" data-search="دوره شکوفایی مشاوره گروهی 1950">
+<span class="qnum">سوال 5</span>
+<div class="fa"><b>متن سوال:</b> دوره پیشرفت سریع و شکوفایی مشاوره و روان‌درمانی گروهی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">1950</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دوره پیشرفت سریع و شکوفایی مشاوره و روان‌درمانی گروهی از سال 1950 به بعد آغاز شد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 1930: دوره اولیه است.<br>
+- 1905: دوره بسیار اولیه است.<br>
+- 1932 تاکنون: دامنه وسیع است.<br>
+<b>نکته کلیدی:</b> شکوفایی = 1950
+</div>
+</div>
+
+<div class="card question" data-search="ارائه اطلاعات راهنمایی">
+<span class="qnum">سوال 6</span>
+<div class="fa"><b>متن سوال:</b> از کدام گروه‌ها می‌توان در محیط‌هایی که جزء فرآیند یادآوری آن ارائه اطلاعات باشد، استفاده کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">راهنمایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از گروه‌های راهنمایی (Guidance) می‌توان در محیط‌هایی که ارائه اطلاعات مد نظر است، استفاده کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مشاوره: بر حل مسائل تأکید دارد.<br>
+- روان‌درمانی: بر تغییر عمیق تأکید دارد.<br>
+- روابط انسانی: بر تعاملات تأکید دارد.<br>
+<b>نکته کلیدی:</b> راهنمایی = ارائه اطلاعات
+</div>
+</div>
+
+<div class="card question" data-search="گروه های کوچک راهنمایی اطلاعات تحصیلی شغلی شخصی">
+<span class="qnum">سوال 7</span>
+<div class="fa"><b>متن سوال:</b> در کدام گروه‌ها تکیه کار گروه بر ارائه اطلاعات تحصیلی، شغلی و شخصی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه‌های کوچک راهنمایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در گروه‌های کوچک راهنمایی (Small Guidance Groups)، تکیه کار بر ارائه اطلاعات تحصیلی، شغلی و شخصی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روابط انسانی: بر تعاملات تأکید دارد.<br>
+- گروه‌های بزرگ راهنمایی: بزرگ‌تر هستند.<br>
+- کلاس‌های راهنمایی: ساختار کلاسی دارد.<br>
+<b>نکته کلیدی:</b> گروه کوچک راهنمایی = اطلاعات تحصیلی، شغلی، شخصی
+</div>
+</div>
+
+<div class="card question" data-search="نشست های کلاسی 45 دقیقه">
+<span class="qnum">سوال 8</span>
+<div class="fa"><b>متن سوال:</b> حداقل وقت لازم برای نشست‌های کلاسی چقدر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">45 دقیقه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حداقل وقت لازم برای نشست‌های کلاسی 45 دقیقه است تا مطالب به خوبی ارائه شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 60 دقیقه: زمان بیشتری است.<br>
+- 30 دقیقه: زمان کم است.<br>
+- 20 دقیقه: زمان بسیار کم است.<br>
+<b>نکته کلیدی:</b> نشست کلاسی = 45 دقیقه
+</div>
+</div>
+
+<div class="card question" data-search="گروه های معتادان هم درد">
+<span class="qnum">سوال 9</span>
+<div class="fa"><b>متن سوال:</b> گروه‌هایی که برای معتادان تشکیل می‌شود جزء کدامیک محسوب می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هم درد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های معتادان جزء گروه‌های هم‌درد (Mutual Aid) محسوب می‌شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مورد مدار: بر حل مسائل خاص تأکید دارد.<br>
+- توانش بشری: بر رشد تأکید دارد.<br>
+- مشاوره‌ای همگنان: نوع دیگری است.<br>
+<b>نکته کلیدی:</b> معتادان = هم‌درد
+</div>
+</div>
+
+<div class="card question" data-search="گروه های مشکلات متفاوت توانش بشری">
+<span class="qnum">سوال 10</span>
+<div class="fa"><b>متن سوال:</b> کدام گروه می‌تواند هم برای افراد هم‑مشکل و هم برای مراجعانی که دارای مشکلات متفاوت هستند، تشکیل شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">توانش بشری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> گروه‌های توانش بشری (Human Potential) می‌توانند هم برای افراد هم‑مشکل و هم برای مراجعاتی با مشکلات متفاوت تشکیل شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مشاوره‌ای همگنان: برای مشکلات مشابه است.<br>
+- مشاورتی: برای مشکلات خاص است.<br>
+- آموزشی-تجربی: برای آموزش است.<br>
+<b>نکته کلیدی:</b> توانش بشری = هم مشکل و متفاوت
+</div>
+</div>
+
+<div class="card question" data-search="جزء لاینفک گروه ها تمرکز بر اینجا و اکنون">
+<span class="qnum">سوال 11</span>
+<div class="fa"><b>متن سوال:</b> جزء لاینفک گروه‌های رشد و مشاوره‌ای و درمانی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تمرکز بر اینجا و اکنون</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تمرکز بر "اینجا و اکنون" (Here and Now) جزء لاینفک گروه‌های رشد، مشاوره‌ای و درمانی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تاکید بر ارزش‌های اجتماعی: مربوط به گروه‌های دیگر است.<br>
+- تاکید بر سپس-آنجا: مربوط به روان‌تحلیل‌گری است.<br>
+- تاکید بر مهارت و ابزار: مربوط به گروه‌های آموزشی است.<br>
+<b>نکته کلیدی:</b> اینجا و اکنون = جزء لاینفک
+</div>
+</div>
+
+<div class="card question" data-search="نفی واقعیت گلاسر">
+<span class="qnum">سوال 12</span>
+<div class="fa"><b>متن سوال:</b> این جمله از کیست؟ "اکثر مشکلات ما ناشی از نفی واقعیت است."</div>
+<b>پاسخ صحیح:</b> <span class="answer">گلاسر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ویلیام گلاسر (Glasser) در واقعیت‌درمانی معتقد است که اکثر مشکلات ناشی از نفی واقعیت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آدلر: بر علاقه اجتماعی تأکید دارد.<br>
+- راجرز: بر خودشکوفایی تأکید دارد.<br>
+- الیس: بر باورهای غیرمنطقی تأکید دارد.<br>
+<b>نکته کلیدی:</b> گلاسر = نفی واقعیت
+</div>
+</div>
+
+<div class="card question" data-search="ربع اول رفتار و انگیزش های معلوم بر خود و دیگران">
+<span class="qnum">سوال 13</span>
+<div class="fa"><b>متن سوال:</b> ربع اول "چارچوب روابط" کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">رفتار و انگیزش‌های معلوم بر خود و دیگران</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ربع اول (Open Area) شامل رفتار و انگیزش‌هایی است که هم بر خود و هم بر دیگران معلوم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اعمال معلوم بر دیگران و پوشیده بر ما: ربع سوم است.<br>
+- اعمال معلوم بر خود و پوشیده بر دیگران: ربع دوم است.<br>
+- عیوب و اسرار و احساسات: ربع چهارم است.<br>
+<b>نکته کلیدی:</b> ربع اول = معلوم بر خود و دیگران
+</div>
+</div>
+
+<div class="card question" data-search="رشد ربع اول کم کردن ربع دوم">
+<span class="qnum">سوال 14</span>
+<div class="fa"><b>متن سوال:</b> در چهارچوب روابط با رشد بیشتر ربع اول حجم کدام ربع کم می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دوم</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> با رشد ربع اول، اطلاعات بیشتری آشکار می‌شود و حجم ربع دوم (Hidden Area) که شامل اطلاعات مخفی است، کم می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اول: خودش رشد می‌کند.<br>
+- اول و دوم: نادرست است.<br>
+- سوم: مربوط به کور است.<br>
+<b>نکته کلیدی:</b> رشد ربع اول = کاهش ربع دوم
+</div>
+</div>
+
+<div class="card question" data-search="ربع چهارم موثر در روابط">
+<span class="qnum">سوال 15</span>
+<div class="fa"><b>متن سوال:</b> در چهارچوب روابط، کدام ربع در روابط فرد با دیگران فوق‌العاده موثر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">چهارم</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ربع چهارم (Unknown Area) در روابط فرد با دیگران فوق‌العاده موثر است و شامل موارد ناشناخته است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سوم: شامل موارد کور است.<br>
+- اول: شامل موارد شناخته شده است.<br>
+- دوم و سوم: ترکیبی است.<br>
+<b>نکته کلیدی:</b> ربع چهارم = موثر در روابط
+</div>
+</div>
+
+<div class="card question" data-search="بعد از عزت تحقق خویشتن">
+<span class="qnum">سوال 16</span>
+<div class="fa"><b>متن سوال:</b> در سلسله مراتب نیازهای مزلو، بعد از نیاز به عزت، کدام نیاز باید برآورده شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تحقق خویشتن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در سلسله مراتب نیازهای مزلو، ترتیب نیازها عبارت است از: فیزیولوژیک، امنیت، تعلق، عزت و تحقق خویشتن.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تعلق: قبل از عزت است.<br>
+- امنیت: قبل از عزت است.<br>
+- محبت: قبل از عزت است.<br>
+<b>نکته کلیدی:</b> بعد از عزت = تحقق خویشتن
+</div>
+</div>
+
+<div class="card question" data-search="نیاز به عزت فداکاری">
+<span class="qnum">سوال 17</span>
+<div class="fa"><b>متن سوال:</b> کدام نیاز از نیروی زیادی برخوردار است و انسان را به فداکاری و گاه قربانی شدن در راه رسیدن بدان وا می‌دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عزت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نیاز به عزت (Esteem) از نیروی زیادی برخوردار است و انسان را به فداکاری و قربانی شدن وا می‌دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تعلق: نیاز اجتماعی است.<br>
+- امنیت: نیاز پایه است.<br>
+- فیزیولوژیک: نیاز پایه است.<br>
+<b>نکته کلیدی:</b> عزت = فداکاری و قربانی شدن
+</div>
+</div>
+
+<div class="card question" data-search="اولین مرحله تکامل گروه آمیزش">
+<span class="qnum">سوال 18</span>
+<div class="fa"><b>متن سوال:</b> اولین مرحله تکامل گروه کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آمیزش</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اولین مرحله تکامل گروه، مرحله آمیزش (Fusion) است که در آن اعضا با یکدیگر آشنا می‌شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کار: مرحله اصلی است.<br>
+- اختتام: مرحله پایانی است.<br>
+- انتقال: مرحله تعارض است.<br>
+<b>نکته کلیدی:</b> اولین مرحله = آمیزش
+</div>
+</div>
+
+<div class="card question" data-search="ملزوم شدن به تغییر مرحله کار">
+<span class="qnum">سوال 19</span>
+<div class="fa"><b>متن سوال:</b> "ملزوم شدن به تغییر موثر است" یکی از اصول زیربنایی مرحله ................. است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">کار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصل "ملزوم شدن به تغییر موثر است" یکی از اصول زیربنایی مرحله کار (Working Stage) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اختتام: مرحله پایانی است.<br>
+- انتقال: مرحله تعارض است.<br>
+- آمیزش: مرحله اولیه است.<br>
+<b>نکته کلیدی:</b> ملزوم شدن به تغییر = مرحله کار
+</div>
+</div>
+
+<div class="card question" data-search="تجربه عاطفی تصحیحی قرار دادن در موقعیت های گذشته">
+<span class="qnum">سوال 20</span>
+<div class="fa"><b>متن سوال:</b> قرار دادن بیمار در معرض موقعیت‌های عاطفی گذشته که قادر به تحمل آنها نبوده است به کدام اصل درمانی دلالت می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تجربه عاطفی تصحیحی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تجربه عاطفی تصحیحی (Corrective Emotional Experience) به قرار دادن بیمار در موقعیت‌های عاطفی گذشته اشاره دارد که قادر به تحمل آنها نبوده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عمومیت: احساس مشترک بودن است.<br>
+- نوع‌دوستی: کمک به دیگران است.<br>
+- رشد مهارت‌های اجتماعی: مهارت‌آموزی است.<br>
+<b>نکته کلیدی:</b> موقعیت‌های گذشته = تجربه عاطفی تصحیحی
+</div>
+</div>
+
+<div class="card question" data-search="همدلی با همبستگی گروهی همانند است">
+<span class="qnum">سوال 21</span>
+<div class="fa"><b>متن سوال:</b> همدلی در درمان فردی با کدام اصطلاح در مشاوره گروهی، همانند است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همبستگی گروهی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همدلی در درمان فردی با اصطلاح همبستگی گروهی (Group Cohesion) در مشاوره گروهی همانند است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- انتقال: مفهوم دیگری است.<br>
+- عمومیت: مفهوم دیگری است.<br>
+- دنیای پدیداری: مفهوم دیگری است.<br>
+<b>نکته کلیدی:</b> همدلی = همبستگی گروهی
+</div>
+</div>
+
+<div class="card question" data-search="روان درمانی تحلیل وجود بودن شناسی">
+<span class="qnum">سوال 22</span>
+<div class="fa"><b>متن سوال:</b> روان‌درمانی "تحلیل وجود" اساساً بر ................. متمرکز است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">بودن‌شناسی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روان‌درمانی "تحلیل وجود" (Daseinsanalysis) اساساً بر بودن‌شناسی (Ontology) متمرکز است و به ماهیت وجود انسان می‌پردازد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- وحدت خود: مفهوم دیگر است.<br>
+- رفع افسردگی: هدف دیگر است.<br>
+- دنیای پدیداری: مفهوم دیگر است.<br>
+<b>نکته کلیدی:</b> تحلیل وجود = بودن‌شناسی
+</div>
+</div>
+
+<div class="card question" data-search="معیار پذیرش مراجع انگیزه">
+<span class="qnum">سوال 23</span>
+<div class="fa"><b>متن سوال:</b> مهم‌ترین معیار پذیرش مراجع در جلسه درمانی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">انگیزه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مهم‌ترین معیار پذیرش مراجع در جلسه درمانی، انگیزه او برای تغییر و مشارکت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نوع مشکل: مهم است اما نه به اندازه انگیزه.<br>
+- حاد بودن مشکل: مهم است اما نه به اندازه انگیزه.<br>
+- عدم توانایی: دلیل مراجعه است.<br>
+<b>نکته کلیدی:</b> معیار پذیرش = انگیزه
+</div>
+</div>
+
+<div class="card question" data-search="انتخاب همکار برای درمانگر توافق">
+<span class="qnum">سوال 24</span>
+<div class="fa"><b>متن سوال:</b> مهم‌ترین عامل در امر انتخاب همکار برای درمانگر چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">توافق</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مهم‌ترین عامل در انتخاب همکار برای درمانگر، توافق (Agreement) و هماهنگی در رویکرد و اهداف است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سطح علمی: مهم است اما نه به اندازه توافق.<br>
+- تجربه: مهم است اما نه به اندازه توافق.<br>
+- حامی بودن: نقش کمکی دارد.<br>
+<b>نکته کلیدی:</b> انتخاب همکار = توافق
+</div>
+</div>
+
+<div class="card question" data-search="نقش حامی رهبر توجه به نیازهای عاطفی">
+<span class="qnum">سوال 25</span>
+<div class="fa"><b>متن سوال:</b> نقش حامی رهبر به چه معناست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به نیازهای عاطفی گروه توجه می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نقش حامی (Supporter) رهبر به معنای توجه به نیازهای عاطفی گروه و ایجاد فضای حمایتی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کار می‌طلبد: نقش هدایت‌گری است.<br>
+- ایفای وظیفه: نقش اجرایی است.<br>
+- رفع شکاف: نقش مدیریتی است.<br>
+<b>نکته کلیدی:</b> نقش حامی = توجه به نیازهای عاطفی
+</div>
+</div>
+
+<div class="card question" data-search="گروه های تعلیم حساسیت 12-16 نفر">
+<span class="qnum">سوال 26</span>
+<div class="fa"><b>متن سوال:</b> تعداد اعضا در گروه‌های تعلیم حساسیت چقدر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">12-16 نفر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعداد اعضا در گروه‌های تعلیم حساسیت (Sensitivity Training) معمولاً 12 تا 16 نفر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- 12-6 نفر: کمتر است.<br>
+- 6-1 نفر: بسیار کم است.<br>
+- 12-8 نفر: کمتر است.<br>
+<b>نکته کلیدی:</b> تعلیم حساسیت = 12-16 نفر
+</div>
+</div>
+
+<div class="card question" data-search="مدت فراوانی عمر همبستگی">
+<span class="qnum">سوال 27</span>
+<div class="fa"><b>متن سوال:</b> منظور از طول یک نشست در گروه ...........، تعداد جلسات در یک فاصله معین زمانی ............... و فاصله بین اولین و آخرین نشست ...................، پیوستگی بین اعضای گروه ................. است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">مدت، فراوانی، عمر، همبستگی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> طول یک نشست = مدت، تعداد جلسات در فاصله زمانی = فراوانی، فاصله بین اولین و آخرین نشست = عمر، پیوستگی بین اعضا = همبستگی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ترتیب‌های دیگر نادرست است.<br>
+<b>نکته کلیدی:</b> مدت، فراوانی، عمر، همبستگی
+</div>
+</div>
+
+<div class="card question" data-search="بازی درمانی تعارضات گفتار">
+<span class="qnum">سوال 28</span>
+<div class="fa"><b>متن سوال:</b> بازی درمانی دو وسیله برای برون‌ریزی ................. و ................. است.</div>
+<b>پاسخ صحیح:</b> <span class="answer">تعارضات - گفتار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بازی درمانی دو وسیله برای برون‌ریزی تعارضات (Conflicts) و گفتار (Speech) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بازی-گفتار: ناقص است.<br>
+- فعالیت-احساسات: ناقص است.<br>
+- هیجانات-گفتار: ناقص است.<br>
+<b>نکته کلیدی:</b> بازی درمانی = تعارضات و گفتار
+</div>
+</div>
+
+<div class="card question" data-search="کودکان 8-12 سال گروه درمانی فعالیت">
+<span class="qnum">سوال 29</span>
+<div class="fa"><b>متن سوال:</b> برای کودکان ۸-۱۲ سال کدام مورد درمان مد نظر قرار می‌گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">گروه درمانی فعالیت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برای کودکان 8 تا 12 سال، گروه درمانی فعالیت (Activity Group Therapy) مد نظر قرار می‌گیرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بازی درمانی گروهی: برای کودکان کوچک‌تر است.<br>
+- روان‌درمانی گروهی: برای سنین بالاتر است.<br>
+- روان‌درمانی فردی: فردی است.<br>
+<b>نکته کلیدی:</b> کودکان 8-12 سال = گروه درمانی فعالیت
+</div>
+</div>
+
+<div class="card question" data-search="شرط پذیرش در گروه درمانی فعالیت واقعیت آزمایی">
+<span class="qnum">سوال 30</span>
+<div class="fa"><b>متن سوال:</b> شرط اصلی پذیرش در گروه درمانی فعالیت کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">واقعیت‌آزمایی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شرط اصلی پذیرش در گروه درمانی فعالیت، واقعیت‌آزمایی (Reality Testing) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عطف اجتماعی: شرط دیگری است.<br>
+- هدفمند بودن: شرط دیگری است.<br>
+- همبستگی گروهی: نتیجه است.<br>
+<b>نکته کلیدی:</b> گروه درمانی فعالیت = واقعیت‌آزمایی
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">02 · هسته امتحانی (مرور 10 دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط 10 دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>راهنمایی، مشاوره، روان‌درمانی</h3></div>
+<div class="grid2">
+<div class="box"><h4>راهنمایی</h4>
+<div class="fa">تمرکز بر محیط، ارائه اطلاعات</div>
+</div>
+<div class="box"><h4>مشاوره</h4>
+<div class="fa">تمرکز بر شخصیت</div>
+</div>
+<div class="box"><h4>روان‌درمانی</h4>
+<div class="fa">تمرکز بر احساسات، مشکلات شدید</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چارچوب روابط (Johari Window)</h3></div>
+<div class="grid2">
+<div class="box"><h4>ربع اول</h4>
+<div class="fa">معلوم بر خود و دیگران</div>
+</div>
+<div class="box"><h4>ربع دوم</h4>
+<div class="fa">مخفی از دیگران</div>
+</div>
+<div class="box"><h4>ربع چهارم</h4>
+<div class="fa">موثر در روابط</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه‌پردازان کلیدی</h3></div>
+<div class="grid2">
+<div class="box"><h4>مسمر</h4>
+<div class="fa">تاثیر گروه بر فرد</div>
+</div>
+<div class="box"><h4>مورینو</h4>
+<div class="fa">پدر روان‌درمانی گروهی</div>
+</div>
+<div class="box"><h4>گلاسر</h4>
+<div class="fa">نفی واقعیت</div>
+</div>
+<div class="box"><h4>مزلو</h4>
+<div class="fa">عزت نفس = فداکاری</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراحل گروه</h3></div>
+<div class="fa"><b>اولین مرحله:</b> آمیزش</div>
+<div class="fa"><b>مرحله کار:</b> ملزوم شدن به تغییر</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفاهیم کلیدی</h3></div>
+<div class="fa"><b>گروه تعلیم حساسیت:</b> 12-16 نفر</div>
+<div class="fa"><b>نشست کلاسی:</b> 45 دقیقه</div>
+<div class="fa"><b>کودکان 8-12 سال:</b> گروه درمانی فعالیت</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">03 · مفاهیم کلیدی با تحلیل جامع</h2>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت راهنمایی، مشاوره، روان‌درمانی</h3></div>
+<div class="fa"><b>تعریف:</b> سه سطح مداخله در حوزه سلامت روان.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>راهنمایی:</b> محیط، اطلاعات<br>
+<b>مشاوره:</b> شخصیت<br>
+<b>روان‌درمانی:</b> احساسات، مشکلات شدید<br>
+<b>سوالات مرتبط:</b> 1، 2، 6
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چارچوب روابط (Johari Window)</h3></div>
+<div class="fa"><b>تعریف:</b> مدلی برای نمایش خودآگاهی و ارتباط.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>ربع اول:</b> معلوم بر خود و دیگران<br>
+<b>ربع دوم:</b> مخفی از دیگران<br>
+<b>ربع چهارم:</b> موثر در روابط<br>
+<b>سوالات مرتبط:</b> 13، 14، 15
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گروه‌های تعلیم حساسیت</h3></div>
+<div class="fa"><b>تعریف:</b> گروه‌هایی که بر افزایش خودآگاهی تأکید دارند.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>تعداد اعضا:</b> 12-16 نفر<br>
+<b>سوالات مرتبط:</b> 26
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تجربه عاطفی تصحیحی</h3></div>
+<div class="fa"><b>تعریف:</b> قرار دادن بیمار در موقعیت‌های عاطفی گذشته.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>کاربرد:</b> مواجهه با موقعیت‌های تحمل‌نشده<br>
+<b>سوالات مرتبط:</b> 20
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تحلیل وجود</h3></div>
+<div class="fa"><b>تعریف:</b> روان‌درمانی مبتنی بر بودن‌شناسی.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>تمرکز:</b> بودن‌شناسی (Ontology)<br>
+<b>سوالات مرتبط:</b> 22
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گروه درمانی فعالیت</h3></div>
+<div class="fa"><b>تعریف:</b> گروه درمانی برای کودکان 8-12 سال.</div>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>شرط اصلی:</b> واقعیت‌آزمایی<br>
+<b>سوالات مرتبط:</b> 29، 30
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">04 · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<div class="card">
+<table class="compare">
+<thead><tr><th>مفهوم اول</th><th>مفهوم دوم</th><th>تفاوت اصلی</th><th>نکته امتحانی</th></tr></thead>
+<tbody>
+<tr><td>راهنمایی</td><td>مشاوره</td><td>راهنمایی = محیط، مشاوره = شخصیت</td><td>محیط vs شخصیت</td></tr>
+<tr><td>مشاوره</td><td>روان‌درمانی</td><td>مشاوره = شخصیت، روان‌درمانی = احساسات</td><td>شخصیت vs احساسات</td></tr>
+<tr><td>ربع اول</td><td>ربع دوم</td><td>اول = معلوم، دوم = مخفی</td><td>معلوم vs مخفی</td></tr>
+<tr><td>مرحله آمیزش</td><td>مرحله کار</td><td>آمیزش = آغاز، کار = اصلی</td><td>آغاز vs اصلی</td></tr>
+<tr><td>مسمر</td><td>مورینو</td><td>مسمر = تاثیر گروه، مورینو = پدر</td><td>تاثیر vs پدر</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">05 · نظریه‌پردازان و نشانه‌های تشخیصی</h2>
+
+<div class="card">
+<div class="card-head"><h3>فرانتس مسمر</h3></div>
+<div class="fa"><b>ایده اصلی:</b> تاثیر گروه بر فرد، هیپنوتیزم گروهی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "مسمر"، "تاثیر گروه"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 3</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جاکوب مورینو</h3></div>
+<div class="fa"><b>ایده اصلی:</b> پدر روان‌درمانی گروهی</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "مورینو"، "پدر روان‌درمانی گروهی"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 4</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویلیام گلاسر</h3></div>
+<div class="fa"><b>ایده اصلی:</b> نفی واقعیت منشأ مشکلات</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "گلاسر"، "نفی واقعیت"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 12</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آبراهام مزلو</h3></div>
+<div class="fa"><b>ایده اصلی:</b> عزت نفس = فداکاری</div>
+<div class="fa"><b>نشانه تشخیصی:</b> "مزلو"، "عزت"</div>
+<div class="fa"><b>سوالات مرتبط:</b> 16، 17</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">06 · دام‌های آزمون با تحلیل دقیق</h2>
+
+<div class="card trap">
+<h3>دام 1: راهنمایی، مشاوره، روان‌درمانی</h3>
+<div class="fa"><b>سوال نمونه:</b> تمرکز راهنمایی، مشاوره و روان‌درمانی چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "شخصیت، محیط، احساسات" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> محیط، شخصیت، احساسات</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ترتیب صحیح: راهنمایی=محیط، مشاوره=شخصیت، روان‌درمانی=احساسات.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> راهنمایی=محیط، مشاوره=شخصیت، روان‌درمانی=احساسات
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: ربع اول</h3>
+<div class="fa"><b>سوال نمونه:</b> ربع اول چارچوب روابط کدام است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "اعمال پوشیده بر ما" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> رفتار و انگیزش‌های معلوم بر خود و دیگران</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> ربع اول شامل موارد معلوم است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> ربع اول = معلوم بر خود و دیگران
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: رشد ربع اول</h3>
+<div class="fa"><b>سوال نمونه:</b> با رشد ربع اول کدام ربع کم می‌شود؟</div>
+<div class="fa"><b>دام:</b> ممکن است "سوم" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> دوم</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> رشد ربع اول باعث کاهش ربع دوم می‌شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> رشد ربع اول = کاهش ربع دوم
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: اولین مرحله</h3>
+<div class="fa"><b>سوال نمونه:</b> اولین مرحله تکامل گروه چیست؟</div>
+<div class="fa"><b>دام:</b> ممکن است "کار" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> آمیزش</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> اولین مرحله آمیزش است، کار مرحله اصلی است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> اولین = آمیزش
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: تجربه عاطفی تصحیحی</h3>
+<div class="fa"><b>سوال نمونه:</b> قرار دادن در موقعیت‌های گذشته چه نام دارد؟</div>
+<div class="fa"><b>دام:</b> ممکن است "عمومیت" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> تجربه عاطفی تصحیحی</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> این مفهوم خاص است و با موقعیت‌های گذشته مرتبط است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> موقعیت‌های گذشته = تجربه عاطفی تصحیحی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: گروه تعلیم حساسیت</h3>
+<div class="fa"><b>سوال نمونه:</b> تعداد اعضا در گروه تعلیم حساسیت چند نفر است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "12-8 نفر" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> 12-16 نفر</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> تعداد دقیق 12-16 نفر است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> تعلیم حساسیت = 12-16 نفر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: گروه درمانی فعالیت</h3>
+<div class="fa"><b>سوال نمونه:</b> برای کودکان 8-12 سال کدام درمان مد نظر است؟</div>
+<div class="fa"><b>دام:</b> ممکن است "بازی درمانی گروهی" را انتخاب کنی.</div>
+<div class="fa"><b>پاسخ درست:</b> گروه درمانی فعالیت</div>
+<div class="fa"><b>چرا این دام کار می‌کند؟</b> گروه درمانی فعالیت برای کودکان 8-12 سال است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>قانون سریع:</b> 8-12 سال = گروه درمانی فعالیت
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">07 · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 10 · مشاوره گروهی نظری · 30 سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+q: "برای مشکلات عاطفی شدید از کدام مداخله استفاده می‌شود؟",
+options: ["راهنمایی", "مشاوره", "روان‌درمانی", "راهنمایی گروهی"],
+answer: 2,
+explanation: "مشکلات شدید نیاز به روان‌درمانی دارد."
+},
+{
+q: "تمرکز راهنمایی، مشاوره و روان‌درمانی به ترتیب چیست؟",
+options: ["شخصیت، محیط، احساسات", "محیط، شخصیت، احساسات", "محیط، احساسات، شخصیت", "شخصیت، شخصیت، محیط"],
+answer: 1,
+explanation: "راهنمایی=محیط، مشاوره=شخصیت، روان‌درمانی=احساسات."
+},
+{
+q: "تاثیر گروه بر فرد توسط چه کسی مطرح شد؟",
+options: ["آدلر", "مورینو", "آلن", "مسمر"],
+answer: 3,
+explanation: "مسمر اولین کسی بود که به تاثیر گروه بر فرد توجه کرد."
+},
+{
+q: "پدر روان‌درمانی گروهی کیست؟",
+options: ["مورینو", "آدلر", "آلن", "مسمر"],
+answer: 0,
+explanation: "مورینو پدر روان‌درمانی گروهی است."
+},
+{
+q: "دوره شکوفایی مشاوره گروهی از چه سالی است؟",
+options: ["1930", "1905", "1932 تاکنون", "1950"],
+answer: 3,
+explanation: "شکوفایی از 1950 آغاز شد."
+},
+{
+q: "گروه‌های راهنمایی برای چه هدفی استفاده می‌شوند؟",
+options: ["حل مسئله", "ارائه اطلاعات", "تغییر عمیق", "روابط انسانی"],
+answer: 1,
+explanation: "راهنمایی برای ارائه اطلاعات است."
+},
+{
+q: "اطلاعات تحصیلی و شغلی در کدام گروه ارائه می‌شود؟",
+options: ["روابط انسانی", "گروه بزرگ راهنمایی", "کلاس راهنمایی", "گروه کوچک راهنمایی"],
+answer: 3,
+explanation: "گروه کوچک راهنمایی اطلاعات تحصیلی و شغلی ارائه می‌دهد."
+},
+{
+q: "حداقل زمان نشست کلاسی چند دقیقه است؟",
+options: ["60 دقیقه", "30 دقیقه", "20 دقیقه", "45 دقیقه"],
+answer: 3,
+explanation: "نشست کلاسی حداقل 45 دقیقه است."
+},
+{
+q: "گروه‌های معتادان جزء کدام گروه‌ها هستند؟",
+options: ["مورد مدار", "توانش بشری", "مشاوره‌ای همگنان", "هم‌درد"],
+answer: 3,
+explanation: "گروه‌های معتادان هم‌درد هستند."
+},
+{
+q: "کدام گروه برای مشکلات متفاوت تشکیل می‌شود؟",
+options: ["مشاوره‌ای همگنان", "مشاورتی", "آموزشی-تجربی", "توانش بشری"],
+answer: 3,
+explanation: "توانش بشری برای مشکلات متفاوت است."
+},
+{
+q: "جزء لاینفک گروه‌ها چیست؟",
+options: ["ارزش‌های اجتماعی", "سپس-آنجا", "مهارت و ابزار", "اینجا و اکنون"],
+answer: 3,
+explanation: "اینجا و اکنون جزء لاینفک گروه‌ها است."
+},
+{
+q: "نفی واقعیت از کیست؟",
+options: ["آدلر", "راجرز", "الیس", "گلاسر"],
+answer: 3,
+explanation: "گلاسر به نفی واقعیت اشاره دارد."
+},
+{
+q: "ربع اول چارچوب روابط کدام است؟",
+options: ["پوشیده بر ما", "معلوم بر خود و پوشیده بر دیگران", "عیوب و اسرار", "معلوم بر خود و دیگران"],
+answer: 3,
+explanation: "ربع اول معلوم بر خود و دیگران است."
+},
+{
+q: "با رشد ربع اول کدام ربع کم می‌شود؟",
+options: ["اول", "دوم", "سوم", "چهارم"],
+answer: 1,
+explanation: "رشد ربع اول باعث کاهش ربع دوم می‌شود."
+},
+{
+q: "کدام ربع در روابط موثر است؟",
+options: ["سوم", "اول", "دوم و سوم", "چهارم"],
+answer: 3,
+explanation: "ربع چهارم در روابط موثر است."
+},
+{
+q: "بعد از عزت در مزلو کدام نیاز است؟",
+options: ["تعلق", "امنیت", "محبت", "تحقق خویشتن"],
+answer: 3,
+explanation: "بعد از عزت، تحقق خویشتن است."
+},
+{
+q: "کدام نیاز باعث فداکاری می‌شود؟",
+options: ["تعلق", "امنیت", "فیزیولوژیک", "عزت"],
+answer: 3,
+explanation: "عزت باعث فداکاری می‌شود."
+},
+{
+q: "اولین مرحله تکامل گروه چیست؟",
+options: ["کار", "اختتام", "انتقال", "آمیزش"],
+answer: 3,
+explanation: "اولین مرحله آمیزش است."
+},
+{
+q: "ملزوم شدن به تغییر مربوط به کدام مرحله است؟",
+options: ["اختتام", "انتقال", "آمیزش", "کار"],
+answer: 3,
+explanation: "ملزوم شدن به تغییر مربوط به مرحله کار است."
+},
+{
+q: "موقعیت‌های عاطفی گذشته به کدام اصل اشاره دارد؟",
+options: ["عمومیت", "نوع‌دوستی", "رشد مهارت‌ها", "تجربه عاطفی تصحیحی"],
+answer: 3,
+explanation: "تجربه عاطفی تصحیحی شامل موقعیت‌های گذشته است."
+},
+{
+q: "همدلی در مشاوره گروهی معادل چیست؟",
+options: ["انتقال", "عمومیت", "دنیای پدیداری", "همبستگی گروهی"],
+answer: 3,
+explanation: "همدلی معادل همبستگی گروهی است."
+},
+{
+q: "تحلیل وجود بر چه چیزی متمرکز است؟",
+options: ["وحدت خود", "رفع افسردگی", "دنیای پدیداری", "بودن‌شناسی"],
+answer: 3,
+explanation: "تحلیل وجود بر بودن‌شناسی متمرکز است."
+},
+{
+q: "مهم‌ترین معیار پذیرش مراجع چیست؟",
+options: ["نوع مشکل", "حاد بودن", "عدم توانایی", "انگیزه"],
+answer: 3,
+explanation: "انگیزه مهم‌ترین معیار پذیرش است."
+},
+{
+q: "مهم‌ترین عامل انتخاب همکار برای درمانگر چیست؟",
+options: ["سطح علمی", "تجربه", "حامی بودن", "توافق"],
+answer: 3,
+explanation: "توافق مهم‌ترین عامل است."
+},
+{
+q: "نقش حامی رهبر به چه معناست؟",
+options: ["کار می‌طلبد", "ایفای وظیفه", "رفع شکاف", "توجه به نیازهای عاطفی"],
+answer: 3,
+explanation: "نقش حامی یعنی توجه به نیازهای عاطفی."
+},
+{
+q: "تعداد اعضا در گروه تعلیم حساسیت چند نفر است؟",
+options: ["12-6 نفر", "6-1 نفر", "12-8 نفر", "12-16 نفر"],
+answer: 3,
+explanation: "تعلیم حساسیت 12-16 نفر است."
+},
+{
+q: "مدت، فراوانی، عمر و همبستگی به ترتیب چیست؟",
+options: ["عمر، مدت، فراوانی، همبستگی", "فراوانی، عمر، مدت، همبستگی", "همبستگی، عمر، فراوانی، مدت", "مدت، فراوانی، عمر، همبستگی"],
+answer: 3,
+explanation: "مدت، فراوانی، عمر، همبستگی به ترتیب است."
+},
+{
+q: "بازی درمانی برای برون‌ریزی چیست؟",
+options: ["بازی-گفتار", "فعالیت-احساسات", "هیجانات-گفتار", "تعارضات-گفتار"],
+answer: 3,
+explanation: "بازی درمانی برای تعارضات و گفتار است."
+},
+{
+q: "برای کودکان 8-12 سال کدام درمان است؟",
+options: ["بازی درمانی گروهی", "روان‌درمانی گروهی", "روان‌درمانی فردی", "گروه درمانی فعالیت"],
+answer: 3,
+explanation: "کودکان 8-12 سال = گروه درمانی فعالیت."
+},
+{
+q: "شرط اصلی پذیرش در گروه درمانی فعالیت چیست؟",
+options: ["عطف اجتماعی", "هدفمند بودن", "همبستگی گروهی", "واقعیت‌آزمایی"],
+answer: 3,
+explanation: "واقعیت‌آزمایی شرط اصلی است."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
