@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>آزمون مرور سریع - تلفیق روان‌درمانی</title>
+    <style>
+        :root {
+            --pink: #fa4779;
+            --pink2: #ff7aa6;
+            --pink-soft: rgba(250, 71, 121, 0.12);
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e5e7eb;
+            --correct: #7fd1b9;
+        }
+        body.dark {
+            --bg: #0b1020;
+            --card: #131a33;
+            --text: #e5e7eb;
+            --border: #263056;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 70px auto;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 26px;
+        }
+        .card, .sheet, .json-card {
+            background: var(--card);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.18);
+        }
+        .json-card {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+        }
+        .progress-wrap {
+            height: 12px;
+            background: linear-gradient(90deg, #eee, #ddd);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            transition: .4s;
+        }
+        .question {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 22px;
+            line-height: 1.8;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .option {
+            padding: 16px 18px;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            transition: background .3s, border-color .3s;
+            font-size: 15px;
+        }
+        .option:hover {
+            background: var(--pink-soft);
+            border-color: var(--pink);
+        }
+        .next {
+            margin-top: 28px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 22px;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background .3s;
+        }
+        .next:hover {
+            background: var(--pink2);
+        }
+        .sheet {
+            max-height: 620px;
+            overflow: auto;
+        }
+        .sheet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .sheet-cell {
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 10px 12px;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 8px;
+            align-items: center;
+        }
+        .sheet-cell.active {
+            border-color: var(--pink);
+            box-shadow: 0 0 0 3px var(--pink-soft);
+        }
+        .answers {
+            display: flex;
+            justify-content: space-between;
+        }
+        .bubble {
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 12px;
+        }
+        .bubble.correct {
+            background: var(--correct);
+            color: #fff;
+            border: none;
+        }
+        .bubble.wrong {
+            background: var(--pink);
+            color: #fff;
+            border: none;
+        }
+        .result {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .score {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--pink);
+        }
+        .desc {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .print {
+            margin-top: 24px;
+            padding: 14px 34px;
+            border-radius: 999px;
+            border: none;
+            background: #111;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background .3s;
+        }
+        .print:hover {
+            background: #333;
+        }
+        .json-card textarea {
+            width: 100%;
+            min-height: 160px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 14px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            background: var(--bg);
+            color: var(--text);
+            resize: vertical;
+            direction: ltr;
+            text-align: left;
+        }
+        .json-card .json-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .json-card .json-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .copy-json-btn {
+            padding: 8px 24px;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .copy-json-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(250, 71, 121, 0.35);
+        }
+        .copy-feedback {
+            font-size: 14px;
+            color: var(--correct);
+            font-weight: 600;
+            display: none;
+        }
+        .quizly-logo {
+            position: fixed;
+            top: 16px;
+            right: 18px;
+            z-index: 999;
+        }
+        .quizly-logo img {
+            width: 60px;
+            cursor: pointer;
+            animation: quizlyFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 28px rgba(250, 71, 121, .55));
+            transition: transform .35s ease, filter .35s ease;
+        }
+        .quizly-logo img:hover {
+            transform: scale(1.12) rotate(3deg);
+            filter: drop-shadow(0 16px 40px rgba(250, 71, 121, .85));
+        }
+        @keyframes quizlyFloat {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+        @media (max-width: 820px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
+            .options {
+                grid-template-columns: 1fr;
+            }
+            .sheet-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media print {
+            .theme-toggle, .next, .json-card { display: none; }
+            body { background: #fff; }
+        }
+    </style>
+</head>
+<body>
+<div class="quizly-logo">
+    <img src="https://uploadkon.ir/uploads/7e2d29_25Quizly.png" alt="Quizly Logo">
+</div>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+<div class="wrapper">
+    <div class="card">
+        <div class="progress-wrap">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="quiz"></div>
+        <button class="next" id="nextBtn" onclick="next()">بعدی</button>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="sheet">
+        <div class="sheet-grid" id="sheet"></div>
+    </div>
+
+    <!-- بخش JSON -->
+    <div class="json-card" id="jsonCard">
+        <div class="json-header">
+            <h3>📋 کپی JSON نتایج</h3>
+            <div>
+                <button class="copy-json-btn" onclick="copyJSON()">کپی JSON</button>
+                <span class="copy-feedback" id="copyFeedback">✓ کپی شد!</span>
+            </div>
+        </div>
+        <textarea id="jsonOutput" readonly placeholder="نتایج به‌صورت JSON اینجا نمایش داده می‌شود..."></textarea>
+    </div>
+</div>
+
+<script>const questions = [
+    {
+        q: "در رویکرد درمان شناختی رفتاری با گونه های تلفیقی آن ، درمانگر با چه هدفی بصورت فعالانه یک طرح درمانی را طراحی می کند؟",
+        options: [
+            "تقویت رابطه مراجع و درمانگر",
+            "پاسخ به نیازهای ابراز شده مراجع",
+            "درمان نیازهای سرکوب شده",
+            "هدایت مراجع بسوی دستیابی به راه حل ها"
+        ],
+        answer: 1
+    },
+    {
+        q: "در تمامی اشکال درمان چه چیزی باید در اولویت قرار گیرد؟",
+        options: [
+            "رویکرد درمان",
+            "نیاز مراجع",
+            "مداخلات درمان",
+            "نوع درمان"
+        ],
+        answer: 1
+    },
+    {
+        q: "یکی از کامل ترین رویکردهای سیستمی ، درمان ................. است.",
+        options: [
+            "مواجهه",
+            "روشن سازی",
+            "صندلی خالی",
+            "مساله محور تلفیقی"
+        ],
+        answer: 3
+    },
+    {
+        q: "کدام رویکرد ضمن بی توجهی به تاثیر گذشته در فرایند درمان، درک را ابزاری برای ایجاد تغییر می داند؟",
+        options: [
+            "رویکرد روانتحلیلی",
+            "رویکرد انسان گرا",
+            "رویکرد روان پویایی",
+            "رویکرد رفتاری شناختی"
+        ],
+        answer: 1
+    },
+    {
+        q: "در مکتب درمانی روان درمانی روان پویایی کاوش در معنای یک الگو از رویدادها یا رفتارها شامل چه چیزی می شود؟",
+        options: [
+            "روشن سازی",
+            "مواجهه",
+            "تفسیر",
+            "آموزش"
+        ],
+        answer: 2
+    },
+    {
+        q: "مکتب درمانی شناختی در فرایند مداخلاتی درمانی فعال چه چیزی را هدف گیری می کنند.",
+        options: [
+            "اصلاح رفتار",
+            "الگوی تفکر",
+            "هیجان",
+            "ناخودآگاه"
+        ],
+        answer: 1
+    },
+    {
+        q: "یادگیری مهارتهای اجتماعی و برخورد موثرتر با موقعیت های مشکل آفرین جز مداخلات درمانی کدام رویکرد است؟",
+        options: [
+            "روان پویایی",
+            "شناخت گرا",
+            "انسان گرا",
+            "رفتار گرا"
+        ],
+        answer: 3
+    },
+    {
+        q: "مداخلاتی که به هیجان مربوط می شوند به طور معمول از کدام مکتب درمانی نشات می گیرند؟",
+        options: [
+            "رفتارگرا",
+            "روان پویایی",
+            "انسان گرا",
+            "شناخت گرا"
+        ],
+        answer: 2
+    },
+    {
+        q: "انتقال متقابل در طول تاریخ تفکر روان پویایی طی سال های اخیر ، زمینه ساز فراهم آوردن چه تجارب اصلی می گردد؟",
+        options: [
+            "شناختی",
+            "رفتاری",
+            "یادگیری",
+            "هیجانی"
+        ],
+        answer: 3
+    },
+    {
+        q: "زمانی که مراجع از درمانگر، فرآیند درمانی یا هیجانات خود را اجتناب کند گسستگی از نوع ................. اتفاق افتاده است.",
+        options: [
+            "گسستگی از نوع مواجهه",
+            "گسستگی از نوع کناره گیری",
+            "گسستگی مطلق",
+            "گسستگی کناره گیری و مواجهه"
+        ],
+        answer: 1
+    },
+    {
+        q: "کدام رویکرد، روابط شی به روان درمانی را با درمان شناختی رفتاری ترکیب می کند؟",
+        options: [
+            "درمان شناختی تحلیلی",
+            "روان درمانی رفتاری",
+            "روان درمانی رفتاری",
+            "عوامل مشترک"
+        ],
+        answer: 0
+    },
+    {
+        q: "چه کسی اصطلاح «انتقادگرایی تکنیکی» را ابداع نموده است؟",
+        options: [
+            "لازاروس",
+            "فرانک",
+            "فرانک",
+            "گارفیلد"
+        ],
+        answer: 0
+    },
+    {
+        q: "DBT (رفتار درمانی دیالکتیکی) توسط چه کسی معرفی شده است؟",
+        options: [
+            "فرانک",
+            "فروید",
+            "بک",
+            "لینهان"
+        ],
+        answer: 3
+    },
+    {
+        q: "در اغلب سیستم های تلفیق روان درمانی تاکید بر چه مولفه ای زمینه ساز تحقق نیازهای منحصر به فرد هر مراجع خواهد بود؟",
+        options: [
+            "تفاوت فرهنگی",
+            "انعطاف گرایی",
+            "تلاش ادغام دیدگاه‌های دیگر",
+            "تصویر کامل مراجع"
+        ],
+        answer: 0
+    },
+    {
+        q: "در کدام رویکرد، پایبندی جدی به یک موضع نظری خاص یا تمایل برای ادغام تکنیک‌هایی از سایر رویکرد درمانی همراه است؟",
+        options: [
+            "تلفیق جدیدی",
+            "تلفیق تکنیکی",
+            "عوامل مشترک",
+            "تلفیق نظری"
+        ],
+        answer: 3
+    },
+    {
+        q: "نظریه پردازی که در ارائه نظریه شناختی با عنوان درمان ........... شناخته می شود.",
+        options: [
+            "روان درمانی",
+            "رفتار گرا",
+            "بینش محور",
+            "شناختی رفتاری"
+        ],
+        answer: 3
+    },
+    {
+        q: "کدام رویکرد به دنبال درمان روان پویایی و گفتگو درباره موضوعات مورد نگرانی به منظور ارتقا درک مراجع می باشد؟",
+        options: [
+            "رویکرد بینش محور",
+            "رفتار درمانی",
+            "رویکرد ادمحور",
+            "شناختی رفتاری"
+        ],
+        answer: 0
+    },
+    {
+        q: "نخستین کسی که به اشتراکات در روان درمانی اشاره نمود و اصطلاح تاثیر برنده دودو را ابداع نمود را مشخص نمایید؟",
+        options: [
+            "روزن زویگ",
+            "دلار دو میلر",
+            "فرنچ",
+            "فرانک"
+        ],
+        answer: 0
+    },
+    {
+        q: "نخستین اثر مرتبط با تلفیق روان درمانی در کارهای اولیه چه کسی دیده می شود؟",
+        options: [
+            "فروید",
+            "فرنچ",
+            "الکساندر",
+            "واتسون"
+        ],
+        answer: 1
+    },
+    {
+        q: "کدام رویکرد درمانی در مورد اختلالات شخصیتی جدی مانند مشکلات اعتیادی مورد استفاده قرار می گیرد؟",
+        options: [
+            "کوتاه مدت",
+            "بلند مدت",
+            "میان مدت",
+            "ساده تر"
+        ],
+        answer: 1
+    },
+    {
+        q: "مداخلاتی که به فیزیولوژی می پردازند ، به طور معمول از کدام رویکرد درمانی نشات می گیرد؟",
+        options: [
+            "روان پویایی",
+            "شناخت درمانی",
+            "رفتار درمانی",
+            "روان دارو شناختی"
+        ],
+        answer: 3
+    },
+    {
+        q: "در کدام رویکرد ترجیحات مراجع ، دوره درمان را هدایت می کند، نه ترجیحات درمانگر یا دلالت های نظری؟",
+        options: [
+            "مراجع محور",
+            "رابطه ای",
+            "روان پویایی چرخشی",
+            "تلفیق تکنیکی"
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام رویکرد به درمان تناسب بالایی با در نظر گرفتن عوامل فرهنگی طی فرایند در روابط درمانگر و مراجع دارد؟",
+        options: [
+            "عوامل مشترک",
+            "همانند سازی تکنیکی",
+            "تلفیق نظری",
+            "تلفیق روان درمانی"
+        ],
+        answer: 3
+    },
+    {
+        q: "کدام مورد جزو مدل سه لایه ای روان درمانی و شخصیت نیست؟",
+        options: [
+            "خود آگاهی",
+            "ناخودآگاه",
+            "شناخت",
+            "رفتار"
+        ],
+        answer: 0
+    },
+    {
+        q: "در سرواژه یادآور ABCDEF حروف F و B ترتیب بیان گر کدام گزینه زیر است؟",
+        options: [
+            "رفتار - فیزیولوژی",
+            "فیزیولوژی - رفتار",
+            "شناختی - هیجان",
+            "شناختی - پویایی"
+        ],
+        answer: 1
+    },
+    {
+        q: "انواع گسست در رابطه درمانی کدام است؟",
+        options: [
+            "کناره گیری – مواجهه",
+            "کناره گیری – مواجهه",
+            "مواجهه - مقاومت",
+            "کناره گیری - رابطه"
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام مورد در خصوص درمان مراجع مداری صادق نیست؟",
+        options: [
+            "پذیرش بی قید و شرط",
+            "توجه به مفهوم خویشتن",
+            "نقش فعال مراجع",
+            "تداعی آزاد"
+        ],
+        answer: 3
+    },
+    {
+        q: "درمانگران با تجربه در مقایسه با درمانگران تازه کار بیشتر از چه تکنیکی استفاده می کنند؟",
+        options: [
+            "تلفیق تکنیکی",
+            "عوامل مشترک",
+            "تلفیق جزیی",
+            "همانند سازی"
+        ],
+        answer: 0
+    }
+];
+
+    let index = 0;
+    let correctCount = 0;
+    const userAnswers = Array(questions.length).fill(null);
+    const letters = ["الف", "ب", "ج", "د"];
+
+    const quiz = document.getElementById("quiz");
+    const sheet = document.getElementById("sheet");
+    const nextBtn = document.getElementById("nextBtn");
+    const progress = document.getElementById("progress");
+    const jsonOutput = document.getElementById("jsonOutput");
+    const copyFeedback = document.getElementById("copyFeedback");
+
+    function render() {
+        const q = questions[index];
+        quiz.innerHTML = `
+            <div class="question">${index+1}. ${q.q}</div>
+            <div class="options">
+                ${q.options.map((o, i) => `<div class="option" onclick="select(${i})">${o}</div>`).join("")}
+            </div>`;
+        nextBtn.style.display = "none";
+        updateProgress();
+        renderSheet();
+        updateJSON();
+    }
+
+    function updateProgress() {
+        progress.style.width = `${(index / questions.length) * 100}%`;
+    }
+
+    function renderSheet() {
+        sheet.innerHTML = questions.map((q, i) => {
+            const ua = userAnswers[i];
+            return `
+                <div class="sheet-cell ${i === index ? "active" : ""}">
+                    <b>${i + 1}</b>
+                    <div class="answers">
+                        ${[0, 1, 2, 3].map((j) => {
+                            let c = "";
+                            if (ua !== null) {
+                                c = j === q.answer ? "correct" : (j === ua ? "wrong" : "");
+                            }
+                            return `<div class="bubble ${c}">${letters[j]}</div>`;
+                        }).join("")}
+                    </div>
+                </div>`;
+        }).join("");
+    }
+
+    function select(i) {
+        if (userAnswers[index] !== null) return;
+        userAnswers[index] = i;
+        if (i === questions[index].answer) correctCount++;
+        nextBtn.style.display = "block";
+        renderSheet();
+        updateJSON();
+    }
+
+    function next() {
+        index++;
+        if (index < questions.length) {
+            render();
+        } else {
+            finish();
+        }
+    }
+
+    function finish() {
+        progress.style.width = "100%";
+        const totalQuestions = questions.length;
+        const answeredQuestions = userAnswers.filter(answer => answer !== null).length;
+        const grade = ((correctCount / totalQuestions) * 20).toFixed(2);
+        const percentage = ((correctCount / totalQuestions) * 100).toFixed(2);
+        let desc = "";
+        if (grade >= 18) desc = "عالی و مسلط";
+        else if (grade >= 15) desc = "خوب";
+        else if (grade >= 12) desc = "قابل قبول";
+        else desc = "نیازمند تمرین جدی";
+
+        quiz.innerHTML = `
+            <div class="score">${grade} / ۲۰</div>
+            <div class="desc">${desc}</div>
+            <div>شما ${answeredQuestions} از ${totalQuestions} سوال را پاسخ داده‌اید. (${percentage}%)</div>
+            <div style="margin-top:10px;color:var(--text-secondary);font-size:14px;">
+                ✅ ${correctCount} صحیح | ❌ ${answeredQuestions - correctCount} غلط
+            </div>
+            <button class="print" onclick="openPrintWindow()">🖨 چاپ</button>
+        `;
+        updateJSON();
+    }
+
+    function openPrintWindow() {
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(`
+            <html lang="fa" dir="rtl">
+            <head>
+                <meta charset="UTF-8">
+                <title>نتیجه آزمون</title>
+                <style>
+                    body { font-family: 'Vazirmatn', Tahoma, sans-serif; direction: rtl; padding: 20px; }
+                    .result { text-align: center; margin: 20px; }
+                    .table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                    .table th, .table td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+                    .table th { background: #fa4779; color: #fff; }
+                    .table td.correct { background: #7fd1b9; }
+                    .table td.wrong { background: #fa4779; color: #fff; }
+                </style>
+            </head>
+            <body>
+                <div class="result">
+                    <h1>نتیجه آزمون</h1>
+                    <div style="font-size:48px;font-weight:900;color:#fa4779;">${(correctCount / questions.length * 20).toFixed(2)} / ۲۰</div>
+                    <div>شما ${userAnswers.filter(answer => answer !== null).length} از ${questions.length} سوال را پاسخ داده‌اید.</div>
+                    <table class="table">
+                        <thead>
+                            <tr><th>سوال</th><th>پاسخ شما</th><th>پاسخ صحیح</th></tr>
+                        </thead>
+                        <tbody>
+                            ${questions.map((q, i) => `
+                                <tr>
+                                    <td>${q.q}</td>
+                                    <td class="${userAnswers[i] === q.answer ? 'correct' : 'wrong'}">${userAnswers[i] !== null ? letters[userAnswers[i]] : 'پاسخ داده نشده'}</td>
+                                    <td>${letters[q.answer]}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            </body>
+            </html>
+        `);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+    }
+
+    // ===== JSON GENERATOR =====
+    function generateJSON() {
+        const totalQuestions = questions.length;
+        const answered = userAnswers.filter(a => a !== null).length;
+        const correct = correctCount;
+        const wrong = answered - correct;
+        const grade = ((correct / totalQuestions) * 20);
+        const percentage = ((correct / totalQuestions) * 100);
+
+        const results = questions.map((q, i) => {
+            const userAns = userAnswers[i];
+            return {
+                question_number: i + 1,
+                question: q.q,
+                options: q.options,
+                correct_answer: letters[q.answer],
+                user_answer: userAns !== null ? letters[userAns] : "پاسخ داده نشده",
+                is_correct: userAns !== null ? (userAns === q.answer) : false
+            };
+        });
+
+        return {
+            total_questions: totalQuestions,
+            answered_questions: answered,
+            correct_answers: correct,
+            wrong_answers: wrong,
+            grade: parseFloat(grade.toFixed(2)),
+            percentage: parseFloat(percentage.toFixed(2)),
+            results: results
+        };
+    }
+
+    function updateJSON() {
+        const data = generateJSON();
+        jsonOutput.value = JSON.stringify(data, null, 2);
+    }
+
+    function copyJSON() {
+        jsonOutput.select();
+        navigator.clipboard.writeText(jsonOutput.value).then(() => {
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        }).catch(() => {
+            document.execCommand("copy");
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        });
+    }
+
+    render();
+</script>
+</body>
+</html>
