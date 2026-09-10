@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>Quizly · مشاوره گروهی</title>
+
+<style>
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  margin:0;
+  font-family:Tahoma,"Segoe UI",sans-serif;
+  line-height:1.9;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),
+    var(--bg);
+  transition:.25s;
+}
+
+:root{
+  --bg:#f7edf1;
+  --surface:#fffafd;
+  --surface2:#fdf3f7;
+  --ink:#251820;
+  --muted:#765b68;
+  --line:#ecd6df;
+  --pink:#f94779;
+  --pink2:#ff7aa1;
+  --soft:#ffe8f0;
+  --purple:#7c4dff;
+  --green:#1f9d73;
+  --yellow:#c98112;
+  --red:#c83b58;
+  --shadow:0 18px 55px rgba(115,38,67,.12);
+}
+
+[data-theme="dark"]{
+  --bg:#140c11;
+  --surface:#21131a;
+  --surface2:#2a1821;
+  --ink:#f9e8ef;
+  --muted:#c7a9b7;
+  --line:#4a2938;
+  --soft:#39202c;
+  --shadow:0 18px 55px rgba(0,0,0,.35);
+}
+
+[data-theme="dark"] body{
+  background:
+    radial-gradient(circle at top right,#3c1828 0,transparent 28%),
+    var(--bg);
+}
+
+.app{
+  max-width:1180px;
+  margin:auto;
+  padding:16px;
+}
+
+/* HEADER */
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+  flex-wrap:wrap;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-icon{
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.3);
+  border:1px solid rgba(249,71,121,.25);
+  box-shadow:0 10px 30px rgba(249,71,121,.15);
+  overflow:hidden;
+}
+
+.logo-icon img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:6px;
+}
+
+.brand h1{
+  margin:0;
+  font-size:20px;
+}
+
+.brand small{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+}
+
+button{
+  border:1px solid var(--line);
+  background:var(--surface);
+  color:var(--ink);
+  padding:8px 14px;
+  border-radius:14px;
+  cursor:pointer;
+  font:inherit;
+  min-height:44px;
+  transition:.15s;
+}
+
+button:hover{
+  border-color:var(--pink);
+  transform:translateY(-1px);
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);
+  padding:32px 22px;
+  border-radius:28px;
+  color:white;
+  box-shadow:var(--shadow);
+}
+
+.hero:after{
+  content:"GROUP";
+  position:absolute;
+  left:-15px;
+  bottom:-42px;
+  font-size:110px;
+  font-weight:900;
+  opacity:.08;
+  line-height:1;
+}
+
+.hero h2{
+  margin:0;
+  font-size:29px;
+  position:relative;
+  z-index:1;
+}
+
+.hero p{
+  margin:7px 0 16px;
+  max-width:700px;
+  opacity:.95;
+  position:relative;
+  z-index:1;
+}
+
+.pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  position:relative;
+  z-index:1;
+}
+
+.pill{
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.22);
+  padding:5px 11px;
+  border-radius:99px;
+  font-size:12px;
+}
+
+/* NOTICE */
+
+.notice{
+  margin:16px 0;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-right:7px solid var(--pink);
+  padding:14px 16px;
+  border-radius:18px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* STATS */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin:14px 0;
+}
+
+.stat{
+  background:var(--surface);
+  border:1px solid var(--line);
+  padding:14px;
+  border-radius:18px;
+  box-shadow:0 7px 22px rgba(0,0,0,.03);
+}
+
+.stat b{
+  display:block;
+  font-size:22px;
+  color:var(--pink);
+}
+
+.stat span{
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* NAV */
+
+nav{
+  position:sticky;
+  top:6px;
+  z-index:10;
+  display:flex;
+  gap:6px;
+  overflow-x:auto;
+  background:rgba(255,250,253,.92);
+  backdrop-filter:blur(14px);
+  padding:8px 10px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  margin:14px 0;
+  scrollbar-width:none;
+}
+
+nav::-webkit-scrollbar{
+  display:none;
+}
+
+[data-theme="dark"] nav{
+  background:rgba(33,19,26,.92);
+}
+
+nav a{
+  white-space:nowrap;
+  text-decoration:none;
+  color:var(--muted);
+  padding:5px 12px;
+  border-radius:12px;
+  font-size:13px;
+}
+
+nav a:hover{
+  background:var(--soft);
+  color:var(--pink);
+}
+
+/* SECTION */
+
+.section{
+  margin-top:32px;
+  scroll-margin-top:80px;
+}
+
+.section-title{
+  font-size:22px;
+  margin-bottom:3px;
+}
+
+.section-sub{
+  color:var(--muted);
+  margin-top:0;
+  font-size:13px;
+}
+
+/* CARD */
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:16px;
+  margin:12px 0;
+  box-shadow:0 8px 28px rgba(0,0,0,.035);
+}
+
+.card h3{
+  margin-top:0;
+}
+
+.card-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* BADGES */
+
+.badge{
+  padding:3px 10px;
+  border-radius:99px;
+  font-size:11px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+.s{
+  background:#ffe3ea;
+  color:#a71547;
+}
+
+.a{
+  background:#fff0cc;
+  color:#946000;
+}
+
+.b{
+  background:#e5e1ff;
+  color:#5538b5;
+}
+
+.direct{
+  background:#dff7ee;
+  color:#08724d;
+}
+
+/* TABLE */
+
+.table-wrap{
+  overflow-x:auto;
+  border-radius:16px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:600px;
+}
+
+th,td{
+  border-bottom:1px solid var(--line);
+  padding:9px 10px;
+  text-align:right;
+  font-size:13px;
+}
+
+th{
+  color:var(--pink);
+  background:var(--surface2);
+}
+
+/* GRID */
+
+.grid2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.box{
+  padding:13px 14px;
+  border-radius:16px;
+  background:var(--surface2);
+  border:1px solid var(--line);
+}
+
+.box h4{
+  margin:0 0 6px;
+  color:var(--pink);
+  font-size:15px;
+}
+
+/* KEYWORD */
+
+.keyword{
+  display:inline-block;
+  background:var(--soft);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:4px 10px;
+  margin:3px;
+  font-size:12px;
+}
+
+/* FLOW */
+
+.flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  margin:16px 0;
+}
+
+.step{
+  background:var(--soft);
+  border:1px solid var(--line);
+  color:var(--pink);
+  padding:8px 12px;
+  border-radius:13px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.arrow{
+  color:var(--muted);
+}
+
+/* ALERT */
+
+.exam{
+  border-right:6px solid var(--pink);
+}
+
+.trap{
+  border-right:6px solid var(--yellow);
+}
+
+.trap strong{
+  color:var(--yellow);
+}
+
+.danger{
+  border-right:6px solid var(--red);
+}
+
+.good{
+  border-right:6px solid var(--green);
+}
+
+/* QUOTE */
+
+.memory{
+  background:linear-gradient(135deg,var(--surface),var(--surface2));
+  border:1px dashed var(--pink);
+  border-radius:18px;
+  padding:14px;
+  margin-top:12px;
+}
+
+.memory b{
+  color:var(--pink);
+}
+
+/* DETAILS */
+
+details{
+  background:var(--surface2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:0 14px;
+  margin-top:10px;
+}
+
+summary{
+  cursor:pointer;
+  padding:10px 0;
+  font-weight:bold;
+  font-size:14px;
+}
+
+/* QUIZ */
+
+.quiz{
+  background:linear-gradient(135deg,var(--surface),var(--surface2));
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:18px;
+}
+
+.quiz-progress{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+
+.options{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+  margin-top:12px;
+}
+
+.option{
+  text-align:right;
+  width:100%;
+  min-height:48px;
+  padding:12px 16px;
+}
+
+.option.correct{
+  background:#dff7ee;
+  border-color:#1f9d73;
+  color:#08724d;
+}
+
+.option.wrong{
+  background:#ffe3ea;
+  border-color:#d64b6c;
+  color:#a71547;
+}
+
+.feedback{
+  margin-top:10px;
+  min-height:28px;
+  font-weight:bold;
+}
+
+#next{
+  width:100%;
+  margin-top:10px;
+}
+
+/* FOOTER */
+
+.footer{
+  padding:25px 0;
+  color:var(--muted);
+  text-align:center;
+  font-size:12px;
+}
+
+/* MOBILE */
+
+@media(min-width:520px){
+
+  .app{
+    padding:20px;
+  }
+
+  .hero{
+    padding:38px 28px;
+  }
+
+  .hero h2{
+    font-size:34px;
+  }
+
+  .stats{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .options{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:520px){
+
+  .grid2{
+    grid-template-columns:1fr;
+  }
+
+  .hero h2{
+    font-size:24px;
+  }
+
+  .hero{
+    padding:25px 17px;
+  }
+}
+
+@media(max-width:380px){
+
+  .app{
+    padding:10px;
+  }
+
+  .hero{
+    padding:22px 14px;
+  }
+
+  .hero h2{
+    font-size:22px;
+  }
+
+  .card{
+    padding:12px;
+  }
+
+  .section-title{
+    font-size:20px;
+  }
+
+  .stat b{
+    font-size:20px;
+  }
+
+  .brand h1{
+    font-size:18px;
+  }
+
+  .logo-icon{
+    width:44px;
+    height:44px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="brand">
+
+    <div class="logo-icon">
+      <img
+        src="https://uploadkon.ir/uploads/1ae827_26Quizly.png"
+        alt="Quizly">
+    </div>
+
+    <div>
+      <h1>Quizly</h1>
+      <small>جزوه هوشمند · مشاوره گروهی</small>
+    </div>
+
+  </div>
+
+  <button id="theme">تم شب</button>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h2>مشاوره گروهی</h2>
+
+  <p>
+    خلاصه‌ی نهایی و امتحانی؛
+    نظریه‌ها، مراحل گروه، تکنیک‌ها، گروه‌های خاص و دام‌های پرتکرار.
+  </p>
+
+  <div class="pills">
+    <span class="pill">امتحانی</span>
+    <span class="pill">نکات کلیدی</span>
+    <span class="pill">دام‌ها</span>
+    <span class="pill">اعداد مهم</span>
+    <span class="pill">مرور سریع</span>
+  </div>
+
+</section>
+
+
+<!-- NOTICE -->
+
+<div class="notice">
+  <b>منطق جزوه:</b>
+  اگر وقتت خیلی کمه، اول بخش «۵ دقیقه آخر» و بعد «اعداد طلایی» و «نظریه‌پردازان» رو مرور کن.
+</div>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+  <div class="stat">
+    <b>۲۶</b>
+    <span>بخش کلیدی</span>
+  </div>
+
+  <div class="stat">
+    <b>۳+</b>
+    <span>مدل مراحل گروه</span>
+  </div>
+
+  <div class="stat">
+    <b>۱۱</b>
+    <span>عامل یالوم</span>
+  </div>
+
+  <div class="stat">
+    <b>۵</b>
+    <span>نیاز گلاسر</span>
+  </div>
+
+</div>
+
+
+<!-- NAV -->
+
+<nav>
+
+  <a href="#theorists">نظریه‌پردازان</a>
+  <a href="#differences">راهنمایی</a>
+  <a href="#numbers">اعداد</a>
+  <a href="#stages">مراحل</a>
+  <a href="#johari">جوهاری</a>
+  <a href="#ta">TA</a>
+  <a href="#gestalt">گشتالت</a>
+  <a href="#moreno">مورنو</a>
+  <a href="#rogers">راجرز</a>
+  <a href="#yalom">یالوم</a>
+  <a href="#special">گروه‌های خاص</a>
+  <a href="#final">۵ دقیقه آخر</a>
+  <a href="#quiz">کوییز</a>
+
+</nav>
+
+
+<!-- THEORISTS -->
+
+<section id="theorists" class="section">
+
+<h2 class="section-title">۱ · نظریه‌پردازان</h2>
+<p class="section-sub">هر اسم را با یک کلیدواژه به خاطر بسپار.</p>
+
+<div class="card">
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+<tr>
+<th>نظریه‌پرداز</th>
+<th>کلیدواژه امتحانی</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td><b>پنیل</b></td><td>اولین عکس‌العمل روانشناسانه · برداشتن غل و زنجیر · انقلاب کبیر فرانسه</td></tr>
+
+<tr><td><b>پرت</b></td><td>نخستین گروه درمانی سل · بیمارستان بوستون · ۱۹۰۵ تا ۱۹۳۲ · مشاوره گروهی ۱۹۳۲</td></tr>
+
+<tr><td><b>مورنو</b></td><td>روان‌نمایشی · اصطلاح روان‌درمانی گروهی · خودانگیختگی · نظریه نقش اجتماعی</td></tr>
+
+<tr><td><b>لوین</b></td><td>پویایی گروه · ۱۹۴۴ · گروه‌های T</td></tr>
+
+<tr><td><b>تاکمن</b></td><td>۵ مرحله گروه: شکل‌گیری، طوفان، هنجارسازی، عملکرد، پایانی</td></tr>
+
+<tr><td><b>بیون</b></td><td>روابط شیء کلاین</td></tr>
+
+<tr><td><b>براون</b></td><td>گروه = مسیر خلاق‌تر و شاداب‌تر</td></tr>
+
+<tr><td><b>کوری</b></td><td>مکاشفه → آشفتگی → بحران → اجرا · اهداف پنهان = انتقال</td></tr>
+
+<tr><td><b>راجرز</b></td><td>شخص‌محور · تسهیل‌گر · اصالت، همدلی، پذیرش نامشروط · اولین مرحله: آشفتگی</td></tr>
+
+<tr><td><b>الیس</b></td><td>REBT · رهبر = مربی روان‌شناختی</td></tr>
+
+<tr><td><b>برن</b></td><td>تحلیل تبادلی · والدینی، بالغ، کودکی · نوازش = قدردانی</td></tr>
+
+<tr><td><b>گلاسر</b></td><td>نظریه انتخاب · واقعیت درمانی (فرایندمدار) · نفی واقعیت · تکنیک شوخی</td></tr>
+
+<tr><td><b>آدلر</b></td><td>علاقه اجتماعی · جهت‌گیری مجدد · دکمه فشار</td></tr>
+
+<tr><td><b>پرز</b></td><td>گشتالت · کار ناتمام · درون‌فکنی · آگاهی و تماس</td></tr>
+
+<tr><td><b>فروید</b></td><td>ضربه تولد = نمونه نخستین اضطراب · تداعی آزاد</td></tr>
+
+<tr><td><b>یالوم</b></td><td>القای امید · رویکرد وجودی · روان‌پویه‌شناسی · ۱۱ عامل درمانی</td></tr>
+
+<tr><td><b>سالیوان</b></td><td>شخصیت = تعامل با دیگران · خود = تأییدهای درونی‌شده</td></tr>
+
+<tr><td><b>آکرمن</b></td><td>خانواده‌درمانگر پیشگام</td></tr>
+
+<tr><td><b>دشازر</b></td><td>SFBT · راه‌حل‌محور</td></tr>
+
+<tr><td><b>اسلوسون</b></td><td>گروه درمانی فعالیت · کودکان ۸ تا ۱۲ سال · اختلالات رفتاری</td></tr>
+
+<tr><td><b>آیزنک</b></td><td>نقد اثربخشی روان‌درمانی · تغییر معنادار ایجاد نمی‌کند</td></tr>
+
+<tr><td><b>کاتل</b></td><td>سینالیتی (Synality)</td></tr>
+
+<tr><td><b>ریچارد الن</b></td><td>اصطلاح راهنمایی گروهی · ۱۹۳۱</td></tr>
+
+<tr><td><b>شلینگ</b></td><td>ریشه اگزیستانسیالیسم</td></tr>
+
+<tr><td><b>بیوتلر</b></td><td>مقاومت = عدم شناخت</td></tr>
+
+<tr><td><b>ایوانف</b></td><td>روان‌درمانی گروهی در شوروی</td></tr>
+
+<tr><td><b>یونگ</b></td><td>بیماران ۳۵+ · یافتن جهان‌بینی</td></tr>
+
+<tr><td><b>مسمر</b></td><td>تأثیر گروه بر فرد</td></tr>
+
+<tr><td><b>کارکوف</b></td><td>همدلی · پذیرش · صداقت (خود بودن)</td></tr>
+
+<tr><td><b>هامبورگ</b></td><td>روابط معنادار · حفظ ارزش شخصی</td></tr>
+
+<tr><td><b>میلر</b></td><td>همبستگی عزت نفس و عزت اجتماعی</td></tr>
+
+<tr><td><b>استاندال</b></td><td>جمله عشق جام</td></tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="memory">
+<b>رمز سریع:</b>
+مورنو = روان‌نمایشی · لوین = پویایی گروه · تاکمن = مراحل ·
+راجرز = سه شرط · برن = TA · گلاسر = WDEP ·
+پرز = گشتالت · یالوم = ۱۱ عامل
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DIFFERENCES -->
+
+<section id="differences" class="section">
+
+<h2 class="section-title">۲ · راهنمایی، مشاوره و روان‌درمانی</h2>
+
+<div class="card">
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>مداخله</th>
+<th>تمرکز</th>
+<th>ماهیت</th>
+</tr>
+
+<tr>
+<td><b>راهنمایی</b></td>
+<td>محیط</td>
+<td>پیشگیرانه و تکاملی · عرضه اطلاعات فرد-محورانه</td>
+</tr>
+
+<tr>
+<td><b>مشاوره</b></td>
+<td>شخصیت</td>
+<td>جبرانی یا تصحیحی</td>
+</tr>
+
+<tr>
+<td><b>روان‌درمانی</b></td>
+<td>احساسات</td>
+<td>مشکلات عاطفی شدید · محصول تجربیات زندگی</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card exam">
+<b>مراجع راهنمایی:</b>
+می‌داند چه می‌خواهد، ولی نمی‌داند چگونه.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NUMBERS -->
+
+<section id="numbers" class="section">
+
+<h2 class="section-title">۳ · اعداد و ارقام طلایی</h2>
+<p class="section-sub">این قسمت را جداگانه مرور کن؛ عددها دام محبوب امتحان‌اند.</p>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>اندازه گروه</h4>
+گروه کوچک: <b>۴ تا ۲۰ عضو</b><br>
+گروه رشد/روان‌درمانی: <b>۷ نفر</b><br>
+گروه مشاوره: <b>۱۰ تا ۱۲ نفر</b><br>
+گروه راهنمایی آموزشی: <b>تا ۵۰ نفر</b><br>
+گروه ۵-۸ نفره: مشارکت فعال‌ترین عضو افزایش
+</div>
+
+<div class="box">
+<h4>زمان</h4>
+طول جلسه: <b>۸۰ تا ۹۰ دقیقه</b><br>
+فراوانی مطلوب: <b>هفته‌ای یک نشست</b><br>
+گروه ماراتون: <b>۲۴ تا ۴۸ ساعت</b><br>
+گروه بلندمدت: <b>۶ ماه</b><br>
+عمر گروه درمانی: <b>۸ تا ۱۰ جلسه</b><br>
+تعداد جلسات گروه درمانی: <b>۱۰ تا ۱۲ جلسه</b>
+</div>
+
+<div class="box">
+<h4>بازی درمانی</h4>
+سن: <b>۳ تا ۹ سال</b><br>
+حداکثر: <b>۵ نفر</b><br>
+اختلاف سن: <b>حداکثر ۱۲ ماه</b><br>
+اتاق: <b>۶×۶ متر</b>
+</div>
+
+<div class="box">
+<h4>نوجوانان</h4>
+سن: <b>۱۲ تا ۱۷ سال</b><br>
+تعداد: <b>۶ تا ۸ نفر</b><br>
+زمان: <b>۴۵ تا ۶۰ دقیقه</b>
+</div>
+
+<div class="box">
+<h4>معلولین</h4>
+تعداد: <b>۶ تا ۹ نفر</b><br>
+جلسه: <b>۹۰ دقیقه</b><br>
+اتاق: <b>۹ نفر با صندلی چرخدار</b><br>
+سه نشست در هفته: <b>یک ساعت</b>
+</div>
+
+<div class="box">
+<h4>اسلوسون</h4>
+سن: <b>۸ تا ۱۲ سال</b><br>
+تعداد: <b>۶ نفر، بعداً ۸ نفر</b><br>
+اختلاف سن: <b>۲ سال</b><br>
+ترکیب: <b>۲ + ۳ + ۳</b>
+</div>
+
+<div class="box">
+<h4>گروه T</h4>
+تعلیم حساسیت<br>
+<b>۱۲ تا ۱۶ نفر</b>
+</div>
+
+<div class="box">
+<h4>تاریخ‌ها</h4>
+پرت: <b>۱۹۳۲</b><br>
+الن: <b>۱۹۳۱</b><br>
+لوین: <b>۱۹۴۴</b><br>
+شکوفایی مشاوره گروهی: <b>۱۹۵۰</b><br>
+رواج گروه‌ها در آمریکا: <b>۱۹۶۰-۱۹۷۰</b><br>
+قبل از شکوفایی: <b>۳۴ کتاب</b>
+</div>
+
+<div class="box">
+<h4>کلاس راهنمایی</h4>
+مدت: <b>یک نیمسال یا یکسال</b><br>
+تعداد: <b>حداکثر ۲۰ نفر</b><br>
+مدرس: <b>مشاور</b>
+</div>
+
+<div class="box">
+<h4>سایر اعداد</h4>
+اختلاف سن بزرگسال: <b>۶ سال</b><br>
+تعلیم حساسیت: <b>۱۲ تا ۱۶ نفر</b><br>
+جلسات معتادان: <b>۳۲ جلسه · ۱/۵ ساعت</b><br>
+پیگیری آزاردیدگان جنسی: <b>۶ تا ۱۲ هفته</b><br>
+زمان تشکیل گروه ۷-۸ نفره: <b>۱۵ دقیقه</b><br>
+حداقل نشست کلاسی: <b>۳۰ یا ۴۵ دقیقه</b>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STAGES -->
+
+<section id="stages" class="section">
+
+<h2 class="section-title">۴ · مراحل گروه</h2>
+
+<div class="card">
+
+<h3>مدل کوری</h3>
+
+<div class="flow">
+<span class="step">مکاشفه</span>
+<span class="arrow">←</span>
+<span class="step">آشفتگی</span>
+<span class="arrow">←</span>
+<span class="step">بحران</span>
+<span class="arrow">←</span>
+<span class="step">اجرا</span>
+</div>
+
+<div class="grid2">
+
+<div class="box">
+<h4>مکاشفه</h4>
+ترس شایع‌تر است.
+</div>
+
+<div class="box">
+<h4>بحران</h4>
+انتقال، اضطراب، تعارض و مقاومت.
+</div>
+
+<div class="box">
+<h4>اجرا</h4>
+ابراز مشکلات.
+</div>
+
+<div class="box">
+<h4>دام مهم</h4>
+اهداف پنهان = <b>مرحله انتقال</b>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>مدل تاکمن</h3>
+
+<div class="flow">
+<span class="step">شکل‌گیری</span>
+<span class="arrow">←</span>
+<span class="step">طوفان</span>
+<span class="arrow">←</span>
+<span class="step">هنجارسازی</span>
+<span class="arrow">←</span>
+<span class="step">عملکرد</span>
+<span class="arrow">←</span>
+<span class="step">پایانی</span>
+</div>
+
+<div class="card trap">
+<strong>دام:</strong>
+مرحله سوم = <b>هنجارسازی</b>، نه اجرا.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>مدل ساده‌تر</h3>
+
+<div class="flow">
+<span class="step">آمیزش</span>
+<span>←</span>
+<span class="step">انتقال</span>
+<span>←</span>
+<span class="step">کار</span>
+<span>←</span>
+<span class="step">اختتام</span>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>مدل تکاملی</h3>
+
+<div class="flow">
+<span class="step">گرم شدن</span>
+<span>←</span>
+<span class="step">فعالیت</span>
+<span>←</span>
+<span class="step">اختتام</span>
+</div>
+
+<p>
+فعالیت دو بخش دارد:
+<b>عروج</b> که طولانی‌تر است و <b>افول</b> که کوتاه‌تر است.
+</p>
+
+</div>
+
+
+<div class="card exam">
+
+<b>نکات مراحل:</b>
+
+<ul>
+<li>دشوارترین مراحل: <b>آغاز و پایان</b></li>
+<li>آغاز: اضطراب و ترس</li>
+<li>پایان: تأسف ترک + دلهره آغاز تازه</li>
+<li>انتقال: شروع درگیری با اهداف پنهان و مقاومت · ریزش گروه به دلیل اضطراب</li>
+<li>مرحله کار: صحبت، دلبستگی و راه‌حل‌های متعدد · شروع با برآورد خود فرد</li>
+<li>اختتام: کاستن حالت دفاعی</li>
+<li>مرحله آمیزش: لازمه تغییر عمل است (یا تصمیم نهایی با اعضاست)</li>
+<li>مرحله کار: ملزوم شدن به تغییر موثر است + راه‌حل‌ها متعدد</li>
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- CONFLICT -->
+
+<section class="section">
+
+<h2 class="section-title">۵ · تعارضات گروهی</h2>
+
+<div class="grid2">
+
+<div class="card danger">
+<h3>تعارض فراینده</h3>
+تهدیدکننده بقای گروه → ممکن است به <b>انحلال گروه</b> منجر شود.
+</div>
+
+<div class="card">
+<h3>تعارض کاذب</h3>
+تفسیر جایگاه یا اعمال یک فرد توسط دیگران؛ سطحی.
+</div>
+
+<div class="card">
+<h3>تعارض وابسته</h3>
+مربوط به وابستگی.
+</div>
+
+<div class="card">
+<h3>درخواست مانده</h3>
+موضوع یا مسئله حل‌نشده.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- JOHARI -->
+
+<section id="johari" class="section">
+
+<h2 class="section-title">۶ · پنجره جوهاری</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>ربع اول · Open</h4>
+برای خود و دیگران معلوم است.
+<br>
+<b>کاهش ترس ← افزایش ربع اول</b>
+</div>
+
+<div class="box">
+<h4>ربع دوم</h4>
+گروه می‌داند، خود نمی‌داند.
+</div>
+
+<div class="box">
+<h4>ربع سوم</h4>
+خود می‌داند، گروه نمی‌داند.
+</div>
+
+<div class="box">
+<h4>ربع چهارم · Unknown</h4>
+هیچ‌کس نمی‌داند؛ ناخودآگاه.
+</div>
+
+</div>
+
+<div class="card exam">
+
+<b>هدف گروه‌درمانی:</b>
+افزایش ربع اول و کاهش سه ربع دیگر.
+
+<br><br>
+
+<b>بیشترین کاهش:</b> ربع سوم<br>
+<b>کمترین کاهش:</b> ربع چهارم<br>
+<b>رشد ربع اول:</b> کاهش ربع دوم<br>
+<b>مخفی کردن:</b> صرف انرژی<br>
+<b>نواحی خطر کردن:</b> مرزی ربع دوم با اول و سوم
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TA -->
+
+<section id="ta" class="section">
+
+<h2 class="section-title">۷ · تحلیل تبادلی برن (TA)</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>والدینی</h4>
+بایدها و قوانین
+</div>
+
+<div class="box">
+<h4>بالغ</h4>
+منطق
+</div>
+
+<div class="box">
+<h4>کودکی</h4>
+احساسات
+</div>
+
+<div class="box">
+<h4>هدف</h4>
+خودمختاری
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>موضع‌های زندگی</h3>
+
+<table>
+
+<tr>
+<th>موضع</th>
+<th>معنی</th>
+</tr>
+
+<tr>
+<td>من خوبم — تو خوبی</td>
+<td>سلامت روان</td>
+</tr>
+
+<tr>
+<td>من خوبم — تو خوب نیستی</td>
+<td>برتری‌طلبی</td>
+</tr>
+
+<tr>
+<td>من خوب نیستم — تو خوبی</td>
+<td>حقارت</td>
+</tr>
+
+<tr>
+<td><b>من خوب نیستم — تو خوب نیستی</b></td>
+<td><b>ناامیدی و بی‌هدفی</b></td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="card">
+
+<h3>تبادلات</h3>
+
+<span class="keyword">مکمل = همان حالت من</span>
+<span class="keyword">متقاطع = حالت دیگر</span>
+<span class="keyword">بازی‌ها = محاوره پنهان</span>
+<span class="keyword">نوازش = قدردانی</span>
+
+</div>
+
+</section>
+
+
+<!-- GESTALT -->
+
+<section id="gestalt" class="section">
+
+<h2 class="section-title">۸ · گشتالت — پرز</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>دونکه کردن</h4>
+تمثیل درب نیمه‌باز کمد
+</div>
+
+<div class="box">
+<h4>بزرگنمایی</h4>
+شناسایی ترس پنهان
+</div>
+
+<div class="box">
+<h4>هم‌آمیزی</h4>
+میل به پذیرفته شدن + ادغام مرزها
+</div>
+
+<div class="box">
+<h4>درون‌فکنی</h4>
+پذیرش باورهای دیگران بدون انطباق
+</div>
+
+<div class="box">
+<h4>کار ناتمام</h4>
+Unfinished Business
+</div>
+
+<div class="box">
+<h4>آگاهی و تماس</h4>
+دو عامل ضروری عملکرد سالم
+</div>
+
+</div>
+
+<div class="memory">
+<b>یادآوری:</b>
+تداعی آزاد ← فروید + گشتالت
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MORENO -->
+
+<section id="moreno" class="section">
+
+<h2 class="section-title">۹ · روان‌نمایشی — مورنو</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>پروتاگونیست</h4>
+قهرمان اصلی · مهم‌ترین بخش
+</div>
+
+<div class="box">
+<h4>یاریگر</h4>
+جای پروتاگونیست نقش بازی می‌کند
+</div>
+
+<div class="box">
+<h4>رهبر</h4>
+تسهیل‌گر
+</div>
+
+<div class="box">
+<h4>صحنه</h4>
+بستر اجرا
+</div>
+
+<div class="box">
+<h4>بدل</h4>
+وقتی پروتاگونیست نمی‌تواند بیان کند
+</div>
+
+<div class="box">
+<h4>خودگویی</h4>
+افکار با صدای بلند
+</div>
+
+<div class="box">
+<h4>آینه</h4>
+یاریگر جای پروتاگونیست
+</div>
+
+<div class="box">
+<h4>خودانگیختگی</h4>
+رویارویی همراه با سرزندگی
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ROGERS -->
+
+<section id="rogers" class="section">
+
+<h2 class="section-title">۱۰ · رویکرد شخص‌محور — راجرز</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>۱ · اصالت</h4>
+Genuineness
+<br>
+همخوانی گفته‌ها با احساسات
+</div>
+
+<div class="box">
+<h4>۲ · همدلی</h4>
+Empathy
+<br>
+درک احساسات
+</div>
+
+<div class="box">
+<h4>۳ · پذیرش نامشروط</h4>
+بدون قید و شرط
+</div>
+
+<div class="box">
+<h4>مرحله اول</h4>
+آشفتگی
+</div>
+
+</div>
+
+<div class="memory">
+رابطه ایده‌آل = احساس آزادی برای بیان احساسات<br>
+ناهمخوانی تجربیات با خویشتن · میل به تحقق خویشتن = رشد و شکوفایی
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WDEP -->
+
+<section class="section">
+
+<h2 class="section-title">۱۱ · WDEP — گلاسر</h2>
+
+<div class="card">
+
+<table>
+
+<tr>
+<th>حرف</th>
+<th>معنی</th>
+</tr>
+
+<tr>
+<td><b>W</b></td>
+<td>Wants · تعیین خواسته</td>
+</tr>
+
+<tr>
+<td><b>D</b></td>
+<td>Direction · جهت‌گیری</td>
+</tr>
+
+<tr>
+<td><b>E</b></td>
+<td>Evaluation · خودارزیابی</td>
+</tr>
+
+<tr>
+<td><b>P</b></td>
+<td>Planning · برنامه‌ریزی</td>
+</tr>
+
+</table>
+
+<div class="card trap">
+<strong>دام:</strong>
+W یعنی <b>تعیین خواسته</b>، نه برنامه‌ریزی.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- YALOM -->
+
+<section id="yalom" class="section">
+
+<h2 class="section-title">۱۲ · عوامل درمانی یالوم</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box"><h4>۱. ایجاد امید</h4>نگه‌داشتن بیمار در درمان</div>
+
+<div class="box"><h4>۲. اعتقاد به شیوه درمان</h4>خودش اثر درمانی دارد</div>
+
+<div class="box"><h4>۳. عمومیت</h4>مشکلات مشترک ← کاهش انزوا</div>
+
+<div class="box"><h4>۴. انتقال اطلاعات</h4>تعلیم + رفع ابهام</div>
+
+<div class="box"><h4>۵. نوع‌دوستی</h4>کمک به دیگران ← افزایش عزت نفس</div>
+
+<div class="box"><h4>۶. رشد مهارت‌های اجتماعی</h4>تکوین مهارت‌ها + یافتن ریشه شکست</div>
+
+<div class="box"><h4>۷. رفتار تقلیدی</h4>یادگیری جانشین از دیگران</div>
+
+<div class="box"><h4>۸. یادگیری هم‌نشینانه</h4>روابط + تصحیح عاطفی</div>
+
+<div class="box"><h4>۹. کاتارسیس</h4>برون‌ریزی احساسات؛ نیازمند مهار و هدایت</div>
+
+<div class="box"><h4>۱۰. همبستگی گروهی</h4>معادل همدلی فردی · پیش‌شرط درمان</div>
+
+<div class="box"><h4>۱۱. عوامل وجودی</h4>عوامل وجودی</div>
+
+</div>
+
+<div class="memory">
+<b>نکته:</b> همبستگی گروهی به خودی خود پیش‌شرط درمان مؤثر است، نه خودِ عامل درمانی.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXISTENTIAL -->
+
+<section class="section">
+
+<h2 class="section-title">۱۳ · اگزیستانسیالیسم</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>نیروی سوم</h4>
+مازلو + راجرز
+</div>
+
+<div class="box">
+<h4>در مقابل</h4>
+فروید + واتسون
+</div>
+
+<div class="box">
+<h4>انسان</h4>
+موجودی در حال تبلور
+</div>
+
+<div class="box">
+<h4>ریشه</h4>
+سخنرانی‌های شلینگ
+</div>
+
+</div>
+
+<div class="memory">
+شدن · مرگ · اضطراب · رنج · تنهایی · آزادی · انتخاب · مسئولیت
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MASLOW -->
+
+<section class="section">
+
+<h2 class="section-title">۱۴ · مزلو</h2>
+
+<div class="card">
+
+<div class="flow">
+<span class="step">فیزیولوژیک</span>
+←
+<span class="step">امنیت</span>
+←
+<span class="step">تعلق</span>
+←
+<span class="step">عزت</span>
+←
+<span class="step">تحقق خویشتن</span>
+</div>
+
+<div class="grid2">
+
+<div class="box">
+<h4>فیزیولوژیک</h4>
+پیش‌نیاز هر عمل
+</div>
+
+<div class="box">
+<h4>امنیت</h4>
+چسبیدن به امور عادی + گریز از ناشناخته
+</div>
+
+<div class="box">
+<h4>تعلق</h4>
+ترس از طرد شدن مانع آن
+</div>
+
+<div class="box">
+<h4>عزت</h4>
+فداکاری و قربانی شدن
+</div>
+
+<div class="box">
+<h4>تحقق خویشتن</h4>
+کلید رشد و کمال
+</div>
+
+<div class="box">
+<h4>نکته</h4>
+نیازها از طریق <b>آمیزش با دیگران</b> ارضا می‌شوند.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GLASSER NEEDS -->
+
+<section class="section">
+
+<h2 class="section-title">۱۵ · پنج نیاز گلاسر</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">عشق و تعلق</div>
+<div class="box">پیشرفت و خودشکوفایی</div>
+<div class="box">آزادی</div>
+<div class="box">تفریح</div>
+<div class="box">بقا</div>
+
+</div>
+
+<div class="memory">
+<b>نیازهای غیراساسی:</b>
+ثروت، قدرت، رقابت
+<br><br>
+<b>رنج:</b>
+تلاش برای ارضای نیاز
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GROUP TYPES -->
+
+<section class="section">
+
+<h2 class="section-title">۱۶ · انواع گروه‌ها</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box"><h4>T-group</h4>آموزش حساسیت · لوین · ۱۲ تا ۱۶ نفر</div>
+
+<div class="box"><h4>Encounter</h4>شکل گسترش‌یافته گروه T</div>
+
+<div class="box"><h4>Crowd</h4>ابتدایی‌ترین و ناپایدارترین</div>
+
+<div class="box"><h4>Pressure</h4>اتحادیه‌های کارگری و کشاورزی</div>
+
+<div class="box"><h4>خودیاری</h4>برای کمک به خود</div>
+
+<div class="box"><h4>همسالان</h4>ساختارمند و پایدارتر</div>
+
+<div class="box"><h4>Task</h4>رهبر مسئول کار است نه افراد</div>
+
+<div class="box"><h4>Mutual Aid</h4>مشکل مشابه · مثل معتادان</div>
+
+<div class="box"><h4>Case-Centered</h4>مشکلات متفاوت · یادگیری از دیگران · خطر: باور نکردن کمک</div>
+
+<div class="box"><h4>Human Potential</h4>تکیه بر نقاط مثبت · عزت نفس</div>
+
+<div class="box"><h4>ماراتون</h4>تجربه عاطفی + گشودن ضمیر باطن · عیب: تغییر ایجاد نمی‌کند</div>
+
+<div class="box"><h4>مهارت و ابزار</h4>حل مسئله و تصمیم‌گیری</div>
+
+<div class="box"><h4>ورزشی</h4>آموزشی-تجربی</div>
+
+<div class="box"><h4>راهنمایی</h4>تکاملی + پیشگیری</div>
+
+<div class="box"><h4>شخص‌مدار</h4>هدف از درون گروه و اعضا</div>
+
+<div class="box"><h4>آموزشی-تجربی</h4>روابط بهتر والدین-فرزندان، معلم-شاگرد</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TECHNIQUES -->
+
+<section class="section">
+
+<h2 class="section-title">۱۷ · تکنیک‌ها و فنون</h2>
+
+<div class="card">
+
+<span class="keyword">تداعی آزاد ← فروید + گشتالت</span>
+<span class="keyword">دکمه فشار ← آدلر</span>
+<span class="keyword">دونکه کردن ← گشتالت</span>
+<span class="keyword">بزرگنمایی ← گشتالت</span>
+<span class="keyword">هم‌آمیزی ← گشتالت</span>
+<span class="keyword">خودگویی ← افکار با صدای بلند</span>
+<span class="keyword">حمله به شرم ← پذیرش خود</span>
+<span class="keyword">خاطره‌پردازی ← کوری + سالمندان</span>
+<span class="keyword">متناقض ← افراد انحصارطلب و پرحرف</span>
+<span class="keyword">کاتارسیس ← تخلیه روانی</span>
+<span class="keyword">والایش ← موفقیت اجتماعی · نشانه بلوغ</span>
+<span class="keyword">Reframing ← معنای جدید</span>
+<span class="keyword">یافتن استثنائات ← راه‌حل‌محور</span>
+<span class="keyword">Reality Testing ← گروه درمانی فعالیت</span>
+<span class="keyword">تجربه عاطفی تصحیحی</span>
+<span class="keyword">اصلاح افکار ← گلاسر · نشست عقلی</span>
+<span class="keyword">تخلیه روانی (Catharsis) ← برون‌ریزی احساسات</span>
+<span class="keyword">استفاده از اشیا ← خاطرات دردناک</span>
+<span class="keyword">باز بودن (Openness) ← شناخت خود + درک توسط دیگران</span>
+
+</div>
+
+</section>
+
+
+<!-- DEFENSE -->
+
+<section class="section">
+
+<h2 class="section-title">۱۸ · مکانیسم‌های دفاعی</h2>
+
+<div class="card">
+
+<table>
+
+<tr>
+<th>مکانیسم</th>
+<th>نکته</th>
+</tr>
+
+<tr>
+<td>ابطال</td>
+<td>خنثی‌سازی عمل خلاف اخلاق</td>
+</tr>
+
+<tr>
+<td>وارونه‌سازی</td>
+<td>تبدیل احساس به عکس</td>
+</tr>
+
+<tr>
+<td>فرافکنی</td>
+<td>نسبت دادن به عوامل بیرونی</td>
+</tr>
+
+<tr>
+<td>درون‌فکنی</td>
+<td>پذیرش باورهای دیگران بدون انطباق</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- SPECIAL GROUPS -->
+
+<section id="special" class="section">
+
+<h2 class="section-title">۱۹ · گروه‌های خاص</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>کودکان</h4>
+۳ تا ۵ نفر · بازی · پذیرش کامل · فرض: پذیرش ← تغییر رفتار
+</div>
+
+<div class="box">
+<h4>نوجوانان</h4>
+۱۲ تا ۱۷ سال · ۶ تا ۸ نفر · ۴۵ تا ۶۰ دقیقه · هویت‌یابی · فضای امن
+</div>
+
+<div class="box">
+<h4>سالمندان</h4>
+یادآوری خاطرات · سرعت کم · تنهایی · ACT (انعطاف‌پذیری) · اجتناب از فنون مواجهه
+</div>
+
+<div class="box">
+<h4>سوگواران</h4>
+مهم‌ترین هدیه: همدلی · شناخت دقیق فرایند سوگ
+</div>
+
+<div class="box">
+<h4>معلولین</h4>
+۶ تا ۹ نفر · ۹۰ دقیقه · دو درمانگر · افزایش احساس ارزش
+</div>
+
+<div class="box">
+<h4>معتادان</h4>
+۳۲ جلسه · ۱/۵ ساعت · گروه هم‌درد
+</div>
+
+<div class="box">
+<h4>آزاردیدگان جنسی</h4>
+بازیابی اعتماد به نفس · پیگیری ۶ تا ۱۲ هفته
+</div>
+
+<div class="box">
+<h4>بیماران جسمی</h4>
+سازگاری + کاهش اضطراب · محدودیت‌های جسمی
+</div>
+
+<div class="box">
+<h4>ایدز</h4>
+ننگ اجتماعی · رویکرد حمایتی
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SLAVSON -->
+
+<section class="section">
+
+<h2 class="section-title">۲۰ · گروه درمانی فعالیت — اسلوسون</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>سن</h4>
+۸ تا ۱۲ سال
+</div>
+
+<div class="box">
+<h4>اختلال</h4>
+رفتاری + تصحیح منش (نه روان‌پریشی)
+</div>
+
+<div class="box">
+<h4>تعداد</h4>
+۶ نفر، بعداً ۸ نفر
+</div>
+
+<div class="box">
+<h4>اختلاف سنی</h4>
+۲ سال
+</div>
+
+<div class="box">
+<h4>ترکیب</h4>
+۲ تحریک‌گر + ۳ آرام و منزوی + ۳ بینابین
+</div>
+
+<div class="box">
+<h4>درمانگر</h4>
+بی‌طرف؛ تعبیر نمی‌کند، معنی رفتار را ثبت می‌کند
+</div>
+
+</div>
+
+<div class="card exam">
+<b>شرط پذیرش:</b>
+واقعیت‌آزمایی
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PLAY THERAPY -->
+
+<section class="section">
+
+<h2 class="section-title">۲۱ · بازی‌درمانی</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box"><h4>سن</h4>۳ تا ۹ سال</div>
+<div class="box"><h4>تعداد</h4>حداکثر ۵ نفر</div>
+<div class="box"><h4>اختلاف سن</h4>حداکثر ۱۲ ماه</div>
+<div class="box"><h4>اتاق</h4>۶×۶ متر</div>
+<div class="box"><h4>قبل مدرسه</h4>جنسیت مختلط</div>
+<div class="box"><h4>دوران مدرسه</h4>همجنس</div>
+<div class="box"><h4>گروه مختلط مفید</h4>پسر بدون خواهر + دختر بدون برادر</div>
+<div class="box"><h4>عقب‌مانده</h4>متجانس</div>
+<div class="box"><h4>دو وسیله برون‌ریزی</h4>بازی + گفتار (یا احساسات)</div>
+<div class="box"><h4>بازی در درمان فردی</h4>تداعی آزاد کلامی</div>
+<div class="box"><h4>اتاق کوچک</h4>خصومت + انزوا</div>
+<div class="box"><h4>سالن بزرگ</h4>تشویق پرخاشگری</div>
+<div class="box"><h4>ویژگی درمانگر</h4>همهمی با کودکان + قلباً جوان</div>
+<div class="box"><h4>عطش اجتماعی</h4>شرط اساسی پذیرش</div>
+<div class="box"><h4>تمنای پذیرش</h4>از رابطه مطلوب اولیه مادر</div>
+<div class="box"><h4>نشانه‌های مرضی</h4>غیرمشابه</div>
+<div class="box"><h4>بصیرت کودکان</h4>از طریق تجربه رابطه با دیگران</div>
+<div class="box"><h4>روان‌نژندی معلول</h4>تعارضات ناخودآگاه</div>
+<div class="box"><h4>حل اختلاف</h4>مذاکره و قانع‌سازی</div>
+<div class="box"><h4>اشخاص آرام</h4>بدون مشکل در بازی درمانی</div>
+
+</div>
+
+<div class="card trap">
+<strong>نکته:</strong>
+ورود به بازی می‌تواند طرد تلقی شود؛
+پادزهر = <b>پذیرش کامل</b>.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DISABILITY -->
+
+<section class="section">
+
+<h2 class="section-title">۲۲ · توان‌بخشی و مشاوره معلولین</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box">
+<h4>توان‌بخشی</h4>
+تجدید قوای معلول
+</div>
+
+<div class="box">
+<h4>شمول</h4>
+جسمانی · روانی · فرهنگی · اجتماعی
+</div>
+
+<div class="box">
+<h4>معلولیت فرهنگی</h4>
+آزادشدگان از زندان
+</div>
+
+<div class="box">
+<h4>جراحی زیبایی</h4>
+≠ خدمات توان‌بخشی
+</div>
+
+<div class="box">
+<h4>هدف</h4>
+روشن و قابل تغییر
+</div>
+
+<div class="box">
+<h4>مراحل</h4>
+ارزیابی ← حل مشکل ← پایان/ارجاع
+</div>
+
+<div class="box">
+<h4>رویه سازنده</h4>
+واقعیت‌محور + حال‌نگر
+</div>
+
+<div class="box">
+<h4>درمانگران</h4>
+اصلی + کمک‌درمانگر (تقسیم کار + عدم لغو)
+</div>
+
+<div class="box">
+<h4>تعادل</h4>
+تجانس + عدم تجانس
+</div>
+
+<div class="box">
+<h4>مشکل‌ساز</h4>
+متکی + مستقل
+</div>
+
+<div class="box">
+<h4>نامناسب</h4>
+شوک معلولیت
+</div>
+
+<div class="box">
+<h4>مراقب</h4>
+اتاق مجاور
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LEADERSHIP -->
+
+<section class="section">
+
+<h2 class="section-title">۲۳ · نقش‌های رهبری</h2>
+
+<div class="card">
+
+<table>
+
+<tr>
+<th>نقش / مفهوم</th>
+<th>کلیدواژه</th>
+</tr>
+
+<tr>
+<td>تسهیل‌گر</td>
+<td>راجرز</td>
+</tr>
+
+<tr>
+<td>مربی روان‌شناختی</td>
+<td>REBT</td>
+</tr>
+
+<tr>
+<td>حامی</td>
+<td>توجه به نیازهای عاطفی</td>
+</tr>
+
+<tr>
+<td>محرک</td>
+<td>کار طلبیدن از اعضا</td>
+</tr>
+
+<tr>
+<td>رهبر گروه کارمدار</td>
+<td>مسئول کار نه افراد</td>
+</tr>
+
+<tr>
+<td>اولین اقدام رهبر</td>
+<td><b>مجوز قانونی</b></td>
+</tr>
+
+<tr>
+<td>موانع اثربخشی رهبر</td>
+<td>رقابت غیرمنطقی · برخورد دوگانه · دوری از اهداف</td>
+</tr>
+
+</table>
+
+<div class="card trap">
+<strong>دام:</strong>
+ویژگی رهبر نیست = سازش‌پذیری و همنوایی.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONCEPTS -->
+
+<section class="section">
+
+<h2 class="section-title">۲۴ · مفاهیم پرتکرار</h2>
+
+<div class="card">
+
+<div class="grid2">
+
+<div class="box"><h4>Duration</h4>طول یک نشست</div>
+<div class="box"><h4>Frequency</h4>تعداد جلسات در یک فاصله زمانی</div>
+<div class="box"><h4>Group Life</h4>فاصله اولین تا آخرین نشست</div>
+<div class="box"><h4>Cohesion</h4>پیوستگی اعضا · پیش‌شرط درمان</div>
+<div class="box"><h4>Congruence</h4>پرهیز از تناقض‌گویی</div>
+<div class="box"><h4>Microcosm</h4>تفاوت اعضا برای یادگیری بیشتر</div>
+<div class="box"><h4>اینجا و اکنون</h4>جزء لاینفک گروه‌ها</div>
+<div class="box"><h4>آنجا-پس‌آنجا</h4>گذشته مخل سازگاری</div>
+<div class="box"><h4>ترک زودرس</h4>مهم‌ترین عامل: انحراف از گروه</div>
+<div class="box"><h4>معیار پذیرش</h4>انگیزه مراجع</div>
+<div class="box"><h4>خود عامل تغییر</h4>خود فرد</div>
+<div class="box"><h4>افراد شفافیت</h4>مناسب گروه نیستند</div>
+<div class="box"><h4>افراد کاملاً متکی</h4>نمی‌توانند از گروه بهره ببرند</div>
+<div class="box"><h4>خودشیفته</h4>نامناسب</div>
+<div class="box"><h4>هیپوکندریا</h4>اشتغال ذهنی درباره سلامت</div>
+<div class="box"><h4>منع پذیرش</h4>پارانوئید · هیپوکندریا · خودکشی (نه افسردگی خفیف)</div>
+<div class="box"><h4>احساسات متضاد</h4>منجر به ترک زودرس</div>
+<div class="box"><h4>ترس از واگیری عاطفی</h4>ترس از سرایت ناراحتی</div>
+<div class="box"><h4>بیماران با وضعیت خاص</h4>عدم انجام وظایف محوله</div>
+<div class="box"><h4>پادزهر درمانی کودکان</h4>پذیرش کامل</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK MEMORY -->
+
+<section id="final" class="section">
+
+<h2 class="section-title">۲۵ · عبارات کلیدی</h2>
+
+<div class="card">
+
+<table>
+
+<tr>
+<th>عبارت</th>
+<th>جواب</th>
+</tr>
+
+<tr><td>گروه = مسیر خلاق‌تر</td><td>براون</td></tr>
+<tr><td>ضربه تولد</td><td>فروید</td></tr>
+<tr><td>علاقه اجتماعی</td><td>آدلر</td></tr>
+<tr><td>نفی واقعیت</td><td>گلاسر</td></tr>
+<tr><td>اولین عکس‌العمل روانشناسانه</td><td>پنیل</td></tr>
+<tr><td>پدر روان‌درمانی گروهی</td><td>مورنو</td></tr>
+<tr><td>اصطلاح راهنمایی گروهی</td><td>ریچارد الن (۱۹۳۱)</td></tr>
+<tr><td>سینالیتی</td><td>کاتل</td></tr>
+<tr><td>ریشه اگزیستانسیالیسم</td><td>شلینگ</td></tr>
+<tr><td>نیروی سوم</td><td>مازلو + راجرز</td></tr>
+<tr><td>همدلی در گروه</td><td>همبستگی گروهی</td></tr>
+<tr><td>القای امید</td><td>یالوم</td></tr>
+<tr><td>خانواده‌درمانگر پیشگام</td><td>آکرمن</td></tr>
+<tr><td>SFBT</td><td>دشازر</td></tr>
+<tr><td>گروه درمانی فعالیت</td><td>اسلوسون</td></tr>
+<tr><td>نقد اثربخشی روان‌درمانی</td><td>آیزنک</td></tr>
+<tr><td>شخصیت = تعامل</td><td>سالیوان</td></tr>
+<tr><td>خود = تأییدهای درونی‌شده</td><td>سالیوان</td></tr>
+<tr><td>درمانگر موفق</td><td>کارکوف</td></tr>
+<tr><td>دو مسئله عام</td><td>هامبورگ</td></tr>
+<tr><td>عزت نفس و عزت اجتماعی</td><td>میلر</td></tr>
+<tr><td>مقاومت = عدم شناخت</td><td>بیوتلر</td></tr>
+<tr><td>شوروی</td><td>ایوانف</td></tr>
+<tr><td>بیماران ۳۵+</td><td>یونگ</td></tr>
+<tr><td>تاثیر گروه بر فرد</td><td>مسمر</td></tr>
+<tr><td>عشق جام</td><td>استاندال</td></tr>
+
+</table>
+
+</div>
+
+
+<div class="card exam">
+
+<h3>۲۶ · اگر فقط ۵ دقیقه وقت داشتی!</h3>
+
+<ol>
+
+<li>کوری: <b>مکاشفه ← آشفتگی ← بحران ← اجرا</b></li>
+
+<li>تاکمن: <b>شکل‌گیری ← طوفان ← هنجارسازی ← عملکرد ← پایانی</b></li>
+
+<li>ترتیب ساده: <b>آمیزش ← انتقال ← کار ← اختتام</b></li>
+
+<li>WDEP = <b>Wants, Direction, Evaluation, Planning</b></li>
+
+<li>۵ نیاز گلاسر = <b>عشق، پیشرفت، آزادی، تفریح، بقا</b></li>
+
+<li>مزلو = <b>فیزیولوژیک ← امنیت ← تعلق ← عزت ← تحقق خویشتن</b></li>
+
+<li>راجرز = <b>اصالت + همدلی + پذیرش نامشروط</b></li>
+
+<li>TA = <b>والدینی + بالغ + کودکی</b></li>
+
+<li>ناامیدی = <b>من خوب نیستم — تو خوب نیستی</b></li>
+
+<li>بازی‌درمانی = <b>۳ تا ۹ سال · ۵ نفر · ۱۲ ماه</b></li>
+
+<li>اسلوسون = <b>۸ تا ۱۲ سال · اختلال رفتاری · ۶ نفر</b></li>
+
+<li>معلولین = <b>۶ تا ۹ نفر · ۹۰ دقیقه · دو درمانگر</b></li>
+
+<li>همبستگی گروهی = <b>پیش‌شرط درمان</b></li>
+
+<li>اینجا و اکنون = <b>جزء لاینفک گروه‌ها</b></li>
+
+<li>Johari: ربع ۱ کاهش ترس · ربع ۲ گروه می‌داند · ربع ۴ موثر در روابط</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section id="quiz" class="section">
+
+<h2 class="section-title">کوییز مرور سریع</h2>
+<p class="section-sub">چند سؤال برای اینکه ببینی واقعاً نکات نشسته‌اند یا نه</p>
+
+<div class="quiz">
+
+<div class="quiz-progress" id="progress"></div>
+
+<h3 id="question"></h3>
+
+<div class="options" id="options"></div>
+
+<div class="feedback" id="feedback"></div>
+
+<button id="next">سؤال بعدی</button>
+
+</div>
+
+</section>
+
+
+<div class="footer">
+Quizly · مشاوره گروهی · مرور سریع امتحان
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   THEME
+========================= */
+
+const themeBtn=document.getElementById("theme");
+
+themeBtn.onclick=()=>{
+
+  const dark=document.documentElement.dataset.theme==="dark";
+
+  document.documentElement.dataset.theme=dark?"":"dark";
+
+  themeBtn.textContent=dark?"تم شب":"تم روز";
+
+};
+
+
+/* =========================
+   QUIZ
+========================= */
+
+const quizData=[
+
+{
+ q:"مرحله سوم در مدل تاکمن چیست؟",
+ options:["طوفان","هنجارسازی","عملکرد","پایانی"],
+ answer:1,
+ explain:"مرحله سوم = هنجارسازی."
+},
+
+{
+ q:"W در مدل WDEP به چه معناست؟",
+ options:["برنامه‌ریزی","خودارزیابی","تعیین خواسته","جهت‌گیری"],
+ answer:2,
+ explain:"W = Wants یعنی تعیین خواسته."
+},
+
+{
+ q:"کدام مورد مربوط به مورنو است؟",
+ options:["گشتالت","روان‌نمایشی","TA","SFBT"],
+ answer:1,
+ explain:"مورنو = روان‌نمایشی و روان‌درمانی گروهی."
+},
+
+{
+ q:"سه شرط اساسی راجرز کدام‌اند؟",
+ options:[
+ "آزادی، انتخاب، مسئولیت",
+ "اصالت، همدلی، پذیرش نامشروط",
+ "امید، نوع‌دوستی، کاتارسیس",
+ "والدینی، بالغ، کودکی"
+ ],
+ answer:1,
+ explain:"راجرز = اصالت + همدلی + پذیرش نامشروط."
+},
+
+{
+ q:"سن بازی‌درمانی گروهی در این جزوه چیست؟",
+ options:["۱ تا ۵ سال","۳ تا ۹ سال","۸ تا ۱۲ سال","۱۲ تا ۱۷ سال"],
+ answer:1,
+ explain:"بازی‌درمانی = ۳ تا ۹ سال."
+},
+
+{
+ q:"کدام موضع زندگی با ناامیدی و بی‌هدفی مرتبط است؟",
+ options:[
+ "من خوبم ـ تو خوبی",
+ "من خوبم ـ تو خوب نیستی",
+ "من خوب نیستم ـ تو خوبی",
+ "من خوب نیستم ـ تو خوب نیستی"
+ ],
+ answer:3,
+ explain:"من خوب نیستم ـ تو خوب نیستی = ناامیدی و بی‌هدفی."
+},
+
+{
+ q:"۵ نیاز اساسی گلاسر کدام گزینه است؟",
+ options:[
+ "عشق، پیشرفت، آزادی، تفریح، بقا",
+ "امنیت، تعلق، عزت، قدرت، ثروت",
+ "عشق، امنیت، رقابت، قدرت، بقا",
+ "آزادی، ثروت، رقابت، قدرت، تفریح"
+ ],
+ answer:0,
+ explain:"۵ نیاز گلاسر: عشق و تعلق، پیشرفت و خودشکوفایی، آزادی، تفریح و بقا."
+},
+
+{
+ q:"پیش‌شرط درمان در گروه از نظر جزوه چیست؟",
+ options:["کاتارسیس","همبستگی گروهی","انتقال","تداعی آزاد"],
+ answer:1,
+ explain:"همبستگی گروهی = پیش‌شرط درمان."
+}
+
+];
+
+let current=0;
+let locked=false;
+
+const questionEl=document.getElementById("question");
+const optionsEl=document.getElementById("options");
+const feedbackEl=document.getElementById("feedback");
+const nextBtn=document.getElementById("next");
+const progressEl=document.getElementById("progress");
+
+function renderQuiz(){
+
+  locked=false;
+
+  const item=quizData[current];
+
+  progressEl.textContent=
+    `سؤال ${current+1} از ${quizData.length}`;
+
+  questionEl.textContent=item.q;
+
+  feedbackEl.textContent="";
+
+  optionsEl.innerHTML="";
+
+  item.options.forEach((option,index)=>{
+
+    const btn=document.createElement("button");
+
+    btn.className="option";
+
+    btn.textContent=option;
+
+    btn.onclick=()=>checkAnswer(index,btn);
+
+    optionsEl.appendChild(btn);
+
+  });
+
+  nextBtn.textContent=
+    current===quizData.length-1
+    ?"شروع دوباره"
+    :"سؤال بعدی";
+
+}
+
+
+function checkAnswer(index,button){
+
+  if(locked)return;
+
+  locked=true;
+
+  const item=quizData[current];
+
+  const all=document.querySelectorAll(".option");
+
+  all.forEach((btn,i)=>{
+
+    btn.disabled=true;
+
+    if(i===item.answer){
+      btn.classList.add("correct");
+    }
+
+  });
+
+  if(index===item.answer){
+
+    feedbackEl.textContent=
+      "درست! "+item.explain;
+
+    feedbackEl.style.color="var(--green)";
+
+  }else{
+
+    button.classList.add("wrong");
+
+    feedbackEl.textContent=
+      "اشتباه. "+item.explain;
+
+    feedbackEl.style.color="var(--red)";
+
+  }
+
+}
+
+
+nextBtn.onclick=()=>{
+
+  current++;
+
+  if(current>=quizData.length){
+    current=0;
+  }
+
+  renderQuiz();
+
+};
+
+
+renderQuiz();
+
+</script>
+
+</body>
+</html>
