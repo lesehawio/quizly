@@ -8,6 +8,7 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
 
 :root{
   --bg:#fff7fa;
@@ -65,31 +66,16 @@ button{cursor:pointer;-webkit-tap-highlight-color:transparent;}
 
 /* HEADER */
 .top{
-  position:fixed;
-  z-index:40;
-  top:14px;
-  left:14px;
-  right:14px;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:8px 12px;
-  background:var(--glass);
-  border:1px solid var(--line);
-  border-radius:24px;
-  backdrop-filter:blur(20px);
+  position:fixed;z-index:40;top:14px;left:14px;right:14px;
+  height:64px;display:flex;align-items:center;justify-content:space-between;
+  padding:8px 12px;background:var(--glass);border:1px solid var(--line);
+  border-radius:24px;backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
   box-shadow:0 10px 35px rgba(80,20,45,.08);
 }
 
 .brand{display:flex;align-items:center;gap:10px;min-width:0;}
-
-.brand img{
-  width:44px;height:44px;border-radius:15px;object-fit:contain;
-  box-shadow:0 7px 20px rgba(250,71,121,.2);
-}
-
+.brand img{width:44px;height:44px;border-radius:15px;object-fit:contain;box-shadow:0 7px 20px rgba(250,71,121,.2);}
 .brand span{
   font-size:13px;font-weight:900;white-space:nowrap;
   background:linear-gradient(135deg,var(--pink),var(--pink2));
@@ -99,40 +85,29 @@ button{cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .actions{display:flex;gap:8px;}
 
 .icon-btn{
-  width:44px;height:44px;
-  border:1px solid var(--line);
-  border-radius:15px;
-  background:var(--surface2);
-  color:var(--text);
-  display:grid;place-items:center;
+  width:44px;height:44px;border:1px solid var(--line);border-radius:15px;
+  background:var(--surface2);color:var(--text);display:grid;place-items:center;
   transition:.22s cubic-bezier(.2,.8,.2,1);
 }
-
 .icon-btn svg{width:19px;height:19px;fill:currentColor;}
-
 .icon-btn:hover{
-  transform:translateY(-2px);
-  background:var(--pink);color:#fff;border-color:var(--pink);
-  box-shadow:0 10px 24px rgba(250,71,121,.24);
+  transform:translateY(-2px);background:var(--pink);color:#fff;
+  border-color:var(--pink);box-shadow:0 10px 24px rgba(250,71,121,.24);
 }
 
 /* MAIN */
 main{width:min(860px,100%);margin:auto;padding:102px 18px 42px;}
-
 .hero{text-align:center;padding:20px 0 12px;}
 
 .tag{
-  display:inline-flex;align-items:center;
-  padding:7px 15px;border-radius:99px;
-  background:var(--surface2);border:1px solid var(--line);
-  color:var(--pink);font-size:10px;font-weight:800;
-  box-shadow:0 7px 20px rgba(250,71,121,.06);
+  display:inline-flex;align-items:center;padding:7px 15px;border-radius:99px;
+  background:var(--surface2);border:1px solid var(--line);color:var(--pink);
+  font-size:10px;font-weight:800;box-shadow:0 7px 20px rgba(250,71,121,.06);
 }
 
 .hero h1{
-  margin:11px 0 4px;
-  font-size:clamp(28px,5vw,42px);
-  line-height:1.2;font-weight:900;letter-spacing:-1.8px;
+  margin:11px 0 4px;font-size:clamp(28px,5vw,42px);line-height:1.2;
+  font-weight:900;letter-spacing:-1.8px;
   background:linear-gradient(135deg,var(--pink),var(--pink2));
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
@@ -141,20 +116,9 @@ main{width:min(860px,100%);margin:auto;padding:102px 18px 42px;}
 
 /* PROGRESS */
 .progress-wrap{margin:18px 3px 0;}
-
-.meta{
-  display:flex;justify-content:space-between;align-items:center;
-  color:var(--muted);font-size:11px;font-weight:700;
-  margin:0 3px 7px;
-}
-
+.meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px;font-weight:700;margin:0 3px 7px;}
 .pct{color:var(--pink);font-weight:900;}
-
-.bar{
-  height:7px;background:var(--surface3);border-radius:99px;
-  overflow:hidden;box-shadow:inset 0 1px 3px rgba(0,0,0,.06);
-}
-
+.bar{height:7px;background:var(--surface3);border-radius:99px;overflow:hidden;box-shadow:inset 0 1px 3px rgba(0,0,0,.06);}
 .bar i{
   display:block;height:100%;width:2.7%;border-radius:99px;
   background:linear-gradient(90deg,var(--pink),var(--pink2));
@@ -163,33 +127,19 @@ main{width:min(860px,100%);margin:auto;padding:102px 18px 42px;}
 }
 
 /* MODE SWITCH */
-.mode-bar{
-  display:flex;gap:8px;margin:16px 0 10px;
-  justify-content:center;flex-wrap:wrap;
-}
+.mode-bar{display:flex;gap:8px;margin:16px 0 10px;justify-content:center;flex-wrap:wrap;}
 
 .mode-btn{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:7px 17px;border:1px solid var(--line);
-  border-radius:99px;background:var(--surface);
-  color:var(--muted);font-size:10px;font-weight:700;
-  transition:.2s;
+  display:inline-flex;align-items:center;gap:7px;padding:7px 17px;
+  border:1px solid var(--line);border-radius:99px;background:var(--surface);
+  color:var(--muted);font-size:10px;font-weight:700;transition:.2s;
 }
-
 .mode-btn svg{width:14px;height:14px;fill:currentColor;}
-
-.mode-btn.active{
-  background:var(--pink);color:#fff;border-color:var(--pink);
-  box-shadow:0 7px 20px rgba(250,71,121,.2);
-}
-
+.mode-btn.active{background:var(--pink);color:#fff;border-color:var(--pink);box-shadow:0 7px 20px rgba(250,71,121,.2);}
 .mode-btn:hover{transform:translateY(-2px);}
 
 /* DECK */
-.deck{
-  position:relative;min-height:680px;margin-top:10px;
-  perspective:1400px;touch-action:none;overflow:visible;
-}
+.deck{position:relative;min-height:680px;margin-top:10px;perspective:1400px;touch-action:none;overflow:visible;}
 
 .card{
   position:relative;border-radius:38px;overflow:hidden;
@@ -206,242 +156,178 @@ main{width:min(860px,100%);margin:auto;padding:102px 18px 42px;}
   opacity:.15;
 }
 
-.inside{
-  position:relative;z-index:2;width:100%;
-  padding:27px 28px 22px;display:flex;flex-direction:column;
-}
+.inside{position:relative;z-index:2;width:100%;padding:27px 28px 22px;display:flex;flex-direction:column;}
 
-.no{
-  display:flex;align-items:center;gap:7px;
-  color:var(--pink);font-size:10px;font-weight:900;
-}
-
-.no .dot{
-  width:7px;height:7px;border-radius:50%;background:var(--pink);
-  box-shadow:0 0 0 5px rgba(250,71,121,.1);
-}
+.no{display:flex;align-items:center;gap:7px;color:var(--pink);font-size:10px;font-weight:900;}
+.no .dot{width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 5px rgba(250,71,121,.1);}
 
 .title{display:flex;align-items:center;gap:10px;margin-top:5px;flex-wrap:wrap;}
-
-.title h2{
-  font-size:clamp(31px,6vw,43px);font-weight:900;letter-spacing:-1.5px;
-}
+.title h2{font-size:clamp(31px,6vw,43px);font-weight:900;letter-spacing:-1.5px;}
 
 .pill{
-  padding:4px 12px;border-radius:99px;
-  background:var(--surface2);border:1px solid var(--line);
-  color:var(--muted);font-size:9px;font-weight:800;
+  padding:4px 12px;border-radius:99px;background:var(--surface2);
+  border:1px solid var(--line);color:var(--muted);font-size:9px;font-weight:800;
 }
 
 .meaning{font-size:11px;color:var(--muted);margin-top:1px;}
 
 .msg,.box,.key,.test-box,.verse-box{
   background:linear-gradient(145deg,var(--surface2),var(--surface));
-  border:1px solid var(--line);
-  box-shadow:0 8px 25px rgba(70,20,40,.035);
+  border:1px solid var(--line);box-shadow:0 8px 25px rgba(70,20,40,.035);
 }
 
 .msg{margin-top:17px;border-radius:25px;padding:17px 19px;}
 
-.label{
-  display:flex;align-items:center;gap:7px;
-  color:var(--pink);font-size:10px;font-weight:900;
-  margin-bottom:5px;
-}
-
+.label{display:flex;align-items:center;gap:7px;color:var(--pink);font-size:10px;font-weight:900;margin-bottom:5px;}
 .label svg{width:15px;height:15px;fill:currentColor;}
-
 .msg p{font-size:13px;line-height:2;font-weight:600;}
 
-.cols{
-  display:grid;grid-template-columns:1.2fr .8fr;
-  gap:12px;margin-top:12px;
-}
-
+.cols{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:12px;}
 .box{border-radius:22px;padding:14px 15px;}
-
-.box h3{
-  display:flex;align-items:center;gap:6px;
-  color:var(--pink);font-size:10px;margin-bottom:6px;font-weight:900;
-}
-
+.box h3{display:flex;align-items:center;gap:6px;color:var(--pink);font-size:10px;margin-bottom:6px;font-weight:900;}
 .box h3 svg{width:14px;height:14px;fill:currentColor;}
+.box p{font-size:10px;line-height:1.9;color:var(--muted);font-weight:600;}
 
-.box p{
-  font-size:10px;line-height:1.9;color:var(--muted);font-weight:600;
-}
-
-/* VERSES */
-.verse-box{
-  margin-top:12px;border-radius:22px;padding:14px 16px;
-  border-right:4px solid var(--gold);
-}
-
-.verse-box h3{
-  display:flex;align-items:center;gap:6px;
-  color:var(--gold);font-size:10px;margin-bottom:5px;font-weight:900;
-}
-
+.verse-box{margin-top:12px;border-radius:22px;padding:14px 16px;border-right:4px solid var(--gold);}
+.verse-box h3{display:flex;align-items:center;gap:6px;color:var(--gold);font-size:10px;margin-bottom:5px;font-weight:900;}
 .verse-box h3 svg{width:14px;height:14px;fill:currentColor;}
+.verse-box .v{font-size:12px;line-height:2.2;font-weight:600;color:var(--text);}
 
-.verse-box .v{
-  font-size:12px;line-height:2.2;font-weight:600;color:var(--text);
-}
-
-/* TEST */
-.test-box{
-  margin-top:12px;border-radius:22px;padding:14px 16px;
-  border-right:4px solid var(--green);
-}
-
-.test-box h3{
-  display:flex;align-items:center;gap:6px;
-  color:var(--green);font-size:10px;margin-bottom:5px;font-weight:900;
-}
-
+.test-box{margin-top:12px;border-radius:22px;padding:14px 16px;border-right:4px solid var(--green);}
+.test-box h3{display:flex;align-items:center;gap:6px;color:var(--green);font-size:10px;margin-bottom:5px;font-weight:900;}
 .test-box h3 svg{width:14px;height:14px;fill:currentColor;}
-
 .test-box .q{font-size:12px;font-weight:700;line-height:2;}
-.test-box .a{font-size:11px;color:var(--muted);line-height:1.8;}
 
-.test-box .a strong{color:var(--green);font-weight:800;}
-
-/* KEY */
-.key{
-  margin-top:12px;border-radius:21px;padding:13px 16px;
-  border-style:dashed;border-color:var(--pink2);
-}
-
-.key b{
-  display:flex;align-items:center;gap:7px;
-  color:var(--pink);font-size:10px;
-}
-
+.key{margin-top:12px;border-radius:21px;padding:13px 16px;border-style:dashed;border-color:var(--pink2);}
+.key b{display:flex;align-items:center;gap:7px;color:var(--pink);font-size:10px;}
 .key b svg{width:15px;height:15px;fill:currentColor;}
+.key div{font-size:11px;line-height:1.8;margin-top:2px;font-weight:700;}
 
-.key div{
-  font-size:11px;line-height:1.8;margin-top:2px;font-weight:700;
-}
-
-/* QUICK MODE */
 .card.quick-mode .msg{margin-top:14px;}
 .card.quick-mode .cols{grid-template-columns:1fr;}
 .card.quick-mode .box:last-child{display:none;}
 .card.quick-mode .key{margin-top:10px;}
 
-/* CONTROLS */
-.hint{
-  text-align:center;color:var(--soft);font-size:9px;
-  margin:13px 0 7px;
+/* ==================== VERSES MODE ==================== */
+.ayah-list{
+  display:flex;flex-direction:column;gap:10px;margin-top:16px;
+  max-height:560px;overflow-y:auto;padding:4px;
 }
 
-.controls{
-  display:flex;justify-content:center;align-items:center;gap:13px;
+.ayah-list::-webkit-scrollbar{width:6px;}
+.ayah-list::-webkit-scrollbar-track{background:var(--surface3);border-radius:99px;}
+.ayah-list::-webkit-scrollbar-thumb{background:var(--pink2);border-radius:99px;}
+
+.ayah-item{
+  background:linear-gradient(145deg,var(--surface2),var(--surface));
+  border:1px solid var(--line);border-radius:20px;padding:14px 16px;
+  transition:.25s;
 }
+
+.ayah-item:hover{
+  border-color:var(--pink2);transform:translateX(-3px);
+  box-shadow:0 8px 22px rgba(250,71,121,.08);
+}
+
+.ayah-item .ayah-no{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border-radius:9px;
+  background:linear-gradient(145deg,var(--pink),var(--pink2));
+  color:#fff;font-size:10px;font-weight:900;margin-bottom:8px;
+  box-shadow:0 5px 14px rgba(250,71,121,.25);
+}
+
+.ayah-item .arabic{
+  font-family:'Amiri Quran',Vazirmatn,serif;
+  font-size:20px;line-height:2.6;font-weight:400;
+  color:var(--text);text-align:right;direction:rtl;
+  margin-bottom:8px;padding-bottom:8px;border-bottom:1px dashed var(--line);
+}
+
+.ayah-item .translation{
+  font-size:11px;line-height:2;color:var(--muted);
+  font-weight:500;text-align:right;
+}
+
+.ayah-item.sajdah{
+  border-right:4px solid var(--gold);
+  background:linear-gradient(145deg,rgba(245,166,35,.08),var(--surface));
+}
+.ayah-item.sajdah .ayah-no{background:linear-gradient(145deg,var(--gold),#f7b955);}
+
+.sajdah-badge{
+  display:inline-block;padding:2px 8px;border-radius:99px;
+  background:var(--gold);color:#fff;font-size:8px;font-weight:800;
+  margin-right:6px;vertical-align:middle;
+}
+
+/* CONTROLS */
+.hint{text-align:center;color:var(--soft);font-size:9px;margin:13px 0 7px;}
+.controls{display:flex;justify-content:center;align-items:center;gap:13px;}
 
 .ctrl{
-  width:51px;height:51px;border:1px solid var(--line);
-  border-radius:18px;background:var(--surface);color:var(--text);
-  display:grid;place-items:center;
-  box-shadow:0 8px 20px rgba(50,10,30,.06);
-  transition:.22s;
+  width:51px;height:51px;border:1px solid var(--line);border-radius:18px;
+  background:var(--surface);color:var(--text);display:grid;place-items:center;
+  box-shadow:0 8px 20px rgba(50,10,30,.06);transition:.22s;
 }
-
 .ctrl svg{width:20px;height:20px;fill:currentColor;}
-
 .ctrl:hover{transform:translateY(-3px);background:var(--surface2);}
 
 .ctrl.main{
   width:61px;height:61px;border:0;border-radius:21px;
   background:linear-gradient(145deg,var(--pink),var(--pink2));
-  color:#fff;
-  box-shadow:0 13px 32px rgba(250,71,121,.3);
+  color:#fff;box-shadow:0 13px 32px rgba(250,71,121,.3);
 }
-
-.ctrl.main:hover{
-  transform:translateY(-4px) scale(1.04);
-  box-shadow:0 18px 40px rgba(250,71,121,.35);
-}
-
+.ctrl.main:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 18px 40px rgba(250,71,121,.35);}
 .ctrl:active{transform:scale(.93);}
 
 /* DRAWER */
-.overlay{
-  position:fixed;z-index:50;inset:0;background:var(--overlay);
-  opacity:0;pointer-events:none;backdrop-filter:blur(4px);
-  transition:.3s;
-}
-
+.overlay{position:fixed;z-index:50;inset:0;background:var(--overlay);opacity:0;pointer-events:none;backdrop-filter:blur(4px);transition:.3s;}
 .overlay.open{opacity:1;pointer-events:auto;}
 
 .drawer{
-  position:fixed;z-index:60;top:0;right:0;
-  height:100dvh;width:min(390px,91vw);
+  position:fixed;z-index:60;top:0;right:0;height:100dvh;width:min(390px,91vw);
   background:var(--surface);border-left:1px solid var(--line);
-  box-shadow:-25px 0 80px rgba(0,0,0,.2);
-  transform:translateX(105%);
-  transition:.42s cubic-bezier(.15,.85,.3,1);
-  padding:22px;overflow:auto;
+  box-shadow:-25px 0 80px rgba(0,0,0,.2);transform:translateX(105%);
+  transition:.42s cubic-bezier(.15,.85,.3,1);padding:22px;overflow:auto;
 }
-
 .drawer.open{transform:translateX(0);}
 
 .dh{display:flex;align-items:center;justify-content:space-between;}
 .dh h2{font-size:17px;font-weight:900;}
 
 .close{
-  width:43px;height:43px;border:0;border-radius:15px;
-  background:var(--surface2);color:var(--text);
-  display:grid;place-items:center;transition:.2s;
+  width:43px;height:43px;border:0;border-radius:15px;background:var(--surface2);
+  color:var(--text);display:grid;place-items:center;transition:.2s;
 }
-
 .close svg{width:20px;height:20px;fill:currentColor;}
-
 .close:hover{background:var(--pink);color:#fff;transform:rotate(90deg);}
 
 .search{
-  width:100%;height:48px;margin:16px 0;
-  border:1px solid var(--line);border-radius:17px;
-  background:var(--surface2);color:var(--text);
+  width:100%;height:48px;margin:16px 0;border:1px solid var(--line);
+  border-radius:17px;background:var(--surface2);color:var(--text);
   padding:0 16px;outline:0;font-size:11px;
 }
-
-.search:focus{
-  border-color:var(--pink);
-  box-shadow:0 0 0 4px rgba(250,71,121,.1);
-}
-
+.search:focus{border-color:var(--pink);box-shadow:0 0 0 4px rgba(250,71,121,.1);}
 .search::placeholder{color:var(--soft);}
 
 .list{display:grid;gap:7px;}
 
 .item{
-  display:flex;align-items:center;gap:10px;width:100%;
-  text-align:right;padding:10px 12px;
-  border:1px solid var(--line);border-radius:17px;
+  display:flex;align-items:center;gap:10px;width:100%;text-align:right;
+  padding:10px 12px;border:1px solid var(--line);border-radius:17px;
   background:transparent;color:var(--text);transition:.2s;
 }
-
 .item:hover{background:var(--surface2);transform:translateX(-3px);}
-
-.item.active{
-  background:var(--surface2);border-color:var(--pink2);
-  color:var(--pink);box-shadow:0 7px 22px rgba(250,71,121,.1);
-}
+.item.active{background:var(--surface2);border-color:var(--pink2);color:var(--pink);box-shadow:0 7px 22px rgba(250,71,121,.1);}
 
 .num{
-  width:31px;height:31px;flex:0 0 31px;
-  display:grid;place-items:center;border-radius:11px;
-  background:var(--surface2);color:var(--pink);
+  width:31px;height:31px;flex:0 0 31px;display:grid;place-items:center;
+  border-radius:11px;background:var(--surface2);color:var(--pink);
   font-size:9px;font-weight:900;
 }
-
 .item strong{font-size:11px;font-weight:800;}
-
-.item small{
-  display:block;color:var(--soft);font-size:8px;
-  margin-top:2px;font-weight:500;
-}
+.item small{display:block;color:var(--soft);font-size:8px;margin-top:2px;font-weight:500;}
 
 /* MOBILE */
 @media(max-width:600px){
@@ -453,20 +339,19 @@ main{width:min(860px,100%);margin:auto;padding:102px 18px 42px;}
   .cols{grid-template-columns:1fr 1fr;}
   .msg p{font-size:12px;}
   .box p{font-size:9px;}
+  .ayah-item .arabic{font-size:18px;}
+  .ayah-list{max-height:480px;}
 }
 
 @media(max-width:410px){
   .cols{grid-template-columns:1fr;}
   .hero h1{font-size:28px;}
   .inside{padding:20px 16px 16px;}
+  .ayah-item .arabic{font-size:17px;line-height:2.4;}
 }
 
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    scroll-behavior:auto!important;
-    animation:none!important;
-    transition:none!important;
-  }
+  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important;}
 }
 </style>
 </head>
@@ -478,7 +363,6 @@ main{width:min(860px,100%);margin:auto;padding:102px 18px 42px;}
     <img src="https://uploadkon.ir/uploads/1ae827_26Quizly.png" alt="Quizly">
     <span>Quizly Pro · جزء ۳۰</span>
   </div>
-
   <div class="actions">
     <button class="icon-btn" id="themeToggle" aria-label="تغییر تم"></button>
     <button class="icon-btn" id="open" aria-label="باز کردن فهرست"></button>
@@ -492,18 +376,15 @@ main{width:min(860px,100%);margin:auto;padding:102px 18px 42px;}
     <h2>فهرست ۳۷ سوره</h2>
     <button class="close" id="close" aria-label="بستن"></button>
   </div>
-
   <input class="search" id="search" placeholder="نام سوره را جستجو کن..." autocomplete="off">
-
   <div class="list" id="list"></div>
 </aside>
 
 <main>
-
   <section class="hero">
     <span class="tag">ویژهٔ امتحان پیام نور · تستی چهارگزینه‌ای</span>
     <h1>فلش‌کارت‌های جزء ۳۰</h1>
-    <p>پیام اصلی · آیات کلیدی · کلمات منحصربه‌فرد · سورهٔ قبل و بعد</p>
+    <p>پیام اصلی · آیات کلیدی · کلمات منحصربه‌فرد · متن کامل با ترجمه</p>
   </section>
 
   <div class="progress-wrap">
@@ -511,10 +392,7 @@ main{width:min(860px,100%);margin:auto;padding:102px 18px 42px;}
       <span id="counter"></span>
       <span class="pct" id="pct"></span>
     </div>
-
-    <div class="bar">
-      <i id="progress"></i>
-    </div>
+    <div class="bar"><i id="progress"></i></div>
   </div>
 
   <div class="mode-bar">
@@ -526,128 +404,770 @@ main{width:min(860px,100%);margin:auto;padding:102px 18px 42px;}
       <svg viewBox="0 0 24 24"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></svg>
       <span>مرور سریع</span>
     </button>
+    <button class="mode-btn" data-mode="verses">
+      <svg viewBox="0 0 24 24"><path d="M4 6h2v12H4V6zm4 0h2v12H8V6zm4 0h2v12h-2V6zm4 0h2v12h-2V6zm4 0h2v12h-2V6z"/></svg>
+      <span>آیه‌ها</span>
+    </button>
   </div>
 
   <div class="deck" id="deck"></div>
 
-  <div class="hint">
-    کارت را با انگشت یا ماوس به چپ و راست بکش
-  </div>
+  <div class="hint">کارت را با انگشت یا ماوس به چپ و راست بکش</div>
 
   <div class="controls">
     <button class="ctrl" id="prev" aria-label="قبلی"></button>
     <button class="ctrl main" id="random" aria-label="تصادفی"></button>
     <button class="ctrl" id="next" aria-label="بعدی"></button>
   </div>
-
 </main>
 
 <script>
 (() => {
 
+/* ============================================================
+   دیتای ۳۷ سوره — با متن کامل آیات و ترجمه (آفلاین)
+   ============================================================ */
 const D = [
-{"n":78,"name":"نبأ","meaning":"خبر بزرگ","message":"معاد و رستاخیز؛ نشانه‌های قدرت خدا و سرانجام نیکوکاران و طغیانگران.","key":"عَمَّ یَتَسَاءَلُون","verses":"40","type":"مکی","firstWord":"عَمَّ","lastWord":"حِسَابًا","lastVerse":"إِنَّ لِلْمُتَّقِینَ مَفَازًا","versesOrder":["۱. عَمَّ یَتَسَاءَلُونَ","۲. عَنِ النَّبَإِ الْعَظِیمِ","۳. الَّذِی هُمْ فِیهِ مُخْتَلِفُونَ","۴. کَلَّا سَیَعْلَمُونَ"],"before":"مرسلات (خارج جزء)","after":"نازعات","sharedWords":["کَلَّا"],"uniqueWords":["مَفَازًا","أَوْتَادًا"],"repeatWords":"کَلَّا ۱۹ بار","prophets":"—"},
-{"n":79,"name":"نازعات","meaning":"برکنندگان","message":"اثبات قیامت؛ داستان موسی و فرعون؛ زمان قیامت فقط نزد خداست.","key":"فرعون نمونه طغیان است.","verses":"46","type":"مکی","firstWord":"وَالنَّازِعَاتِ","lastWord":"الْجَنَّةَ","lastVerse":"فَإِنَّ الْجَنَّةَ هِیَ الْمَأْوَى","versesOrder":["۱. وَالنَّازِعَاتِ غَرْقًا","۲. وَالنَّاشِطَاتِ نَشْطًا","۳. وَالسَّابِحَاتِ سَبْحًا","۴. فَالسَّابِقَاتِ سَبْقًا"],"before":"نبأ","after":"عبس","sharedWords":["قُلُوبٌ (با مطففین)","الْجَحِیمِ (با تکاثر، عبس، تکویر)"],"uniqueWords":["النَّازِعَاتِ","الرَّاجِفَةُ","الرَّادِفَةُ"],"repeatWords":"—","prophets":"موسی"},
-{"n":80,"name":"عبس","meaning":"چهره درهم کشید","message":"اهمیت دادن به حقیقت‌جو و بی‌اعتنایی به جایگاه اجتماعی افراد.","key":"ملاک هدایت، حقیقت‌جویی است.","verses":"42","type":"مکی","firstWord":"عَبَسَ","lastWord":"الْکَفَرَةُ الْفَجَرَةُ","lastVerse":"أُولَئِکَ هُمُ الْکَفَرَةُ الْفَجَرَةُ","versesOrder":["۱. عَبَسَ وَتَوَلَّى","۲. أَن جَاءَهُ الْأَعْمَى","۳. وَمَا یُدْرِیکَ لَعَلَّهُ یَزَّکَّى","۴. أَوْ یَذَّکَّرُ فَتَنفَعَهُ الذِّکْرَى"],"before":"نازعات","after":"تکویر","sharedWords":["الْجَحِیمِ (با تکاثر، نازعات، تکویر)","لَأُقْسِمُ (با بلد، تکویر، شمس)"],"uniqueWords":["عَبَسَ","أَعْمَى"],"repeatWords":"—","prophets":"—"},
-{"n":81,"name":"تکویر","meaning":"درهم پیچیده شدن","message":"تصویر دگرگونی جهان در قیامت و تأکید بر حقانیت وحی.","key":"إِذَا الشَّمْسُ کُوِّرَتْ","verses":"29","type":"مکی","firstWord":"إِذَا","lastWord":"تَذْهَبُونَ","lastVerse":"وَمَا تَشَاءُونَ إِلَّا أَن یَشَاءَ اللَّهُ رَبُّ الْعَالَمِینَ","versesOrder":["۱. إِذَا الشَّمْسُ کُوِّرَتْ","۲. وَإِذَا النُّجُومُ انکَدَرَتْ","۳. وَإِذَا الْجِبَالُ سُیِّرَتْ","۴. وَإِذَا الْعِشَارُ عُطِّلَتْ"],"before":"عبس","after":"انفطار","sharedWords":["الْعَالَمِینَ (با مطففین)","الْجَحِیمِ (با تکاثر، نازعات، عبس)","لَأُقْسِمُ (با بلد، عبس، شمس)"],"uniqueWords":["کُوِّرَتْ","انکَدَرَتْ","سُیِّرَتْ"],"repeatWords":"—","prophets":"—"},
-{"n":82,"name":"انفطار","meaning":"شکافته شدن","message":"قیامت، آشکار شدن اعمال و ثبت آنها توسط فرشتگان.","key":"کِراماً کاتِبین","verses":"19","type":"مکی","firstWord":"إِذَا","lastWord":"بِالدِّینِ","lastVerse":"یَوْمَ لَا یَمْلِکُ نَفْسٌ لِّنَفْسٍ شَیْئًا وَالْأَمْرُ یَوْمَئِذٍ لِّلَّهِ","versesOrder":["۱. إِذَا السَّمَاءُ انفَطَرَتْ","۲. وَإِذَا الْکَوَاکِبُ انتَثَرَتْ","۳. وَإِذَا الْبِحَارُ فُجِّرَتْ","۴. وَإِذَا الْقُبُورُ بُعْثِرَتْ"],"before":"تکویر","after":"مطففین","sharedWords":["إِنَّ الْأَبْرَارَ (با مطففین)"],"uniqueWords":["انفَطَرَتْ","انتَثَرَتْ","فُجِّرَتْ"],"repeatWords":"بِالدِّینِ ۱ بار","prophets":"—"},
-{"n":83,"name":"مطففین","meaning":"کم‌فروشان","message":"هشدار به کم‌فروشی و فساد اقتصادی و بیان سرانجام فاجران و نیکوکاران.","key":"وَیْلٌ لِلْمُطَفِّفینَ","verses":"36","type":"مکی","firstWord":"وَیْلٌ","lastWord":"یَضْحَکُونَ","lastVerse":"هَلْ ثُوِّبَ الْکُفَّارُ مَا کَانُوا یَفْعَلُونَ","versesOrder":["۱. وَیْلٌ لِّلْمُطَفِّفِینَ","۲. الَّذِینَ إِذَا اکْتَالُوا عَلَى النَّاسِ یَسْتَوْفُونَ","۳. وَإِذَا کَالُوهُمْ أَوْ وَزَنُوهُمْ یُخْسِرُونَ","۴. أَلَا یَظُنُّ أُولَئِکَ أَنَّهُم مَّبْعُوثُونَ"],"before":"انفطار","after":"انشقاق","sharedWords":["الْعَالَمِینَ (با تکویر)","إِنَّ الْأَبْرَارَ (با انفطار)","قُلُوبٌ (با نازعات)"],"uniqueWords":["الْمُطَفِّفِینَ","سِجِّینٍ","عِلِّیِّینَ","یَتَنَافَسِ"],"repeatWords":"—","prophets":"—"},
-{"n":84,"name":"انشقاق","meaning":"شکافته شدن","message":"قیامت و تقسیم انسان‌ها بر اساس کارنامه اعمال.","key":"نامه از راست=نجات؛ از پشت سر=سرانجام سخت.","verses":"25","type":"مکی","firstWord":"إِذَا","lastWord":"الْکَافِرُونَ","lastVerse":"وَاللَّهُ أَعْلَمُ بِمَا یُوعُونَ","versesOrder":["۱. إِذَا السَّمَاءُ انشَقَّتْ","۲. وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ","۳. وَإِذَا الْأَرْضُ مُدَّتْ","۴. وَأَلْقَتْ مَا فِیهَا وَتَخَلَّتْ"],"before":"مطففین","after":"بروج","sharedWords":["لَأُقْسِمُ (احتمالاً)"],"uniqueWords":["انشَقَّتْ","کَادِحٌ","کَدْحًا"],"repeatWords":"—","prophets":"—"},
-{"n":85,"name":"بروج","meaning":"برج‌ها","message":"پایداری مؤمنان در برابر شکنجه و کیفر ستمگران.","key":"اصحاب الاخدود نماد ایستادگی‌اند.","verses":"22","type":"مکی","firstWord":"وَالسَّمَاءِ","lastWord":"مَحْفُوظٍ","lastVerse":"فِی لَوْحٍ مَّحْفُوظٍ","versesOrder":["۱. وَالسَّمَاءِ ذَاتِ الْبُرُوجِ","۲. وَالْیَوْمِ الْمَوْعُودِ","۳. وَشَاهِدٍ وَمَشْهُودٍ","۴. قُتِلَ أَصْحَابُ الْأُخْدُودِ"],"before":"انشقاق","after":"طارق","sharedWords":["—"],"uniqueWords":["الْبُرُوجِ","الْأُخْدُودِ"],"repeatWords":"—","prophets":"—"},
-{"n":86,"name":"طارق","meaning":"کوبنده شب","message":"قدرت خدا بر آفرینش انسان و زنده‌کردن دوباره؛ حقانیت قرآن.","key":"النجم الثاقب","verses":"17","type":"مکی","firstWord":"وَالسَّمَاءِ","lastWord":"رُوَيْدًا","lastVerse":"فَمَهِّلِ الْکَافِرِینَ أَمْهِلْهُمْ رُوَيْدًا","versesOrder":["۱. وَالسَّمَاءِ وَالطَّارِقِ","۲. وَمَا أَدْرَاکَ مَا الطَّارِقُ","۳. النَّجْمُ الثَّاقِبُ","۴. إِن کُلُّ نَفْسٍ لَّمَّا عَلَیْهَا حَافِظٌ"],"before":"بروج","after":"اعلی","sharedWords":["خُنَّع (با عادیات)"],"uniqueWords":["الطَّارِقُ","الثَّاقِبُ","دَافِقٍ"],"repeatWords":"—","prophets":"—"},
-{"n":87,"name":"اعلی","meaning":"والاتر","message":"تسبیح خدا، یادآوری و تزکیه و برتری آخرت.","key":"قَدْ أَفْلَحَ مَن تَزَکّى","verses":"19","type":"مکی","firstWord":"سَبِّحِ","lastWord":"الْأُولَى","lastVerse":"صُحُفِ إِبْرَاهِیمَ وَمُوسَى","versesOrder":["۱. سَبِّحِ اسْمَ رَبِّکَ الْأَعْلَى","۲. الَّذِی خَلَقَ فَسَوَّى","۳. وَالَّذِی قَدَّرَ فَهَدَى","۴. وَالَّذِی أَخْرَجَ الْمَرْعَى"],"before":"طارق","after":"غاشیه","sharedWords":["—"],"uniqueWords":["سَبِّحِ","تَزَکَّى"],"repeatWords":"—","prophets":"ابراهیم، موسی"},
-{"n":88,"name":"غاشیه","meaning":"فراگیرنده","message":"قیامت و دو گروه اهل سعادت و شقاوت؛ دعوت به تفکر در آفرینش.","key":"چهار نشانه تفکر: شتر، آسمان، کوه، زمین.","verses":"26","type":"مکی","firstWord":"هَلْ","lastWord":"حِسَابَهُمْ","lastVerse":"ثُمَّ إِنَّ عَلَیْنَا حِسَابَهُم","versesOrder":["۱. هَلْ أَتَاکَ حَدِیثُ الْغَاشِیَةِ","۲. وُجُوهٌ یَوْمَئِذٍ خَاشِعَةٌ","۳. عَامِلَةٌ نَّاصِبَةٌ","۴. تَصْلَى نَارًا حَامِیَةً"],"before":"اعلی","after":"فجر","sharedWords":["خَاشِعَةٌ (با قارعه، نازعات)"],"uniqueWords":["الْغَاشِیَةِ","خَاشِعَةٌ","الْإِبِلِ"],"repeatWords":"—","prophets":"—"},
-{"n":89,"name":"فجر","meaning":"سپیده","message":"هشدار به سرکشان و نقد نگاه مادی به نعمت و فقر.","key":"یَا أَیَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ","verses":"30","type":"مکی","firstWord":"وَالْفَجْرِ","lastWord":"بِرَبِّهِ","lastVerse":"ارْجِعِی إِلَى رَبِّکِ رَاضِیَةً مَّرْضِیَّةً","versesOrder":["۱. وَالْفَجْرِ","۲. وَلَیَالٍ عَشْرٍ","۳. وَالشَّفْعِ وَالْوَتْرِ","۴. وَاللَّیْلِ إِذَا یَسْرِ"],"before":"غاشیه","after":"بلد","sharedWords":["أَحَدٌ (با بلد، توحید)"],"uniqueWords":["وَالْفَجْرِ","الْمُطْمَئِنَّةُ","یَسْرِ"],"repeatWords":"—","prophets":"—"},
-{"n":90,"name":"بلد","meaning":"شهر","message":"انسان در رنج است و راه رستگاری از مسئولیت و عبور از «عقبه» می‌گذرد.","key":"عَقَبَه راه دشوار نیکی است.","verses":"20","type":"مکی","firstWord":"لَا","lastWord":"مُؤْصَدَةٌ","lastVerse":"عَلَیْهِمْ نَارٌ مُّؤْصَدَةٌ","versesOrder":["۱. لَا أُقْسِمُ بِهَذَا الْبَلَدِ","۲. وَأَنتَ حِلٌّ بِهَذَا الْبَلَدِ","۳. وَوَالِدٍ وَمَا وَلَدَ","۴. لَقَدْ خَلَقْنَا الْإِنسَانَ فِی کَبَدٍ"],"before":"فجر","after":"شمس","sharedWords":["أَحَدٌ (با فجر، توحید)","لَأُقْسِمُ (با تکویر، عبس، شمس)"],"uniqueWords":["الْبَلَدِ","الْعَقَبَةَ","مُّؤْصَدَةٌ"],"repeatWords":"—","prophets":"—"},
-{"n":91,"name":"شمس","meaning":"خورشید","message":"تزکیه نفس در برابر آلودگی اخلاقی؛ داستان ثمود نمونه سرکشی است.","key":"قَدْ أَفْلَحَ مَن زَکَّاهَا","verses":"15","type":"مکی","firstWord":"وَالشَّمْسِ","lastWord":"عُقْبَاهَا","lastVerse":"وَلَا یَخَافُ عُقْبَاهَا","versesOrder":["۱. وَالشَّمْسِ وَضُحَاهَا","۲. وَالْقَمَرِ إِذَا تَلَاهَا","۳. وَالنَّهَارِ إِذَا جَلَّاهَا","۴. وَاللَّیْلِ إِذَا یَغْشَاهَا"],"before":"بلد","after":"لیل","sharedWords":["لَأُقْسِمُ (با بلد، تکویر، عبس)"],"uniqueWords":["ضُحَاهَا","تَزْکِیَة","سَقْیَاهَا","عُقْبَاهَا"],"repeatWords":"—","prophets":"—"},
-{"n":92,"name":"لیل","meaning":"شب","message":"دو مسیر متضاد انسان: بخشش و تقوا در برابر بخل و تکذیب.","key":"إِنَّ سَعْیَکُمْ لَشَتَّى","verses":"21","type":"مکی","firstWord":"وَاللَّیْلِ","lastWord":"وَتَرَاضَى","lastVerse":"وَلَسَوْفَ یَرْضَى","versesOrder":["۱. وَاللَّیْلِ إِذَا یَغْشَى","۲. وَالنَّهَارِ إِذَا تَجَلَّى","۳. وَمَا خَلَقَ الذَّکَرَ وَالْأُنثَى","۴. إِنَّ سَعْیَکُمْ لَشَتَّى"],"before":"شمس","after":"ضحی","sharedWords":["—"],"uniqueWords":["یَغْشَى","لَشَتَّى","بِالْحُسْنَى"],"repeatWords":"—","prophets":"—"},
-{"n":93,"name":"ضحی","meaning":"روشنایی صبح","message":"تسلی پیامبر و یادآوری لطف خدا و سفارش به یتیم و سائل.","key":"مَا وَدَّعَکَ رَبُّکَ وَمَا قَلَى","verses":"11","type":"مکی","firstWord":"وَالضُّحَى","lastWord":"فَحَدِّثْ","lastVerse":"وَأَمَّا بِنِعْمَةِ رَبِّکَ فَحَدِّثْ","versesOrder":["۱. وَالضُّحَى","۲. وَاللَّیْلِ إِذَا سَجَى","۳. مَا وَدَّعَکَ رَبُّکَ وَمَا قَلَى","۴. وَلَلْآخِرَةُ خَیْرٌ لَّکَ مِنَ الْأُولَى"],"before":"لیل","after":"شرح","sharedWords":["—"],"uniqueWords":["وَالضُّحَى","قَلَى","فَحَدِّثْ"],"repeatWords":"—","prophets":"—"},
-{"n":94,"name":"شرح","meaning":"گشایش","message":"یادآوری نعمت‌های خدا و پیوند سختی با آسانی.","key":"فَإِنَّ مَعَ الْعُسْرِ یُسْراً","verses":"8","type":"مکی","firstWord":"أَلَمْ","lastWord":"فَارْغَبْ","lastVerse":"وَإِلَى رَبِّکَ فَارْغَبْ","versesOrder":["۱. أَلَمْ نَشْرَحْ لَکَ صَدْرَکَ","۲. وَوَضَعْنَا عَنکَ وِزْرَکَ","۳. الَّذِی أَنقَضَ ظَهْرَکَ","۴. وَرَفَعْنَا لَکَ ذِکْرَکَ"],"before":"ضحی","after":"تین","sharedWords":["—"],"uniqueWords":["نَشْرَحْ","فَارْغَبْ"],"repeatWords":"یُسْرًا ۲ بار","prophets":"—"},
-{"n":95,"name":"تین","meaning":"انجیر","message":"انسان در بهترین ساختار آفریده شده و با بی‌ایمانی سقوط می‌کند.","key":"لَقَدْ خَلَقْنَا الْإِنسَانَ فِی أَحْسَنِ تَقْوِیمٍ","verses":"8","type":"مکی","firstWord":"وَالتِّینِ","lastWord":"الْحَاکِمِینَ","lastVerse":"أَلَیْسَ اللَّهُ بِأَحْکَمِ الْحَاکِمِینَ","versesOrder":["۱. وَالتِّینِ وَالزَّیْتُونِ","۲. وَطُورِ سِینِینَ","۳. وَهَذَا الْبَلَدِ الْأَمِینِ","۴. لَقَدْ خَلَقْنَا الْإِنسَانَ فِی أَحْسَنِ تَقْوِیمٍ"],"before":"شرح","after":"علق","sharedWords":["—"],"uniqueWords":["وَالتِّینِ","سِینِینَ","تَقْوِیمٍ","سَافِلِینَ"],"repeatWords":"—","prophets":"—"},
-{"n":96,"name":"علق","meaning":"علق / خون بسته","message":"آغاز وحی و دعوت به خواندن؛ علم و قلم در برابر طغیان.","key":"اقْرَأْ؛ آیات ۱ تا ۵ آغاز وحی مشهورند.","verses":"19","type":"مکی","firstWord":"اقْرَأْ","lastWord":"وَاقْتَرِبْ","lastVerse":"وَاسْجُدْ وَاقْتَرِب","versesOrder":["۱. اقْرَأْ بِاسْمِ رَبِّکَ الَّذِی خَلَقَ","۲. خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ","۳. اقْرَأْ وَرَبُّکَ الْأَکْرَمُ","۴. الَّذِی عَلَّمَ بِالْقَلَمِ"],"before":"تین","after":"قدر","sharedWords":["—"],"uniqueWords":["اقْرَأْ","عَلَقٍ","النَّاصِیَةِ","الزَّبَانِیَةِ"],"repeatWords":"—","prophets":"—"},
-{"n":97,"name":"قدر","meaning":"اندازه / تقدیر","message":"عظمت شب قدر و نزول قرآن و برتری آن بر هزار ماه.","key":"لَیْلَةُ الْقَدْرِ خَیْرٌ مِنْ أَلْفِ شَهْرٍ","verses":"5","type":"مکی","firstWord":"إِنَّا","lastWord":"الْفَجْرِ","lastVerse":"سَلَامٌ هِیَ حَتَّى مَطْلَعِ الْفَجْرِ","versesOrder":["۱. إِنَّا أَنزَلْنَاهُ فِی لَیْلَةِ الْقَدْرِ","۲. وَمَا أَدْرَاکَ مَا لَیْلَةُ الْقَدْرِ","۳. لَیْلَةُ الْقَدْرِ خَیْرٌ مِّنْ أَلْفِ شَهْرٍ","۴. تَنَزَّلُ الْمَلَائِکَةُ وَالرُّوحُ فِیهَا بِإِذْنِ رَبِّهِم"],"before":"علق","after":"بینه","sharedWords":["—"],"uniqueWords":["الْقَدْرِ","أَلْفِ شَهْرٍ"],"repeatWords":"—","prophets":"—"},
-{"n":98,"name":"بینه","meaning":"دلیل روشن","message":"پیامبر و قرآن به‌عنوان بینه و تقسیم انسان‌ها به خیرالبریه و شرالبریه.","key":"خَیْرُ الْبَرِیَّة / شَرُّ الْبَرِیَّة","verses":"8","type":"مدنی","firstWord":"لَمْ","lastWord":"رَبَّهُ","lastVerse":"ذَلِکَ لِمَنْ خَشِیَ رَبَّهُ","versesOrder":["۱. لَمْ یَکُنِ الَّذِینَ کَفَرُوا","۲. رَسُولٌ مِّنَ اللَّهِ یَتْلُو صُحُفًا مُّطَهَّرَةً","۳. فِیهَا کُتُبٌ قَیِّمَةٌ","۴. وَمَا تَفَرَّقَ الَّذِینَ أُوتُوا الْکِتَابَ"],"before":"قدر","after":"زلزله","sharedWords":["—"],"uniqueWords":["الْبَرِیَّة","مُّطَهَّرَةً","رَضِيَ اللَّهُ"],"repeatWords":"—","prophets":"—"},
-{"n":99,"name":"زلزله","meaning":"زلزله","message":"در قیامت زمین دگرگون و همه اعمال حتی به اندازه ذره آشکار می‌شود.","key":"مِثْقَالَ ذَرَّة؛ هیچ عمل کوچکی بی‌حساب نیست.","verses":"8","type":"مدنی","firstWord":"إِذَا","lastWord":"یَرَهُ","lastVerse":"وَمَن یَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا یَرَهُ","versesOrder":["۱. إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا","۲. وَأَخْرَجَتِ الْأَرْضُ أَثْقَالَهَا","۳. وَقَالَ الْإِنسَانُ مَا لَهَا","۴. یَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا"],"before":"بینه","after":"عادیات","sharedWords":["—"],"uniqueWords":["زُلْزِلَتِ","أَثْقَالَهَا","مِثْقَالَ ذَرَّةٍ"],"repeatWords":"—","prophets":"—"},
-{"n":100,"name":"عادیات","meaning":"دوندگان","message":"تصویر اسب‌های تیزرو و سپس نکوهش ناسپاسی و دلبستگی شدید به مال.","key":"إِنَّ الْإِنسَانَ لِرَبِّهِ لَکَنُودٌ","verses":"11","type":"مکی","firstWord":"وَالْعَادِیَاتِ","lastWord":"لَخَبِیرٌ","lastVerse":"إِنَّ رَبَّهُم بِهِمْ یَوْمَئِذٍ لَّخَبِیرٌ","versesOrder":["۱. وَالْعَادِیَاتِ ضَبْحًا","۲. فَالْمُورِیَاتِ قَدْحًا","۳. فَالْمُغِیرَاتِ صُبْحًا","۴. فَأَثَرْنَ بِهِ نَقْعًا"],"before":"زلزله","after":"قارعه","sharedWords":["خُنَّع (با طارق)"],"uniqueWords":["وَالْعَادِیَاتِ","ضَبْحًا","لَکَنُودٌ"],"repeatWords":"—","prophets":"—"},
-{"n":101,"name":"قارعه","meaning":"کوبنده","message":"هول قیامت و سنجش اعمال در میزان الهی.","key":"سنگینی میزان=خوشی؛ سبکی میزان=هاویه.","verses":"11","type":"مکی","firstWord":"الْقَارِعَةُ","lastWord":"هَاوِيَهْ","lastVerse":"فَأُمُّهُ هَاوِيَةٌ","versesOrder":["۱. الْقَارِعَةُ","۲. مَا الْقَارِعَةُ","۳. وَمَا أَدْرَاکَ مَا الْقَارِعَةُ","۴. یَوْمَ یَکُونُ النَّاسُ کَالْفَرَاشِ الْمَبْثُوثِ"],"before":"عادیات","after":"تکاثر","sharedWords":["خَاشِعَةٌ (با غاشیه، نازعات)"],"uniqueWords":["الْقَارِعَةُ","هَاوِيَةٌ","الْمَبْثُوثِ"],"repeatWords":"—","prophets":"—"},
-{"n":102,"name":"تکاثر","meaning":"فزون‌طلبی","message":"رقابت در زیاد کردن مال و امکانات انسان را از حقیقت غافل می‌کند.","key":"أَلْهَاکُمُ التَّکَاثُرُ","verses":"8","type":"مکی","firstWord":"أَلْهَاکُمُ","lastWord":"النَّعِیمِ","lastVerse":"ثُمَّ لَتُسْأَلُنَّ یَوْمَئِذٍ عَنِ النَّعِیمِ","versesOrder":["۱. أَلْهَاکُمُ التَّکَاثُرُ","۲. حَتَّى زُرْتُمُ الْمَقَابِرَ","۳. کَلَّا سَوْفَ تَعْلَمُونَ","۴. ثُمَّ کَلَّا سَوْفَ تَعْلَمُونَ"],"before":"قارعه","after":"عصر","sharedWords":["الْجَحِیمِ (با نازعات، عبس، تکویر)"],"uniqueWords":["أَلْهَاکُمُ","التَّکَاثُرُ"],"repeatWords":"—","prophets":"—"},
-{"n":103,"name":"عصر","meaning":"زمان","message":"تنها راه نجات: ایمان، عمل صالح، سفارش به حق و سفارش به صبر.","key":"ایمان + عمل صالح + حق + صبر","verses":"3","type":"مکی","firstWord":"وَالْعَصْرِ","lastWord":"بِالصَّبْرِ","lastVerse":"وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ","versesOrder":["۱. وَالْعَصْرِ","۲. إِنَّ الْإِنسَانَ لَفِی خُسْرٍ","۳. إِلَّا الَّذِینَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ"],"before":"تکاثر","after":"همزه","sharedWords":["—"],"uniqueWords":["وَالْعَصْرِ","خُسْرٍ","بِالصَّبْرِ"],"repeatWords":"—","prophets":"—"},
-{"n":104,"name":"همزه","meaning":"عیب‌جو","message":"نکوهش عیب‌جویی و تحقیر و جمع مال با خیال جاودانگی.","key":"الْحُطَمَة نام آتش جهنم در سوره است.","verses":"9","type":"مکی","firstWord":"وَیْلٌ","lastWord":"مُّؤْصَدَةٌ","lastVerse":"إِنَّهَا عَلَیْهِم مُّؤْصَدَةٌ","versesOrder":["۱. وَیْلٌ لِّکُلِّ هُمَزَةٍ لُّمَزَةٍ","۲. الَّذِی جَمَعَ مَالًا وَعَدَّدَهُ","۳. یَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ","۴. کَلَّا لَیُنبَذَنَّ فِی الْحُطَمَةِ"],"before":"عصر","after":"فیل","sharedWords":["—"],"uniqueWords":["هُمَزَةٍ","لُّمَزَةٍ","الْحُطَمَةِ","مُّؤْصَدَةٌ"],"repeatWords":"—","prophets":"—"},
-{"n":105,"name":"فیل","meaning":"فیل","message":"یادآوری نابودی سپاه فیل و حفاظت خدا از کعبه.","key":"أَصْحَابُ الْفِیل / طَیْرًا أَبَابِیل","verses":"5","type":"مکی","firstWord":"أَلَمْ","lastWord":"مَّأْكُولٍ","lastVerse":"فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ","versesOrder":["۱. أَلَمْ تَرَ کَیْفَ فَعَلَ رَبُّکَ بِأَصْحَابِ الْفِیلِ","۲. أَلَمْ یَجْعَلْ کَیْدَهُمْ فِی تَضْلِیلٍ","۳. وَأَرْسَلَ عَلَیْهِمْ طَیْرًا أَبَابِیلَ","۴. تَرْمِیهِم بِحِجَارَةٍ مِّن سِجِّیلٍ"],"before":"همزه","after":"قریش","sharedWords":["—"],"uniqueWords":["الْفِیلِ","أَبَابِیلَ","سِجِّیلٍ"],"repeatWords":"—","prophets":"—"},
-{"n":106,"name":"قریش","meaning":"قریش","message":"یادآوری امنیت و روزی قریش و دعوت آنان به عبادت پروردگار کعبه.","key":"نعمت امنیت و رزق باید به عبادت خدا منجر شود.","verses":"4","type":"مکی","firstWord":"لِإِیلَافِ","lastWord":"خَوْفٍ","lastVerse":"الَّذِی أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ","versesOrder":["۱. لِإِیلَافِ قُرَیْشٍ","۲. إِیلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّیْفِ","۳. فَلْیَعْبُدُوا رَبَّ هَذَا الْبَیْتِ","۴. الَّذِی أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ"],"before":"فیل","after":"ماعون","sharedWords":["—"],"uniqueWords":["لِإِیلَافِ","قُرَیْشٍ","الشِّتَاءِ"],"repeatWords":"—","prophets":"—"},
-{"n":107,"name":"ماعون","meaning":"کمک کوچک","message":"نشانه‌های تکذیب دین: بی‌توجهی به یتیم و مسکین و عبادت ریاکارانه.","key":"الماعون=کمک‌ها و وسایل مورد نیاز مردم.","verses":"7","type":"مکی","firstWord":"أَرَأَیْتَ","lastWord":"الْمَاعُونَ","lastVerse":"وَيَمْنَعُونَ الْمَاعُونَ","versesOrder":["۱. أَرَأَیْتَ الَّذِی یُکَذِّبُ بِالدِّینِ","۲. فَذَلِکَ الَّذِی یَدُعُّ الْیَتِیمَ","۳. وَلَا یَحُضُّ عَلَى طَعَامِ الْمِسْکِینِ","۴. فَوَیْلٌ لِّلْمُصَلِّینَ"],"before":"قریش","after":"کوثر","sharedWords":["الَّذِینَ (دو بار در همین سوره)"],"uniqueWords":["الْمَاعُونَ","یَدُعُّ","سَاهُونَ"],"repeatWords":"الَّذِینَ ۲ بار","prophets":"—"},
-{"n":108,"name":"کوثر","meaning":"خیر فراوان","message":"اعطای خیر فراوان به پیامبر و فرمان نماز و قربانی و وعده شکست دشمن.","key":"إِنَّا أَعْطَیْنَاکَ الْکَوْثَرَ","verses":"3","type":"مکی","firstWord":"إِنَّا","lastWord":"الْأَبْتَرُ","lastVerse":"إِنَّ شَانِئَکَ هُوَ الْأَبْتَرُ","versesOrder":["۱. إِنَّا أَعْطَیْنَاکَ الْکَوْثَرَ","۲. فَصَلِّ لِرَبِّکَ وَانْحَرْ","۳. إِنَّ شَانِئَکَ هُوَ الْأَبْتَرُ"],"before":"ماعون","after":"کافرون","sharedWords":["—"],"uniqueWords":["الْکَوْثَرَ","وَانْحَرْ","الْأَبْتَرُ"],"repeatWords":"—","prophets":"—"},
-{"n":109,"name":"کافرون","meaning":"کافران","message":"مرزبندی روشن میان توحید و شرک و نفی سازش اعتقادی.","key":"لَکُمْ دِینُکُمْ وَلِیَ دِینِ","verses":"6","type":"مکی","firstWord":"قُلْ","lastWord":"دِینِ","lastVerse":"لَکُمْ دِینُکُمْ وَلِیَ دِینِ","versesOrder":["۱. قُلْ یَا أَیُّهَا الْکَافِرُونَ","۲. لَا أَعْبُدُ مَا تَعْبُدُونَ","۳. وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ","۴. وَلَا أَنَا عَابِدٌ مَّا عَبَدْتُمْ"],"before":"کوثر","after":"نصر","sharedWords":["—"],"uniqueWords":["الْکَافِرُونَ","عَابِدُونَ","دِینِ"],"repeatWords":"—","prophets":"—"},
-{"n":110,"name":"نصر","meaning":"یاری","message":"خبر از یاری خدا و فتح و فرمان تسبیح و استغفار پس از پیروزی.","key":"پس از پیروزی: تسبیح، حمد و استغفار.","verses":"3","type":"مدنی","firstWord":"إِذَا","lastWord":"تَوَّابًا","lastVerse":"إِنَّهُ کَانَ تَوَّابًا","versesOrder":["۱. إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ","۲. وَرَأَیْتَ النَّاسَ یَدْخُلُونَ فِی دِینِ اللَّهِ أَفْوَاجًا","۳. فَسَبِّحْ بِحَمْدِ رَبِّکَ وَاسْتَغْفِرْهُ"],"before":"کافرون","after":"مسد","sharedWords":["—"],"uniqueWords":["نَصْرُ","أَفْوَاجًا","تَوَّابًا"],"repeatWords":"—","prophets":"—"},
-{"n":111,"name":"مسد","meaning":"ریسمان لیف خرما","message":"نکوهش ابولهب و همسرش و بی‌اثر بودن مال و جایگاه در برابر حق.","key":"تَبَّتْ یَدَا أَبِی لَهَبٍ","verses":"5","type":"مکی","firstWord":"تَبَّتْ","lastWord":"مَسَدٍ","lastVerse":"فِی جِیدِهَا حَبْلٌ مِّن مَّسَدٍ","versesOrder":["۱. تَبَّتْ یَدَا أَبِی لَهَبٍ وَتَبَّ","۲. مَا أَغْنَى عَنْهُ مَالُهُ وَمَا کَسَبَ","۳. سَیَصْلَى نَارًا ذَاتَ لَهَبٍ","۴. وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ"],"before":"نصر","after":"اخلاص","sharedWords":["لَهَبٍ"],"uniqueWords":["تَبَّتْ","أَبِی لَهَبٍ","مَسَدٍ"],"repeatWords":"—","prophets":"—"},
-{"n":112,"name":"اخلاص","meaning":"خلوص و یکتایی","message":"تبیین فشرده توحید ناب و بی‌همتایی خدا.","key":"چهار کلید: احد، صمد، بی‌والدی، بی‌همتایی.","verses":"4","type":"مکی","firstWord":"قُلْ","lastWord":"أَحَدٌ","lastVerse":"وَلَمْ یَکُن لَّهُ کُفُوًا أَحَدٌ","versesOrder":["۱. قُلْ هُوَ اللَّهُ أَحَدٌ","۲. اللَّهُ الصَّمَدُ","۳. لَمْ یَلِدْ وَلَمْ یُولَدْ","۴. وَلَمْ یَکُن لَّهُ کُفُوًا أَحَدٌ"],"before":"مسد","after":"فلق","sharedWords":["أَحَدٌ (با فجر، بلد)"],"uniqueWords":["الصَّمَدُ","کُفُوًا"],"repeatWords":"—","prophets":"—"},
-{"n":113,"name":"فلق","meaning":"سپیده","message":"پناه بردن به خدا از شرور بیرونی و آشکار.","key":"قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ","verses":"5","type":"مکی","firstWord":"قُلْ","lastWord":"حَسَدَ","lastVerse":"وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ","versesOrder":["۱. قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ","۲. مِن شَرِّ مَا خَلَقَ","۳. وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ","۴. وَمِن شَرِّ النَّفَّاثَاتِ فِی الْعُقَدِ"],"before":"اخلاص","after":"ناس","sharedWords":["—"],"uniqueWords":["الْفَلَقِ","غَاسِقٍ","النَّفَّاثَاتِ"],"repeatWords":"—","prophets":"—"},
-{"n":114,"name":"ناس","meaning":"مردم","message":"پناه بردن به رب، ملک و اله مردم از شر وسوسه پنهان.","key":"رَبِّ النَّاس + مَلِکِ النَّاس + إِلَهِ النَّاس","verses":"6","type":"مکی","firstWord":"قُلْ","lastWord":"النَّاسِ","lastVerse":"مِنَ الْجِنَّةِ وَالنَّاسِ","versesOrder":["۱. قُلْ أَعُوذُ بِرَبِّ النَّاسِ","۲. مَلِکِ النَّاسِ","۳. إِلَهِ النَّاسِ","۴. مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ"],"before":"فلق","after":"— (آخرین سورهٔ قرآن)","sharedWords":["—"],"uniqueWords":["الْوَسْوَاسِ","الْخَنَّاسِ"],"repeatWords":"النَّاس ۵ بار","prophets":"—"}
+{"n":78,"name":"نبأ","meaning":"خبر بزرگ","message":"معاد و رستاخیز؛ نشانه‌های قدرت خدا و سرانجام نیکوکاران و طغیانگران.","key":"عَمَّ یَتَسَاءَلُون","verses":"40","type":"مکی","firstWord":"عَمَّ","lastWord":"حِسَابًا","lastVerse":"إِنَّ لِلْمُتَّقِینَ مَفَازًا","versesOrder":["۱. عَمَّ یَتَسَاءَلُونَ","۲. عَنِ النَّبَإِ الْعَظِیمِ","۳. الَّذِی هُمْ فِیهِ مُخْتَلِفُونَ","۴. کَلَّا سَیَعْلَمُونَ"],"before":"مرسلات (خارج جزء)","after":"نازعات","sharedWords":["کَلَّا"],"uniqueWords":["مَفَازًا","أَوْتَادًا"],"repeatWords":"کَلَّا ۱۹ بار","prophets":"—",
+"ayahs":[
+{"a":"عَمَّ يَتَسَاءَلُونَ","t":"درباره چه چیز از یکدیگر می‌پرسند؟"},
+{"a":"عَنِ النَّبَإِ الْعَظِيمِ","t":"درباره خبر بزرگ (رستاخیز)!"},
+{"a":"الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ","t":"همان خبری که در آن اختلاف دارند."},
+{"a":"كَلَّا سَيَعْلَمُونَ","t":"چنین نیست! به‌زودی خواهند دانست."},
+{"a":"ثُمَّ كَلَّا سَيَعْلَمُونَ","t":"باز هم چنین نیست! به‌زودی خواهند دانست."},
+{"a":"أَلَمْ نَجْعَلِ الْأَرْضَ مِهَادًا","t":"آیا زمین را گهواره‌ای (برای شما) قرار ندادیم؟"},
+{"a":"وَالْجِبَالَ أَوْتَادًا","t":"و کوه‌ها را میخ‌هایی (که زمین را نگه دارد)؟"},
+{"a":"وَخَلَقْنَاكُمْ أَزْوَاجًا","t":"و شما را جفت‌جفت آفریدیم."},
+{"a":"وَجَعَلْنَا نَوْمَكُمْ سُبَاتًا","t":"و خواب شما را مایه آرامش قرار دادیم."},
+{"a":"وَجَعَلْنَا اللَّيْلَ لِبَاسًا","t":"و شب را پوششی (برای شما) قرار دادیم."},
+{"a":"وَجَعَلْنَا النَّهَارَ مَعَاشًا","t":"و روز را برای تلاش و زندگی."},
+{"a":"وَبَنَيْنَا فَوْقَكُمْ سَبْعًا شِدَادًا","t":"و بالای سر شما هفت آسمان محکم بنا کردیم."},
+{"a":"وَجَعَلْنَا سِرَاجًا وَهَّاجًا","t":"و چراغی فروزان (خورشید) قرار دادیم."},
+{"a":"وَأَنزَلْنَا مِنَ الْمُعْصِرَاتِ مَاءً ثَجَّاجًا","t":"و از ابرها آب فراوان فرو ریختیم."},
+{"a":"لِّنُخْرِجَ بِهِ حَبًّا وَنَبَاتًا","t":"تا با آن دانه و گیاه برویانیم."},
+{"a":"وَجَنَّاتٍ أَلْفَافًا","t":"و باغ‌های درهم‌پیچیده."},
+{"a":"إِنَّ يَوْمَ الْفَصْلِ كَانَ مِيقَاتًا","t":"قطعاً روز جدایی میعادی است."},
+{"a":"يَوْمَ يُنفَخُ فِي الصُّورِ فَتَأْتُونَ أَفْوَاجًا","t":"روزی که در صور دمیده می‌شود و شما گروه‌گروه می‌آیید."},
+{"a":"وَفُتِحَتِ السَّمَاءُ فَكَانَتْ أَبْوَابًا","t":"و آسمان گشوده می‌شود و به‌صورت درهایی درمی‌آید."},
+{"a":"وَسُيِّرَتِ الْجِبَالُ فَكَانَتْ سَرَابًا","t":"و کوه‌ها به حرکت درمی‌آیند و چون سراب می‌شوند."},
+{"a":"إِنَّ جَهَنَّمَ كَانَتْ مَرْصَادًا","t":"قطعاً جهنم کمینگاهی است."},
+{"a":"لِّلطَّاغِينَ مَآبًا","t":"برای سرکشان بازگشتگاهی است."},
+{"a":"لَّابِثِينَ فِيهَا أَحْقَابًا","t":"زمان‌های طولانی در آن می‌مانند."},
+{"a":"لَّا يَذُوقُونَ فِيهَا بَرْدًا وَلَا شَرَابًا","t":"در آن نه خنکی می‌چشند و نه نوشیدنی."},
+{"a":"إِلَّا حَمِيمًا وَغَسَّاقًا","t":"مگر آب جوشان و چرک."},
+{"a":"جَزَاءً وِفَاقًا","t":"این جزایی مناسب (برای اعمالشان) است."},
+{"a":"إِنَّهُمْ كَانُوا لَا يَرْجُونَ حِسَابًا","t":"آنان هرگز به حساب (قیامت) امید نداشتند."},
+{"a":"وَكَذَّبُوا بِآيَاتِنَا كِذَّابًا","t":"و آیات ما را به‌شدت تکذیب کردند."},
+{"a":"وَكُلَّ شَيْءٍ أَحْصَيْنَاهُ كِتَابًا","t":"و ما همه چیز را در کتابی برشمرده‌ایم."},
+{"a":"فَذُوقُوا فَلَن نَّزِيدَكُمْ إِلَّا عَذَابًا","t":"پس بچشید! که جز عذاب چیزی بر شما نمی‌افزاییم."},
+{"a":"إِنَّ لِلْمُتَّقِينَ مَفَازًا","t":"قطعاً برای پرهیزگاران رستگاری است."},
+{"a":"حَدَائِقَ وَأَعْنَابًا","t":"باغ‌ها و انگورها."},
+{"a":"وَكَوَاعِبَ أَتْرَابًا","t":"و همسرانی همسن."},
+{"a":"وَكَأْسًا دِهَاقًا","t":"و جامی لبریز."},
+{"a":"لَّا يَسْمَعُونَ فِيهَا لَغْوًا وَلَا كِذَّابًا","t":"در آنجا نه بیهوده‌ای می‌شنوند و نه دروغی."},
+{"a":"جَزَاءً مِّن رَّبِّكَ عَطَاءً حِسَابًا","t":"پاداشی از پروردگارت و عطایی کافی."},
+{"a":"رَّبِّ السَّمَاوَاتِ وَالْأَرْضِ وَمَا بَيْنَهُمَا الرَّحْمَٰنِ ۖ لَا يَمْلِكُونَ مِنْهُ خِطَابًا","t":"پروردگار آسمان‌ها و زمین و آنچه میان آنهاست، خدای رحمان؛ و آنها (در آن روز) قدرت سخن گفتن با او را ندارند."},
+{"a":"يَوْمَ يَقُومُ الرُّوحُ وَالْمَلَائِكَةُ صَفًّا ۖ لَّا يَتَكَلَّمُونَ إِلَّا مَنْ أَذِنَ لَهُ الرَّحْمَٰنُ وَقَالَ صَوَابًا","t":"روزی که روح و فرشتگان به‌صف می‌ایستند؛ هیچ‌کس سخن نمی‌گوید مگر کسی که خدای رحمان به او اجازه دهد و سخن درست بگوید."},
+{"a":"ذَٰلِكَ الْيَوْمُ الْحَقُّ ۖ فَمَن شَاءَ اتَّخَذَ إِلَىٰ رَبِّهِ مَآبًا","t":"آن روز، روز حق است؛ پس هر که بخواهد، راهی به‌سوی پروردگارش برمی‌گزیند."},
+{"a":"إِنَّا أَنذَرْنَاكُمْ عَذَابًا قَرِيبًا يَوْمَ يَنظُرُ الْمَرْءُ مَا قَدَّمَتْ يَدَاهُ وَيَقُولُ الْكَافِرُ يَا لَيْتَنِي كُنتُ تُرَابًا","t":"ما شما را از عذاب نزدیکی بیم دادیم؛ روزی که انسان آنچه را با دست خود پیش فرستاده می‌بیند و کافر می‌گوید: ای کاش خاک بودم!"}
+]},
+
+{"n":79,"name":"نازعات","meaning":"برکنندگان","message":"اثبات قیامت؛ داستان موسی و فرعون؛ زمان قیامت فقط نزد خداست.","key":"فرعون نمونه طغیان است.","verses":"46","type":"مکی","firstWord":"وَالنَّازِعَاتِ","lastWord":"الْجَنَّةَ","lastVerse":"فَإِنَّ الْجَنَّةَ هِیَ الْمَأْوَى","versesOrder":["۱. وَالنَّازِعَاتِ غَرْقًا","۲. وَالنَّاشِطَاتِ نَشْطًا","۳. وَالسَّابِحَاتِ سَبْحًا","۴. فَالسَّابِقَاتِ سَبْقًا"],"before":"نبأ","after":"عبس","sharedWords":["قُلُوبٌ (با مطففین)","الْجَحِیمِ (با تکاثر، عبس، تکویر)"],"uniqueWords":["النَّازِعَاتِ","الرَّاجِفَةُ","الرَّادِفَةُ"],"repeatWords":"—","prophets":"موسی",
+"ayahs":[
+{"a":"وَالنَّازِعَاتِ غَرْقًا","t":"سوگند به فرشتگانی که (روح کافران را) به‌سختی بیرون می‌کشند."},
+{"a":"وَالنَّاشِطَاتِ نَشْطًا","t":"و سوگند به فرشتگانی که (روح مؤمنان را) با آرامی بیرون می‌آورند."},
+{"a":"وَالسَّابِحَاتِ سَبْحًا","t":"و سوگند به فرشتگانی که (در آسمان‌ها) شناورند."},
+{"a":"فَالسَّابِقَاتِ سَبْقًا","t":"و آنان که بر یکدیگر پیشی می‌گیرند."},
+{"a":"فَالْمُدَبِّرَاتِ أَمْرًا","t":"و آنان که کارها را تدبیر می‌کنند."},
+{"a":"يَوْمَ تَرْجُفُ الرَّاجِفَةُ","t":"روزی که (نفخه) لرزاننده بلرزد."},
+{"a":"تَتْبَعُهَا الرَّادِفَةُ","t":"و به دنبال آن (نفخه) دوم بیاید."},
+{"a":"قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ","t":"در آن روز دل‌هایی هراسان است."},
+{"a":"أَبْصَارُهَا خَاشِعَةٌ","t":"چشم‌هایشان فروافتاده است."},
+{"a":"يَقُولُونَ أَإِنَّا لَمَرْدُودُونَ فِي الْحَافِرَةِ","t":"می‌گویند: آیا ما به‌حالت اول برمی‌گردیم؟"},
+{"a":"أَإِذَا كُنَّا عِظَامًا نَّخِرَةً","t":"آیا وقتی استخوان‌های پوسیده شدیم (زنده می‌شویم)؟"},
+{"a":"قَالُوا تِلْكَ إِذًا كَرَّةٌ خَاسِرَةٌ","t":"گفتند: در آن صورت این بازگشتی زیان‌آور است."},
+{"a":"فَإِنَّمَا هِيَ زَجْرَةٌ وَاحِدَةٌ","t":"(ولی) آن تنها یک صیحه است."},
+{"a":"فَإِذَا هُم بِالسَّاهِرَةِ","t":"که ناگهان همه در زمین هموار (محشر) حاضر می‌شوند."},
+{"a":"هَلْ أَتَاكَ حَدِيثُ مُوسَىٰ","t":"آیا داستان موسی به تو رسیده است؟"},
+{"a":"إِذْ نَادَاهُ رَبُّهُ بِالْوَادِ الْمُقَدَّسِ طُوًى","t":"آن‌گاه که پروردگارش او را در وادی مقدس طوی ندا داد."},
+{"a":"اذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُ طَغَىٰ","t":"برو به‌سوی فرعون که او سرکشی کرده است."},
+{"a":"فَقُلْ هَل لَّكَ إِلَىٰ أَن تَزَكَّىٰ","t":"و بگو: آیا می‌خواهی پاکیزه شوی؟"},
+{"a":"وَأَهْدِيَكَ إِلَىٰ رَبِّكَ فَتَخْشَىٰ","t":"و من تو را به‌سوی پروردگارت راهنمایی کنم تا (از او) بترسی؟"},
+{"a":"فَأَرَاهُ الْآيَةَ الْكُبْرَىٰ","t":"پس (موسی) معجزه بزرگ را به او نشان داد."},
+{"a":"فَكَذَّبَ وَعَصَىٰ","t":"ولی (فرعون) تکذیب کرد و سرپیچی نمود."},
+{"a":"ثُمَّ أَدْبَرَ يَسْعَىٰ","t":"سپس پشت کرد و کوشید (که مخالفت کند)."},
+{"a":"فَحَشَرَ فَنَادَىٰ","t":"و (مردم را) جمع کرد و ندا داد."},
+{"a":"فَقَالَ أَنَا رَبُّكُمُ الْأَعْلَىٰ","t":"و گفت: من پروردگار برتر شما هستم!"},
+{"a":"فَأَخَذَهُ اللَّهُ نَكَالَ الْآخِرَةِ وَالْأُولَىٰ","t":"پس خدا او را به‌کیفر دنیا و آخرت گرفتار ساخت."},
+{"a":"إِنَّ فِي ذَٰلِكَ لَعِبْرَةً لِّمَن يَخْشَىٰ","t":"قطعاً در این (ماجرا) برای کسی که (از خدا) بترسد، عبرتی است."},
+{"a":"أَأَنتُمْ أَشَدُّ خَلْقًا أَمِ السَّمَاءُ ۚ بَنَاهَا","t":"آیا آفرینش شما سخت‌تر است یا آسمانی که او بنا کرد؟"},
+{"a":"رَفَعَ سَمْكَهَا فَسَوَّاهَا","t":"سقفش را برافراشت و آن را منظم ساخت."},
+{"a":"وَأَغْطَشَ لَيْلَهَا وَأَخْرَجَ ضُحَاهَا","t":"و شبش را تاریک و روزش را روشن ساخت."},
+{"a":"وَالْأَرْضَ بَعْدَ ذَٰلِكَ دَحَاهَا","t":"و زمین را بعد از آن گسترد."},
+{"a":"أَخْرَجَ مِنْهَا مَاءَهَا وَمَرْعَاهَا","t":"آبش و چراگاهش را از آن بیرون آورد."},
+{"a":"وَالْجِبَالَ أَرْسَاهَا","t":"و کوه‌ها را محکم نگاه داشت."},
+{"a":"مَتَاعًا لَّكُمْ وَلِأَنْعَامِكُمْ","t":"تا وسیله بهره‌مندی شما و چهارپایانتان باشد."},
+{"a":"فَإِذَا جَاءَتِ الطَّامَّةُ الْكُبْرَىٰ","t":"پس وقتی آن حادثه بزرگ (قیامت) بیاید."},
+{"a":"يَوْمَ يَتَذَكَّرُ الْإِنسَانُ مَا سَعَىٰ","t":"روزی که انسان از تلاش‌های خود یاد می‌کند."},
+{"a":"وَبُرِّزَتِ الْجَحِيمُ لِمَن يَرَىٰ","t":"و جهنم برای هر بیننده‌ای آشکار می‌شود."},
+{"a":"فَأَمَّا مَن طَغَىٰ","t":"اما آن کس که سرکشی کرد."},
+{"a":"وَآثَرَ الْحَيَاةَ الدُّنْيَا","t":"و زندگی دنیا را ترجیح داد."},
+{"a":"فَإِنَّ الْجَحِيمَ هِيَ الْمَأْوَىٰ","t":"قطعاً جهنم جایگاه اوست."},
+{"a":"وَأَمَّا مَنْ خَافَ مَقَامَ رَبِّهِ وَنَهَى النَّفْسَ عَنِ الْهَوَىٰ","t":"و اما کسی که از مقام پروردگارش ترسید و نفس را از هوس بازداشت."},
+{"a":"فَإِنَّ الْجَنَّةَ هِيَ الْمَأْوَىٰ","t":"قطعاً بهشت جایگاه اوست."},
+{"a":"يَسْأَلُونَكَ عَنِ السَّاعَةِ أَيَّانَ مُرْسَاهَا","t":"از تو درباره قیامت می‌پرسند که چه‌زمان برپا می‌شود؟"},
+{"a":"فِيمَ أَنتَ مِن ذِكْرَاهَا","t":"تو را چه کار به یادآوری آن؟"},
+{"a":"إِلَىٰ رَبِّكَ مُنتَهَاهَا","t":"سرانجام آن به پروردگار تو بازمی‌گردد."},
+{"a":"إِنَّمَا أَنتَ مُنذِرُ مَن يَخْشَاهَا","t":"تو تنها بیم‌دهنده کسی هستی که از آن می‌ترسد."},
+{"a":"كَأَنَّهُمْ يَوْمَ يَرَوْنَهَا لَمْ يَلْبَثُوا إِلَّا عَشِيَّةً أَوْ ضُحَاهَا","t":"گویی آن‌ها روزی که آن را می‌بینند، جز شبی یا صبح آن (در دنیا) درنگ نکرده‌اند."}
+]},
+
+{"n":80,"name":"عبس","meaning":"چهره درهم کشید","message":"اهمیت دادن به حقیقت‌جو و بی‌اعتنایی به جایگاه اجتماعی افراد.","key":"ملاک هدایت، حقیقت‌جویی است.","verses":"42","type":"مکی","firstWord":"عَبَسَ","lastWord":"الْکَفَرَةُ الْفَجَرَةُ","lastVerse":"أُولَئِکَ هُمُ الْکَفَرَةُ الْفَجَرَةُ","versesOrder":["۱. عَبَسَ وَتَوَلَّى","۲. أَن جَاءَهُ الْأَعْمَى","۳. وَمَا یُدْرِیکَ لَعَلَّهُ یَزَّکَّى","۴. أَوْ یَذَّکَّرُ فَتَنفَعَهُ الذِّکْرَى"],"before":"نازعات","after":"تکویر","sharedWords":["الْجَحِیمِ (با تکاثر، نازعات، تکویر)","لَأُقْسِمُ (با بلد، تکویر، شمس)"],"uniqueWords":["عَبَسَ","أَعْمَى"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"عَبَسَ وَتَوَلَّىٰ","t":"چهره درهم کشید و روی برگرداند."},
+{"a":"أَن جَاءَهُ الْأَعْمَىٰ","t":"از این‌که نابینایی نزد او آمد."},
+{"a":"وَمَا يُدْرِيكَ لَعَلَّهُ يَزَّكَّىٰ","t":"تو چه می‌دانی؟ شاید او پاک شود."},
+{"a":"أَوْ يَذَّكَّرُ فَتَنفَعَهُ الذِّكْرَىٰ","t":"یا پند بگیرد و پند به او سود دهد."},
+{"a":"أَمَّا مَنِ اسْتَغْنَىٰ","t":"اما آن کس که خود را بی‌نیاز می‌بیند."},
+{"a":"فَأَنتَ لَهُ تَصَدَّىٰ","t":"تو به او روی می‌آوری."},
+{"a":"وَمَا عَلَيْكَ أَلَّا يَزَّكَّىٰ","t":"درحالی‌که اگر پاک نشود، بر تو چیزی نیست."},
+{"a":"وَأَمَّا مَن جَاءَكَ يَسْعَىٰ","t":"و اما کسی که شتابان نزد تو آمد."},
+{"a":"وَهُوَ يَخْشَىٰ","t":"و او (از خدا) می‌ترسد."},
+{"a":"فَأَنتَ عَنْهُ تَلَهَّىٰ","t":"تو از او غافل می‌شوی."},
+{"a":"كَلَّا إِنَّهَا تَذْكِرَةٌ","t":"چنین نیست! این (قرآن) تذکری است."},
+{"a":"فَمَن شَاءَ ذَكَرَهُ","t":"پس هر که بخواهد، از آن پند می‌گیرد."},
+{"a":"فِي صُحُفٍ مُّكَرَّمَةٍ","t":"در صفحاتی گران‌قدر."},
+{"a":"مَّرْفُوعَةٍ مُّطَهَّرَةٍ","t":"والامرتبه و پاک."},
+{"a":"بِأَيْدِي سَفَرَةٍ","t":"به دست سفیرانی (فرشتگان)."},
+{"a":"كِرَامٍ بَرَرَةٍ","t":"گران‌قدر و نیکوکار."},
+{"a":"قُتِلَ الْإِنسَانُ مَا أَكْفَرَهُ","t":"مرگ بر انسان! چقدر ناسپاس است."},
+{"a":"مِنْ أَيِّ شَيْءٍ خَلَقَهُ","t":"از چه چیزی خدا او را آفرید؟"},
+{"a":"مِن نُّطْفَةٍ خَلَقَهُ فَقَدَّرَهُ","t":"از نطفه‌ای آفریدش و اندازه‌گیری کرد."},
+{"a":"ثُمَّ السَّبِيلَ يَسَّرَهُ","t":"سپس راه را برایش آسان کرد."},
+{"a":"ثُمَّ أَمَاتَهُ فَأَقْبَرَهُ","t":"سپس او را میراند و در گور نهاد."},
+{"a":"ثُمَّ إِذَا شَاءَ أَنشَرَهُ","t":"باز چون بخواهد او را برمی‌انگیزد."},
+{"a":"كَلَّا لَمَّا يَقْضِ مَا أَمَرَهُ","t":"چنین نیست! او فرمان خدا را انجام نداده است."},
+{"a":"فَلْيَنظُرِ الْإِنسَانُ إِلَىٰ طَعَامِهِ","t":"پس انسان باید به غذای خود بنگرد."},
+{"a":"أَنَّا صَبَبْنَا الْمَاءَ صَبًّا","t":"ما آب را به‌گونه‌ای فرو ریختیم."},
+{"a":"ثُمَّ شَقَقْنَا الْأَرْضَ شَقًّا","t":"سپس زمین را از هم شکافتیم."},
+{"a":"فَأَنبَتْنَا فِيهَا حَبًّا","t":"و در آن دانه‌ها رویاندیم."},
+{"a":"وَعِنَبًا وَقَضْبًا","t":"و انگور و سبزیجات."},
+{"a":"وَزَيْتُونًا وَنَخْلًا","t":"و زیتون و نخل."},
+{"a":"وَحَدَائِقَ غُلْبًا","t":"و باغ‌های انبوه."},
+{"a":"وَفَاكِهَةً وَأَبًّا","t":"و میوه و چراگاه."},
+{"a":"مَّتَاعًا لَّكُمْ وَلِأَنْعَامِكُمْ","t":"تا وسیله بهره‌مندی شما و چهارپایانتان باشد."},
+{"a":"فَإِذَا جَاءَتِ الصَّاخَّةُ","t":"پس وقتی آن صدای مهیب (قیامت) بیاید."},
+{"a":"يَوْمَ يَفِرُّ الْمَرْءُ مِنْ أَخِيهِ","t":"روزی که انسان از برادرش می‌گریزد."},
+{"a":"وَأُمِّهِ وَأَبِيهِ","t":"و از مادر و پدرش."},
+{"a":"وَصَاحِبَتِهِ وَبَنِيهِ","t":"و از همسر و فرزندانش."},
+{"a":"لِكُلِّ امْرِئٍ مِّنْهُمْ يَوْمَئِذٍ شَأْنٌ يُغْنِيهِ","t":"در آن روز هر کسی را وضعیتی است که او را به‌خود مشغول می‌کند."},
+{"a":"وُجُوهٌ يَوْمَئِذٍ مُّسْفِرَةٌ","t":"در آن روز چهره‌هایی شادان است."},
+{"a":"ضَاحِكَةٌ مُّسْتَبْشِرَةٌ","t":"خندان و بشارت‌داده‌شده."},
+{"a":"وَوُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ","t":"و چهره‌هایی در آن روز غبارآلود است."},
+{"a":"تَرْهَقُهَا قَتَرَةٌ","t":"و (سیاهی و) ذلتی آنها را می‌پوشاند."},
+{"a":"أُولَٰئِكَ هُمُ الْكَفَرَةُ الْفَجَرَةُ","t":"آنها همان کافران و فاجرانند."}
+]},
+
+{"n":81,"name":"تکویر","meaning":"درهم پیچیده شدن","message":"تصویر دگرگونی جهان در قیامت و تأکید بر حقانیت وحی.","key":"إِذَا الشَّمْسُ کُوِّرَتْ","verses":"29","type":"مکی","firstWord":"إِذَا","lastWord":"تَذْهَبُونَ","lastVerse":"وَمَا تَشَاءُونَ إِلَّا أَن یَشَاءَ اللَّهُ رَبُّ الْعَالَمِینَ","versesOrder":["۱. إِذَا الشَّمْسُ کُوِّرَتْ","۲. وَإِذَا النُّجُومُ انکَدَرَتْ","۳. وَإِذَا الْجِبَالُ سُیِّرَتْ","۴. وَإِذَا الْعِشَارُ عُطِّلَتْ"],"before":"عبس","after":"انفطار","sharedWords":["الْعَالَمِینَ (با مطففین)","الْجَحِیمِ (با تکاثر، نازعات، عبس)","لَأُقْسِمُ (با بلد، عبس، شمس)"],"uniqueWords":["کُوِّرَتْ","انکَدَرَتْ","سُیِّرَتْ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"إِذَا الشَّمْسُ كُوِّرَتْ","t":"وقتی خورشید درهم پیچیده شود."},
+{"a":"وَإِذَا النُّجُومُ انكَدَرَتْ","t":"و وقتی ستارگان بیفروغ شوند."},
+{"a":"وَإِذَا الْجِبَالُ سُيِّرَتْ","t":"و وقتی کوه‌ها به حرکت درآیند."},
+{"a":"وَإِذَا الْعِشَارُ عُطِّلَتْ","t":"و وقتی شتران آبستن رها شوند."},
+{"a":"وَإِذَا الْوُحُوشُ حُشِرَتْ","t":"و وقتی وحوش گردآوری شوند."},
+{"a":"وَإِذَا الْبِحَارُ سُجِّرَتْ","t":"و وقتی دریاها برافروخته شوند."},
+{"a":"وَإِذَا النُّفُوسُ زُوِّجَتْ","t":"و وقتی جان‌ها (با بدن‌ها) جفت شوند."},
+{"a":"وَإِذَا الْمَوْءُودَةُ سُئِلَتْ","t":"و وقتی از دختر زنده‌به‌گور شده پرسیده شود."},
+{"a":"بِأَيِّ ذَنبٍ قُتِلَتْ","t":"به کدام گناه کشته شد؟"},
+{"a":"وَإِذَا الصُّحُفُ نُشِرَتْ","t":"و وقتی نامه‌های اعمال گشوده شود."},
+{"a":"وَإِذَا السَّمَاءُ كُشِطَتْ","t":"و وقتی آسمان برکنده شود."},
+{"a":"وَإِذَا الْجَحِيمُ سُعِّرَتْ","t":"و وقتی دوزخ برافروخته شود."},
+{"a":"وَإِذَا الْجَنَّةُ أُزْلِفَتْ","t":"و وقتی بهشت نزدیک آورده شود."},
+{"a":"عَلِمَتْ نَفْسٌ مَّا أَحْضَرَتْ","t":"(آن زمان) هر کسی می‌داند چه چیز حاضر کرده است."},
+{"a":"فَلَا أُقْسِمُ بِالْخُنَّسِ","t":"سوگند به ستارگان بازگردنده."},
+{"a":"الْجَوَارِ الْكُنَّسِ","t":"که در حرکت‌اند و پنهان می‌شوند."},
+{"a":"وَاللَّيْلِ إِذَا عَسْعَسَ","t":"و سوگند به شب وقتی پشت کند."},
+{"a":"وَالصُّبْحِ إِذَا تَنَفَّسَ","t":"و سوگند به صبح وقتی بدمد."},
+{"a":"إِنَّهُ لَقَوْلُ رَسُولٍ كَرِيمٍ","t":"که این (قرآن) سخن فرستاده‌ای گران‌قدر است."},
+{"a":"ذِي قُوَّةٍ عِندَ ذِي الْعَرْشِ مَكِينٍ","t":"نیرومند و نزد صاحب عرش، بلندمرتبه."},
+{"a":"مُطَاعٍ ثَمَّ أَمِينٍ","t":"در آنجا فرمانروا و امین است."},
+{"a":"وَمَا صَاحِبُكُم بِمَجْنُونٍ","t":"و همنشین شما (پیامبر) دیوانه نیست."},
+{"a":"وَلَقَدْ رَآهُ بِالْأُفُقِ الْمُبِينِ","t":"او را در افق روشن دیده است."},
+{"a":"وَمَا هُوَ عَلَى الْغَيْبِ بِضَنِينٍ","t":"و او در (ابلاغ) غیب بخیل نیست."},
+{"a":"وَمَا هُوَ بِقَوْلِ شَيْطَانٍ رَّجِيمٍ","t":"و این سخن شیطان رانده‌شده نیست."},
+{"a":"فَأَيْنَ تَذْهَبُونَ","t":"پس به کجا می‌روید؟"},
+{"a":"إِنْ هُوَ إِلَّا ذِكْرٌ لِّلْعَالَمِينَ","t":"این (قرآن) چیزی جز پند برای جهانیان نیست."},
+{"a":"لِمَن شَاءَ مِنكُمْ أَن يَسْتَقِيمَ","t":"برای کسی از شما که بخواهد راه راست را برگزیند."},
+{"a":"وَمَا تَشَاءُونَ إِلَّا أَن يَشَاءَ اللَّهُ رَبُّ الْعَالَمِينَ","t":"و شما چیزی نمی‌خواهید مگر آن‌که خداوند، پروردگار جهانیان بخواهد."}
+]},
+
+{"n":82,"name":"انفطار","meaning":"شکافته شدن","message":"قیامت، آشکار شدن اعمال و ثبت آنها توسط فرشتگان.","key":"کِراماً کاتِبین","verses":"19","type":"مکی","firstWord":"إِذَا","lastWord":"بِالدِّینِ","lastVerse":"یَوْمَ لَا یَمْلِکُ نَفْسٌ لِّنَفْسٍ شَیْئًا وَالْأَمْرُ یَوْمَئِذٍ لِّلَّهِ","versesOrder":["۱. إِذَا السَّمَاءُ انفَطَرَتْ","۲. وَإِذَا الْکَوَاکِبُ انتَثَرَتْ","۳. وَإِذَا الْبِحَارُ فُجِّرَتْ","۴. وَإِذَا الْقُبُورُ بُعْثِرَتْ"],"before":"تکویر","after":"مطففین","sharedWords":["إِنَّ الْأَبْرَارَ (با مطففین)"],"uniqueWords":["انفَطَرَتْ","انتَثَرَتْ","فُجِّرَتْ"],"repeatWords":"بِالدِّینِ ۱ بار","prophets":"—",
+"ayahs":[
+{"a":"إِذَا السَّمَاءُ انفَطَرَتْ","t":"وقتی آسمان بشکافد."},
+{"a":"وَإِذَا الْكَوَاكِبُ انتَثَرَتْ","t":"و وقتی ستارگان فرو ریزند."},
+{"a":"وَإِذَا الْبِحَارُ فُجِّرَتْ","t":"و وقتی دریاها از هم بشکافند."},
+{"a":"وَإِذَا الْقُبُورُ بُعْثِرَتْ","t":"و وقتی قبرها زیر و رو شوند."},
+{"a":"عَلِمَتْ نَفْسٌ مَّا قَدَّمَتْ وَأَخَّرَتْ","t":"هر کسی می‌داند آنچه پیش فرستاده و بازپس گذاشته است."},
+{"a":"يَا أَيُّهَا الْإِنسَانُ مَا غَرَّكَ بِرَبِّكَ الْكَرِيمِ","t":"ای انسان! چه چیز تو را نسبت به پروردگار کریمت مغرور کرد؟"},
+{"a":"الَّذِي خَلَقَكَ فَسَوَّاكَ فَعَدَلَكَ","t":"همان‌کس که تو را آفرید و منظم ساخت و متعادل کرد."},
+{"a":"فِي أَيِّ صُورَةٍ مَّا شَاءَ رَكَّبَكَ","t":"در هر صورتی که خواست، تو را ترکیب کرد."},
+{"a":"كَلَّا بَلْ تُكَذِّبُونَ بِالدِّينِ","t":"چنین نیست! بلکه شما روز جزا را تکذیب می‌کنید."},
+{"a":"وَإِنَّ عَلَيْكُمْ لَحَافِظِينَ","t":"و همانا بر شما نگهبانانی هستند."},
+{"a":"كِرَامًا كَاتِبِينَ","t":"گران‌قدر و نویسنده."},
+{"a":"يَعْلَمُونَ مَا تَفْعَلُونَ","t":"آن‌ها می‌دانند چه می‌کنید."},
+{"a":"إِنَّ الْأَبْرَارَ لَفِي نَعِيمٍ","t":"قطعاً نیکان در نعمت‌اند."},
+{"a":"وَإِنَّ الْفُجَّارَ لَفِي جَحِيمٍ","t":"و بدکاران در دوزخ."},
+{"a":"يَصْلَوْنَهَا يَوْمَ الدِّينِ","t":"روز جزا وارد آن می‌شوند."},
+{"a":"وَمَا هُمْ عَنْهَا بِغَائِبِينَ","t":"و آن‌ها از آن غایب نیستند."},
+{"a":"وَمَا أَدْرَاكَ مَا يَوْمُ الدِّينِ","t":"و تو چه می‌دانی روز جزا چیست؟"},
+{"a":"ثُمَّ مَا أَدْرَاكَ مَا يَوْمُ الدِّينِ","t":"باز هم تو چه می‌دانی روز جزا چیست؟"},
+{"a":"يَوْمَ لَا يَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْئًا ۖ وَالْأَمْرُ يَوْمَئِذٍ لِّلَّهِ","t":"روزی که هیچ‌کس برای دیگری اختیاری ندارد و کار در آن روز فقط با خداست."}
+]},
+
+{"n":83,"name":"مطففین","meaning":"کم‌فروشان","message":"هشدار به کم‌فروشی و فساد اقتصادی و بیان سرانجام فاجران و نیکوکاران.","key":"وَیْلٌ لِلْمُطَفِّفینَ","verses":"36","type":"مکی","firstWord":"وَیْلٌ","lastWord":"یَضْحَکُونَ","lastVerse":"هَلْ ثُوِّبَ الْکُفَّارُ مَا کَانُوا یَفْعَلُونَ","versesOrder":["۱. وَیْلٌ لِّلْمُطَفِّفِینَ","۲. الَّذِینَ إِذَا اکْتَالُوا عَلَى النَّاسِ یَسْتَوْفُونَ","۳. وَإِذَا کَالُوهُمْ أَوْ وَزَنُوهُمْ یُخْسِرُونَ","۴. أَلَا یَظُنُّ أُولَئِکَ أَنَّهُم مَّبْعُوثُونَ"],"before":"انفطار","after":"انشقاق","sharedWords":["الْعَالَمِینَ (با تکویر)","إِنَّ الْأَبْرَارَ (با انفطار)","قُلُوبٌ (با نازعات)"],"uniqueWords":["الْمُطَفِّفِینَ","سِجِّینٍ","عِلِّیِّینَ","یَتَنَافَسِ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَيْلٌ لِّلْمُطَفِّفِينَ","t":"وای بر کم‌فروشان!"},
+{"a":"الَّذِينَ إِذَا اكْتَالُوا عَلَى النَّاسِ يَسْتَوْفُونَ","t":"آنان که وقتی برای خود پیمانه می‌کنند، حق خود را کامل می‌گیرند."},
+{"a":"وَإِذَا كَالُوهُمْ أَو وَّزَنُوهُمْ يُخْسِرُونَ","t":"و وقتی برای دیگران پیمانه یا وزن می‌کنند، کم می‌گذارند."},
+{"a":"أَلَا يَظُنُّ أُولَٰئِكَ أَنَّهُم مَّبْعُوثُونَ","t":"آیا آن‌ها گمان نمی‌کنند که برانگیخته می‌شوند؟"},
+{"a":"لِيَوْمٍ عَظِيمٍ","t":"در روزی بزرگ."},
+{"a":"يَوْمَ يَقُومُ النَّاسُ لِرَبِّ الْعَالَمِينَ","t":"روزی که مردم در برابر پروردگار جهانیان می‌ایستند."},
+{"a":"كَلَّا إِنَّ كِتَابَ الْفُجَّارِ لَفِي سِجِّينٍ","t":"چنین نیست! همانا نامه بدکاران در سجین است."},
+{"a":"وَمَا أَدْرَاكَ مَا سِجِّينٌ","t":"و تو چه می‌دانی سجین چیست؟"},
+{"a":"كِتَابٌ مَّرْقُومٌ","t":"نامه‌ای است نوشته‌شده."},
+{"a":"وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ","t":"وای در آن روز بر تکذیب‌کنندگان!"},
+{"a":"الَّذِينَ يُكَذِّبُونَ بِيَوْمِ الدِّينِ","t":"آنان که روز جزا را تکذیب می‌کنند."},
+{"a":"وَمَا يُكَذِّبُ بِهِ إِلَّا كُلُّ مُعْتَدٍ أَثِيمٍ","t":"و آن را تکذیب نمی‌کند مگر هر تجاوزکار گناهکار."},
+{"a":"إِذَا تُتْلَىٰ عَلَيْهِ آيَاتُنَا قَالَ أَسَاطِيرُ الْأَوَّلِينَ","t":"وقتی آیات ما بر او خوانده شود، می‌گوید: افسانه‌های پیشینیان است!"},
+{"a":"كَلَّا ۖ بَلْ ۜ رَانَ عَلَىٰ قُلُوبِهِم مَّا كَانُوا يَكْسِبُونَ","t":"چنین نیست! بلکه آنچه مرتکب می‌شدند، بر دل‌هایشان زنگار بسته است."},
+{"a":"كَلَّا إِنَّهُمْ عَن رَّبِّهِمْ يَوْمَئِذٍ لَّمَحْجُوبُونَ","t":"چنین نیست! آن‌ها در آن روز از پروردگارشان محجوب‌اند."},
+{"a":"ثُمَّ إِنَّهُمْ لَصَالُو الْجَحِيمِ","t":"سپس آن‌ها قطعاً وارد جهنم می‌شوند."},
+{"a":"ثُمَّ يُقَالُ هَٰذَا الَّذِي كُنتُم بِهِ تُكَذِّبُونَ","t":"سپس گفته می‌شود: این همان است که آن را تکذیب می‌کردید!"},
+{"a":"كَلَّا إِنَّ كِتَابَ الْأَبْرَارِ لَفِي عِلِّيِّينَ","t":"چنین نیست! همانا نامه نیکان در علیین است."},
+{"a":"وَمَا أَدْرَاكَ مَا عِلِّيُّونَ","t":"و تو چه می‌دانی علیین چیست؟"},
+{"a":"كِتَابٌ مَّرْقُومٌ","t":"نامه‌ای است نوشته‌شده."},
+{"a":"يَشْهَدُهُ الْمُقَرَّبُونَ","t":"مقربان آن را مشاهده می‌کنند."},
+{"a":"إِنَّ الْأَبْرَارَ لَفِي نَعِيمٍ","t":"همانا نیکان در نعمت‌اند."},
+{"a":"عَلَى الْأَرَائِكِ يَنظُرُونَ","t":"بر تخت‌ها نشسته و (به نعمت‌های الهی) می‌نگرند."},
+{"a":"تَعْرِفُ فِي وُجُوهِهِمْ نَضْرَةَ النَّعِيمِ","t":"در چهره‌هایشان شادابی نعمت را می‌شناسی."},
+{"a":"يُسْقَوْنَ مِن رَّحِيقٍ مَّخْتُومٍ","t":"از شراب ناب مهرشده به آنان می‌نوشانند."},
+{"a":"خِتَامُهُ مِسْكٌ ۚ وَفِي ذَٰلِكَ فَلْيَتَنَافَسِ الْمُتَنَافِسُونَ","t":"مهرش مشک است؛ و در این (نعمت‌ها) باید رقابت‌کنندگان رقابت کنند."},
+{"a":"وَمِزَاجُهُ مِن تَسْنِيمٍ","t":"و آمیخته‌اش از تسنیم است."},
+{"a":"عَيْنًا يَشْرَبُ بِهَا الْمُقَرَّبُونَ","t":"چشمه‌ای که مقربان از آن می‌نوشند."},
+{"a":"إِنَّ الَّذِينَ أَجْرَمُوا كَانُوا مِنَ الَّذِينَ آمَنُوا يَضْحَكُونَ","t":"همانا مجرمان به مؤمنان می‌خندیدند."},
+{"a":"وَإِذَا مَرُّوا بِهِمْ يَتَغَامَزُونَ","t":"و چون بر آنان می‌گذشتند، به هم چشمک می‌زدند."},
+{"a":"وَإِذَا انقَلَبُوا إِلَىٰ أَهْلِهِمُ انقَلَبُوا فَكِهِينَ","t":"و چون به‌سوی خانواده‌شان بازمی‌گشتند، شادمان بودند."},
+{"a":"وَإِذَا رَأَوْهُمْ قَالُوا إِنَّ هَٰؤُلَاءِ لَضَالُّونَ","t":"و چون مؤمنان را می‌دیدند، می‌گفتند: این‌ها گمراهانند!"},
+{"a":"وَمَا أُرْسِلُوا عَلَيْهِمْ حَافِظِينَ","t":"درحالی‌که آن‌ها نگهبان مؤمنان نبودند."},
+{"a":"فَالْيَوْمَ الَّذِينَ آمَنُوا مِنَ الْكُفَّارِ يَضْحَكُونَ","t":"اما امروز مؤمنان به کافران می‌خندند."},
+{"a":"عَلَى الْأَرَائِكِ يَنظُرُونَ","t":"بر تخت‌ها نشسته و (به نعمت‌های الهی) می‌نگرند."},
+{"a":"هَلْ ثُوِّبَ الْكُفَّارُ مَا كَانُوا يَفْعَلُونَ","t":"آیا کافران در برابر آنچه می‌کردند، جزا داده شدند؟"}
+]},
+
+{"n":84,"name":"انشقاق","meaning":"شکافته شدن","message":"قیامت و تقسیم انسان‌ها بر اساس کارنامه اعمال.","key":"نامه از راست=نجات؛ از پشت سر=سرانجام سخت.","verses":"25","type":"مکی","firstWord":"إِذَا","lastWord":"الْکَافِرُونَ","lastVerse":"وَاللَّهُ أَعْلَمُ بِمَا یُوعُونَ","versesOrder":["۱. إِذَا السَّمَاءُ انشَقَّتْ","۲. وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ","۳. وَإِذَا الْأَرْضُ مُدَّتْ","۴. وَأَلْقَتْ مَا فِیهَا وَتَخَلَّتْ"],"before":"مطففین","after":"بروج","sharedWords":["لَأُقْسِمُ (احتمالاً)"],"uniqueWords":["انشَقَّتْ","کَادِحٌ","کَدْحًا"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"إِذَا السَّمَاءُ انشَقَّتْ","t":"وقتی آسمان بشکافد."},
+{"a":"وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ","t":"و فرمان پروردگارش را بپذیرد و شایسته (همان) است."},
+{"a":"وَإِذَا الْأَرْضُ مُدَّتْ","t":"و وقتی زمین گسترده شود."},
+{"a":"وَأَلْقَتْ مَا فِيهَا وَتَخَلَّتْ","t":"و آنچه در آن است بیرون اندازد و خالی شود."},
+{"a":"وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ","t":"و فرمان پروردگارش را بپذیرد و شایسته (همان) است."},
+{"a":"يَا أَيُّهَا الْإِنسَانُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَاقِيهِ","t":"ای انسان! تو با تلاش به‌سوی پروردگارت می‌روی و او را ملاقات خواهی کرد."},
+{"a":"فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ","t":"پس هر که نامه‌اش به دست راستش داده شود."},
+{"a":"فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا","t":"به‌زودی حسابی آسان خواهد داشت."},
+{"a":"وَيَنقَلِبُ إِلَىٰ أَهْلِهِ مَسْرُورًا","t":"و شادمان به‌سوی خانواده‌اش بازمی‌گردد."},
+{"a":"وَأَمَّا مَنْ أُوتِيَ كِتَابَهُ وَرَاءَ ظَهْرِهِ","t":"و اما هر که نامه‌اش از پشت سرش داده شود."},
+{"a":"فَسَوْفَ يَدْعُو ثُبُورًا","t":"به‌زودی فریاد نابودی می‌کشد."},
+{"a":"وَيَصْلَىٰ سَعِيرًا","t":"و به آتش سوزان درآید."},
+{"a":"إِنَّهُ كَانَ فِي أَهْلِهِ مَسْرُورًا","t":"او در میان خانواده‌اش شادمان بود."},
+{"a":"إِنَّهُ ظَنَّ أَن لَّن يَحُورَ","t":"او گمان می‌کرد که هرگز بازنمی‌گردد."},
+{"a":"بَلَىٰ إِنَّ رَبَّهُ كَانَ بِهِ بَصِيرًا","t":"آری! همانا پروردگارش به او بینا بود."},
+{"a":"فَلَا أُقْسِمُ بِالشَّفَقِ","t":"سوگند به شفق (سرخی افق بعد از غروب)."},
+{"a":"وَاللَّيْلِ وَمَا وَسَقَ","t":"و سوگند به شب و آنچه را گرد می‌آورد."},
+{"a":"وَالْقَمَرِ إِذَا اتَّسَقَ","t":"و سوگند به ماه وقتی کامل شود."},
+{"a":"لَتَرْكَبُنَّ طَبَقًا عَن طَبَقٍ","t":"که شما مرحله‌به‌مرحله (در حالات گوناگون) قرار می‌گیرید."},
+{"a":"فَمَا لَهُمْ لَا يُؤْمِنُونَ","t":"پس چرا آن‌ها ایمان نمی‌آورند؟"},
+{"a":"وَإِذَا قُرِئَ عَلَيْهِمُ الْقُرْآنُ لَا يَسْجُدُونَ","t":"و چون قرآن بر آنان خوانده شود، سجده نمی‌کنند؟"},
+{"a":"بَلِ الَّذِينَ كَفَرُوا يُكَذِّبُونَ","t":"بلکه کافران تکذیب می‌کنند."},
+{"a":"وَاللَّهُ أَعْلَمُ بِمَا يُوعُونَ","t":"و خدا به آنچه در دل پنهان می‌کنند داناتر است."},
+{"a":"فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ","t":"پس آن‌ها را به عذابی دردناک بشارت ده!"},
+{"a":"إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ","t":"مگر کسانی که ایمان آورده و کارهای شایسته کرده‌اند که برای آنان پاداشی بی‌پایان است."}
+]},
+
+{"n":85,"name":"بروج","meaning":"برج‌ها","message":"پایداری مؤمنان در برابر شکنجه و کیفر ستمگران.","key":"اصحاب الاخدود نماد ایستادگی‌اند.","verses":"22","type":"مکی","firstWord":"وَالسَّمَاءِ","lastWord":"مَحْفُوظٍ","lastVerse":"فِی لَوْحٍ مَّحْفُوظٍ","versesOrder":["۱. وَالسَّمَاءِ ذَاتِ الْبُرُوجِ","۲. وَالْیَوْمِ الْمَوْعُودِ","۳. وَشَاهِدٍ وَمَشْهُودٍ","۴. قُتِلَ أَصْحَابُ الْأُخْدُودِ"],"before":"انشقاق","after":"طارق","sharedWords":["—"],"uniqueWords":["الْبُرُوجِ","الْأُخْدُودِ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَالسَّمَاءِ ذَاتِ الْبُرُوجِ","t":"سوگند به آسمان که دارای برج‌های بزرگ است."},
+{"a":"وَالْيَوْمِ الْمَوْعُودِ","t":"و سوگند به روز موعود."},
+{"a":"وَشَاهِدٍ وَمَشْهُودٍ","t":"و سوگند به شاهد و مشهود."},
+{"a":"قُتِلَ أَصْحَابُ الْأُخْدُودِ","t":"مرگ بر صاحبان گودال (خندق)!"},
+{"a":"النَّارِ ذَاتِ الْوَقُودِ","t":"آتشی که دارای هیزم فراوان بود."},
+{"a":"إِذْ هُمْ عَلَيْهَا قُعُودٌ","t":"آن‌گاه که آن‌ها کنار آن نشسته بودند."},
+{"a":"وَهُمْ عَلَىٰ مَا يَفْعَلُونَ بِالْمُؤْمِنِينَ شُهُودٌ","t":"و بر آنچه با مؤمنان می‌کردند گواه بودند."},
+{"a":"وَمَا نَقَمُوا مِنْهُمْ إِلَّا أَن يُؤْمِنُوا بِاللَّهِ الْعَزِيزِ الْحَمِيدِ","t":"آن‌ها از مؤمنان عیبی نگرفتند مگر اینکه به خداوند عزیز و حمید ایمان آورده بودند."},
+{"a":"الَّذِي لَهُ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ ۚ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ شَهِيدٌ","t":"همان‌کس که فرمانروایی آسمان‌ها و زمین از آن اوست و خدا بر هر چیزی گواه است."},
+{"a":"إِنَّ الَّذِينَ فَتَنُوا الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ ثُمَّ لَمْ يَتُوبُوا فَلَهُمْ عَذَابُ جَهَنَّمَ وَلَهُمْ عَذَابُ الْحَرِيقِ","t":"همانا کسانی که مؤمنان مرد و زن را شکنجه کردند و سپس توبه نکردند، برای آنان عذاب جهنم و عذاب آتش سوزان است."},
+{"a":"إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ جَنَّاتٌ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ ۚ ذَٰلِكَ الْفَوْزُ الْكَبِيرُ","t":"همانا کسانی که ایمان آورده و کارهای شایسته کردند، برای آنان باغ‌هایی است که نهرها زیرشان جاری است؛ این همان کامیابی بزرگ است."},
+{"a":"إِنَّ بَطْشَ رَبِّكَ لَشَدِيدٌ","t":"همانا گرفتن پروردگارت سخت است."},
+{"a":"إِنَّهُ هُوَ يُبْدِئُ وَيُعِيدُ","t":"همانا او (آفرینش را) آغاز می‌کند و بازمی‌گرداند."},
+{"a":"وَهُوَ الْغَفُورُ الْوَدُودُ","t":"و او آمرزنده و دوستدار (مؤمنان) است."},
+{"a":"ذُو الْعَرْشِ الْمَجِيدُ","t":"صاحب عرش و مجید است."},
+{"a":"فَعَّالٌ لِّمَا يُرِيدُ","t":"هر چه بخواهد انجام می‌دهد."},
+{"a":"هَلْ أَتَاكَ حَدِيثُ الْجُنُودِ","t":"آیا داستان لشکرها به تو رسیده است؟"},
+{"a":"فِرْعَوْنَ وَثَمُودَ","t":"(لشکر) فرعون و ثمود."},
+{"a":"بَلِ الَّذِينَ كَفَرُوا فِي تَكْذِيبٍ","t":"بلکه کافران در تکذیب (حق) هستند."},
+{"a":"وَاللَّهُ مِن وَرَائِهِم مُّحِيطٌ","t":"و خدا از پشت سرشان احاطه دارد."},
+{"a":"بَلْ هُوَ قُرْآنٌ مَّجِيدٌ","t":"بلکه این قرآنی ارجمند است."},
+{"a":"فِي لَوْحٍ مَّحْفُوظٍ","t":"در لوح محفوظ است."}
+]},
+
+{"n":86,"name":"طارق","meaning":"کوبنده شب","message":"قدرت خدا بر آفرینش انسان و زنده‌کردن دوباره؛ حقانیت قرآن.","key":"النجم الثاقب","verses":"17","type":"مکی","firstWord":"وَالسَّمَاءِ","lastWord":"رُوَيْدًا","lastVerse":"فَمَهِّلِ الْکَافِرِینَ أَمْهِلْهُمْ رُوَيْدًا","versesOrder":["۱. وَالسَّمَاءِ وَالطَّارِقِ","۲. وَمَا أَدْرَاکَ مَا الطَّارِقُ","۳. النَّجْمُ الثَّاقِبُ","۴. إِن کُلُّ نَفْسٍ لَّمَّا عَلَیْهَا حَافِظٌ"],"before":"بروج","after":"اعلی","sharedWords":["خُنَّع (با عادیات)"],"uniqueWords":["الطَّارِقُ","الثَّاقِبُ","دَافِقٍ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَالسَّمَاءِ وَالطَّارِقِ","t":"سوگند به آسمان و ستاره‌ای که شب هنگام می‌آید."},
+{"a":"وَمَا أَدْرَاكَ مَا الطَّارِقُ","t":"و تو چه می‌دانی آن ستاره شب‌آینده چیست؟"},
+{"a":"النَّجْمُ الثَّاقِبُ","t":"ستاره‌ای است درخشان که (تاریکی را) می‌شکافد."},
+{"a":"إِن كُلُّ نَفْسٍ لَّمَّا عَلَيْهَا حَافِظٌ","t":"هیچ‌کس نیست مگر اینکه بر او نگهبانی است."},
+{"a":"فَلْيَنظُرِ الْإِنسَانُ مِمَّ خُلِقَ","t":"پس انسان باید بنگرد که از چه چیز آفریده شده است."},
+{"a":"خُلِقَ مِن مَّاءٍ دَافِقٍ","t":"از آبی جهنده آفریده شده است."},
+{"a":"يَخْرُجُ مِن بَيْنِ الصُّلْبِ وَالتَّرَائِبِ","t":"که از میان صلب (مرد) و ترائب (زن) بیرون می‌آید."},
+{"a":"إِنَّهُ عَلَىٰ رَجْعِهِ لَقَادِرٌ","t":"همانا او (خدا) بر بازگرداندن او تواناست."},
+{"a":"يَوْمَ تُبْلَى السَّرَائِرُ","t":"روزی که نهان‌ها آشکار می‌گردد."},
+{"a":"فَمَا لَهُ مِن قُوَّةٍ وَلَا نَاصِرٍ","t":"پس (انسان) نه نیرویی دارد و نه یاوری."},
+{"a":"وَالسَّمَاءِ ذَاتِ الرَّجْعِ","t":"سوگند به آسمان که دارای باران بازگشتی است."},
+{"a":"وَالْأَرْضِ ذَاتِ الصَّدْعِ","t":"و سوگند به زمین که دارای شکاف (و رویش) است."},
+{"a":"إِنَّهُ لَقَوْلٌ فَصْلٌ","t":"همانا این (قرآن) سخنی قاطع و جداکننده (حق از باطل) است."},
+{"a":"وَمَا هُوَ بِالْهَزْلِ","t":"و آن شوخی نیست."},
+{"a":"إِنَّهُمْ يَكِيدُونَ كَيْدًا","t":"همانا آن‌ها نیرنگ می‌کنند."},
+{"a":"وَأَكِيدُ كَيْدًا","t":"و من هم (در برابرشان) تدبیر می‌کنم."},
+{"a":"فَمَهِّلِ الْكَافِرِينَ أَمْهِلْهُمْ رُوَيْدًا","t":"پس کافران را مهلت ده، کمی مهلتشان بده."}
+]},
+,
+
+{"n":87,"name":"اعلی","meaning":"والاتر","message":"تسبیح خدا، یادآوری و تزکیه و برتری آخرت.","key":"قَدْ أَفْلَحَ مَن تَزَکّى","verses":"19","type":"مکی","firstWord":"سَبِّحِ","lastWord":"الْأُولَى","lastVerse":"صُحُفِ إِبْرَاهِیمَ وَمُوسَى","versesOrder":["۱. سَبِّحِ اسْمَ رَبِّکَ الْأَعْلَى","۲. الَّذِی خَلَقَ فَسَوَّى","۳. وَالَّذِی قَدَّرَ فَهَدَى","۴. وَالَّذِی أَخْرَجَ الْمَرْعَى"],"before":"طارق","after":"غاشیه","sharedWords":["—"],"uniqueWords":["سَبِّحِ","تَزَکَّى"],"repeatWords":"—","prophets":"ابراهیم، موسی",
+"ayahs":[
+{"a":"سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى","t":"نام پروردگار برترت را تسبیح کن."},
+{"a":"الَّذِي خَلَقَ فَسَوَّىٰ","t":"همان‌کس که آفرید و منظم ساخت."},
+{"a":"وَالَّذِي قَدَّرَ فَهَدَىٰ","t":"و همان‌کس که اندازه‌گیری کرد و هدایت نمود."},
+{"a":"وَالَّذِي أَخْرَجَ الْمَرْعَىٰ","t":"و همان‌کس که چراگاه را رویاند."},
+{"a":"فَجَعَلَهُ غُثَاءً أَحْوَىٰ","t":"سپس آن را خشک و سیاه گردانید."},
+{"a":"سَنُقْرِئُكَ فَلَا تَنسَىٰ","t":"ما به‌زودی بر تو می‌خوانیم تا فراموش نکنی."},
+{"a":"إِلَّا مَا شَاءَ اللَّهُ ۚ إِنَّهُ يَعْلَمُ الْجَهْرَ وَمَا يَخْفَىٰ","t":"مگر آنچه خدا بخواهد؛ همانا او آشکار و پنهان را می‌داند."},
+{"a":"وَنُيَسِّرُكَ لِلْيُسْرَىٰ","t":"و تو را برای راه آسان آماده می‌کنیم."},
+{"a":"فَذَكِّرْ إِن نَّفَعَتِ الذِّكْرَىٰ","t":"پس پند بده، اگر پند سود دهد."},
+{"a":"سَيَذَّكَّرُ مَن يَخْشَىٰ","t":"به‌زودی کسی که (از خدا) بترسد، پند می‌گیرد."},
+{"a":"وَيَتَجَنَّبُهَا الْأَشْقَى","t":"و بدبخت‌ترین (مردم) از آن دوری می‌کند."},
+{"a":"الَّذِي يَصْلَى النَّارَ الْكُبْرَىٰ","t":"همان‌کس که به آتش بزرگ وارد می‌شود."},
+{"a":"ثُمَّ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ","t":"سپس در آن نه می‌میرد و نه زنده می‌شود."},
+{"a":"قَدْ أَفْلَحَ مَن تَزَكَّىٰ","t":"همانا کسی که پاکی جست، رستگار شد."},
+{"a":"وَذَكَرَ اسْمَ رَبِّهِ فَصَلَّىٰ","t":"و نام پروردگارش را یاد کرد و نماز خواند."},
+{"a":"بَلْ تُؤْثِرُونَ الْحَيَاةَ الدُّنْيَا","t":"بلکه شما زندگی دنیا را ترجیح می‌دهید."},
+{"a":"وَالْآخِرَةُ خَيْرٌ وَأَبْقَىٰ","t":"درحالی‌که آخرت بهتر و پایدارتر است."},
+{"a":"إِنَّ هَٰذَا لَفِي الصُّحُفِ الْأُولَىٰ","t":"همانا این (حقایق) در صحیفه‌های نخستین است."},
+{"a":"صُحُفِ إِبْرَاهِيمَ وَمُوسَىٰ","t":"صحیفه‌های ابراهیم و موسی."}
+]},
+
+{"n":88,"name":"غاشیه","meaning":"فراگیرنده","message":"قیامت و دو گروه اهل سعادت و شقاوت؛ دعوت به تفکر در آفرینش.","key":"چهار نشانه تفکر: شتر، آسمان، کوه، زمین.","verses":"26","type":"مکی","firstWord":"هَلْ","lastWord":"حِسَابَهُمْ","lastVerse":"ثُمَّ إِنَّ عَلَیْنَا حِسَابَهُم","versesOrder":["۱. هَلْ أَتَاکَ حَدِیثُ الْغَاشِیَةِ","۲. وُجُوهٌ یَوْمَئِذٍ خَاشِعَةٌ","۳. عَامِلَةٌ نَّاصِبَةٌ","۴. تَصْلَى نَارًا حَامِیَةً"],"before":"اعلی","after":"فجر","sharedWords":["خَاشِعَةٌ (با قارعه، نازعات)"],"uniqueWords":["الْغَاشِیَةِ","خَاشِعَةٌ","الْإِبِلِ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ","t":"آیا داستان غاشیه (قیامت) به تو رسیده است؟"},
+{"a":"وُجُوهٌ يَوْمَئِذٍ خَاشِعَةٌ","t":"در آن روز چهره‌هایی خوار و ذلیل است."},
+{"a":"عَامِلَةٌ نَّاصِبَةٌ","t":"کارکننده و خسته."},
+{"a":"تَصْلَىٰ نَارًا حَامِيَةً","t":"به آتش سوزان درآید."},
+{"a":"تُسْقَىٰ مِنْ عَيْنٍ آنِيَةٍ","t":"از چشمه‌ای جوشان نوشانده شود."},
+{"a":"لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍ","t":"غذایی ندارند مگر از ضریع (خار خشک)."},
+{"a":"لَّا يُسْمِنُ وَلَا يُغْنِي مِن جُوعٍ","t":"که نه فربه می‌کند و نه از گرسنگی بی‌نیاز می‌سازد."},
+{"a":"وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ","t":"و در آن روز چهره‌هایی شاداب است."},
+{"a":"لِّسَعْيِهَا رَاضِيَةٌ","t":"از تلاش خود خشنود است."},
+{"a":"فِي جَنَّةٍ عَالِيَةٍ","t":"در بهشتی برین."},
+{"a":"لَّا تَسْمَعُ فِيهَا لَاغِيَةً","t":"در آن هیچ سخن بیهوده‌ای نمی‌شنوی."},
+{"a":"فِيهَا عَيْنٌ جَارِيَةٌ","t":"در آن چشمه‌ای جاری است."},
+{"a":"فِيهَا سُرُرٌ مَّرْفُوعَةٌ","t":"در آن تخت‌های بلند است."},
+{"a":"وَأَكْوَابٌ مَّوْضُوعَةٌ","t":"و جام‌هایی نهاده."},
+{"a":"وَنَمَارِقُ مَصْفُوفَةٌ","t":"و بالش‌های چیده‌شده."},
+{"a":"وَزَرَابِيُّ مَبْثُوثَةٌ","t":"و فرش‌های گسترده."},
+{"a":"أَفَلَا يَنظُرُونَ إِلَى الْإِبِلِ كَيْفَ خُلِقَتْ","t":"آیا به شتر نمی‌نگرند که چگونه آفریده شده است؟"},
+{"a":"وَإِلَى السَّمَاءِ كَيْفَ رُفِعَتْ","t":"و به آسمان که چگونه برافراشته شده؟"},
+{"a":"وَإِلَى الْجِبَالِ كَيْفَ نُصِبَتْ","t":"و به کوه‌ها که چگونه برپا داشته شده‌اند؟"},
+{"a":"وَإِلَى الْأَرْضِ كَيْفَ سُطِحَتْ","t":"و به زمین که چگونه گسترده شده است؟"},
+{"a":"فَذَكِّرْ إِنَّمَا أَنتَ مُذَكِّرٌ","t":"پس تذکر بده! تو تنها تذکر‌دهنده‌ای."},
+{"a":"لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ","t":"تو بر آنان تسلطی نداری."},
+{"a":"إِلَّا مَن تَوَلَّىٰ وَكَفَرَ","t":"مگر کسی که روی بگرداند و کافر شود."},
+{"a":"فَيُعَذِّبُهُ اللَّهُ الْعَذَابَ الْأَكْبَرَ","t":"که خدا او را به عذاب بزرگ‌تر عذاب می‌کند."},
+{"a":"إِنَّ إِلَيْنَا إِيَابَهُمْ","t":"همانا بازگشت آن‌ها به‌سوی ماست."},
+{"a":"ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم","t":"سپس حساب آن‌ها بر عهده ماست."}
+]},
+
+{"n":89,"name":"فجر","meaning":"سپیده","message":"هشدار به سرکشان و نقد نگاه مادی به نعمت و فقر.","key":"یَا أَیَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ","verses":"30","type":"مکی","firstWord":"وَالْفَجْرِ","lastWord":"بِرَبِّهِ","lastVerse":"ارْجِعِی إِلَى رَبِّکِ رَاضِیَةً مَّرْضِیَّةً","versesOrder":["۱. وَالْفَجْرِ","۲. وَلَیَالٍ عَشْرٍ","۳. وَالشَّفْعِ وَالْوَتْرِ","۴. وَاللَّیْلِ إِذَا یَسْرِ"],"before":"غاشیه","after":"بلد","sharedWords":["أَحَدٌ (با بلد، توحید)"],"uniqueWords":["وَالْفَجْرِ","الْمُطْمَئِنَّةُ","یَسْرِ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَالْفَجْرِ","t":"سوگند به سپیده دم."},
+{"a":"وَلَيَالٍ عَشْرٍ","t":"و سوگند به شب‌های ده‌گانه."},
+{"a":"وَالشَّفْعِ وَالْوَتْرِ","t":"و سوگند به زوج و فرد."},
+{"a":"وَاللَّيْلِ إِذَا يَسْرِ","t":"و سوگند به شب وقتی می‌گذرد."},
+{"a":"هَلْ فِي ذَٰلِكَ قَسَمٌ لِّذِي حِجْرٍ","t":"آیا در این سوگندها برای خردمند سوگندی است؟"},
+{"a":"أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ","t":"آیا ندیدی پروردگارت با قوم عاد چه کرد؟"},
+{"a":"إِرَمَ ذَاتِ الْعِمَادِ","t":"(قوم) ارم که دارای ستون‌های بلند بودند."},
+{"a":"الَّتِي لَمْ يُخْلَقْ مِثْلُهَا فِي الْبِلَادِ","t":"که همانندی برایشان در شهرها آفریده نشده بود."},
+{"a":"وَثَمُودَ الَّذِينَ جَابُوا الصَّخْرَ بِالْوَادِ","t":"و قوم ثمود که صخره‌ها را در دره می‌بریدند."},
+{"a":"وَفِرْعَوْنَ ذِي الْأَوْتَادِ","t":"و فرعون صاحب میخ‌ها (و سپاه)."},
+{"a":"الَّذِينَ طَغَوْا فِي الْبِلَادِ","t":"آنان که در شهرها سرکشی کردند."},
+{"a":"فَأَكْثَرُوا فِيهَا الْفَسَادَ","t":"و در آن‌ها فساد را زیاد کردند."},
+{"a":"فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ الْعَذَابِ","t":"پس پروردگارت تازیانه عذاب را بر آن‌ها فرو ریخت."},
+{"a":"إِنَّ رَبَّكَ لَبِالْمِرْصَادِ","t":"همانا پروردگارت در کمین است."},
+{"a":"فَأَمَّا الْإِنسَانُ إِذَا مَا ابْتَلَاهُ رَبُّهُ فَأَكْرَمَهُ وَنَعَّمَهُ فَيَقُولُ رَبِّي أَكْرَمَنِ","t":"اما انسان چون پروردگارش او را بیازماید و گرامی و متنعم دارد، می‌گوید: پروردگارم مرا گرامی داشت."},
+{"a":"وَأَمَّا إِذَا مَا ابْتَلَاهُ فَقَدَرَ عَلَيْهِ رِزْقَهُ فَيَقُولُ رَبِّي أَهَانَنِ","t":"و چون او را بیازماید و روزی را بر او تنگ کند، می‌گوید: پروردگارم مرا خوار کرد."},
+{"a":"كَلَّا ۖ بَل لَّا تُكْرِمُونَ الْيَتِيمَ","t":"چنین نیست! بلکه شما یتیم را گرامی نمی‌دارید."},
+{"a":"وَلَا تَحَاضُّونَ عَلَىٰ طَعَامِ الْمِسْكِينِ","t":"و یکدیگر را به اطعام مسکین تشویق نمی‌کنید."},
+{"a":"وَتَأْكُلُونَ التُّرَاثَ أَكْلًا لَّمًّا","t":"و میراث (دیگران) را به‌شدت می‌خورید."},
+{"a":"وَتُحِبُّونَ الْمَالَ حُبًّا جَمًّا","t":"و مال را بسیار دوست می‌دارید."},
+{"a":"كَلَّا إِذَا دُكَّتِ الْأَرْضُ دَكًّا","t":"چنین نیست! وقتی زمین کوبیده شود."},
+{"a":"وَجَاءَ رَبُّكَ وَالْمَلَكُ صَفًّا صَفًّا","t":"و پروردگارت بیاید و فرشتگان صف‌درصف."},
+{"a":"وَجِيءَ يَوْمَئِذٍ بِجَهَنَّمَ ۚ يَوْمَئِذٍ يَتَذَكَّرُ الْإِنسَانُ وَأَنَّىٰ لَهُ الذِّكْرَىٰ","t":"و در آن روز جهنم آورده شود؛ در آن روز انسان متذکر می‌شود، ولی کجای این تذکر برایش سودی دارد؟"},
+{"a":"يَقُولُ يَا لَيْتَنِي قَدَّمْتُ لِحَيَاتِي","t":"می‌گوید: ای کاش برای زندگی (جاوید) خود چیزی پیش فرستاده بودم."},
+{"a":"فَيَوْمَئِذٍ لَّا يُعَذِّبُ عَذَابَهُ أَحَدٌ","t":"در آن روز هیچ‌کس چون عذاب او عذاب نمی‌کند."},
+{"a":"وَلَا يُوثِقُ وَثَاقَهُ أَحَدٌ","t":"و هیچ‌کس چون بستن او نمی‌بندد."},
+{"a":"يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ","t":"ای نفس آرام‌گرفته!"},
+{"a":"ارْجِعِي إِلَىٰ رَبِّكِ رَاضِيَةً مَّرْضِيَّةً","t":"به‌سوی پروردگارت بازگرد، خشنود و پسندیده."},
+{"a":"فَادْخُلِي فِي عِبَادِي","t":"پس در میان بندگان من درآی."},
+{"a":"وَادْخُلِي جَنَّتِي","t":"و به بهشت من وارد شو."}
+]},
+
+{"n":90,"name":"بلد","meaning":"شهر","message":"انسان در رنج است و راه رستگاری از مسئولیت و عبور از «عقبه» می‌گذرد.","key":"عَقَبَه راه دشوار نیکی است.","verses":"20","type":"مکی","firstWord":"لَا","lastWord":"مُؤْصَدَةٌ","lastVerse":"عَلَیْهِمْ نَارٌ مُّؤْصَدَةٌ","versesOrder":["۱. لَا أُقْسِمُ بِهَذَا الْبَلَدِ","۲. وَأَنتَ حِلٌّ بِهَذَا الْبَلَدِ","۳. وَوَالِدٍ وَمَا وَلَدَ","۴. لَقَدْ خَلَقْنَا الْإِنسَانَ فِی کَبَدٍ"],"before":"فجر","after":"شمس","sharedWords":["أَحَدٌ (با فجر، توحید)","لَأُقْسِمُ (با تکویر، عبس، شمس)"],"uniqueWords":["الْبَلَدِ","الْعَقَبَةَ","مُّؤْصَدَةٌ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ","t":"سوگند به این شهر (مکه)."},
+{"a":"وَأَنتَ حِلٌّ بِهَٰذَا الْبَلَدِ","t":"و تو در این شهر ساکنی."},
+{"a":"وَوَالِدٍ وَمَا وَلَدَ","t":"و سوگند به پدر و آنچه زاده است."},
+{"a":"لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ","t":"همانا انسان را در رنج آفریدیم."},
+{"a":"أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌ","t":"آیا گمان می‌کند که هیچ‌کس بر او توانا نیست؟"},
+{"a":"يَقُولُ أَهْلَكْتُ مَالًا لُّبَدًا","t":"می‌گوید: مال فراوانی را تباه کردم."},
+{"a":"أَيَحْسَبُ أَن لَّمْ يَرَهُ أَحَدٌ","t":"آیا گمان می‌کند که هیچ‌کس او را ندیده است؟"},
+{"a":"أَلَمْ نَجْعَل لَّهُ عَيْنَيْنِ","t":"آیا برای او دو چشم قرار ندادیم؟"},
+{"a":"وَلِسَانًا وَشَفَتَيْنِ","t":"و زبان و دو لب."},
+{"a":"وَهَدَيْنَاهُ النَّجْدَيْنِ","t":"و او را به دو راه (خیر و شر) هدایت کردیم."},
+{"a":"فَلَا اقْتَحَمَ الْعَقَبَةَ","t":"ولی او از گردنه (نیکی) نگذشت."},
+{"a":"وَمَا أَدْرَاكَ مَا الْعَقَبَةُ","t":"و تو چه می‌دانی آن گردنه چیست؟"},
+{"a":"فَكُّ رَقَبَةٍ","t":"آزاد کردن برده."},
+{"a":"أَوْ إِطْعَامٌ فِي يَوْمٍ ذِي مَسْغَبَةٍ","t":"یا اطعام در روز گرسنگی."},
+{"a":"يَتِيمًا ذَا مَقْرَبَةٍ","t":"یتیمی خویشاوند."},
+{"a":"أَوْ مِسْكِينًا ذَا مَتْرَبَةٍ","t":"یا مسکینی خاک‌نشین."},
+{"a":"ثُمَّ كَانَ مِنَ الَّذِينَ آمَنُوا وَتَوَاصَوْا بِالصَّبْرِ وَتَوَاصَوْا بِالْمَرْحَمَةِ","t":"سپس از کسانی باشد که ایمان آوردند و یکدیگر را به صبر و رحمت سفارش کردند."},
+{"a":"أُولَٰئِكَ أَصْحَابُ الْمَيْمَنَةِ","t":"آنان همان یاران دست راست (اهل سعادت) هستند."},
+{"a":"وَالَّذِينَ كَفَرُوا بِآيَاتِنَا هُمْ أَصْحَابُ الْمَشْأَمَةِ","t":"و کسانی که به آیات ما کافر شدند، همان یاران دست چپ (اهل شقاوت) هستند."},
+{"a":"عَلَيْهِمْ نَارٌ مُّؤْصَدَةٌ","t":"بر آنان آتشی بسته (و فراگیر) است."}
+]},
+
+{"n":91,"name":"شمس","meaning":"خورشید","message":"تزکیه نفس در برابر آلودگی اخلاقی؛ داستان ثمود نمونه سرکشی است.","key":"قَدْ أَفْلَحَ مَن زَکَّاهَا","verses":"15","type":"مکی","firstWord":"وَالشَّمْسِ","lastWord":"عُقْبَاهَا","lastVerse":"وَلَا یَخَافُ عُقْبَاهَا","versesOrder":["۱. وَالشَّمْسِ وَضُحَاهَا","۲. وَالْقَمَرِ إِذَا تَلَاهَا","۳. وَالنَّهَارِ إِذَا جَلَّاهَا","۴. وَاللَّیْلِ إِذَا یَغْشَاهَا"],"before":"بلد","after":"لیل","sharedWords":["لَأُقْسِمُ (با بلد، تکویر، عبس)"],"uniqueWords":["ضُحَاهَا","تَزْکِیَة","سَقْیَاهَا","عُقْبَاهَا"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَالشَّمْسِ وَضُحَاهَا","t":"سوگند به خورشید و روشنایی‌اش."},
+{"a":"وَالْقَمَرِ إِذَا تَلَاهَا","t":"و سوگند به ماه وقتی از پی آن آید."},
+{"a":"وَالنَّهَارِ إِذَا جَلَّاهَا","t":"و سوگند به روز وقتی خورشید را آشکار کند."},
+{"a":"وَاللَّيْلِ إِذَا يَغْشَاهَا","t":"و سوگند به شب وقتی خورشید را بپوشاند."},
+{"a":"وَالسَّمَاءِ وَمَا بَنَاهَا","t":"و سوگند به آسمان و آن‌کس که آن را بنا کرد."},
+{"a":"وَالْأَرْضِ وَمَا طَحَاهَا","t":"و سوگند به زمین و آن‌کس که آن را گسترد."},
+{"a":"وَنَفْسٍ وَمَا سَوَّاهَا","t":"و سوگند به نفس و آن‌کس که آن را منظم ساخت."},
+{"a":"فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَاهَا","t":"سپس نافرمانی و پرهیزگاری‌اش را به او الهام کرد."},
+{"a":"قَدْ أَفْلَحَ مَن زَكَّاهَا","t":"همانا کسی که نفس خود را پاک کرد، رستگار شد."},
+{"a":"وَقَدْ خَابَ مَن دَسَّاهَا","t":"و کسی که آن را آلوده کرد، زیانکار شد."},
+{"a":"كَذَّبَتْ ثَمُودُ بِطَغْوَاهَا","t":"قوم ثمود به‌سبب سرکشی خود تکذیب کردند."},
+{"a":"إِذِ انبَعَثَ أَشْقَاهَا","t":"آن‌گاه که شقی‌ترینشان برخاست."},
+{"a":"فَقَالَ لَهُمْ رَسُولُ اللَّهِ نَاقَةَ اللَّهِ وَسُقْيَاهَا","t":"پس فرستاده خدا به آن‌ها گفت: ناقه خدا و آبشخور آن را (حفظ کنید)."},
+{"a":"فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنبِهِمْ فَسَوَّاهَا","t":"آن‌ها او را تکذیب کردند و ناقه را پی کردند؛ پس پروردگارشان به‌سبب گناهشان آن‌ها را هلاک کرد و با خاک یکسان نمود."},
+{"a":"وَلَا يَخَافُ عُقْبَاهَا","t":"و او (خدا) از عاقبت آن نمی‌ترسد."}
+]},
+
+{"n":92,"name":"لیل","meaning":"شب","message":"دو مسیر متضاد انسان: بخشش و تقوا در برابر بخل و تکذیب.","key":"إِنَّ سَعْیَکُمْ لَشَتَّى","verses":"21","type":"مکی","firstWord":"وَاللَّیْلِ","lastWord":"وَتَرَاضَى","lastVerse":"وَلَسَوْفَ یَرْضَى","versesOrder":["۱. وَاللَّیْلِ إِذَا یَغْشَى","۲. وَالنَّهَارِ إِذَا تَجَلَّى","۳. وَمَا خَلَقَ الذَّکَرَ وَالْأُنثَى","۴. إِنَّ سَعْیَکُمْ لَشَتَّى"],"before":"شمس","after":"ضحی","sharedWords":["—"],"uniqueWords":["یَغْشَى","لَشَتَّى","بِالْحُسْنَى"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَاللَّيْلِ إِذَا يَغْشَىٰ","t":"سوگند به شب وقتی (جهان را) بپوشاند."},
+{"a":"وَالنَّهَارِ إِذَا تَجَلَّىٰ","t":"و سوگند به روز وقتی آشکار شود."},
+{"a":"وَمَا خَلَقَ الذَّكَرَ وَالْأُنثَىٰ","t":"و سوگند به آن‌کس که نر و ماده را آفرید."},
+{"a":"إِنَّ سَعْيَكُمْ لَشَتَّىٰ","t":"که تلاش شما پراکنده (و گوناگون) است."},
+{"a":"فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ","t":"پس اما کسی که (از مال خود) داد و پرهیزگاری کرد."},
+{"a":"وَصَدَّقَ بِالْحُسْنَىٰ","t":"و (وعده) نیک را تصدیق کرد."},
+{"a":"فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ","t":"ما راه آسان را برایش هموار می‌کنیم."},
+{"a":"وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ","t":"و اما کسی که بخل ورزید و خود را بی‌نیاز دانست."},
+{"a":"وَكَذَّبَ بِالْحُسْنَىٰ","t":"و (وعده) نیک را تکذیب کرد."},
+{"a":"فَسَنُيَسِّرُهُ لِلْعُسْرَىٰ","t":"ما راه دشوار را برایش آماده می‌کنیم."},
+{"a":"وَمَا يُغْنِي عَنْهُ مَالُهُ إِذَا تَرَدَّىٰ","t":"و مالش هنگامی که (در چاه هلاکت) افتاد، او را بی‌نیاز نمی‌کند."},
+{"a":"إِنَّ عَلَيْنَا لَلْهُدَىٰ","t":"همانا هدایت بر عهده ماست."},
+{"a":"وَإِنَّ لَنَا لَلْآخِرَةَ وَالْأُولَىٰ","t":"و همانا آخرت و دنیا از آنِ ماست."},
+{"a":"فَأَنذَرْتُكُمْ نَارًا تَلَظَّىٰ","t":"پس شما را از آتشی فروزان بیم دادم."},
+{"a":"لَا يَصْلَاهَا إِلَّا الْأَشْقَى","t":"که جز بدبخت‌ترین (مردم) در آن درنیاید."},
+{"a":"الَّذِي كَذَّبَ وَتَوَلَّىٰ","t":"همان‌کس که تکذیب کرد و روی گرداند."},
+{"a":"وَسَيُجَنَّبُهَا الْأَتْقَى","t":"و پرهیزگارترین (مردم) از آن دور داشته می‌شود."},
+{"a":"الَّذِي يُؤْتِي مَالَهُ يَتَزَكَّىٰ","t":"همان‌کس که مال خود را می‌دهد تا پاک شود."},
+{"a":"وَمَا لِأَحَدٍ عِندَهُ مِن نِّعْمَةٍ تُجْزَىٰ","t":"و هیچ نعمتی نزد او نیست که جزا داده شود."},
+{"a":"إِلَّا ابْتِغَاءَ وَجْهِ رَبِّهِ الْأَعْلَىٰ","t":"مگر برای طلب رضای پروردگار برترش."},
+{"a":"وَلَسَوْفَ يَرْضَىٰ","t":"و به‌زودی خشنود خواهد شد."}
+]},
+
+{"n":93,"name":"ضحی","meaning":"روشنایی صبح","message":"تسلی پیامبر و یادآوری لطف خدا و سفارش به یتیم و سائل.","key":"مَا وَدَّعَکَ رَبُّکَ وَمَا قَلَى","verses":"11","type":"مکی","firstWord":"وَالضُّحَى","lastWord":"فَحَدِّثْ","lastVerse":"وَأَمَّا بِنِعْمَةِ رَبِّکَ فَحَدِّثْ","versesOrder":["۱. وَالضُّحَى","۲. وَاللَّیْلِ إِذَا سَجَى","۳. مَا وَدَّعَکَ رَبُّکَ وَمَا قَلَى","۴. وَلَلْآخِرَةُ خَیْرٌ لَّکَ مِنَ الْأُولَى"],"before":"لیل","after":"شرح","sharedWords":["—"],"uniqueWords":["وَالضُّحَى","قَلَى","فَحَدِّثْ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَالضُّحَىٰ","t":"سوگند به روشنایی روز."},
+{"a":"وَاللَّيْلِ إِذَا سَجَىٰ","t":"و سوگند به شب وقتی آرام گیرد."},
+{"a":"مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ","t":"پروردگارت تو را رها نکرد و دشمن نداشت."},
+{"a":"وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ","t":"و همانا آخرت برای تو از دنیا بهتر است."},
+{"a":"وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ","t":"و به‌زودی پروردگارت به تو عطا می‌کند تا خشنود شوی."},
+{"a":"أَلَمْ يَجِدْكَ يَتِيمًا فَآوَىٰ","t":"آیا تو را یتیم نیافت و پناه نداد؟"},
+{"a":"وَوَجَدَكَ ضَالًّا فَهَدَىٰ","t":"و تو را گمراه یافت و هدایت کرد."},
+{"a":"وَوَجَدَكَ عَائِلًا فَأَغْنَىٰ","t":"و تو را نیازمند یافت و بی‌نیاز کرد."},
+{"a":"فَأَمَّا الْيَتِيمَ فَلَا تَقْهَرْ","t":"پس یتیم را خوار مکن."},
+{"a":"وَأَمَّا السَّائِلَ فَلَا تَنْهَرْ","t":"و گدا را نران."},
+{"a":"وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ","t":"و نعمت پروردگارت را بازگو کن."}
+]},
+
+{"n":94,"name":"شرح","meaning":"گشایش","message":"یادآوری نعمت‌های خدا و پیوند سختی با آسانی.","key":"فَإِنَّ مَعَ الْعُسْرِ یُسْراً","verses":"8","type":"مکی","firstWord":"أَلَمْ","lastWord":"فَارْغَبْ","lastVerse":"وَإِلَى رَبِّکَ فَارْغَبْ","versesOrder":["۱. أَلَمْ نَشْرَحْ لَکَ صَدْرَکَ","۲. وَوَضَعْنَا عَنکَ وِزْرَکَ","۳. الَّذِی أَنقَضَ ظَهْرَکَ","۴. وَرَفَعْنَا لَکَ ذِکْرَکَ"],"before":"ضحی","after":"تین","sharedWords":["—"],"uniqueWords":["نَشْرَحْ","فَارْغَبْ"],"repeatWords":"یُسْرًا ۲ بار","prophets":"—",
+"ayahs":[
+{"a":"أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ","t":"آیا سینه‌ات را گشاده نکردیم؟"},
+{"a":"وَوَضَعْنَا عَنكَ وِزْرَكَ","t":"و بار سنگینت را از تو برداشتیم."},
+{"a":"الَّذِي أَنقَضَ ظَهْرَكَ","t":"همان باری که پشتت را شکسته بود."},
+{"a":"وَرَفَعْنَا لَكَ ذِكْرَكَ","t":"و نام تو را بلند آوازه کردیم."},
+{"a":"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا","t":"پس همانا با هر سختی، آسانی است."},
+{"a":"إِنَّ مَعَ الْعُسْرِ يُسْرًا","t":"همانا با هر سختی، آسانی است."},
+{"a":"فَإِذَا فَرَغْتَ فَانصَبْ","t":"پس چون (از کارها) فراغت یافتی، بکوش."},
+{"a":"وَإِلَىٰ رَبِّكَ فَارْغَبْ","t":"و به‌سوی پروردگارت رغبت کن."}
+]},
+
+{"n":95,"name":"تین","meaning":"انجیر","message":"انسان در بهترین ساختار آفریده شده و با بی‌ایمانی سقوط می‌کند.","key":"لَقَدْ خَلَقْنَا الْإِنسَانَ فِی أَحْسَنِ تَقْوِیمٍ","verses":"8","type":"مکی","firstWord":"وَالتِّینِ","lastWord":"الْحَاکِمِینَ","lastVerse":"أَلَیْسَ اللَّهُ بِأَحْکَمِ الْحَاکِمِینَ","versesOrder":["۱. وَالتِّینِ وَالزَّیْتُونِ","۲. وَطُورِ سِینِینَ","۳. وَهَذَا الْبَلَدِ الْأَمِینِ","۴. لَقَدْ خَلَقْنَا الْإِنسَانَ فِی أَحْسَنِ تَقْوِیمٍ"],"before":"شرح","after":"علق","sharedWords":["—"],"uniqueWords":["وَالتِّینِ","سِینِینَ","تَقْوِیمٍ","سَافِلِینَ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَالتِّينِ وَالزَّيْتُونِ","t":"سوگند به انجیر و زیتون."},
+{"a":"وَطُورِ سِينِينَ","t":"و سوگند به کوه طور سینین."},
+{"a":"وَهَٰذَا الْبَلَدِ الْأَمِينِ","t":"و سوگند به این شهر امن (مکه)."},
+{"a":"لَقَدْ خَلَقْنَا الْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ","t":"همانا انسان را در بهترین ساختار آفریدیم."},
+{"a":"ثُمَّ رَدَدْنَاهُ أَسْفَلَ سَافِلِينَ","t":"سپس او را به پایین‌ترین درجه فرود آوردیم."},
+{"a":"إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ","t":"مگر کسانی که ایمان آورده و کارهای شایسته کردند که برای آنان پاداشی بی‌پایان است."},
+{"a":"فَمَا يُكَذِّبُكَ بَعْدُ بِالدِّينِ","t":"پس چه چیزی تو را به تکذیب روز جزا وا می‌دارد؟"},
+{"a":"أَلَيْسَ اللَّهُ بِأَحْكَمِ الْحَاكِمِينَ","t":"آیا خدا بهترین داوران نیست؟"}
+]},
+
+,
+
+{"n":96,"name":"علق","meaning":"علق / خون بسته","message":"آغاز وحی و دعوت به خواندن؛ علم و قلم در برابر طغیان.","key":"اقْرَأْ؛ آیات ۱ تا ۵ آغاز وحی مشهورند.","verses":"19","type":"مکی","firstWord":"اقْرَأْ","lastWord":"وَاقْتَرِبْ","lastVerse":"وَاسْجُدْ وَاقْتَرِب","versesOrder":["۱. اقْرَأْ بِاسْمِ رَبِّکَ الَّذِی خَلَقَ","۲. خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ","۳. اقْرَأْ وَرَبُّکَ الْأَکْرَمُ","۴. الَّذِی عَلَّمَ بِالْقَلَمِ"],"before":"تین","after":"قدر","sharedWords":["—"],"uniqueWords":["اقْرَأْ","عَلَقٍ","النَّاصِیَةِ","الزَّبَانِیَةِ"],"repeatWords":"—","prophets":"—","sajdah":[19],
+"ayahs":[
+{"a":"اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ","t":"بخوان به نام پروردگارت که آفرید."},
+{"a":"خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ","t":"انسان را از خون بسته آفرید."},
+{"a":"اقْرَأْ وَرَبُّكَ الْأَكْرَمُ","t":"بخوان که پروردگارت کریم‌ترین است."},
+{"a":"الَّذِي عَلَّمَ بِالْقَلَمِ","t":"همان‌کس که با قلم آموخت."},
+{"a":"عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ","t":"به انسان آنچه نمی‌دانست آموخت."},
+{"a":"كَلَّا إِنَّ الْإِنسَانَ لَيَطْغَىٰ","t":"چنین نیست! همانا انسان سرکشی می‌کند."},
+{"a":"أَن رَّآهُ اسْتَغْنَىٰ","t":"از این‌که خود را بی‌نیاز می‌بیند."},
+{"a":"إِنَّ إِلَىٰ رَبِّكَ الرُّجْعَىٰ","t":"همانا بازگشت به‌سوی پروردگار توست."},
+{"a":"أَرَأَيْتَ الَّذِي يَنْهَىٰ","t":"آیا دیدی آن‌کس را که بازمی‌داشت؟"},
+{"a":"عَبْدًا إِذَا صَلَّىٰ","t":"بنده‌ای را هنگامی که نماز می‌خواند؟"},
+{"a":"أَرَأَيْتَ إِن كَانَ عَلَى الْهُدَىٰ","t":"آیا دیدی اگر او بر هدایت باشد؟"},
+{"a":"أَوْ أَمَرَ بِالتَّقْوَىٰ","t":"یا به پرهیزگاری فرمان دهد؟"},
+{"a":"أَرَأَيْتَ إِن كَذَّبَ وَتَوَلَّىٰ","t":"آیا دیدی اگر (او) تکذیب کند و روی گرداند؟"},
+{"a":"أَلَمْ يَعْلَم بِأَنَّ اللَّهَ يَرَىٰ","t":"آیا نمی‌داند که خدا می‌بیند؟"},
+{"a":"كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعَنَّ بِالنَّاصِيَةِ","t":"چنین نیست! اگر بازنایستد، موی پیشانی‌اش را می‌کشیم."},
+{"a":"نَاصِيَةٍ كَاذِبَةٍ خَاطِئَةٍ","t":"پیشانی‌ای دروغگو و خطاکار."},
+{"a":"فَلْيَدْعُ نَادِيَهُ","t":"پس او (اهل) محفلش را بخواند."},
+{"a":"سَنَدْعُ الزَّبَانِيَةَ","t":"ما هم نگهبانان (آتش) را می‌خوانیم."},
+{"a":"كَلَّا لَا تُطِعْهُ وَاسْجُدْ وَاقْتَرِب","t":"چنین نیست! از او اطاعت مکن و سجده کن و (به خدا) نزدیک شو."}
+]},
+
+{"n":97,"name":"قدر","meaning":"اندازه / تقدیر","message":"عظمت شب قدر و نزول قرآن و برتری آن بر هزار ماه.","key":"لَیْلَةُ الْقَدْرِ خَیْرٌ مِنْ أَلْفِ شَهْرٍ","verses":"5","type":"مکی","firstWord":"إِنَّا","lastWord":"الْفَجْرِ","lastVerse":"سَلَامٌ هِیَ حَتَّى مَطْلَعِ الْفَجْرِ","versesOrder":["۱. إِنَّا أَنزَلْنَاهُ فِی لَیْلَةِ الْقَدْرِ","۲. وَمَا أَدْرَاکَ مَا لَیْلَةُ الْقَدْرِ","۳. لَیْلَةُ الْقَدْرِ خَیْرٌ مِّنْ أَلْفِ شَهْرٍ","۴. تَنَزَّلُ الْمَلَائِکَةُ وَالرُّوحُ فِیهَا بِإِذْنِ رَبِّهِم"],"before":"علق","after":"بینه","sharedWords":["—"],"uniqueWords":["الْقَدْرِ","أَلْفِ شَهْرٍ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ","t":"ما آن (قرآن) را در شب قدر نازل کردیم."},
+{"a":"وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ","t":"و تو چه می‌دانی شب قدر چیست؟"},
+{"a":"لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ","t":"شب قدر از هزار ماه بهتر است."},
+{"a":"تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ","t":"فرشتگان و روح در آن شب به‌اذن پروردگارشان برای هر کاری نازل می‌شوند."},
+{"a":"سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ","t":"آن شب تا طلوع فجر سلام است."}
+]},
+
+{"n":98,"name":"بینه","meaning":"دلیل روشن","message":"پیامبر و قرآن به‌عنوان بینه و تقسیم انسان‌ها به خیرالبریه و شرالبریه.","key":"خَیْرُ الْبَرِیَّة / شَرُّ الْبَرِیَّة","verses":"8","type":"مدنی","firstWord":"لَمْ","lastWord":"رَبَّهُ","lastVerse":"ذَلِکَ لِمَنْ خَشِیَ رَبَّهُ","versesOrder":["۱. لَمْ یَکُنِ الَّذِینَ کَفَرُوا","۲. رَسُولٌ مِّنَ اللَّهِ یَتْلُو صُحُفًا مُّطَهَّرَةً","۳. فِیهَا کُتُبٌ قَیِّمَةٌ","۴. وَمَا تَفَرَّقَ الَّذِینَ أُوتُوا الْکِتَابَ"],"before":"قدر","after":"زلزله","sharedWords":["—"],"uniqueWords":["الْبَرِیَّة","مُّطَهَّرَةً","رَضِيَ اللَّهُ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"لَمْ يَكُنِ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ الْبَيِّنَةُ","t":"کافران از اهل کتاب و مشرکان (از کفر خود) دست برنداشتند تا آنکه برایشان دلیلی روشن آمد."},
+{"a":"رَسُولٌ مِّنَ اللَّهِ يَتْلُو صُحُفًا مُّطَهَّرَةً","t":"فرستاده‌ای از جانب خدا که صفحاتی پاک را می‌خواند."},
+{"a":"فِيهَا كُتُبٌ قَيِّمَةٌ","t":"در آن، نوشته‌های استوار است."},
+{"a":"وَمَا تَفَرَّقَ الَّذِينَ أُوتُوا الْكِتَابَ إِلَّا مِن بَعْدِ مَا جَاءَتْهُمُ الْبَيِّنَةُ","t":"اهل کتاب پراکنده نشدند مگر پس از آنکه دلیل روشن برایشان آمد."},
+{"a":"وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ ۚ وَذَٰلِكَ دِينُ الْقَيِّمَةِ","t":"و به آن‌ها دستوری داده نشد مگر اینکه خدا را بپرستند درحالی‌که دین خود را برای او خالص کرده و یکتاپرست باشند و نماز برپا دارند و زکات بدهند؛ این است دین استوار."},
+{"a":"إِنَّ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ فِي نَارِ جَهَنَّمَ خَالِدِينَ فِيهَا ۚ أُولَٰئِكَ هُمْ شَرُّ الْبَرِيَّةِ","t":"همانا کافران از اهل کتاب و مشرکان در آتش جهنم جاودانه‌اند؛ آنان بدترین آفریدگانند."},
+{"a":"إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أُولَٰئِكَ هُمْ خَيْرُ الْبَرِيَّةِ","t":"همانا کسانی که ایمان آورده و کارهای شایسته کرده‌اند، آنان بهترین آفریدگانند."},
+{"a":"جَزَاؤُهُمْ عِندَ رَبِّهِمْ جَنَّاتُ عَدْنٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ۖ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِيَ رَبَّهُ","t":"پاداش آن‌ها نزد پروردگارشان باغ‌های جاودان است که نهرها زیرشان جاری است، جاودانه در آن می‌مانند؛ خدا از آنان خشنود و آنان از خدا خشنودند؛ این برای کسی است که از پروردگارش بترسد."}
+]},
+
+{"n":99,"name":"زلزله","meaning":"زلزله","message":"در قیامت زمین دگرگون و همه اعمال حتی به اندازه ذره آشکار می‌شود.","key":"مِثْقَالَ ذَرَّة؛ هیچ عمل کوچکی بی‌حساب نیست.","verses":"8","type":"مدنی","firstWord":"إِذَا","lastWord":"یَرَهُ","lastVerse":"وَمَن یَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا یَرَهُ","versesOrder":["۱. إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا","۲. وَأَخْرَجَتِ الْأَرْضُ أَثْقَالَهَا","۳. وَقَالَ الْإِنسَانُ مَا لَهَا","۴. یَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا"],"before":"بینه","after":"عادیات","sharedWords":["—"],"uniqueWords":["زُلْزِلَتِ","أَثْقَالَهَا","مِثْقَالَ ذَرَّةٍ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا","t":"وقتی زمین به‌سختی بلرزد."},
+{"a":"وَأَخْرَجَتِ الْأَرْضُ أَثْقَالَهَا","t":"و زمین بارهای سنگینش را بیرون اندازد."},
+{"a":"وَقَالَ الْإِنسَانُ مَا لَهَا","t":"و انسان بگوید: او را چه شده است؟"},
+{"a":"يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا","t":"در آن روز زمین اخبار خود را بازگو می‌کند."},
+{"a":"بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا","t":"زیرا پروردگارت به او وحی کرده است."},
+{"a":"يَوْمَئِذٍ يَصْدُرُ النَّاسُ أَشْتَاتًا لِّيُرَوْا أَعْمَالَهُمْ","t":"در آن روز مردم پراکنده بازمی‌گردند تا اعمالشان به آنان نشان داده شود."},
+{"a":"فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ","t":"پس هر که به‌اندازه ذره‌ای کار نیک کند، آن را می‌بیند."},
+{"a":"وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ","t":"و هر که به‌اندازه ذره‌ای کار بد کند، آن را می‌بیند."}
+]},
+
+{"n":100,"name":"عادیات","meaning":"دوندگان","message":"تصویر اسب‌های تیزرو و سپس نکوهش ناسپاسی و دلبستگی شدید به مال.","key":"إِنَّ الْإِنسَانَ لِرَبِّهِ لَکَنُودٌ","verses":"11","type":"مکی","firstWord":"وَالْعَادِیَاتِ","lastWord":"لَخَبِیرٌ","lastVerse":"إِنَّ رَبَّهُم بِهِمْ یَوْمَئِذٍ لَّخَبِیرٌ","versesOrder":["۱. وَالْعَادِیَاتِ ضَبْحًا","۲. فَالْمُورِیَاتِ قَدْحًا","۳. فَالْمُغِیرَاتِ صُبْحًا","۴. فَأَثَرْنَ بِهِ نَقْعًا"],"before":"زلزله","after":"قارعه","sharedWords":["خُنَّع (با طارق)"],"uniqueWords":["وَالْعَادِیَاتِ","ضَبْحًا","لَکَنُودٌ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَالْعَادِيَاتِ ضَبْحًا","t":"سوگند به اسبان تیزپا که (با نفس‌زنان) می‌دوند."},
+{"a":"فَالْمُورِيَاتِ قَدْحًا","t":"و سوگند به آنان که (از سم) آتش می‌جهانند."},
+{"a":"فَالْمُغِيرَاتِ صُبْحًا","t":"و سوگند به آنان که هنگام صبح هجوم می‌آورند."},
+{"a":"فَأَثَرْنَ بِهِ نَقْعًا","t":"و در آن (زمان) گرد و غبار برانگیختند."},
+{"a":"فَوَسَطْنَ بِهِ جَمْعًا","t":"و در میان دشمنان وارد شدند."},
+{"a":"إِنَّ الْإِنسَانَ لِرَبِّهِ لَكَنُودٌ","t":"همانا انسان نسبت به پروردگارش ناسپاس است."},
+{"a":"وَإِنَّهُ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ","t":"و او خود بر این (ناسپاسی) گواه است."},
+{"a":"وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ","t":"و او علاقه شدیدی به مال دارد."},
+{"a":"أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِي الْقُبُورِ","t":"آیا نمی‌داند که وقتی آنچه در قبرهاست بیرون ریخته شود؟"},
+{"a":"وَحُصِّلَ مَا فِي الصُّدُورِ","t":"و آنچه در سینه‌هاست آشکار گردد."},
+{"a":"إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌ","t":"همانا پروردگارشان در آن روز به آنان آگاه است."}
+]},
+
+{"n":101,"name":"قارعه","meaning":"کوبنده","message":"هول قیامت و سنجش اعمال در میزان الهی.","key":"سنگینی میزان=خوشی؛ سبکی میزان=هاویه.","verses":"11","type":"مکی","firstWord":"الْقَارِعَةُ","lastWord":"هَاوِيَهْ","lastVerse":"فَأُمُّهُ هَاوِيَةٌ","versesOrder":["۱. الْقَارِعَةُ","۲. مَا الْقَارِعَةُ","۳. وَمَا أَدْرَاکَ مَا الْقَارِعَةُ","۴. یَوْمَ یَکُونُ النَّاسُ کَالْفَرَاشِ الْمَبْثُوثِ"],"before":"عادیات","after":"تکاثر","sharedWords":["خَاشِعَةٌ (با غاشیه، نازعات)"],"uniqueWords":["الْقَارِعَةُ","هَاوِيَةٌ","الْمَبْثُوثِ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"الْقَارِعَةُ","t":"(آن حادثه) کوبنده."},
+{"a":"مَا الْقَارِعَةُ","t":"چیست آن کوبنده؟"},
+{"a":"وَمَا أَدْرَاكَ مَا الْقَارِعَةُ","t":"و تو چه می‌دانی آن کوبنده چیست؟"},
+{"a":"يَوْمَ يَكُونُ النَّاسُ كَالْفَرَاشِ الْمَبْثُوثِ","t":"روزی که مردم چون پروانه‌های پراکنده شوند."},
+{"a":"وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنفُوشِ","t":"و کوه‌ها چون پشم زده‌شده گردند."},
+{"a":"فَأَمَّا مَن ثَقُلَتْ مَوَازِينُهُ","t":"پس هر که کفه (اعمال نیک) او سنگین باشد."},
+{"a":"فَهُوَ فِي عِيشَةٍ رَّاضِيَةٍ","t":"در زندگی خشنودی خواهد بود."},
+{"a":"وَأَمَّا مَنْ خَفَّتْ مَوَازِينُهُ","t":"و اما هر که کفه (اعمال نیک) او سبک باشد."},
+{"a":"فَأُمُّهُ هَاوِيَةٌ","t":"پناهگاهش هاویه (دوزخ) است."},
+{"a":"وَمَا أَدْرَاكَ مَا هِيَهْ","t":"و تو چه می‌دانی آن چیست؟"},
+{"a":"نَارٌ حَامِيَةٌ","t":"آتشی است سوزان."}
+]},
+
+{"n":102,"name":"تکاثر","meaning":"فزون‌طلبی","message":"رقابت در زیاد کردن مال و امکانات انسان را از حقیقت غافل می‌کند.","key":"أَلْهَاکُمُ التَّکَاثُرُ","verses":"8","type":"مکی","firstWord":"أَلْهَاکُمُ","lastWord":"النَّعِیمِ","lastVerse":"ثُمَّ لَتُسْأَلُنَّ یَوْمَئِذٍ عَنِ النَّعِیمِ","versesOrder":["۱. أَلْهَاکُمُ التَّکَاثُرُ","۲. حَتَّى زُرْتُمُ الْمَقَابِرَ","۳. کَلَّا سَوْفَ تَعْلَمُونَ","۴. ثُمَّ کَلَّا سَوْفَ تَعْلَمُونَ"],"before":"قارعه","after":"عصر","sharedWords":["الْجَحِیمِ (با نازعات، عبس، تکویر)"],"uniqueWords":["أَلْهَاکُمُ","التَّکَاثُرُ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"أَلْهَاكُمُ التَّكَاثُرُ","t":"فزون‌طلبی شما را غافل کرد."},
+{"a":"حَتَّىٰ زُرْتُمُ الْمَقَابِرَ","t":"تا آنکه به قبرها وارد شدید."},
+{"a":"كَلَّا سَوْفَ تَعْلَمُونَ","t":"چنین نیست! به‌زودی خواهید دانست."},
+{"a":"ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ","t":"باز هم چنین نیست! به‌زودی خواهید دانست."},
+{"a":"كَلَّا لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ","t":"چنین نیست! اگر علم یقین داشتید."},
+{"a":"لَتَرَوُنَّ الْجَحِيمَ","t":"قطعاً جهنم را خواهید دید."},
+{"a":"ثُمَّ لَتَرَوُنَّهَا عَيْنَ الْيَقِينِ","t":"سپس آن را به دیده یقین خواهید دید."},
+{"a":"ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ","t":"سپس در آن روز از نعمت‌ها بازخواست می‌شوید."}
+]},
+
+{"n":103,"name":"عصر","meaning":"زمان","message":"تنها راه نجات: ایمان، عمل صالح، سفارش به حق و سفارش به صبر.","key":"ایمان + عمل صالح + حق + صبر","verses":"3","type":"مکی","firstWord":"وَالْعَصْرِ","lastWord":"بِالصَّبْرِ","lastVerse":"وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ","versesOrder":["۱. وَالْعَصْرِ","۲. إِنَّ الْإِنسَانَ لَفِی خُسْرٍ","۳. إِلَّا الَّذِینَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ"],"before":"تکاثر","after":"همزه","sharedWords":["—"],"uniqueWords":["وَالْعَصْرِ","خُسْرٍ","بِالصَّبْرِ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَالْعَصْرِ","t":"سوگند به زمان."},
+{"a":"إِنَّ الْإِنسَانَ لَفِي خُسْرٍ","t":"همانا انسان در زیان است."},
+{"a":"إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ","t":"مگر کسانی که ایمان آورده و کارهای شایسته کردند و یکدیگر را به حق و صبر سفارش کردند."}
+]},
+
+{"n":104,"name":"همزه","meaning":"عیب‌جو","message":"نکوهش عیب‌جویی و تحقیر و جمع مال با خیال جاودانگی.","key":"الْحُطَمَة نام آتش جهنم در سوره است.","verses":"9","type":"مکی","firstWord":"وَیْلٌ","lastWord":"مُّؤْصَدَةٌ","lastVerse":"إِنَّهَا عَلَیْهِم مُّؤْصَدَةٌ","versesOrder":["۱. وَیْلٌ لِّکُلِّ هُمَزَةٍ لُّمَزَةٍ","۲. الَّذِی جَمَعَ مَالًا وَعَدَّدَهُ","۳. یَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ","۴. کَلَّا لَیُنبَذَنَّ فِی الْحُطَمَةِ"],"before":"عصر","after":"فیل","sharedWords":["—"],"uniqueWords":["هُمَزَةٍ","لُّمَزَةٍ","الْحُطَمَةِ","مُّؤْصَدَةٌ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ","t":"وای بر هر عیب‌جوی طعنه‌زن!"},
+{"a":"الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ","t":"همان‌کس که مالی جمع کرد و آن را شمرد."},
+{"a":"يَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ","t":"گمان می‌کند که مالش او را جاودان می‌کند."},
+{"a":"كَلَّا ۖ لَيُنبَذَنَّ فِي الْحُطَمَةِ","t":"چنین نیست! قطعاً در حطمه (آتش خردکننده) انداخته می‌شود."},
+{"a":"وَمَا أَدْرَاكَ مَا الْحُطَمَةُ","t":"و تو چه می‌دانی حطمه چیست؟"},
+{"a":"نَارُ اللَّهِ الْمُوقَدَةُ","t":"آتش برافروخته خدا."},
+{"a":"الَّتِي تَطَّلِعُ عَلَى الْأَفْئِدَةِ","t":"آتشی که بر دل‌ها راه می‌یابد."},
+{"a":"إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ","t":"همانا آن (آتش) بر آنان بسته است."},
+{"a":"فِي عَمَدٍ مُّمَدَّدَةٍ","t":"در ستون‌های کشیده‌شده."}
+]},
+
+{"n":105,"name":"فیل","meaning":"فیل","message":"یادآوری نابودی سپاه فیل و حفاظت خدا از کعبه.","key":"أَصْحَابُ الْفِیل / طَیْرًا أَبَابِیل","verses":"5","type":"مکی","firstWord":"أَلَمْ","lastWord":"مَّأْكُولٍ","lastVerse":"فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ","versesOrder":["۱. أَلَمْ تَرَ کَیْفَ فَعَلَ رَبُّکَ بِأَصْحَابِ الْفِیلِ","۲. أَلَمْ یَجْعَلْ کَیْدَهُمْ فِی تَضْلِیلٍ","۳. وَأَرْسَلَ عَلَیْهِمْ طَیْرًا أَبَابِیلَ","۴. تَرْمِیهِم بِحِجَارَةٍ مِّن سِجِّیلٍ"],"before":"همزه","after":"قریش","sharedWords":["—"],"uniqueWords":["الْفِیلِ","أَبَابِیلَ","سِجِّیلٍ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ","t":"آیا ندیدی پروردگارت با اصحاب فیل چه کرد؟"},
+{"a":"أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ","t":"آیا نقشه‌شان را در تباهی قرار نداد؟"},
+{"a":"وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ","t":"و بر آن‌ها پرندگانی دسته‌دسته فرستاد."},
+{"a":"تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ","t":"که آن‌ها را با سنگ‌هایی از گل سنگ می‌زدند."},
+{"a":"فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ","t":"و آن‌ها را چون کاه خورده‌شده قرار داد."}
+]},
+
+,
+
+{"n":106,"name":"قریش","meaning":"قریش","message":"یادآوری امنیت و روزی قریش و دعوت آنان به عبادت پروردگار کعبه.","key":"نعمت امنیت و رزق باید به عبادت خدا منجر شود.","verses":"4","type":"مکی","firstWord":"لِإِیلَافِ","lastWord":"خَوْفٍ","lastVerse":"الَّذِی أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ","versesOrder":["۱. لِإِیلَافِ قُرَیْشٍ","۲. إِیلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّیْفِ","۳. فَلْیَعْبُدُوا رَبَّ هَذَا الْبَیْتِ","۴. الَّذِی أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ"],"before":"فیل","after":"ماعون","sharedWords":["—"],"uniqueWords":["لِإِیلَافِ","قُرَیْشٍ","الشِّتَاءِ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"لِإِيلَافِ قُرَيْشٍ","t":"برای انس و الفت قریش."},
+{"a":"إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ","t":"الفت‌شان در سفر زمستان و تابستان."},
+{"a":"فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ","t":"پس باید پروردگار این خانه (کعبه) را بپرستند."},
+{"a":"الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ","t":"همان‌کس که آنان را از گرسنگی غذا داد و از ترس ایمن ساخت."}
+]},
+
+{"n":107,"name":"ماعون","meaning":"کمک کوچک","message":"نشانه‌های تکذیب دین: بی‌توجهی به یتیم و مسکین و عبادت ریاکارانه.","key":"الماعون=کمک‌ها و وسایل مورد نیاز مردم.","verses":"7","type":"مکی","firstWord":"أَرَأَیْتَ","lastWord":"الْمَاعُونَ","lastVerse":"وَيَمْنَعُونَ الْمَاعُونَ","versesOrder":["۱. أَرَأَیْتَ الَّذِی یُکَذِّبُ بِالدِّینِ","۲. فَذَلِکَ الَّذِی یَدُعُّ الْیَتِیمَ","۳. وَلَا یَحُضُّ عَلَى طَعَامِ الْمِسْکِینِ","۴. فَوَیْلٌ لِّلْمُصَلِّینَ"],"before":"قریش","after":"کوثر","sharedWords":["الَّذِینَ (دو بار در همین سوره)"],"uniqueWords":["الْمَاعُونَ","یَدُعُّ","سَاهُونَ"],"repeatWords":"الَّذِينَ ۲ بار","prophets":"—",
+"ayahs":[
+{"a":"أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ","t":"آیا دیدی آن‌کس را که روز جزا را تکذیب می‌کند؟"},
+{"a":"فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ","t":"او همان‌کس است که یتیم را به‌سختی می‌راند."},
+{"a":"وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ","t":"و (دیگران را) به اطعام مسکین تشویق نمی‌کند."},
+{"a":"فَوَيْلٌ لِّلْمُصَلِّينَ","t":"پس وای بر نمازگزاران!"},
+{"a":"الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ","t":"آنان که از نمازشان غافلند."},
+{"a":"الَّذِينَ هُمْ يُرَاءُونَ","t":"همان‌کسانی که ریا می‌کنند."},
+{"a":"وَيَمْنَعُونَ الْمَاعُونَ","t":"و از کمک (به نیازمندان) خودداری می‌کنند."}
+]},
+
+{"n":108,"name":"کوثر","meaning":"خیر فراوان","message":"اعطای خیر فراوان به پیامبر و فرمان نماز و قربانی و وعده شکست دشمن.","key":"إِنَّا أَعْطَیْنَاکَ الْکَوْثَرَ","verses":"3","type":"مکی","firstWord":"إِنَّا","lastWord":"الْأَبْتَرُ","lastVerse":"إِنَّ شَانِئَکَ هُوَ الْأَبْتَرُ","versesOrder":["۱. إِنَّا أَعْطَیْنَاکَ الْکَوْثَرَ","۲. فَصَلِّ لِرَبِّکَ وَانْحَرْ","۳. إِنَّ شَانِئَکَ هُوَ الْأَبْتَرُ"],"before":"ماعون","after":"کافرون","sharedWords":["—"],"uniqueWords":["الْکَوْثَرَ","وَانْحَرْ","الْأَبْتَرُ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ","t":"همانا ما به تو کوثر (خیر فراوان) عطا کردیم."},
+{"a":"فَصَلِّ لِرَبِّكَ وَانْحَرْ","t":"پس برای پروردگارت نماز بخوان و قربانی کن."},
+{"a":"إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ","t":"همانا دشمن تو خودش بریده (بی‌نسل) است."}
+]},
+
+{"n":109,"name":"کافرون","meaning":"کافران","message":"مرزبندی روشن میان توحید و شرک و نفی سازش اعتقادی.","key":"لَکُمْ دِینُکُمْ وَلِیَ دِینِ","verses":"6","type":"مکی","firstWord":"قُلْ","lastWord":"دِینِ","lastVerse":"لَکُمْ دِینُکُمْ وَلِیَ دِینِ","versesOrder":["۱. قُلْ یَا أَیُّهَا الْکَافِرُونَ","۲. لَا أَعْبُدُ مَا تَعْبُدُونَ","۳. وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ","۴. وَلَا أَنَا عَابِدٌ مَّا عَبَدْتُمْ"],"before":"کوثر","after":"نصر","sharedWords":["—"],"uniqueWords":["الْکَافِرُونَ","عَابِدُونَ","دِینِ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"قُلْ يَا أَيُّهَا الْكَافِرُونَ","t":"بگو: ای کافران!"},
+{"a":"لَا أَعْبُدُ مَا تَعْبُدُونَ","t":"من آنچه شما می‌پرستید، نمی‌پرستم."},
+{"a":"وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ","t":"و شما هم آنچه من می‌پرستم، نمی‌پرستید."},
+{"a":"وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ","t":"و من پرستنده آنچه شما پرستیدید، نیستم."},
+{"a":"وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ","t":"و شما هم پرستنده آنچه من می‌پرستم، نیستید."},
+{"a":"لَكُمْ دِينُكُمْ وَلِيَ دِينِ","t":"دین شما برای خودتان و دین من برای خودم."}
+]},
+
+{"n":110,"name":"نصر","meaning":"یاری","message":"خبر از یاری خدا و فتح و فرمان تسبیح و استغفار پس از پیروزی.","key":"پس از پیروزی: تسبیح، حمد و استغفار.","verses":"3","type":"مدنی","firstWord":"إِذَا","lastWord":"تَوَّابًا","lastVerse":"إِنَّهُ کَانَ تَوَّابًا","versesOrder":["۱. إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ","۲. وَرَأَیْتَ النَّاسَ یَدْخُلُونَ فِی دِینِ اللَّهِ أَفْوَاجًا","۳. فَسَبِّحْ بِحَمْدِ رَبِّکَ وَاسْتَغْفِرْهُ"],"before":"کافرون","after":"مسد","sharedWords":["—"],"uniqueWords":["نَصْرُ","أَفْوَاجًا","تَوَّابًا"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ","t":"وقتی یاری خدا و فتح (مکه) فرا رسد."},
+{"a":"وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا","t":"و مردم را ببینی که فوج‌فوج در دین خدا وارد می‌شوند."},
+{"a":"فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا","t":"پس پروردگارت را تسبیح و حمد کن و از او آمرزش بخواه؛ همانا او توبه‌پذیر است."}
+]},
+
+{"n":111,"name":"مسد","meaning":"ریسمان لیف خرما","message":"نکوهش ابولهب و همسرش و بی‌اثر بودن مال و جایگاه در برابر حق.","key":"تَبَّتْ یَدَا أَبِی لَهَبٍ","verses":"5","type":"مکی","firstWord":"تَبَّتْ","lastWord":"مَسَدٍ","lastVerse":"فِی جِیدِهَا حَبْلٌ مِّن مَّسَدٍ","versesOrder":["۱. تَبَّتْ یَدَا أَبِی لَهَبٍ وَتَبَّ","۲. مَا أَغْنَى عَنْهُ مَالُهُ وَمَا کَسَبَ","۳. سَیَصْلَى نَارًا ذَاتَ لَهَبٍ","۴. وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ"],"before":"نصر","after":"اخلاص","sharedWords":["لَهَبٍ"],"uniqueWords":["تَبَّتْ","أَبِی لَهَبٍ","مَسَدٍ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ","t":"بریده باد دستان ابولهب و خودش بریده باد."},
+{"a":"مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ","t":"مالش و آنچه به‌دست آورد، او را بی‌نیاز نکرد."},
+{"a":"سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ","t":"به‌زودی در آتشی شعله‌ور درآید."},
+{"a":"وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ","t":"و همسرش که هیزم‌کش (آتش) است."},
+{"a":"فِي جِيدِهَا حَبْلٌ مِّن مَّسَدٍ","t":"بر گردنش ریسمانی از لیف خرماست."}
+]},
+
+{"n":112,"name":"اخلاص","meaning":"خلوص و یکتایی","message":"تبیین فشرده توحید ناب و بی‌همتایی خدا.","key":"چهار کلید: احد، صمد، بی‌والدی، بی‌همتایی.","verses":"4","type":"مکی","firstWord":"قُلْ","lastWord":"أَحَدٌ","lastVerse":"وَلَمْ یَکُن لَّهُ کُفُوًا أَحَدٌ","versesOrder":["۱. قُلْ هُوَ اللَّهُ أَحَدٌ","۲. اللَّهُ الصَّمَدُ","۳. لَمْ یَلِدْ وَلَمْ یُولَدْ","۴. وَلَمْ یَکُن لَّهُ کُفُوًا أَحَدٌ"],"before":"مسد","after":"فلق","sharedWords":["أَحَدٌ (با فجر، بلد)"],"uniqueWords":["الصَّمَدُ","کُفُوًا"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"قُلْ هُوَ اللَّهُ أَحَدٌ","t":"بگو: او خدای یکتاست."},
+{"a":"اللَّهُ الصَّمَدُ","t":"خدای بی‌نیاز (که همه به او نیازمندند)."},
+{"a":"لَمْ يَلِدْ وَلَمْ يُولَدْ","t":"نه زاده و نه زاده شده است."},
+{"a":"وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ","t":"و هیچ‌کس همانند او نیست."}
+]},
+
+{"n":113,"name":"فلق","meaning":"سپیده","message":"پناه بردن به خدا از شرور بیرونی و آشکار.","key":"قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ","verses":"5","type":"مکی","firstWord":"قُلْ","lastWord":"حَسَدَ","lastVerse":"وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ","versesOrder":["۱. قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ","۲. مِن شَرِّ مَا خَلَقَ","۳. وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ","۴. وَمِن شَرِّ النَّفَّاثَاتِ فِی الْعُقَدِ"],"before":"اخلاص","after":"ناس","sharedWords":["—"],"uniqueWords":["الْفَلَقِ","غَاسِقٍ","النَّفَّاثَاتِ"],"repeatWords":"—","prophets":"—",
+"ayahs":[
+{"a":"قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ","t":"بگو: به پروردگار سپیده پناه می‌برم."},
+{"a":"مِن شَرِّ مَا خَلَقَ","t":"از شر آنچه آفریده است."},
+{"a":"وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ","t":"و از شر تاریکی چون درآید."},
+{"a":"وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ","t":"و از شر جادوگرانی که در گره‌ها می‌دمند."},
+{"a":"وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ","t":"و از شر حسود چون حسد ورزد."}
+]},
+
+{"n":114,"name":"ناس","meaning":"مردم","message":"پناه بردن به رب، ملک و اله مردم از شر وسوسه پنهان.","key":"رَبِّ النَّاس + مَلِکِ النَّاس + إِلَهِ النَّاس","verses":"6","type":"مکی","firstWord":"قُلْ","lastWord":"النَّاسِ","lastVerse":"مِنَ الْجِنَّةِ وَالنَّاسِ","versesOrder":["۱. قُلْ أَعُوذُ بِرَبِّ النَّاسِ","۲. مَلِکِ النَّاسِ","۳. إِلَهِ النَّاسِ","۴. مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ"],"before":"فلق","after":"— (آخرین سورهٔ قرآن)","sharedWords":["—"],"uniqueWords":["الْوَسْوَاسِ","الْخَنَّاسِ"],"repeatWords":"النَّاس ۵ بار","prophets":"—",
+"ayahs":[
+{"a":"قُلْ أَعُوذُ بِرَبِّ النَّاسِ","t":"بگو: به پروردگار مردم پناه می‌برم."},
+{"a":"مَلِكِ النَّاسِ","t":"فرمانروای مردم."},
+{"a":"إِلَٰهِ النَّاسِ","t":"معبود مردم."},
+{"a":"مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ","t":"از شر وسوسه‌گر پنهان‌شونده."},
+{"a":"الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ","t":"همان‌کس که در سینه‌های مردم وسوسه می‌کند."},
+{"a":"مِنَ الْجِنَّةِ وَالنَّاسِ","t":"از جن و انس."}
+]}
+
+
+
 ];
 
-const fa = n =>
-  String(n).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]);
-
+const fa = n => String(n).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]);
 const $ = id => document.getElementById(id);
 
 const icons = {
-
-menu:`<svg viewBox="0 0 24 24">
-<path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
-</svg>`,
-
-close:`<svg viewBox="0 0 24 24">
-<path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4-6.3-6.3-6.3 6.3-1.4-1.4L9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z"/>
-</svg>`,
-
-left:`<svg viewBox="0 0 24 24">
-<path d="m12 4 1.4 1.4L7.8 11H20v2H7.8l5.6 5.6L12 20l-8-8z"/>
-</svg>`,
-
-right:`<svg viewBox="0 0 24 24">
-<path d="m12 4-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20z"/>
-</svg>`,
-
-shuffle:`<svg viewBox="0 0 24 24">
-<path d="M16 3h5v5h-2V6.4l-4.2 4.2-1.4-1.4L17.6 5H16V3zM4.4 5.8l1.4-1.4 5.2 5.2-1.4 1.4-5.2-5.2zm9.4 8.6 1.4-1.4 3.8 3.8H21v2h-2.8l-3.4-3.4-1 1zm-3.4-1.2 1.4 1.4-5.8 5.8-1.4-1.4 5.8-5.8zM16 19h1.6l-1.2-1.2 1.4-1.4L21 19.6V21h-5v-2z"/>
-</svg>`,
-
-sun:`<svg viewBox="0 0 24 24">
-<path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM11 1h2v4h-2V1zm0 18h2v4h-2v-4zM1 11h4v2H1v-2zm18 0h4v2h-4v-2zM4.2 2.8l1.4-1.4 2.8 2.8L7 5.6 4.2 2.8zm12.4 16.8 1.4-1.4 2.8 2.8-1.4 1.4-2.8-2.8zM18.4 5.6 17 4.2l2.8-2.8 1.4 1.4-2.8 2.8zM7 18.4l1.4 1.4-2.8 2.8-1.4-1.4L7 18.4z"/>
-</svg>`,
-
-moon:`<svg viewBox="0 0 24 24">
-<path d="M20.7 15.2A8.7 8.7 0 0 1 8.8 3.3 9 9 0 1 0 20.7 15.2z"/>
-</svg>`,
-
-spark:`<svg viewBox="0 0 24 24">
-<path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2zm7 13 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"/>
-</svg>`,
-
-message:`<svg viewBox="0 0 24 24">
-<path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
-</svg>`,
-
-list:`<svg viewBox="0 0 24 24">
-<path d="M3 5h2v2H3V5zm0 6h2v2H3v-2zm0 6h2v2H3v-2zM19 5H7v2h12V5zm0 6H7v2h12v-2zm0 6H7v2h12v-2z"/>
-</svg>`,
-
-info:`<svg viewBox="0 0 24 24">
-<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-</svg>`,
-
-book:`<svg viewBox="0 0 24 24">
-<path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-6 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-6 4h12v12H6V8z"/>
-</svg>`,
-
-help:`<svg viewBox="0 0 24 24">
-<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 17h-2v-2h2v2zm2.07-7.75-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26A1.96 1.96 0 0 0 14 9a2 2 0 0 0-4 0H8a4 4 0 0 1 8 0c0 .88-.36 1.68-.93 2.25z"/>
-</svg>`,
-
-key:`<svg viewBox="0 0 24 24">
-<path d="M12.65 10A6 6 0 1 0 7 16a5.98 5.98 0 0 0 4.65-2.19L13 15v2h2v2h2v2h2v-2.83l-3.5-3.5 1.35-1.35A5.98 5.98 0 0 0 21 10a6 6 0 0 0-6-6 6 6 0 0 0-2.35.65L12.65 10zM7 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
-</svg>`
-
+menu:`<svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>`,
+close:`<svg viewBox="0 0 24 24"><path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4-6.3-6.3-6.3 6.3-1.4-1.4L9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z"/></svg>`,
+left:`<svg viewBox="0 0 24 24"><path d="m12 4 1.4 1.4L7.8 11H20v2H7.8l5.6 5.6L12 20l-8-8z"/></svg>`,
+right:`<svg viewBox="0 0 24 24"><path d="m12 4-1.4 1.4 5.6 5.6H4v2h12.2l-5.6 5.6L12 20z"/></svg>`,
+shuffle:`<svg viewBox="0 0 24 24"><path d="M16 3h5v5h-2V6.4l-4.2 4.2-1.4-1.4L17.6 5H16V3zM4.4 5.8l1.4-1.4 5.2 5.2-1.4 1.4-5.2-5.2zm9.4 8.6 1.4-1.4 3.8 3.8H21v2h-2.8l-3.4-3.4-1 1zm-3.4-1.2 1.4 1.4-5.8 5.8-1.4-1.4 5.8-5.8zM16 19h1.6l-1.2-1.2 1.4-1.4L21 19.6V21h-5v-2z"/></svg>`,
+sun:`<svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM11 1h2v4h-2V1zm0 18h2v4h-2v-4zM1 11h4v2H1v-2zm18 0h4v2h-4v-2zM4.2 2.8l1.4-1.4 2.8 2.8L7 5.6 4.2 2.8zm12.4 16.8 1.4-1.4 2.8 2.8-1.4 1.4-2.8-2.8zM18.4 5.6 17 4.2l2.8-2.8 1.4 1.4-2.8 2.8zM7 18.4l1.4 1.4-2.8 2.8-1.4-1.4L7 18.4z"/></svg>`,
+moon:`<svg viewBox="0 0 24 24"><path d="M20.7 15.2A8.7 8.7 0 0 1 8.8 3.3 9 9 0 1 0 20.7 15.2z"/></svg>`,
+spark:`<svg viewBox="0 0 24 24"><path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2zm7 13 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"/></svg>`,
+message:`<svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>`,
+list:`<svg viewBox="0 0 24 24"><path d="M3 5h2v2H3V5zm0 6h2v2H3v-2zm0 6h2v2H3v-2zM19 5H7v2h12V5zm0 6H7v2h12v-2zm0 6H7v2h12v-2z"/></svg>`,
+info:`<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>`,
+book:`<svg viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-6 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-6 4h12v12H6V8z"/></svg>`,
+help:`<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 17h-2v-2h2v2zm2.07-7.75-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26A1.96 1.96 0 0 0 14 9a2 2 0 0 0-4 0H8a4 4 0 0 1 8 0c0 .88-.36 1.68-.93 2.25z"/></svg>`,
+key:`<svg viewBox="0 0 24 24"><path d="M12.65 10A6 6 0 1 0 7 16a5.98 5.98 0 0 0 4.65-2.19L13 15v2h2v2h2v2h2v-2.83l-3.5-3.5 1.35-1.35A5.98 5.98 0 0 0 21 10a6 6 0 0 0-6-6 6 6 0 0 0-2.35.65L12.65 10zM7 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>`,
+verses:`<svg viewBox="0 0 24 24"><path d="M4 6h2v12H4V6zm4 0h2v12H8V6zm4 0h2v12h-2V6zm4 0h2v12h-2V6zm4 0h2v12h-2V6z"/></svg>`
 };
 
 $("open").innerHTML = icons.menu;
@@ -683,36 +1203,28 @@ document.querySelectorAll(".mode-btn").forEach(btn => {
   };
 });
 
+/* ============================================================
+   CARD
+   ============================================================ */
 function card(s,i){
-
   const vo = s.versesOrder || [];
   const sw = s.sharedWords || [];
   const uw = s.uniqueWords || [];
   const fullMode = mode === "full";
+  const quickMode = mode === "quick";
+  const versesMode = mode === "verses";
+
+  if(versesMode) return versesCard(s,i);
 
   return `
-  <article class="card ${fullMode ? "" : "quick-mode"}">
+  <article class="card ${quickMode ? "quick-mode" : ""}">
     <div class="inside">
-
-      <div class="no">
-        <span class="dot"></span>
-        سوره ${fa(i+1)} از ${fa(D.length)}
-      </div>
-
-      <div class="title">
-        <h2>${s.name}</h2>
-        <span class="pill">${s.type}</span>
-      </div>
-
-      <div class="meaning">
-        معنی نام: ${s.meaning} · ${fa(s.verses)} آیه
-      </div>
+      <div class="no"><span class="dot"></span>سوره ${fa(i+1)} از ${fa(D.length)}</div>
+      <div class="title"><h2>${s.name}</h2><span class="pill">${s.type}</span></div>
+      <div class="meaning">معنی نام: ${s.meaning} · ${fa(s.verses)} آیه</div>
 
       <div class="msg">
-        <div class="label">
-          ${icons.message}
-          <span>پیام اصلی سوره</span>
-        </div>
+        <div class="label">${icons.message}<span>پیام اصلی سوره</span></div>
         <p>${s.message}</p>
       </div>
 
@@ -745,7 +1257,7 @@ function card(s,i){
         <div class="v">${s.lastVerse}</div>
       </div>` : ""}
 
-      ${fullMode && sw.length ? `
+      ${fullMode && sw.length && sw[0] !== "—" ? `
       <div class="verse-box" style="border-right-color:var(--green)">
         <h3 style="color:var(--green)">${icons.list}<span>کلمات مشترک با سوره‌های دیگر</span></h3>
         ${sw.map(v => `<div class="v">• ${v}</div>`).join("")}
@@ -767,11 +1279,54 @@ function card(s,i){
         <b>${icons.key}<span>کلیدواژهٔ امتحانی</span></b>
         <div>${s.key}</div>
       </div>
-
     </div>
   </article>`;
 }
 
+/* ============================================================
+   VERSES MODE
+   ============================================================ */
+function versesCard(s,i){
+  const ayahs = s.ayahs || [];
+  const sajdahList = s.sajdah || [];
+
+  const body = ayahs.length ? `
+    <div class="ayah-list">
+      ${ayahs.map((ayah, idx) => {
+        const num = idx + 1;
+        const isSajdah = sajdahList.includes(num);
+        return `
+          <div class="ayah-item ${isSajdah ? "sajdah" : ""}">
+            <div class="ayah-no">${fa(num)}</div>
+            ${isSajdah ? `<span class="sajdah-badge">آیهٔ سجده</span>` : ""}
+            <div class="arabic">${ayah.a}</div>
+            <div class="translation">${ayah.t}</div>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  ` : `<div class="error-msg"><strong>متن آیات موجود نیست</strong>لطفاً بعداً تلاش کنید.</div>`;
+
+  return `
+  <article class="card verses-mode">
+    <div class="inside">
+      <div class="no"><span class="dot"></span>سوره ${fa(i+1)} از ${fa(D.length)}</div>
+      <div class="title"><h2>${s.name}</h2><span class="pill">${s.type}</span></div>
+      <div class="meaning">معنی نام: ${s.meaning} · ${fa(s.verses)} آیه</div>
+
+      <div class="msg">
+        <div class="label">${icons.verses}<span>متن کامل سوره با ترجمه</span></div>
+        <p>${s.message}</p>
+      </div>
+
+      ${body}
+    </div>
+  </article>`;
+}
+
+/* ============================================================
+   LIST / RENDER / SWIPE / DRAWER
+   ============================================================ */
 function buildList(q = ""){
   const x = q.trim();
   const filtered = D.map((s,i) => ({s,i}))
@@ -780,10 +1335,7 @@ function buildList(q = ""){
   $("list").innerHTML = filtered.map(o => `
     <button class="item ${o.i === current ? "active" : ""}" data-i="${o.i}">
       <span class="num">${fa(o.i+1)}</span>
-      <span>
-        <strong>${o.s.name}</strong>
-        <small>${o.s.meaning}</small>
-      </span>
+      <span><strong>${o.s.name}</strong><small>${o.s.meaning}</small></span>
     </button>`).join("");
 
   document.querySelectorAll(".item").forEach(btn => {
@@ -798,13 +1350,10 @@ function buildList(q = ""){
 
 function render(){
   $("deck").innerHTML = card(D[current], current);
-
   const pct = Math.round(((current+1) / D.length) * 100);
-
   $("counter").textContent = `سوره ${fa(current+1)} از ${fa(D.length)} · ${D[current].name}`;
   $("pct").textContent = fa(pct) + "٪";
   $("progress").style.width = pct + "%";
-
   buildList($("search").value);
   attachSwipe($("deck").firstElementChild);
 }
@@ -819,6 +1368,7 @@ function attachSwipe(el){
   down = false; dx = 0;
 
   el.addEventListener("pointerdown", e => {
+    if(mode === "verses" && e.target.closest(".ayah-list")) return;
     down = true; startX = e.clientX;
     el.setPointerCapture?.(e.pointerId);
     el.style.transition = "none";
@@ -840,7 +1390,6 @@ function attachSwipe(el){
     if(!down) return;
     down = false;
     const threshold = 95;
-
     if(Math.abs(dx) >= threshold){
       const dir = dx < 0 ? 1 : -1;
       el.style.transition = "transform .36s cubic-bezier(.2,.8,.2,1),opacity .36s ease";
@@ -872,7 +1421,6 @@ function openDrawer(){
   $("overlay").classList.add("open");
   document.body.style.overflow = "hidden";
 }
-
 function closeDrawer(){
   $("drawer").classList.remove("open");
   $("overlay").classList.remove("open");
