@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · ورزش ۱ · سری 13 · فصل هشتم: ورزش تنیس روی میز</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"13";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>ورزش ۱ · سری 13 · فصل هشتم</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل هشتم: ورزش تنیس روی میز</h2>
+  <p>همه چیز به زبان ساده — انگار دارم برای یه دوست توضیح می‌دم که هیچ پیش‌زمینه‌ای نداره</p>
+  <div class="pills"><span class="pill">۲ گفتار</span><span class="pill">۵ مهارت اصلی</span><span class="pill">۲ روش راکت‌گیری</span><span class="pill">آماده امتحان</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان خیلی ساده نوشته شده. هدف کلی فصل اینه که با ورزش تنیس روی میز و مهارت‌های اصلی‌ش (راکت‌گیری، پیچش، فورهند، بک‌هند، لوپ) و مقررات بازی آشنا بشی.</div>
+
+<div class="stats">
+<div class="stat"><b>۲</b><span>گفتار</span></div>
+<div class="stat"><b>۵</b><span>مهارت اصلی</span></div>
+<div class="stat"><b>۲</b><span>روش راکت‌گیری</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#goals">هدف کلی</a><a href="#effects">اثرهای تنیس</a><a href="#skills">مهارت‌ها</a><a href="#rules">مقررات</a><a href="#compare">تفاوت‌ها</a><a href="#traps">دام‌های آزمون</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="goals" class="section">
+<h2 class="section-title">۰۱ · هدف کلی و چارچوب فصل</h2>
+<p class="section-sub">اول بفهمیم این فصل اصلاً می‌خواد چی بگه</p>
+
+<div class="card">
+<div class="card-head"><h3>هدف کلی فصل</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این فصل می‌خواد تو رو با ورزش تنیس روی میز و مهارت‌های اصلی‌ش آشنا کنه. همچنین مقررات و مشخصات میز رو هم یاد بگیری.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این فصل ۲ گفتار داره: ۱) اثرهای تنیس روی میز بر بدن ۲) مهارت‌های تنیس روی میز. به‌علاوه پیوست مقررات.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نوع ورزش</h3></div>
+<div class="fa"><b>به زبان ساده:</b> تنیس روی میز ورزشیه که به‌صورت <b>انفرادی</b> (یک‌به‌یک) و <b>دوبل</b> (دو‌به‌دو) اجرا می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تنیس روی میز = تنها رشته‌ی این درس که هم انفرادی و هم دوبل داره.
+</div>
+</div>
+</section>
+
+<section id="effects" class="section">
+<h2 class="section-title">۰۲ · گفتار ۱: اثرهای تنیس روی میز بر بدن</h2>
+<p class="section-sub">تنیس روی میز چه خوبی‌هایی برای بدن داره؟</p>
+
+<div class="card">
+<div class="card-head"><h3>تأثیرات جسمانی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> تنیس روی میز پنج تا توانایی رو تقویت می‌کنه:</div>
+<div class="fa">۱) <b>سرعت حرکت</b> — تندتر حرکت کردن</div>
+<div class="fa">۲) <b>سرعت عکس‌العمل</b> — سریع‌تر واکنش نشون دادن</div>
+<div class="fa">۳) <b>دقت</b> — دقیق‌تر شدن</div>
+<div class="fa">۴) <b>هماهنگی بین چشم‌ها و دست‌ها</b> — چشم و دست با هم هماهنگ</div>
+<div class="fa">۵) <b>ارتباط اعصاب و عضلات</b> — خصوصاً ناحیه‌ی <b>فوقانی بدن</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> تأثیرات تنیس روی میز = سرعت حرکت + سرعت عکس‌العمل + دقت + هماهنگی چشم و دست + ارتباط اعصاب و عضلات (ناحیه فوقانی).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مزیت‌های تنیس روی میز</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این ورزش نیاز به <b>وسایل و مکان گران‌قیمت</b> نداره. همین باعث می‌شه:</div>
+<div class="fa">• عده‌ی زیادی بهش روی بیارن</div>
+<div class="fa">• یکی از <b>ورزش‌های همگانی</b> به حساب بیاد</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مزیت = نیاز نداشتن به وسایل و مکان گران‌قیمت + همگانی بودن.
+</div>
+</div>
+</section>
+
+<section id="skills" class="section">
+<h2 class="section-title">۰۳ · گفتار ۲: مهارت‌های تنیس روی میز</h2>
+<p class="section-sub">پنج مهارت اصلی تنیس روی میز رو با هم یاد بگیریم</p>
+
+<div class="card">
+<div class="card-head"><h3>مهارت‌های رایج تنیس روی میز</h3></div>
+<div class="fa"><b>به زبان ساده:</b> پنج مهارت رایج:</div>
+<div class="fa">۱) راکت‌گیری</div>
+<div class="fa">۲) پیچش در توپ</div>
+<div class="fa">۳) ضربه فورهند</div>
+<div class="fa">۴) ضربه بک‌هند</div>
+<div class="fa">۵) ضربه لوپ</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> ۵ مهارت رایج = راکت‌گیری + پیچش + فورهند + بک‌هند + لوپ.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱) راکت‌گیری</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> نحوه‌ی گرفتن راکت خیلی مهمه، چون <b>سطح مهارت</b> بازیکن رو تعیین می‌کنه.</div>
+<div class="fa"><b>دو روش گرفتن راکت داریم:</b></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>الف) روش مدادی (قلم):</b>
+</div>
+<div class="fa">• بیشتر در <b>چین و ژاپن</b> متداوله.</div>
+<div class="fa">• دسته‌ی راکت رو مثل <b>قلم</b> در دست می‌گیرن.</div>
+<div class="fa">• انگشت دیگه <b>در پشت راکت</b> قرار می‌گیره.</div>
+<div class="fa">• در ضربه زدن، فقط از <b>روی راکت</b> استفاده می‌شه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>ب) روش دیگر (شست و سبابه):</b>
+</div>
+<div class="fa">• انگشتان <b>شست و سبابه</b> مثل گیره راکت رو مهار می‌کنن.</div>
+<div class="fa">• این کار از جابه‌جا شدن راکت در دست جلوگیری می‌کنه.</div>
+<div class="fa">• دسته‌ی راکت به‌طور <b>اریب</b> از کف دست می‌گذره.</div>
+<div class="fa">• انتهای دسته در <b>برآمدگی انتهایی دست</b> قرار می‌گیره.</div>
+<div class="fa">• یه مزیت: نسبت به روش مدادی، راکت برای <b>حرکات تند و سریع آزادتره</b>.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> روش مدادی = چین و ژاپن + مثل قلم / روش شست و سبابه = مثل گیره + آزادی بیشتر برای حرکات سریع.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) پیچش در توپ</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> نوع ضربه‌ی راکت به توپ و جهت کشش راکت روی سطح توپ باعث <b>پیچش‌های مختلف</b> در توپ می‌شه.</div>
+<div class="fa"><b>هدف بازیکنان:</b> برای کسب امتیاز، سعی می‌کنن توپ رو همراه با <b>چرخش</b> در <b>حداقل ارتفاع</b> به زمین حریف بفرستن.</div>
+<div class="fa"><b>یه نکته مهم:</b> کنترل و مهار توپ‌های <b>چرخشی</b> بسیار سخت‌تر از توپ‌های <b>بدون چرخش</b>ه.</div>
+<div class="fa"><b>دو نوع چرخش داریم:</b></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>الف) چرخش به طرف بالا:</b>
+</div>
+<div class="fa">• توپ از <b>پایین به بالا</b> و در جهت <b>جلو</b> حرکت می‌کنه.</div>
+<div class="fa">• از این مهارت بیشتر <b>بازیکنان مهاجم</b> استفاده می‌کنن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>ب) چرخش به طرف پایین (کات):</b>
+</div>
+<div class="fa">• چرخش توپ از <b>بالا به پایین</b>ه.</div>
+<div class="fa">• اسم این مهارت <b>«کات»</b>ه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> چرخش بالا = از پایین به بالا + مهاجم / چرخش پایین = از بالا به پایین = کات.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) ضربه فورهند</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> فورهند یکی از <b>مقدماتی‌ترین مهارت‌های</b> تنیس روی میزه.</div>
+<div class="fa"><b>با چی زده می‌شه؟</b> با ضربه‌ی <b>رویه‌ی راکت</b> به توپ.</div>
+<div class="fa"><b>نحوه‌ی اجرا:</b></div>
+<div class="fa">• پاها به اندازه‌ی <b>عرض شانه</b> از هم فاصله می‌گیرن.</div>
+<div class="fa">• بدن کمی <b>خم</b> می‌شه.</div>
+<div class="fa">• پای <b>راست</b> کمی عقب‌تر از پای چپ قرار می‌گیره.</div>
+<div class="fa">• قبل از رسیدن توپ، بازیکن حرکت چرخش خودش رو شروع می‌کنه.</div>
+<div class="fa">• در لحظه‌ی برخورد توپ، راکت تقریباً <b>اریب</b> و در راستای <b>ساعد</b>ه.</div>
+<div class="fa">• بعد از ضربه، بدن به حرکت محوری خودش به سمت <b>چپ</b> ادامه می‌ده.</div>
+<div class="fa">• وزن بدن بیشتر روی <b>پای چپ</b> منتقل می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> فورهند = مقدماتی‌ترین مهارت + با رویه راکت + پای راست عقب‌تر + انتقال وزن روی پای چپ.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) ضربه بک‌هند</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> در بک‌هند با <b>پشت راکت</b> به توپ ضربه می‌زنن.</div>
+<div class="fa"><b>تفاوت با فورهند:</b> نسبت به فورهند، بدن <b>نیاز به چرخش زیاد نداره</b>.</div>
+<div class="fa"><b>نحوه‌ی اجرا:</b></div>
+<div class="fa">• بازیکن راکت رو با <b>دست راست</b> در حدود <b>کمر</b> و سمت <b>چپ</b> خودش می‌گیره.</div>
+<div class="fa">• طوری که <b>پشت راکت به طرف میز</b> باشه.</div>
+<div class="fa">• در موقع ضربه، <b>آرنج مقابل بدن</b> قرار می‌گیره.</div>
+<div class="fa">• با حرکت چرخشی <b>ساعد و مچ</b> با راکت به توپ ضربه می‌زنن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بک‌هند = با پشت راکت + چرخش کمتر از فورهند + آرنج مقابل بدن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) ضربه لوپ</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> لوپ از <b>مهم‌ترین ضربات و تکنیک‌های حمله‌ای</b> تنیس روی میزه.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">• اجراش <b>مشکل</b>ه و نیاز به <b>تمرین زیاد</b> داره.</div>
+<div class="fa">• توپ دارای <b>پیچ روی بسیار زیادی</b>ه.</div>
+<div class="fa"><b>دو نوع لوپ داریم:</b></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>الف) درایو لوپ:</b>
+</div>
+<div class="fa">• <b>ارتفاع توپ کم</b>ه</div>
+<div class="fa">• <b>سرعت پیچ توپ زیاد</b>ه</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>ب) های لوپ:</b>
+</div>
+<div class="fa">• <b>سرعت توپ کم</b>ه</div>
+<div class="fa">• <b>ارتفاع پیچ توپ زیاد</b>ه</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> لوپ = مهم‌ترین ضربه حمله‌ای / درایو لوپ = ارتفاع کم + پیچ زیاد / های لوپ = سرعت کم + پیچ زیاد.
+</div>
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#ffe8f0,#fff0cc);border-color:#f94779">
+<div class="card-head"><h3>📌 جمع‌بندی ۵ مهارت تنیس روی میز</h3></div>
+<div class="fa">۱) <b>راکت‌گیری</b> = مدادی (چین و ژاپن) + شست و سبابه (گیره‌ای)</div>
+<div class="fa">۲) <b>پیچش</b> = چرخش بالا (مهاجم) + چرخش پایین (کات)</div>
+<div class="fa">۳) <b>فورهند</b> = مقدماتی‌ترین + با رویه راکت + انتقال وزن روی پای چپ</div>
+<div class="fa">۴) <b>بک‌هند</b> = با پشت راکت + چرخش کمتر</div>
+<div class="fa">۵) <b>لوپ</b> = مهم‌ترین حمله‌ای + درایو لوپ و های لوپ</div>
+</div>
+</section>
+
+<section id="rules" class="section">
+<h2 class="section-title">۰۴ · پیوست: مقررات و مشخصات میز تنیس روی میز</h2>
+<p class="section-sub">قوانین اصلی تنیس روی میز</p>
+
+<div class="card">
+<div class="card-head"><h3>روش شروع و ادامه بازی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> بازی با اولین سرویس که با <b>قرعه</b> تعیین می‌شه، شروع می‌شه.</div>
+<div class="fa"><b>نحوه‌ی سرویس زدن:</b></div>
+<div class="fa">• بازیکنی که سرویس رو شروع می‌کنه، <b>۵ سرویس اول</b> رو می‌زنه.</div>
+<div class="fa">• بعد حریف مقابل <b>۵ سرویس دیگه</b> رو ادامه می‌ده.</div>
+<div class="fa">• این عمل تا پایان بازی تکرار می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هر بازیکن ۵ سرویس متوالی می‌زنه، بعد نوبت حریف می‌شه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطاها</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> وقتی خطایی انجام بشه، بازی قطع می‌شه و توپ به حریف می‌رسه. خطاها عبارتند از:</div>
+<div class="fa">۱) <b>برخورد دوبار یا بیشتر</b> توپ به میز یک نفر</div>
+<div class="fa">۲) <b>ضربه زدن بازیکن به توپ دوبار پشت سر هم</b></div>
+<div class="fa">۳) <b>حرکت میز</b> توسط بازیکن به هنگام حرکت توپ</div>
+<div class="fa">۴) <b>ضربه زدن به توپ قبل از برخورد با میز</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> ۴ خطای اصلی = برخورد دوبار توپ + ضربه دوبار + حرکت میز + ضربه قبل از برخورد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امتیاز و انتخاب برنده</h3></div>
+<div class="fa"><b>به زبان ساده:</b> پس از اجرای سرویس، هرگاه بازی قطع بشه، <b>یک امتیاز</b> به نفع حریف بازیکنی که خطا کرده، محاسبه می‌شه.</div>
+<div class="fa"><b>گیم:</b> یک گیم شامل <b>۲۱ امتیاز</b>ه.</div>
+<div class="fa"><b>برنده:</b> هر بازیکنی که زودتر به ۲۱ امتیاز برسه.</div>
+<div class="fa"><b>یه نکته مهم:</b> اگه دو بازیکن در امتیاز <b>۲۰ مساوی</b> بشن، بازی ادامه پیدا می‌کنه تا یکی <b>۲ امتیاز</b> از دیگری فاصله بگیره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> گیم = ۲۱ امتیاز + در ۲۰ مساوی، بازی تا ۲ امتیاز فاصله ادامه داره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مشخصات میز بازی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>ابعاد میز:</b></div>
+<div class="fa">• <b>طول</b> میز: <b>۲۷۴ سانتی‌متر</b></div>
+<div class="fa">• <b>عرض</b> میز: <b>۱۵۲/۵ سانتی‌متر</b></div>
+<div class="fa">• <b>ارتفاع</b> میز: <b>۷۶ سانتی‌متر</b></div>
+<div class="fa"><b>رنگ و خط‌کشی:</b> رنگ میز <b>تیره</b> و اطرافش با خط <b>۳ سانتی‌متر</b> به رنگ <b>سفید</b> خط‌کشی شده.</div>
+<div class="fa"><b>تور:</b> یه تور به ارتفاع <b>۱۵ سانتی‌متر</b> از وسط میز، اون رو به دو قسمت مساوی تقسیم می‌کنه.</div>
+<div class="fa"><b>خط وسط:</b> در وسط میز، خطی موازی خط‌های کناری کشیده شده که صفحه‌ی میز رو از طول به دو نیمه‌ی مساوی تقسیم می‌کنه و در بازی‌های <b>دو‌نفره</b> ازش استفاده می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> میز = ۲۷۴ × ۱۵۲/۵ سانتی‌متر + ارتفاع ۷۶ + تور ۱۵ سانتی‌متر + خط‌کشی ۳ سانتی‌متر.
+</div>
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#ffe8f0,#fff0cc);border-color:#f94779">
+<div class="card-head"><h3>📌 جمع‌بندی مقررات تنیس روی میز</h3></div>
+<div class="fa">✅ شروع با قرعه + هر بازیکن ۵ سرویس متوالی</div>
+<div class="fa">✅ ۴ خطای اصلی = برخورد دوبار + ضربه دوبار + حرکت میز + ضربه قبل از برخورد</div>
+<div class="fa">✅ گیم = ۲۱ امتیاز + در ۲۰ مساوی تا ۲ امتیاز فاصله</div>
+<div class="fa">✅ میز = ۲۷۴ × ۱۵۲/۵ سانتی‌متر + ارتفاع ۷۶</div>
+<div class="fa">✅ تور = ۱۵ سانتی‌متر</div>
+<div class="fa">✅ خط‌کشی اطراف = ۳ سانتی‌متر</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۵ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">جفت‌هایی که ممکنه اشتباه بگیری</p>
+
+<div class="card">
+<div class="card-head"><h3>روش مدادی vs روش شست و سبابه</h3></div>
+<table class="compare">
+<thead><tr><th>روش مدادی (قلم)</th><th>روش شست و سبابه</th></tr></thead>
+<tbody>
+<tr><td>راکت مثل قلم در دست</td><td>شست و سبابه مثل گیره</td></tr>
+<tr><td>متداول در چین و ژاپن</td><td>متداول در ایران و اروپا</td></tr>
+<tr><td>فقط از روی راکت استفاده می‌شود</td><td>دسته اریب از کف دست می‌گذرد</td></tr>
+<tr><td>—</td><td>راکت برای حرکات تند آزادتر است</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مدادی = چین و ژاپن / شست و سبابه = حرکات سریع‌تر.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فورهند vs بک‌هند</h3></div>
+<table class="compare">
+<thead><tr><th>فورهند</th><th>بک‌هند</th></tr></thead>
+<tbody>
+<tr><td>با رویه راکت</td><td>با پشت راکت</td></tr>
+<tr><td>مقدماتی‌ترین مهارت</td><td>چرخش کمتر از فورهند</td></tr>
+<tr><td>پای راست عقب‌تر</td><td>راکت در حدود کمر و سمت چپ</td></tr>
+<tr><td>انتقال وزن روی پای چپ</td><td>آرنج مقابل بدن</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فورهند = رویه راکت / بک‌هند = پشت راکت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چرخش بالا vs چرخش پایین (کات)</h3></div>
+<div class="fa"><b>به زبان ساده:</b> چرخش بالا = از پایین به بالا + مهاجم / چرخش پایین = از بالا به پایین = کات.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>درایو لوپ vs های لوپ</h3></div>
+<table class="compare">
+<thead><tr><th>درایو لوپ</th><th>های لوپ</th></tr></thead>
+<tbody>
+<tr><td>ارتفاع توپ کم</td><td>ارتفاع پیچ توپ زیاد</td></tr>
+<tr><td>سرعت پیچ توپ زیاد</td><td>سرعت توپ کم</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> این دو رو با هم قاطی نکن! درایو = ارتفاع کم / های = ارتفاع زیاد.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: امتیاز گیم تنیس روی میز</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۱۱ یا ۱۵ یا ۲۵ امتیازه.</div>
+<div class="fa"><b>جواب درست:</b> ۲۱ امتیاز</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گیم تنیس روی میز = ۲۱ امتیاز.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: ارتفاع تور</h3>
+<div class="fa"><b>دام چیه:</b> عدد ۱۷/۵ (فصل‌های قبلی) رو می‌زنی.</div>
+<div class="fa"><b>جواب درست:</b> ۱۵ سانتی‌متر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> توی این فصل، تور ۱۵ سانتی‌متره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: عرض میز تنیس روی میز</h3>
+<div class="fa"><b>دام چیه:</b> عدد ۱۵۲/۵ رو فراموش می‌کنی یا اشتباه می‌زنی.</div>
+<div class="fa"><b>جواب درست:</b> ۱۵۲/۵ سانتی‌متر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> طول ۲۷۴ + عرض ۱۵۲/۵ + ارتفاع ۷۶.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: مقدماتی‌ترین مهارت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بک‌هند مقدماتی‌تره.</div>
+<div class="fa"><b>جواب درست:</b> فورهند</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آموزش با فورهند شروع می‌شه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: مهم‌ترین ضربه حمله‌ای</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فورهند یا درایو مهم‌ترینه.</div>
+<div class="fa"><b>جواب درست:</b> لوپ</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> لوپ = مهم‌ترین ضربه و تکنیک حمله‌ای.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: چرخش کات</h3>
+<div class="fa"><b>دام چیه:</b> جهت چرخش رو جابه‌جا می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> کات = چرخش از بالا به پایین</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کات = بک‌اسپین (از بالا به پایین).
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: تعداد سرویس متوالی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر بازیکن ۱ یا ۲ یا ۳ سرویس می‌زنه.</div>
+<div class="fa"><b>جواب درست:</b> ۵ سرویس متوالی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هر بازیکن ۵ سرویس پشت سر هم می‌زنه.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل هشتم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 13 · ورزش ۱ · فصل هشتم: ورزش تنیس روی میز · جزوه ساده و امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"تنیس روی میز به چه صورت‌هایی اجرا می‌شود؟",options:["فقط انفرادی","فقط دوبل","انفرادی و دوبل","فقط تیمی"],answer:2,explanation:"تنیس روی میز هم انفرادی و هم دوبل اجرا می‌شود."},
+{q:"کدام یک از تأثیرات تنیس روی میز بر بدن نیست؟",options:["توسعه سرعت حرکت","توسعه سرعت عکس‌العمل","تقویت هماهنگی چشم و دست","کاهش دقت"],answer:3,explanation:"تنیس روی میز دقت را افزایش می‌دهد، نه کاهش."},
+{q:"تأثیر تنیس روی میز بیشتر بر کدام ناحیه بدن است؟",options:["اندام تحتانی","ناحیه فوقانی بدن","شکم","پاها"],answer:1,explanation:"تأثیر بیشتر بر ناحیه فوقانی بدن است."},
+{q:"مزیت اصلی تنیس روی میز چیست؟",options:["نیاز به وسایل گران‌قیمت","نیاز نداشتن به وسایل و مکان گران‌قیمت","فقط برای حرفه‌ای‌ها","فقط در سالن"],answer:1,explanation:"نیاز نداشتن به وسایل و مکان گران‌قیمت."},
+{q:"چند مهارت رایج در تنیس روی میز وجود دارد؟",options:["۳","۴","۵","۶"],answer:2,explanation:"۵ مهارت رایج = راکت‌گیری، پیچش، فورهند، بک‌هند، لوپ."},
+{q:"روش مدادی راکت‌گیری در کدام کشورها متداول است؟",options:["ایران و سوئد","چین و ژاپن","آمریکا و کانادا","آلمان و فرانسه"],answer:1,explanation:"روش مدادی در چین و ژاپن متداول است."},
+{q:"در روش مدادی، راکت چگونه در دست گرفته می‌شود؟",options:["مثل گیره","مثل قلم","مثل چکش","مثل قاشق"],answer:1,explanation:"راکت مثل قلم در دست گرفته می‌شود."},
+{q:"در روش شست و سبابه، این دو انگشت چه کاری انجام می‌دهند؟",options:["راکت را رها می‌کنند","مثل گیره راکت را مهار می‌کنند","راکت را می‌چرخانند","راکت را پرتاب می‌کنند"],answer:1,explanation:"شست و سبابه مثل گیره راکت را مهار می‌کنند."},
+{q:"چرخش بالا در تنیس روی میز چگونه است؟",options:["از بالا به پایین","از پایین به بالا و در جهت جلو","فقط افقی","فقط عمودی"],answer:1,explanation:"چرخش بالا = از پایین به بالا و در جهت جلو."},
+{q:"کات در تنیس روی میز چیست؟",options:["چرخش از پایین به بالا","چرخش از بالا به پایین","ضربه با سر","ضربه با پا"],answer:1,explanation:"کات = چرخش از بالا به پایین."},
+{q:"از چرخش بالا بیشتر چه بازیکنانی استفاده می‌کنند؟",options:["مدافعان","مهاجمان","دروازه‌بان‌ها","مبتدیان"],answer:1,explanation:"بازیکنان مهاجم بیشتر از چرخش بالا استفاده می‌کنند."},
+{q:"مقدماتی‌ترین مهارت در تنیس روی میز کدام است؟",options:["بک‌هند","لوپ","فورهند","پیچش"],answer:2,explanation:"فورهند مقدماتی‌ترین مهارت است."},
+{q:"ضربه فورهند با کدام قسمت راکت زده می‌شود؟",options:["پشت راکت","رویه راکت","لبه راکت","دسته راکت"],answer:1,explanation:"فورهند با رویه راکت زده می‌شود."},
+{q:"در فورهند، پای راست چگونه قرار می‌گیرد؟",options:["جلوتر از پای چپ","عقب‌تر از پای چپ","هم‌ردیف پای چپ","مهم نیست"],answer:1,explanation:"پای راست کمی عقب‌تر از پای چپ قرار می‌گیرد."},
+{q:"در فورهند، وزن بدن بیشتر روی کدام پا منتقل می‌شود؟",options:["پای راست","پای چپ","هر دو پا","هیچ‌کدام"],answer:1,explanation:"وزن بدن روی پای چپ منتقل می‌شود."},
+{q:"ضربه بک‌هند با کدام قسمت راکت زده می‌شود؟",options:["رویه راکت","پشت راکت","لبه راکت","دسته راکت"],answer:1,explanation:"بک‌هند با پشت راکت زده می‌شود."},
+{q:"در بک‌هند، راکت در چه محدوده‌ای گرفته می‌شود؟",options:["بالای سر","حدود کمر و سمت چپ","زیر زانو","روی سینه"],answer:1,explanation:"راکت در حدود کمر و سمت چپ گرفته می‌شود."},
+{q:"در بک‌هند، آرنج کجا قرار می‌گیرد؟",options:["بالای سر","مقابل بدن","پشت بدن","کنار بدن"],answer:1,explanation:"در بک‌هند، آرنج مقابل بدن قرار می‌گیرد."},
+{q:"مهم‌ترین ضربه حمله‌ای در تنیس روی میز کدام است؟",options:["فورهند","بک‌هند","لوپ","کات"],answer:2,explanation:"لوپ مهم‌ترین ضربه حمله‌ای است."},
+{q:"ویژگی درایو لوپ چیست؟",options:["ارتفاع کم و سرعت پیچ زیاد","ارتفاع زیاد و سرعت کم","ارتفاع کم و سرعت کم","ارتفاع زیاد و سرعت زیاد"],answer:0,explanation:"درایو لوپ = ارتفاع کم + سرعت پیچ زیاد."},
+{q:"ویژگی های لوپ چیست؟",options:["ارتفاع کم و سرعت پیچ زیاد","سرعت کم و ارتفاع پیچ زیاد","ارتفاع کم و سرعت کم","ارتفاع زیاد و سرعت زیاد"],answer:1,explanation:"های لوپ = سرعت کم + ارتفاع پیچ زیاد."},
+{q:"شروع بازی تنیس روی میز چگونه است؟",options:["با سکه","با قرعه","با پرش","با سوت"],answer:1,explanation:"شروع بازی با قرعه تعیین می‌شود."},
+{q:"هر بازیکن چند سرویس متوالی می‌زند؟",options:["۱ سرویس","۳ سرویس","۵ سرویس","۱۰ سرویس"],answer:2,explanation:"هر بازیکن ۵ سرویس متوالی می‌زند."},
+{q:"کدام یک از خطاهای تنیس روی میز نیست؟",options:["برخورد دوبار توپ به میز","ضربه دوبار پشت سر هم","حرکت میز توسط بازیکن","زدن توپ با رویه راکت"],answer:3,explanation:"زدن توپ با رویه راکت خطا نیست."},
+{q:"یک گیم در تنیس روی میز چند امتیاز دارد؟",options:["۱۱ امتیاز","۱۵ امتیاز","۲۱ امتیاز","۲۵ امتیاز"],answer:2,explanation:"یک گیم ۲۱ امتیاز دارد."},
+{q:"اگر دو بازیکن در امتیاز ۲۰ مساوی شوند، چه اتفاقی می‌افتد؟",options:["بازی تمام می‌شود","بازی تا ۲ امتیاز فاصله ادامه می‌یابد","با قرعه برنده تعیین می‌شود","بازی تکرار می‌شود"],answer:1,explanation:"بازی تا ۲ امتیاز فاصله ادامه می‌یابد."},
+{q:"طول میز تنیس روی میز چقدر است؟",options:["۲۴۴ سانتی‌متر","۲۷۴ سانتی‌متر","۳۰۴ سانتی‌متر","۱۸۰ سانتی‌متر"],answer:1,explanation:"طول میز = ۲۷۴ سانتی‌متر."},
+{q:"عرض میز تنیس روی میز چقدر است؟",options:["۱۵۲.۵ سانتی‌متر","۱۰۰ سانتی‌متر","۲۰۰ سانتی‌متر","۱۲۵ سانتی‌متر"],answer:0,explanation:"عرض میز = ۱۵۲/۵ سانتی‌متر."},
+{q:"ارتفاع میز تنیس روی میز چقدر است؟",options:["۶۵ سانتی‌متر","۷۶ سانتی‌متر","۸۰ سانتی‌متر","۹۰ سانتی‌متر"],answer:1,explanation:"ارتفاع میز = ۷۶ سانتی‌متر."},
+{q:"ارتفاع تور میز تنیس روی میز چقدر است؟",options:["۱۰ سانتی‌متر","۱۵ سانتی‌متر","۱۷.۵ سانتی‌متر","۲۰ سانتی‌متر"],answer:1,explanation:"ارتفاع تور = ۱۵ سانتی‌متر."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

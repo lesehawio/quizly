@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · سنجش و اندازه‌گیری در مشاوره · سری 02 · فصل دوم: مقیاس‌های اندازه‌گیری</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"02";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>سنجش و اندازه‌گیری در مشاوره · سری 02</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل دوم: مقیاس‌های اندازه‌گیری</h2>
+  <p>سنجش و اندازه‌گیری در مشاوره — همه چیز به زبان ساده و خودمونی</p>
+  <div class="pills"><span class="pill">هسته امتحانی</span><span class="pill">مفاهیم</span><span class="pill">تفاوت‌ها</span><span class="pill">نظریه‌پردازان</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این فصل درباره‌ی <b>مقیاس‌های اندازه‌گیری</b>ه. باید بفهمی چهار مقیاس اصلی (اسمی، ترتیبی، فاصله‌ای، نسبتی) چیه، چه عملیات ریاضی و آماری‌ای توی هر کدوم مجازه، و فرق مقیاس گسسته و پیوسته چیه. آخرش هم گرد کردن اعداد رو یاد می‌گیری.</div>
+
+<div class="stats">
+<div class="stat"><b>۴</b><span>مقیاس اصلی</span></div>
+<div class="stat"><b>۲</b><span>مقیاس فرعی</span></div>
+<div class="stat"><b>۵</b><span>تفاوت مهم</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف مقیاس اندازه‌گیری</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> مقیاس اندازه‌گیری یعنی <b>مجموعه‌ای از عددها یا نمادها</b> که ویژگی‌هاشون با ویژگی‌های تجربی اشیاء منطبق هستن.</div>
+<div class="fa"><b>تعریف کوهن و سوردلیک (۲۰۰۲):</b> «مجموعه‌ای عدد (یا نمادهای دیگر) است که ویژگی‌های آن‌ها بر ویژگی‌های تجربی اشیایی که اعداد به آن‌ها نسبت داده می‌شوند منطبق است.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار مقیاس اصلی (طبقه‌بندی استیونس، ۱۹۵۱)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> چهار مقیاس از ساده به پیچیده:</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px;text-align:center">
+<b>اسمی ← ترتیبی ← فاصله‌ای ← نسبتی</b>
+</div>
+<div class="fa"><b>نکته مهم:</b> این طبقه‌بندی <b>سلسله‌مراتبی</b>ه. یعنی هر طبقه، تمام ویژگی‌های طبقه‌های قبل رو داره + ویژگی‌های مخصوص خودش.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جدول طلایی — عملیات مجاز در هر مقیاس</h3><span class="badge s">حفظ کن</span></div>
+<table class="compare">
+<thead><tr><th>مقیاس</th><th>ترتیب</th><th>فاصله مساوی</th><th>صفر مطلق</th><th>عملیات ریاضی</th></tr></thead>
+<tbody>
+<tr><td>اسمی</td><td>❌</td><td>❌</td><td>❌</td><td>هیچ‌کدام</td></tr>
+<tr><td>ترتیبی</td><td>✅</td><td>❌</td><td>❌</td><td>هیچ‌کدام</td></tr>
+<tr><td>فاصله‌ای</td><td>✅</td><td>✅</td><td>❌</td><td>جمع و تفریق</td></tr>
+<tr><td>نسبتی</td><td>✅</td><td>✅</td><td>✅</td><td>همه</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این جدول رو باید کامل حفظ کنی. سوالات زیاد ازش میاد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات کلیدی که حتماً باید بلد باشی</h3></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱)</b> <b>عامل تعیین نوع مقیاس</b> = <b>متغیر مورد سنجش</b> (نه اعداد و ارقام) + نحوه‌ی اندازه‌گیری.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲)</b> <b>مقیاس گسسته</b> = متغیر فقط ارزش‌های معین می‌گیره (مثل تعداد فرزندان).
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳)</b> <b>مقیاس پیوسته</b> = متغیر بین نقاط مقیاس هر ارزشی می‌گیره (مثل قد، وزن، زمان).
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۴)</b> <b>حدود واقعی</b> = عدد ± نصف واحد اندازه‌گیری.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵)</b> <b>قاعده گرد کردن</b> = رقم بعدی بیشتر از ۵ → یکی اضافه / کمتر از ۵ → بدون تغییر / دقیقاً ۵ → به زوج نزدیک‌تر.
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مقیاس و مفهوم رو با تعریف ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) مقیاس اسمی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> ساده‌ترین و پایین‌ترین سطح اندازه‌گیریه. اعداد فقط برای <b>اسم‌گذاری و طبقه‌بندی</b> استفاده می‌شن، بدون هیچ مفهوم ریاضی.</div>
+<div class="fa"><b>دو کاربرد داره:</b></div>
+<div class="fa"><b>الف) اسم‌گذاری:</b> مثل شماره‌ی پیراهن بازیکنان فوتبال یا شماره‌ی خیابان‌ها.</div>
+<div class="fa"><b>ب) طبقه‌بندی:</b> مثل دسته‌بندی انواع سنگ‌ها با شماره‌های مختلف.</div>
+<div class="fa"><b>عملیات مجاز آماری:</b> شمارش فراوانی + تعیین نما</div>
+<div class="fa"><b>عملیات مجاز ریاضی:</b> هیچ‌کدام (نه جمع، نه تفریق، نه ضرب، نه تقسیم)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مقیاس اسمی = فقط نما و فراوانی. هیچ عملیات ریاضی دیگه‌ای مجاز نیست.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> فکر نکن اعداد مقیاس اسمی معنی ریاضی دارن. شماره‌ی پیراهن ۱۰ از ۵ بزرگ‌تر نیست، فقط اسمه!
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) مقیاس ترتیبی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف نانالی (۱۹۷۸):</b> «مقیاسی است که در آن (۱) رتبه اشیاء یا افراد با توجه به یک صفت مشخص معلوم است؛ (۲) فاصله بین اشیاء یا افراد از لحاظ صفت مورد اندازه‌گیری معلوم نیست.»</div>
+<div class="fa"><b>به زبان ساده:</b> می‌دونیم کی اوله، کی دوم، کی سوم... ولی نمی‌دونیم فاصله‌شون چقدره.</div>
+<div class="fa"><b>مثال ۱:</b> مرتب کردن دانش‌آموزان بر اساس قد (از کوتاه‌ترین به بلندترین).</div>
+<div class="fa"><b>مثال ۲ (پرسشنامه استرس هولمز و راهه):</b> تعداد تغییرات زندگی در ۶ ماه گذشته. کسی که نمره ۲۰ گرفته، استرس بیشتری از ۱۵ داشته و ۱۵ بیشتر از ۱۰.</div>
+<div class="fa"><b>یه نکته مهم:</b> نمی‌تونیم بگیم فاصله‌ی استرس بین ۱۰ و ۱۵ تغییر، با فاصله‌ی بین ۱۵ و ۲۰ یکیه! این یه ویژگی مهم مقیاس ترتیبیه.</div>
+<div class="fa"><b>عملیات مجاز آماری:</b> شمارش فراوانی + تعیین نما + محاسبه میانه + محاسبه درصدها + ضریب همبستگی رتبه‌ای اسپیرمن</div>
+<div class="fa"><b>عملیات مجاز ریاضی:</b> هیچ‌کدام</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ترتیبی = ترتیب داره ولی فاصله‌ها معلوم نیست. پس میانگین نمی‌گیریم، میانه می‌گیریم.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) مقیاس فاصله‌ای</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف نانالی (۱۹۷۸):</b> «مقیاسی است که در آن (۱) رتبه معلوم است؛ (۲) فاصله بین اشیاء معلوم است؛ (۳) اما هیچ اطلاعی درباره‌ی مقدار مطلق صفت برای هیچ‌یک از اشیاء وجود ندارد.»</div>
+<div class="fa"><b>به زبان ساده:</b> ترتیب داره + فاصله‌ها برابر و معلومن + ولی صفر واقعی نداره (صفر قراردادیه).</div>
+<div class="fa"><b>مثال ۱:</b> اندازه‌گیری قد دانش‌آموزان نسبت به کوتاه‌ترین فرد کلاس. کوتاه‌ترین = صفر، کسی که ۵ سانتی‌متر بلندتره = ۵.</div>
+<div class="fa"><b>مثال ۲:</b> دماسنج سلسیوس و فارنهایت. صفر قراردادی است، نه واقعی. تفاوت ۳۰-۴۰ با ۴۰-۵۰ یکیه.</div>
+<div class="fa"><b>عملیات مجاز آماری:</b> همه‌ی عملیات آماری (نما، میانه، میانگین، انحراف معیار، همبستگی اسپیرمن، همبستگی پیرسون)</div>
+<div class="fa"><b>عملیات مجاز ریاضی:</b> جمع و تفریق مجاز، ضرب و تقسیم مجاز نیست</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فاصله‌ای = ترتیب + فاصله برابر + صفر قراردادی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) مقیاس نسبتی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف نانالی (۱۹۷۸):</b> «مقیاسی است که در آن (۱) رتبه معلوم است؛ (۲) فاصله معلوم است؛ (۳) علاوه بر این‌ها، فاصله‌ی حداقل یکی از اشخاص از یک صفر مطلق نیز معلوم است.»</div>
+<div class="fa"><b>به زبان ساده:</b> کامل‌ترین مقیاس! ترتیب + فاصله‌ی برابر + صفر واقعی.</div>
+<div class="fa"><b>مثال:</b> اندازه‌گیری قد واقعی دانش‌آموزان. صفر واقعی یعنی هیچ قدی!</div>
+<div class="fa"><b>مهم‌ترین مقیاس نسبتی:</b> مقیاس اعداد از صفر تا بی‌نهایت.</div>
+<div class="fa"><b>برای چه متغیرهایی مناسبه:</b> طول، وزن، حجم و سایر صفات فیزیکی. برای متغیرهای روانی و پرورشی به‌ندرت.</div>
+<div class="fa"><b>عملیات مجاز آماری و ریاضی:</b> <b>همه‌ی عملیات</b> مجاز است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نسبتی = کامل‌ترین مقیاس + همه‌ی عملیات مجاز.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نظر نانالی (۱۹۷۸):</b> موارد بسیار کمی وجود دارن که تصور وجود مقیاس‌های نسبی در اندازه‌گیری‌های روانی معقول باشه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مقیاس گسسته (مجزا)</h3></div>
+<div class="fa"><b>به زبان ساده:</b> متغیر فقط می‌تونه <b>یکی از ارزش‌های معین</b> رو بگیره. بین ارزش‌ها فاصله‌ی خالی وجود داره.</div>
+<div class="fa"><b>مثال:</b> تعداد کودکان یک خانواده. خانواده می‌تونه ۰، ۱، ۲، ۳ بچه داشته باشه، ولی نمی‌تونه ۲/۵ بچه داشته باشه!</div>
+<div class="fa"><b>مثال دیگه:</b> جنس (مذکر/مؤنث)، وضعیت تأهل (مجرد/متأهل)، تعداد سؤال‌های درست.</div>
+<div class="fa"><b>ویژگی مهم:</b> واحدهای نمایشش در طول مقیاس مساوی‌اند.</div>
+<div class="fa"><b>عملیات ریاضی مجاز:</b> جمع، تفریق، ضرب، تقسیم — همه مجازن.</div>
+<div class="fa"><b>نکته مهم:</b> مقیاس گسسته الزاماً با اعداد درست سر و کار نداره. صفحه‌ی مدرجی که هر ۰/۵ یه درجه داره هم گسسته‌ست (چون بین ۰/۵ و ۱ ارزشی نمی‌گیره).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مقیاس پیوسته</h3></div>
+<div class="fa"><b>به زبان ساده:</b> متغیر می‌تونه <b>در فاصله‌ی بین نقاط مقیاس هر ارزشی</b> رو بگیره. یعنی اعداد اعشاری داره.</div>
+<div class="fa"><b>مثال:</b> سرعت، زمان، طول، وزن، هوش، پیشرفت تحصیلی، استعداد ریاضی، نگرش.</div>
+<div class="fa"><b>یه نکته مهم:</b> اندازه‌گیری متغیرهای گسسته <b>دقیق و قطعی</b>ه، ولی اندازه‌های متغیرهای پیوسته <b>همیشه تقریبی</b>ن. چون همیشه می‌شه وسیله‌ی دقیق‌تری تصور کرد.</div>
+<div class="fa"><b>ویژگی مهم:</b> واحدهای اندازه‌گیری مساوی‌اند (۱ سانتی‌متر همیشه ۱ سانتی‌متره).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حدود واقعی اعداد</h3></div>
+<div class="fa"><b>تعریف ساده:</b> حدود واقعی ارزش عددی یک متغیر پیوسته = <b>آن عدد ± نصف واحد اندازه‌گیری</b>.</div>
+<div class="fa"><b>مثال:</b> اگه یه عدد رو با دقت ۱ سانتی‌متر اندازه‌گیری کرده باشیم، حدود واقعی‌اش می‌شه عدد ± ۰/۵.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گرد کردن اعداد</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>قاعده ساده:</b></div>
+<div class="fa">• رقم بعدی <b>بیشتر از ۵</b> → یکی به رقم مورد نظر اضافه کن.</div>
+<div class="fa">• رقم بعدی <b>کمتر از ۵</b> → رقم مورد نظر رو دست نزن.</div>
+<div class="fa">• رقم بعدی <b>دقیقاً ۵</b>:</div>
+<div class="fa" style="margin-right:20px">- اگه بعدش رقم دیگه‌ای باشه → مثل «بیشتر از ۵» عمل کن.</div>
+<div class="fa" style="margin-right:20px">- اگه دقیقاً ۵ و بعدش صفر باشه → به <b>زوج نزدیک‌تر</b> گرد کن.</div>
+<div class="fa"><b>مثال‌ها:</b></div>
+<div class="fa">• ۶/۵۴۶ → ۶/۵۵ (رقم بعدی ۶، بیشتر از ۵)</div>
+<div class="fa">• ۶/۵۴۳ → ۶/۵۴ (رقم بعدی ۳، کمتر از ۵)</div>
+<div class="fa">• ۱/۹۷ → ۱/۹۷ (بدون تغییر)</div>
+<div class="fa">• ۱/۵۳۴ → ۱/۵۳</div>
+<div class="fa">• ۶/۵۴۵۰۰۱ → ۶/۵۵ (رقم بعدی ۵ ولی بعدش ۰۰۱ هست)</div>
+<div class="fa">• ۶/۵۴۵۰۰۰ → ۶/۵۴ (دقیقاً ۵، رقم قبلی ۴ زوجه)</div>
+<div class="fa">• ۰/۰۱۵۰۰۰ → ۰/۰۲ (دقیقاً ۵، رقم قبلی ۱ فرده)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مشکلات تمایز مقیاس‌ها در کاربردهای انسانی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> هرچند چهار مقیاس از لحاظ تعریف جدا هستن، ولی توی کاربردهای انسانی به این خوبی جدا نمی‌شن.</div>
+<div class="fa"><b>مثال آزمون:</b> اگه دانش‌آموزی نمره صفر گرفت، یعنی هیچی نمی‌دونه؟ نه! آزمون ما نتونسته اطلاعاتش رو بسنجه. پس مقیاس نسبتی نیست.</div>
+<div class="fa"><b>مثال دمای خانه:</b> اگه دما رو به‌عنوان ویژگی فیزیکی بسنجیم → فاصله‌ای. اگه به‌عنوان شاخص آسایش بسنجیم → ترتیبی.</div>
+<div class="fa"><b>نتیجه مهم:</b> <b>متغیر زیربنایی</b> تعیین می‌کنه چه مقیاسی داریم، نه اعداد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> <b>عامل تعیین‌کننده‌ی نوع مقیاس</b> = متغیر مورد سنجش + نحوه‌ی اندازه‌گیری.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>جدول کامل چهار مقیاس</h3></div>
+<table class="compare">
+<thead><tr><th>مقیاس</th><th>ترتیب</th><th>فاصله مساوی</th><th>صفر مطلق</th><th>عملیات آماری</th><th>عملیات ریاضی</th></tr></thead>
+<tbody>
+<tr><td>اسمی</td><td>❌</td><td>❌</td><td>❌</td><td>فراوانی، نما</td><td>هیچ‌کدام</td></tr>
+<tr><td>ترتیبی</td><td>✅</td><td>❌</td><td>❌</td><td>فراوانی، نما، میانه، درصد، اسپیرمن</td><td>هیچ‌کدام</td></tr>
+<tr><td>فاصله‌ای</td><td>✅</td><td>✅</td><td>❌</td><td>همه</td><td>جمع، تفریق</td></tr>
+<tr><td>نسبتی</td><td>✅</td><td>✅</td><td>✅</td><td>همه</td><td>همه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ترتیبی vs فاصله‌ای</h3></div>
+<table class="compare">
+<thead><tr><th>ترتیبی</th><th>فاصله‌ای</th></tr></thead>
+<tbody>
+<tr><td>رتبه معلوم است</td><td>رتبه معلوم است</td></tr>
+<tr><td>فاصله بین واحدها معلوم نیست</td><td>فاصله بین واحدها معلوم و برابر است</td></tr>
+<tr><td>میانگین مجاز نیست</td><td>میانگین مجاز است</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نظر بروگاتا و بوهرنستد (۱۹۸۰):</b> مقیاس ترتیبی شکل ضعیفی از مقیاس فاصله‌ایه که اطلاعات مربوط به فاصله بین نقاط مقیاس توش «گم شده». بهتره متغیرهای ترتیبی رو مقیاس فاصله‌ای ناکامل بدونیم.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گسسته vs پیوسته</h3></div>
+<table class="compare">
+<thead><tr><th>گسسته</th><th>پیوسته</th></tr></thead>
+<tbody>
+<tr><td>فقط ارزش‌های معین</td><td>هر ارزشی بین نقاط</td></tr>
+<tr><td>عدد اعشاری ندارد</td><td>عدد اعشاری دارد</td></tr>
+<tr><td>مثال: تعداد فرزندان، جنس</td><td>مثال: قد، وزن، زمان</td></tr>
+<tr><td>اندازه‌گیری دقیق و قطعی</td><td>اندازه‌گیری تقریبی</td></tr>
+<tr><td>واحدها مساوی‌اند</td><td>واحدها مساوی‌اند</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مثال تلویزیون — چهار نوع مقیاس</h3></div>
+<div class="fa"><b>۱) اسمی:</b> «آیا سریال الف رو می‌بینی؟» (بله/خیر)</div>
+<div class="fa"><b>۲) ترتیبی:</b> «سریال تا چه حد واقعیت رو نشون می‌ده؟» (خیلی زیاد، زیاد، متوسط، کم، خیلی کم)</div>
+<div class="fa"><b>۳) فاصله‌ای:</b> «IQ قهرمان سریال رو حدس بزن» (۹۲، ۹۴، ۹۶، ۱۰۰، ۱۰۲...)</div>
+<div class="fa"><b>۴) نسبتی:</b> «هفته‌ای چند ساعت سریال می‌بینی؟» (۱، ۲، ۳، ۴...)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفر قراردادی vs صفر مطلق</h3></div>
+<table class="compare">
+<thead><tr><th>صفر قراردادی (فاصله‌ای)</th><th>صفر مطلق (نسبتی)</th></tr></thead>
+<tbody>
+<tr><td>صفر واقعی نیست</td><td>صفر واقعی است</td></tr>
+<tr><td>مثال: دمای صفر سلسیوس</td><td>مثال: قد صفر (عدم وجود قد)</td></tr>
+<tr><td>ضرب و تقسیم مجاز نیست</td><td>ضرب و تقسیم مجاز است</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان و تعریف‌هایشان</h2>
+<p class="section-sub">هر کی چی گفته + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>استیونس (۱۹۵۱)</h3></div>
+<div class="fa"><b>نقش:</b> طبقه‌بندی چهارگانه مقیاس‌های اندازه‌گیری رو ارائه داد.</div>
+<div class="fa"><b>چهار مقیاس:</b> اسمی، ترتیبی، فاصله‌ای، نسبتی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اسم استیونس رو با طبقه‌بندی چهارگانه حفظ کن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کوهن و سوردلیک (۲۰۰۲)</h3></div>
+<div class="fa"><b>تعریف مقیاس اندازه‌گیری:</b> «مجموعه‌ای عدد (یا نمادهای دیگر) است که ویژگی‌های آن‌ها بر ویژگی‌های تجربی اشیایی که اعداد به آن‌ها نسبت داده می‌شوند منطبق است.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نانالی (۱۹۷۸)</h3></div>
+<div class="fa"><b>تعریف ترتیبی:</b> «مقیاسی است که در آن رتبه معلوم است ولی فاصله بین اشیاء معلوم نیست.»</div>
+<div class="fa"><b>تعریف فاصله‌ای:</b> «مقیاسی است که در آن رتبه و فاصله معلوم است ولی مقدار مطلق صفت معلوم نیست.»</div>
+<div class="fa"><b>تعریف نسبتی:</b> «مقیاسی است که در آن رتبه، فاصله، و فاصله از صفر مطلق معلوم است.»</div>
+<div class="fa"><b>نظر مهم نانالی:</b> «موارد بسیار کمی وجود دارند که در آن‌ها تصور وجود مقیاس‌های نسبی در اندازه‌گیری‌های روانی معقول باشد.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سه تعریف نانالی برای سه مقیاس (ترتیبی، فاصله‌ای، نسبتی) رو با هم حفظ کن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هولمز و راهه (۱۹۶۷)</h3></div>
+<div class="fa"><b>پرسشنامه استرس زندگی:</b> تعداد تغییرات زندگی فرد در ۶ ماه گذشته (ازدواج، تغییر محل سکونت، تغییر شغل و...).</div>
+<div class="fa"><b>نمونه‌ی مقیاس ترتیبی.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بروگاتا و بوهرنستد (۱۹۸۰)</h3></div>
+<div class="fa"><b>نظر درباره مقیاس ترتیبی:</b> مقیاس ترتیبی شکل ضعیفی از مقیاس فاصله‌ایه که اطلاعات مربوط به فاصله بین نقاط مقیاس توش «گم شده». بهتره متغیرهای ترتیبی رو مقیاس فاصله‌ای ناکامل بدونیم تا اینکه سطح مستقلی از اندازه‌گیری بدونیم.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> این نظر با نظر نانالی فرق داره. نانالی مقیاس ترتیبی رو سطح مستقل می‌دونه، بروگاتا و بوهرنستد مقیاس فاصله‌ای ناقص.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: عملیات مجاز در هر مقیاس</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی توی مقیاس ترتیبی هم می‌شه میانگین گرفت.</div>
+<div class="fa"><b>جواب درست:</b> ترتیبی = میانه، نه میانگین! میانگین فقط در فاصله‌ای و نسبتی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اسمی = نما / ترتیبی = میانه / فاصله‌ای و نسبتی = میانگین.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: مقیاس اسمی و مفهوم اعداد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی شماره‌ی پیراهن ۱۰ از ۵ بزرگ‌تره.</div>
+<div class="fa"><b>جواب درست:</b> نه! اعداد مقیاس اسمی فقط اسم‌اند، هیچ مفهوم ریاضی ندارن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اسمی = فقط نام‌گذاری و طبقه‌بندی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: مقیاس گسسته و پیوسته</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی گسسته همیشه عدد درست داره.</div>
+<div class="fa"><b>جواب درست:</b> نه! صفحه‌ی مدرج با درجه‌بندی ۰/۵ هم گسسته‌ست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ملاک گسسته بودن = متغیر بین ارزش‌ها هیچ مقداری نمی‌گیره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: گرد کردن دقیقاً ۵</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۶/۵۴۵۰۰۰ می‌شه ۶/۵۵.</div>
+<div class="fa"><b>جواب درست:</b> ۶/۵۴. چون دقیقاً ۵ و رقم قبلش زوجه (۴).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قاعده‌ی «دقیقاً ۵ → به زوج نزدیک‌تر» رو فراموش نکن!
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: تعیین نوع مقیاس</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اعداد نوع مقیاس رو تعیین می‌کنن.</div>
+<div class="fa"><b>جواب درست:</b> نه! <b>متغیر زیربنایی</b> + نحوه‌ی اندازه‌گیری تعیین‌کننده‌ست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دمای خانه اگه ویژگی فیزیکی باشه → فاصله‌ای / اگه آسایش باشه → ترتیبی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: حدود واقعی اعداد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی حدود واقعی یعنی کسر ۰/۱.</div>
+<div class="fa"><b>جواب درست:</b> حدود واقعی = عدد ± <b>نصف واحد اندازه‌گیری</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اگه واحد ۱ سانتی‌متره، حدود واقعی = عدد ± ۰/۵.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: نظر بروگاتا و بوهرنستد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی همه‌ی صاحب‌نظران مقیاس ترتیبی رو سطح مستقل می‌دونن.</div>
+<div class="fa"><b>جواب درست:</b> بروگاتا و بوهرنستد می‌گن بهتره مقیاس ترتیبی رو «فاصله‌ای ناقص» بدونیم.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این نظر با نظر استیونس و نانالی فرق داره.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل دوم — مقیاس‌های اندازه‌گیری</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 02 · سنجش و اندازه‌گیری در مشاوره · فصل دوم: مقیاس‌های اندازه‌گیری</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"تعریف مقیاس اندازه‌گیری طبق کوهن و سوردلیک (۲۰۰۲) چیست؟",options:["مجموعه‌ای از اعداد","مجموعه‌ای عدد یا نماد که ویژگی‌هایش بر ویژگی‌های تجربی اشیاء منطبق است","روشی برای گرد کردن","نوعی آزمون"],answer:1,explanation:"تعریف کوهن و سوردلیک = مجموعه عدد یا نماد منطبق بر ویژگی‌های تجربی."},
+{q:"چهار مقیاس اندازه‌گیری توسط چه کسی طبقه‌بندی شد؟",options:["نانالی","استیونس","کوهن","گی"],answer:1,explanation:"استیونس (۱۹۵۱) چهار مقیاس را طبقه‌بندی کرد."},
+{q:"کدام مقیاس ساده‌ترین سطح اندازه‌گیری است؟",options:["ترتیبی","فاصله‌ای","اسمی","نسبتی"],answer:2,explanation:"اسمی ساده‌ترین سطح اندازه‌گیری است."},
+{q:"در مقیاس اسمی کدام عملیات آماری مجاز است؟",options:["میانگین و انحراف معیار","فقط شمارش فراوانی و تعیین نما","میانه و درصد","همه عملیات"],answer:1,explanation:"در اسمی فقط فراوانی و نما مجاز است."},
+{q:"شماره پیراهن بازیکنان فوتبال نمونه‌ای از کدام مقیاس است؟",options:["ترتیبی","فاصله‌ای","اسمی","نسبتی"],answer:2,explanation:"شماره پیراهن = مقیاس اسمی (اسم‌گذاری)."},
+{q:"تعریف مقیاس ترتیبی طبق نانالی (۱۹۷۸) چیست؟",options:["رتبه و فاصله معلوم است","رتبه معلوم ولی فاصله معلوم نیست","رتبه و فاصله و صفر مطلق معلوم است","فقط طبقه‌بندی"],answer:1,explanation:"ترتیبی = رتبه معلوم، فاصله معلوم نیست."},
+{q:"در مقیاس ترتیبی کدام عملیات آماری مجاز است؟",options:["فقط نما","نما، میانه، درصد، اسپیرمن","میانگین و انحراف معیار","همه عملیات"],answer:1,explanation:"ترتیبی = نما، میانه، درصد، اسپیرمن. میانگین نه!"},
+{q:"پرسشنامه استرس هولمز و راهه نمونه‌ای از کدام مقیاس است؟",options:["اسمی","ترتیبی","فاصله‌ای","نسبتی"],answer:1,explanation:"پرسشنامه هولمز و راهه = مقیاس ترتیبی."},
+{q:"تعریف مقیاس فاصله‌ای طبق نانالی چیست؟",options:["فقط رتبه معلوم است","رتبه و فاصله معلوم، صفر مطلق نامعلوم","رتبه، فاصله و صفر مطلق معلوم","فقط طبقه‌بندی"],answer:1,explanation:"فاصله‌ای = رتبه و فاصله معلوم، صفر مطلق نامعلوم."},
+{q:"دماسنج سلسیوس نمونه‌ای از کدام مقیاس است؟",options:["اسمی","ترتیبی","فاصله‌ای","نسبتی"],answer:2,explanation:"دماسنج سلسیوس = مقیاس فاصله‌ای (صفر قراردادی)."},
+{q:"در مقیاس فاصله‌ای کدام عملیات ریاضی مجاز است؟",options:["فقط جمع","جمع و تفریق","همه عملیات","هیچ‌کدام"],answer:1,explanation:"فاصله‌ای = جمع و تفریق مجاز، ضرب و تقسیم نه."},
+{q:"در مقیاس فاصله‌ای کدام عملیات آماری مجاز است؟",options:["فقط نما","فقط میانه","همه عملیات آماری","هیچ‌کدام"],answer:2,explanation:"فاصله‌ای = همه عملیات آماری مجاز است."},
+{q:"تعریف مقیاس نسبتی طبق نانالی چیست؟",options:["رتبه و فاصله معلوم","رتبه، فاصله و صفر مطلق معلوم","فقط رتبه","فقط طبقه‌بندی"],answer:1,explanation:"نسبتی = رتبه، فاصله و صفر مطلق معلوم."},
+{q:"کامل‌ترین مقیاس اندازه‌گیری کدام است؟",options:["اسمی","ترتیبی","فاصله‌ای","نسبتی"],answer:3,explanation:"نسبتی کامل‌ترین مقیاس است."},
+{q:"در مقیاس نسبتی چه عملیاتی مجاز است؟",options:["فقط جمع","جمع و تفریق","همه عملیات آماری و ریاضی","هیچ‌کدام"],answer:2,explanation:"نسبتی = همه عملیات مجاز."},
+{q:"مهم‌ترین مقیاس نسبتی کدام است؟",options:["دماسنج","مقیاس اعداد از صفر تا بی‌نهایت","پرسشنامه","آزمون هوش"],answer:1,explanation:"مقیاس اعداد = مهم‌ترین مقیاس نسبتی."},
+{q:"کدام متغیرها با مقیاس نسبتی به‌ندرت اندازه‌گیری می‌شوند؟",options:["طول","وزن","متغیرهای روانی و پرورشی","حجم"],answer:2,explanation:"متغیرهای روانی و پرورشی به‌ندرت با مقیاس نسبتی."},
+{q:"در مقیاس گسسته کدام ویژگی وجود دارد؟",options:["هر ارزشی ممکن است","فقط ارزش‌های معین","همیشه اعداد اعشاری","صفر مطلق ندارد"],answer:1,explanation:"گسسته = فقط ارزش‌های معین."},
+{q:"مثال مقیاس گسسته کدام است؟",options:["قد","وزن","تعداد فرزندان","زمان"],answer:2,explanation:"تعداد فرزندان = مقیاس گسسته."},
+{q:"مثال مقیاس پیوسته کدام است؟",options:["تعداد فرزندان","جنس","قد","وضعیت تأهل"],answer:2,explanation:"قد = مقیاس پیوسته."},
+{q:"اندازه‌گیری متغیرهای پیوسته چگونه است؟",options:["دقیق و قطعی","همیشه تقریبی","بدون خطا","همیشه درست"],answer:1,explanation:"اندازه‌گیری متغیرهای پیوسته همیشه تقریبی است."},
+{q:"حدود واقعی اعداد چیست؟",options:["عدد ± ۱","عدد ± نصف واحد اندازه‌گیری","عدد × ۲","عدد ÷ ۲"],answer:1,explanation:"حدود واقعی = عدد ± نصف واحد اندازه‌گیری."},
+{q:"قاعده گرد کردن: اگر رقم بعدی بیشتر از ۵ باشد چه می‌کنیم؟",options:["بدون تغییر","یکی به رقم مورد نظر اضافه","صفر می‌کنیم","دو برابر"],answer:1,explanation:"بیشتر از ۵ → یکی اضافه."},
+{q:"قاعده گرد کردن: اگر رقم بعدی کمتر از ۵ باشد چه می‌کنیم؟",options:["یکی اضافه","بدون تغییر","صفر می‌کنیم","نصف"],answer:1,explanation:"کمتر از ۵ → بدون تغییر."},
+{q:"اگر رقم بعدی دقیقاً ۵ باشد و رقم قبلش زوج باشد چه می‌کنیم؟",options:["یکی اضافه","بدون تغییر","صفر می‌کنیم","دو برابر"],answer:1,explanation:"دقیقاً ۵ و رقم قبلی زوج → بدون تغییر."},
+{q:"اگر رقم بعدی دقیقاً ۵ باشد و رقم قبلش فرد باشد چه می‌کنیم؟",options:["یکی اضافه","بدون تغییر","صفر می‌کنیم","نصف"],answer:0,explanation:"دقیقاً ۵ و رقم قبلی فرد → یکی اضافه."},
+{q:"عدد ۶/۵۴۶ پس از گرد کردن چه می‌شود؟",options:["۶/۵۴","۶/۵۵","۶/۵۰","۶/۵۴۶"],answer:1,explanation:"رقم بعدی ۶ > ۵ → ۶/۵۵."},
+{q:"عدد ۶/۵۴۵۰۰۰ پس از گرد کردن چه می‌شود؟",options:["۶/۵۵","۶/۵۴","۶/۵۰","۶/۵۴۶"],answer:1,explanation:"دقیقاً ۵، رقم قبلی زوج (۴) → ۶/۵۴."},
+{q:"عامل تعیین نوع مقیاس اندازه‌گیری چیست؟",options:["اعداد و ارقام","متغیر مورد سنجش","محاسبات ریاضی","فقط تعداد سوالات"],answer:1,explanation:"عامل تعیین‌کننده = متغیر مورد سنجش."},
+{q:"نظر بروگاتا و بوهرنستد (۱۹۸۰) درباره مقیاس ترتیبی چیست؟",options:["سطح مستقل اندازه‌گیری","شکل ضعیف مقیاس فاصله‌ای","مثل مقیاس نسبتی","بدون کاربرد"],answer:1,explanation:"بروگاتا و بوهرنستد = مقیاس ترتیبی، شکل ضعیف فاصله‌ای."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

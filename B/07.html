@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · ورزش ۱ · سری 07 · فصل دوم: تأثیر ورزش در رفتار اجتماعی و فردی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"07";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>ورزش ۱ · سری 07 · فصل دوم</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل دوم: تأثیر ورزش در رفتار اجتماعی و فردی</h2>
+  <p>همه چیز به زبان ساده — انگار دارم برای یه دوست توضیح می‌دم که هیچ پیش‌زمینه‌ای نداره</p>
+  <div class="pills"><span class="pill">۲ گفتار</span><span class="pill">۶ ویژگی اجتماعی</span><span class="pill">۶ ویژگی روانی</span><span class="pill">آماده امتحان</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان خیلی ساده نوشته شده. هدف کلی فصل اینه که بفهمی ورزش چطور روی <b>رفتار اجتماعی</b> (یعنی چطور با دیگران کنار میایم) و <b>رفتار فردی</b> (یعنی چطور با خودمون کنار میایم) اثر می‌ذاره.</div>
+
+<div class="stats">
+<div class="stat"><b>۲</b><span>گفتار</span></div>
+<div class="stat"><b>۶</b><span>ویژگی اجتماعی</span></div>
+<div class="stat"><b>۶</b><span>ویژگی روانی</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#goals">هدف کلی</a><a href="#concepts">گفتارها</a><a href="#social">۶ ویژگی اجتماعی</a><a href="#personal">۶ ویژگی روانی</a><a href="#compare">تفاوت‌ها</a><a href="#traps">دام‌های آزمون</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="goals" class="section">
+<h2 class="section-title">۰۱ · هدف کلی و چارچوب فصل</h2>
+<p class="section-sub">اول بفهمیم این فصل اصلاً می‌خواد چی بگه</p>
+
+<div class="card">
+<div class="card-head"><h3>هدف کلی فصل</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این فصل می‌خواد بگه ورزش چطور رفتار آدم رو عوض می‌کنه — هم <b>رفتار اجتماعی</b> (نحوه‌ی ارتباط با دیگران) و هم <b>رفتار فردی</b> (نحوه‌ی ارتباط با خودمون).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دو بخش اصلی این فصل = ۶ ویژگی اجتماعی + ۶ ویژگی روانی/فردی که تحت تأثیر ورزش تغییر می‌کنن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ورزش چطور روی جامعه اثر می‌ذاره؟</h3></div>
+<div class="fa"><b>به زبان ساده:</b> ورزش یه «عامل فرهنگی» هست. یعنی توی روند <b>اجتماعی شدن</b> آدم‌ها نقش داره.</div>
+<div class="fa"><b>اجتماعی شدن یعنی چی؟</b> یعنی یه فرآیندی که آدم کمکم <b>ارزش‌های گروه</b> رو می‌گیره و <b>جای ارزش‌های فردی خودش</b> می‌ذاره. یعنی از «من‌محوری» به «ما‌محوری» می‌رسه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> اجتماعی شدن = فرآیندی که فرد ارزش‌های گروهی رو در ارزش‌های فردی خودش حل می‌کنه و جانشین می‌کنه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هماهنگی ارزش‌ها توی ورزش</h3></div>
+<div class="fa"><b>به زبان ساده:</b> توی مسابقات ورزشی، آدم <b>ارزش‌های خودش</b> رو با <b>ارزش‌های دیگران</b> هماهنگ می‌کنه. این یعنی یه قدم به سمت <b>رعایت حقوق فردی و اجتماعی دیگران</b>.</div>
+<div class="fa"><b>مثال ساده:</b> تو تیم فوتبال، نمی‌تونی هر وقت خواستی توپ رو به خودت برسونی. باید ببینی کی کجاست و توپ رو به کی بدی. یعنی «خواسته‌ی من» رو با «خواسته‌ی تیم» هماهنگ می‌کنی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تغییرات اجتماعی بستگی به چی داره؟</h3></div>
+<div class="fa"><b>به زبان ساده:</b> ورزش روی همه یه‌جور اثر نمی‌ذاره. اثرش بستگی داره به:</div>
+<div class="fa">۱) <b>فرهنگ و ارزش‌های جامعه</b> (توی چه جامعه‌ای بزرگ شدی)</div>
+<div class="fa">۲) <b>شخصیت اجتماعی خود فرد</b> (خودت چه جور آدمی هستی)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> فکر نکن ورزش روی همه یه‌جور اثر می‌ذاره. اثرش به فرهنگ جامعه و شخصیت خود فرد بستگی داره.
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · گفتارها با تحلیل جامع</h2>
+<p class="section-sub">هر گفتار با توضیح ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>گفتار ۱: تأثیر ورزش در تغییر رفتار اجتماعی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> ورزش یه عامل فرهنگیه و توی اجتماعی شدن آدم نقش داره. یعنی کمک می‌کنه آدم از خودمحوری خارج بشه و با دیگران کنار بیاد.</div>
+<div class="fa"><b>چطور؟</b> توی مسابقات، آدم یاد می‌گیره ارزش‌های خودش رو با دیگران هماهنگ کنه. این یعنی رعایت حقوق دیگران.</div>
+<div class="fa"><b>اما:</b> این تغییرات همیشه یه‌جور نیست. بستگی داره به <b>فرهنگ جامعه</b> و <b>شخصیت خود فرد</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گفتار ۲: تأثیر ورزش در تغییر رفتار فردی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> ورزش فقط روی روابط اجتماعی اثر نمی‌ذاره. روی <b>درون خود آدم</b> هم اثر می‌ذاره.</div>
+<div class="fa"><b>تربیت بدنی و رشد:</b> تربیت بدنی بخشی از تعلیم و تربیه که با حرکت و فعالیت جسمانی، <b>رشد آدم رو در همه ابعاد</b> هماهنگ می‌کنه.</div>
+<div class="fa"><b>آموزش مفاهیم تربیتی:</b> بعضی چیزها رو نمی‌شه توی کلاس نظری یاد داد. باید با بازی و حرکت یاد گرفت. مثلاً «کار گروهی» رو نمی‌شه فقط توضیح داد؛ باید توی بازی تجربه کرد.</div>
+<div class="fa"><b>روان‌شناسان می‌گن:</b> فعالیت‌های حرکتی وسیله‌ی خوبی برای آموزش مفاهیم تربیتی هستن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تغییرات شخصیتی ناشی از ورزش</h3></div>
+<div class="fa"><b>به زبان ساده:</b> محیط ورزشی، باز و آزاده. همین باعث می‌شه آدم تغییرات <b>شخصیتی، عاطفی و اجتماعی</b> خاصی پیدا کنه.</div>
+<div class="fa"><b>یه نکته مهم:</b> وقتی بدنت قوی‌تر می‌شه، این روی <b>منش فردی</b> و <b>ساختار شخصیتی</b> تو هم اثر می‌ذاره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ارتباط روح و جسم</h3></div>
+<div class="fa"><b>به زبان ساده:</b> روح و جسم دو بعد <b>جدا نشدنی</b> آدم هستن. اگه یکی تغییر کنه، اون یکی هم تغییر می‌کنه.</div>
+<div class="fa"><b>تحقیقات علمی نشون داده:</b> آدم‌هایی که جسم سالم و قوی دارن، صفات خوب بیشتری دارن. مثل:</div>
+<div class="fa">• جوانمردی</div>
+<div class="fa">• اتکا به نفس</div>
+<div class="fa">• از خودگذشتگی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> روح و جسم دو بعد جدایی‌ناپذیر انسان هستن؛ تغییر در یکی، اون یکی رو هم تحت تأثیر قرار می‌ده.
+</div>
+</div>
+</section>
+
+<section id="social" class="section">
+<h2 class="section-title">۰۳ · ۶ ویژگی اجتماعی که ورزش تغییر می‌ده</h2>
+<p class="section-sub">این ۶ تا رو حفظ کن — سؤال امتحانی مهمیه</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) بروز شخصیت اجتماعی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> ورزشکار از <b>فردگرایی و خودمحوری</b> خارج می‌شه، <b>رشد روانی طبیعی‌تر</b> پیدا می‌کنه و <b>راحت‌تر با دیگران ارتباط</b> برقرار می‌کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) احترام به قوانین اجتماعی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> وقتی توی بازی مقررات رو رعایت می‌کنی، داری <b>رعایت مقررات اجتماعی</b> رو یاد می‌گیری.</div>
+<div class="fa"><b>مخصوصاً برای کودکان:</b> بچه‌ها توی بازی یاد می‌گیرن که قانون چیه و چرا باید رعایتش کرد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) قضاوت اجتماعی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> توی ورزش، رقابت و گاهی اختلاف‌نظر هست. اما <b>حرف داور برای همه لازم‌الاجراست</b>.</div>
+<div class="fa"><b>نتیجه:</b> همین باعث می‌شه آدم <b>قضاوت اجتماعی</b> (یعنی پذیرش نظر یه مرجع) رو یاد بگیره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) توانایی برقراری روابط اجتماعی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> ورزش و تربیت بدنی باعث می‌شه آدم از <b>گوشه‌گیری و خجالت بی‌مورد</b> بیرون بیاد و <b>مهارت ارتباط با دیگران</b> رو یاد بگیره.</div>
+<div class="fa"><b>کودک از راه بازی یاد می‌گیره:</b></div>
+<div class="fa">• همکاری</div>
+<div class="fa">• داد و ستد</div>
+<div class="fa">• ساختن شخصیت توی گروه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) احساس مسئولیت‌پذیری اجتماعی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> زمین ورزش، یه <b>کلاس درس</b> برای تقویت <b>احساس مسئولیت</b> توئه. یاد می‌گیری که <b>در قبال دیگران مسئول</b> باشی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶) احیای حس مسئولیت‌پذیری اجتماعی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این مورد تقریباً شبیه مورد قبلیه، ولی یه تأکید اضافه داره:</div>
+<div class="fa"><b>پیام اصلی:</b> وقتی هر فردی احساس مسئولیت کنه، <b>کل اجتماع</b> می‌تونه پیروز و سربلند بشه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> بعضی‌ها مورد ۵ و ۶ رو یکی می‌گیرن. اما توی کتاب، ۶ ویژگی شمرده شده. پس هر ۶ تا رو حفظ کن.
+</div>
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#ffe8f0,#fff0cc);border-color:#f94779">
+<div class="card-head"><h3>📌 جمع‌بندی ۶ ویژگی اجتماعی</h3></div>
+<div class="fa">۱) بروز شخصیت اجتماعی</div>
+<div class="fa">۲) احترام به قوانین اجتماعی</div>
+<div class="fa">۳) قضاوت اجتماعی</div>
+<div class="fa">۴) توانایی برقراری روابط اجتماعی</div>
+<div class="fa">۵) احساس مسئولیت‌پذیری اجتماعی</div>
+<div class="fa">۶) احیای حس مسئولیت‌پذیری اجتماعی</div>
+</div>
+</section>
+
+<section id="personal" class="section">
+<h2 class="section-title">۰۴ · ۶ ویژگی روانی/فردی که ورزش تغییر می‌ده</h2>
+<p class="section-sub">این ۶ تا هم مهمن — سؤال امتحانی کلیدی</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) رفع خستگی فکری</h3></div>
+<div class="fa"><b>به زبان ساده:</b> زندگی یه‌نواخت، آدم رو خسته و عصبانی می‌کنه. ورزش یه <b>سرگرمی سالم</b>ه که این خستگی فکری رو از بین می‌بره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) ایجاد و تقویت قدرت ابتکار</h3></div>
+<div class="fa"><b>به زبان ساده:</b> توی بازی‌های جمعی، برای بردن حریف باید <b>ابتکار</b> به خرج بدی. بازیکن با یه حرکت ابتکاری، حریف رو شکست می‌ده.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) تقویت و شکوفاساختن استعداد رهبری</h3></div>
+<div class="fa"><b>به زبان ساده:</b> ورزش یه محیط آزاده که آدم می‌تونه عقیده‌ش رو بگه. کسی که <b>استعداد رهبری</b> داره، می‌تونه این روحیه رو توی ورزش پرورش بده.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) وظیفه‌شناسی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> توی ورزش به هر کس یه وظیفه می‌دن. همین یاد می‌ده که <b>توی جامعه هم هر کس باید کار مناسب توانایی‌هاش</b> رو انجام بده.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ورزش، آدم رو با اصل <b>تقسیم کار</b> و <b>وظایف اجتماعی</b> آشنا می‌کنه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) پرورش قوای ذهنی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> فعالیت جسمانی و بازی، به آدم کمک می‌کنه <b>نیروی ذهنی</b> خودش رو به کار بندازه و <b>محیط</b> رو بشناسه و کنترل کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶) مبارزه با بی‌حوصلگی، دلتنگی و نگرانی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> اگه آدم همیشه بیکار باشه، <b>بی‌حوصله و دلتنگی</b> سراغش میاد. تربیت بدنی یه راه مؤثر برای مبارزه با این حالت‌ها و <b>نگرانی‌های فکری</b>ه.</div>
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#ffe8f0,#fff0cc);border-color:#f94779">
+<div class="card-head"><h3>📌 جمع‌بندی ۶ ویژگی روانی/فردی</h3></div>
+<div class="fa">۱) رفع خستگی فکری</div>
+<div class="fa">۲) ایجاد و تقویت قدرت ابتکار</div>
+<div class="fa">۳) تقویت و شکوفاساختن استعداد رهبری</div>
+<div class="fa">۴) وظیفه‌شناسی</div>
+<div class="fa">۵) پرورش قوای ذهنی</div>
+<div class="fa">۶) مبارزه با بی‌حوصلگی، دلتنگی و نگرانی</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۵ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">جفت‌هایی که ممکنه اشتباه بگیری</p>
+
+<div class="card">
+<div class="card-head"><h3>۶ ویژگی اجتماعی vs ۶ ویژگی روانی</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی‌های اجتماعی</th><th>ویژگی‌های روانی/فردی</th></tr></thead>
+<tbody>
+<tr><td>بروز شخصیت اجتماعی</td><td>رفع خستگی فکری</td></tr>
+<tr><td>احترام به قوانین اجتماعی</td><td>ایجاد و تقویت قدرت ابتکار</td></tr>
+<tr><td>قضاوت اجتماعی</td><td>تقویت استعداد رهبری</td></tr>
+<tr><td>توانایی برقراری روابط اجتماعی</td><td>وظیفه‌شناسی</td></tr>
+<tr><td>احساس مسئولیت‌پذیری اجتماعی</td><td>پرورش قوای ذهنی</td></tr>
+<tr><td>احیای حس مسئولیت‌پذیری اجتماعی</td><td>مبارزه با بی‌حوصلگی، دلتنگی و نگرانی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۶ ویژگی اجتماعی = مربوط به <b>رابطه با دیگران</b> / ۶ ویژگی روانی = مربوط به <b>درون خود آدم</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اجتماعی شدن vs اجتماع‌گریزی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> اجتماعی شدن = آدم به سمت جمع می‌ره و ارزش‌های گروه رو می‌گیره / اجتماع‌گریزی = آدم از جمع فرار می‌کنه. ورزش باعث <b>اجتماعی شدن</b> می‌شه، نه اجتماع‌گریزی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>احساس مسئولیت‌پذیری vs احیای حس مسئولیت‌پذیری</h3></div>
+<div class="fa"><b>به زبان ساده:</b> «احساس مسئولیت‌پذیری» = آدم خودش رو در قبال دیگران مسئول می‌دونه / «احیای حس مسئولیت‌پذیری» = تأکید بر این که وقتی همه مسئول باشن، <b>کل اجتماع</b> پیروز می‌شه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تربیت بدنی vs ورزش حرفه‌ای</h3></div>
+<div class="fa"><b>به زبان ساده:</b> تربیت بدنی = برای رشد و تعالی آدم / ورزش حرفه‌ای = برای قهرمانی و رقابت. توی این فصل، تأکید روی <b>تربیت بدنی</b>ه که رشد روانی و اجتماعی رو هماهنگ می‌کنه.</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: تعریف اجتماعی شدن</h3>
+<div class="fa"><b>دام چیه:</b> اجتماعی شدن رو با «اجتماعی بودن» یا «در جمع بودن» قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> اجتماعی شدن = فرآیندی که فرد ارزش‌های گروهی رو در ارزش‌های فردی خودش حل می‌کنه و جانشین می‌کنه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اجتماعی شدن یه <b>فرآیند</b>ه، نه یه حالت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: ۶ ویژگی اجتماعی</h3>
+<div class="fa"><b>دام چیه:</b> تعدادشون رو اشتباه می‌گیری یا یکیش رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> ۶ تا = بروز شخصیت اجتماعی + احترام به قوانین + قضاوت اجتماعی + توانایی ارتباط + احساس مسئولیت + احیای حس مسئولیت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مورد ۵ و ۶ رو با هم قاطی نکن. هر دو جدان ولی شبیهن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: ۶ ویژگی روانی</h3>
+<div class="fa"><b>دام چیه:</b> ویژگی‌های اجتماعی و روانی رو با هم قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ۶ تا = رفع خستگی فکری + قدرت ابتکار + استعداد رهبری + وظیفه‌شناسی + پرورش قوای ذهنی + مبارزه با بی‌حوصلگی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اجتماعی = رابطه با دیگران / روانی = درون خود آدم.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: اثر ورزش روی همه یکسانه؟</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ورزش روی همه یه‌جور اثر می‌ذاره.</div>
+<div class="fa"><b>جواب درست:</b> نه، بستگی داره به فرهنگ و ارزش‌های جامعه و شخصیت اجتماعی خود فرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اثر ورزش <b>مطلق</b> نیست؛ بستگی به زمینه داره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: بازی برای کودکان</h3>
+<div class="fa"><b>دام چیه:</b> نقش بازی رو فقط «سرگرمی» می‌دونی.</div>
+<div class="fa"><b>جواب درست:</b> بازی برای کودکان یه موقعیت برای آموزش <b>رعایت مقررات و قراردادهای اجتماعی</b>ه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بچه‌ها توی سنین اولیه با مقررات اجتماعی درگیر نیستن؛ بازی اولین تجربه‌شونه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: ارتباط روح و جسم</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی روح و جسم جدا هستن.</div>
+<div class="fa"><b>جواب درست:</b> روح و جسم دو بعد <b>جدایی‌ناپذیر</b>ان؛ تغییر در یکی، اون یکی رو هم تحت تأثیر قرار می‌ده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> به همین دلیله که ورزش (جسم) روی اخلاق (روح) هم اثر می‌ذاره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: وظیفه‌شناسی و جامعه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی وظیفه‌شناسی فقط توی ورزش مهمه.</div>
+<div class="fa"><b>جواب درست:</b> وظیفه‌شناسی توی ورزش، آدم رو با <b>اصل تقسیم کار</b> و <b>وظایف اجتماعی</b> هم آشنا می‌کنه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ورزش = تمرین کوچک برای زندگی اجتماعی بزرگ.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل دوم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 07 · ورزش ۱ · فصل دوم: تأثیر ورزش در رفتار اجتماعی و فردی · جزوه ساده و امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"اجتماعی شدن یعنی چه؟",options:["در جمع بودن","فرآیندی که فرد ارزش‌های گروهی را جانشین ارزش‌های فردی خود می‌کند","گوشه‌گیری از جمع","فقط کار گروهی"],answer:1,explanation:"اجتماعی شدن = فرآیند جانشینی ارزش‌های گروهی به جای ارزش‌های فردی."},
+{q:"چند ویژگی اجتماعی تحت تأثیر ورزش تغییر می‌کند؟",options:["۴","۵","۶","۷"],answer:2,explanation:"۶ ویژگی اجتماعی تحت تأثیر ورزش تغییر می‌کند."},
+{q:"چند ویژگی روانی/فردی تحت تأثیر ورزش تغییر می‌کند؟",options:["۴","۵","۶","۷"],answer:2,explanation:"۶ ویژگی روانی/فردی تحت تأثیر ورزش تغییر می‌کند."},
+{q:"کدام گزینه جزء ۶ ویژگی اجتماعی نیست؟",options:["بروز شخصیت اجتماعی","احترام به قوانین اجتماعی","قدرت ابتکار","قضاوت اجتماعی"],answer:2,explanation:"قدرت ابتکار جزء ۶ ویژگی روانی است، نه اجتماعی."},
+{q:"کدام گزینه جزء ۶ ویژگی روانی نیست؟",options:["رفع خستگی فکری","قدرت ابتکار","استعداد رهبری","احترام به قوانین اجتماعی"],answer:3,explanation:"احترام به قوانین اجتماعی جزء ۶ ویژگی اجتماعی است."},
+{q:"احساس مسئولیت‌پذیری اجتماعی یعنی چه؟",options:["فقط مسئول خود بودن","فرد در قبال دیگران خود را مسئول می‌داند","مسئولیت فقط در ورزش","بی‌تفاوتی به دیگران"],answer:1,explanation:"احساس مسئولیت‌پذیری اجتماعی = مسئول بودن در قبال دیگران."},
+{q:"کدام ویژگی به تقویت قضاوت اجتماعی کمک می‌کند؟",options:["احترام به داور","قدرت ابتکار","رفع خستگی","استعداد رهبری"],answer:0,explanation:"رعایت قضاوت داور به تقویت قضاوت اجتماعی کمک می‌کند."},
+{q:"کودک از راه بازی چه چیزهایی یاد می‌گیرد؟",options:["فقط سرگرمی","همکاری، داد و ستد، ساختن شخصیت در گروه","فقط دویدن","فقط بردن"],answer:1,explanation:"کودک از راه بازی همکاری، داد و ستد و ساختن شخصیت در گروه را می‌آموزد."},
+{q:"نقش بازی برای کودکان در آموزش چیست؟",options:["فقط سرگرمی","آموزش رعایت مقررات و قراردادهای اجتماعی","فقط رشد جسمانی","فقط افزایش قد"],answer:1,explanation:"بازی موقعیتی برای آموزش رعایت مقررات و قراردادهای اجتماعی است."},
+{q:"ارتباط روح و جسم چگونه است؟",options:["کاملاً جدا","دو بعد جدایی‌ناپذیر","فقط جسم مهم است","فقط روح مهم است"],answer:1,explanation:"روح و جسم دو بعد جدایی‌ناپذیر انسان هستند."},
+{q:"تحقیقات علمی درباره ورزشکاران چه نشان داده؟",options:["فقط قدرت بدنی بالاتر","صفات شایسته‌تر مانند اتکا به نفس و از خودگذشتگی","فقط سرعت بالاتر","هیچ تفاوتی"],answer:1,explanation:"افراد دارای آمادگی جسمانی بالاتر صفات شایسته‌تری دارند."},
+{q:"وظیفه‌شناسی در ورزش چه چیزی را به افراد یاد می‌دهد؟",options:["فقط برد و باخت","اصل تقسیم کار و وظایف در جامعه","فقط قانون‌شکنی","فقط رقابت"],answer:1,explanation:"وظیفه‌شناسی در ورزش، افراد را با اصل تقسیم کار آشنا می‌کند."},
+{q:"قدرت ابتکار در کدام نوع بازی تقویت می‌شود؟",options:["بازی انفرادی","بازی‌های جمعی","بازی رایانه‌ای","تماشای بازی"],answer:1,explanation:"در بازی‌های جمعی، غلبه بر حریف نیاز به ابتکار دارد."},
+{q:"تقویت استعداد رهبری در ورزش چگونه است؟",options:["با سکوت","ورزش محیط آزادی برای طرح عقاید است","با ترس","با انزوا"],answer:1,explanation:"ورزش محیط آزادی برای طرح عقاید و اظهارنظر است."},
+{q:"کدام ویژگی اجتماعی به معنی خارج شدن از خودمحوری است؟",options:["قضاوت اجتماعی","بروز شخصیت اجتماعی","احترام به قوانین","احساس مسئولیت"],answer:1,explanation:"بروز شخصیت اجتماعی = خارج شدن از خودمحوری."},
+{q:"تغییرات اجتماعی تحت تأثیر ورزش به چه چیزی بستگی دارد؟",options:["فقط به ورزش","فرهنگ و ارزش‌های جامعه و شخصیت اجتماعی افراد","فقط به سن","فقط به جنسیت"],answer:1,explanation:"تغییرات اجتماعی بستگی به فرهنگ جامعه و شخصیت فرد دارد."},
+{q:"مبارزه با بی‌حوصلگی، دلتنگی و نگرانی جزء کدام دسته ویژگی‌هاست؟",options:["اجتماعی","روانی/فردی","جسمانی","اقتصادی"],answer:1,explanation:"مبارزه با بی‌حوصلگی جزء ۶ ویژگی روانی/فردی است."},
+{q:"احترام به قوانین اجتماعی از کدام راه در ورزش تقویت می‌شود؟",options:["فقط تماشا","رعایت مقررات بازی","فقط بردن","فقط باختن"],answer:1,explanation:"رعایت مقررات بازی، آموزش رعایت مقررات اجتماعی است."},
+{q:"پرورش قوای ذهنی از چه راهی در ورزش اتفاق می‌افتد؟",options:["فقط تماشا","فعالیت‌های جسمانی و بازی","فقط استراحت","فقط خواندن"],answer:1,explanation:"فعالیت‌های جسمانی و بازی، افراد را در به کار انداختن نیروی ذهنی یاری می‌کند."},
+{q:"مخاطب اصلی آموزش ارزش‌های اجتماعی در تربیت بدنی چه کسانی هستند؟",options:["فقط بزرگسالان","دانش‌آموزان و دانشجویان","فقط سالمندان","فقط ورزشکاران حرفه‌ای"],answer:1,explanation:"تربیت بدنی خصوصاً در دانش‌آموزان و دانشجویان ارزش‌های اجتماعی را پرورش می‌دهد."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

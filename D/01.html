@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره بهداشت روانی · سری 01 · فصل اول: مقدمه و کلیات</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"01";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره بهداشت روانی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل اول: مقدمه و کلیات</h2>
+  <p>بهداشت روانی — تعاریف، اهداف، معیارها، تاریخچه و نکات امتحانی</p>
+  <div class="pills"><span class="pill">تعاریف پایه</span><span class="pill">سه هدف</span><span class="pill">معیارهای نابهنجاری</span><span class="pill">تاریخچه</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس فصل اول کتاب «بهداشت روانی» میلانی‌فر تدوین شده است. تمرکز بر <b>مفاهیم پایه‌ای و تعاریف اساسی</b> است که پایه‌ی درک سایر فصول هستند. تعریف بهداشت روانی، سه هدف اصلی، مشکل تعریف، معیارهای نابهنجاری، تاریخچه جهانی و ایران، و دام‌های امتحانی را پوشش می‌دهد.</div>
+
+<div class="stats">
+<div class="stat"><b>۳</b><span>هدف اصلی</span></div>
+<div class="stat"><b>۳</b><span>معیار نابهنجاری</span></div>
+<div class="stat"><b>۳</b><span>نظریه‌پرداز جهانی</span></div>
+<div class="stat"><b>۸</b><span>رویداد تاریخی ایران</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#history">تاریخچه</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف بهداشت روانی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>«بهداشت روانی علمی است برای پیشگیری از اختلالات روانی، درمان آن‌ها و ارتقای سلامت روان جامعه.»</b>
+</div>
+<div class="fa"><b>سه هدف اصلی:</b></div>
+<div class="fa">۱) <b>پیشگیری:</b> جلوگیری از بروز اختلال روانی — مثال: آموزش مهارت‌های زندگی</div>
+<div class="fa">۲) <b>درمان:</b> کاهش نشانه‌ها و بازگرداندن عملکرد — مثال: روان‌درمانی، دارو</div>
+<div class="fa">۳) <b>ارتقا:</b> بهبود بهزیستی فراتر از نبود اختلال — مثال: برنامه‌های شادکامی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> بهداشت روانی فقط درمان نیست؛ پیشگیری و ارتقا هم‌ارزش با درمان هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعریف WHO از سلامت روان</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>«حالتی از بهزیستی که فرد در آن توانایی‌های خود را می‌شناسد، با استرس‌های عادی زندگی کنار می‌آید، مولد و ثمربخش کار می‌کند و به جامعه خود کمک می‌کند.»</b>
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این تعریف پرتکرارترین مبنای سؤالات است. «نبود بیماری» جزء این تعریف نیست؛ سلامت روان فراتر از نبود بیماری است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت بهداشت روانی و سلامت روان</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>بهداشت روانی</th><th>سلامت روان</th></tr></thead>
+<tbody>
+<tr><td>علم و عمل</td><td>وضعیت مطلوب</td></tr>
+<tr><td>فرآیند</td><td>نتیجه</td></tr>
+<tr><td>«چه کارهایی انجام دهیم؟»</td><td>«چه وضعیتی می‌خواهیم؟»</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه معیار نابهنجاری</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) معیار آماری:</b> نادر بودن (کم‌فراوانی) — <b>محدودیت:</b> نابغه بودن هم نادر است اما اختلال نیست.</div>
+<div class="fa"><b>۲) معیار اجتماعی:</b> مغایرت با هنجارهای جامعه — <b>محدودیت:</b> هنجارها وابسته به فرهنگ‌اند.</div>
+<div class="fa"><b>۳) معیار بالینی:</b> رنج + اختلال در عملکرد — <b>محدودیت:</b> مرز بین ناراحتی و اختلال همیشه واضح نیست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> هیچ‌یک از این معیارها به‌تنهایی برای تشخیص کافی نیست. تشخیص نیازمند مجموعه‌ای از اطلاعات است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات کلیدی که حتماً باید بلد باشی</h3></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱)</b> بهداشت روانی = علم و عمل برای تأمین، حفظ و ارتقای سلامت روان.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲)</b> سه هدف: پیشگیری، درمان، ارتقا.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳)</b> تعریف WHO: بهزیستی، مقابله با استرس، کار مولد، مشارکت اجتماعی.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۴)</b> بهداشت روانی ≠ سلامت روان: اولی فرآیند؛ دومی نتیجه.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵)</b> مشکل تعریف: تفاوت‌های فرهنگی، نظری و مرز نامشخص.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۶)</b> سه معیار نابهنجاری: آماری، اجتماعی، بالینی.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۷)</b> هیچ معیاری به‌تنهایی کافی نیست.
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با تعریف ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف ساده بهداشت روانی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف ساده:</b> بهداشت روانی به مجموعه‌ای از <b>اصول و روش‌ها</b> گفته می‌شود که برای <b>تأمین، حفظ و ارتقای سلامت روان</b> افراد و جامعه به کار می‌رود.</div>
+<div class="fa"><b>تعریف کوتاه برای امتحان:</b> «بهداشت روانی علمی است برای پیشگیری از اختلالات روانی، درمان آن‌ها و ارتقای سلامت روان جامعه.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> بهداشت روانی فقط درمان نیست؛ پیشگیری و ارتقا هم‌ارزش با درمان هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه هدف اصلی بهداشت روانی</h3></div>
+<div class="fa"><b>۱) پیشگیری:</b> جلوگیری از بروز اختلال روانی — مثال: آموزش مهارت‌های زندگی.</div>
+<div class="fa"><b>۲) درمان:</b> کاهش نشانه‌ها و بازگرداندن عملکرد — مثال: روان‌درمانی، دارو.</div>
+<div class="fa"><b>۳) ارتقا:</b> بهبود بهزیستی فراتر از نبود اختلال — مثال: برنامه‌های شادکامی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> بهداشت روانی فقط درمان نیست؛ پیشگیری و ارتقا هم‌ارزش با درمان هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعریف سازمان جهانی بهداشت (WHO)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">سلامت روان حالتی از <b>بهزیستی</b> است که فرد در آن:</div>
+<div class="fa">• توانایی‌های خود را <b>می‌شناسد</b></div>
+<div class="fa">• با <b>استرس‌های عادی زندگی</b> کنار می‌آید</div>
+<div class="fa">• <b>مولد و ثمربخش</b> کار می‌کند</div>
+<div class="fa">• به <b>جامعه خود کمک</b> می‌کند</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> «نبود بیماری» جزء این تعریف نیست؛ سلامت روان فراتر از نبود بیماری است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت بهداشت روانی و سلامت روان</h3></div>
+<table class="compare">
+<thead><tr><th>بهداشت روانی</th><th>سلامت روان</th></tr></thead>
+<tbody>
+<tr><td>علم و عمل</td><td>وضعیت مطلوب</td></tr>
+<tr><td>فرآیند</td><td>نتیجه</td></tr>
+<tr><td>«چه کارهایی انجام دهیم؟»</td><td>«چه وضعیتی می‌خواهیم؟»</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مشکل تعریف بهداشت روانی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>مشکل اصلی:</b> هیچ <b>تعریف واحد و مورد توافق همگانی</b> برای بهداشت روانی وجود ندارد. دلایل:</div>
+<div class="fa">۱) <b>تفاوت‌های فرهنگی:</b> آنچه در یک فرهنگ «نابهنجار» است، در فرهنگ دیگر «طبیعی» است.</div>
+<div class="fa">۲) <b>تفاوت نظریه‌ها:</b> هر مکتب روان‌شناسی تعریف متفاوتی ارائه می‌دهد.</div>
+<div class="fa">۳) <b>مرز نامشخص:</b> مرز بین سلامت و اختلال همیشه واضح نیست.</div>
+<div class="fa">۴) <b>تغییر در طول زمان:</b> تعریف بهداشت روانی در طول تاریخ تغییر کرده است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه معیار اصلی برای تشخیص «نابهنجاری»</h3></div>
+<div class="fa"><b>۱) معیار آماری:</b> نادر بودن (کم‌فراوانی) — محدودیت: نابغه بودن هم نادر است اما اختلال نیست.</div>
+<div class="fa"><b>۲) معیار اجتماعی:</b> مغایرت با هنجارهای جامعه — محدودیت: هنجارها وابسته به فرهنگ‌اند.</div>
+<div class="fa"><b>۳) معیار بالینی:</b> رنج + اختلال در عملکرد — محدودیت: مرز بین ناراحتی و اختلال همیشه واضح نیست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> هیچ‌یک از این معیارها به‌تنهایی برای تشخیص کافی نیست. تشخیص نیازمند مجموعه‌ای از اطلاعات است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مشکل تعریف در عمل</h3></div>
+<div class="fa"><b>چالش:</b> آیا فردی که <b>غمگین</b> است، <b>بیمار</b> است؟ آیا فردی که <b>متفاوت</b> است، <b>نابهنجار</b> است؟</div>
+<div class="fa"><b>پاسخ:</b> نه لزوماً. تشخیص اختلال نیازمند بررسی <b>شدت، مدت، فراوانی و تأثیر بر عملکرد</b> است.</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>بهداشت روانی vs سلامت روان</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>بهداشت روانی</th><th>سلامت روان</th></tr></thead>
+<tbody>
+<tr><td>علم و عمل</td><td>وضعیت مطلوب</td></tr>
+<tr><td>فرآیند</td><td>نتیجه</td></tr>
+<tr><td>«چه کارهایی انجام دهیم؟»</td><td>«چه وضعیتی می‌خواهیم؟»</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه‌ای که این دو را مترادف بگیرد، نادرست است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بهداشت روانی vs روان‌پزشکی</h3></div>
+<table class="compare">
+<thead><tr><th>بهداشت روانی</th><th>روان‌پزشکی</th></tr></thead>
+<tbody>
+<tr><td>پیشگیری، ارتقا، درمان</td><td>تشخیص و درمان</td></tr>
+<tr><td>تمرکز بر جامعه</td><td>تمرکز بر فرد</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه‌ای که این دو را مترادف بگیرد، نادرست است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه معیار نابهنجاری</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>معیار</th><th>توضیح</th><th>محدودیت</th></tr></thead>
+<tbody>
+<tr><td>آماری</td><td>نادر بودن (کم‌فراوانی)</td><td>نابغه بودن هم نادر است اما اختلال نیست</td></tr>
+<tr><td>اجتماعی</td><td>مغایرت با هنجارهای جامعه</td><td>هنجارها وابسته به فرهنگ‌اند</td></tr>
+<tr><td>بالینی</td><td>رنج + اختلال در عملکرد</td><td>مرز بین ناراحتی و اختلال همیشه واضح نیست</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته طلایی:</b> هیچ‌یک از معیارها به‌تنهایی کافی نیست. تشخیص نیازمند مجموعه‌ای از اطلاعات است.
+</div>
+</div>
+</section>
+
+<section id="history" class="section">
+<h2 class="section-title">۰۴ · تاریخچه بهداشت روانی</h2>
+<p class="section-sub">جهانی و ایران — با نکات امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>دوره‌های تاریخی جهانی</h3></div>
+<table class="compare">
+<thead><tr><th>دوره</th><th>نگرش به بیماری روانی</th><th>اقدامات</th></tr></thead>
+<tbody>
+<tr><td>باستان</td><td>تسخیر ارواح، جادو</td><td>طرد، شکنجه</td></tr>
+<tr><td>یونان باستان</td><td>عدم تعادل اخلاط چهارگانه</td><td>درمان با گیاه، موسیقی</td></tr>
+<tr><td>قرون وسطی</td><td>گناه، شیطان</td><td>حبس، آزار</td></tr>
+<tr><td>رنسانس</td><td>تیمارستان‌ها</td><td>حبس، زنجیر</td></tr>
+<tr><td>قرن ۱۸-۱۹</td><td>رویکرد انسانی‌تر</td><td>فیلیپ پینل، دوروثیا دیکس</td></tr>
+<tr><td>قرن ۲۰</td><td>رویکرد علمی</td><td>فروید، داروهای روان‌پزشکی</td></tr>
+<tr><td>امروز</td><td>رویکرد جامعه‌محور</td><td>خدمات اجتماعی، حقوق بشر</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فیلیپ پینل (Philippe Pinel)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>مفهوم:</b> بنیان‌گذار جنبش درمان اخلاقی در روان‌پزشکی.</div>
+<div class="fa"><b>اقدام:</b> برداشتن زنجیر از بیماران روانی در بیمارستان سالپتریه پاریس (۱۷۹۳).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پینل اولین کسی بود که با بیماران روانی انسانی رفتار کرد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دوروثیا دیکس (Dorothea Dix)</h3></div>
+<div class="fa"><b>مفهوم:</b> اصلاح‌گر نظام مراقبت از بیماران روانی در آمریکا.</div>
+<div class="fa"><b>اقدام:</b> تلاش برای ایجاد بیمارستان‌های انسانی به‌جای زندان برای بیماران روانی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>زیگموند فروید (Sigmund Freud)</h3></div>
+<div class="fa"><b>مفهوم:</b> بنیان‌گذار روان‌کاوی — اولین رویکرد سیستماتیک به درمان اختلالات روانی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> فروید پدر روان‌درمانی مدرن محسوب می‌شود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تاریخچه بهداشت روانی در ایران — دوران باستان</h3></div>
+<div class="fa"><b>ایران باستان:</b> در اوستا و متون پهلوی، به بیماری روانی اشاره شده است. درمان با گیاهان دارویی، دعا و موسیقی انجام می‌شد.</div>
+<div class="fa"><b>بیمارستان جندی‌شاپور:</b> در دوره ساسانیان، اولین مرکز درمان بیماران روانی در ایران بود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> جندی‌شاپور در دوره ساسانیان (پیش از اسلام) تأسیس شد، نه دوره اسلامی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دوران اسلامی</h3></div>
+<div class="fa"><b>ابن‌سینا (Avicenna):</b> در قانون، به بیماری‌های روانی اشاره کرده و رابطه جسم و روان را توضیح داده است.</div>
+<div class="fa"><b>رازی (Rhazes):</b> بیمارستان‌های روانی در بغداد و ری تأسیس کرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> رازی بیمارستان روانی تأسیس کرد، ابن‌سینا به رابطه جسم و روان پرداخت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دوران معاصر ایران</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>سال</th><th>رویداد</th></tr></thead>
+<tbody>
+<tr><td>۱۲۹۹</td><td>تأسیس اولین تیمارستان در تهران (بیمارستان روان‌پزشکی)</td></tr>
+<tr><td>۱۳۲۵</td><td>تأسیس انجمن بهداشت روانی ایران</td></tr>
+<tr><td>۱۳۳۳</td><td>تأسیس اداره بهداشت روانی در وزارت بهداری</td></tr>
+<tr><td>۱۳۵۰</td><td>تأسیس مدرسه عالی توانبخشی</td></tr>
+<tr><td>۱۳۵۲</td><td>رسمیت کاردرمانی</td></tr>
+<tr><td>۱۳۷۱</td><td>شروع کارشناسی ارشد کاردرمانی</td></tr>
+<tr><td>۱۳۸۷</td><td>شروع دکترای کاردرمانی</td></tr>
+<tr><td>۱۳۹۹</td><td>ادغام سلامت روان در مراقبت‌های اولیه</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> اولین تیمارستان ایران در سال ۱۲۹۹ تأسیس شد. ۱۳۲۵ سال تأسیس انجمن بهداشت روانی است.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: بهداشت روانی vs سلامت روان</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> <b>بهداشت روانی:</b> علم و عمل (فرآیند) / <b>سلامت روان:</b> وضعیت مطلوب (نتیجه).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گزینه‌ای که این دو را مترادف بگیرد، نادرست است.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: تعریف WHO</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی «نبود بیماری» جزء تعریف WHO است.</div>
+<div class="fa"><b>جواب درست:</b> تعریف WHO بر بهزیستی، مقابله با استرس، کار مولد و مشارکت اجتماعی تأکید دارد. «نبود بیماری» جزء این تعریف نیست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سلامت روان فراتر از نبود بیماری است.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: معیار آماری نابهنجاری</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی «نادر بودن = اختلال».</div>
+<div class="fa"><b>جواب درست:</b> نادر بودن به‌تنهایی نشانه اختلال نیست. نابغه بودن هم نادر است اما اختلال نیست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هیچ معیاری به‌تنهایی کافی نیست.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: فیلیپ پینل</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی پینل بنیان‌گذار روان‌کاوی است.</div>
+<div class="fa"><b>جواب درست:</b> پینل بنیان‌گذار درمان اخلاقی است. فروید بنیان‌گذار روان‌کاوی است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پینل اولین کسی بود که با بیماران روانی انسانی رفتار کرد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: فروید</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فروید بنیان‌گذار درمان اخلاقی است.</div>
+<div class="fa"><b>جواب درست:</b> فروید بنیان‌گذار روان‌کاوی است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فروید پدر روان‌درمانی مدرن محسوب می‌شود.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: ابن‌سینا و رازی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ابن‌سینا اولین تیمارستان را تأسیس کرد.</div>
+<div class="fa"><b>جواب درست:</b> رازی بیمارستان‌های روانی تأسیس کرد. ابن‌سینا به رابطه جسم و روان پرداخت.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این دو را با هم اشتباه نگیر.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: جندی‌شاپور</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جندی‌شاپور در دوره اسلامی تأسیس شد.</div>
+<div class="fa"><b>جواب درست:</b> جندی‌شاپور در دوره ساسانیان (پیش از اسلام) تأسیس شد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اولین مرکز درمان بیماران روانی در ایران باستان.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: اولین تیمارستان ایران</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اولین تیمارستان ایران در سال ۱۳۲۵ تأسیس شد.</div>
+<div class="fa"><b>جواب درست:</b> اولین تیمارستان ایران در سال ۱۲۹۹ تأسیس شد. ۱۳۲۵ سال تأسیس انجمن بهداشت روانی است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این دو تاریخ را با هم قاطی نکن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: سه معیار نابهنجاری — کفایت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر معیار به‌تنهایی کافی است.</div>
+<div class="fa"><b>جواب درست:</b> هیچ‌یک از معیارها به‌تنهایی کافی نیست. تشخیص نیازمند مجموعه‌ای از اطلاعات است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گزینه‌هایی که «یک معیار کافی است» را مطرح می‌کنند، نادرست‌اند.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: بهداشت روانی vs روان‌پزشکی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> بهداشت روانی: پیشگیری، ارتقا، درمان — تمرکز بر جامعه. روان‌پزشکی: تشخیص و درمان — تمرکز بر فرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهداشت روانی جامعه‌محور است؛ روان‌پزشکی فردمحور.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل اول — مقدمه و کلیات</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · مشاوره بهداشت روانی · فصل اول: مقدمه و کلیات — بر اساس کتاب بهداشت روانی میلانی‌فر</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"بهداشت روانی به چه معناست؟",options:["فقط درمان بیماری روانی","علم و عمل برای تأمین، حفظ و ارتقای سلامت روان","مترادف سلامت روان","فقط پیشگیری"],answer:1,explanation:"بهداشت روانی = علم و عمل برای تأمین، حفظ و ارتقای سلامت روان افراد و جامعه."},
+{q:"تعریف WHO از سلامت روان بر چه چیزی تأکید دارد؟",options:["نبود بیماری","بهزیستی، مقابله با استرس، کار مولد، مشارکت اجتماعی","فقط درمان","فقط پیشگیری"],answer:1,explanation:"تعریف WHO: بهزیستی + مقابله با استرس + کار مولد + مشارکت اجتماعی."},
+{q:"تفاوت «بهداشت روانی» و «سلامت روان» چیست؟",options:["مترادف هستند","بهداشت روانی علم و عمل؛ سلامت روان وضعیت مطلوب","سلامت روان علم و عمل","هیچ تفاوتی ندارند"],answer:1,explanation:"بهداشت روانی فرآیند است؛ سلامت روان نتیجه."},
+{q:"کدام گزینه جزء سه هدف بهداشت روانی نیست؟",options:["پیشگیری","درمان","ارتقا","تجویز دارو"],answer:3,explanation:"تجویز دارو جزء اهداف بهداشت روانی نیست."},
+{q:"کدام گزینه درباره «مشکل تعریف» بهداشت روانی صحیح است؟",options:["تعریف واحد و مورد توافق همگانی وجود دارد","تفاوت‌های فرهنگی و نظری موجب دشواری تعریف می‌شود","مرز سلامت و اختلال همیشه واضح است","تعریف در طول تاریخ تغییر نکرده است"],answer:1,explanation:"تفاوت‌های فرهنگی و نظری موجب دشواری تعریف می‌شود."},
+{q:"کدام معیار نابهنجاری بر «نادر بودن» تأکید دارد؟",options:["آماری","اجتماعی","بالینی","فرهنگی"],answer:0,explanation:"معیار آماری بر نادر بودن (کم‌فراوانی) تأکید دارد."},
+{q:"کدام معیار نابهنجاری بر «رنج و اختلال در عملکرد» تأکید دارد؟",options:["آماری","اجتماعی","بالینی","ذهنی"],answer:2,explanation:"معیار بالینی بر رنج + اختلال در عملکرد تأکید دارد."},
+{q:"محدودیت معیار آماری چیست؟",options:["نادر بودن همیشه نشانه اختلال است","نابغه بودن هم نادر است اما اختلال نیست","همه اختلالات شایع هستند","هیچ محدودیتی ندارد"],answer:1,explanation:"نابغه بودن هم نادر است اما اختلال نیست."},
+{q:"محدودیت معیار اجتماعی چیست؟",options:["هنجارها مطلق هستند","هنجارها وابسته به فرهنگ و زمان‌اند","همه فرهنگ‌ها یکسان هستند","هیچ محدودیتی ندارد"],answer:1,explanation:"هنجارها وابسته به فرهنگ و زمان‌اند."},
+{q:"کدام گزینه درباره معیارهای نابهنجاری صحیح است؟",options:["هر معیار به‌تنهایی کافی است","هیچ معیاری به‌تنهایی کافی نیست","فقط معیار آماری کافی است","فقط معیار بالینی کافی است"],answer:1,explanation:"هیچ معیاری به‌تنهایی کافی نیست. تشخیص نیازمند مجموعه‌ای از اطلاعات است."},
+{q:"فیلیپ پینل چه اقدامی انجام داد؟",options:["بنیان‌گذاری روان‌کاوی","برداشتن زنجیر از بیماران روانی","تأسیس اولین تیمارستان","تأسیس انجمن بهداشت روانی"],answer:1,explanation:"پینل زنجیر را از بیماران روانی برداشت (درمان اخلاقی)."},
+{q:"فروید چه کسی بود؟",options:["بنیان‌گذار درمان اخلاقی","بنیان‌گذار روان‌کاوی","اصلاح‌گر نظام مراقبت","تأسیس‌کننده جندی‌شاپور"],answer:1,explanation:"فروید بنیان‌گذار روان‌کاوی است."},
+{q:"جندی‌شاپور در کدام دوره تأسیس شد؟",options:["ساسانیان","اسلامی","قاجار","پهلوی"],answer:0,explanation:"جندی‌شاپور در دوره ساسانیان (پیش از اسلام) تأسیس شد."},
+{q:"اولین تیمارستان ایران در چه سالی تأسیس شد؟",options:["۱۲۹۹","۱۳۲۵","۱۳۳۳","۱۳۵۰"],answer:0,explanation:"اولین تیمارستان ایران در سال ۱۲۹۹ تأسیس شد."},
+{q:"انجمن بهداشت روانی ایران در چه سالی تأسیس شد؟",options:["۱۲۹۹","۱۳۲۵","۱۳۳۳","۱۳۵۰"],answer:1,explanation:"انجمن بهداشت روانی ایران در سال ۱۳۲۵ تأسیس شد."},
+{q:"تفاوت «بهداشت روانی» و «روان‌پزشکی» چیست؟",options:["مترادف هستند","بهداشت روانی جامعه‌محور؛ روان‌پزشکی فردمحور","روان‌پزشکی جامعه‌محور","هیچ تفاوتی ندارند"],answer:1,explanation:"بهداشت روانی جامعه‌محور؛ روان‌پزشکی فردمحور."},
+{q:"کدام گزینه درباره «تعریف WHO» صحیح است؟",options:["نبود بیماری جزء تعریف است","بهزیستی، مقابله با استرس، کار مولد، مشارکت اجتماعی","فقط درمان","فقط پیشگیری"],answer:1,explanation:"تعریف WHO: بهزیستی، مقابله با استرس، کار مولد، مشارکت اجتماعی."},
+{q:"کدام گزینه درباره «رازی» صحیح است؟",options:["بنیان‌گذار روان‌کاوی","تأسیس بیمارستان‌های روانی","اولین تیمارستان ایران","انجمن بهداشت روانی"],answer:1,explanation:"رازی بیمارستان‌های روانی تأسیس کرد."},
+{q:"کدام گزینه درباره «ابن‌سینا» صحیح است؟",options:["تأسیس بیمارستان روانی","رابطه جسم و روان","بنیان‌گذار روان‌کاوی","اولین تیمارستان"],answer:1,explanation:"ابن‌سینا به رابطه جسم و روان پرداخت."},
+{q:"کدام گزینه درباره «بهداشت روانی» صحیح است؟",options:["فقط درمان است","شامل پیشگیری، درمان و ارتقا است","مترادف روان‌پزشکی است","فقط برای بیماران است"],answer:1,explanation:"بهداشت روانی شامل پیشگیری، درمان و ارتقا است."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

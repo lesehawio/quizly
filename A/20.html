@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · قیامت: اوصاف و ویژگی‌ها · سری 20</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"20";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>قیامت: اوصاف و ویژگی‌ها · سری 20</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>قیامت: اوصاف و ویژگی‌ها</h2>
+  <p>جزوه جامع امتحانی · تعریف ساده + نکته امتحانی + دام آزمون · ویژه آزمون چهارگزینه‌ای</p>
+  <div class="pills"><span class="pill">۶ بخش</span><span class="pill">۳ نظر معاد</span><span class="pill">۲ نوع معاد</span><span class="pill">۴ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان ساده و برای آمادگی امتحان چهارگزینه‌ای طراحی شده است. هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۶</b><span>بخش اصلی</span></div>
+<div class="stat"><b>۳</b><span>نظر معاد</span></div>
+<div class="stat"><b>۲</b><span>نوع معاد</span></div>
+<div class="stat"><b>۴</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>اشراط الساعه</h3></div>
+<div class="fa"><b>تعریف:</b> نشانه‌ها و علائمی که در آستان قیامت ظاهر می‌شود</div>
+<div class="fa"><b>نمونه‌ها:</b> گسترش ظلم، سستی خانواده، ظهور مهدی (عج)، نزول عیسی (ع)، زلزله، خاموشی خورشید و ماه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عمومیت معاد</h3></div>
+<div class="fa"><b>نکته کلیدی:</b> معاد منحصر به انسان نیست؛ همه مخلوقات بازگشت دارند</div>
+<div class="fa"><b>آیه انعام/۳۸:</b> «وَإِن مِّن دَابَّةٍ فِي الْأَرْضِ وَلَا طَائِرٍ يَطِيرُ بِجَنَاحَيْهِ إِلَّا أُمَمٌ أَمْثَالُكُم... ثُمَّ إِلَىٰ رَبِّهِمْ يُحْشَرُونَ»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه نظر درباره معاد</h3></div>
+<div class="grid2">
+<div class="box"><h4>ماتریالیست‌ها</h4>
+<div class="fa">انکار معاد</div>
+</div>
+<div class="box"><h4>اهل حدیث</h4>
+<div class="fa">فقط معاد جسمانی</div>
+</div>
+<div class="box"><h4>حکما و عرفا</h4>
+<div class="fa">معاد جسمانی و روحانی</div>
+</div>
+<div class="box"><h4>نظر نهایی</h4>
+<div class="fa">انسان مرکب از جسم و روح = هر دو معاد</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت نظام دنیا و آخرت</h3></div>
+<div class="fa"><b>دنیا:</b> دار عمل + زندگی اجتماعی + اسباب ظاهری</div>
+<div class="fa"><b>آخرت:</b> دار جزا + زندگی انفرادی + سقوط اسباب</div>
+<div class="fa"><b>آیه کلیدی:</b> «وَلَقَدْ جِئْتُمُونَا فُرَادَىٰ كَمَا خَلَقْنَاكُمْ أَوَّلَ مَرَّةٍ» (انعام/۹۴)</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>اشراط الساعه</h3></div>
+<div class="fa"><b>تعریف ساده:</b> «اشراط» جمع «شرط» به‌معنای نشانه‌ها و علائمی است که در آستان قیامت ظاهر می‌شود.</div>
+<div class="fa"><b>نشانه‌های قیامت در منابع اسلامی:</b></div>
+<div class="fa">- گسترش تباهی و ظلم و فساد و گناه در زمین</div>
+<div class="fa">- شیوع بی‌انصافی</div>
+<div class="fa">- سستی بنیان خانواده</div>
+<div class="fa">- ظهور حضرت مهدی (عج)</div>
+<div class="fa">- نزول حضرت عیسی (ع)</div>
+<div class="fa">- پدیدارشدن تحولات ژرف در نظام خلقت: زلزله، شکافته شدن دریاها، خاموشی خورشید و ماه و ستارگان، شکافته شدن آسمان‌ها</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اشراط الساعه = نشانه‌های قیامت. اگر سوال پرسید «اشراط الساعه چیست؟» جواب: نشانه‌ها و علائمی که در آستان قیامت ظاهر می‌شود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عمومیت معاد</h3></div>
+<div class="fa"><b>تعریف ساده:</b> معاد و بازگشت به‌سوی خدا منحصر به انسان نیست؛ بلکه هر مخلوقی از آسمان و زمین گرفته و آنچه بین آنهاست و اجل معین دارند، همگی دارای بازگشت و معادند. به این معنا که به همان منبعی بازمی‌گردند که از آنجا آمده‌اند.</div>
+<div class="fa"><b>آیه انعام/۳۸:</b> «وَإِن مِّن دَابَّةٍ فِي الْأَرْضِ وَلَا طَائِرٍ يَطِيرُ بِجَنَاحَيْهِ إِلَّا أُمَمٌ أَمْثَالُكُم مَّا فَرَّطْنَا فِي الْكِتَابِ مِن شَيْءٍ ثُمَّ إِلَىٰ رَبِّهِمْ يُحْشَرُونَ»</div>
+<div class="fa"><b>نظر علامه طباطبائی:</b> علاوه بر حشر انسان، برای حشر حیوانات، موجودات زنده و جمادات یعنی حشر جنبندگان و پرندگان برای این است که آفرینش آنها نیز مانند آفرینش انسان غایت دارد و آن بازگشت و معاد است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عمومیت معاد = همه مخلوقات بازگشت دارند. اگر سوال پرسید «آیا معاد منحصر به انسان است؟» جواب: خیر، همه مخلوقات معاد دارند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرسش از نعمت‌ها در قیامت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> در قرآن و روایات اسلامی مصادیق بسیاری از نعمت‌هایی برشمرده شده که در روز قیامت از آنها پرسش می‌شود، مانند: نعمت جوانی، امنیت، صحت بدن، مال و ثروت.</div>
+<div class="fa"><b>بزرگ‌ترین نعمت:</b> یکی از بزرگ‌ترین نعمت‌هایی که از آن پرسش می‌شود، نعمت «هدایت» است که در رسالت رسول خدا و جانشینان او یعنی ائمه اطهار (ع) تجلی یافته و نیز نعمت ولایت امیرالمؤمنین علی (ع) است.</div>
+<div class="fa"><b>آیه تکاثر/۸:</b> «ثُمَّ لَتُسْأَلُنَّ عَنِ النَّعِيمِ» — بیش از ۲۰ روایت در تفسیر این آیه آورده‌اند که مقصود از نعمت، ولایت علی بن ابی‌طالب (ع) و فرزندان اوست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بزرگ‌ترین نعمت مورد سوال = هدایت و ولایت. اگر سوال پرسید «بزرگ‌ترین نعمتی که در قیامت از آن پرسش می‌شود چیست؟» جواب: هدایت و ولایت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت نظام زندگی دنیا و آخرت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> قیامت دقیقاً تداوم همان زندگی انسان در دنیا نیست؛ بلکه نظام زندگی در قیامت عوض می‌شود و نظام جدیدی از زندگی شکل می‌گیرد.</div>
+<div class="fa"><b>ویژگی‌های آخرت:</b></div>
+<div class="fa">- جهان ابدی است که در آن سعادت خاص و محض یا شقاوت محض برای ساکنانش وجود دارد.</div>
+<div class="fa">- دار جزاست و در آن عمل نیست.</div>
+<div class="fa">- در قیامت اسباب باطل می‌شوند و همه تأثیرات و ارتباطات ساقط می‌گردد.</div>
+<div class="fa"><b>ویژگی‌های دنیا:</b></div>
+<div class="fa">- خانه فنا و زوال است.</div>
+<div class="fa">- دار عمل است و جزا در آن نیست.</div>
+<div class="fa">- اسباب و عوامل خارجی و ظاهری حکم می‌کنند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دنیا = دار عمل / آخرت = دار جزا. اگر سوال پرسید «تفاوت دنیا و آخرت چیست؟» جواب: دنیا دار عمل، آخرت دار جزا.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فردی بودن نظام زندگی در آخرت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> رحلت انسان از دنیا به جهان دیگر درواقع گذر از زندگی اجتماعی و ورود به منزل و نشئه‌ای است که در آن، حیات آدمی انفرادی است، نه اجتماعی.</div>
+<div class="fa">انسان در زندگی انفرادی نیازی به تعاون اجتماعی و مشارکت و یاری گرفتن از دیگری ندارد؛ بلکه سلطنت در آنجا در همه احکام زندگی از آن وجود خود انسان است.</div>
+<div class="fa">انسان در آخرت استخدام و تصرف و زندگی اجتماعی و تعاون ندارد و جز عمل و نتایج حسنات و گناهان او چیز دیگری همراهش نخواهد بود.</div>
+<div class="fa"><b>آیات:</b></div>
+<div class="fa">- مریم/۸۰: «وَنَرِثُهُ مَا يَقُولُ وَيَأْتِينَا فَرْدًا»</div>
+<div class="fa">- انعام/۹۴: «وَلَقَدْ جِئْتُمُونَا فُرَادَىٰ كَمَا خَلَقْنَاكُمْ أَوَّلَ مَرَّةٍ»</div>
+<div class="fa">- ابراهیم/۴۸: «يَوْمَ تُبَدَّلُ الْأَرْضُ غَيْرَ الْأَرْضِ وَالسَّمَاوَاتُ»</div>
+<div class="fa">- نجم/۳۹-۴۱: «وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا سَعَىٰ»</div>
+<div class="fa"><b>نظر علامه طباطبائی:</b> اصل انساب در قیامت از بین نمی‌رود، ولی آثار و کارکردهای آن در آخرت نفی می‌شود و نسب خاصیت خود را از دست می‌دهد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> زندگی در آخرت انفرادی است. اگر سوال پرسید «آیا زندگی در آخرت اجتماعی است؟» جواب: خیر، انفرادی است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شاهدان اعمال</h3></div>
+<div class="fa"><b>تعریف ساده:</b> زندگی در قیامت، زندگی حقیقی و همراه با ادراک، شعور و شهود دقیق و کامل است؛ به‌طوری‌که همه موجودات حتی زمین نیز از شعور و ادراک برخوردار خواهند بود.</div>
+<div class="fa">لذا شاهدان اعمال انسان نه‌تنها همنوعان او بلکه زمین، پیامبران، فرشتگان و... خواهند بود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شاهدان اعمال = زمین + پیامبران + فرشتگان + اعضا و جوارح. اگر سوال پرسید «شاهدان اعمال در قیامت کدامند؟» این موارد را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظرات درباره معاد</h3></div>
+<div class="fa"><b>۱. ماتریالیست‌ها و منکران خدا:</b> به معاد اعتقاد ندارند و حقیقت انسان را جز همین بدن ظاهری و محسوس چیز دیگری نمی‌دانند که با مرگ از بین رفته و نابود می‌شود.</div>
+<div class="fa"><b>۲. عده‌ای از متکلمان و اهل حدیث:</b> تنها به معاد جسمانی معتقدند و می‌گویند: در عالم آخرت جسم انسان زنده شده و لذت یا عذاب جسمانی را می‌چشد.</div>
+<div class="fa"><b>۳. گروه زیادی از حکما، عرفا و متکلمان:</b> مانند ابن‌سینا، غزالی، شیخ مفید، سید مرتضی — به معاد جسمانی و روحانی معتقدند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۳ نظر = ماتریالیست (انکار) + اهل حدیث (جسمانی) + حکما (جسمانی و روحانی). اگر سوال پرسید «نظرات درباره معاد کدامند؟» این سه را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شواهد معاد جسمانی</h3></div>
+<div class="fa"><b>۱. آیه نور/۲۴:</b> «يَوْمَ تَشْهَدُ عَلَيْهِمْ أَلْسِنَتُهُمْ وَأَيْدِيهِمْ وَأَرْجُلُهُم بِمَا كَانُوا يَعْمَلُونَ» — در آن روز که زبان‌ها و دست‌ها و پاهایشان بر ضد آنها به اعمالی که مرتکب می‌شدند گواهی می‌دهد.</div>
+<div class="fa"><b>۲. نهج‌البلاغه:</b> امام علی (ع) می‌فرماید: «و أما اهل المعصية فانزلهم شرّ دار...» — و اما گناه‌کاران را در قیامت در بدترین منزلگاه درآورد، و دست و پای آنها را با غل‌وزنجیر به گردنشان درآویزد.</div>
+<div class="fa"><b>۳. ابن ابی الحدید:</b> شارح بزرگ نهج‌البلاغه می‌گوید: این فرمایش حضرت مربوط به معاد و حشر جسمانی است.</div>
+<div class="fa"><b>۴. شهادت اعضای بدن:</b> آیه نور/۲۴.</div>
+<div class="fa"><b>۵. آیه نساء/۵۶:</b> «كُلَّمَا نَضِجَتْ جُلُودُهُم بَدَّلْنَاهُمْ جُلُودًا غَيْرَهَا لِيَذُوقُوا الْعَذَابَ»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شواهد معاد جسمانی = آیات نور/۲۴ و نساء/۵۶ + نهج‌البلاغه + شهادت اعضا. اگر سوال پرسید «شواهد معاد جسمانی کدامند؟» این موارد را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شواهد معاد روحانی</h3></div>
+<div class="fa"><b>۱. رضایت خدا:</b> امیرالمؤمنین علی (ع) می‌فرماید: «فَأَمَّا أَهْلُ الطَّاعَةَ فَأَثَابَهُم بِجِوَارِهِ» — خداوند اهل اطاعت را در جوار خویش قرار می‌دهد. اهل اطاعت برخلاف اهل عصیان در جوار قرب الهی و رحمت پروردگار جای خواهند گرفت و بدیهی است که مقام قرب الهی بالاترین مقام بوده و با بهشت مادی قابل مقایسه نیست.</div>
+<div class="fa"><b>آیه قمر/۵۵:</b> «إِنَّ الْمُتَّقِينَ فِي جَنَّاتٍ وَهُمْ فِي مَقْعَدِ صِدْقٍ عِندَ مَلِيكٍ مُّقْتَدِرٍ»</div>
+<div class="fa"><b>۲. حسرت و اندوه در قیامت:</b> در روز قیامت عده‌ای در اثر سوء اعمال خود دچار حسرت و ندامت می‌گردند. قرآن کریم یکی از نام‌های معاد را «يَوْمَ الْحَسْرَةِ» بیان فرموده است. آتش ندامت و حسرت، عذاب درونی و معنوی است که تا اعماق دل انسان نفوذ می‌کند. بدیهی است که درک این عذاب نیازمند بعد روحی اوست.</div>
+<div class="fa"><b>۳. آیه همزه/۶-۷:</b> «نَارُ اللَّهِ الْمُوقَدَةُ الَّتِي تَطَّلِعُ عَلَى الْأَفْئِدَةِ» — آتش برافروخته الهی است، آتشی که از دل‌ها سر می‌زند!</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شواهد معاد روحانی = رضایت خدا + حسرت و اندوه + آیه قمر/۵۵ + آیه همزه/۶-۷. اگر سوال پرسید «شواهد معاد روحانی کدامند؟» این موارد را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظر علامه طباطبائی درباره معاد جسمانی و روحانی</h3></div>
+<div class="fa"><b>نظریه ساده:</b> انسان حقیقتی است مرکب از روح و جسم و همین حقیقت از دنیا به سرای آخرت می‌رود و به همین حقیقت با سعادتمند است یا شقی و بدبخت، با ثواب می‌برد و با مجازات خواهد شد.</div>
+<div class="fa">بنابراین در روز قیامت علاوه بر نعمت‌های معنوی و روحانی، لذت‌های جسمانی را به اقتضای طبیعت و سرشت مرکب خود درخواست می‌کند.</div>
+<div class="fa">چنان‌که از جهت عذاب هم پاره‌ای از عذاب‌ها، قلب را آتش می‌زند: «نَارُ اللَّهِ الْمُوقَدَةُ الَّتِي تَطَّلِعُ عَلَى الْأَفْئِدَةِ» و پاره‌ای جسم و بدن را می‌سوزاند، مانند: «كُلَّمَا نَضِجَتْ جُلُودُهُم بَدَّلْنَاهُمْ جُلُودًا غَيْرَهَا لِيَذُوقُوا الْعَذَابَ».</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبائی = انسان مرکب از روح و جسم + معاد جسمانی و روحانی. اگر سوال پرسید «نظر علامه طباطبائی درباره معاد چیست؟» جواب: معاد جسمانی و روحانی.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">هر جفت مفهوم + تفاوت ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>معاد جسمانی vs معاد روحانی</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>معاد جسمانی</th><th>معاد روحانی</th></tr></thead>
+<tbody>
+<tr><td>شواهد</td><td>آیات نور/۲۴ و نساء/۵۶ + نهج‌البلاغه + شهادت اعضا</td><td>رضایت خدا + حسرت و اندوه + قمر/۵۵ + همزه/۶-۷</td></tr>
+<tr><td>نتیجه</td><td>جسم انسان زنده شده و لذت یا عذاب جسمانی را می‌چشد</td><td>روح انسان به مقام قرب الهی می‌رسد یا داعزاب معنوی می‌شود</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هر دو معاد وجود دارد = معاد جسمانی و روحانی. اگر سوال پرسید «آیا معاد جسمانی است یا روحانی؟» جواب: هر دو.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> معاد فقط جسمانی یا فقط روحانی نیست. هر دو با هم هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دنیا vs آخرت</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>دنیا</th><th>آخرت</th></tr></thead>
+<tbody>
+<tr><td>ماهیت</td><td>دار عمل + فنا و زوال</td><td>دار جزا + ابدی</td></tr>
+<tr><td>زندگی</td><td>اجتماعی + با اسباب ظاهری</td><td>انفرادی + سقوط اسباب</td></tr>
+<tr><td>تکلیف</td><td>معنا دارد</td><td>معنا ندارد</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دنیا = عمل / آخرت = جزا. اگر سوال پرسید «تفاوت دنیا و آخرت چیست؟» جواب: دنیا دار عمل، آخرت دار جزا.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظرات درباره معاد</h3></div>
+<table class="compare">
+<thead><tr><th>گروه</th><th>نظر</th></tr></thead>
+<tbody>
+<tr><td>ماتریالیست‌ها</td><td>انکار معاد</td></tr>
+<tr><td>اهل حدیث</td><td>فقط معاد جسمانی</td></tr>
+<tr><td>حکما و عرفا</td><td>معاد جسمانی و روحانی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نظر نهایی = جسمانی و روحانی. اگر سوال پرسید «نظر حکما درباره معاد چیست؟» جواب: معاد جسمانی و روحانی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نعمت‌های مورد سوال vs بزرگ‌ترین نعمت</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> نعمت‌های مورد سوال = جوانی، امنیت، صحت، مال / بزرگ‌ترین نعمت = هدایت و ولایت</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بزرگ‌ترین نعمت = هدایت و ولایت. اگر سوال پرسید «بزرگ‌ترین نعمت مورد سوال در قیامت چیست؟» جواب: هدایت و ولایت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حشر انسان vs حشر حیوانات</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> حشر انسان = با اختیار و تکلیف / حشر حیوانات = برای تحقق غایت آفرینش</div>
+<div class="fa"><b>نظر علامه طباطبائی:</b> علاوه بر حشر انسان، برای حشر حیوانات، موجودات زنده و جمادات یعنی حشر جنبندگان و پرندگان برای این است که آفرینش آنها نیز مانند آفرینش انسان غایت دارد و آن بازگشت و معاد است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حشر حیوانات = غایت آفرینش. اگر سوال پرسید «آیا حیوانات هم محشور می‌شوند؟» جواب: بله.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>زندگی دنیوی vs زندگی اخروی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> زندگی دنیوی = اجتماعی + با تعاون / زندگی اخروی = انفرادی + بدون تعاون</div>
+<div class="fa"><b>آیه کلیدی:</b> «وَلَقَدْ جِئْتُمُونَا فُرَادَىٰ كَمَا خَلَقْنَاكُمْ أَوَّلَ مَرَّةٍ» (انعام/۹۴)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> زندگی اخروی = انفرادی. اگر سوال پرسید «آیا در آخرت زندگی اجتماعی است؟» جواب: خیر، انفرادی است.
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۴ · شخصیت‌ها و نظریه‌پردازان</h2>
+<p class="section-sub">هر شخصیت + نظریه ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>علامه طباطبائی</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و مفسر معاصر</div>
+<div class="fa"><b>نظریه ساده:</b> انسان حقیقتی است مرکب از روح و جسم و همین حقیقت از دنیا به سرای آخرت می‌رود. بنابراین در روز قیامت علاوه بر نعمت‌های معنوی و روحانی، لذت‌های جسمانی را به اقتضای طبیعت و سرشت مرکب خود درخواست می‌کند. همچنین حشر حیوانات و پرندگان برای این است که آفرینش آنها نیز مانند آفرینش انسان غایت دارد و آن بازگشت و معاد است. اصل انساب در قیامت از بین نمی‌رود، ولی آثار و کارکردهای آن در آخرت نفی می‌شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبائی = معاد جسمانی و روحانی + حشر حیوانات + نفی کارکرد انساب در آخرت. اگر سوال پرسید «نظر علامه طباطبائی درباره معاد چیست؟» جواب: معاد جسمانی و روحانی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امام علی (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام اول شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> در نهج‌البلاغه می‌فرماید: «و أما اهل المعصية فانزلهم شرّ دار وغلّ الأبدى إلى الأعناق...» — و اما گناه‌کاران را در قیامت در بدترین منزلگاه درآورد، و دست و پای آنها را با غل‌وزنجیر به گردنشان درآویزد. همچنین: «فَأَمَّا أَهْلُ الطَّاعَةَ فَأَثَابَهُم بِجِوَارِهِ» — خداوند اهل اطاعت را در جوار خویش قرار می‌دهد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام علی = معاد جسمانی (غل و زنجیر) + معاد روحانی (جوار قرب الهی). اگر سوال پرسید «کدام کلام امام علی بر معاد جسمانی دلالت دارد؟» جواب: «و أما اهل المعصية فانزلهم شرّ دار».
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ابن ابی الحدید</h3></div>
+<div class="fa"><b>کی بود:</b> شارح بزرگ نهج‌البلاغه</div>
+<div class="fa"><b>نظریه ساده:</b> می‌گوید: این فرمایش حضرت مربوط به معاد و حشر جسمانی است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ابن ابی الحدید = شارح نهج‌البلاغه + معاد جسمانی. اگر سوال پرسید «چه کسی کلام امام علی را مربوط به معاد جسمانی دانست؟» جواب: ابن ابی الحدید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ابن‌سینا، غزالی، شیخ مفید، سید مرتضی</h3></div>
+<div class="fa"><b>کی بودند:</b> حکما، عرفا و متکلمان</div>
+<div class="fa"><b>نظریه ساده:</b> به معاد جسمانی و روحانی معتقدند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ابن‌سینا، غزالی، شیخ مفید، سید مرتضی = معاد جسمانی و روحانی. اگر سوال پرسید «کدام گروه به معاد جسمانی و روحانی معتقدند؟» جواب: حکما، عرفا و متکلمان.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: اشراط الساعه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اشراط الساعه یعنی قیامت.</div>
+<div class="fa"><b>جواب درست:</b> اشراط الساعه = نشانه‌های قیامت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اشراط الساعه = نشانه‌ها
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: عمومیت معاد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی معاد فقط برای انسان است.</div>
+<div class="fa"><b>جواب درست:</b> معاد عمومیت دارد و شامل همه مخلوقات است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معاد = عمومیت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: بزرگ‌ترین نعمت مورد سوال</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بزرگ‌ترین نعمت مورد سوال «مال» است.</div>
+<div class="fa"><b>جواب درست:</b> هدایت و ولایت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بزرگ‌ترین نعمت = هدایت و ولایت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: تفاوت دنیا و آخرت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دنیا دار جزاست.</div>
+<div class="fa"><b>جواب درست:</b> دنیا دار عمل + آخرت دار جزا</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دنیا = عمل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: فردی بودن زندگی آخرت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی زندگی در آخرت اجتماعی است.</div>
+<div class="fa"><b>جواب درست:</b> زندگی در آخرت انفرادی است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آخرت = انفرادی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: نظرات درباره معاد</h3>
+<div class="fa"><b>دام چیه:</b> نظرات درباره معاد رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ماتریالیست = انکار / اهل حدیث = جسمانی / حکما = جسمانی و روحانی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نظر حکما = جسمانی و روحانی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: معاد جسمانی یا روحانی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی معاد فقط جسمانی یا فقط روحانی است.</div>
+<div class="fa"><b>جواب درست:</b> معاد جسمانی و روحانی (هر دو با هم)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معاد = جسمانی + روحانی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: شواهد معاد جسمانی</h3>
+<div class="fa"><b>دام چیه:</b> شواهد معاد جسمانی و روحانی رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> جسمانی = نور/۲۴ + نساء/۵۶ + نهج‌البلاغه + شهادت اعضا / روحانی = قمر/۵۵ + همزه/۶-۷ + رضایت خدا + حسرت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نور/۲۴ = جسمانی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: آیه انعام/۳۸</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی آیه انعام/۳۸ به موضوع دیگری اشاره دارد.</div>
+<div class="fa"><b>جواب درست:</b> آیه انعام/۳۸ = عمومیت معاد + حشر حیوانات</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> انعام/۳۸ = حشر حیوانات
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: آیه تکاثر/۸</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی آیه تکاثر/۸ به موضوع دیگری اشاره دارد.</div>
+<div class="fa"><b>جواب درست:</b> تکاثر/۸ = پرسش از نعمت‌ها + ولایت علی (ع)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تکاثر/۸ = پرسش از نعمت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: آیه انعام/۹۴</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی آیه انعام/۹۴ به موضوع دیگری اشاره دارد.</div>
+<div class="fa"><b>جواب درست:</b> انعام/۹۴ = فردی بودن زندگی آخرت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> انعام/۹۴ = فردی بودن
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: علامه طباطبائی و انساب</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی انساب در قیامت کاملاً از بین می‌رود.</div>
+<div class="fa"><b>جواب درست:</b> اصل انساب باقی است، ولی کارکردهای آن نفی می‌شود</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> انساب = اصل باقی، کارکرد نفی
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 20 · قیامت: اوصاف و ویژگی‌ها · جزوه جامع امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"اشراط الساعه به چه معناست؟",options:["نشانه‌های قیامت","قیامت","برزخ","معاد"],answer:0,explanation:"اشراط الساعه = نشانه‌های قیامت."},
+{q:"کدام یک از نشانه‌های قیامت است؟",options:["گسترش ظلم","ظهور مهدی (عج)","نزول عیسی (ع)","همه موارد"],answer:3,explanation:"همه موارد = نشانه‌های قیامت."},
+{q:"آیه انعام/۳۸ به چه اشاره دارد؟",options:["عمومیت معاد","معاد جسمانی","معاد روحانی","برزخ"],answer:0,explanation:"انعام/۳۸ = عمومیت معاد."},
+{q:"آیه «وَإِن مِّن دَابَّةٍ فِي الْأَرْضِ... إِلَّا أُمَمٌ أَمْثَالُكُم» به چه اشاره دارد؟",options:["حشر حیوانات","معاد جسمانی","برزخ","تناسخ"],answer:0,explanation:"این آیه = حشر حیوانات."},
+{q:"بزرگ‌ترین نعمت مورد سوال در قیامت چیست؟",options:["مال","جوانی","هدایت و ولایت","امنیت"],answer:2,explanation:"بزرگ‌ترین نعمت = هدایت و ولایت."},
+{q:"آیه تکاثر/۸ به چه اشاره دارد؟",options:["پرسش از نعمت‌ها","معاد جسمانی","برزخ","عمومیت معاد"],answer:0,explanation:"تکاثر/۸ = پرسش از نعمت‌ها."},
+{q:"تفاوت دنیا و آخرت چیست؟",options:["دنیا دار عمل + آخرت دار جزا","دنیا دار جزا + آخرت دار عمل","هر دو دار عمل","هر دو دار جزا"],answer:0,explanation:"دنیا = عمل / آخرت = جزا."},
+{q:"زندگی در آخرت چگونه است؟",options:["اجتماعی","انفرادی","مشترک","تعاونی"],answer:1,explanation:"زندگی در آخرت انفرادی است."},
+{q:"آیه انعام/۹۴ به چه اشاره دارد؟",options:["فردی بودن زندگی آخرت","معاد جسمانی","برزخ","تناسخ"],answer:0,explanation:"انعام/۹۴ = فردی بودن زندگی آخرت."},
+{q:"نظر ماتریالیست‌ها درباره معاد چیست؟",options:["انکار معاد","معاد جسمانی","معاد روحانی","معاد جسمانی و روحانی"],answer:0,explanation:"ماتریالیست‌ها = انکار معاد."},
+{q:"نظر اهل حدیث درباره معاد چیست؟",options:["انکار معاد","فقط معاد جسمانی","فقط معاد روحانی","معاد جسمانی و روحانی"],answer:1,explanation:"اهل حدیث = فقط معاد جسمانی."},
+{q:"نظر حکما درباره معاد چیست؟",options:["انکار معاد","فقط معاد جسمانی","فقط معاد روحانی","معاد جسمانی و روحانی"],answer:3,explanation:"حکما = معاد جسمانی و روحانی."},
+{q:"آیه نور/۲۴ به چه اشاره دارد؟",options:["معاد جسمانی (شهادت اعضا)","معاد روحانی","برزخ","تناسخ"],answer:0,explanation:"نور/۲۴ = معاد جسمانی."},
+{q:"آیه قمر/۵۵ به چه اشاره دارد؟",options:["معاد جسمانی","معاد روحانی","برزخ","تناسخ"],answer:1,explanation:"قمر/۵۵ = معاد روحانی."},
+{q:"آیه همزه/۶-۷ به چه اشاره دارد؟",options:["معاد جسمانی","معاد روحانی (آتش دل‌ها)","برزخ","تناسخ"],answer:1,explanation:"همزه/۶-۷ = معاد روحانی."},
+{q:"آیه نساء/۵۶ به چه اشاره دارد؟",options:["معاد جسمانی (سوختن پوست)","معاد روحانی","برزخ","تناسخ"],answer:0,explanation:"نساء/۵۶ = معاد جسمانی."},
+{q:"نظر علامه طباطبائی درباره معاد چیست؟",options:["فقط جسمانی","فقط روحانی","جسمانی و روحانی","انکار"],answer:2,explanation:"علامه طباطبائی = معاد جسمانی و روحانی."},
+{q:"آیه «وَلَقَدْ جِئْتُمُونَا فُرَادَىٰ» به چه اشاره دارد؟",options:["فردی بودن زندگی آخرت","معاد جسمانی","برزخ","تناسخ"],answer:0,explanation:"این آیه = فردی بودن زندگی آخرت."},
+{q:"شاهدان اعمال در قیامت کدامند؟",options:["زمین","پیامبران","فرشتگان","همه موارد"],answer:3,explanation:"شاهدان اعمال = زمین + پیامبران + فرشتگان + اعضا و جوارح."},
+{q:"نظر ابن ابی الحدید درباره کلام امام علی چیست؟",options:["معاد جسمانی","معاد روحانی","برزخ","تناسخ"],answer:0,explanation:"ابن ابی الحدید = معاد جسمانی."},
+{q:"«یوم الحسرة» چه روزی است؟",options:["روز حسرت و اندوه","روز شادی","روز قیامت","روز برزخ"],answer:0,explanation:"یوم الحسرة = روز حسرت و اندوه."},
+{q:"نظر علامه طباطبائی درباره انساب در قیامت چیست؟",options:["کاملاً از بین می‌رود","اصل باقی است، کارکرد نفی می‌شود","باقی است","هیچ‌کدام"],answer:1,explanation:"علامه طباطبائی = اصل انساب باقی، کارکرد نفی."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

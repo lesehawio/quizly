@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>Quizly · ورزش ۱ · کلید واژه‌های طلایی</title>
+<style>
+:root{
+  --bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+  --line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;
+  --green:#1f9d73;--yellow:#c98112;--red:#c83b58;
+  --shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme="dark"]{
+  --bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;
+  --line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;color:var(--ink);
+  background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);
+  transition:.25s
+}
+[data-theme="dark"] body{
+  background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)
+}
+.app{max-width:1180px;margin:auto;padding:16px}
+
+/* HEADER */
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px}
+.logo-icon{
+  width:54px;height:54px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.3);border:1px solid rgba(249,71,121,.25);
+  box-shadow:0 10px 30px rgba(249,71,121,.15);overflow:hidden
+}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.brand h1{margin:0;font-size:20px}
+.brand small{display:block;color:var(--muted);font-size:11px}
+button{
+  border:1px solid var(--line);background:var(--surface);color:var(--ink);
+  padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;min-height:44px;transition:.15s
+}
+button:hover{border-color:var(--pink);transform:translateY(-1px)}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);
+  padding:32px 22px;border-radius:28px;color:white;box-shadow:var(--shadow)
+}
+.hero:after{
+  content:"SPORT";position:absolute;left:-15px;bottom:-42px;
+  font-size:120px;font-weight:900;opacity:.08;line-height:1
+}
+.hero h2{margin:0;font-size:29px;position:relative;z-index:1}
+.hero p{margin:7px 0 16px;max-width:700px;opacity:.95;position:relative;z-index:1}
+.pills{display:flex;flex-wrap:wrap;gap:7px;position:relative;z-index:1}
+.pill{
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+  padding:5px 11px;border-radius:99px;font-size:12px
+}
+
+/* NOTICE */
+.notice{
+  margin:16px 0;background:var(--surface);border:1px solid var(--line);
+  border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;
+  color:var(--muted);font-size:14px
+}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}
+.stat span{font-size:12px;color:var(--muted)}
+
+/* NAV */
+nav{
+  position:sticky;top:6px;z-index:10;display:flex;gap:6px;overflow-x:auto;
+  background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;
+  border:1px solid var(--line);border-radius:18px;margin:14px 0;scrollbar-width:none
+}
+nav::-webkit-scrollbar{display:none}
+[data-theme="dark"] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px}
+nav a:hover{background:var(--soft);color:var(--pink)}
+
+/* SECTION */
+.section{margin-top:32px;scroll-margin-top:80px}
+.section-title{font-size:22px;margin-bottom:3px}
+.section-sub{color:var(--muted);margin-top:0;font-size:13px}
+
+/* CARD */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card h3{margin-top:0}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:500px}
+th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:right;font-size:13px}
+th{color:var(--pink);background:var(--surface2)}
+tr:hover td{background:var(--soft)}
+
+/* GRID */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:13px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+
+/* KEYWORD */
+.keyword{
+  display:inline-block;background:var(--soft);border:1px solid var(--line);
+  border-radius:10px;padding:4px 10px;margin:3px;font-size:12px
+}
+
+/* ALERT */
+.trap{border-right:6px solid var(--yellow)}
+.trap strong{color:var(--yellow)}
+.exam{border-right:6px solid var(--pink)}
+.good{border-right:6px solid var(--green)}
+
+/* MEMORY */
+.memory{
+  background:linear-gradient(135deg,var(--surface),var(--surface2));
+  border:1px dashed var(--pink);border-radius:18px;padding:14px;margin-top:12px
+}
+.memory b{color:var(--pink)}
+
+/* SEARCH */
+.search{
+  width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);
+  background:var(--surface);color:var(--ink);font:inherit;font-size:15px;margin:10px 0
+}
+
+/* HIGHLIGHT */
+.highlight{background:#fff0cc;color:#946000;padding:2px 6px;border-radius:6px;font-weight:bold}
+
+/* FOOTER */
+.footer{padding:25px 0;color:var(--muted);text-align:center;font-size:12px}
+
+/* MOBILE */
+@media(min-width:520px){
+  .app{padding:20px}
+  .hero{padding:38px 28px}
+  .hero h2{font-size:34px}
+  .stats{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:520px){
+  .grid2{grid-template-columns:1fr}
+  .hero h2{font-size:24px}
+  .hero{padding:25px 17px}
+}
+@media(max-width:380px){
+  .app{padding:10px}
+  .hero{padding:22px 14px}
+  .hero h2{font-size:22px}
+  .card{padding:12px}
+  .section-title{font-size:20px}
+  .stat b{font-size:20px}
+  .brand h1{font-size:18px}
+  .logo-icon{width:44px;height:44px}
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+<!-- HEADER -->
+<header>
+  <div class="brand">
+    <div class="logo-icon">
+      <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly">
+    </div>
+    <div>
+      <h1>Quizly</h1>
+      <small>جزوه هوشمند · ورزش ۱</small>
+    </div>
+  </div>
+  <button id="theme">تم شب</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>ورزش ۱ — کلید واژه‌های طلایی</h2>
+  <p>تمام نکات امتحانی، اعداد کلیدی، آیات، تفاوت‌ها و دام‌های پرتکرار در یک جزوه‌ی کامل و بدون تکرار.</p>
+  <div class="pills">
+    <span class="pill">۹ فصل</span>
+    <span class="pill">کلید واژه‌ها</span>
+    <span class="pill">اعداد طلایی</span>
+    <span class="pill">دام‌ها</span>
+    <span class="pill">مرور سریع</span>
+  </div>
+</section>
+
+<!-- NOTICE -->
+<div class="notice">
+  <b>راهنمای مطالعه:</b> اگر وقت کم داری، اول «اعداد طلایی» و «نکته طلایی» رو مرور کن، بعد جدول‌های هر فصل.
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><b>۹</b><span>فصل</span></div>
+  <div class="stat"><b>۲۰۰+</b><span>کلید واژه</span></div>
+  <div class="stat"><b>۴۳</b><span>عدد طلایی</span></div>
+  <div class="stat"><b>۳۰+</b><span>دام امتحانی</span></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#ch1">فصل ۱</a>
+  <a href="#ch2">فصل ۲</a>
+  <a href="#ch3">فصل ۳</a>
+  <a href="#ch4">فصل ۴</a>
+  <a href="#ch5">فصل ۵</a>
+  <a href="#ch6">فصل ۶</a>
+  <a href="#ch7">فصل ۷</a>
+  <a href="#ch8">فصل ۸</a>
+  <a href="#ch9">فصل ۹</a>
+  <a href="#numbers">اعداد</a>
+  <a href="#golden">نکته طلایی</a>
+</nav>
+
+<!-- SEARCH -->
+<div class="card">
+  <input id="search" class="search" placeholder="🔍 جستجو در کلید واژه‌ها...">
+</div>
+
+<!-- فصل ۱ -->
+<section id="ch1" class="section">
+  <h2 class="section-title">فصل ۱ · مبانی و منابع تربیت بدنی</h2>
+  <p class="section-sub">پایه‌های تربیت بدنی و منابع شکل‌گیری آن</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>هدف نهایی در جوامع اسلامی</td><td>کمال و تعالی + سیر الی‌الله</td></tr>
+          <tr><td>سه منبع اصلی تربیت بدنی</td><td>علوم پایه + تعلیم و تربیت انسانی + میراث و فرهنگ اجتماعی</td></tr>
+          <tr><td>مردم‌شناسی</td><td>میراث و فرهنگ اجتماعی (علوم انسانی)</td></tr>
+          <tr><td>علوم پایه</td><td>زیست‌شناسی + کالبدشناسی + فیزیولوژی + علم حرکت</td></tr>
+          <tr><td>میراث و فرهنگ اجتماعی</td><td>جامعه‌شناسی + روان‌شناسی + مردم‌شناسی</td></tr>
+          <tr><td>آموزش اصول صحیح حرکات</td><td>نشستن + ایستادن + راه رفتن</td></tr>
+          <tr><td>رابطه سه منبع</td><td>همبستگی + تغییرناپذیر + مستحکم + متقابل + جدایی‌ناپذیر</td></tr>
+          <tr><td>انسان و اجتماع</td><td>موجودی اجتماعی — نمی‌تواند جدا زندگی کند</td></tr>
+          <tr><td>مبانی تربیت بدنی</td><td>تربیتی + اخلاقی + اعتقادی + فیزیولوژیکی + روانی-اجتماعی</td></tr>
+          <tr><td>ورزش و جامعه</td><td>ورزش آینه‌ی جامعه — معیارها از جامعه میاد</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۲ -->
+<section id="ch2" class="section">
+  <h2 class="section-title">فصل ۲ · تأثیر ورزش در رفتار اجتماعی و فردی</h2>
+  <p class="section-sub">ورزش چطور روی رفتار اجتماعی و فردی ما اثر می‌ذاره</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>اجتماعی شدن</td><td>فرآیند جانشینی ارزش‌های گروهی به جای ارزش‌های فردی</td></tr>
+          <tr><td>۶ ویژگی اجتماعی</td><td>بروز شخصیت اجتماعی + احترام به قوانین + قضاوت اجتماعی + توانایی ارتباط + احساس مسئولیت + احیای حس مسئولیت</td></tr>
+          <tr><td>۶ ویژگی روانی/فردی</td><td>رفع خستگی فکری + قدرت ابتکار + استعداد رهبری + وظیفه‌شناسی + پرورش قوای ذهنی + مبارزه با بی‌حوصلگی</td></tr>
+          <tr><td>بازی برای کودکان</td><td>آموزش رعایت مقررات و قراردادهای اجتماعی</td></tr>
+          <tr><td>روح و جسم</td><td>دو بعد جدایی‌ناپذیر — تغییر یکی = تغییر دیگری</td></tr>
+          <tr><td>ورزشکاران (تحقیقات)</td><td>صفات شایسته‌تر: اتکا به نفس + از خودگذشتگی</td></tr>
+          <tr><td>تغییرات اجتماعی ورزش</td><td>بستگی به فرهنگ جامعه + شخصیت فرد</td></tr>
+          <tr><td>وظیفه‌شناسی در ورزش</td><td>یادگیری اصل تقسیم کار</td></tr>
+          <tr><td>احساس مسئولیت‌پذیری</td><td>مسئول بودن در قبال دیگران</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۳ -->
+<section id="ch3" class="section">
+  <h2 class="section-title">فصل ۳ · ورزش و سلامت جسمانی</h2>
+  <p class="section-sub">قلب، عروق، چاقی و تأثیر ورزش بر آن‌ها</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>سکته قلبی</td><td>انسداد رگ کرونر به خاطر رسوب چربی</td></tr>
+          <tr><td>خون‌رسانی به عضله قلب</td><td>عروق کرونر</td></tr>
+          <tr><td>بطن چپ</td><td>پمپ خون به تمام بافت‌های بدن</td></tr>
+          <tr><td>فشار خون طبیعی</td><td>۱۲۰ میلی‌متر جیوه (۱۲)</td></tr>
+          <tr><td>حد چاقی (فصل ۳)</td><td>زنان > ۲۵٪ + مردان > ۱۵٪</td></tr>
+          <tr><td>حد چاقی (فصل ۱)</td><td>زنان > ۳۰٪ + مردان > ۲۰٪</td></tr>
+          <tr><td>علل چاقی</td><td>پرخوری + بی‌تحرکی + اختلال تیروئید</td></tr>
+          <tr><td>تصلب شرائین</td><td>سفت شدن رگ‌ها به خاطر رسوب کلسترول</td></tr>
+          <tr><td>سه عامل تهدید قلب</td><td>چاقی + غذاهای چرب + دخانیات</td></tr>
+          <tr><td>مستعدترین به چاقی</td><td>مردان ۵۰ ساله</td></tr>
+          <tr><td>خانم‌های مستعد چاقی</td><td>بارداری + یائسگی</td></tr>
+          <tr><td>رژیم بدون ورزش</td><td>محکوم به شکست + ۲۵٪ کاهش وزن از عضله</td></tr>
+          <tr><td>کاهش وزن ایده‌آل</td><td>۰/۵ تا ۱ کیلوگرم در هفته</td></tr>
+          <tr><td>هدف برنامه کاهش وزن</td><td>کاهش درصد چربی</td></tr>
+          <tr><td>سیگار و فشار خون</td><td>هر نخ = ۱ میلی‌متر جیوه افزایش فشار خون</td></tr>
+          <tr><td>ورزش مؤثر بر قلب</td><td>ورزش‌های استقامتی (هوازی)</td></tr>
+          <tr><td>ورزش قدرتی برای میانسالان</td><td>اثر منفی روی سیستم قلبی</td></tr>
+          <tr><td>بهترین ورزش کنترل وزن</td><td>دونرم</td></tr>
+          <tr><td>مویرگ افراد فعال</td><td>۵ تا ۷ مویرگ برای هر تار عضلانی</td></tr>
+          <tr><td>مویرگ افراد غیرفعال</td><td>۳ تا ۴ مویرگ</td></tr>
+          <tr><td>نیاز عضله به خون</td><td>تا ۱۰۰ برابر زمان استراحت</td></tr>
+          <tr><td>تنش عصبی</td><td>آدرنالین + کورتیزول افزایش می‌یابند</td></tr>
+          <tr><td>بهترین راه کاهش تنش</td><td>فعالیت‌های ورزشی نرم و سبک</td></tr>
+          <tr><td>ناراحتی عصبی vs بیماری عصبی</td><td>ناراحتی = خفیف + ممکنه مقدمه بیماری باشه</td></tr>
+          <tr><td>ورزش و سیگار در افراد عادی</td><td>ورزش باعث کاهش سیگار نمی‌شه</td></tr>
+          <tr><td>ورزش و کاهش وزن (افراد چاق)</td><td>ممکنه اول وزن اضافه کنن (چربی → عضله)</td></tr>
+          <tr><td>شبکه مویرگی</td><td>افزایش تحرک عضو = افزایش شبکه مویرگی</td></tr>
+          <tr><td>سرخرگ کاروتید</td><td>خون‌رسانی به مغز و گردن</td></tr>
+          <tr><td>سرخرگ آئورت</td><td>کرونرها از آن منشعب می‌شوند</td></tr>
+          <tr><td>سرخرگ ریوی</td><td>خون کم‌اکسیژن به ریه</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۴ -->
+<section id="ch4" class="section">
+  <h2 class="section-title">فصل ۴ · ورزش شنا</h2>
+  <p class="section-sub">انواع شنا و نکات کلیدی کرال سینه</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>سریع‌ترین شنا</td><td>کرال سینه</td></tr>
+          <tr><td>مناسب مبتدیان</td><td>کرال سینه</td></tr>
+          <tr><td>انواع شنا</td><td>کرال سینه + کرال پشت + قورباغه + پروانه + پهلو (۵ نوع)</td></tr>
+          <tr><td>مهم‌ترین اصل یادگیری شنا</td><td>نفس‌گیری</td></tr>
+          <tr><td>هماهنگی نفس‌گیری</td><td>با حرکت دست‌ها</td></tr>
+          <tr><td>دریافت هوا در شنا</td><td>فقط از دهان</td></tr>
+          <tr><td>بازدم در شنا</td><td>از دهان و بینی</td></tr>
+          <tr><td>ترتیب ورود دست به آب</td><td>انگشتان ← مچ ← آرنج ← بازو ← کتف</td></tr>
+          <tr><td>منشأ حرکت پا</td><td>مفصل لگن</td></tr>
+          <tr><td>فاصله پاها در آب (فصل ۴)</td><td>۲۵ سانتی‌متر</td></tr>
+          <tr><td>فاصله پاها در آب (فصل ۹)</td><td>۲۰ تا ۲۵ سانتی‌متر</td></tr>
+          <tr><td>تعداد ضربات پا</td><td>۲، ۴ یا ۶ ضربه</td></tr>
+          <tr><td>وضعیت زانو هنگام بالا آمدن</td><td>اندکی تمایل به بیرون</td></tr>
+          <tr><td>وضعیت پنجه پا</td><td>به طرف داخل نزدیک هم و کشیده</td></tr>
+          <tr><td>اثر شنا بر عضلات</td><td>خارج شدن از حالت سفتی یا شلی</td></tr>
+          <tr><td>اثر شنا بر مفاصل</td><td>جنبش‌پذیری بیشتر</td></tr>
+          <tr><td>اثر شنا بر قلب و تنفس</td><td>افزایش بازده قلب و دستگاه تنفسی</td></tr>
+          <tr><td>شنا و اوقات فراغت</td><td>از کودکی تا پیری</td></tr>
+          <tr><td>شنا (جایگاه)</td><td>ورزش پایه و مادر + انفرادی</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۵ -->
+<section id="ch5" class="section">
+  <h2 class="section-title">فصل ۵ · ورزش والیبال</h2>
+  <p class="section-sub">مهارت‌ها و مقررات والیبال</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>اولین ضربه والیبال</td><td>سرویس</td></tr>
+          <tr><td>محل سرویس</td><td>راست و عقب زمین + خارج از خط انتهایی</td></tr>
+          <tr><td>سرویس با چه چیزی</td><td>مشت یا کف دست</td></tr>
+          <tr><td>انواع سرویس</td><td>از پایین + روبه‌رو + پهلو</td></tr>
+          <tr><td>پاس والیبال</td><td>ارسال توپ به هم‌تیمی</td></tr>
+          <tr><td>پاس پنجه</td><td>دو مرحله: دریافت + ارسال</td></tr>
+          <tr><td>مثلث در پاس پنجه</td><td>شست + سبابه</td></tr>
+          <tr><td>پاس ساعد</td><td>برای توپ‌های کوتاه، کم‌ارتفاع و سنگین</td></tr>
+          <tr><td>توپ در پاس ساعد</td><td>بین دو دست، پایین‌تر از آرنج</td></tr>
+          <tr><td>آبشار</td><td>تکنیک تهاجمی + با کف و پاشنه دست</td></tr>
+          <tr><td>دفاع والیبال</td><td>دو نوع: روی تور + در زمین</td></tr>
+          <tr><td>دفاع روی تور</td><td>یک‌نفری، دو‌نفری یا سه‌نفری</td></tr>
+          <tr><td>توپ‌گیری از جلو</td><td>با ساعد</td></tr>
+          <tr><td>توپ‌گیری در پهلو</td><td>با کف دست و مشت</td></tr>
+          <tr><td>تعداد بازیکنان والیبال</td><td>۶ نفر اصلی + ۶ نفر ذخیره</td></tr>
+          <tr><td>چرخش والیبال</td><td>موافق عقربه‌های ساعت</td></tr>
+          <tr><td>کِی چرخش</td><td>وقتی تیم مقابل توپ/سرویس را از دست بده</td></tr>
+          <tr><td>امتیاز بردن والیبال</td><td>۱۵ امتیاز</td></tr>
+          <tr><td>ارتفاع تور مردان</td><td>۲۴۳ سانتی‌متر</td></tr>
+          <tr><td>ارتفاع تور زنان</td><td>۲۲۴ سانتی‌متر</td></tr>
+          <tr><td>تأثیرات جسمانی والیبال</td><td>سرعت حرکت + سرعت عکس‌العمل + قدرت پرش + چابکی</td></tr>
+          <tr><td>تأثیرات اجتماعی والیبال</td><td>همکاری + تعاون + نوع‌دوستی</td></tr>
+          <tr><td>هدف دفاع روی تور</td><td>مهار توپ + جلوگیری از سقوط در زمین خودی</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۶ -->
+<section id="ch6" class="section">
+  <h2 class="section-title">فصل ۶ · ورزش فوتبال</h2>
+  <p class="section-sub">مهارت‌ها و قوانین فوتبال</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>مهارت‌های اساسی فوتبال</td><td>پاس دادن + شوت زدن + هد زدن</td></tr>
+          <tr><td>۶ مهارت اساسی</td><td>شوت + مهار + پاس + ضربه + دربیل + هد</td></tr>
+          <tr><td>ضربه آزاد مستقیم</td><td>توپ مستقیم وارد دروازه</td></tr>
+          <tr><td>ضربه آزاد غیرمستقیم</td><td>توپ با بازیکن دیگه تماس پیدا می‌کنه</td></tr>
+          <tr><td>ضربه با کدام ناحیه پا</td><td>روی پا</td></tr>
+          <tr><td>فاصله پای تکیه‌گاه</td><td>حداکثر ۳ یا ۴ سانتی‌متر</td></tr>
+          <tr><td>کنترل توپ</td><td>با تمام بدن به جز دست‌ها</td></tr>
+          <tr><td>کنترل توپ با کدام ناحیه</td><td>روی ران + روی پا (عمومیت بیشتر)</td></tr>
+          <tr><td>کنترل توپ — حرکت عضو</td><td>عضو کمی به عقب کشیده می‌شه</td></tr>
+          <tr><td>دربیل</td><td>ضربه‌های آهسته و متوالی + توپ نزدیک بازیکن</td></tr>
+          <tr><td>پاس دادن</td><td>ارتباط بین بازیکنان + به تعویق انداختن خستگی</td></tr>
+          <tr><td>نشانه‌گیری پاس</td><td>نشانه‌گیری + سرعت + دقت</td></tr>
+          <tr><td>هد زدن</td><td>با ناحیه پیشانی</td></tr>
+          <tr><td>انواع هد</td><td>روی زمین + در حال پرش</td></tr>
+          <tr><td>نکته هد همراه پرش</td><td>وقت‌شناسی + هماهنگی زمان پرش با توپ</td></tr>
+          <tr><td>پرتاب اوت</td><td>دو دست + هر دو پا روی زمین + توپ از عقب و روی سر</td></tr>
+          <tr><td>پنالتی فوتبال</td><td>۱۱ متری خط دروازه</td></tr>
+          <tr><td>محوطه جریمه</td><td>۱۶/۵ متر از تیر دروازه</td></tr>
+          <tr><td>قوس پشت محوطه</td><td>شعاع ۹/۱۵ متر</td></tr>
+          <tr><td>زمین فوتبال</td><td>۱۱۰ × ۷۵ متر</td></tr>
+          <tr><td>تعداد بازیکنان فوتبال</td><td>۲ تیم ۱۱ نفره</td></tr>
+          <tr><td>زمان بازی فوتبال</td><td>دو نیمه ۴۵ دقیقه</td></tr>
+          <tr><td>استراحت بین دو نیمه (فصل ۶)</td><td>۱۰ دقیقه</td></tr>
+          <tr><td>استراحت بین دو نیمه (فصل‌های قبلی)</td><td>۱۵ دقیقه</td></tr>
+          <tr><td>خطاهای فوتبال</td><td>لگد + پریدن + تنه + پشت پا + نگه داشتن + هل دادن + لمس با دست</td></tr>
+          <tr><td>فقط کی با دست</td><td>دروازه‌بان</td></tr>
+          <tr><td>کنترل توپ با کف پا</td><td>عمومیت بیشتر در فوتبال</td></tr>
+          <tr><td>کشش داخلی ران</td><td>فوتبال (پیشگیری از کشیدگی کشاله ران)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۷ -->
+<section id="ch7" class="section">
+  <h2 class="section-title">فصل ۷ · ورزش بسکتبال</h2>
+  <p class="section-sub">مهارت‌ها و مقررات بسکتبال</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>مهارت‌های اصلی بسکتبال</td><td>دربیبل + پاس + شوت</td></tr>
+          <tr><td>دربیبل</td><td>زدن توپ به زمین با یک دست و تکرار</td></tr>
+          <tr><td>دربیبل کوتاه</td><td>فاصله دست و زمین < ۷۰ سانتی‌متر + برای حفظ توپ هنگام محاصره</td></tr>
+          <tr><td>دربیبل بلند</td><td>فاصله بیشتر + برای سرعت و مسافت زیاد</td></tr>
+          <tr><td>پاس بسکتبال</td><td>مبادله توپ بین دو بازیکن خودی</td></tr>
+          <tr><td>پاس زمینی</td><td>برای نفوذ در دفاع + توپ مورب به زمین</td></tr>
+          <tr><td>پاس سینه دو دست</td><td>پرکاربردترین + فواصل ۵ تا ۶ متر</td></tr>
+          <tr><td>پاس دو دستی بالای سر</td><td>بازی ساکن و نشسته + افراد قدبلند + مطمئن‌ترین پاس</td></tr>
+          <tr><td>پاس بیسبالی</td><td>مسافت‌های زیاد + یک دست</td></tr>
+          <tr><td>شوت دو دستی از سینه</td><td>مبتدیان + کاربرد کم در ماهرها</td></tr>
+          <tr><td>شوت هوک</td><td>چرخش روی پای چپ + رهاسازی با دست راست + دور از دسترس دفاع</td></tr>
+          <tr><td>تعداد بازیکنان بسکتبال</td><td>۵ نفر اصلی + ۵ تا ۷ ذخیره</td></tr>
+          <tr><td>زمان بازی بسکتبال</td><td>دو وقت ۲۰ دقیقه‌ای (۴۰ دقیقه)</td></tr>
+          <tr><td>استراحت بین دو وقت</td><td>۱۰ دقیقه</td></tr>
+          <tr><td>پرتاب آزاد</td><td>۱ امتیاز</td></tr>
+          <tr><td>شوت داخل قوس</td><td>۲ امتیاز</td></tr>
+          <tr><td>شوت خارج قوس</td><td>۳ امتیاز</td></tr>
+          <tr><td>زمین بسکتبال</td><td>۲۸ × ۱۵ متر</td></tr>
+          <tr><td>قطر دایره وسط</td><td>۱/۸ متر</td></tr>
+          <tr><td>طول ذوزنقه</td><td>۵/۸۰ متر</td></tr>
+          <tr><td>توقف در ذوزنقه</td><td>بیش از ۳ ثانیه ممنوع</td></tr>
+          <tr><td>خط‌کشی دور زمین</td><td>۵ سانتی‌متر</td></tr>
+          <tr><td>تأثیرات بسکتبال</td><td>استقامت عمومی + قلب و عروق + سرعت + دقت + هماهنگی + روحیه تهاجمی</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۸ -->
+<section id="ch8" class="section">
+  <h2 class="section-title">فصل ۸ · ورزش تنیس روی میز</h2>
+  <p class="section-sub">مهارت‌ها و مقررات تنیس روی میز</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>انفرادی و دوبل</td><td>تنیس روی میز (تنها رشته با هر دو)</td></tr>
+          <tr><td>روش مدادی</td><td>چین و ژاپن + مثل قلم</td></tr>
+          <tr><td>روش شست و سبابه</td><td>مثل گیره + حرکات سریع‌تر</td></tr>
+          <tr><td>۵ مهارت رایج</td><td>راکت‌گیری + پیچش + فورهند + بک‌هند + لوپ</td></tr>
+          <tr><td>پیچش در توپ</td><td>چرخش بالا + چرخش پایین (کات)</td></tr>
+          <tr><td>چرخش بالا</td><td>از پایین به بالا + مهاجم</td></tr>
+          <tr><td>کات</td><td>چرخش از بالا به پایین</td></tr>
+          <tr><td>فورهند</td><td>مقدماتی‌ترین مهارت + با رویه راکت</td></tr>
+          <tr><td>فورهند — پای راست</td><td>عقب‌تر از پای چپ</td></tr>
+          <tr><td>فورهند — انتقال وزن</td><td>روی پای چپ</td></tr>
+          <tr><td>بک‌هند</td><td>با پشت راکت + چرخش کمتر + آرنج مقابل بدن</td></tr>
+          <tr><td>لوپ</td><td>مهم‌ترین ضربه حمله‌ای</td></tr>
+          <tr><td>درایو لوپ</td><td>ارتفاع کم + سرعت پیچ زیاد</td></tr>
+          <tr><td>های لوپ</td><td>سرعت کم + ارتفاع پیچ زیاد</td></tr>
+          <tr><td>ارتفاع میز</td><td>۷۶ سانتی‌متر</td></tr>
+          <tr><td>طول میز</td><td>۲۷۴ سانتی‌متر</td></tr>
+          <tr><td>عرض میز</td><td>۱۵۲/۵ سانتی‌متر</td></tr>
+          <tr><td>ارتفاع تور (فصل ۵ قدیم)</td><td>۱۷/۵ سانتی‌متر</td></tr>
+          <tr><td>ارتفاع تور (فصل ۸)</td><td>۱۵ سانتی‌متر</td></tr>
+          <tr><td>خط‌کشی اطراف میز</td><td>۳ سانتی‌متر</td></tr>
+          <tr><td>گیم</td><td>۲۱ امتیاز</td></tr>
+          <tr><td>در ۲۰ مساوی</td><td>تا ۲ امتیاز فاصله ادامه</td></tr>
+          <tr><td>سرویس متوالی</td><td>هر بازیکن ۵ سرویس</td></tr>
+          <tr><td>خطاهای تنیس روی میز</td><td>برخورد دوبار توپ + ضربه دوبار + حرکت میز + ضربه قبل از برخورد</td></tr>
+          <tr><td>تأثیرات تنیس روی میز</td><td>سرعت حرکت + سرعت عکس‌العمل + دقت + هماهنگی چشم و دست + ارتباط اعصاب و عضلات (ناحیه فوقانی)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۹ -->
+<section id="ch9" class="section">
+  <h2 class="section-title">فصل ۹ · کسب آمادگی جسمانی</h2>
+  <p class="section-sub">گرم کردن، سرد کردن، انعطاف‌پذیری و آزمون‌ها</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>گرم کردن</td><td>دو نرم + حرکات کششی + نرمش</td></tr>
+          <tr><td>مزایای گرم کردن</td><td>افزایش خون و اکسیژن + افزایش سرعت انقباض + کاهش صدمات</td></tr>
+          <tr><td>نظر استراند</td><td>۲ تا ۵ درصد بهبود رکورد</td></tr>
+          <tr><td>مراحل گرم کردن</td><td>دویدن نرم ← کششی ← نرمشی ← فعالیت اختصاصی</td></tr>
+          <tr><td>مدت مرحله نرمشی</td><td>۵ تا ۱۰ دقیقه</td></tr>
+          <tr><td>آخرین مرحله گرم کردن</td><td>فعالیت اختصاصی رشته</td></tr>
+          <tr><td>سرد کردن</td><td>جلوگیری از جمع شدن خون + کاهش اسید لاکتیک</td></tr>
+          <tr><td>انعطاف‌پذیری</td><td>کشیده شدن عضلات و تاندون‌ها + دامنه حرکتی بیشتر</td></tr>
+          <tr><td>بیشترین مقاومت در انعطاف</td><td>کپسول مفصلی + بافت‌های عضله</td></tr>
+          <tr><td>کشش استاتیک</td><td>بدون حرکت + امن + توصیه‌شده</td></tr>
+          <tr><td>کشش بالستیک</td><td>تکان/ضربه + خطرناک + توصیه نمی‌شه</td></tr>
+          <tr><td>کشش PNF</td><td>کشش + انقباض + انبساط + ریلکس</td></tr>
+          <tr><td>PNF — زمان</td><td>۵ تا ۱۰ ثانیه کشش + ۵ تا ۱۰ ثانیه آزادسازی</td></tr>
+          <tr><td>افزایش انعطاف (فصل ۹)</td><td>۳ جلسه در هفته</td></tr>
+          <tr><td>حفظ انعطاف (فصل ۹)</td><td>۱ تا ۲ جلسه در هفته</td></tr>
+          <tr><td>افزایش انعطاف (فصل‌های قبلی)</td><td>۵ جلسه در هفته</td></tr>
+          <tr><td>حفظ انعطاف (فصل‌های قبلی)</td><td>۳ جلسه در هفته</td></tr>
+          <tr><td>حرکات کششی ایستا</td><td>۱۰ تا ۳۰ ثانیه حفظ + حداقل ۵ تکرار</td></tr>
+          <tr><td>تمرینات آمادگی جسمانی</td><td>بدون وسیله + یک‌نفره</td></tr>
+          <tr><td>۴ هدف تمرینات</td><td>شانه و بازو + شکم و پایین تنه + چابکی + استقامت قلبی-ریوی</td></tr>
+          <tr><td>فارتلیک</td><td>دوهای سریع و آهسته متناوب + هوازی + بدون اندازه‌گیری دقیق زمان</td></tr>
+          <tr><td>آزمون بارفیکس</td><td>استقامت کمربند شانه و بازو</td></tr>
+          <tr><td>آزمون دراز و نشست</td><td>استقامت عضلات شکم</td></tr>
+          <tr><td>آزمون دو ۳۶ متر</td><td>چابکی</td></tr>
+          <tr><td>آزمون دو ۴۵ متر</td><td>سرعت</td></tr>
+          <tr><td>آزمون دو ۵۴۸ متر</td><td>استقامت (آقایان)</td></tr>
+          <tr><td>آزمون دو ۴۵۸ متر</td><td>استقامت (خانم‌ها)</td></tr>
+          <tr><td>آزمون پرش طول جفتی</td><td>نیروی عضلات پا</td></tr>
+          <tr><td>آزمون انعطاف خانم‌ها</td><td>با سکو یا صندلی و خط‌کش مدرج</td></tr>
+          <tr><td>کشش داخلی ران</td><td>فوتبال (کشاله ران)</td></tr>
+          <tr><td>کشش خارجی ران</td><td>دوندگان مسافت طولانی</td></tr>
+          <tr><td>کشش شانه</td><td>بدمینتون + تنیس + شنا + والیبال + هندبال</td></tr>
+          <tr><td>کشش پشت ران</td><td>تکواندو</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- اعداد طلایی -->
+<section id="numbers" class="section">
+  <h2 class="section-title">🎯 اعداد طلایی (بدون تکرار)</h2>
+  <p class="section-sub">هر عددی که در آزمون میاد، یک‌جا</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>عدد</th><th>معنی</th></tr></thead>
+        <tbody>
+          <tr><td>۱۱ متر</td><td>پنالتی فوتبال</td></tr>
+          <tr><td>۱۶/۵ متر</td><td>محوطه جریمه</td></tr>
+          <tr><td>۹/۱۵ متر</td><td>قوس پشت محوطه</td></tr>
+          <tr><td>۱۱۰ × ۷۵</td><td>زمین فوتبال</td></tr>
+          <tr><td>۲۸ × ۱۵</td><td>زمین بسکتبال</td></tr>
+          <tr><td>۱۸ × ۹</td><td>زمین والیبال</td></tr>
+          <tr><td>۱/۸ متر</td><td>قطر دایره وسط بسکتبال</td></tr>
+          <tr><td>۵/۸۰ متر</td><td>طول ذوزنقه بسکتبال</td></tr>
+          <tr><td>۲۷۴ سانتی‌متر</td><td>طول میز پینگ‌پنگ</td></tr>
+          <tr><td>۱۵۲/۵ سانتی‌متر</td><td>عرض میز پینگ‌پنگ</td></tr>
+          <tr><td>۷۶ سانتی‌متر</td><td>ارتفاع میز پینگ‌پنگ</td></tr>
+          <tr><td>۱۵ سانتی‌متر</td><td>ارتفاع تور پینگ‌پنگ (فصل ۸)</td></tr>
+          <tr><td>۱۷/۵ سانتی‌متر</td><td>ارتفاع تور پینگ‌پنگ (فصل ۵ قدیم)</td></tr>
+          <tr><td>۲۴۳ سانتی‌متر</td><td>تور والیبال آقایان</td></tr>
+          <tr><td>۲۲۴ سانتی‌متر</td><td>تور والیبال خانم‌ها</td></tr>
+          <tr><td>۷۰ سانتی‌متر</td><td>دربیبل کوتاه</td></tr>
+          <tr><td>۵ تا ۶ متر</td><td>پاس سینه</td></tr>
+          <tr><td>۵ تا ۷ نفر</td><td>ذخیره بسکتبال</td></tr>
+          <tr><td>۶ نفر</td><td>ذخیره والیبال / بازیکن اصلی والیبال</td></tr>
+          <tr><td>۵ نفر</td><td>بازیکن اصلی بسکتبال</td></tr>
+          <tr><td>۱۱ نفر</td><td>بازیکن اصلی فوتبال</td></tr>
+          <tr><td>۱۵ امتیاز</td><td>بردن ست والیبال</td></tr>
+          <tr><td>۲۱ امتیاز</td><td>گیم پینگ‌پنگ</td></tr>
+          <tr><td>۱ امتیاز</td><td>پرتاب آزاد</td></tr>
+          <tr><td>۲ امتیاز</td><td>شوت داخل قوس</td></tr>
+          <tr><td>۳ امتیاز</td><td>شوت خارج قوس</td></tr>
+          <tr><td>۲۵٪</td><td>کاهش وزن رژیمی از عضله</td></tr>
+          <tr><td>۰/۵ تا ۱ کیلوگرم</td><td>کاهش وزن ایده‌آل هفتگی</td></tr>
+          <tr><td>۲۰٪ / ۳۰٪</td><td>حد چربی مردان/زنان (فصل ۱)</td></tr>
+          <tr><td>۲۵٪ / ۱۵٪</td><td>حد چاقی زنان/مردان (فصل ۳)</td></tr>
+          <tr><td>۳ تا ۴</td><td>مویرگ هر تار عضلانی</td></tr>
+          <tr><td>۵ تا ۷</td><td>مویرگ افراد فعال</td></tr>
+          <tr><td>۱۰۰ برابر</td><td>نیاز عضله به خون</td></tr>
+          <tr><td>۲ تا ۵ درصد</td><td>نظر استراند</td></tr>
+          <tr><td>۳ جلسه</td><td>افزایش انعطاف (فصل ۹)</td></tr>
+          <tr><td>۱-۲ جلسه</td><td>حفظ انعطاف (فصل ۹)</td></tr>
+          <tr><td>۵ جلسه</td><td>افزایش انعطاف (فصل‌های قبلی)</td></tr>
+          <tr><td>۳ جلسه</td><td>حفظ انعطاف (فصل‌های قبلی)</td></tr>
+          <tr><td>۵ تا ۱۰ دقیقه</td><td>مدت گرم کردن</td></tr>
+          <tr><td>۱۰ تا ۳۰ ثانیه</td><td>حفظ کشش ایستا</td></tr>
+          <tr><td>۵ تکرار</td><td>حداقل تکرار کششی</td></tr>
+          <tr><td>۵۴۸ متر</td><td>دو استقامت آقایان</td></tr>
+          <tr><td>۴۵۸ متر</td><td>دو استقامت خانم‌ها</td></tr>
+          <tr><td>۳۶ متر</td><td>دو چابکی</td></tr>
+          <tr><td>۴۵ متر</td><td>دو سرعت</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- نکته طلایی -->
+<section id="golden" class="section">
+  <h2 class="section-title">⚡ نکته طلایی برای امتحان</h2>
+  <p class="section-sub">هر جا این کلمه رو دیدی، بلافاصله جواب رو بزن</p>
+  <div class="card">
+    <div class="grid2">
+      <div class="box"><h4>«سریع‌ترین»</h4>کرال سینه</div>
+      <div class="box"><h4>«مقدماتی‌ترین»</h4>فورهند</div>
+      <div class="box"><h4>«مهم‌ترین حمله‌ای»</h4>لوپ</div>
+      <div class="box"><h4>«مطمئن‌ترین»</h4>پاس دو دستی بالای سر</div>
+      <div class="box"><h4>«پرکاربردترین»</h4>پاس سینه</div>
+      <div class="box"><h4>«نفوذ در دفاع»</h4>پاس زمینی</div>
+      <div class="box"><h4>«مبتدی»</h4>شوت دو دستی از سینه</div>
+      <div class="box"><h4>«محاصره»</h4>دربیبل کوتاه</div>
+      <div class="box"><h4>«مسافت زیاد»</h4>پاس بیسبالی</div>
+      <div class="box"><h4>«قدبلند»</h4>پاس بالای سر</div>
+      <div class="box"><h4>«ساکن و نشسته»</h4>پاس بالای سر</div>
+      <div class="box"><h4>«فشار خون»</h4>آدرنالین</div>
+      <div class="box"><h4>«قلب»</h4>استقامتی</div>
+      <div class="box"><h4>«کشاله ران»</h4>فوتبال</div>
+      <div class="box"><h4>«پشت ران»</h4>تکواندو</div>
+      <div class="box"><h4>«خارجی ران»</h4>دوندگان مسافت طولانی</div>
+      <div class="box"><h4>«شانه»</h4>بدمینتون، تنیس، شنا، والیبال، هندبال</div>
+      <div class="box"><h4>«چین و ژاپن»</h4>روش مدادی</div>
+      <div class="box"><h4>«مثل قلم»</h4>روش مدادی</div>
+      <div class="box"><h4>«مثل گیره»</h4>روش شست و سبابه</div>
+      <div class="box"><h4>«۷۰ سانتی‌متر»</h4>دربیبل کوتاه</div>
+      <div class="box"><h4>«۱۱ متر»</h4>پنالتی فوتبال</div>
+      <div class="box"><h4>«۱۶/۵ متر»</h4>محوطه جریمه</div>
+      <div class="box"><h4>«۲۸ × ۱۵»</h4>بسکتبال</div>
+      <div class="box"><h4>«۱۸ × ۹»</h4>والیبال</div>
+      <div class="box"><h4>«۱۱۰ × ۷۵»</h4>فوتبال</div>
+      <div class="box"><h4>«۲۴۳»</h4>تور والیبال آقایان</div>
+      <div class="box"><h4>«۲۲۴»</h4>تور والیبال خانم‌ها</div>
+      <div class="box"><h4>«۲۱»</h4>گیم پینگ‌پنگ</div>
+      <div class="box"><h4>«۱۵»</h4>امتیاز ست والیبال</div>
+      <div class="box"><h4>«۱ امتیاز»</h4>پرتاب آزاد</div>
+      <div class="box"><h4>«۲ امتیاز»</h4>شوت داخل قوس</div>
+      <div class="box"><h4>«۳ امتیاز»</h4>شوت خارج قوس</div>
+      <div class="box"><h4>«مردم‌شناسی»</h4>علوم انسانی</div>
+      <div class="box"><h4>«هدف نهایی تربیت بدنی»</h4>کمال + سیر الی‌الله</div>
+      <div class="box"><h4>«سه منبع»</h4>علوم پایه + تعلیم و تربیت + میراث فرهنگی</div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  Quizly · ورزش ۱ · کلید واژه‌های طلایی · نسخه‌ی نهایی و بدون تکرار
+</div>
+
+</div>
+
+<script>
+// THEME
+const themeBtn = document.getElementById("theme");
+themeBtn.onclick = () => {
+  const dark = document.documentElement.dataset.theme === "dark";
+  document.documentElement.dataset.theme = dark ? "" : "dark";
+  themeBtn.textContent = dark ? "تم شب" : "تم روز";
+};
+
+// SEARCH
+const searchInput = document.getElementById("search");
+searchInput.addEventListener("input", (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll("tbody tr").forEach(tr => {
+    const text = tr.innerText.toLowerCase();
+    tr.style.display = (!q || text.includes(q)) ? "" : "none";
+  });
+});
+</script>
+
+</body>
+</html>

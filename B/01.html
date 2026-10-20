@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · ورزش ۱ · سری 01</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"01";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>ورزش ۱ · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>ورزش ۱ (تربیت بدنی)</h2>
+  <p>تحلیل کامل ۲۰ سوال سری اول امتحان پیام نور ـ نیمسال اول ۱۴۰۳ـ۱۴۰۲ (کد درس ۱۲۱۵۴۲۸ ـ ۱۲۱۵۴۳۰ ـ ۱۲۱۵۴۳۲)</p>
+  <div class="pills"><span class="pill">۲۰ سوال</span><span class="pill">۸ دسته موضوعی</span><span class="pill">۲۷ مفهوم کلیدی</span><span class="pill">۱۸ عدد طلایی</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر پایه‌ی ۲۰ سوال تستی سری اول (نیمسال اول ۱۴۰۳ـ۱۴۰۲) و نکات کلیدی فصل‌های ۱ تا ۹ کتاب نوشته شده است. <b>توجه:</b> در فایل اسکن‌شده، پاسخنامه‌ی رسمی این سری وجود نداشت؛ پاسخ‌ها بر اساس متن کتاب و نکات کلیدی فصل‌ها تحلیل شده‌اند، پس برای اطمینان نهایی یک بار با کلید استاد تطبیق بده.</div>
+
+<div class="stats">
+<div class="stat"><b>۲۰</b><span>سوال</span></div>
+<div class="stat"><b>۸</b><span>دسته موضوعی</span></div>
+<div class="stat"><b>۲۷</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۱۱</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#numbers">اعداد طلایی</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">۰۱ · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، رشته‌ها...">
+
+<div id="questionList">
+
+<div class="card question" data-search="شنا نفس گیری اصول یادگیری موفقیت">
+<span class="qnum">سوال ۱</span>
+<div class="fa"><b>متن سوال:</b> یکی از مهم‌ترین اصول یادگیری و موفقیت در شنا چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نفس‌گیری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در شنا، نفس‌گیری صحیح و ریتمیک پایه‌ی همه‌ی مهارت‌هاست؛ شناگری که نفس‌گیری را درست یاد نگیرد، خیلی زود خسته می‌شود و هماهنگی دست و پایش به‌هم می‌ریزد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۲) هماهنگی: لازم است، ولی خودش نتیجه‌ی نفس‌گیری درست است، نه اصل اول.<br>
+- ۳) نحوه پا زدن: یک جزء تکنیک است، نه مهم‌ترین اصل یادگیری.<br>
+- ۴) نحوه دست زدن: همانند پا زدن، جزء تکنیک است و بدون نفس‌گیری کار نمی‌کند.<br>
+<b>نکته کلیدی:</b> نفس‌گیری = کلید موفقیت در شنا
+</div>
+</div>
+
+<div class="card question" data-search="فار تلک فارتلک دویدن تناوبی آمادگی">
+<span class="qnum">سوال ۲</span>
+<div class="fa"><b>متن سوال:</b> منظور از دویدن به روش فارتلک چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دویدن سریع و آهسته به‌طور تناوبی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فارتلک (Fartlek) روش سوئدی «بازی با سرعت» است: دویدن با سرعت‌های متفاوت که تند و آرام به‌صورت تناوبی و پیوسته پشت سر هم انجام می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) دویدن: کلی و بی‌معنا؛ روش فارتلک نوع خاصی از دویدن است.<br>
+- ۲) جاکینگ: دویدن آرام و یکنواخت (بیشتر در گرم کردن)، نه تناوب تند و آرام.<br>
+- ۴) دویدن سریع با فاصله استراحتی: این تعریف تمرین تناوبی (اینتروال) با استراحت غیرفعال است.<br>
+<b>نکته کلیدی:</b> فارتلک = تند و آرام، پشت سر هم
+</div>
+</div>
+
+<div class="card question" data-search="تنیس روی میز راکت گیری مدادی چین ژاپن">
+<span class="qnum">سوال ۳</span>
+<div class="fa"><b>متن سوال:</b> روش مدادی راکت‌گیری در تنیس روی میز بیشتر در چه کشورهایی متداول است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">چین و ژاپن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راکت‌گیری مدادی (قلمی) روش سنتی شرق آسیاست و در چین، ژاپن و کره رواج دارد؛ در این روش راکت مثل قلم در دست گرفته می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) ایران، ۳) سوئد و ۴) استرالیا: در این کشورها روش «دست‌دادن» (shaking hand) رایج است.<br>
+<b>نکته کلیدی:</b> مدادی = چین و ژاپن
+</div>
+</div>
+
+<div class="card question" data-search="بسکتبال یار ذخیره تعویض بازیکنان">
+<span class="qnum">سوال ۴</span>
+<div class="fa"><b>متن سوال:</b> در بازی بسکتبال هر تیم از چند یار ذخیره برای تعویض بازیکنان اصلی استفاده می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۵ تا ۷ نفر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هر تیم بسکتبال ۵ بازیکن اصلی دارد و برای تعویض، از ۵ تا ۷ یار ذخیره استفاده می‌کند؛ این عدد در کتاب صریحاً آمده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) ۶ نفر: عدد بازیکنان اصلی والیبال است، نه ذخیره‌های بسکتبال.<br>
+- ۲) ۳ تا ۵ نفر و ۳) ۷ تا ۹ نفر: اعدادی هستند که در کتاب برای یار ذخیره بسکتبال نیامده‌اند.<br>
+<b>نکته کلیدی:</b> ۵ اصلی + ۵ تا ۷ ذخیره
+</div>
+</div>
+
+<div class="card question" data-search="دریبل کوتاه بسکتبال فاصله دست زمین">
+<span class="qnum">سوال ۵</span>
+<div class="fa"><b>متن سوال:</b> در دریبل کوتاه بسکتبال فاصله‌ی دست زننده‌ی توپ و زمین چقدر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کمتر از ۷۰ سانتی‌متر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دریبل کوتاه برای حفظ توپ و در زمانی است که حریف بازیکن را محاصره کرده؛ در این حالت توپ نزدیک بدن و با فاصله‌ی کمتر از ۷۰ سانتی‌متر از زمین زده می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) ۵۰ سانتی‌متر: عدد کتاب نیست.<br>
+- ۳) بیشتر از یک متر و ۴) ۹۰ سانتی‌متر: این‌ها مشخصات دریبل بلند هستند که برای سرعت و طی مسافت زیاد به کار می‌رود.<br>
+<b>نکته کلیدی:</b> دریبل کوتاه = کمتر از ۷۰ سانتی‌متر
+</div>
+</div>
+
+<div class="card question" data-search="کرال سینه چرخش پا مفصل لگن">
+<span class="qnum">سوال ۶</span>
+<div class="fa"><b>متن سوال:</b> حرکت چرخشی پا در کرال سینه بیشتر در کدام مفصل صورت می‌گیرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">لگن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در کرال سینه پاها از مفصل لگن و به‌صورت کشیده بالا و پایین می‌روند؛ زانو فقط کمی خم می‌شود و منشأ نیرو لگن است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) انگشتان و ۲) مچ: نقشی در تولید نیروی ضربه ندارند؛ پا کشیده و پنجه باز است.<br>
+- ۳) زانو: مفصل انتقال نیرو است، نه محل اصلی چرخش.<br>
+<b>نکته کلیدی:</b> منشأ حرکت پا = لگن
+</div>
+</div>
+
+<div class="card question" data-search="آدرنالین هورمون فشار خون ایمنی">
+<span class="qnum">سوال ۷</span>
+<div class="fa"><b>متن سوال:</b> افزایش غلظت کدام هورمون در بدن، خطر ایمنی و افزایش فشار خون را در بر دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آدرنالین</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آدرنالین (اپی‌نفرین) هورمون «جنگ و گریز» است؛ ترشح زیاد آن ضربان قلب و فشار خون را بالا می‌برد و برای ایمنی بدن خطرناک است. (هر نخ سیگار هم فشار خون را حدود ۱۰ میلی‌متر جیوه بالا می‌برد.)<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) تیروکسین: متابولیسم را بالا می‌برد، ولی عامل اصلی افزایش فشار خون نیست.<br>
+- ۳) هورمون رشد: بر رشد و ترمیم بافت اثر دارد.<br>
+- ۴) انسولین: قند خون را کاهش می‌دهد و ربطی به افزایش فشار خون ندارد.<br>
+<b>نکته کلیدی:</b> آدرنالین = فشار خون بالا
+</div>
+</div>
+
+<div class="card question" data-search="تکواندو کشش پشت ران همسترینگ">
+<span class="qnum">سوال ۸</span>
+<div class="fa"><b>متن سوال:</b> در ورزش تکواندو قبل از اجرای تمرین، کدام گروه عضلانی را حتماً باید تحت کشش قرار داد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پشت ران</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تکواندو پر از ضربه‌های بلند و سریع پاست؛ عضلات پشت ران (همسترینگ) در این ضربه‌ها بیشترین کشیدگی را تحمل می‌کنند و باید قبل از تمرین کشش داده شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) کمر و ۲) مچ دست: در تکواندو گروه‌های درگیر اصلی نیستند.<br>
+- ۴) مچ پا: گرم کردنش لازم است، ولی خطر اصلی کشیدگی، عضلات پشت ران است.<br>
+<b>نکته کلیدی:</b> تکواندو = کشش پشت ران
+</div>
+</div>
+
+<div class="card question" data-search="فوتبال پنالتی ۱۱ متر دروازه">
+<span class="qnum">سوال ۹</span>
+<div class="fa"><b>متن سوال:</b> فاصله‌ی نقطه‌ی پنالتی از دروازه‌ی فوتبال چند متر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۱۱ متر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نقطه‌ی پنالتی روی خط فرضی ۱۱ متری از خط دروازه و عمود بر وسط دروازه قرار دارد؛ اگر بازیکن در محوطه‌ی جریمه خطا کند (از جمله هل دادن)، داور ضربه‌ی پنالتی اعلام می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) ۶ متر، ۳) ۱۶ متر و ۴) ۱۸ متر: هیچ‌کدام اندازه‌ی استاندارد زمین فوتبال نیستند.<br>
+<b>نکته کلیدی:</b> پنالتی = ۱۱ متر
+</div>
+</div>
+
+<div class="card question" data-search="فوتبال مهارت اساسی پاس شوت هد">
+<span class="qnum">سوال ۱۰</span>
+<div class="fa"><b>متن سوال:</b> کدام یک از موارد زیر جزو مهارت‌های اساسی فوتبال محسوب می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پاس دادن، شوت زدن، هد زدن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کتاب سه مهارت اساسی فوتبال را پاس دادن، شوت زدن و هد زدن می‌داند؛ بازی فوتبال روی همین سه پایه می‌چرخد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) پاس دادن، دفاع، مهار کردن: دفاع و مهار کردن مهارت‌های دفاعی‌اند، نه اساسی.<br>
+- ۲) ریباند کردن: اصطلاحی در بسکتبال است و به فوتبال مربوط نیست.<br>
+- ۴) پاس دادن، هد زدن، دفاع: جای شوت زدن را دفاع گرفته، در حالی که شوت مهارت اساسی است.<br>
+<b>نکته کلیدی:</b> پاس + شوت + هد
+</div>
+</div>
+
+<div class="card question" data-search="کشش داخلی ران کشاله فوتبال">
+<span class="qnum">سوال ۱۱</span>
+<div class="fa"><b>متن سوال:</b> کدام‌یک از رشته‌های ورزشی زیر برای جلوگیری از کشیدگی عضله‌ی ران، حتماً باید قبل از تمرین عضلات ناحیه‌ی داخلی ران را کشش داد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فوتبال</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بیشترین آسیب عضلانی فوتبال، کشیدگی عضلات ناحیه‌ی کشاله‌ی ران (داخلی ران) است؛ چون در شوت و تغییر مسیر همین عضلات بیشترین فشار را می‌بینند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) شنا، ۲) بدمینتون و ۳) بسکتبال: در این رشته‌ها تأکید کتاب بر کشش ناحیه‌ی شانه است (بدمینتون، تنیس، شنا، والیبال و هندبال).<br>
+<b>نکته کلیدی:</b> داخلی ران = فوتبال
+</div>
+</div>
+
+<div class="card question" data-search="کنترل توپ استقبال مهار فوتبال">
+<span class="qnum">سوال ۱۲</span>
+<div class="fa"><b>متن سوال:</b> مهم‌ترین نکته‌ای که در کنترل توپ باید مدنظر گرفت چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">به استقبال توپ رفتن و بلافاصله مهار آن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصل طلایی کنترل توپ این است که بازیکن به سمت توپ حرکت کند (استقبال) و در همان لحظه آن را مهار کند؛ انتظار کشیدن برای رسیدن توپ، بهترین فرصت را از بین می‌برد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) به عقب کشیدن خود همراه با حرکت توپ: باعث می‌شود توپ به حریف برسد.<br>
+- ۲) ضربه زدن به‌محض برخورد توپ: کنترل را از بین می‌برد و توپ دور می‌شود.<br>
+- ۴) ضربه‌های آهسته و متوالی: این تعریف دریبل است، نه کنترل توپ.<br>
+<b>نکته کلیدی:</b> برو به استقبال توپ
+</div>
+</div>
+
+<div class="card question" data-search="اعصاب آوران وابران دستگاه عصبی">
+<span class="qnum">سوال ۱۳</span>
+<div class="fa"><b>متن سوال:</b> اعصابی که پیام‌ها را از محیط به دستگاه مرکزی ارسال می‌کنند چه نام دارند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اعصاب آوران</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اعصاب آوران (حسی) پیام‌های محیط را به دستگاه عصبی مرکزی می‌برند و اعصاب وابران (حرکتی) فرمان را از مرکز به عضلات می‌رسانند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۲) اعصاب وابران: مسیرشان برعکس است؛ از مرکز به محیط.<br>
+- ۳) اعصاب پیکری و ۴) اعصاب حرکتی: دسته‌بندی‌های دیگری از دستگاه عصبی‌اند و تعریف سوال نیستند.<br>
+<b>نکته کلیدی:</b> آوران = به مرکز (حسی)
+</div>
+</div>
+
+<div class="card question" data-search="کاهش وزن نیم تا یک کیلوگرم هفته چاقی">
+<span class="qnum">سوال ۱۴</span>
+<div class="fa"><b>متن سوال:</b> برنامه‌ی کاهش وزن ایده‌آل بهتر است به گونه‌ای باشد که چند کیلوگرم لاغری را در یک هفته داشته باشد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نیم تا یک کیلوگرم</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کاهش وزن ایمن و ایده‌آل، نیم تا یک کیلوگرم در هفته است؛ کاهش سریع‌تر باعث از دست رفتن آب و بافت عضلانی می‌شود و دوام ندارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) ۱ تا ۲ کیلوگرم، ۲) یک و نیم کیلوگرم و ۳) ۲ کیلوگرم: سرعت‌های پرخطر که در کتاب توصیه نشده‌اند؛ حدود ۲۵ درصد کاهش وزنی که فقط با محدود کردن رژیم غذایی به دست می‌آید، در اثر ضایعات بافت عضلانی است.<br>
+<b>نکته کلیدی:</b> ۰/۵ تا ۱ کیلوگرم در هفته
+</div>
+</div>
+
+<div class="card question" data-search="تنیس روی میز فورهند بک هند روی راکت">
+<span class="qnum">سوال ۱۵</span>
+<div class="fa"><b>متن سوال:</b> در کدام‌یک از تکنیک‌های تنیس روی میز ضربه تنها با روی راکت زده می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فورهند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در فورهند توپ با «روی» راکت (سمت کف دست) زده می‌شود؛ در بک‌هند از پشت راکت استفاده می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) بک هند: ضربه با پشت راکت زده می‌شود.<br>
+- ۳) لوب و ۴) کات: تکنیک‌های چرخشی‌اند و محدود به یک سمت راکت نیستند.<br>
+<b>نکته کلیدی:</b> فورهند = روی راکت
+</div>
+</div>
+
+<div class="card question" data-search="کنترل وزن شنا چاقی مناسب ترین ورزش">
+<span class="qnum">سوال ۱۶</span>
+<div class="fa"><b>متن سوال:</b> مهم‌ترین ورزش برای کنترل وزن بدن کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شنا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شنا همه‌ی گروه‌های عضلانی را همزمان درگیر می‌کند و انرژی زیادی مصرف می‌کند؛ به همین دلیل در کتاب به‌عنوان مناسب‌ترین ورزش برای کاهش و کنترل وزن معرفی شده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) قایقرانی، ۳) پیاده‌روی و ۴) دوی نرم: همه مفیدند، ولی کتاب شنا را مناسب‌ترین روش می‌داند.<br>
+<b>نکته کلیدی:</b> شنا = مناسب‌ترین ورزش کنترل وزن
+</div>
+</div>
+
+<div class="card question" data-search="بسکتبال پرتاب آزاد امتیاز">
+<span class="qnum">سوال ۱۷</span>
+<div class="fa"><b>متن سوال:</b> پرتاب آزاد در بسکتبال چند امتیاز دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۱ امتیاز</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هر پرتاب آزاد در بسکتبال ۱ امتیاز دارد؛ شوت از داخل قوس ۲ امتیاز و از خارج قوس ۳ امتیاز.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) ۳ و ۳) ۲: مربوط به شوت‌های سه‌امتیازی و دوامتیازی هستند.<br>
+- ۴) در اسکن، گزینه‌های ۳ و ۴ هر دو «۲» خوانده شدند (خطای ریزچاپی)؛ گزینه‌ی درست همان «۱ امتیاز» است.<br>
+<b>نکته کلیدی:</b> پرتاب آزاد = ۱ امتیاز
+</div>
+</div>
+
+<div class="card question" data-search="تنیس روی میز کات چرخش بالا پایین">
+<span class="qnum">سوال ۱۸</span>
+<div class="fa"><b>متن سوال:</b> در کدام تکنیک تنیس روی میز توپ از طرف بالا به پایین چرخش دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در ضربه‌ی کات (و سرویس کات) چرخش پیچ توپ از بالا به طرف پایین است؛ در درایو و درایولوپ چرخش رو به جلو و ارتفاع توپ کم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) درایو: چرخش رو به جلو با ارتفاع کم و سرعت پیچ زیاد.<br>
+- ۳) اسمش و ۴) های لوب: چرخش و ارتفاعشان با کات متفاوت است.<br>
+<b>نکته کلیدی:</b> کات = چرخش از بالا به پایین
+</div>
+</div>
+
+<div class="card question" data-search="دریبل ضربه آهسته متوالی توپ">
+<span class="qnum">سوال ۱۹</span>
+<div class="fa"><b>متن سوال:</b> حرکت توپ را که همراه بازیکن با ضربه‌های آهسته و متوالی انجام می‌شود چه می‌گویند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دریبل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تعریف دقیق کتاب: حرکت توپ همراه بازیکن با ضربات آهسته و متوالی، دریبل نام دارد؛ دریبل کوتاه برای حفظ توپ و دریبل بلند برای سرعت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) شوت: ضربه‌ی هدف‌دار به سمت دروازه/سبد است.<br>
+- ۳) سانت: اصطلاح پاس در برخی رشته‌هاست، نه حرکت توپ همراه بازیکن.<br>
+- ۴) پاس: دادن توپ به هم‌تیمی است.<br>
+<b>نکته کلیدی:</b> ضربه‌های آهسته و متوالی = دریبل
+</div>
+</div>
+
+<div class="card question" data-search="کرال سینه فاصله پاها در آب">
+<span class="qnum">سوال ۲۰</span>
+<div class="fa"><b>متن سوال:</b> فاصله‌ی پاها در آب در شنای کرال سینه چقدر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">۲۰ تا ۲۵ سانتی‌متر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در کرال سینه هنگام شنا، فاصله‌ی پاها در آب باید ۲۰ تا ۲۵ سانتی‌متر باشد تا ضربات پا مؤثر و بدون اتلاف انرژی انجام شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۱) ۱۰ تا ۳۰ سانتی‌متر، ۲) ۱۰ تا ۱۵ سانتی‌متر و ۴) ۲۰ تا ۳۰ سانتی‌متر: اعدادی هستند که در کتاب نیامده‌اند.<br>
+<b>نکته کلیدی:</b> فاصله‌ی پاها = ۲۰ تا ۲۵ سانتی‌متر
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۲ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>مبانی تربیت بدنی</h3></div>
+<div class="grid2">
+<div class="box"><h4>مبانی سه‌گانه</h4>
+<div class="fa">۱) تربیتی، اخلاقی و اعتقادی ۲) فیزیولوژیکی ۳) روانی ـ اجتماعی</div>
+</div>
+<div class="box"><h4>فلسفه آموزش</h4>
+<div class="fa">تعلیم و پرورش بدنی سالم و قوی از طریق حرکت‌های جسمانی</div>
+</div>
+<div class="box"><h4>هدف اصلی</h4>
+<div class="fa">رشد و تکامل همه‌جانبه انسان (جسم + روان + اجتماع)</div>
+</div>
+<div class="box"><h4>قبول مسئولیت</h4>
+<div class="fa">از آثار روانی ـ اجتماعی تربیت بدنی</div>
+</div>
+<div class="box"><h4>ورزش و شخصیت</h4>
+<div class="fa">ورزش یک عامل فرهنگی در تکامل شخصیت انسان است</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فیزیولوژی و آمادگی جسمانی</h3></div>
+<div class="grid2">
+<div class="box"><h4>فارتلک</h4>
+<div class="fa">دویدن تند و آرام به‌صورت تناوبی و پیوسته (بازی با سرعت)</div>
+</div>
+<div class="box"><h4>گرم کردن</h4>
+<div class="fa">افزایش جریان خون و اکسیژن، کاهش صدمات، افزایش سرعت انقباض، کاهش زمان بازتاب</div>
+</div>
+<div class="box"><h4>سرد کردن</h4>
+<div class="fa">عکس گرم کردن؛ کششی ایستا برای جلوگیری از خستگی و درد عضلانی</div>
+</div>
+<div class="box"><h4>اعصاب آوران</h4>
+<div class="fa">پیام از محیط به دستگاه عصبی مرکزی (حسی)</div>
+</div>
+<div class="box"><h4>اعصاب وابران</h4>
+<div class="fa">فرمان از مرکز به عضلات (حرکتی)</div>
+</div>
+<div class="box"><h4>سیستم عصبی</h4>
+<div class="fa">کنترل، هدایت، تحرک‌پذیری</div>
+</div>
+<div class="box"><h4>آدرنالین</h4>
+<div class="fa">هورمون جنگ و گریز؛ افزایش فشار خون و خطر ایمنی</div>
+</div>
+<div class="box"><h4>رگ‌های کرونر</h4>
+<div class="fa">خون‌رسانی به عضله‌ی قلب</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وزن، چاقی و سلامت</h3></div>
+<div class="grid2">
+<div class="box"><h4>چاقی</h4>
+<div class="fa">در بزرگسالی اندازه (نه تعداد) سلول‌های چربی افزایش می‌یابد</div>
+</div>
+<div class="box"><h4>کاهش وزن ایده‌آل</h4>
+<div class="fa">نیم تا یک کیلوگرم در هفته</div>
+</div>
+<div class="box"><h4>هدف برنامه کاهش وزن</h4>
+<div class="fa">کاهش درصد چربی بدن</div>
+</div>
+<div class="box"><h4>تصلب شرائین</h4>
+<div class="fa">چاقی + رسوب کلسترول + سفت و سخت شدن عروق</div>
+</div>
+<div class="box"><h4>سیگار</h4>
+<div class="fa">هر نخ در روز، فشار خون را حدود ۱۰ میلی‌متر جیوه بالا می‌برد</div>
+</div>
+<div class="box"><h4>مناسب‌ترین ورزش کنترل وزن</h4>
+<div class="fa">شنا</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شنا</h3></div>
+<div class="grid2">
+<div class="box"><h4>مهم‌ترین اصل</h4>
+<div class="fa">نفس‌گیری</div>
+</div>
+<div class="box"><h4>انواع شنا</h4>
+<div class="fa">کرال سینه، کرال پشت، قورباغه، پروانه، پهلو</div>
+</div>
+<div class="box"><h4>سریع‌ترین شنا</h4>
+<div class="fa">کرال سینه</div>
+</div>
+<div class="box"><h4>بازدم</h4>
+<div class="fa">از راه دهان و بینی</div>
+</div>
+<div class="box"><h4>فاصله‌ی پاها</h4>
+<div class="fa">۲۰ تا ۲۵ سانتی‌متر</div>
+</div>
+<div class="box"><h4>چرخش پا</h4>
+<div class="fa">از مفصل لگن ـ ۴ ضربه در هر حرکت کامل</div>
+</div>
+<div class="box"><h4>شنا و کاهش وزن</h4>
+<div class="fa">شنا ورزشی پایه، انفرادی و مناسب کنترل وزن است</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>والیبال</h3></div>
+<div class="grid2">
+<div class="box"><h4>سرویس</h4>
+<div class="fa">اولین ضربه برای شروع بازی؛ از راست و عقب زمین، خارج از خط انتهایی</div>
+</div>
+<div class="box"><h4>پاس</h4>
+<div class="fa">ارسال توپ برای اجرای مهارت بعدی</div>
+</div>
+<div class="box"><h4>آبشار</h4>
+<div class="fa">ضربه‌ی حمله‌ای برای فرود توپ در زمین حریف (با کف و پاشنه‌ی دست)</div>
+</div>
+<div class="box"><h4>دفاع</h4>
+<div class="fa">از جلو با ساعد / در پهلو با کف دست و مشت</div>
+</div>
+<div class="box"><h4>بازیکنان و امتیاز</h4>
+<div class="fa">۶ نفر اصلی ـ تیمی که زودتر ۱۵ امتیاز بگیرد</div>
+</div>
+<div class="box"><h4>ارتفاع تور</h4>
+<div class="fa">آقایان ۲/۴۳ ـ خانم‌ها ۲/۲۴ متر</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بسکتبال</h3></div>
+<div class="grid2">
+<div class="box"><h4>مهارت‌های اصلی</h4>
+<div class="fa">دریبل، پاس، شوت</div>
+</div>
+<div class="box"><h4>تیم</h4>
+<div class="fa">۵ بازیکن اصلی + ۵ تا ۷ یار ذخیره</div>
+</div>
+<div class="box"><h4>دریبل کوتاه</h4>
+<div class="fa">برای حفظ توپ؛ فاصله‌ی دست تا زمین کمتر از ۷۰ سانتی‌متر</div>
+</div>
+<div class="box"><h4>دریبل بلند</h4>
+<div class="fa">برای سرعت و طی مسافت زیاد</div>
+</div>
+<div class="box"><h4>پاس سینه‌ای</h4>
+<div class="fa">پرکاربردترین پاس؛ فواصل ۵ تا ۶ متر</div>
+</div>
+<div class="box"><h4>پاس بیسبالی</h4>
+<div class="fa">برای مسافت‌های زیاد</div>
+</div>
+<div class="box"><h4>پرتاب آزاد</h4>
+<div class="fa">۱ امتیاز (شوت داخل قوس ۲ و خارج قوس ۳ امتیاز)</div>
+</div>
+<div class="box"><h4>اعداد زمین</h4>
+<div class="fa">قطر دایره‌ی وسط ۱/۸ متر ـ طول ذوزنقه ۵/۸۰ متر</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فوتبال</h3></div>
+<div class="grid2">
+<div class="box"><h4>مهارت‌های اساسی</h4>
+<div class="fa">پاس دادن، شوت زدن، هد زدن</div>
+</div>
+<div class="box"><h4>کنترل توپ</h4>
+<div class="fa">به استقبال توپ رفتن و بلافاصله مهار آن</div>
+</div>
+<div class="box"><h4>کنترل با کف پا</h4>
+<div class="fa">در فوتبال از همه عمومیت بیشتری دارد</div>
+</div>
+<div class="box"><h4>پرتاب اوت</h4>
+<div class="fa">با دو دست و از روی سر؛ پاها روی زمین</div>
+</div>
+<div class="box"><h4>پنالتی</h4>
+<div class="fa">۱۱ متری خط دروازه، عمود بر وسط دروازه</div>
+</div>
+<div class="box"><h4>استراحت</h4>
+<div class="fa">۱۵ دقیقه بین دو نیمه</div>
+</div>
+<div class="box"><h4>کشش اختصاصی</h4>
+<div class="fa">عضلات ناحیه‌ی داخلی ران (کشاله) برای پیشگیری از کشیدگی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تنیس روی میز</h3></div>
+<div class="grid2">
+<div class="box"><h4>روش مدادی</h4>
+<div class="fa">راکت مثل قلم در دست؛ متداول در چین و ژاپن</div>
+</div>
+<div class="box"><h4>روش دست‌دادن</h4>
+<div class="fa">رایج در ایران، سوئد و استرالیا</div>
+</div>
+<div class="box"><h4>فورهند</h4>
+<div class="fa">ضربه با روی راکت؛ مقدماتی‌ترین مهارت</div>
+</div>
+<div class="box"><h4>بک هند</h4>
+<div class="fa">ضربه با پشت راکت</div>
+</div>
+<div class="box"><h4>کات</h4>
+<div class="fa">چرخش توپ از بالا به پایین</div>
+</div>
+<div class="box"><h4>درایو و درایولوپ</h4>
+<div class="fa">چرخش رو به جلو؛ ارتفاع کم و سرعت پیچ زیاد</div>
+</div>
+<div class="box"><h4>لوپ</h4>
+<div class="fa">مهم‌ترین ضربه و تکنیک حمله‌ای؛ دو نوع درایولوپ</div>
+</div>
+<div class="box"><h4>خطاهای رایج</h4>
+<div class="fa">دو بار پشت سر هم ضربه زدن / ضربه قبل از برخورد توپ با میز</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">تعریف دقیق مفاهیمی که در سوالات تکرار می‌شوند</p>
+
+<div class="card">
+<div class="card-head"><h3>تربیت بدنی</h3></div>
+<div class="fa">تعلیم و پرورش بدن سالم و قوی از طریق حرکت‌های جسمانی؛ سه مبنای تربیتی‌ـ‌اعتقادی، فیزیولوژیکی و روانی‌ـ‌اجتماعی دارد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فارتلک</h3></div>
+<div class="fa">روش دویدن سوئدی («بازی با سرعت») که در آن دویدن تند و آرام به‌صورت تناوبی و پیوسته انجام می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جاکینگ</h3></div>
+<div class="fa">دویدن آرام و یکنواخت؛ بیشتر در بخش گرم کردن به کار می‌رود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نفس‌گیری</h3></div>
+<div class="fa">مهم‌ترین اصل یادگیری و موفقیت در شنا؛ هماهنگ‌کردن تنفس با حرکت دست‌ها و پاها.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کرال سینه</h3></div>
+<div class="fa">سریع‌ترین نوع شنا؛ بدن کشیده، بازدم از دهان و بینی، ۴ ضربه‌ی پا در هر حرکت کامل و فاصله‌ی پاها ۲۰ تا ۲۵ سانتی‌متر.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اعصاب آوران</h3></div>
+<div class="fa">اعصاب حسی که پیام‌های محیط را به دستگاه عصبی مرکزی می‌رسانند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اعصاب وابران</h3></div>
+<div class="fa">اعصاب حرکتی که فرمان‌ها را از دستگاه عصبی مرکزی به عضلات می‌برند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آدرنالین</h3></div>
+<div class="fa">هورمون جنگ و گریز؛ افزایش غلظت آن ضربان قلب و فشار خون را بالا می‌برد و خطر ایمنی ایجاد می‌کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چاقی</h3></div>
+<div class="fa">در بزرگسالی اندازه‌ی سلول‌های چربی افزایش می‌یابد؛ افراد چاق در شروع ورزش ممکن است ابتدا وزن اضافه کنند (جایگزینی چربی با عضله).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تصلب شرائین</h3></div>
+<div class="fa">سفت و سخت شدن عروق بر اثر چاقی و رسوب موادی مانند کلسترول؛ رسوب چربی مقاومت رگ‌ها را بالا می‌برد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کاهش وزن ایده‌آل</h3></div>
+<div class="fa">نیم تا یک کیلوگرم در هفته؛ حدود ۲۵ درصد کاهش وزنی که فقط با رژیم به دست می‌آید، از ضایعات بافت عضلانی است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گرم کردن</h3></div>
+<div class="fa">مرحله‌ی آغازین تمرین؛ آخرین مرحله‌اش حرکت اختصاصی همان رشته است و در تنیس روی میز ۱۰ تا ۳۰ ثانیه طول می‌کشد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سرد کردن</h3></div>
+<div class="fa">مرحله‌ی پایانی و عکس گرم کردن؛ با حرکات کششی ایستا و حداقل ۵ تکرار آرام انجام می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انعطاف‌پذیری</h3></div>
+<div class="fa">قابلیت کشیده‌شدن عضلات و مفاصل برای تأمین دامنه‌ی حرکتی بیشتر.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سرویس والیبال</h3></div>
+<div class="fa">اولین ضربه برای شروع بازی، از ناحیه‌ی راست و عقب زمین و خارج از خط انتهایی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پاس والیبال</h3></div>
+<div class="fa">ارسال توپ به هم‌تیمی برای اجرای مهارت بعدی؛ برای توپ‌های کوتاه از پاس ساعد استفاده می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آبشار</h3></div>
+<div class="fa">ضربه‌ی حمله‌ای والیبال برای فرود توپ در زمین حریف؛ غالباً با کف و پاشنه‌ی دست زده می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دریبل</h3></div>
+<div class="fa">حرکت توپ همراه بازیکن با ضربه‌های آهسته و متوالی؛ کوتاه برای حفظ توپ (زیر ۷۰ سانتی‌متر) و بلند برای سرعت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پاس سینه‌ای</h3></div>
+<div class="fa">پاس دو دست با چرخش توپ و حرکت همزمان پای عقب و دست به جلو؛ پرکاربردترین پاس بسکتبال برای فواصل ۵ تا ۶ متر.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرتاب آزاد</h3></div>
+<div class="fa">پرتابی در بسکتبال به ارزش ۱ امتیاز که پس از خطا گرفته می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کنترل توپ</h3></div>
+<div class="fa">به استقبال توپ رفتن و مهار فوری آن؛ مهم‌ترین نکته در کنترل توپ.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرتاب اوت</h3></div>
+<div class="fa">در فوتبال با دو دست و از روی سر انجام می‌شود و پاها باید با زمین تماس داشته باشند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ضربه‌ی پنالتی</h3></div>
+<div class="fa">خطای بازیکن در محوطه‌ی جریمه؛ ضربه از فاصله‌ی ۱۱ متری خط دروازه، عمود بر وسط دروازه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راکت‌گیری مدادی</h3></div>
+<div class="fa">گرفتن راکت مثل قلم؛ روش سنتی چین و ژاپن. روش دست‌دادن در ایران، سوئد و استرالیا رایج است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فورهند</h3></div>
+<div class="fa">ضربه‌ای که با روی راکت زده می‌شود؛ مقدماتی‌ترین مهارت تنیس روی میز با انتقال وزن روی پای چپ.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کات</h3></div>
+<div class="fa">تکنیکی در تنیس روی میز که در آن چرخش پیچ توپ از بالا به پایین است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لوپ</h3></div>
+<div class="fa">مهم‌ترین ضربه و تکنیک حمله‌ای تنیس روی میز با دو نوع درایولوپ.</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۴ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">جفت‌هایی که بیشترین اشتباه در آزمون را می‌سازند</p>
+
+<div class="card">
+<div class="card-head"><h3>آوران vs وابران</h3></div>
+<div class="fa">آوران (حسی): پیام از محیط به مرکز / وابران (حرکتی): فرمان از مرکز به عضلات.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فارتلک vs اینتروال</h3></div>
+<div class="fa">فارتلک: تند و آرامِ پیوسته و بدون توقف / اینتروال: دویدن سریع با فاصله‌ی استراحت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جاکینگ vs فارتلک</h3></div>
+<div class="fa">جاکینگ: دویدن آرام و یکنواخت (گرم کردن) / فارتلک: تناوب سرعت‌های تند و آرام.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روش مدادی vs دست‌دادن</h3></div>
+<div class="fa">مدادی: چین و ژاپن / دست‌دادن: ایران، سوئد و استرالیا.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روی راکت vs پشت راکت</h3></div>
+<div class="fa">فورهند: ضربه با روی راکت / بک هند: ضربه با پشت راکت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کات vs درایو</h3></div>
+<div class="fa">کات: چرخش پیچ از بالا به پایین / درایو و درایولوپ: چرخش رو به جلو با ارتفاع کم.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دریبل کوتاه vs دریبل بلند</h3></div>
+<div class="fa">کوتاه: حفظ توپ، فاصله‌ی دست تا زمین کمتر از ۷۰ سانتی‌متر / بلند: سرعت و طی مسافت زیاد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پاس سینه‌ای vs پاس بیسبالی</h3></div>
+<div class="fa">سینه‌ای: پرکاربردترین پاس، فواصل ۵ تا ۶ متر / بیسبالی: مسافت‌های زیاد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرتاب آزاد vs شوت میدانی</h3></div>
+<div class="fa">پرتاب آزاد: ۱ امتیاز / شوت داخل قوس: ۲ امتیاز، خارج قوس: ۳ امتیاز.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گرم کردن vs سرد کردن</h3></div>
+<div class="fa">گرم کردن: آماده‌سازی و افزایش جریان خون / سرد کردن: بازگشت به حالت عادی؛ مراحل اجرایی‌شان عکس هم است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کشش پشت ران vs کشش داخلی ران</h3></div>
+<div class="fa">پشت ران (همسترینگ): تکواندو / داخلی ران (کشاله): فوتبال.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کشش شانه vs کشش ران</h3></div>
+<div class="fa">کشش ناحیه‌ی شانه در بدمینتون، تنیس، شنا، والیبال و هندبال مؤثرتر است؛ کشش ران برای فوتبال و تکواندو.</div>
+</div>
+</section>
+
+<section id="numbers" class="section">
+<h2 class="section-title">۰۵ · اعداد و نشانه‌های طلایی</h2>
+<p class="section-sub">هر عددی که در آزمون می‌آید، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>۱۱ متر</h3></div>
+<div class="fa">فاصله‌ی نقطه‌ی پنالتی از خط دروازه‌ی فوتبال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۵ دقیقه</h3></div>
+<div class="fa">استراحت بین دو نیمه‌ی فوتبال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱ امتیاز</h3></div>
+<div class="fa">ارزش هر پرتاب آزاد در بسکتبال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵ تا ۷ نفر</h3></div>
+<div class="fa">تعداد یاران ذخیره‌ی هر تیم بسکتبال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کمتر از ۷۰ سانتی‌متر</h3></div>
+<div class="fa">فاصله‌ی دست زننده‌ی توپ و زمین در دریبل کوتاه بسکتبال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵ تا ۶ متر</h3></div>
+<div class="fa">فاصله‌ی مناسب برای پاس سینه‌ای در بسکتبال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱/۸ متر</h3></div>
+<div class="fa">قطر دایره‌ی وسط زمین بسکتبال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵/۸۰ متر</h3></div>
+<div class="fa">طول ذوزنقه‌ی زمین بسکتبال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶ نفر</h3></div>
+<div class="fa">تعداد بازیکنان اصلی والیبال در زمین</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۵ امتیاز</h3></div>
+<div class="fa">امتیاز لازم برای بردن یک ست والیبال</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲/۴۳ و ۲/۲۴ متر</h3></div>
+<div class="fa">ارتفاع تور والیبال (آقایان / خانم‌ها)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۰ تا ۲۵ سانتی‌متر</h3></div>
+<div class="fa">فاصله‌ی پاها در آب در شنای کرال سینه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴ ضربه</h3></div>
+<div class="fa">ضربات پا در هر حرکت کامل کرال سینه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰ تا ۳۰ ثانیه</h3></div>
+<div class="fa">مدت زمان گرم کردن بین ست‌ها در تنیس روی میز</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵ تکرار آرام</h3></div>
+<div class="fa">حداقل تکرار در حرکات کششی ایستا</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نیم تا یک کیلوگرم</h3></div>
+<div class="fa">کاهش وزن ایده‌آل در هر هفته</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰ میلی‌متر جیوه</h3></div>
+<div class="fa">افزایش فشار خون به‌ازای مصرف هر نخ سیگار در روز</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳</h3></div>
+<div class="fa">تعداد مبانی تربیت بدنی (تربیتی‌ـ‌اعتقادی، فیزیولوژیکی، روانی‌ـ‌اجتماعی)</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">دام چیه + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام 1: فارتلک vs اینتروال</h3>
+<div class="fa"><b>دام چیه:</b> «دویدن سریع با فاصله‌ی استراحتی» را جواب فارتلک می‌گیری، چون اسمش شبیه است.</div>
+<div class="fa"><b>جواب درست:</b> دویدن سریع و آهسته به‌طور تناوبی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فارتلک استراحت فعال دارد (دویدن آرام)، نه توقف.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 2: آوران vs وابران</h3>
+<div class="fa"><b>دام چیه:</b> کلمه‌ی «مرکزی» در سوال، ذهنت را به سمت وابران می‌برد.</div>
+<div class="fa"><b>جواب درست:</b> اعصاب آوران (حسی)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آوران = به مرکز می‌آورد / وابران = از مرکز می‌برد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 3: روی راکت vs پشت راکت</h3>
+<div class="fa"><b>دام چیه:</b> فورهند و بک‌هند را با هم قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> فورهند</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فورهند = روی راکت / بک‌هند = پشت راکت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 4: کات vs درایو</h3>
+<div class="fa"><b>دام چیه:</b> جهت چرخش توپ را جابه‌جا می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> کات (چرخش از بالا به پایین)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کات = بک‌اسپین / درایو = چرخش رو به جلو.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 5: امتیاز پرتاب آزاد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی پرتاب آزاد ۲ امتیاز دارد، چون داخل قوس انجام می‌شود.</div>
+<div class="fa"><b>جواب درست:</b> ۱ امتیاز</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فقط خطای سه‌امتیازی ۳ پرتاب آزاد دارد؛ هر پرتاب ۱ امتیاز.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 6: یار ذخیره‌ی بسکتبال</h3>
+<div class="fa"><b>دام چیه:</b> عدد ۶ نفر را که مال والیبال است، جواب می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> ۵ تا ۷ نفر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بسکتبال: ۵ اصلی + ۵ تا ۷ ذخیره / والیبال: ۶ اصلی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 7: کاهش وزن سریع</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۲ کیلوگرم در هفته هم ایده‌آل است.</div>
+<div class="fa"><b>جواب درست:</b> نیم تا یک کیلوگرم</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کاهش سریع = از دست رفتن آب و عضله، نه چربی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 8: فاصله‌ی پاها در شنا</h3>
+<div class="fa"><b>دام چیه:</b> بازه‌های ۱۰ تا ۳۰ و ۲۰ تا ۳۰ را با عدد کتاب قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ۲۰ تا ۲۵ سانتی‌متر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کرال سینه: پاها ۲۰ تا ۲۵ سانتی‌متر از هم.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 9: کشش اختصاصی هر رشته</h3>
+<div class="fa"><b>دام چیه:</b> برای همه‌ی رشته‌ها یک گروه عضلانی را جواب می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> تکواندو: پشت ران / فوتبال: داخلی ران</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هر رشته، عضله‌ی پرخطر خودش را دارد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 10: مهم‌ترین اصل شنا</h3>
+<div class="fa"><b>دام چیه:</b> «هماهنگی» را علمی‌تر می‌دانی و جواب می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> نفس‌گیری</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بدون نفس‌گیری، هماهنگی هم از بین می‌رود.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام 11: کنترل توپ</h3>
+<div class="fa"><b>دام چیه:</b> «ضربه زدن به‌محض برخورد توپ» را راه کنترل می‌دانی.</div>
+<div class="fa"><b>جواب درست:</b> به استقبال توپ رفتن و بلافاصله مهار کردن</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کنترل = پیش‌دستی، نه واکنش دیرهنگام.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع ۲۰ سوال سری اول</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · ورزش ۱ · ۲۰ سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{
+"q": "یکی از مهم‌ترین اصول یادگیری و موفقیت در شنا چیست؟",
+"options": [
+"نفس‌گیری",
+"هماهنگی",
+"نحوه پا زدن",
+"نحوه دست زدن"
+],
+"answer": 0,
+"explanation": "نفس‌گیری پایه‌ی همه‌ی مهارت‌های شناست."
+},
+{
+"q": "منظور از دویدن به روش فارتلک چیست؟",
+"options": [
+"دویدن",
+"جاکینگ",
+"دویدن سریع و آهسته به‌طور تناوبی",
+"دویدن سریع با فاصله‌ی استراحتی"
+],
+"answer": 2,
+"explanation": "فارتلک = بازی با سرعت؛ تند و آرام پشت سر هم."
+},
+{
+"q": "روش مدادی راکت‌گیری در تنیس روی میز بیشتر در چه کشورهایی متداول است؟",
+"options": [
+"ایران",
+"چین و ژاپن",
+"سوئد",
+"استرالیا"
+],
+"answer": 1,
+"explanation": "مدادی روش سنتی شرق آسیاست."
+},
+{
+"q": "هر تیم بسکتبال از چند یار ذخیره استفاده می‌کند؟",
+"options": [
+"۶ نفر",
+"۳ تا ۵ نفر",
+"۷ تا ۹ نفر",
+"۵ تا ۷ نفر"
+],
+"answer": 3,
+"explanation": "۵ بازیکن اصلی + ۵ تا ۷ یار ذخیره."
+},
+{
+"q": "در دریبل کوتاه بسکتبال فاصله‌ی دست و زمین چقدر است؟",
+"options": [
+"۵۰ سانتی‌متر",
+"کمتر از ۷۰ سانتی‌متر",
+"بیشتر از یک متر",
+"۹۰ سانتی‌متر"
+],
+"answer": 1,
+"explanation": "دریبل کوتاه برای حفظ توپ، نزدیک بدن."
+},
+{
+"q": "حرکت چرخشی پا در کرال سینه بیشتر در کدام مفصل صورت می‌گیرد؟",
+"options": [
+"انگشتان",
+"مچ",
+"زانو",
+"لگن"
+],
+"answer": 3,
+"explanation": "منشأ ضربه‌ی پا در کرال سینه، لگن است."
+},
+{
+"q": "افزایش غلظت کدام هورمون، خطر ایمنی و افزایش فشار خون دارد؟",
+"options": [
+"تیروکسین",
+"آدرنالین",
+"هورمون رشد",
+"انسولین"
+],
+"answer": 1,
+"explanation": "آدرنالین هورمون جنگ و گریز است."
+},
+{
+"q": "در تکواندو قبل از تمرین کدام گروه عضلانی باید کشش داده شود؟",
+"options": [
+"کمر",
+"مچ دست",
+"پشت ران",
+"مچ پا"
+],
+"answer": 2,
+"explanation": "ضربه‌های بلند پا، همسترینگ را تهدید می‌کند."
+},
+{
+"q": "فاصله‌ی نقطه‌ی پنالتی از دروازه‌ی فوتبال چند متر است؟",
+"options": [
+"۶ متر",
+"۱۱ متر",
+"۱۶ متر",
+"۱۸ متر"
+],
+"answer": 1,
+"explanation": "پنالتی از ۱۱ متری زده می‌شود."
+},
+{
+"q": "کدام موارد مهارت‌های اساسی فوتبال هستند؟",
+"options": [
+"پاس دادن، دفاع، مهار کردن",
+"پاس دادن، ریباند کردن، دریبل زدن",
+"پاس دادن، شوت زدن، هد زدن",
+"پاس دادن، هد زدن، دفاع"
+],
+"answer": 2,
+"explanation": "پاس، شوت و هد؛ سه مهارت اساسی فوتبال."
+},
+{
+"q": "برای پیشگیری از کشیدگی عضله‌ی ران، در کدام رشته باید عضلات داخلی ران را کشش داد؟",
+"options": [
+"شنا",
+"بدمینتون",
+"بسکتبال",
+"فوتبال"
+],
+"answer": 3,
+"explanation": "آسیب کشاله‌ی ران، آسیب شاخص فوتبال است."
+},
+{
+"q": "مهم‌ترین نکته در کنترل توپ چیست؟",
+"options": [
+"به عقب کشیدن خود با هماهنگی حرکت توپ",
+"ضربه زدن به‌محض برخورد توپ",
+"به استقبال توپ رفتن و بلافاصله مهار آن",
+"حرکت بازیکن همراه با ضربه‌های آهسته و متوالی"
+],
+"answer": 2,
+"explanation": "استقبال از توپ، اصل کنترل است."
+},
+{
+"q": "اعصابی که پیام‌ها را از محیط به دستگاه مرکزی می‌رسانند چه نام دارند؟",
+"options": [
+"اعصاب آوران",
+"اعصاب وابران",
+"اعصاب پیکری",
+"اعصاب حرکتی"
+],
+"answer": 0,
+"explanation": "آوران = حسی = به سمت مرکز."
+},
+{
+"q": "کاهش وزن ایده‌آل در یک هفته چقدر است؟",
+"options": [
+"۱ تا ۲ کیلوگرم",
+"یک و نیم کیلوگرم",
+"۲ کیلوگرم",
+"نیم تا یک کیلوگرم"
+],
+"answer": 3,
+"explanation": "بیشتر از یک کیلوگرم در هفته پرخطر است."
+},
+{
+"q": "در کدام تکنیک تنیس روی میز ضربه تنها با روی راکت زده می‌شود؟",
+"options": [
+"بک هند",
+"فورهند",
+"لوب",
+"کات"
+],
+"answer": 1,
+"explanation": "فورهند با روی راکت؛ بک‌هند با پشت راکت."
+},
+{
+"q": "مهم‌ترین ورزش برای کنترل وزن بدن کدام است؟",
+"options": [
+"قایقرانی",
+"شنا",
+"پیاده‌روی",
+"دوی نرم"
+],
+"answer": 1,
+"explanation": "شنا همه‌ی عضلات را درگیر می‌کند."
+},
+{
+"q": "پرتاب آزاد در بسکتبال چند امتیاز دارد؟",
+"options": [
+"۳",
+"۱",
+"۲",
+"۲ (تکراری در اسکن)"
+],
+"answer": 1,
+"explanation": "هر پرتاب آزاد ۱ امتیاز."
+},
+{
+"q": "در کدام تکنیک تنیس روی میز توپ از بالا به پایین چرخش دارد؟",
+"options": [
+"درایو",
+"کات",
+"اسمش",
+"های لوب"
+],
+"answer": 1,
+"explanation": "کات = چرخش از بالا به پایین."
+},
+{
+"q": "حرکت توپ همراه بازیکن با ضربه‌های آهسته و متوالی چه نام دارد؟",
+"options": [
+"شوت",
+"دریبل",
+"سانت",
+"پاس"
+],
+"answer": 1,
+"explanation": "این تعریف دقیق دریبل است."
+},
+{
+"q": "فاصله‌ی پاها در آب در شنای کرال سینه چقدر است؟",
+"options": [
+"۱۰ تا ۳۰ سانتی‌متر",
+"۱۰ تا ۱۵ سانتی‌متر",
+"۲۰ تا ۲۵ سانتی‌متر",
+"۲۰ تا ۳۰ سانتی‌متر"
+],
+"answer": 2,
+"explanation": "فاصله‌ی استاندارد ۲۰ تا ۲۵ سانتی‌متر است."
+}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره سالمندی · سری 06 · فصل ششم: مقیاس‌های سنجش در سالمندی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"06";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره سالمندی · سری 06</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل ششم: مقیاس‌های سنجش در سالمندی</h2>
+  <p>پرسشنامه حافظه، IQCODE، MMSE، ADL، FAQ، LSI، SISRI-24، PQCMS، GDS، SELF، CCSE، ADAS، BLS-D، CAPE، MAI و PTSD</p>
+  <div class="pills"><span class="pill">حافظه</span><span class="pill">IQCODE</span><span class="pill">MMSE</span><span class="pill">ADL</span><span class="pill">FAQ</span><span class="pill">LSI</span><span class="pill">SISRI-24</span><span class="pill">PQCMS</span><span class="pill">GDS</span><span class="pill">SELF</span><span class="pill">CCSE</span><span class="pill">ADAS</span><span class="pill">BLS-D</span><span class="pill">CAPE</span><span class="pill">MAI</span><span class="pill">PTSD</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس فصل ششم کتاب «روان‌شناسی سالمندی» تدوین شده است. محور این فصل: <b>هدف‌های یادگیری</b>، <b>اهمیت مقیاس‌ها در سالمندی</b>، <b>درجه‌بندی استاندارد حافظه</b>، <b>پرسشنامه حافظه (۱۴ سؤال و تفسیر نمرات)</b>، <b>IQCODE</b>، <b>MMSE</b>، <b>یادداشت روزانه خواب و پلی‌سومنوگرافی</b>، <b>ADL (شش فعالیت)</b>، <b>FAQ</b>، <b>LSI</b>، <b>SISRI-24 (چهار عامل)</b>، <b>PQCMS</b>، <b>GDS</b>، <b>SELF (شش عامل)</b>، <b>CCSE</b>، <b>ADAS</b>، <b>BLS-D</b>، <b>CAPE</b>، <b>MAI (هفت بعد)</b>، <b>PTSD (IES-R)</b>، <b>برنامه زمان‌بندی فعالیت‌های هفتگی</b> و <b>سیاهه زندگی سالم</b>. همه‌چیز به زبان ساده و خودمونی.</div>
+
+<div class="stats">
+<div class="stat"><b>۱۴</b><span>سؤال پرسشنامه حافظه</span></div>
+<div class="stat"><b>۶</b><span>فعالیت ADL</span></div>
+<div class="stat"><b>۷</b><span>بعد MAI</span></div>
+<div class="stat"><b>۲۰</b><span>سؤال آزمون</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ========== هسته امتحانی ========== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>هدف‌های یادگیری فصل</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">انتظار می‌رود دانشجو بعد از مطالعه این فصل بتواند:</div>
+<div class="fa">۱) موارد کاربرد پرسشنامه حافظه را نام ببرد.</div>
+<div class="fa">۲) موارد کاربرد پرسشنامه غربالگری شناختی را توضیح دهد.</div>
+<div class="fa">۳) شش فعالیت مورد سنجش شاخص استقلال در کارکردهای زندگی روزمره را نام ببرد.</div>
+<div class="fa">۴) موارد کاربرد شاخص رضایت از زندگی در سالمندان را توضیح دهد.</div>
+<div class="fa">۵) شش عامل مورد بررسی در مقیاس خود ارزیابی کارکرد زندگی را نام ببرد.</div>
+<div class="fa">۶) مقیاس سنجش آلزایمر (ADAS) را توضیح دهد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهمیت استفاده از مقیاس‌ها در سالمندی</h3><span class="badge s">مهم</span></div>
+<div class="fa">هرچند <b>مصاحبه بالینی</b> ابزاری قدرتمند و معتبر در ارزیابی شرایط روان‌شناسی سالمندان است، با این حال <b>پرسشنامه‌ها و مقیاس‌ها</b> نیز می‌توانند تکمیل‌کننده فرایند تشخیص باشند.</div>
+<div class="fa">استفاده از آزمون‌ها نیاز به <b>دقت و مهارت</b> دارد. لازم است کارشناسان در انتخاب نوع آزمون‌ها و چگونگی استفاده از آن‌ها و نحوه تفسیر آن‌ها با دقت عمل کنند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> مقیاس‌هایی که برای آن‌ها <b>هنجار ایرانی</b> وجود ندارد، لازم است توسط کارشناسان <b>هنجاریابی</b> شود و بر اساس هنجار ایرانی مورد استفاده و تفسیر قرار گیرند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرسشنامه حافظه — نمره‌گذاری و تفسیر</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>گزینه‌های پاسخ (۱ تا ۴):</b></div>
+<div class="fa">۱) هیچ وقت یا خیلی کم (سالی چند بار یا کمتر)</div>
+<div class="fa">۲) گاه‌گاهی (ماهی چند بار)</div>
+<div class="fa">۳) خیلی (چند بار در هفته)</div>
+<div class="fa">۴) خیلی زیاد (هر روز)</div>
+<div class="fa"><b>تفسیر جمع امتیازها:</b></div>
+<table class="compare">
+<thead><tr><th>امتیاز</th><th>تفسیر</th></tr></thead>
+<tbody>
+<tr><td>۱۴-۱۹</td><td>حافظه بسیار خوب، جای نگرانی نیست</td></tr>
+<tr><td>۲۰-۲۹</td><td>عملکرد متوسط؛ تمرین‌های «یادیار» مفید است</td></tr>
+<tr><td>۳۰-۳۹</td><td>کمتر از متوسط؛ احتمالاً زندگی شلوغ و پرمشغله</td></tr>
+<tr><td>۴۰-۵۶</td><td>حافظه خیلی ضعیف؛ توصیه به مشورت با پزشک خانواده</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>IQCODE و MMSE</h3></div>
+<div class="fa"><b>IQCODE (پرسشنامه غربالگری شناختی در سالمندان):</b> از طریق مصاحبه با آشنا یا همراه مراجع اطلاعات به دست می‌آید. <b>۱۶ سؤال پنج‌گزینه‌ای</b> دارد. عملکرد شناختی فعلی سالمند را با ۱۰ سال گذشته مقایسه می‌کند.</div>
+<div class="fa"><b>MMSE (آزمون معاینه مختصر وضعیت شناختی):</b> در سال <b>۱۹۷۵</b> توسط <b>فولستاین و همکاران</b> طراحی شد. در ایران توسط <b>مهشید فروغان و همکاران</b> در سال ۱۳۸۵ در سالمندان شهر تهران هنجاریابی شده است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اندازه‌گیری خواب — یادداشت روزانه خواب و پلی‌سومنوگرافی</h3></div>
+<div class="fa"><b>یادداشت روزانه خواب:</b> مقیاس خودسنجی برای تعیین برنامه خواب-بیداری سالمند. اطلاعات مصرف کافئین و داروهای خواب‌آور را جمع‌آوری می‌کند. برای شناسایی آشفتگی‌های خواب در اختلالات خلقی مفید است. همبستگی خوبی با پلی‌سومنوگرافی دارد.</div>
+<div class="fa"><b>پلی‌سومنوگرافی:</b> روش گران و پرهزینه شامل اندازه‌گیری فرایندهای فیزیولوژیکی در طول شب (فعالیت مغز، حرکات چشم، فشار خون، تنفس، حرکات دوره‌ای پاها). فقط در مواردی که احتمال <b>اختلال قطع تنفس در خواب</b> وجود دارد توصیه می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ADL — شاخص استقلال در کارکردهای زندگی روزمره</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>سازنده:</b> سیدنی کاتز — تجدید نظر در ۱۹۷۶.</div>
+<div class="fa"><b>کارکرد:</b> بررسی کارکردهای فیزیکی سالمندان و بیماران مزمن (با مشاهده و مصاحبه).</div>
+<div class="fa"><b>شش فعالیت:</b></div>
+<div class="fa">۱) حمام کردن</div>
+<div class="fa">۲) لباس پوشیدن</div>
+<div class="fa">۳) استفاده از توالت</div>
+<div class="fa">۴) انتقال از تخت به صندلی (جابه‌جا شدن)</div>
+<div class="fa">۵) خودداری (کنترل عمل دفع)</div>
+<div class="fa">۶) تغذیه</div>
+<div class="fa"><b>نمره‌گذاری:</b> ۱ = استقلال / ۰ = وابستگی (امتیاز بین ۶ و ۰).</div>
+<div class="fa"><b>ابزار ایرانی:</b> دکتر فریده یغمایی — «ابزار استقلال فعالیت‌های زندگی روزانه» با ۲۰ ماده پنج‌گزینه‌ای (مجله دانشکده پرستاری و مامایی شهید بهشتی، شماره ۵۰، پاییز ۱۳۸۴).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>FAQ — پرسشنامه فعالیت‌های کارکردی</h3></div>
+<div class="fa"><b>سازنده:</b> رابرت فیفر (۱۹۸۲).</div>
+<div class="fa"><b>کاربرد:</b> سنجش کارکردهای زندگی روزمره سالمندان بهنجار و سالمندان مبتلا به دمانس متوسط.</div>
+<div class="fa"><b>تکمیل توسط:</b> همسر یا یکی از نزدیکان سالمند.</div>
+<div class="fa"><b>ساختار:</b> ۱۰ سؤال ۶ گزینه‌ای.</div>
+<div class="fa"><b>تمرکز:</b> فعالیت‌های اجتماعی مانند خرید کردن، سفر کردن، فعالیت‌های اقتصادی و غیره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>LSI — شاخص رضایت از زندگی</h3></div>
+<div class="fa"><b>سازنده:</b> برنیک و همکاران (۱۹۶۱).</div>
+<div class="fa"><b>کاربرد:</b> سنجش احساس کلی سالمندان از بهزیستی روانی و سازگاری.</div>
+<div class="fa"><b>کاربرد ویژه:</b> تعیین <b>سالمندی موفق</b>.</div>
+<div class="fa"><b>ساختار:</b> نوع الف: ۲۰ سؤال سه‌گزینه‌ای (موافق — مخالف — نمی‌دانم).</div>
+<div class="fa"><b>نمونه سؤال:</b> «من همانند دوران جوانی‌ام احساس شادی می‌کنم.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>SISRI-24 — پرسشنامه خودگزارشی هوش معنوی</h3></div>
+<div class="fa"><b>سازنده:</b> کینگ (۲۰۰۸).</div>
+<div class="fa"><b>ساختار:</b> ۲۴ سؤال پنج‌گزینه‌ای (۰ تا ۴).</div>
+<div class="fa"><b>چهار عامل:</b></div>
+<div class="fa">۱) تفکر انتقادی وجودی</div>
+<div class="fa">۲) تولید معنای شخصی</div>
+<div class="fa">۳) آگاهی متعالی</div>
+<div class="fa">۴) توسعه سطوح هوشیار</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>PQCMS — مقیاس روحیه مرکز پیری‌شناسی فیلادلفیا</h3></div>
+<div class="fa"><b>سازنده:</b> لاوتون (۱۹۷۲).</div>
+<div class="fa"><b>هدف:</b> سنجش سه بعد سازگاری هیجانی در سالمندان ۷۰-۹۰ ساله (هم مؤسسه‌ای و هم خانگی).</div>
+<div class="fa"><b>شاخص‌های روحیه:</b> رهایی از نشانه‌های پریشانی — رضایت از خود — احساس سازگاری بین خود و محیط — توانایی تلاش و کوشش در مواقع لزوم.</div>
+<div class="fa"><b>ساختار:</b> ۲۲ سؤال.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>GDS — مقیاس افسردگی دوران پیری</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>سازنده:</b> برینک و جرومه (۱۹۸۲).</div>
+<div class="fa"><b>نوع:</b> خودگزارشی — آسان برای اجرا.</div>
+<div class="fa"><b>دلیل طراحی:</b> برینک معتقد بود علائم افسردگی در سالمندان و جوانان متفاوت است، پس مقیاس خاص سالمندان ضروری است.</div>
+<div class="fa"><b>ساختار:</b> ۳۰ سؤال دوگزینه‌ای (بله/خیر) — نسخه ۱۵ سؤالی هم وجود دارد.</div>
+<div class="fa"><b>نمونه سؤال:</b> «آیا اساساً از زندگی‌تان راضی هستید؟»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>SELF — مقیاس خود ارزیابی کارکرد زندگی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>سازنده:</b> مارگارت و برنارد (۱۹۸۴).</div>
+<div class="fa"><b>کاربرد:</b> سنجش کارکرد فیزیکی، روان‌شناسی و اجتماعی در افراد ۶۰ سال به بالا.</div>
+<div class="fa"><b>ساختار:</b> ۵۴ سؤال و <b>شش عامل</b>:</div>
+<div class="fa">۱) فعالیت‌های زندگی روزمره و ناتوانی‌های بدنی (۱۳ آیتم)</div>
+<div class="fa">۲) نشانگان سالمندی</div>
+<div class="fa">(بقیه عوامل در فایل اصلی ذکر نشده است)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>CCSE — آزمایش غربالگری ظرفیت شناختی</h3></div>
+<div class="fa"><b>سازنده:</b> جاکوبز (۱۹۷۷).</div>
+<div class="fa"><b>ساختار:</b> ۳۰ سؤال.</div>
+<div class="fa"><b>کاربرد:</b> کمک به درمانگر یا مشاور برای مشخص کردن نشانگان ذهنی ارگانیک (به‌ویژه در دلیریوم و بیماری‌های پزشکی) + بررسی قضاوت و سرعت عملکرد ذهنی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ADAS — مقیاس سنجش آلزایمر</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>سازنده:</b> روزناند و ریچارد موهس (۱۹۸۳).</div>
+<div class="fa"><b>نوع:</b> مقیاس درجه‌بندی بالینی.</div>
+<div class="fa"><b>کاربرد:</b> سنجش شدت نقص‌های رفتاری، شناختی و عاطفی بیماران مبتلا به آلزایمر + شاخصی برای سنجش شدت دمانس.</div>
+<div class="fa"><b>ساختار:</b> ابتدا ۴۰ آیتمی بود، در نهایت به <b>۲۱ آیتم</b> کاهش پیدا کرد.</div>
+<div class="fa"><b>دو قسمت کلی:</b> رفتار شناختی و رفتار غیرشناختی.</div>
+<div class="fa"><b>دامنه نمرات:</b> صفر تا پنج برای هر آیتم.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>BLS-D — مقیاس دمانس</h3></div>
+<div class="fa"><b>سازنده:</b> بلسد (۱۹۶۸).</div>
+<div class="fa"><b>کاربرد:</b> ابزار تحقیقی برای سنجش نشانه‌های رفتاری و شناختی افراد مبتلا به دمانس — اصولاً در مطالعات دمانس نوروپاتولوژیک مغز.</div>
+<div class="fa"><b>ساختار:</b> ۲۲ آیتم:</div>
+<div class="fa">• عملکرد فعالیت‌های روزانه (۸ آیتم)</div>
+<div class="fa">• عادات خودمراقبتی (۳ آیتم)</div>
+<div class="fa">• تغییرات در شخصیت، علایق و سایق‌ها (۱۱ آیتم)</div>
+<div class="fa"><b>تکمیل توسط:</b> بستگان یا دوستان صمیمی — طی شش ماه گذشته.</div>
+<div class="fa"><b>دامنه نمرات:</b> صفر (بهنجار) تا ۲۸ (نابهنجار).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>CAPE — روش‌های سنجش کلیفتون</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>سازنده:</b> پتیا و گیلبارد (۱۹۷۵).</div>
+<div class="fa"><b>کاربرد:</b> ارزیابی وجود و شدت آسیب‌های کارکرد ذهنی و رفتاری — جهت‌یابی، توانایی شناختی، توانایی روانی‌حرکتی — برای سالمندان مبتلا به بیماری‌های روان‌پزشکی طولانی‌مدت.</div>
+<div class="fa"><b>دو مؤلفه:</b></div>
+<div class="fa">۱) <b>مقیاس سنجش شناختی:</b> اطلاعات عمومی و جهت‌یابی، توانایی ذهنی، روانی-حرکتی</div>
+<div class="fa">۲) <b>مقیاس درجه‌بندی رفتار:</b> ناتوانی‌های بدنی، بی‌عاطفگی، مشکلات تعاملی و ارتباطی، اختلالات اجتماعی</div>
+<div class="fa"><b>اجرا:</b> بهتر است توسط پرستار آموزش‌دیده انجام شود. افراد در درجات A, B, C, D, E قرار می‌گیرند؛ درجه E شدیدترین مشکلات را نشان می‌دهد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>MAI — ابزار سنجش چندسطحی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>سازنده:</b> لاوتون (۱۹۸۲).</div>
+<div class="fa"><b>کاربرد:</b> سنجش بهزیستی کلی سالمندان جامعه — مشکلات سلامت، فعالیت‌های زندگی روزمره، مهارت‌ها، بهزیستی روان‌شناختی، تعامل اجتماعی و محیطی.</div>
+<div class="fa"><b>ساختار:</b> ۷ بعد و ۱۴۷ آیتم:</div>
+<div class="fa">۱) سلامت بدنی (۴۹ آیتم)</div>
+<div class="fa">۲) شناخت (۱۰ آیتم)</div>
+<div class="fa">۳) فعالیت‌های زندگی روزمره (۱۶ آیتم)</div>
+<div class="fa">۴) استفاده از زمان (۱۸ آیتم)</div>
+<div class="fa">۵) روابط و تعاملات اجتماعی (۱۷ آیتم)</div>
+<div class="fa">۶) سازگاری فردی (۱۲ آیتم)</div>
+<div class="fa">۷) محیط ادراک‌شده (۲۵ آیتم)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>PTSD — مقیاس IES-R</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>نام:</b> مقیاس تجدیدنظرشده تأثیر میزان حوادث.</div>
+<div class="fa"><b>تاریخچه:</b> ابداع توسط هوروینز (۱۹۷۹) برای بررسی تأثیر سوگ — اصلاح توسط ویس و مرمر (۱۹۹۷) بر اساس DSM-IV.</div>
+<div class="fa"><b>نوع:</b> خودگزارشی.</div>
+<div class="fa"><b>سه زیرمقیاس:</b> افکار مزاحم — برانگیختگی — اجتناب.</div>
+<div class="fa"><b>ساختار:</b> ۲۲ ماده در طیف لیکرت پنج‌گزینه‌ای.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> افراد مسن در این مقیاس نمره کمتری می‌گیرند. نسخه اصلاح‌شده عوامل انگیختگی فیزیولوژیک را اضافه کرده، بنابراین برای سالمندان اطمینان کمتری دارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>برنامه زمان‌بندی فعالیت‌های هفتگی</h3></div>
+<div class="fa">برای شناخت بیشتر از فعالیت‌های روزمره و هفتگی می‌توانید برنامه زمان‌بندی فعالیت‌های هفتگی را تکمیل کنید.</div>
+<div class="fa"><b>پیشنهاد عملی:</b> برنامه ۵ سالمند مرد و ۵ سالمند زن را تهیه کنید و بر اساس نتایج مصاحبه و شناخت قبلی خود از آن‌ها به بحث بگذارید.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سیاهه زندگی سالم — ۲۰ آیتم</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">برای قضاوت در مورد فعالیت‌های سلامت و طول عمر، در مقابل هر عبارتی که در مورد شما صدق می‌کند یک علامت × قرار دهید:</div>
+<div class="fa"><b>ده آیتم اول (افزایش مستقیم سلامت و طول عمر):</b></div>
+<div class="fa">۱) من سیگار نمی‌کشم. — ۲) من الکل مصرف نمی‌کنم. — ۳) من وزن طبیعی دارم. — ۴) من هیچ‌وقت در حین رانندگی با تلفن همراه صحبت نمی‌کنم. — ۵) من هر وقت بیرون می‌روم از کرم ضد آفتاب استفاده می‌کنم. — ۶) من هر روز میوه، سبزیجات و مقداری شکلات تیره مصرف می‌کنم. — ۷) من روزهای زیادی یک آسپرین بچه مصرف می‌کنم. — ۸) من در هفته ۴ یا ۵ بار ورزش می‌کنم. — ۹) من به‌طور مرتب دندان‌هایم را مسواک زده و نخ می‌کشم. — ۱۰) من همیشه از کمربند ایمنی استفاده می‌کنم.</div>
+<div class="fa"><b>ده آیتم دوم (تأثیر غیرمستقیم بر سلامت و لذت‌بخش‌تر کردن عمر):</b></div>
+<div class="fa">۱۱) من اغلب احساس شادی و رضایت دارم. — ۱۲) من در فعالیت‌های زیادی که برایم لذت‌بخش هستند شرکت می‌کنم. — ۱۳) من از زندگی‌ام رضایت دارم. — ۱۴) من فقط گاهی اوقات احساس غمگینی می‌کنم. — ۱۵) من فقط گاهی اوقات عصبانی می‌شوم. — ۱۶) من فقط گاهی اوقات دچار استرس می‌شوم. — ۱۷) من اغلب احساس قدرشناسی دارم و به‌طور کلی به دیگران اعتماد دارم. — ۱۸) من از دوستان و اعضای خانواده‌ای برخوردارم که می‌توانم به آن‌ها اتکا کنم. — ۱۹) من شخص خوش‌بینی هستم. — ۲۰) من از روابط اجتماعی خود شاد هستم.</div>
+<div class="fa"><b>منبع:</b> کتاب «شادی: رمزگشایی از ثروت روان‌شناختی» تألیف اد دینر و رابرت بیسواز-دینر.</div>
+</div>
+</section>
+
+<!-- ========== مفاهیم ========== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر ابزار رو با توضیح ساده + کاربرد + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) مقدمه: اهمیت استفاده از مقیاس‌ها در سالمندی</h3><span class="badge s">مهم</span></div>
+<div class="fa">هرچند <b>مصاحبه بالینی</b> ابزاری قدرتمند و معتبر در ارزیابی شرایط روان‌شناسی سالمندان به حساب می‌آید، با این حال <b>پرسشنامه‌ها و مقیاس‌ها</b> نیز می‌توانند تکمیل‌کننده فرایند تشخیص باشند.</div>
+<div class="fa">در این فصل به معرفی اجمالی چندین مقیاس مهم و پرکاربرد در مشاوره و روان‌شناسی سالمندان می‌پردازیم.</div>
+<div class="fa">استفاده از آزمون‌ها نیاز به <b>دقت و مهارت</b> دارد. لازم است کارشناسان در انتخاب نوع آزمون‌ها و چگونگی استفاده از آن‌ها و نحوه تفسیر آن‌ها با دقت عمل کنند.</div>
+<div class="fa">مقیاس‌هایی که برای آن‌ها <b>هنجار ایرانی</b> وجود ندارد، لازم است توسط کارشناسان <b>هنجاریابی</b> شود و بر اساس هنجار ایرانی مورد استفاده و تفسیر قرار گیرند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) درجه‌بندی استاندارد حافظه</h3></div>
+<div class="fa">درجه‌بندی استاندارد حافظه را می‌توان برای <b>اتفاقاتی که اخیراً برای مراجع افتاده‌اند</b>، <b>اتفاقاتی که در گذشته برایش افتاده‌اند</b> و <b>وقایع عمومی</b> استفاده کرد که در این صورت قادر به ارزیابی بهتر شدت مشکل مراجع خواهیم بود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) پرسشنامه حافظه</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">این پرسشنامه به لحاظ <b>سهولت اجرا</b> قابل توجه است. در هر پرسش، گویاترین پاسخ را علامت بزنید. پس از مشخص کردن پاسخ‌ها، عددهای پاسخ خود را با هم جمع کنید. همان نمره حافظه شماست.</div>
+<div class="fa"><b>گزینه‌های پاسخ:</b></div>
+<div class="fa">۱) هیچ وقت یا خیلی کم (سالی چند بار یا کمتر)</div>
+<div class="fa">۲) گاه‌گاهی (ماهی چند بار)</div>
+<div class="fa">۳) خیلی (چند بار در هفته)</div>
+<div class="fa">۴) خیلی زیاد (هر روز)</div>
+<div class="fa"><b>سؤالات (۱۴ مورد):</b></div>
+<div class="fa">۱) فراموش می‌کنم چیزهای مختلف را کجا گذاشته‌ام؛ چیزهایی را در خانه گم می‌کنم.</div>
+<div class="fa">۲) جاهایی می‌روم که به نظر خودم ناآشناست اما دیگران می‌گویند بارها آنجا بوده‌ام.</div>
+<div class="fa">۳) مجبور می‌شوم برگردم و ببینم کاری را که باید انجام می‌دادم انجام داده‌ام یا نه.</div>
+<div class="fa">۴) فراموش می‌کنم چیز لازمی را همراه خودم بردارم و ببرم.</div>
+<div class="fa">۵) چیزهایی را که دیروز یا چند روز قبل به من گفته‌اند فراموش می‌کنم — باید به من یادآوری کنند.</div>
+<div class="fa">۶) کسان و دوستان نزدیک خودم را که غالباً آن‌ها را می‌بینم به جا نمی‌آورم.</div>
+<div class="fa">۷) هنگام مطالعه روزنامه یا مجله متوجه می‌شوم موضوع آن را نمی‌دانم؛ یا سرنخ مطالب را گم می‌کنم.</div>
+<div class="fa">۸) فراموش می‌کنم مطالب مهمی را به دیگران بگویم، یا پیام‌های مهمی را برسانم یا یادآوری کنم.</div>
+<div class="fa">۹) مطالب مهم مربوط به خودم مثل تاریخ تولدم و محل زندگیم را فراموش می‌کنم.</div>
+<div class="fa">۱۰) در فهمیدن جزئیات موضوعی که کسی برایم گفته گیج می‌شوم و در می‌مانم.</div>
+<div class="fa">۱۱) جای معمول اشیا را فراموش می‌کنم یا در جاهای نامربوط دنبالشان می‌گردم.</div>
+<div class="fa">۱۲) ورودی ساختمان‌های آشنا یا راه‌های آشنا را گم می‌کنم.</div>
+<div class="fa">۱۳) کارهای معمول را بی‌جهت دوبار انجام می‌دهم. مثلاً دو بار چای خشک در قوری می‌ریزم و یا موهایم را دوبار شانه می‌زنم.</div>
+<div class="fa">۱۴) حرفی را که کمی پیش به کسی گفته‌ام دوباره می‌گویم یا سؤالم را دوباره تکرار می‌کنم.</div>
+<div class="fa"><b>تفسیر جمع امتیازها:</b></div>
+<div class="fa">• <b>۱۴-۱۹:</b> حافظه بسیار خوب کار می‌کند. جای هیچ نگرانی نیست.</div>
+<div class="fa">• <b>۲۰-۲۹:</b> عملکرد حافظه در حد متوسط است. تمرین‌های عملی «یادیار» مفید واقع می‌شود.</div>
+<div class="fa">• <b>۳۰-۳۹:</b> عملکرد حافظه کمتر از متوسط است. احتمالاً زندگی شلوغ و پرمشغله‌ای دارید که بار حافظه را سنگین کرده است.</div>
+<div class="fa">• <b>۴۰-۵۶:</b> حافظه خیلی ضعیف است. این اندازه لغزش‌های حافظه ممکن است در زندگی روزمره اختلال‌های مهمی ایجاد کند. توصیه می‌شود موضوع را با پزشک خانواده در میان بگذارید (مارتین، ۱۳۸۵).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) پرسشنامه غربالگری شناختی در سالمندان (IQCODE)</h3></div>
+<div class="fa">یکی دیگر از پرسشنامه‌های بررسی عملکرد شناختی سالمندان، <b>«پرسشنامه غربالگری شناختی در سالمندان» (IQCODE)</b> است که از طریق <b>مصاحبه با آشنا یا همراه مراجع</b> اطلاعاتی به دست می‌آید.</div>
+<div class="fa"><b>ساختار:</b> ۱۶ سؤال پنج‌گزینه‌ای.</div>
+<div class="fa"><b>روش:</b> سؤالات طوری طراحی شده که عملکرد شناختی فعلی سالمند را با <b>۱۰ سال گذشته</b> مقایسه می‌کند که آیا وضعیت شناختی او بهتر شده یا بدتر.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) آزمون معاینه مختصر وضعیت شناختی (MMSE)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">از آزمون‌های معتبر دیگر می‌توان به <b>«آزمون معاینه مختصر وضعیت شناختی» (MMSE)</b> اشاره کرد.</div>
+<div class="fa"><b>تاریخچه:</b> در سال <b>۱۹۷۵</b> توسط <b>فولستاین و همکاران</b> طراحی شد. در ایران توسط <b>مهشید فروغان و همکاران</b> در سال ۱۳۸۵ در سالمندان شهر تهران هنجاریابی شده است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶) اندازه‌گیری خواب — یادداشت روزانه خواب</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>یادداشت روزانه خواب:</b> یک مقیاس <b>خودسنجی</b> است که به منظور تعیین برنامه خواب-بیداری فرد سالمند طراحی شده است (در پیوست کتاب آمده است).</div>
+<div class="fa">این مقیاس همچنین اطلاعات لازم را با توجه به <b>میزان مصرف کافئین</b> در روز و <b>استفاده از داروهای خواب‌آور</b> قبل از خواب یا در طول شب جمع‌آوری می‌کند.</div>
+<div class="fa">یادداشت‌های روزانه خواب برای شناسایی و تعیین اهمیت <b>آشفتگی‌های خواب در افرادی که دچار اختلالات خلقی هستند</b> بسیار مفید است.</div>
+<div class="fa">یادداشت‌های روزانه خواب به‌طور گسترده‌ای در تحقیقات و جلسات درمانی استفاده می‌شوند و همبستگی خوبی با مشاهدات خواب از طریق <b>پلی‌سومنوگرافی</b> نشان می‌دهند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۷) پلی‌سومنوگرافی</h3></div>
+<div class="fa">یک روش <b>گران و پرهزینه</b> شامل اندازه‌گیری فرایندهای فیزیولوژیکی در طول شب، مانند فعالیت مغز، حرکات چشم، فشار خون، تنفس، حرکات دوره‌ای پاهاست.</div>
+<div class="fa">لذا استفاده از آن تنها در مواردی که احتمال <b>اختلال قطع تنفس در خواب</b> وجود دارد، توصیه می‌شود (لیدوال، لری و تامسون، ۱۳۸۷).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۸) شاخص استقلال در کارکردهای زندگی روزمره (ADL)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">شاخص ADL توسط <b>سیدنی کاتز</b> ارائه شد و در سال <b>۱۹۷۶</b> تجدید نظر شد.</div>
+<div class="fa">این مقیاس <b>کارکردهای فیزیکی سالمندان و بیماران مزمن</b> را مورد بررسی قرار می‌دهد.</div>
+<div class="fa">در این شاخص، آزمون‌شده با درمانگر با <b>مشاهده و مصاحبه</b> کارکرد فیزیکی را بررسی می‌کند.</div>
+<div class="fa"><b>شش فعالیت:</b></div>
+<div class="fa">۱) حمام کردن — ۲) لباس پوشیدن — ۳) استفاده از توالت — ۴) انتقال از تخت به صندلی (جابه‌جا شدن) — ۵) خودداری (کنترل عمل دفع) — ۶) تغذیه</div>
+<div class="fa"><b>نمره‌گذاری:</b> ۱ = استقلال / ۰ = وابستگی (امتیاز سالمندان بین ۶ و ۰).</div>
+<div class="fa"><b>ابزار ایرانی:</b> دکتر <b>فریده یغمایی</b> مقیاس جدیدی به نام <b>«ابزار استقلال فعالیت‌های زندگی روزانه»</b> معرفی کرده است. این ابزار دارای ۲۰ ماده پنج‌گزینه‌ای است و در شماره ۵۰ (سال پانزدهم، پاییز ۱۳۸۴) مجله دانشکده پرستاری و مامایی دانشگاه شهید بهشتی قابل دسترس است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۹) پرسشنامه فعالیت‌های کارکردی (FAQ)</h3><span class="badge s">مهم</span></div>
+<div class="fa">پرسشنامه FAQ برای سنجش کارکردهای زندگی روزمره سالمندان بهنجار و سالمندان مبتلا به <b>دمانس متوسط</b> در سال <b>۱۹۸۲</b> توسط <b>رابرت فیفر</b> طراحی شده است.</div>
+<div class="fa">این پرسشنامه توسط <b>همسر یا یکی از نزدیکان سالمند</b> پر می‌شود.</div>
+<div class="fa"><b>ساختار:</b> ۱۰ سؤال ۶ گزینه‌ای.</div>
+<div class="fa"><b>تمرکز:</b> بیشتر فعالیت‌های اجتماعی سالمند مثل خرید کردن، سفر کردن و فعالیت‌های اقتصادی و غیره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰) شاخص رضایت از زندگی (LSI)</h3></div>
+<div class="fa">شاخص LSI توسط <b>برنیک و همکاران</b> در سال <b>۱۹۶۱</b> طراحی شد.</div>
+<div class="fa">این مقیاس <b>احساس کلی سالمندان از بهزیستی روانی و سازگاری</b> را مورد سنجش قرار می‌دهد.</div>
+<div class="fa">از این مقیاس برای تعیین <b>سالمندی موفق</b> می‌توان استفاده کرد.</div>
+<div class="fa">این مقیاس نوع الف و ب دارد که نوع الف آن <b>۲۰ سؤال سه‌گزینه‌ای</b> به‌صورت موافق — مخالف — نمی‌دانم داراست.</div>
+<div class="fa"><b>نمونه سؤال:</b></div>
+<div class="fa">• من همانند دوران جوانی‌ام احساس شادی می‌کنم.</div>
+<div class="fa">• وقتی درباره گذشته‌ام فکر می‌کنم، چیزهای مهمی که می‌خواستم به‌دست نیاورده‌ام.</div>
+<div class="fa">• این دوران ملالت‌انگیزترین دوران زندگی من است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۱) پرسشنامه خودگزارشی هوش معنوی (SISRI-24)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa">این پرسشنامه در سال <b>۲۰۰۸</b> توسط <b>کینگ</b> با <b>۲۴ سؤال</b> معرفی شد.</div>
+<div class="fa"><b>نمره‌گذاری:</b> پنج‌گزینه‌ای از صفر تا ۴.</div>
+<div class="fa"><b>چهار عامل:</b></div>
+<div class="fa">۱) تفکر انتقادی وجودی</div>
+<div class="fa">۲) تولید معنای شخصی</div>
+<div class="fa">۳) آگاهی متعالی</div>
+<div class="fa">۴) توسعه سطوح هوشیار (کینگ، ۲۰۰۸؛ به نقل از عبدالزاده و همکاران، ۱۳۸۸).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۲) مقیاس روحیه مرکز پیری‌شناسی فیلادلفیا (PQCMS)</h3></div>
+<div class="fa">مقیاس PQCMS توسط <b>لاوتون</b> در سال <b>۱۹۷۲</b> معرفی گردید.</div>
+<div class="fa"><b>هدف:</b> سنجش سه بعد سازگاری هیجانی در سالمندان <b>۷۰ تا ۹۰ ساله</b> — هم برای سالمندان در مؤسسات و هم سالمندان در منزل قابل استفاده است.</div>
+<div class="fa"><b>شاخص‌های روحیه:</b> رهایی از نشانه‌های پریشانی — رضایت از خود — احساس سازگاری بین خود و محیط — توانایی تلاش و کوشش در مواقع لزوم.</div>
+<div class="fa"><b>ساختار:</b> ۲۲ سؤال (اعتبار و پایایی لازم را داراست).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۳) مقیاس افسردگی دوران پیری (GDS)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">مقیاس GDS در سال <b>۱۹۸۲</b> توسط <b>برینک و جرومه</b> طراحی شد.</div>
+<div class="fa">یک مقیاس <b>خودگزارشی</b> برای سنجش افسردگی است که به‌راحتی قابل اجرا می‌باشد.</div>
+<div class="fa">از آنجایی که برینک اعتقاد داشت علایم افسردگی در سالمندان و جوانان متفاوت است، بنابراین <b>لزوم مقیاس خاص سالمندان</b> ضروری است.</div>
+<div class="fa"><b>ساختار:</b> ۳۰ سؤال دوگزینه‌ای (بله/خیر) — نسخه <b>۱۵ سؤالی</b> هم پیشنهاد شده است.</div>
+<div class="fa">اعتبار و پایایی هر دو فرم پرسشنامه مورد تأیید است.</div>
+<div class="fa"><b>نمونه سؤال:</b></div>
+<div class="fa">• آیا اساساً از زندگی‌تان راضی هستید؟</div>
+<div class="fa">• آیا اغلب اوقات خسته‌اید؟</div>
+<div class="fa">• آیا اغلب درباره گذشته احساس نگرانی دارید؟</div>
+<div class="fa">• آیا شما فکر می‌کنید بیشتر مردم نسبت به شما در شرایط بهتری هستند؟</div>
+<div class="fa">• آیا احساس می‌کنید موقعیت‌های شما ناامیدکننده است؟</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۴) مقیاس خود ارزیابی کارکرد زندگی (SELF)</h3><span class="badge s">مهم</span></div>
+<div class="fa">مقیاس SELF توسط <b>مارگارت و برنارد</b> در سال <b>۱۹۸۴</b> معرفی گردید.</div>
+<div class="fa">این مقیاس <b>کارکرد فیزیکی، روان‌شناسی و اجتماعی</b> را در افراد <b>۶۰ سال به بالا</b> مورد سنجش قرار می‌دهد.</div>
+<div class="fa"><b>ساختار:</b> ۵۴ سؤال و <b>شش عامل</b>:</div>
+<div class="fa">۱) فعالیت‌های زندگی روزمره و ناتوانی‌های بدنی (۱۳ آیتم)</div>
+<div class="fa">۲) نشانگان سالمندی</div>
+<div class="fa">(بقیه عوامل در فایل اصلی ذکر نشده است)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۵) آزمایش غربالگری ظرفیت شناختی (CCSE)</h3></div>
+<div class="fa">آزمایش CCSE توسط <b>جاکوبز</b> در <b>۱۹۷۷</b> ارائه شده است.</div>
+<div class="fa">این مقیاس <b>۳۰ سؤالی</b> به درمانگر یا مشاور کمک می‌کند <b>نشانگان ذهنی ارگانیک</b> را (به‌ویژه در <b>دلیریوم</b> و بیماری‌های پزشکی) مشخص کند.</div>
+<div class="fa">علاوه بر این <b>قضاوت و توان (سرعت) عملکرد ذهنی</b> فرد را بررسی می‌کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۶) مقیاس سنجش آلزایمر (ADAS)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">مقیاس ADAS یک <b>مقیاس درجه‌بندی بالینی</b> است که <b>شدت نقص‌های رفتاری، شناختی و عاطفی</b> بیماران مبتلا به آلزایمر را مورد سنجش قرار می‌دهد.</div>
+<div class="fa">علاوه بر این <b>شاخصی برای سنجش شدت دمانس</b> هم می‌باشد.</div>
+<div class="fa">این مقیاس ابتدا <b>۴۰ آیتمی</b> بود که در نهایت به <b>۲۱ آیتم</b> کاهش پیدا کرد.</div>
+<div class="fa"><b>دو قسمت کلی:</b> رفتار شناختی — رفتار غیرشناختی.</div>
+<div class="fa"><b>دامنه نمرات:</b> صفر تا پنج برای هر آیتم.</div>
+<div class="fa">اعتبار و پایایی قابل قبول — توسط <b>روزناند و ریچارد موهس</b> در <b>۱۹۸۳</b> ساخته شده است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۷) مقیاس دمانس (BLS-D)</h3></div>
+<div class="fa">مقیاس BLS-D در سال <b>۱۹۶۸</b> توسط <b>بلسد</b> ساخته شد.</div>
+<div class="fa">ابزار <b>تحقیقی</b> برای سنجش نشانه‌های رفتاری و شناختی افراد مبتلا به دمانس — اصولاً در مطالعات <b>دمانس نوروپاتولوژیک</b> در مغز مورد استفاده قرار می‌گیرد.</div>
+<div class="fa"><b>ساختار:</b> ۲۲ آیتم:</div>
+<div class="fa">• عملکرد فعالیت‌های روزانه (۸ آیتم)</div>
+<div class="fa">• عادات خودمراقبتی (۳ آیتم)</div>
+<div class="fa">• تغییرات در شخصیت، علایق و سایق‌ها (۱۱ آیتم)</div>
+<div class="fa"><b>تکمیل توسط:</b> بستگان یا دوستان صمیمی — طی شش ماه گذشته.</div>
+<div class="fa"><b>دامنه نمرات:</b> صفر (بهنجار) تا ۲۸ (نابهنجار).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۸) روش‌های سنجش کلیفتون (CAPE) برای سالمندان</h3><span class="badge s">مهم</span></div>
+<div class="fa">CAPE توسط <b>پتیا و گیلبارد</b> در سال <b>۱۹۷۵</b> برای سالمندان ساخته شد که وجود و شدت آسیب‌های کارکرد ذهنی و رفتاری را مورد ارزیابی قرار می‌دهد.</div>
+<div class="fa"><b>موارد بررسی:</b> توانایی جهت‌یابی، توانایی شناختی، توانایی روانی‌حرکتی.</div>
+<div class="fa"><b>کاربرد:</b> ارزیابی سالمندان مبتلا به بیماری‌های <b>روان‌پزشکی طولانی‌مدت</b>.</div>
+<div class="fa"><b>دو مؤلفه:</b></div>
+<div class="fa">۱) <b>مقیاس سنجش شناختی:</b> اطلاعات عمومی و جهت‌یابی، توانایی ذهنی، روانی-حرکتی</div>
+<div class="fa">۲) <b>مقیاس درجه‌بندی رفتار:</b> ناتوانی‌های بدنی، بی‌عاطفگی، مشکلات تعاملی و ارتباطی، اختلالات اجتماعی</div>
+<div class="fa"><b>اجرا:</b> بهتر است توسط <b>پرستار آموزش‌دیده</b> انجام شود. در پایان افراد در درجات A, B, C, D, E قرار می‌گیرند. درجه <b>E</b> = شدیدترین مشکلات.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۹) ابزار سنجش چندسطحی (MAI)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa">MAI توسط <b>لاوتون</b> در <b>۱۹۸۲</b> برای سنجش <b>بهزیستی کلی سالمندان جامعه</b> ساخته شد.</div>
+<div class="fa"><b>موارد ارزیابی:</b> مشکلات سلامت، فعالیت‌های زندگی روزمره، مهارت‌ها، بهزیستی روان‌شناختی، تعامل اجتماعی و محیطی.</div>
+<div class="fa"><b>ساختار:</b> ۷ بعد و ۱۴۷ آیتم:</div>
+<div class="fa">۱) سلامت بدنی (۴۹ آیتم)</div>
+<div class="fa">۲) شناخت (۱۰ آیتم)</div>
+<div class="fa">۳) فعالیت‌های زندگی روزمره (۱۶ آیتم)</div>
+<div class="fa">۴) استفاده از زمان (۱۸ آیتم)</div>
+<div class="fa">۵) روابط و تعاملات اجتماعی (۱۷ آیتم)</div>
+<div class="fa">۶) سازگاری فردی (۱۲ آیتم)</div>
+<div class="fa">۷) محیط ادراک‌شده (۲۵ آیتم)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۰) ارزیابی PTSD در سالمندان</h3><span class="badge s">مهم</span></div>
+<div class="fa">ارزیابی PTSD در سالمندان نیاز به <b>دقت زیادی</b> دارد. از طرفی هنجارهای کمتری در دست داریم و از طرفی دیگر برخی مشکلات جسمی ارزیابی را تحت تأثیر قرار می‌دهد.</div>
+<div class="fa">یکی از مقیاس‌های مورد استفاده <b>«مقیاس تجدیدنظرشده تأثیر میزان حوادث» (IES-R)</b> می‌باشد.</div>
+<div class="fa">افراد مسن در این مقیاس <b>نمره کمتری</b> می‌گیرند. با توجه به اینکه نسخه اصلاح‌شده IES عوامل انگیختگی فیزیولوژیک را اضافه کرده است، برای سالمندان نسخه اصلاح‌شده اطمینان کمتری دارد.</div>
+<div class="fa"><b>تاریخچه:</b> ابداع توسط <b>هوروینز</b> در سال <b>۱۹۷۹</b> (برای بررسی تأثیر سوگ) — اصلاح توسط <b>ویس و مرمر</b> در <b>۱۹۹۷</b> بر اساس DSM-IV.</div>
+<div class="fa"><b>نوع:</b> خودگزارشی.</div>
+<div class="fa"><b>سه زیرمقیاس:</b> افکار مزاحم — برانگیختگی — اجتناب.</div>
+<div class="fa"><b>ساختار:</b> ۲۲ ماده در طیف لیکرت (پنج‌گزینه‌ای).</div>
+<div class="fa"><b>نمونه ماده:</b></div>
+<div class="fa">• احساس می‌کنم گوش به زنگ شده‌ام.</div>
+<div class="fa">• سعی می‌کنم درباره حادثه صحبت نکنم.</div>
+<div class="fa">• احساس می‌کنم عصبانی و خشمگین هستم.</div>
+<div class="fa">• درباره‌اش رویاهایی می‌بینم.</div>
+<div class="fa">• احساس من نسبت به آن حادثه حس کرختی و بی‌حسی است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۱) برنامه زمان‌بندی فعالیت‌های هفتگی</h3></div>
+<div class="fa">برای شناخت بیشتر از فعالیت‌های روزمره و هفتگی می‌توانید برنامه زمان‌بندی فعالیت‌های هفتگی را تکمیل کنید.</div>
+<div class="fa"><b>پیشنهاد عملی:</b> برنامه زمان‌بندی فعالیت‌های هفتگی ۵ سالمند مرد و ۵ سالمند زن را تهیه کنید. برنامه را بر اساس نتایج مصاحبه و شناخت قبلی خود از آن‌ها به بحث بگذارید.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۲) سیاهه زندگی سالم</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">چنانچه خواهان یک سبک زندگی سالم و افزایش احتمال بهره‌مندی خود از زندگی طولانی‌تر هستید، به‌طور معمول توصیه کارشناسان به شما انجام یک سری رفتارهایی است که سلامت را تقویت می‌کنند.</div>
+<div class="fa">مقالات مجلات و سایت‌های اینترنتی فرمول‌هایی را برای پیش‌بینی طول عمر فرد از روی این آیتم‌ها در اختیار قرار می‌دهند.</div>
+<div class="fa">برای قضاوت در مورد فعالیت‌های سلامت و طول عمری که می‌توانید انتظار داشته باشید، در مقابل هر کدام از عبارات زیر که در مورد شما صدق می‌کند، یک علامت × قرار دهید:</div>
+<div class="fa"><b>ده آیتم اول (افزایش مستقیم سلامت و طول عمر):</b></div>
+<div class="fa">۱) من سیگار نمی‌کشم.</div>
+<div class="fa">۲) من الکل مصرف نمی‌کنم.</div>
+<div class="fa">۳) من وزن طبیعی دارم (نه زیاد لاغر و نه زیاد چاق).</div>
+<div class="fa">۴) من هیچ‌وقت در حین رانندگی با تلفن همراه صحبت نمی‌کنم.</div>
+<div class="fa">۵) من هر وقت بیرون می‌روم از کرم ضد آفتاب استفاده می‌کنم.</div>
+<div class="fa">۶) من هر روز میوه، سبزیجات و مقداری شکلات تیره مصرف می‌کنم.</div>
+<div class="fa">۷) من روزهای زیادی یک آسپرین بچه مصرف می‌کنم.</div>
+<div class="fa">۸) من در هفته ۴ یا ۵ بار ورزش می‌کنم.</div>
+<div class="fa">۹) من به‌طور مرتب دندان‌هایم را مسواک زده و نخ می‌کشم.</div>
+<div class="fa">۱۰) من همیشه از کمربند ایمنی استفاده می‌کنم.</div>
+<div class="fa"><b>ده آیتم دوم (تأثیر غیرمستقیم بر سلامت و لذت‌بخش‌تر کردن عمر):</b></div>
+<div class="fa">۱۱) من اغلب احساس شادی و رضایت دارم.</div>
+<div class="fa">۱۲) من در فعالیت‌های زیادی که برایم لذت‌بخش هستند، شرکت می‌کنم.</div>
+<div class="fa">۱۳) من از زندگی‌ام رضایت دارم.</div>
+<div class="fa">۱۴) من فقط گاهی اوقات احساس غمگینی می‌کنم.</div>
+<div class="fa">۱۵) من فقط گاهی اوقات عصبانی می‌شوم.</div>
+<div class="fa">۱۶) من فقط گاهی اوقات دچار استرس می‌شوم.</div>
+<div class="fa">۱۷) من اغلب احساس قدرشناسی دارم و به‌طور کلی به دیگران اعتماد دارم.</div>
+<div class="fa">۱۸) من از دوستان و اعضای خانواده‌ای برخوردارم که می‌توانم به آن‌ها اتکا کنم.</div>
+<div class="fa">۱۹) من شخص خوش‌بینی هستم.</div>
+<div class="fa">۲۰) من از روابط اجتماعی خود شاد هستم.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> ده آیتم نخست به احتمال زیاد میزان سلامت و طول عمر را افزایش می‌دهند. ده آیتم دوم احتمالاً غیرمستقیم بر سلامت و طول عمر تأثیر می‌گذارد و سال‌های اضافی عمر را بسیار لذت‌بخش‌تر می‌کنند!
+</div>
+<div class="fa"><b>منبع:</b> کتاب «شادی: رمزگشایی از ثروت روان‌شناختی» تألیف اد دینر و رابرت بیسواز-دینر.</div>
+</div>
+</section>
+
+<!-- ========== تفاوت‌ها ========== -->
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>ADL vs FAQ</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>ADL</th><th>FAQ</th></tr></thead>
+<tbody>
+<tr><td>فعالیت‌های پایه (حمام، لباس، غذا)</td><td>فعالیت‌های پیچیده‌تر (خرید، سفر، فعالیت اقتصادی)</td></tr>
+<tr><td>سازنده: کاتز (۱۹۷۶)</td><td>سازنده: فیفر (۱۹۸۲)</td></tr>
+<tr><td>مشاهده + مصاحبه با درمانگر</td><td>تکمیل توسط همسر یا نزدیکان</td></tr>
+<tr><td>۶ فعالیت</td><td>۱۰ سؤال ۶ گزینه‌ای</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>MMSE vs CCSE</h3></div>
+<table class="compare">
+<thead><tr><th>MMSE</th><th>CCSE</th></tr></thead>
+<tbody>
+<tr><td>فولستاین (۱۹۷۵)</td><td>جاکوبز (۱۹۷۷)</td></tr>
+<tr><td>هنجاریابی ایرانی: فروغان (۱۳۸۵)</td><td>۳۰ سؤال</td></tr>
+<tr><td>پرکاربردترین غربالگری شناختی</td><td>مشخص کردن نشانگان ذهنی ارگانیک</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ADAS vs BLS-D</h3></div>
+<table class="compare">
+<thead><tr><th>ADAS</th><th>BLS-D</th></tr></thead>
+<tbody>
+<tr><td>روزناند و موهس (۱۹۸۳)</td><td>بلسد (۱۹۶۸)</td></tr>
+<tr><td>۲۱ آیتم</td><td>۲۲ آیتم</td></tr>
+<tr><td>سنجش شدت آلزایمر</td><td>سنجش نشانه‌های رفتاری و شناختی دمانس</td></tr>
+<tr><td>صفر تا ۵ برای هر آیتم</td><td>صفر (بهنجار) تا ۲۸ (نابهنجار)</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>PQCMS vs GDS</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>PQCMS</th><th>GDS</th></tr></thead>
+<tbody>
+<tr><td>لاوتون (۱۹۷۲)</td><td>برینک و جرومه (۱۹۸۲)</td></tr>
+<tr><td>روحیه و بهزیستی</td><td>افسردگی اختصاصی سالمندان</td></tr>
+<tr><td>۲۲ سؤال</td><td>۳۰ یا ۱۵ سؤال بله/خیر</td></tr>
+<tr><td>سالمندان ۷۰-۹۰ سال</td><td>بدون علائم جسمانی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>CAPE vs MAI</h3></div>
+<table class="compare">
+<thead><tr><th>CAPE</th><th>MAI</th></tr></thead>
+<tbody>
+<tr><td>پتیا و گیلبارد (۱۹۷۵)</td><td>لاوتون (۱۹۸۲)</td></tr>
+<tr><td>دو مؤلفه (شناختی + رفتاری)</td><td>۷ بعد و ۱۴۷ آیتم</td></tr>
+<tr><td>سالمندان با بیماری روان‌پزشکی طولانی‌مدت</td><td>بهزیستی کلی سالمندان جامعه</td></tr>
+<tr><td>درجه‌بندی A تا E</td><td>سلامت بدنی، شناخت، ADL، زمان، روابط، سازگاری، محیط</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>یادداشت روزانه خواب vs پلی‌سومنوگرافی</h3></div>
+<table class="compare">
+<thead><tr><th>یادداشت روزانه خواب</th><th>پلی‌سومنوگرافی</th></tr></thead>
+<tbody>
+<tr><td>خودسنجی، آسان، ارزان</td><td>گران و پرهزینه</td></tr>
+<tr><td>برنامه خواب-بیداری + کافئین + دارو</td><td>فعالیت مغز، حرکات چشم، فشار خون، تنفس</td></tr>
+<tr><td>همبستگی خوب با پلی‌سومنوگرافی</td><td>فقط در احتمال اختلال قطع تنفس در خواب</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرسشنامه حافظه vs IQCODE</h3></div>
+<table class="compare">
+<thead><tr><th>پرسشنامه حافظه</th><th>IQCODE</th></tr></thead>
+<tbody>
+<tr><td>خودگزارشی</td><td>مصاحبه با آشنا یا همراه</td></tr>
+<tr><td>۱۴ سؤال، نمره ۱۴-۵۶</td><td>۱۶ سؤال پنج‌گزینه‌ای</td></tr>
+<tr><td>میزان فراموشی روزمره</td><td>مقایسه با ۱۰ سال گذشته</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>IES-R vs سایر مقیاس‌ها</h3></div>
+<table class="compare">
+<thead><tr><th>IES-R</th><th>ویژگی</th></tr></thead>
+<tbody>
+<tr><td>هوروینز (۱۹۷۹)، اصلاح ویس و مرمر (۱۹۹۷)</td><td>خودگزارشی، ۲۲ ماده</td></tr>
+<tr><td>سه زیرمقیاس: افکار مزاحم، برانگیختگی، اجتناب</td><td>برای PTSD در سالمندان</td></tr>
+<tr><td>افراد مسن نمره کمتری می‌گیرند</td><td>نسخه اصلاح‌شده برای سالمندان اطمینان کمتری دارد</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ========== نظریه‌پردازان ========== -->
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان و سازندگان مقیاس‌ها</h2>
+<p class="section-sub">هر نظریه‌پرداز + ابداع + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>سیدنی کاتز — ADL (۱۹۷۶)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>ابداع:</b> شاخص استقلال در کارکردهای زندگی روزمره (ADL).</div>
+<div class="fa"><b>کاربرد:</b> بررسی کارکردهای فیزیکی سالمندان و بیماران مزمن — ۶ فعالیت (حمام، لباس، توالت، انتقال، خودداری، تغذیه).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فولستاین و همکاران — MMSE (۱۹۷۵)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>ابداع:</b> آزمون معاینه مختصر وضعیت شناختی (MMSE).</div>
+<div class="fa"><b>هنجاریابی ایرانی:</b> مهشید فروغان و همکاران (۱۳۸۵) در سالمندان تهران.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابرت فیفر — FAQ (۱۹۸۲)</h3></div>
+<div class="fa"><b>ابداع:</b> پرسشنامه فعالیت‌های کارکردی (FAQ) برای سالمندان بهنجار و دمانس متوسط.</div>
+<div class="fa"><b>ساختار:</b> ۱۰ سؤال ۶ گزینه‌ای — تکمیل توسط همسر یا نزدیکان.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>برنیک و همکاران — LSI (۱۹۶۱)</h3></div>
+<div class="fa"><b>ابداع:</b> شاخص رضایت از زندگی (LSI).</div>
+<div class="fa"><b>کاربرد:</b> سنجش بهزیستی روانی و سازگاری — تعیین سالمندی موفق.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کینگ — SISRI-24 (۲۰۰۸)</h3></div>
+<div class="fa"><b>ابداع:</b> پرسشنامه خودگزارشی هوش معنوی (SISRI-24) با ۲۴ سؤال.</div>
+<div class="fa"><b>چهار عامل:</b> تفکر انتقادی وجودی، تولید معنای شخصی، آگاهی متعالی، توسعه سطوح هوشیار.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لاوتون — PQCMS (۱۹۷۲) و MAI (۱۹۸۲)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>ابداع ۱:</b> مقیاس روحیه مرکز پیری‌شناسی فیلادلفیا (PQCMS) — ۱۹۷۲.</div>
+<div class="fa"><b>ابداع ۲:</b> ابزار سنجش چندسطحی (MAI) — ۱۹۸۲ — ۷ بعد و ۱۴۷ آیتم.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>برینک و جرومه — GDS (۱۹۸۲)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>ابداع:</b> مقیاس افسردگی دوران پیری (GDS) — ۳۰ سؤال بله/خیر (نسخه ۱۵ سؤالی هم دارد).</div>
+<div class="fa"><b>دلیل طراحی:</b> برینک معتقد بود علائم افسردگی در سالمندان و جوانان متفاوت است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مارگارت و برنارد — SELF (۱۹۸۴)</h3></div>
+<div class="fa"><b>ابداع:</b> مقیاس خود ارزیابی کارکرد زندگی (SELF) — ۵۴ سؤال و شش عامل.</div>
+<div class="fa"><b>کاربرد:</b> سنجش کارکرد فیزیکی، روان‌شناسی و اجتماعی در افراد ۶۰ سال به بالا.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جاکوبز — CCSE (۱۹۷۷)</h3></div>
+<div class="fa"><b>ابداع:</b> آزمایش غربالگری ظرفیت شناختی (CCSE) — ۳۰ سؤال.</div>
+<div class="fa"><b>کاربرد:</b> مشخص کردن نشانگان ذهنی ارگانیک (به‌ویژه دلیریوم) و بررسی قضاوت و سرعت عملکرد ذهنی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روزناند و ریچارد موهس — ADAS (۱۹۸۳)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>ابداع:</b> مقیاس سنجش آلزایمر (ADAS) — ۲۱ آیتم.</div>
+<div class="fa"><b>کاربرد:</b> سنجش شدت نقص‌های رفتاری، شناختی و عاطفی آلزایمر + شاخص شدت دمانس.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بلسد — BLS-D (۱۹۶۸)</h3></div>
+<div class="fa"><b>ابداع:</b> مقیاس دمانس (BLS-D) — ۲۲ آیتم.</div>
+<div class="fa"><b>کاربرد:</b> ابزار تحقیقی برای سنجش نشانه‌های رفتاری و شناختی دمانس — مطالعات نوروپاتولوژیک.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پتیا و گیلبارد — CAPE (۱۹۷۵)</h3></div>
+<div class="fa"><b>ابداع:</b> روش‌های سنجش کلیفتون (CAPE).</div>
+<div class="fa"><b>ساختار:</b> دو مؤلفه (مقیاس سنجش شناختی + مقیاس درجه‌بندی رفتار).</div>
+<div class="fa"><b>کاربرد:</b> سالمندان با بیماری روان‌پزشکی طولانی‌مدت — درجه‌بندی A تا E.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هوروینز — IES (۱۹۷۹) و ویس و مرمر — IES-R (۱۹۹۷)</h3></div>
+<div class="fa"><b>ابداع اولیه:</b> هوروینز (۱۹۷۹) — برای بررسی تأثیر سوگ.</div>
+<div class="fa"><b>اصلاح:</b> ویس و مرمر (۱۹۹۷) بر اساس DSM-IV — سه زیرمقیاس: افکار مزاحم، برانگیختگی، اجتناب.</div>
+<div class="fa"><b>ساختار:</b> ۲۲ ماده در طیف لیکرت پنج‌گزینه‌ای.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فریده یغمایی — ابزار استقلال ایرانی</h3></div>
+<div class="fa"><b>ابداع:</b> «ابزار استقلال فعالیت‌های زندگی روزانه» — ۲۰ ماده پنج‌گزینه‌ای.</div>
+<div class="fa"><b>منبع:</b> مجله دانشکده پرستاری و مامایی دانشگاه شهید بهشتی، شماره ۵۰، پاییز ۱۳۸۴.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مارتین — پرسشنامه حافظه (۱۳۸۵)</h3></div>
+<div class="fa"><b>منبع:</b> پرسشنامه حافظه با ۱۴ سؤال و تفسیر نمرات ۱۴-۵۶.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اد دینر و رابرت بیسواز-دینر — سیاهه زندگی سالم</h3></div>
+<div class="fa"><b>منبع:</b> کتاب «شادی: رمزگشایی از ثروت روان‌شناختی».</div>
+<div class="fa"><b>محتوا:</b> ۲۰ آیتم سبک زندگی سالم (۱۰ آیتم سلامت مستقیم + ۱۰ آیتم سلامت غیرمستقیم و لذت‌بخش).</div>
+</div>
+</section>
+
+<!-- ========== دام‌ها ========== -->
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: ADL = FAQ</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> ADL = فعالیت‌های <b>پایه</b> / FAQ = فعالیت‌های <b>پیچیده‌تر</b> (خرید، سفر، فعالیت اقتصادی).</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: GDS برای اضطراب است</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی GDS اضطراب را می‌سنجد.</div>
+<div class="fa"><b>جواب درست:</b> GDS <b>افسردگی</b> سالمندان را می‌سنجد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: MMSE تشخیص قطعی می‌دهد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی MMSE تشخیص قطعی می‌دهد.</div>
+<div class="fa"><b>جواب درست:</b> MMSE ابزار <b>غربالگری</b> است، نه تشخیصی.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: ADAS = BLS-D</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> ADAS = سنجش شدت آلزایمر (۲۱ آیتم) / BLS-D = سنجش نشانه‌های رفتاری و شناختی دمانس (۲۲ آیتم).</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: PQCMS = GDS</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> PQCMS = روحیه و بهزیستی / GDS = افسردگی.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: CAPE = MAI</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> CAPE = دو مؤلفه (شناختی + رفتاری) / MAI = ۷ بعد و ۱۴۷ آیتم.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: پلی‌سومنوگرافی برای همه لازم است</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی پلی‌سومنوگرافی برای همه لازم است.</div>
+<div class="fa"><b>جواب درست:</b> فقط در مواردی که احتمال <b>اختلال قطع تنفس در خواب</b> وجود دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: پرسشنامه حافظه تشخیص قطعی می‌دهد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی پرسشنامه حافظه تشخیص قطعی می‌دهد.</div>
+<div class="fa"><b>جواب درست:</b> پرسشنامه حافظه برای <b>غربالگری</b> است، نه تشخیص قطعی.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: IQCODE خودگزارشی است</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی IQCODE خودگزارشی است.</div>
+<div class="fa"><b>جواب درست:</b> IQCODE از طریق <b>مصاحبه با آشنا یا همراه</b> تکمیل می‌شود.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: IES-R برای سالمندان اطمینان بالا دارد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی IES-R برای سالمندان اطمینان بالا دارد.</div>
+<div class="fa"><b>جواب درست:</b> افراد مسن نمره کمتری می‌گیرند و نسخه اصلاح‌شده برای سالمندان <b>اطمینان کمتری</b> دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: SISRI-24 دو عامل دارد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی SISRI-24 دو عامل دارد.</div>
+<div class="fa"><b>جواب درست:</b> SISRI-24 <b>چهار عامل</b> دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: ADL نمره ۱۰ دارد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی حداکثر نمره ADL ۱۰ است.</div>
+<div class="fa"><b>جواب درست:</b> حداکثر نمره ADL <b>۶</b> است (۱ = استقلال / ۰ = وابستگی).</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: MAI ۷ آیتم دارد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی MAI ۷ آیتم دارد.</div>
+<div class="fa"><b>جواب درست:</b> MAI <b>۷ بعد و ۱۴۷ آیتم</b> دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: SELF ۲۰ سؤال دارد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی SELF ۲۰ سؤال دارد.</div>
+<div class="fa"><b>جواب درست:</b> SELF <b>۵۴ سؤال</b> و شش عامل دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: گزینه‌های با مترادف، فقط، همیشه</h3>
+<div class="fa"><b>دام چیه:</b> گزینه‌های مطلق را انتخاب می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> در مورد این فصل، گزینه‌های با «مترادف»، «فقط»، «همیشه» معمولاً نادرست‌اند.</div>
+</div>
+</section>
+
+<!-- ========== کوییز ========== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل ششم — مقیاس‌های سنجش در سالمندی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 06 · مشاوره سالمندی · فصل ششم: مقیاس‌های سنجش در سالمندی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"پرسشنامه حافظه چند سؤال دارد؟",options:["۱۰ سؤال","۱۲ سؤال","۱۴ سؤال","۲۰ سؤال"],answer:2,explanation:"پرسشنامه حافظه ۱۴ سؤال دارد."},
+{q:"نمره ۴۰ تا ۵۶ در پرسشنامه حافظه چه معنایی دارد؟",options:["حافظه بسیار خوب","عملکرد متوسط","کمتر از متوسط","حافظه خیلی ضعیف؛ توصیه به مشاوره با پزشک خانواده"],answer:3,explanation:"۴۰-۵۶: حافظه خیلی ضعیف؛ توصیه به پزشک خانواده."},
+{q:"IQCODE چه ویژگی دارد؟",options:["خودگزارشی با ۱۰ سؤال","از طریق مصاحبه با آشنا یا همراه با ۱۶ سؤال","تکمیل توسط درمانگر با ۲۰ سؤال","فقط برای کودکان"],answer:1,explanation:"IQCODE: مصاحبه با آشنا یا همراه، ۱۶ سؤال پنج‌گزینه‌ای."},
+{q:"MMSE توسط چه کسی طراحی شد؟",options:["فروغان","فولستاین (۱۹۷۵)","کاتز","لاوتون"],answer:1,explanation:"MMSE توسط فولستاین (۱۹۷۵) طراحی شد."},
+{q:"هنجاریابی ایرانی MMSE توسط چه کسی انجام شد؟",options:["مهشید فروغان (۱۳۸۵)","فریده یغمایی","رابرت فیفر","بلسد"],answer:0,explanation:"هنجاریابی ایرانی MMSE: مهشید فروغان (۱۳۸۵)."},
+{q:"پلی‌سومنوگرافی در چه مواردی توصیه می‌شود؟",options:["همه سالمندان","احتمال اختلال قطع تنفس در خواب","فقط افسردگی","فقط دمانس"],answer:1,explanation:"پلی‌سومنوگرافی فقط در احتمال اختلال قطع تنفس در خواب."},
+{q:"شاخص ADL توسط چه کسی ارائه شد؟",options:["فیفر","کاتز (۱۹۷۶)","لاوتون","بلسد"],answer:1,explanation:"ADL توسط سیدنی کاتز (۱۹۷۶)."},
+{q:"ADL شامل چند فعالیت است؟",options:["۳ فعالیت","۴ فعالیت","۶ فعالیت","۱۰ فعالیت"],answer:2,explanation:"ADL شامل ۶ فعالیت است."},
+{q:"حداکثر نمره ADL چقدر است؟",options:["۳","۶","۱۰","۲۰"],answer:1,explanation:"حداکثر نمره ADL ۶ (استقلال) و حداقل ۰ (وابستگی)."},
+{q:"FAQ توسط چه کسی طراحی شد؟",options:["کاتز","رابرت فیفر (۱۹۸۲)","لاوتون","جاکوبز"],answer:1,explanation:"FAQ توسط رابرت فیفر (۱۹۸۲)."},
+{q:"FAQ بیشتر چه چیزی را می‌سنجد؟",options:["فعالیت‌های پایه","فعالیت‌های اجتماعی (خرید، سفر، فعالیت اقتصادی)","حافظه","افسردگی"],answer:1,explanation:"FAQ: فعالیت‌های اجتماعی مانند خرید، سفر، فعالیت اقتصادی."},
+{q:"LSI توسط چه کسی طراحی شد؟",options:["برنیک و همکاران (۱۹۶۱)","کاتز","فیفر","لاوتون"],answer:0,explanation:"LSI توسط برنیک و همکاران (۱۹۶۱)."},
+{q:"LSI برای تعیین چه چیزی می‌توان استفاده کرد؟",options:["دمانس","افسردگی","سالمندی موفق","اضطراب"],answer:2,explanation:"LSI برای تعیین سالمندی موفق."},
+{q:"SISRI-24 چند عامل دارد؟",options:["۲ عامل","۳ عامل","۴ عامل","۵ عامل"],answer:2,explanation:"SISRI-24 چهار عامل دارد."},
+{q:"PQCMS توسط چه کسی معرفی شد؟",options:["لاوتون (۱۹۷۲)","کاتز","فیفر","برینک"],answer:0,explanation:"PQCMS توسط لاوتون (۱۹۷۲)."},
+{q:"GDS چه ویژگی دارد؟",options:["شامل علائم جسمانی است","اختصاصی افسردگی سالمندان، بله/خیر، ۳۰ یا ۱۵ سؤال","فقط برای اضطراب است","فقط برای دمانس"],answer:1,explanation:"GDS: اختصاصی افسردگی سالمندان، بله/خیر، ۳۰ یا ۱۵ سؤال."},
+{q:"SELF چند سؤال و چند عامل دارد؟",options:["۲۰ سؤال و ۴ عامل","۵۴ سؤال و ۶ عامل","۱۰۰ سؤال و ۸ عامل","۳۰ سؤال و ۵ عامل"],answer:1,explanation:"SELF: ۵۴ سؤال و شش عامل."},
+{q:"CCSE توسط چه کسی ارائه شد؟",options:["جاکوبز (۱۹۷۷)","کاتز","فیفر","لاوتون"],answer:0,explanation:"CCSE توسط جاکوبز (۱۹۷۷)."},
+{q:"ADAS چند آیتم دارد؟",options:["۱۰ آیتم","۲۱ آیتم","۳۰ آیتم","۴۰ آیتم"],answer:1,explanation:"ADAS ابتدا ۴۰ آیتمی بود و به ۲۱ آیتم کاهش یافت."},
+{q:"MAI چند بعد و چند آیتم دارد؟",options:["۳ بعد و ۳۰ آیتم","۵ بعد و ۵۰ آیتم","۷ بعد و ۱۴۷ آیتم","۱۰ بعد و ۲۰۰ آیتم"],answer:2,explanation:"MAI: ۷ بعد و ۱۴۷ آیتم."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

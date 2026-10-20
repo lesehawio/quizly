@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · قضا و قدر · سری 13</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"13";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>قضا و قدر · سری 13</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>قضا و قدر و اختیار انسان</h2>
+  <p>جزوه جامع امتحانی · تعریف ساده + نکته امتحانی + دام آزمون · ویژه آزمون چهارگزینه‌ای</p>
+  <div class="pills"><span class="pill">۶ بخش</span><span class="pill">۴ قسم قضا و قدر</span><span class="pill">۱۵+ مفهوم</span><span class="pill">۵ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان ساده و برای آمادگی امتحان چهارگزینه‌ای طراحی شده است. هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۶</b><span>بخش اصلی</span></div>
+<div class="stat"><b>۴</b><span>قسم قضا و قدر</span></div>
+<div class="stat"><b>۱۵+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۵</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>قضا و قدر</h3></div>
+<div class="grid2">
+<div class="box"><h4>قضا</h4>
+<div class="fa">ضرورت و حتمیت یک چیز وقتی علت تامه فراهم شد</div>
+</div>
+<div class="box"><h4>قدر</h4>
+<div class="fa">خصوصیات، حدود و ثغور معلول</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اقسام قضا و قدر</h3></div>
+<div class="grid2">
+<div class="box"><h4>قضای تکوینی</h4>
+<div class="fa">قانون علیت + علت نخستین + اراده خداوند</div>
+</div>
+<div class="box"><h4>قدر تکوینی</h4>
+<div class="fa">تعین و حد و اندازه خاص هر موجود</div>
+</div>
+<div class="box"><h4>قضای تشریعی</h4>
+<div class="fa">اوامر و نواهی خدا برای انسان مختار</div>
+</div>
+<div class="box"><h4>قدر تشریعی</h4>
+<div class="fa">حدود و اندازه واجبات و محرمات</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدر علمی و فعلی</h3></div>
+<div class="fa"><b>قدر علمی:</b> تقدیر اشیاء در مرتبه علم الهی قبل از آفرینش (صفت ذات)</div>
+<div class="fa"><b>قدر فعلی:</b> تقدیر اشیاء در مرتبه فعل و آفرینش خارجی (صفت فعل)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضا و قدر و اختیار انسان</h3></div>
+<div class="fa"><b>دو نسبت در هر فعل:</b></div>
+<div class="fa">۱. نسبت وجوب: نسبت میان عمل و علت تامه (شامل اراده انسان)</div>
+<div class="fa">۲. نسبت امکان: نسبت میان اجزاء و علل</div>
+<div class="fa"><b>نتیجه:</b> قضا و قدر با اختیار انسان منافات ندارد</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>قضا در لغت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> به معنای محکم‌کاری و اتقان یک‌چیز و فیصله دادن آمده است.</div>
+<div class="fa">قاضی را از آن جهت قاضی می‌گویند که با صدور حکم، آن را محکم کرده و به نزاع فیصله می‌دهد.</div>
+<div class="fa">بسیاری از لغت‌دانان قضا را به حکم، قطع کردن، امضا و فیصله دادن معنا کرده‌اند.</div>
+<div class="fa"><b>مثال قرآنی:</b> «وَقَضَى رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ» (اسراء/۲۳) — پروردگارت فرمان داده جز او را نپرستید.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا در لغت = محکم‌کاری، اتقان، فیصله دادن. اگر سوال پرسید «قضا در لغت به چه معناست؟» جواب: محکم‌کاری، اتقان، فیصله دادن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضا در اصطلاح</h3></div>
+<div class="fa"><b>تعریف ساده:</b> قضا این است که وقتی علل و اسباب یک پدیده موجود شد و شرایط فراهم آمد و موانع از بین رفت، به‌طور حتم پدیده و معلول محقق شده و ضرورت وجود خواهد یافت.</div>
+<div class="fa"><b>مثال باز شدن در:</b> پیش از فراهم شدن علل و عوامل و شرایط لازم (وجود کلید، حرکت انگشتان دست، وارد کردن کلید در قفل و...)، ضرورت و حتمیتی برای باز شدن در وجود ندارد. اما وقتی همه شرایط و اسباب فراهم شد و علت تام و کامل گردید، عمل باز شدن در، از حالت امکان خارج شده و حالت حتمی به خود خواهد گرفت.</div>
+<div class="fa"><b>به تعبیر علامه طباطبائی:</b> قضا به‌معنای معروف خود، ضروری و حتمی قرار دادن نسبت میان موضوع و محمول است و به‌معنای تکوینی و حقیقی، ایجاب و ضرورتی است که از طرف علت تامه بر معلول صدق می‌کند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا در اصطلاح = ضرورت و حتمیت پدیده پس از فراهم شدن علت تامه. اگر سوال پرسید «قضا در اصطلاح چیست؟» جواب: ضرورت و حتمیت پدیده پس از فراهم شدن علت تامه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدر در لغت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> به معنای اندازه، حد و نهایت آمده است.</div>
+<div class="fa">تقدیر به معنای کمیت و مقدار یک چیز است.</div>
+<div class="fa">به عبارت دیگر: قدر در لغت حد شیء، صفات، خصوصیات و آثار یک چیز را می‌گویند.</div>
+<div class="fa"><b>مثال نجار:</b> نجار پیش از ساختن میز مقدار، اندازه و خصوصیت میز را در نظر می‌گیرد و براساس آن میز را می‌سازد. پس در اینجا نجار، هم مقدار و تقدیر علمی میز را در ذهن خود محاسبه می‌کند و هم در عالم خارج میز را براساس اندازه و حدود آن می‌سازد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قدر در لغت = اندازه، حد و نهایت. اگر سوال پرسید «قدر در لغت به چه معناست؟» جواب: اندازه، حد و نهایت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدر در اصطلاح</h3></div>
+<div class="fa"><b>تعریف ساده:</b> پدیده‌ها و مخلوقات چه مادی و چه مجرد، با خصوصیات و آثار خاص خود ایجاد می‌شوند و علت آنها با در نظر گرفتن قالب خاص هر معلول، آن را ایجاد می‌کند.</div>
+<div class="fa"><b>به تعبیر علامه طباطبائی:</b> قدر کمیت، هندسه، حد، تقدیر و تعیین حد و خصوصیات وجودی یک چیز را می‌گویند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قدر در اصطلاح = خصوصیات، حدود و ثغور معلول. اگر سوال پرسید «قدر در اصطلاح چیست؟» جواب: خصوصیات، حدود و ثغور معلول.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضای تکوینی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> مقصود از قضای تکوینی حوادث و اموری است که براساس قانون علت و معلول و سبب و مسبب در جهان روی می‌دهد.</div>
+<div class="fa">براساس قانون علیت، هر معلولی دارای علت است و هیچ پدیده‌ای در جهان امکان، بدون علت به‌وجود نمی‌آید.</div>
+<div class="fa">چون جهان تکوین، از موجودات مجرد گرفته تا موجودات مادی، فعل و معلول خداوند متعال هستند، بنابراین بین حوادث و خداوند که علت نهایی پدیده‌هاست، نسبت و ارتباط حقیقی برقرار است.</div>
+<div class="fa">تا خداوند متعال به عنوان علت نخستین، اراده پدید آمدن چیزی را نکند، هیچ موجودی در عالم امکان تحقق نخواهد یافت.</div>
+<div class="fa">قضای تکوینی مربوط به صفات فعل خداوند بوده و از انتساب فعل به خداوند، به‌عنوان علت تامه، پدیده و فعل انتزاع می‌شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضای تکوینی = قانون علیت + علت نخستین + اراده خداوند. اگر سوال پرسید «قضای تکوینی چیست؟» جواب: حوادثی که براساس قانون علت و معلول روی می‌دهد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدر تکوینی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> قدر تکوینی به این معناست که یک شیء برای اینکه از اشیای دیگر تمایز و تفاوت داشته باشد، حد و اندازه‌ای دارد که آن حد و اندازه، او را از چیز دیگر جدا می‌کند.</div>
+<div class="fa">به عبارت دیگر: قدر تکوینی به‌معنای تعین خاصی است که اشیاء نسبت به همدیگر دارند و تعینات موجودات باعث تفاوت و تکثر آنها شده است.</div>
+<div class="fa"><b>مثال:</b> حد وجودی خورشید آن را از حد وجودی ماه، یا حد وجودی انسان او را از حد وجودی اسب جدا کرده است.</div>
+<div class="fa">تکثر و تنوعی که در پدیده‌های جهان آفرینش دیده می‌شود، همگی مربوط به تعینات و تقدیرهایی است که هرکدام از آنها را در عالم خارج در حد معینی محدود کرده است.</div>
+<div class="fa">پس قدر تکوینی، کیفیت و چگونگی و خصوصیت آفرینش هر موجود است.</div>
+<div class="fa"><b>آیه:</b> «وَكُلُّ شَيْءٍ عِندَهُ بِمِقْدَارٍ» (رعد/۸)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قدر تکوینی = تعین و حد و اندازه خاص هر موجود. اگر سوال پرسید «قدر تکوینی چیست؟» جواب: تعین خاصی که اشیاء نسبت به همدیگر دارند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضای تشریعی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> قضای تشریعی همان فرامین خدا و قوانین شرعی و دینی است که از سوی دین به عنوان مجموعه اوامر و نواهی، و دستورات و مقررات برای انسان مختار جعل و بیان شده است.</div>
+<div class="fa"><b>مثال:</b> وجوب انجام نماز، روزه، حج؛ حرمت قمار، شراب‌خواری، ربا و...</div>
+<div class="fa"><b>کلام امیرالمؤمنین (ع):</b> «الْأَمْرُ بِالطَّاعَةِ وَالنَّهْى عَنِ الْمَعْصِيَةِ ... وَالْوَعْدُ وَالْوَعِيدُ ... هُوَ لَكَ قَضَاءُ اللَّهِ وَأَعْلَانًا وَقَدْرُهُ لِأَعْلَانًا» — فرمان خداوند به اطاعت کردن بندگان و نهی او از نافرمانی و وعده و تشویق و تهدید و هشدار خداوند، همگی قضای خداوند درباره افعال ما و قدر او برای اعمال ما هستند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضای تشریعی = اوامر و نواهی خدا برای انسان مختار. اگر سوال پرسید «قضای تشریعی چیست؟» جواب: فرامین خدا و قوانین شرعی برای انسان مختار.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدر تشریعی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> قدر تشریعی همان حدود و ثغور و ویژگی‌ها و مقدار و تعداد و اندازه واجبات و محرمات است که شریعت بیان کرده است.</div>
+<div class="fa">به تفصیل در کتاب‌های فقهی، زوایا و خصوصیات تک‌تک آنها نه‌تنها از جهت وجوب و حرمت، بلکه از جهت استحباب، کراهت و اباحه نیز بیان شده است.</div>
+<div class="fa">افعال اختیاری انسان در قالب واجب، مستحب، حرام، مکروه و مباح، و براساس مصالح و مفاسد و پاداش و کیفر معین و مشخصی که دارند، بیان شده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قدر تشریعی = حدود و اندازه واجبات و محرمات. اگر سوال پرسید «قدر تشریعی چیست؟» جواب: حدود و ثغور و اندازه واجبات و محرمات.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدر علمی و قدر فعلی</h3></div>
+<div class="fa"><b>قدر تکوینی علمی:</b> خداوند متعال قبل از آفرینش هر چیزى، حد و مقدار آن را در مرتبه علم الهی معلوم و مشخص می‌کند. (صفت ذات)</div>
+<div class="fa"><b>قدر تکوینی فعلی (عینی):</b> وجود خارجی و آفرینش یک موجود در خارج و در مرتبه فعل است که با تعیین، مقدار، اندازه خاص و مشخص آفریده می‌شود. (صفت فعل)</div>
+<div class="fa"><b>آیه:</b> «وَكُلُّ شَيْءٍ عِندَهُ بِمِقْدَارٍ»</div>
+<div class="fa"><b>نتیجه:</b> قدر علمی پیش از قدر فعلی و عینی، مقدم بر آن بوده و از صفات ذات خدا شمرده می‌شود، ولی قدر فعلی پس از قدر علمی و از صفات فعل خداوند است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قدر علمی = صفت ذات / قدر فعلی = صفت فعل. اگر سوال پرسید «قدر علمی و فعلی چه تفاوتی دارند؟» جواب: علمی قبل از آفرینش و صفت ذات، فعلی در مرتبه فعل و صفت فعل.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شبهه قضا و قدر و اختیار انسان</h3></div>
+<div class="fa"><b>طرح شبهه:</b> اگر بپذیریم افعال اختیاری انسان داخل در قضای الهی است، باید بپذیریم که افعال انسان مخلوق خداوند است، نه ناشی از اختیار و اراده انسان.</div>
+<div class="fa"><b>پاسخ:</b> بین اعتقاد به قضا و قدر، و اختیار و آزادی انسان منافاتی وجود ندارد؛ زیرا در هر فعل و عملی که از انسان صادر می‌شود، دو نسبت وجود دارد:</div>
+<div class="fa"><b>۱. نسبت وجوب:</b> نسبت میان عمل و علت تامه آن. وقتی همه اجزاء و شرایط ازجمله اراده انسان فراهم شد، معلول در خارج پدید خواهد آمد. چنین نسبتی، نسبت وجوب است.</div>
+<div class="fa"><b>۲. نسبت امکان:</b> نسبت میان خود اجزاء و علل و اسباب. تنها با فراهم شدن یک جزء یا برخی اجزای علت، معلول ضرورت وجود پیدا نمی‌کند؛ بلکه همچنان در مرتبه امکان قرار دارد.</div>
+<div class="fa"><b>نتیجه:</b> قضای یک فعل به معنای حتمیت آن است و آن در صورتی است که علت تامه برای تحقق فعل موجود بوده و هیچ نقصان و کمبودی نداشته باشد. اما وقتی همه اجزاء و شرایط فراهم شده و جزء دهم یعنی اراده و اختیار انسان به آن ملحق گردید، معلول در خارج تحقق خواهد یافت.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا و قدر با اختیار انسان منافات ندارد. اگر سوال پرسید «آیا قضا و قدر با اختیار انسان منافات دارد؟» جواب: خیر، دو نسبت وجود دارد: وجوب و امکان.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>داستان جنگ صفین</h3></div>
+<div class="fa">مردی همراه امیرالمؤمنین (ع) در جنگ صفین بود، به ایشان عرض کرد: یا امیرالمؤمنین! آیا رفتن ما به منطقه شام به قضا و قدر خداست یا نه؟</div>
+<div class="fa"><b>امام فرمود:</b> «والله ما هبطنا وادیاً ولا علونا تلعةً ولا وطنا موطناً إلا بقضاء من الله و قدر» — به خدا قسم هیچ بلندی را بالا نرفتیم و هیچ سراشیبی را فرود نیامدیم، و پای بر هیچ جای ننهادیم، مگر به قضا و قدر خدا.</div>
+<div class="fa">مرد شامی گفت: یا امیرالمؤمنین! در این صورت پس رنجی که بر من در این راه رسیده است، برای خدا بنویسیم و برای من پاداشی نیست، چون می‌گویی به قضا و قدر خداست؟</div>
+<div class="fa"><b>امام فرمود:</b> «نه، خدای متعال به شما پاداش می‌دهد؛ زیرا درحالی‌که راه می‌رفتنی، و درحالی‌که ایستاده بودی، با اختیار خود می‌رفتی و می‌ایستادی و در هیچ حال مجبور نبودی.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> داستان جنگ صفین = قضا و قدر با اختیار منافات ندارد. اگر سوال پرسید «پاسخ امام علی در جنگ صفین چه بود؟» جواب: با اختیار خود می‌رفتی و می‌ایستادی و مجبور نبودی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>داستان دیوار شکسته</h3></div>
+<div class="fa">امام علی (ع) در پای دیواری نشسته بود و متوجه شد که دیوار شکسته و ممکن است فروریزد؛ پس فوراً برخاست و از آنجا دور شد.</div>
+<div class="fa">مردی به اعتراض گفت: از قضای الهی می‌گریزی؟!</div>
+<div class="fa"><b>حضرت در پاسخ فرمود:</b> «أفرّ من قضاء الله إلی قدره» — از قضا الهی به سوی قدر الهی فرار می‌کنم.</div>
+<div class="fa"><b>معنای سخن امام:</b> هر حادثه‌ای در جهان پیش می‌آید، مورد قضا و تقدیر الهی است. اگر آدمی خود را در معرض خطر قرار دهد و آسیب ببیند، قضای خدا و قانون خداست، و اگر از خطر بگریزد و نجات یابد، آن‌هم خارج از قانون خدا و تقدیر او نیست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> «أفرّ من قضاء الله إلی قدره» = فرار از قضا به قدر. اگر سوال پرسید «این جمله از کیست و به چه معناست؟» جواب: امام علی (ع)؛ یعنی نجات یافتن هم خارج از قانون خدا نیست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کلام امام علی درباره گناه‌کار</h3></div>
+<div class="fa">از امام علی (ع) درباره قضا و قدر پرسش شد، امام فرمود:</div>
+<div class="fa">«نگویید خدا گناه‌کاران را به حال خودشان وانه‌اده است؛ زیرا با این سخن خدا را سبک می‌گیرید.</div>
+<div class="fa">و نیز نگویید: خدا گناه‌کاران را بر انجام دادن گناه، مجبور کرده است؛ زیرا با این سخن ستمگر را به خدا نسبت می‌دهید.</div>
+<div class="fa">بلکه بگویید: خیر در سایه توفیق خداست و شر به سبب برداشتن دست یاری خداست و همه‌چیز در حیطه علم خداوند بوده است.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کلام امام علی درباره گناه‌کار = نه جبر، نه تفویض. اگر سوال پرسید «نظر امام علی درباره گناه‌کار چیست؟» جواب: نه جبر، نه تفویض؛ خیر از توفیق خدا و شر از واگذاری به خود.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">هر جفت مفهوم + تفاوت ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>قضا vs قدر</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>قضا</th><th>قدر</th></tr></thead>
+<tbody>
+<tr><td>لغت</td><td>محکم‌کاری، اتقان، فیصله دادن</td><td>اندازه، حد، نهایت</td></tr>
+<tr><td>اصطلاح</td><td>ضرورت و حتمیت یک چیز وقتی علت تامه فراهم شد</td><td>خصوصیات، حدود و ثغور معلول</td></tr>
+<tr><td>آنچه لحاظ می‌شود</td><td>ضرورت و حتمی بودن یک چیز</td><td>خصوصیات، حدود و ثغور معلول</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا = حتمیت / قدر = اندازه. اگر سوال پرسید «تفاوت قضا و قدر چیست؟» جواب: قضا = ضرورت و حتمیت، قدر = خصوصیات و حدود.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> قضا و قدر را قاطی نکنید. قضا = قطعی، قدر = اندازه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضای تکوینی vs قضای تشریعی</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>قضای تکوینی</th><th>قضای تشریعی</th></tr></thead>
+<tbody>
+<tr><td>قلمرو</td><td>حوادث و امور جهان</td><td>انسان مختار</td></tr>
+<tr><td>محتوا</td><td>قانون علت و معلول</td><td>اوامر و نواهی خدا</td></tr>
+<tr><td>مثال</td><td>باز شدن در</td><td>وجوب نماز و روزه</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تکوینی = قانون طبیعی / تشریعی = قانون دینی. اگر سوال پرسید «تفاوت قضای تکوینی و تشریعی چیست؟» جواب: تکوینی = حوادث جهان، تشریعی = اوامر و نواهی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدر علمی vs قدر فعلی</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>قدر علمی</th><th>قدر فعلی</th></tr></thead>
+<tbody>
+<tr><td>مرتبه</td><td>قبل از آفرینش</td><td>در مرتبه فعل</td></tr>
+<tr><td>صفت</td><td>صفت ذات</td><td>صفت فعل</td></tr>
+<tr><td>مثال</td><td>تقدیر اشیاء در علم خدا</td><td>تقدیر اشیاء در خارج</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علمی = قبل از آفرینش / فعلی = در مرتبه فعل. اگر سوال پرسید «تفاوت قدر علمی و فعلی چیست؟» جواب: علمی قبل از آفرینش (صفت ذات)، فعلی در مرتبه فعل (صفت فعل).
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> قدر علمی و قدر فعلی را قاطی نکنید. علمی = صفت ذات، فعلی = صفت فعل.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حکم خدا vs حکم قاضی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> حکم قاضی اعتباری و قراردادی است، اما حکم خدا تکوینی و حقیقی است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حکم خدا = تکوینی و حقیقی / حکم قاضی = اعتباری و قراردادی. اگر سوال پرسید «تفاوت حکم خدا و قاضی چیست؟» جواب: حکم خدا تکوینی و حکم قاضی اعتباری است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نسبت وجوب vs نسبت امکان</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> نسبت وجوب = نسبت میان عمل و علت تامه / نسبت امکان = نسبت میان خود اجزاء و علل</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا و قدر با اختیار انسان = دو نسبت. اگر سوال پرسید «چگونه قضا و قدر با اختیار انسان منافات ندارد؟» جواب: دو نسبت وجود دارد: وجوب و امکان.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جبر vs تفویض vs امر بین الامرین</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> جبر = فقط خدا / تفویض = فقط انسان / امر بین الامرین = هر دو</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کلام امام علی درباره گناه‌کار = نه جبر، نه تفویض. اگر سوال پرسید «نظر امام علی درباره گناه‌کار چیست؟» جواب: نه جبر، نه تفویض.
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۴ · شخصیت‌ها و نظریه‌پردازان</h2>
+<p class="section-sub">هر شخصیت + نظریه ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>امام علی (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام اول شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> در جنگ صفین فرمود: «والله ما هبطنا وادیاً ولا علونا تلعةً ولا وطنا موطناً إلا بقضاء من الله و قدر» — به خدا قسم هیچ بلندی را بالا نرفتیم و هیچ سراشیبی را فرود نیامدیم، و پای بر هیچ جای ننهادیم، مگر به قضا و قدر خدا. اما در عین حال با اختیار خود می‌رفتیم و می‌ایستادیم. در پاسخ به اعتراض به فرار از دیوار شکسته فرمود: «أفرّ من قضاء الله إلی قدره». درباره گناه‌کار فرمود: نه جبر، نه تفویض.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام علی = قضا و قدر با اختیار منافات ندارد. اگر سوال پرسید «داستان جنگ صفین از کیست؟» جواب: امام علی (ع).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علامه طباطبائی</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و مفسر معاصر</div>
+<div class="fa"><b>نظریه ساده:</b> قضا به‌معنای معروف خود، ضروری و حتمی قرار دادن نسبت میان موضوع و محمول است و به‌معنای تکوینی و حقیقی، ایجاب و ضرورتی است که از طرف علت تامه بر معلول صدق می‌کند. قدر کمیت، هندسه، حد، تقدیر و تعیین حد و خصوصیات وجودی یک چیز را می‌گویند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبائی = تعریف قضا و قدر. اگر سوال پرسید «تعریف قضا از دیدگاه علامه طباطبائی چیست؟» جواب: ضروری و حتمی قرار دادن نسبت میان موضوع و محمول.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شهید مطهری</h3></div>
+<div class="fa"><b>کی بود:</b> متفکر و فیلسوف اسلامی</div>
+<div class="fa"><b>نظریه ساده:</b> تاریخ نشان می‌دهد که مسئله قضا و قدر در زمان بنی‌امیه بهانه محکمی برای سیاستمداران اموی شد. آنها جدّاً از مسلک جبر طرف‌داری می‌کردند و طرف‌داران اختیار و آزادی بشر را به اتهام مخالفت با یک عقیده دینی می‌کشتند یا به زندان می‌انداختند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شهید مطهری = بنی‌امیه و جبرگرایی. اگر سوال پرسید «چه کسی تاریخ قضا و قدر را تحلیل کرد؟» جواب: شهید مطهری.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معبد جهنی و غیلان دمشقی</h3></div>
+<div class="fa"><b>کی بودند:</b> از نخستین مطرح‌کنندگان اختیار و آزادی بشر در دوره اموی</div>
+<div class="fa"><b>نظریه ساده:</b> معبد جهنی (از اهل عراق) و غیلان دمشقی (از اهل شام) به راستی و درستی، و صدق و ایمان شناخته می‌شدند. معبد به همراهی ابن‌اشعث خروج کرد و به‌دست حجاج کشته شد. غیلان نیز پس از آنکه سخنانش به گوش هشام بن عبدالملک رسید، به دستور هشام دست‌ها و پاهایش را بریده، سپس به دار آویختند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معبد جهنی و غیلان دمشقی = نخستین مطرح‌کنندگان اختیار. اگر سوال پرسید «چه کسانی در دوره اموی اختیار را مطرح کردند؟» جواب: معبد جهنی و غیلان دمشقی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شهرستانی</h3></div>
+<div class="fa"><b>کی بود:</b> مورخ علم کلام</div>
+<div class="fa"><b>نظریه ساده:</b> در کتاب تاریخ علم کلام می‌نویسد: در زمان امویان چون بازار سفاکی رواج داشت، قهراً در طبایع شورش پیدا می‌شد؛ لکن هرگاه کسی شکایتی می‌کرد، طرف‌داران حکومت حواله به تقدیر کرده و او را ساکت و خاموش می‌کردند و می‌گفتند: آنچه می‌شود، مقدر و مرضی خداست و نباید هیچ دم زد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شهرستانی = تحلیل قضا و قدر در تاریخ. اگر سوال پرسید «شهرستانی چه گفت؟» جواب: امویان قضا و قدر را بهانه سرکوب مخالفان می‌کردند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حسن بصری</h3></div>
+<div class="fa"><b>کی بود:</b> از تابعین</div>
+<div class="fa"><b>نظریه ساده:</b> معبد جهنی از استاد خود حسن بصری پرسید: اینکه بنی‌امیه مسئله قضا و قدر را پیش می‌کشند، تا کجا راست و درست است؟ او گفت: ایشان دشمنان خدا هستند و دروغ می‌گویند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حسن بصری = بنی‌امیه دشمن خدا و دروغگو. اگر سوال پرسید «حسن بصری درباره بنی‌امیه چه گفت؟» جواب: ایشان دشمنان خدا هستند و دروغ می‌گویند.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: قضا vs قدر</h3>
+<div class="fa"><b>دام چیه:</b> قضا و قدر رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> قضا = حتمیت / قدر = اندازه</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا = قطعی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: قضای تکوینی vs تشریعی</h3>
+<div class="fa"><b>دام چیه:</b> قضای تکوینی و تشریعی رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> تکوینی = قانون طبیعی / تشریعی = اوامر و نواهی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تکوینی = حوادث جهان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: قدر علمی vs فعلی</h3>
+<div class="fa"><b>دام چیه:</b> قدر علمی و فعلی رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> علمی = قبل از آفرینش (صفت ذات) / فعلی = در مرتبه فعل (صفت فعل)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علمی = صفت ذات
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: قضا و قدر و اختیار</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی قضا و قدر با اختیار منافات دارد.</div>
+<div class="fa"><b>جواب درست:</b> قضا و قدر با اختیار منافات ندارد</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دو نسبت وجود دارد: وجوب و امکان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: داستان جنگ صفین</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی امام علی در جنگ صفین جبر را تأیید کرد.</div>
+<div class="fa"><b>جواب درست:</b> با اختیار خود می‌رفتیم و می‌ایستادیم</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام علی = قضا و قدر با اختیار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: داستان دیوار شکسته</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فرار از دیوار شکسته مخالفت با قضاست.</div>
+<div class="fa"><b>جواب درست:</b> «أفرّ من قضاء الله إلی قدره» — فرار از قضا به قدر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فرار = خارج از قانون خدا نیست
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: کلام امام علی درباره گناه‌کار</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی امام علی جبر یا تفویض را تأیید کرد.</div>
+<div class="fa"><b>جواب درست:</b> نه جبر، نه تفویض</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خیر از توفیق خدا / شر از واگذاری به خود
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: تعریف قضا در لغت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی قضا در لغت یعنی اندازه.</div>
+<div class="fa"><b>جواب درست:</b> قضا در لغت = محکم‌کاری، اتقان، فیصله دادن</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا = محکم‌کاری
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: تعریف قدر در لغت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی قدر در لغت یعنی حتمیت.</div>
+<div class="fa"><b>جواب درست:</b> قدر در لغت = اندازه، حد، نهایت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قدر = اندازه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: بنی‌امیه و جبر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بنی‌امیه طرفدار اختیار بود.</div>
+<div class="fa"><b>جواب درست:</b> بنی‌امیه جبرگرایی را ترویج می‌کرد</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بنی‌امیه = جبر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: معبد جهنی و غیلان دمشقی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی این دو نفر طرفدار جبر بودند.</div>
+<div class="fa"><b>جواب درست:</b> این دو نفر نخستین مطرح‌کنندگان اختیار بودند</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معبد و غیلان = اختیار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: علت نخستین</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی علت نخستین همان انسان است.</div>
+<div class="fa"><b>جواب درست:</b> علت نخستین = خداوند متعال</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علت نخستین = خدا
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 13 · قضا و قدر · جزوه جامع امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"قضا در لغت به چه معناست؟",options:["اندازه و حد","محکم‌کاری و اتقان و فیصله دادن","ضرورت و حتمیت","خصوصیات و حدود"],answer:1,explanation:"قضا در لغت = محکم‌کاری، اتقان، فیصله دادن."},
+{q:"قدر در لغت به چه معناست؟",options:["محکم‌کاری","فیصله دادن","اندازه، حد، نهایت","حکم کردن"],answer:2,explanation:"قدر در لغت = اندازه، حد، نهایت."},
+{q:"قضا در اصطلاح چیست؟",options:["ضرورت و حتمیت یک چیز وقتی علت تامه فراهم شد","خصوصیات و حدود معلول","قانون طبیعی","اوامر و نواهی"],answer:0,explanation:"قضا = ضرورت و حتمیت یک چیز وقتی علت تامه فراهم شد."},
+{q:"قدر در اصطلاح چیست؟",options:["ضرورت و حتمیت","خصوصیات، حدود و ثغور معلول","محکم‌کاری","فیصله دادن"],answer:1,explanation:"قدر = خصوصیات، حدود و ثغور معلول."},
+{q:"قضای تکوینی چیست؟",options:["اوامر و نواهی","حوادثی که براساس قانون علت و معلول روی می‌دهد","حدود واجبات","اندازه محرمات"],answer:1,explanation:"قضای تکوینی = حوادثی براساس قانون علت و معلول."},
+{q:"قدر تکوینی چیست؟",options:["اوامر و نواهی","تعین و حد و اندازه خاص هر موجود","حدود واجبات","اندازه محرمات"],answer:1,explanation:"قدر تکوینی = تعین و حد و اندازه خاص هر موجود."},
+{q:"قضای تشریعی چیست؟",options:["قانون علت و معلول","اوامر و نواهی خدا برای انسان مختار","تعین موجودات","حدود محرمات"],answer:1,explanation:"قضای تشریعی = اوامر و نواهی خدا برای انسان مختار."},
+{q:"قدر تشریعی چیست؟",options:["قانون علت و معلول","تعین موجودات","حدود و اندازه واجبات و محرمات","حوادث جهان"],answer:2,explanation:"قدر تشریعی = حدود و اندازه واجبات و محرمات."},
+{q:"قدر علمی چیست؟",options:["تقدیر اشیاء در مرتبه علم الهی قبل از آفرینش","تقدیر اشیاء در مرتبه فعل","تقدیر انسان","تقدیر حیوان"],answer:0,explanation:"قدر علمی = تقدیر اشیاء در مرتبه علم الهی قبل از آفرینش."},
+{q:"قدر فعلی چیست؟",options:["تقدیر اشیاء در مرتبه علم الهی","تقدیر اشیاء در مرتبه فعل و آفرینش خارجی","تقدیر انسان","تقدیر حیوان"],answer:1,explanation:"قدر فعلی = تقدیر اشیاء در مرتبه فعل و آفرینش خارجی."},
+{q:"قدر علمی و قدر فعلی هرکدام چه صفتی هستند؟",options:["هر دو صفت ذات","هر دو صفت فعل","علمی صفت ذات، فعلی صفت فعل","علمی صفت فعل، فعلی صفت ذات"],answer:2,explanation:"قدر علمی صفت ذات، قدر فعلی صفت فعل."},
+{q:"داستان جنگ صفین از کیست؟",options:["امام باقر","امام علی","امام صادق","امام هادی"],answer:1,explanation:"داستان جنگ صفین از امام علی (ع) است."},
+{q:"داستان دیوار شکسته و جمله «أفرّ من قضاء الله إلی قدره» از کیست؟",options:["امام باقر","امام علی","امام صادق","امام هادی"],answer:1,explanation:"از امام علی (ع) است."},
+{q:"کلام امام علی درباره گناه‌کار چه چیزی را نشان می‌دهد؟",options:["جبر","تفویض","نه جبر، نه تفویض","اختیار مطلق"],answer:2,explanation:"نه جبر، نه تفویض."},
+{q:"قضا و قدر با اختیار انسان چه رابطه‌ای دارد؟",options:["منافات دارد","منافات ندارد","یکی است","بی‌ربط است"],answer:1,explanation:"قضا و قدر با اختیار منافات ندارد."},
+{q:"کدام یک از دو نسبت در هر فعل است؟",options:["نسبت وجوب و نسبت امکان","نسبت علم و نسبت قدرت","نسبت ذات و نسبت فعل","نسبت قضا و نسبت قدر"],answer:0,explanation:"دو نسبت: وجوب و امکان."},
+{q:"چه کسانی در دوره اموی اختیار را مطرح کردند؟",options:["معبد جهنی و غیلان دمشقی","حسن بصری","شهرستانی","امام علی"],answer:0,explanation:"معبد جهنی و غیلان دمشقی = نخستین مطرح‌کنندگان اختیار."},
+{q:"بنی‌امیه کدام جریان را ترویج می‌کردند؟",options:["اختیار","جبر","تفویض","امر بین الامرین"],answer:1,explanation:"بنی‌امیه جبر را ترویج می‌کردند."},
+{q:"حسن بصری درباره بنی‌امیه چه گفت؟",options:["صادق هستند","دشمنان خدا هستند و دروغ می‌گویند","مؤمن هستند","عادل هستند"],answer:1,explanation:"حسن بصری = بنی‌امیه دشمن خدا و دروغگو."},
+{q:"تفاوت حکم خدا و حکم قاضی چیست؟",options:["حکم خدا اعتباری و حکم قاضی تکوینی","حکم خدا تکوینی و حکم قاضی اعتباری","هر دو تکوینی","هر دو اعتباری"],answer:1,explanation:"حکم خدا تکوینی و حکم قاضی اعتباری است."},
+{q:"علت نخستین پدیده‌ها کیست؟",options:["انسان","خداوند متعال","محرک","متحرک"],answer:1,explanation:"علت نخستین = خداوند متعال."},
+{q:"قضای تکوینی مربوط به کدام صفت خداست؟",options:["صفت ذات","صفت فعل","صفت علم","صفت قدرت"],answer:1,explanation:"قضای تکوینی مربوط به صفات فعل خداست."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

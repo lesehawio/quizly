@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره بهداشت روانی · سری 01 · فصل سوم: هدف بهداشت روانی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"03";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره بهداشت روانی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل سوم: هدف بهداشت روانی</h2>
+  <p>خدمات، آموزش، پژوهش، برنامه‌ریزی، پیشگیری، درمان و توان‌بخشی</p>
+  <div class="pills"><span class="pill">خدمات</span><span class="pill">آموزش</span><span class="pill">پژوهش</span><span class="pill">برنامه‌ریزی</span><span class="pill">پیشگیری</span><span class="pill">درمان</span><span class="pill">توان‌بخشی</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس سرفصل‌های <b>فصل سوم کتاب «بهداشت روانی» میلانی‌فر</b> تدوین شده است. عناوین دقیقاً مطابق ساختار فصل ارائه شده‌اند: <b>خدمات بهداشت روانی، آموزش، پژوهش، طرح و برنامه‌ریزی، پیشگیری، درمان و بازتوانی (توان‌بخشی)</b> — همراه با نکات دام‌دار و آزمون تمرینی.</div>
+
+<div class="stats">
+<div class="stat"><b>۵</b><span>نوع خدمت</span></div>
+<div class="stat"><b>۳</b><span>سطح پیشگیری</span></div>
+<div class="stat"><b>۳</b><span>سطح ارائه خدمات</span></div>
+<div class="stat"><b>۱۳</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#services">خدمات و آموزش</a><a href="#research">پژوهش و برنامه‌ریزی</a><a href="#prevention">پیشگیری</a><a href="#treatment">درمان و توان‌بخشی</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>خدمات بهداشت روانی — انواع و سطوح</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>خدمات بهداشت روانی:</b> مجموعه‌ای از اقدامات عملی برای تأمین، حفظ و ارتقای سلامت روان جامعه. هدف: تبدیل دانش نظری به عمل.
+</div>
+<table class="compare">
+<thead><tr><th>نوع خدمت</th><th>توضیح</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>پیشگیری</td><td>جلوگیری از بروز اختلال</td><td>آموزش مهارت‌های زندگی</td></tr>
+<tr><td>تشخیصی</td><td>شناسایی اختلالات</td><td>غربالگری، ارزیابی</td></tr>
+<tr><td>درمانی</td><td>کاهش نشانه‌ها</td><td>روان‌درمانی، دارو</td></tr>
+<tr><td>توان‌بخشی</td><td>بازگرداندن عملکرد</td><td>کاردرمانی، توان‌بخشی شغلی</td></tr>
+<tr><td>حمایتی</td><td>حمایت اجتماعی</td><td>مددکاری، مسکن حمایتی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>سطوح ارائه:</b> مراقبت‌های اولیه (ادغام در مراکز بهداشت) ← ثانویه (تخصصی سرپایی) ← ثالث (بستری تخصصی). رویکرد مدرن بر <b>ادغام در مراقبت‌های اولیه</b> تأکید دارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آموزش بهداشت روانی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف:</b> فرآیندی که به افزایش آگاهی، تغییر نگرش و بهبود مهارت افراد و جامعه کمک می‌کند.</div>
+<div class="fa"><b>گروه‌های هدف:</b> عموم مردم (کاهش انگ)، خانواده‌ها (شناسایی نشانه‌ها)، معلمان (ارجاع)، پزشکان عمومی (غربالگری)، متخصصان (آموزش مداوم).</div>
+<div class="fa"><b>روش‌ها:</b> سخنرانی، کارگاه، بحث گروهی، رسانه‌ها، جزوه و کتابچه، آموزش همتا.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> آموزش = اطلاع‌رسانی؛ درمان = مداخله. این دو را مترادف نگیر.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پژوهش و برنامه‌ریزی</h3></div>
+<div class="fa"><b>پژوهش:</b> فرآیند نظام‌مند تولید دانش درباره علل، شیوع، پیشگیری و درمان اختلالات روانی.</div>
+<div class="fa"><b>انواع پژوهش:</b> بنیادی (دانش نظری) — کاربردی (حل مشکل) — توصیفی (توصیف وضعیت) — تحلیلی (بررسی روابط) — مداخله‌ای (ارزیابی اثربخشی).</div>
+<div class="fa"><b>برنامه‌ریزی بهداشتی:</b> فرآیند نظام‌مند تعیین اهداف، تخصیص منابع و اجرای اقدامات.</div>
+<div class="fa"><b>مراحل برنامه‌ریزی:</b> نیازسنجی ← تعیین اولویت‌ها ← تعیین اهداف ← طراحی مداخله ← تخصیص منابع ← اجرا ← پایش و ارزشیابی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> ادغام سلامت روان در مراقبت‌های اولیه در ایران از سال <b>۱۳۶۸</b> شروع شد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سطوح پیشگیری (طبقه‌بندی سه‌سطحی کیلن)</h3><span class="badge s">حفظ کن</span></div>
+<table class="compare">
+<thead><tr><th>سطح</th><th>زمان</th><th>هدف</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>اولیه</td><td>قبل از بروز</td><td>کاهش بروز</td><td>آموزش مهارت‌های زندگی</td></tr>
+<tr><td>ثانویه</td><td>مراحل اولیه</td><td>کاهش شیوع/مدت</td><td>غربالگری، درمان زودهنگام</td></tr>
+<tr><td>ثالث</td><td>پس از استقرار</td><td>کاهش عوارض/ناتوانی</td><td>توان‌بخشی، پیشگیری از عود</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>طبقه‌بندی مکمل:</b> همگانی (کل جمعیت) — انتخابی (گروه‌های پرخطر) — موردی (افراد با نشانه زیرآستانه). این طبقه‌بندی <b>مکمل</b> سه‌سطحی است، نه <b>جایگزین</b> آن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>درمان و توان‌بخشی</h3></div>
+<div class="fa"><b>درمان:</b> کاهش نشانه‌ها، بهبود عملکرد و بازگرداندن سلامت فرد مبتلا.</div>
+<div class="fa"><b>انواع درمان:</b> دارو درمانی — روان‌درمانی — درمان ترکیبی — درمان گروهی — درمان خانواده.</div>
+<div class="fa"><b>توان‌بخشی (Rehabilitation):</b> فرآیندی که به فرد کمک می‌کند مهارت‌ها و عملکرد از‌دست‌رفته را بازیابد یا مهارت‌های جدید کسب کند.</div>
+<div class="fa"><b>انواع توان‌بخشی:</b> روانی — اجتماعی — شغلی — تحصیلی — شناختی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>مدل IPS:</b> مؤثرترین مدل اشتغال حمایتی (Individual Placement and Support).
+</div>
+</div>
+</section>
+
+<section id="services" class="section">
+<h2 class="section-title">۰۲ · خدمات و آموزش بهداشت روانی</h2>
+<p class="section-sub">تعاریف، انواع، سطوح و اصول</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف خدمات بهداشت روانی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف:</b> مجموعه‌ای از اقدامات عملی است که برای تأمین، حفظ و ارتقای سلامت روان جامعه ارائه می‌شود. هدف: تبدیل دانش نظری بهداشت روانی به عمل.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انواع خدمات</h3></div>
+<table class="compare">
+<thead><tr><th>نوع خدمت</th><th>توضیح</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>پیشگیری</td><td>جلوگیری از بروز اختلال</td><td>آموزش مهارت‌های زندگی</td></tr>
+<tr><td>تشخیصی</td><td>شناسایی اختلالات</td><td>غربالگری، ارزیابی</td></tr>
+<tr><td>درمانی</td><td>کاهش نشانه‌ها</td><td>روان‌درمانی، دارو</td></tr>
+<tr><td>توان‌بخشی</td><td>بازگرداندن عملکرد</td><td>کاردرمانی، توان‌بخشی شغلی</td></tr>
+<tr><td>حمایتی</td><td>حمایت اجتماعی</td><td>مددکاری، مسکن حمایتی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سطوح ارائه خدمات</h3></div>
+<table class="compare">
+<thead><tr><th>سطح</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>مراقبت‌های اولیه</td><td>ادغام سلامت روان در مراکز بهداشت</td></tr>
+<tr><td>مراقبت‌های ثانویه</td><td>خدمات تخصصی سرپایی</td></tr>
+<tr><td>مراقبت‌های ثالث</td><td>خدمات بستری تخصصی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> رویکرد مدرن بر ادغام سلامت روان در مراقبت‌های اولیه تأکید دارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اصول خدمات</h3></div>
+<div class="fa">در دسترس بودن — عدالت — تداوم — مشارکت — کرامت — محرمانگی — مبتنی بر شواهد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آموزش بهداشت روانی — تعریف و گروه‌های هدف</h3></div>
+<div class="fa"><b>تعریف:</b> فرآیندی که به افزایش آگاهی، تغییر نگرش و بهبود مهارت افراد و جامعه کمک می‌کند.</div>
+<table class="compare">
+<thead><tr><th>گروه</th><th>هدف</th></tr></thead>
+<tbody>
+<tr><td>عموم مردم</td><td>کاهش انگ، افزایش آگاهی</td></tr>
+<tr><td>خانواده‌ها</td><td>شناسایی نشانه‌ها، حمایت</td></tr>
+<tr><td>معلمان</td><td>شناسایی زودهنگام، ارجاع</td></tr>
+<tr><td>پزشکان عمومی</td><td>غربالگری، ارجاع</td></tr>
+<tr><td>متخصصان</td><td>آموزش مداوم</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>محتوای آموزش</h3></div>
+<div class="fa">• آگاهی از ماهیت اختلالات روانی</div>
+<div class="fa">• شناسایی نشانه‌های هشداردهنده</div>
+<div class="fa">• مهارت‌های زندگی</div>
+<div class="fa">• مهارت‌های فرزندپروری</div>
+<div class="fa">• کاهش انگ</div>
+<div class="fa">• کمک‌خواهی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روش‌های آموزش</h3></div>
+<div class="fa">سخنرانی، کارگاه، بحث گروهی، رسانه‌ها، جزوه و کتابچه، آموزش همتا.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آموزش در مدارس و محیط کار</h3></div>
+<div class="fa"><b>آموزش در مدارس:</b> مدرسه محیط کلیدی برای آموزش سلامت روان. برنامه‌ها: آموزش مهارت‌های زندگی، پیشگیری از قلدری، مشاوره مدرسه‌ای، آموزش معلمان.</div>
+<div class="fa"><b>آموزش در محیط کار:</b> هدف: کاهش استرس شغلی و ارتقای سلامت روان کارکنان. برنامه‌ها: مدیریت استرس، تعادل کار-زندگی، آموزش مدیران، دسترسی به مشاوره.</div>
+</div>
+</section>
+
+<section id="research" class="section">
+<h2 class="section-title">۰۳ · پژوهش و برنامه‌ریزی بهداشتی</h2>
+<p class="section-sub">انواع، اهمیت، مراحل و اصول</p>
+
+<div class="card">
+<div class="card-head"><h3>پژوهش بهداشت روانی — تعریف و انواع</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف:</b> فرآیندی نظام‌مند برای تولید دانش درباره علل، شیوع، پیشگیری و درمان اختلالات روانی.</div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>هدف</th></tr></thead>
+<tbody>
+<tr><td>بنیادی</td><td>تولید دانش نظری</td></tr>
+<tr><td>کاربردی</td><td>حل مشکلات عملی</td></tr>
+<tr><td>توصیفی</td><td>توصیف وضعیت</td></tr>
+<tr><td>تحلیلی</td><td>بررسی روابط</td></tr>
+<tr><td>مداخله‌ای</td><td>ارزیابی اثربخشی</td></tr>
+</tbody>
+</table>
+<div class="fa"><b>اهمیت پژوهش:</b> شناسایی علل، سنجش شیوع، ارزیابی مداخلات، بهبود خدمات، سیاست‌گذاری مبتنی بر شواهد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>چالش‌های پژوهش در ایران:</b> کمبود بودجه، کمبود نیروی متخصص، دشواری دسترسی به نمونه، مشکلات اخلاقی، کمبود همکاری بین‌نهادی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>طرح و برنامه‌ریزی بهداشتی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف:</b> فرآیندی نظام‌مند برای تعیین اهداف، تخصیص منابع و اجرای اقدامات به‌منظور بهبود سلامت روان جامعه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px;text-align:center">
+<b>مراحل برنامه‌ریزی:</b> نیازسنجی ← تعیین اولویت‌ها ← تعیین اهداف ← طراحی مداخله ← تخصیص منابع ← اجرا ← پایش و ارزشیابی
+</div>
+<div class="fa"><b>اصول برنامه‌ریزی:</b> مبتنی بر شواهد، مشارکت جامعه، عدالت، انعطاف‌پذیری، تداوم، ارزیابی.</div>
+<div class="fa"><b>برنامه‌ریزی در ایران:</b> ادغام سلامت روان در مراقبت‌های اولیه از سال <b>۱۳۶۸</b>. برنامه‌های ملی: غربالگری افسردگی، آموزش مهارت‌های زندگی، پیشگیری از اعتیاد، کمپین‌های آگاهی‌بخشی.</div>
+</div>
+</section>
+
+<section id="prevention" class="section">
+<h2 class="section-title">۰۴ · پیشگیری</h2>
+<p class="section-sub">سطوح سه‌گانه و طبقه‌بندی مکمل</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف پیشگیری</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف:</b> مجموعه اقداماتی است که برای کاهش بروز، مدت و عوارض اختلالات روانی انجام می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سطوح پیشگیری (طبقه‌بندی سه‌سطحی کیلن)</h3><span class="badge s">حفظ کن</span></div>
+<table class="compare">
+<thead><tr><th>سطح</th><th>زمان</th><th>هدف</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>اولیه</td><td>قبل از بروز</td><td>کاهش بروز</td><td>آموزش مهارت‌های زندگی</td></tr>
+<tr><td>ثانویه</td><td>مراحل اولیه</td><td>کاهش شیوع/مدت</td><td>غربالگری، درمان زودهنگام</td></tr>
+<tr><td>ثالث</td><td>پس از استقرار</td><td>کاهش عوارض/ناتوانی</td><td>توان‌بخشی، پیشگیری از عود</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> طبقه‌بندی سه‌سطحی کیلن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیشگیری اولیه</h3></div>
+<div class="fa"><b>هدف:</b> کاهش بروز.</div>
+<div class="fa"><b>اقدامات:</b> آموزش مهارت‌های زندگی، آموزش والدگری، برنامه‌های مدرسه‌محور، کاهش عوامل خطر، حمایت‌های روانی-اجتماعی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیشگیری ثانویه</h3></div>
+<div class="fa"><b>هدف:</b> شناسایی زودهنگام و درمان به‌موقع.</div>
+<div class="fa"><b>اقدامات:</b> غربالگری، تشخیص زودهنگام، ارجاع، شروع سریع مداخله.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> غربالگری ≠ تشخیص قطعی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیشگیری ثالث</h3></div>
+<div class="fa"><b>هدف:</b> کاهش عوارض، ناتوانی و پیشگیری از عود.</div>
+<div class="fa"><b>اقدامات:</b> توان‌بخشی، حمایت از بازگشت به کار/تحصیل، آموزش خودمراقبتی، پیگیری، پیشگیری از عود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>طبقه‌بندی مکمل: همگانی، انتخابی، موردی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>گروه هدف</th></tr></thead>
+<tbody>
+<tr><td>همگانی</td><td>کل جمعیت</td></tr>
+<tr><td>انتخابی</td><td>گروه‌های پرخطر</td></tr>
+<tr><td>موردی</td><td>افراد با نشانه زیرآستانه</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> این طبقه‌بندی مکمل سه‌سطحی است، نه جایگزین آن.
+</div>
+</div>
+</section>
+
+<section id="treatment" class="section">
+<h2 class="section-title">۰۵ · درمان و بازتوانی (توان‌بخشی)</h2>
+<p class="section-sub">تعاریف، انواع و اصول</p>
+
+<div class="card">
+<div class="card-head"><h3>درمان — تعریف و انواع</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف:</b> مجموعه اقداماتی است که برای کاهش نشانه‌ها، بهبود عملکرد و بازگرداندن سلامت فرد مبتلا انجام می‌شود.</div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>دارو درمانی</td><td>داروهای روان‌پزشکی</td></tr>
+<tr><td>روان‌درمانی</td><td>گفت‌وگو و مداخله روان‌شناختی</td></tr>
+<tr><td>درمان ترکیبی</td><td>دارو + روان‌درمانی</td></tr>
+<tr><td>درمان گروهی</td><td>درمان در گروه</td></tr>
+<tr><td>درمان خانواده</td><td>درگیر کردن خانواده</td></tr>
+</tbody>
+</table>
+<div class="fa"><b>اصول درمان:</b> تشخیص دقیق، متناسب با فرد، مبتنی بر شواهد، مشارکت مراجع، تداوم، محرمانگی.</div>
+<div class="fa"><b>درمان در ایران:</b> مراکز مشاوره، کلینیک‌های روان‌پزشکی، بیمارستان‌های روان‌پزشکی، مراکز ترک اعتیاد. چالش‌ها: کمبود روان‌پزشک و روان‌شناس، انگ اجتماعی، هزینه‌های درمان.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توان‌بخشی (Rehabilitation) — تعریف و انواع</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف:</b> فرآیندی است که به فرد کمک می‌کند مهارت‌ها و عملکرد از‌دست‌رفته را بازیابد یا مهارت‌های جدید کسب کند.</div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>هدف</th></tr></thead>
+<tbody>
+<tr><td>روانی</td><td>بهبود مهارت‌های شناختی و هیجانی</td></tr>
+<tr><td>اجتماعی</td><td>بهبود مهارت‌های بین‌فردی</td></tr>
+<tr><td>شغلی</td><td>بازگشت به کار</td></tr>
+<tr><td>تحصیلی</td><td>بازگشت به تحصیل</td></tr>
+<tr><td>شناختی</td><td>بهبود توجه و حافظه</td></tr>
+</tbody>
+</table>
+<div class="fa"><b>اصول توان‌بخشی:</b> مشارکت فعال فرد، هدف‌گذاری واقع‌بینانه، تیم چندتخصصی، تداوم و پیگیری، توجه به نقاط قوت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توان‌بخشی شغلی و مدل IPS</h3></div>
+<div class="fa"><b>هدف:</b> بازگشت به کار.</div>
+<div class="fa"><b>اجزا:</b> ارزیابی شغلی، آموزش مهارت‌های شغلی، پشتیبانی در محیط کار، پیگیری.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>مدل IPS:</b> مؤثرترین مدل اشتغال حمایتی (Individual Placement and Support).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توان‌بخشی در ایران</h3></div>
+<div class="fa"><b>خدمات:</b> مراکز توان‌بخشی، کاردرمانی، مراکز اشتغال حمایتی (محدود)، مراقبت در منزل (محدود).</div>
+<div class="fa"><b>چالش‌ها:</b> کمبود مراکز، کمبود نیروی متخصص، انگ اجتماعی، کمبود بودجه.</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: خدمات در برابر درمان</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> خدمات <b>مجموعه اقدامات</b>؛ درمان <b>بخشی</b> از خدمات.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: آموزش در برابر درمان</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> آموزش <b>اطلاع‌رسانی</b>؛ درمان <b>مداخله</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: پژوهش بنیادی در برابر کاربردی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> بنیادی <b>دانش نظری</b>؛ کاربردی <b>حل مشکل</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: برنامه‌ریزی در برابر اجرا</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> برنامه‌ریزی <b>تعیین اهداف</b>؛ اجرا <b>پیاده‌سازی</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: پیشگیری اولیه در برابر ثانویه</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> اولیه <b>قبل از بروز</b>؛ ثانویه <b>مراحل اولیه</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: پیشگیری ثانویه در برابر ثالث</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> ثانویه <b>مراحل اولیه</b>؛ ثالث <b>پس از استقرار</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: درمان در برابر توان‌بخشی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> درمان <b>کاهش نشانه</b>؛ توان‌بخشی <b>بازگرداندن عملکرد</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: سه‌سطحی در برابر همگانی/انتخابی/موردی</h3>
+<div class="fa"><b>دام چیه:</b> این دو طبقه‌بندی رو یکی می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> سه‌سطحی بر <b>زمان</b>؛ همگانی/انتخابی/موردی بر <b>سطح خطر</b>. این دو <b>مکمل</b> هم هستند، نه جایگزین.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: مدل IPS</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی IPS یک مدل درمانی است.</div>
+<div class="fa"><b>جواب درست:</b> IPS = <b>اشتغال حمایتی</b> با پشتیبانی مستمر (Individual Placement and Support).</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: توان‌بخشی در برابر مراقبت</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> توان‌بخشی <b>بازگرداندن عملکرد</b>؛ مراقبت <b>ارائه خدمات</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: ادغام در مراقبت‌های اولیه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ادغام بی‌تأثیر است.</div>
+<div class="fa"><b>جواب درست:</b> ادغام موجب <b>افزایش دسترسی</b> و <b>کاهش انگ</b> می‌شود.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: پژوهش در برابر ارزیابی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> پژوهش <b>تولید دانش</b>؛ ارزیابی <b>بررسی اثربخشی</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: برنامه‌ریزی در برابر سیاست‌گذاری</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> برنامه‌ریزی <b>تعیین اهداف و اقدامات</b>؛ سیاست‌گذاری <b>تعیین چارچوب کلان</b>.</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل سوم — هدف بهداشت روانی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · مشاوره بهداشت روانی · فصل سوم: هدف بهداشت روانی — بر اساس کتاب بهداشت روانی میلانی‌فر</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"«خدمات بهداشت روانی» شامل چه مواردی است؟",options:["فقط درمان","پیشگیری، تشخیص، درمان، توان‌بخشی","فقط پیشگیری","فقط دارو"],answer:1,explanation:"خدمات شامل پیشگیری، تشخیص، درمان، توان‌بخشی و حمایتی است."},
+{q:"رویکرد مدرن بر کدام سطح ارائه خدمات تأکید دارد؟",options:["مراقبت‌های اولیه","مراقبت‌های ثانویه","مراقبت‌های ثالث","بیمارستان"],answer:0,explanation:"رویکرد مدرن بر ادغام در مراقبت‌های اولیه تأکید دارد."},
+{q:"هدف «آموزش بهداشت روانی» چیست؟",options:["فقط درمان","افزایش آگاهی و مهارت","فقط دارو","فقط بستری"],answer:1,explanation:"آموزش: افزایش آگاهی، تغییر نگرش و بهبود مهارت."},
+{q:"کدام گزینه یک «گروه هدف آموزش» است؟",options:["فقط بیماران","عموم مردم، خانواده، معلمان","فقط روان‌پزشکان","فقط سالمندان"],answer:1,explanation:"گروه‌های هدف: عموم، خانواده، معلمان، پزشکان، متخصصان."},
+{q:"«آموزش همتا» به چه معناست؟",options:["آموزش توسط متخصص","آموزش توسط افراد با تجربه مشابه","آموزش توسط پزشک","آموزش توسط خانواده"],answer:1,explanation:"آموزش همتا: آموزش توسط افراد با تجربه مشابه."},
+{q:"هدف «پژوهش بنیادی» چیست؟",options:["حل مشکلات عملی","تولید دانش نظری","ارزیابی برنامه","درمان بیمار"],answer:1,explanation:"پژوهش بنیادی: تولید دانش نظری."},
+{q:"کدام گزینه یک «مرحله برنامه‌ریزی» است؟",options:["نیازسنجی","درمان","تشخیص","بستری"],answer:0,explanation:"نیازسنجی اولین مرحله برنامه‌ریزی است."},
+{q:"«ادغام سلامت روان در مراقبت‌های اولیه» در ایران از چه سالی شروع شد؟",options:["۱۳۵۰","۱۳۶۸","۱۳۸۰","۱۳۹۰"],answer:1,explanation:"ادغام از سال ۱۳۶۸ شروع شد."},
+{q:"هدف «پژوهش کاربردی» چیست؟",options:["تولید دانش نظری","حل مشکلات عملی","فقط توصیف","فقط تحلیل"],answer:1,explanation:"پژوهش کاربردی: حل مشکلات عملی."},
+{q:"کدام گزینه یک «اصل برنامه‌ریزی» است؟",options:["مبتنی بر شواهد","بدون ارزیابی","بدون مشارکت","بدون عدالت"],answer:0,explanation:"برنامه‌ریزی مبتنی بر شواهد، با مشارکت، عدالت و ارزیابی."},
+{q:"«پیشگیری اولیه» چه زمانی عمل می‌کند؟",options:["قبل از بروز","مراحل اولیه","پس از استقرار","پس از بهبودی"],answer:0,explanation:"پیشگیری اولیه: قبل از بروز."},
+{q:"«پیشگیری ثانویه» چه هدفی دارد؟",options:["کاهش بروز","کاهش شیوع و مدت","کاهش عوارض","افزایش بروز"],answer:1,explanation:"پیشگیری ثانویه: کاهش شیوع و مدت."},
+{q:"«پیشگیری ثالث» چه هدفی دارد؟",options:["کاهش بروز","کاهش شیوع","کاهش عوارض و ناتوانی","افزایش بروز"],answer:2,explanation:"پیشگیری ثالث: کاهش عوارض و ناتوانی."},
+{q:"تفاوت «درمان» و «توان‌بخشی» چیست؟",options:["مترادف هستند","درمان کاهش نشانه؛ توان‌بخشی بازگرداندن عملکرد","توان‌بخشی کاهش نشانه","هیچ تفاوتی ندارند"],answer:1,explanation:"درمان: کاهش نشانه؛ توان‌بخشی: بازگرداندن عملکرد."},
+{q:"«IPS» چه مدلی است؟",options:["مدل درمانی","مؤثرترین مدل اشتغال حمایتی","مدل تشخیصی","مدل دارویی"],answer:1,explanation:"IPS: مؤثرترین مدل اشتغال حمایتی."},
+{q:"طبقه‌بندی سه‌سطحی پیشگیری بر چه اساسی است؟",options:["سطح خطر","زمان","شدت","جنسیت"],answer:1,explanation:"سه‌سطحی (کیلن) بر اساس زمان است."},
+{q:"طبقه‌بندی «همگانی/انتخابی/موردی» بر چه اساسی است؟",options:["زمان","سطح خطر","شدت","سن"],answer:1,explanation:"این طبقه‌بندی بر اساس سطح خطر است."},
+{q:"رابطه طبقه‌بندی سه‌سطحی و همگانی/انتخابی/موردی چیست؟",options:["مترادف هستند","مکمل هم هستند","جایگزین هم هستند","بی‌ارتباط هستند"],answer:1,explanation:"این دو طبقه‌بندی مکمل هم هستند، نه جایگزین."},
+{q:"کدام گزینه از «انواع پژوهش» نیست؟",options:["بنیادی","کاربردی","مداخله‌ای","تشخیصی"],answer:3,explanation:"تشخیصی نوع پژوهش نیست."},
+{q:"«پیشگیری ثانویه» شامل کدام اقدام است؟",options:["آموزش مهارت‌های زندگی","غربالگری و درمان زودهنگام","توان‌بخشی","پیشگیری از عود"],answer:1,explanation:"غربالگری و درمان زودهنگام از اقدامات پیشگیری ثانویه است."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

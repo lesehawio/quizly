@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · شیوه‌های فرزندپروری · سری 01 · فصل دهم: خطاها در فرزندپروری</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"10";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>شیوه‌های فرزندپروری · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل دهم: خطاها در فرزندپروری</h2>
+  <p>خطای تو بدی، تو مهم نیستی، انتظار، نادیده گرفتن، سوءاستفاده از قدرت، دخالت، دروغ، اختلاف والدین و برچسب</p>
+  <div class="pills"><span class="pill">تو بدی</span><span class="pill">تو مهم نیستی</span><span class="pill">انتظار</span><span class="pill">نادیده گرفتن</span><span class="pill">سوءاستفاده از قدرت</span><span class="pill">دخالت</span><span class="pill">دروغ</span><span class="pill">اختلاف والدین</span><span class="pill">برچسب</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس فصل دهم کتاب «فرزندپروری مانند یک بازی» (نوشته <b>سعید جهانشاهی</b>) تدوین شده است. محور این فصل: <b>تعریف خطا در فرزندپروری</b> و <b>نُه خطای رایج</b>: تو بدی، تو مهم نیستی، انتظار، نادیده گرفتن، سوءاستفاده از قدرت، دخالت، دروغ، اختلاف والدین و برچسب (آشکار و پنهان). همه‌چیز به زبان ساده و خودمونی.</div>
+
+<div class="stats">
+<div class="stat"><b>۹</b><span>نوع خطا</span></div>
+<div class="stat"><b>۲</b><span>نوع برچسب</span></div>
+<div class="stat"><b>۲</b><span>نمایش برچسب</span></div>
+<div class="stat"><b>۲۰</b><span>سؤال آزمون</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ========== هسته امتحانی ========== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف خطا در فرزندپروری</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>خطا در بازی فرزندپروری:</b> کاری یا رفتاری که از پدر و مادر سر بزند و واضحاً کار نادرستی باشد.
+</div>
+<div class="fa"><b>خطاها انواع مختلفی دارند و در این فصل فقط به چند مورد اشاره می‌کنیم.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نُه خطای رایج در فرزندپروری</h3><span class="badge s">حفظ کن</span></div>
+<table class="compare">
+<thead><tr><th>خطا</th><th>توضیح کوتاه</th></tr></thead>
+<tbody>
+<tr><td>تو بدی</td><td>کاری کنیم که معنی آن «تو بد هستی» باشد — مثل سرزنش کردن</td></tr>
+<tr><td>تو مهم نیستی</td><td>خواسته و احساس خودمان را مهم‌تر از بچه بدانیم</td></tr>
+<tr><td>انتظار</td><td>از بچه انتظار داشته باشیم، نه از خودمان</td></tr>
+<tr><td>نادیده گرفتن</td><td>بچه و احساس و علاقه او را نبینیم</td></tr>
+<tr><td>سوءاستفاده از قدرت</td><td>به جای قدرت، زور بگوییم</td></tr>
+<tr><td>دخالت</td><td>در حریم فرزند دخالت کنیم</td></tr>
+<tr><td>دروغ</td><td>به بچه دروغ بگوییم</td></tr>
+<tr><td>اختلاف والدین</td><td>بچه بفهمد یکی به دیگری بد می‌گوید یا توهین می‌کند</td></tr>
+<tr><td>برچسب</td><td>به بچه برچسب بزنیم (آشکار یا پنهان)</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای تو بدی</h3><span class="badge s">مهم</span></div>
+<div class="fa">یعنی پدر یا مادر کاری بکنند که معنی آن این باشد که <b>فرزندشان بد است</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> بچه‌ها <b>کار بد</b> می‌کنند اما <b>بد نیستند</b>. آنچه بد است و باید تنبیه شود، <b>رفتار بچه</b> است، کار نادرستش، نه خودش.
+</div>
+<div class="fa">یکی از رایج‌ترین انواع خطای تو بدی، <b>سرزنش کردن</b> است.</div>
+<div class="fa"><b>رایج‌ترین موقع:</b> وقتی داریم به بچه کمک می‌کنیم مشق‌اش را بنویسد یا غذا بخورد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای تو مهم نیستی</h3></div>
+<div class="fa"><b>نمایش:</b></div>
+<div class="fa">مامان: «امروز یک غذای خوشمزه درست کردم.» / بچه: «چی داریم؟» / مامان: «قورمه سبزی.» / بچه: «دوس ندارم. من شیرکاکائو می‌خورم.»</div>
+<div class="fa">مامان: «چی؟ دوس نداری؟ چرا؟ خیلی خوشمزه‌اس؟ بابا خیلی دوس داره.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خطا:</b> بابا مهم است، تو مهم نیستی.
+</div>
+<div class="fa">بچه: «مامان، ولی من دوس ندارم.» / مامان: «به خدا اگه نخوری بدم می‌آد. خیلی زحمت کشیدم، تو که نمی‌خوای مامان رو ناراحت کنی؟»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خطا:</b> من مهم هستم، تو مهم نیستی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای انتظار</h3><span class="badge s">مهم</span></div>
+<div class="fa">وقتی مرتکب خطای انتظار شدیم که از <b>بچه</b> انتظار داشته باشیم، نه از <b>خودمان</b>.</div>
+<div class="fa"><b>مثال ۱:</b> از بچه انتظار داشته باشیم بفهمد ما چی می‌خواهیم بگوییم، اما از خودمان انتظار نداشته باشیم واضح و درست حرف بزنیم.</div>
+<div class="fa"><b>مثال ۲:</b> از بچه انتظار داشته باشیم با ما همکاری کند، اما از خودمان انتظار نداشته باشیم حداقل با او همدردی کنیم.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> اگه کسی باور داشته باشد که با تغییر رفتار خودش، یادگرفتن تکنیک‌های درست و... می‌تواند باعث تغییر رفتار فرزندش شود، او کسی است که از <b>خودش</b> انتظار داشته، نه از فرزندش. پس خطای انتظار نکرده.
+</div>
+<div class="fa"><b>نکته تکمیلی:</b> پدر و مادرهای عصبی و خسته، بیشتر خطای <b>تو بدی</b> می‌کنند. پدر و مادرهایی که فرزندپروری بلد نیستند یا اعتماد به نفسشان ضعیف است، بیشتر مرتکب خطای <b>انتظار</b> می‌شوند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای نادیده گرفتن</h3></div>
+<div class="fa">وقتی بچه را نمی‌بینیم، وقتی احساسش را، سلیقه و علاقه او را نمی‌بینیم، مرتکب <b>خطای نادیده گرفتن</b> شده‌ایم.</div>
+<div class="fa"><b>نمایش:</b> بچه در حال تماشای تلویزیون است و می‌گوید «گرسنه‌ام نیس». مادر اصرار می‌کند ناهار بخورد. پدر هم وارد می‌شود. در نهایت بچه می‌گوید: «مامان ناهار چی داریم؟ فسنجون، آخ جون.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> بچه گرسنه‌اش بود، اما تلویزیون می‌دید. پدر و مادر این موضوع را ندیدند. آن‌ها شکم گرسنه خودشان را می‌دیدند و غذای خودشان و ساعت یک بعد از ظهر و خوشمزگی غذا را، اما فرزندشان را که مشغول تماشای تلویزیون بود، ندیدند.
+</div>
+<div class="fa"><b>خطای دومی که در همین نمایش بود:</b> خطای <b>تو مهم نیستی</b> — غذا و ساعت و دلخور نشدن مامان مهم‌تر بود از احساس و علاقه و خود بچه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای سوءاستفاده از قدرت</h3></div>
+<div class="fa"><b>نمایش:</b> مادر تلویزیون را خاموش می‌کند. بچه گریه می‌کند. مادر: «از این اداها از خودت در نیار. بدو دستات رو بشور، به بابات می‌گم غذا نمی‌خوریا. غذات رو تا آخرش می‌خوری. همین که گفتم.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> یک پدر و مادر خوب باید <b>قدرت</b> داشته باشند، اما نباید <b>زور</b> بگویند، نباید زورگویی کنند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای دخالت</h3><span class="badge s">مهم</span></div>
+<div class="fa">وقتی پدر و مادر در <b>حریم فرزندشان</b> دخالت کنند.</div>
+<div class="fa"><b>شایع‌ترین جاها:</b></div>
+<div class="fa">• <b>موقع غذا خوردن:</b> غذا می‌ریزند توی ظرفش و می‌گویند «بخور، برات خوبه».</div>
+<div class="fa">• <b>سرزده به اتاقش می‌روند،</b> بدون اینکه در بزنند.</div>
+<div class="fa">• <b>دفتر خاطراتش یا وسایل شخصی‌اش را وارسی می‌کنند</b> چون «مادر هستند» یا «دلواپس بچه‌شان هستند».</div>
+<div class="fa">• <b>وقتی کسی از بچه سؤال می‌کند، والدین جواب می‌دهند:</b></div>
+<div class="fa">مهمان: «سلام، خانم کوچولو، کلاس چندمی؟» / مادر: «کلاس سوم.» / مهمان: «آفرین، اسم معلمتون چیه؟» / مادر: «خانم حسینی.»</div>
+<div class="fa">• <b>وقتی مادر و بچه دارند حرف می‌زنند، پدر وارد مکالمه آن‌ها می‌شود و جواب می‌دهد.</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>اشکال:</b> این‌طوری <b>قانون استقلال</b> در بازی فرزندپروری شکسته می‌شود. یعنی بچه مستقل بار نمی‌آید، نمی‌تواند از خودش دفاع کند، حرفش را بزند، بیان خواسته و بیان احساس را یاد نمی‌گیرد. بعد همین پدر و مادر شاکی می‌شوند که چرا بچه‌شان نمی‌تواند از خودش مواظبت کند، چرا وقتی تریاک به او تعارف می‌کنند نمی‌تواند «نه» بگوید، چرا نمی‌فهمد چقدر غذا برایش کافی است تا چاق یا لاغر نشود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای دروغ</h3></div>
+<div class="fa">وقتی پدر یا مادر به بچه دروغ می‌گویند.</div>
+<div class="fa"><b>از دروغ‌های ساده:</b> «غذا نخوری می‌گم لولو بخورتت.»</div>
+<div class="fa"><b>تا دروغ‌های بزرگ‌تر:</b> «اگه غذا نخوری دیگه دوستت ندارم.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای اختلاف والدین</h3></div>
+<div class="fa">اگر بچه بداند پدر و مادرش اختلاف نظر دارند، در هر زمینه‌ای که باشد، اشکال ندارد. اگر همدیگر را دوست ندارند، اشکال ندارد. ناراحت‌کننده است اما خطا نیست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خطا وقتی است که:</b> بچه‌ها بفهمند یکی به آن یکی <b>بد می‌گوید یا توهین می‌کند</b> — چه جلوی آن‌ها، چه پشت سر، چه توی دلش. بچه‌ها هم مثل ما نمی‌توانند تحمل کنند کسی به بابا یا مامانشان بد بگوید.
+</div>
+<div class="fa"><b>مثال:</b> اگر پدر به مادر بگوید «سگ»، یا درست می‌گوید یا غلط. اگر درست بگوید، یعنی مادرشان سگ است، بچه‌ها می‌شوند «مادرسگ». اگر پدر ناحق بگوید، پس خودش سگ است، آن‌وقت بچه‌ها می‌شوند «پدرسگ». در هر صورت آن‌ها در چنین خانه‌ای یا «پدرسگ» هستند یا «مادرسگ».</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای برچسب</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>خطای برچسب بدترین نوع خطاست.</b> مشکلش این است که گاهی آشکار نیست.</div>
+<div class="fa"><b>دو نوع برچسب داریم:</b></div>
+<div class="fa">• <b>خطای برچسب آشکار:</b> وقتی بچه‌مان را تنبل می‌خوانیم، لجباز می‌دانیم و... یعنی آشکارا در گفته‌هایمان به او تهمت یا برچسبی می‌زنیم، چه درست بگیم، چه غلط. این برچسب روی شخصیتش تأثیر می‌گذارد.</div>
+<div class="fa">• <b>خطای برچسب پنهان:</b> اگر برچسب در صحبت ما آشکار نباشد، اما در عمل یا معنی کارهایمان پنهان باشد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> برچسب‌ها زیادند. متأسفانه برچسب <b>تنبل</b> زیاد استفاده می‌شود. آن‌قدر به بچه می‌گوییم تنبل که تنبل می‌شود. اگر بچه‌ای تنبلی می‌کند و درس نمی‌خواند، حتماً یک مشکلی دارد. اما او را تنبل صدا کردن (برچسب آشکار) یا تنبل دانستن (خطای برچسب پنهان)، نه تنها مشکل را حل نمی‌کند، که باعث می‌شود خودش هم خودش را تنبل بداند و مثل تنبل‌ها رفتار کند.
+</div>
+<div class="fa"><b>نکته تکمیلی:</b> اگر یک بار کسی به بچه‌اش بگوید تنبل، آن بچه تنبل نمی‌شود. اگر باور کنیم یا باور کند که تنبل است، یعنی قبول کنیم که تنبل است، یا قبول کند که تنبل است، آن‌وقت به روان بچه آسیب زده‌ایم.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نمایش خطای برچسب پنهان (از کتاب «به بچه‌ها گفتن، از بچه‌ها شنیدن»)</h3></div>
+<div class="fa"><b>نمایش:</b> مادر با دخترش طوری رفتار می‌کند که انگار با یک <b>شازده کوچولو</b> رفتار می‌کند. (مادر بیش از حد کوتاه می‌آید، دختر لوس می‌شود، تا جایی که مادر می‌زند و بعد دلجویی می‌کند.)</div>
+<div class="fa">در پایان، مادر به بازوی فرزانه ضربه می‌زند و می‌گوید: «گفتم بس کن بداخلاق ننر.» — این <b>برچسب پنهان</b> است. بعد با دلجویی، همه‌چیز را جبران می‌کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نمایش رفتار صحیح (از همان کتاب)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>مادر:</b> «فرزانه، وقتی من برای دخترم چیزی می‌خرم دوست دارم بشنوم که متشکرم مادر. بخاطر مداد رنگی‌ها متشکرم... اگر چه که رنگش دلخواه من نیست.»</div>
+<div class="fa"><b>فرزانه:</b> «متشکرم. ولی هنوز فکر می‌کنم آبی رنگ چرندیه.»</div>
+<div class="fa"><b>مادر:</b> «تردیدی در این باره نیست. وقتی موضوع سر رنگه، خوب، تو سلیقه خاصی داری.»</div>
+<div class="fa"><b>مادر در مورد مهمان:</b> «ببین فرزانه، یا فردا شب یا پنجشنبه بعد. کدوم رو ترجیح می‌دی؟»</div>
+<div class="fa"><b>فرزانه:</b> «تو منو دوست نداری.»</div>
+<div class="fa"><b>مادر:</b> «فرزانه حالا وقتش نیست درباره دوست داشتن حرف بزنیم. ما داریم تصمیم می‌گیریم وقت مناسب برای اومدن دوستت کی هست.»</div>
+<div class="fa"><b>فرزانه کتاب را پرت می‌کند:</b> مادر: «هی، من این کار رو دوس ندارم. کتاب برای پرت کردن نیست. فرزانه وقتی از چیزی عصبانی می‌شوی احساسیت را با حرف نشون بده، مثلاً بگو مامان من عصبانی‌م. خیلی ناراحتم.»</div>
+<div class="fa"><b>نتیجه:</b> مادر با روش صحیح، بدون برچسب زدن، رفتار درست را به فرزندش یاد داد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نتیجه‌گیری درباره برچسب‌ها</h3></div>
+<div class="fa"><b>سؤال:</b> آیا اگه از برچسب‌های خوب هم استفاده کنیم، خطا کردیم؟! (مثل شازده خانم، شاگرداول، مهمان و...)</div>
+<div class="fa"><b>پاسخ:</b> واقعیت این است که <b>هر نوع برچسبی، خوب یا بد، منفی یا مثبت</b>، همه این برچسب‌ها <b>عوارض منفی</b> دارند. چرا؟ چون <b>واقعیت نیستند</b>.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>تنها برچسبی که روی پیشانی ما آدم‌هاست، برچسب «انسان» است.</b> ما انسان هستیم. او هم انسان است. هرچه انسان‌تر بشویم و انسانی‌تر بچه‌مان را بار بیاوریم، کار درست‌تری کرده‌ایم.
+</div>
+</div>
+</section>
+
+<!-- ========== مفاهیم ========== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با توضیح ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) تعریف خطا در فرزندپروری</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>خطا در بازی فرزندپروری</b> یعنی کاری یا رفتاری که از پدر و مادر سر بزند و واضحاً کار نادرستی باشد.</div>
+<div class="fa">با این توضیح، می‌شود گفت در بازی فرزندپروری انواع مختلفی از خطاها را داریم و اینجا فقط به چند موردشان اشاره می‌کنیم.</div>
+<div class="fa">اولین خطایی که می‌خواهم معرفی کنم، <b>خطای تو بدی</b> است. اسم خطاها را حفظ کنید.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) خطای تو بدی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">یعنی پدر یا مادر کاری بکنند که معنی آن این باشد که <b>فرزندشان بد است</b>.</div>
+<div class="fa">دقت کنید. بچه‌ها <b>کار بد</b> می‌کنند اما <b>بد نیستند</b>. آنچه بد است و باید تنبیه شود، <b>رفتار بچه</b> است، کار نادرستش، نه خودش.</div>
+<div class="fa">پس هرگز کاری نکنید که معنی آن این باشد: «تو بد هستی.»</div>
+<div class="fa">یکی از رایج‌ترین انواع خطای تو بدی، <b>سرزنش کردن</b> است.</div>
+<div class="fa">سرزنش شدید؟ همین‌قدر بدانید که رایج‌ترین موقعی که پدر یا مادر ممکن است مرتکب این خطا شوند، موقعی است که دارند به بچه‌شان کمک می‌کنند مشق‌اش را بنویسد یا کمک می‌کنند غذا بخورد. به رفتارتان در این جور وقت‌ها دقت کنید.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) خطای تو مهم نیستی</h3></div>
+<div class="fa">مثل مورد زیر:</div>
+<div class="fa">مامان: «امروز یک غذای خوشمزه درست کردم.»</div>
+<div class="fa">بچه: «چی داریم؟»</div>
+<div class="fa">مامان: «قورمه سبزی.»</div>
+<div class="fa">بچه: «دوس ندارم. من شیرکاکائو می‌خورم.»</div>
+<div class="fa">مامان: «چی؟ دوس نداری؟ چرا؟ خیلی خوشمزه‌اس؟ بابا خیلی دوس داره.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خطا:</b> بابا مهم است، تو مهم نیستی.
+</div>
+<div class="fa">بچه: «مامان، ولی من دوس ندارم.»</div>
+<div class="fa">مامان: «به خدا اگه نخوری بدم می‌آد. خیلی زحمت کشیدم، تو که نمی‌خوای مامان رو ناراحت کنی؟»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خطا:</b> من مهم هستم، تو مهم نیستی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) خطای انتظار</h3><span class="badge s">مهم</span></div>
+<div class="fa">وقتی مرتکب خطای انتظار شدیم که از <b>بچه</b> انتظار داشته باشیم، نه از <b>خودمان</b>. چطوری؟</div>
+<div class="fa">مثال: اگر از بچه انتظار داشته باشیم که بفهمد ما چی می‌خواهیم بگوییم، اما از خودمان انتظار نداشته باشیم که واضح و درست حرف بزنیم، خطا کردیم.</div>
+<div class="fa">یا از بچه انتظار داشته باشیم با ما همکاری کند، اما از خودمان انتظار نداشته باشیم حداقل با او همدردی کنیم تا با ما همکاری کند. خطا کردیم.</div>
+<div class="fa">پس به این نکته دقت کنیم: اگر کسی باور داشته باشد که با تغییر رفتار خودش، با یادگرفتن تکنیک‌های درست و...، می‌تواند باعث تغییر رفتار فرزندش شود، او کسی است که از <b>خودش</b> انتظار داشته، نه از فرزندش. پس خطای انتظار نکرده.</div>
+<div class="fa">اما اگر کسی از بچه انتظار داشته باشد که خوب باشد، ولی خودش تلاش نکند، مرتکب خطای انتظار شده.</div>
+<div class="fa"><b>نکته تکمیلی:</b> پدر و مادرهای عصبی و خسته، بیشتر خطای <b>تو بدی</b> می‌کنند. پدر و مادرهایی که فرزندپروری بلد نیستند، یا اعتماد به نفسشان ضعیف است، بیشتر مرتکب خطای <b>انتظار</b> می‌شوند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) خطای نادیده گرفتن</h3></div>
+<div class="fa">وقتی بچه را نمی‌بینیم، وقتی احساسش را، سلیقه و علاقه او را نمی‌بینیم، مرتکب <b>خطای نادیده گرفتن</b> در فرزندپروری شده‌ایم.</div>
+<div class="fa"><b>نمایش:</b></div>
+<div class="fa">مادر: «عزیزم، ناهار حاضره.»</div>
+<div class="fa">بچه در حال تماشای تلویزیون: «گرسنه‌ام نیس.»</div>
+<div class="fa">مادر: «بیا عزیزم، من ناهار درست کردم، خوشمزه‌اس.»</div>
+<div class="fa">بچه: «گرسنه‌ام نیس مامان.»</div>
+<div class="fa">مادر: «ساعت یک بعد از ظهره.»</div>
+<div class="fa">بچه با بی‌توجهی: «مامان، گرسنه‌ام نیس.»</div>
+<div class="fa">مادر: «الهی قربونت برم، دلخور می‌شم ناهار نخوری، کلی زحمت کشیدم ناهار به این خوشمزگی درست کردم.»</div>
+<div class="fa">... پدر وارد می‌شود، مادر به پدر: «تو یک چیزی بهش بگو.»</div>
+<div class="fa">پدر: «پاشو عزیزم، ناهار سرد می‌شه. مامانت خیلی زحمت کشیده.»</div>
+<div class="fa">بچه: «گرسنه‌ام نیس.» ...</div>
+<div class="fa">بچه: «مامان ناهار چی داریم؟ فسنجون، آخ جون.»</div>
+<div class="fa">فهمیدید چی شد؟ نکند بچه را نادیده گرفتن. یک بار دیگر نمایش را بخوانید... حالا بگویید: <b>چرا بچه گرسنه‌اش نبود؟</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>درست است:</b> گرسنه‌اش بود، اما تلویزیون می‌دید. احتمالاً کارتون تام و جری. اما پدر و مادرش این موضوع را ندیدند. اصلاً این بچه را ندیدند. آن‌ها شکم گرسنه خودشان را می‌دیدند و غذای خودشان و ساعت یک بعد از ظهر و خوشمزگی غذا را، اما فرزندشان را که مشغول تماشای تلویزیون بود، ندیدند. پس چه خطایی مرتکب شدند؟ <b>خطای نادیده گرفتن</b>.
+</div>
+<div class="fa"><b>خطای دیگر این نمایش:</b> خطای <b>تو مهم نیستی</b> — غذا و ساعت و دلخور نشدن مامان مهم‌تر بود از احساس و علاقه و خود بچه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶) خطای سوءاستفاده از قدرت</h3></div>
+<div class="fa"><b>نمایش:</b></div>
+<div class="fa">مادر: «پاشو عزیزم، وقت ناهاره.»</div>
+<div class="fa">بچه در حال تماشای تلویزیون: «گرسنه‌ام نیس.»</div>
+<div class="fa">مادر: «یعنی چی گرسنه‌ام نیس؟» (تلویزیون را خاموش می‌کند) «پاشو، بدو دستاتو بشور.»</div>
+<div class="fa">بچه گریه می‌کند.</div>
+<div class="fa">مادر: «از این اداها از خودت در نیار. بدو دستات رو بشور، به بابات می‌گم غذا نمی‌خوریا.»</div>
+<div class="fa">بچه گریه‌کنان کنار سفره می‌نشیند.</div>
+<div class="fa">مادر: «آفرین، عزیزم، چی برات بکشم؟»</div>
+<div class="fa">بچه: «دوس ندارم.»</div>
+<div class="fa">مادر: «به خدا اگه نخوری، دیگه خودت می‌دونی، نه تو نه من.»</div>
+<div class="fa">بچه: «مامان؟!» (و گریه می‌کند)</div>
+<div class="fa">مادر: «غذات رو تا آخرش می‌خوری. همین که گفتم.»</div>
+<div class="fa">فقط یک لحظه خودتان را جای این بچه بگذارید، بعد ببینید مادر چه خطایی مرتکب شد. درست است، <b>خطای سوءاستفاده از قدرت</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> یک پدر و مادر خوب باید <b>قدرت</b> داشته باشند، اما نباید <b>زور</b> بگویند، نباید زورگویی کنند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۷) خطای دخالت</h3><span class="badge s">مهم</span></div>
+<div class="fa">وقتی پدر و مادر مرتکب خطای دخالت می‌شوند که در <b>حریم فرزندشان</b> دخالت کنند.</div>
+<div class="fa"><b>شایع‌ترین جاهایی که دخالت می‌کنند و خودشان را حق به جانب هم می‌دانند:</b></div>
+<div class="fa">• <b>موقع غذا خوردن:</b> وقتی رعایت احترام او و بشقابش را نمی‌کنند و غذا می‌ریزند توی ظرفش و می‌گویند «بخور، برات خوبه».</div>
+<div class="fa">• <b>سرزده به اتاقش می‌روند،</b> بدون اینکه در بزنند.</div>
+<div class="fa">• <b>دفتر خاطراتش یا وسایل شخصی‌اش را وارسی می‌کنند</b> تا شاید... چون «مادر هستند» یا «دلواپس بچه‌شان هستند».</div>
+<div class="fa">• <b>وقتی کسی از بچه سؤال می‌کند، اما آن‌ها جواب می‌دهند:</b></div>
+<div class="fa">مهمان از دختر می‌پرسد: «سلام، خانم کوچولو، کلاس چندمی؟» / مادر: «کلاس سوم.» / مهمان رو به دختر: «آفرین، اسم معلمتون چیه؟» / مادر: «خانم حسینی.»</div>
+<div class="fa">• <b>وقتی مادر و بچه دارند حرف می‌زنند، پدر وارد مکالمه آن‌ها می‌شود و جواب می‌دهد.</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>اشکال:</b> این‌طوری <b>قانون استقلال</b> در بازی فرزندپروری شکسته می‌شود. یعنی بچه مستقل بار نمی‌آید، نمی‌تواند از خودش دفاع کند، نمی‌تواند حرفش را بزند، درخواست کردن و بیان خواسته و بیان احساس را یاد نمی‌گیرد. آن‌وقت همین پدر و مادر شاکی می‌شوند که چرا بچه‌شان نمی‌تواند از خودش مواظبت کند، چرا وقتی تریاک به او تعارف می‌کنند نمی‌تواند «نه» بگوید، چرا نمی‌فهمد چقدر غذا برایش کافی است تا چاق یا لاغر نشود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۸) خطای دروغ</h3></div>
+<div class="fa">وقتی پدر یا مادر به بچه دروغ می‌گویند.</div>
+<div class="fa"><b>از دروغ‌های ساده:</b> «غذا نخوری می‌گم لولو بخورتت.»</div>
+<div class="fa"><b>تا دروغ‌های بزرگ‌تر:</b> «اگه غذا نخوری دیگه دوستت ندارم.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۹) خطای اختلاف والدین</h3></div>
+<div class="fa">اگر بچه بداند پدر و مادرش اختلاف نظر دارند، در هر زمینه‌ای هم که باشد، اشکال ندارد. اگر همدیگر را دوست ندارند، اشکال ندارد. ناراحت‌کننده است اما <b>خطا نیست</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خطا وقتی است که:</b> بچه‌ها بفهمند یکی به آن یکی <b>بد می‌گوید یا توهین می‌کند</b>. چه جلوی آن‌ها باشد، چه پشت سر و چه توی دلش. بچه‌ها هم مثل ما نمی‌توانند تحمل کنند کسی به بابا یا مامانشان بد بگوید. خیلی اذیت می‌شوند.
+</div>
+<div class="fa"><b>مثال:</b> اگر پدر به مادر بگوید «سگ»، یا درست می‌گوید یا غلط. اگر درست بگوید، یعنی مادرشان سگ باشد، بچه‌ها می‌شوند «مادرسگ». اگر پدر ناحق بگوید، پس خودش سگ است، آن‌وقت بچه‌ها می‌شوند «پدرسگ». در هر صورت آن‌ها در چنین خانه‌ای یا پدرسگ هستند یا مادرسگ.</div>
+<div class="fa">انگار هر کاری بکنند، به خودشان توهین کرده‌اند و توهین را پذیرفته‌اند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰) خطای برچسب</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">این خطا <b>بدترین نوع خطا</b> است. مشکلش هم این است که گاهی <b>آشکار نیست</b>.</div>
+<div class="fa">دو نوع خطای برچسب داریم:</div>
+<div class="fa">• <b>خطای برچسب آشکار:</b> وقتی بچه‌مان را تنبل می‌خوانیم، لجباز می‌دانیم و... یعنی آشکارا در گفته‌هایمان به او تهمت یا برچسبی می‌زنیم، چه درست بگیم، چه غلط. این برچسب روی شخصیتش تأثیر می‌گذارد.</div>
+<div class="fa">• <b>خطای برچسب پنهان:</b> اگر برچسب در صحبت ما آشکار نباشد، اما در عمل یا در معنی کارهایمان پنهان باشد.</div>
+<div class="fa">برچسب‌ها زیادند. متأسفانه برچسب <b>تنبل</b> زیاد استفاده می‌شود. آن‌قدر به بچه می‌گوییم تنبل که تنبل می‌شود.</div>
+<div class="fa">اگر بچه‌ای تنبلی می‌کند و درس نمی‌خواند، حتماً یک مشکلی دارد. اما او را تنبل صدا کردن (برچسب آشکار) یا تنبل دانستن (خطای برچسب پنهان)، نه تنها مشکل را حل نمی‌کند، که باعث می‌شود خودش هم خودش را تنبل بداند و مثل تنبل‌ها رفتار کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> اگر یک بار کسی به بچه‌اش بگوید تنبل، آن بچه تنبل نمی‌شود. اگر باور کنیم یا باور کند که تنبل است، یعنی قبول کنیم که تنبل است، یا قبول کند که تنبل است، آن‌وقت به روان بچه آسیب زده‌ایم.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۱) نمایش خطای برچسب پنهان (از کتاب «به بچه‌ها گفتن، از بچه‌ها شنیدن»)</h3></div>
+<div class="fa">مادر با دخترش طوری رفتار می‌کند که انگار با یک <b>شازده کوچولو</b> رفتار می‌کند.</div>
+<div class="fa">مادر می‌گوید: «خوب فکر می‌کنم تقریباً برای مهمانی امشب آماده شده‌ام... و یک هدیه کوچیک هم برای فرزانه خانم.»</div>
+<div class="fa">دختر: «برام چی خریدی؟ (مداد رنگی؟ خیلی خوبه. جامدادی) یک دفترچه آبی. می‌دونی من از آبی بدم می‌آد. چرا برام قرمزشو نخریدی؟!»</div>
+<div class="fa">... در ادامه، مادر تسلیم می‌شود، دختر لوس می‌شود، تا جایی که مادر می‌زند و بعد دلجویی می‌کند.</div>
+<div class="fa"><b>مادر:</b> «گفتم بس کن بداخلاق ننر.»</div>
+<div class="fa"><b>دختر:</b> «تو منو زدی. تو منو زدی.»</div>
+<div class="fa">فکر می‌کنم درست حدس زدید. این مادر با دخترش طوری رفتار می‌کرد که انگار با یک شازده کوچولو رفتار می‌کند. این <b>برچسب پنهان</b> است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۲) نمایش رفتار صحیح (از همان کتاب)</h3></div>
+<div class="fa">مادر: «همه بدونن من به خونه اومدم. هی فرزانه می‌بینم داری نقاشی می‌کنی.»</div>
+<div class="fa">دختر: «آره.»</div>
+<div class="fa">مادر: «فکر کنم برای مهمونی امشب آماده‌ام. در ضمن وقتی بیرون بودم مقداری وسایل مدرسه برات خریدم.»</div>
+<div class="fa">دختر: «برام چی خریدی؟ مداد رنگی؟ خیلی خوبه. جامدادی (با لحن آزرده) یک دفترچه آبی. می‌دونی من از آبی بدم می‌آد. چرا برام قرمزشو نخریدی؟»</div>
+<div class="fa">مادر: «خودت بگو چرا نخریدم؟»</div>
+<div class="fa">دختر: «چون فروشگاه قرمزشو نداشت.»</div>
+<div class="fa">مادر نظر فرزانه را با تکان دادن سر تأیید می‌کند.</div>
+<div class="fa">... در ادامه، مادر بدون تسلیم شدن، با قاطعیت و همدلی، رفتار درست را به دختر یاد می‌دهد. در پایان دختر تلفن می‌کند و به مریم می‌گوید: «تو امشب نمی‌تونی بیای. پدر و مادرم یک مهمانی چرند دارن. می‌تونی فردا یا پنجشنبه بعد بیای.»</div>
+<div class="fa"><b>نتیجه:</b> نمایش دوم چطور بود؟ مادر کاری نکرد که بچه‌اش مثل شازده خانم‌ها بشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۳) نتیجه‌گیری درباره برچسب‌ها</h3><span class="badge s">مهم</span></div>
+<div class="fa">شاید اینجا سؤالی به ذهنتان خطور کرده باشد: این که آن مادر با بچه‌اش مثل یک بچه تنبل یا خنگ رفتار نکرده بود، بلکه مثل یک شازده خانم برخورد کرده بود. آیا اگر از برچسب‌های <b>خوب</b> هم استفاده کنیم، خطا کردیم؟!</div>
+<div class="fa"><b>واقعیت این است که هر نوع برچسبی، خوب یا بد، منفی یا مثبت</b> — تنبل، شاگرداول، مهمان، شازده خانم و... — همه این برچسب‌ها <b>عوارض منفی</b> دارند. چرا؟ چون <b>واقعیت نیستند</b>.</div>
+<div class="fa">بچه ممکن است اهل درس نباشد، مدتی درس نخواند، اما <b>تنبل نیست</b>. ممکن است مثل شازده خانم‌ها رفتار کند، اما <b>شازده خانم نیست</b>. او یک <b>انسان</b> است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>تنها برچسبی که روی پیشانی ما آدم‌هاست، برچسب انسان است.</b> ما انسان هستیم. او هم انسان است. و هرچه انسان‌تر بشویم و انسانی‌تر بچه‌مان را بار بیاوریم، کار درست‌تری کرده‌ایم. اگر بتوانیم حداقل او را از یک انسان، با تربیت غلطمان، به یک حیوان پست یا یک فرشته آسمانی تبدیل نکنیم، کار بزرگی کرده‌ایم. این‌طوری شخصیت سالم یک انسان است.
+</div>
+</div>
+</section>
+
+<!-- ========== تفاوت‌ها ========== -->
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>کار بد vs بچه بد</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>کار بد</th><th>بچه بد</th></tr></thead>
+<tbody>
+<tr><td>رفتار نادرست</td><td>برچسب به شخصیت</td></tr>
+<tr><td>باید تنبیه شود</td><td>باید از آن پرهیز شود</td></tr>
+<tr><td>موقتی و قابل تغییر</td><td>تأثیر مخرب پایدار</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> بچه‌ها کار بد می‌کنند، اما بد نیستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای تو بدی vs خطای تو مهم نیستی</h3></div>
+<table class="compare">
+<thead><tr><th>تو بدی</th><th>تو مهم نیستی</th></tr></thead>
+<tbody>
+<tr><td>می‌گوید «تو بد هستی»</td><td>می‌گوید «تو مهم نیستی»</td></tr>
+<tr><td>مثل سرزنش کردن</td><td>مثل «بابا مهمه، تو مهم نیستی»</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای انتظار vs انتظار از خود</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>خطای انتظار</th><th>انتظار از خود</th></tr></thead>
+<tbody>
+<tr><td>از بچه انتظار داریم</td><td>از خودمان انتظار داریم</td></tr>
+<tr><td>«بچه باید بفهمد»</td><td>«من باید واضح بگویم»</td></tr>
+<tr><td>خطاست</td><td>درست است</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای نادیده گرفتن vs خطای تو مهم نیستی</h3></div>
+<table class="compare">
+<thead><tr><th>نادیده گرفتن</th><th>تو مهم نیستی</th></tr></thead>
+<tbody>
+<tr><td>بچه و احساسش دیده نمی‌شود</td><td>خواسته والد مهم‌تر از بچه است</td></tr>
+<tr><td>مثال: بچه تلویزیون می‌بیند، والد نمی‌بیند</td><td>مثال: غذا و ساعت مهم‌تر از احساس بچه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدرت vs زور</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>قدرت</th><th>زور</th></tr></thead>
+<tbody>
+<tr><td>والد خوب باید قدرت داشته باشد</td><td>نباید زور بگوید</td></tr>
+<tr><td>مثل قاطعیت</td><td>مثل سوءاستفاده از قدرت</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خطای دخالت vs استقلال</h3></div>
+<table class="compare">
+<thead><tr><th>دخالت</th><th>استقلال</th></tr></thead>
+<tbody>
+<tr><td>در حریم بچه وارد می‌شویم</td><td>به بچه فرصت تصمیم‌گیری می‌دهیم</td></tr>
+<tr><td>جواب دادن به جای بچه</td><td>اجازه دادن به بچه برای جواب دادن</td></tr>
+<tr><td>نقض قانون استقلال</td><td>تقویت استقلال</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اختلاف نظر vs توهین</h3></div>
+<table class="compare">
+<thead><tr><th>اختلاف نظر والدین</th><th>توهین والدین</th></tr></thead>
+<tbody>
+<tr><td>خطا نیست (ناراحت‌کننده است)</td><td>خطاست</td></tr>
+<tr><td>بچه می‌فهمد نظرها متفاوت است</td><td>بچه می‌فهمد یکی به دیگری بد می‌گوید</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>برچسب آشکار vs برچسب پنهان</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>برچسب آشکار</th><th>برچسب پنهان</th></tr></thead>
+<tbody>
+<tr><td>در گفته‌ها آشکار است</td><td>در عمل یا معنی کارها پنهان است</td></tr>
+<tr><td>مثال: «تو تنبلی»</td><td>مثال: رفتار با بچه مثل شازده خانم</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>برچسب خوب vs برچسب بد</h3></div>
+<table class="compare">
+<thead><tr><th>برچسب خوب (مثل شاگرداول)</th><th>برچسب بد (مثل تنبل)</th></tr></thead>
+<tbody>
+<tr><td>هر دو عوارض منفی دارند</td><td>هر دو عوارض منفی دارند</td></tr>
+<tr><td>چون واقعیت نیستند</td><td>چون واقعیت نیستند</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>تنها برچسب درست: انسان</b>
+</div>
+</div>
+</section>
+
+<!-- ========== نظریه‌پردازان ========== -->
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان</h2>
+<p class="section-sub">نظریه‌پردازان و چارچوب‌های معرفی‌شده در این فصل</p>
+
+<div class="card">
+<div class="card-head"><h3>سعید جهانشاهی — نویسنده کتاب</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نقش در این فصل:</b> نویسنده کتاب «فرزندپروری مانند یک بازی» که در این فصل <b>نُه خطای رایج در فرزندپروری</b> را معرفی می‌کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نویسنده کتاب <b>سعید جهانشاهی</b> است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کتاب «به بچه‌ها گفتن، از بچه‌ها شنیدن»</h3></div>
+<div class="fa"><b>نقش در این فصل:</b> دو نمایش مرتبط با <b>برچسب</b> از این کتاب نقل شده‌اند: نمایش خطای برچسب پنهان (رفتار با بچه مثل شازده کوچولو) و نمایش رفتار صحیح (رفتار محترمانه و قاطع با بچه).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفهوم «مسافر کوچولو»</h3></div>
+<div class="fa"><b>مفهوم:</b> بچه‌ها مسافر کوچولوهایی هستند که از بهشت آمده‌اند و امانت الهی هستند.</div>
+<div class="fa"><b>ارتباط با این فصل:</b> تأکید بر اینکه بچه‌ها <b>انسان</b> هستند و تنها برچسب درست برای آن‌ها «انسان» است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفهوم «انسان بودن» — تنها برچسب درست</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>مفهوم:</b> هر برچسبی (خوب یا بد) عوارض منفی دارد، چون واقعیت نیست. تنها برچسب درست برای بچه، برچسب <b>انسان</b> است.</div>
+<div class="fa"><b>جمله کلیدی:</b> «ما انسان هستیم. او هم انسان است. هرچه انسان‌تر بشویم و انسانی‌تر بچه‌مان را بار بیاوریم، کار درست‌تری کرده‌ایم.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تشبیه رانندگی — چارچوب استعاره‌ای کتاب</h3></div>
+<div class="fa"><b>مفهوم:</b> استفاده از استعاره رانندگی (گاز، ترمز، فرمان) برای آموزش فرزندپروری.</div>
+<div class="fa"><b>ارتباط با این فصل:</b> خطاها مثل رانندگی در مسیر غلط هستند؛ شناخت آن‌ها کمک می‌کند مسیر را درست کنیم.</div>
+</div>
+</section>
+
+<!-- ========== دام‌ها ========== -->
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: بچه بد = کار بد</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> بچه <b>کار بد</b> می‌کند اما <b>بد نیست</b>. آنچه بد است، رفتار اوست، نه خودش.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: سرزنش کردن = تربیت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی سرزنش کردن تربیت است.</div>
+<div class="fa"><b>جواب درست:</b> سرزنش کردن از رایج‌ترین انواع <b>خطای تو بدی</b> است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: خطای انتظار = انتظار از خود</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> خطای انتظار = انتظار از <b>بچه</b> / انتظار از خود = انتظار از <b>خودمان</b> (درست است).</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: خطای نادیده گرفتن = خطای تو مهم نیستی</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> نادیده گرفتن = بچه و احساسش دیده نمی‌شود / تو مهم نیستی = خواسته والد مهم‌تر از بچه است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: قدرت = زور</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> والد خوب باید قدرت داشته باشد، اما نباید زور بگوید. زورگویی = خطای سوءاستفاده از قدرت.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: خطای دخالت = توجه به بچه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دخالت یعنی توجه به بچه.</div>
+<div class="fa"><b>جواب درست:</b> دخالت = ورود به حریم بچه (مثل جواب دادن به جای او) — که <b>قانون استقلال</b> را می‌شکند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: اختلاف نظر = خطا</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر اختلاف نظر والدین خطاست.</div>
+<div class="fa"><b>جواب درست:</b> اختلاف نظر خطا نیست. خطا وقتی است که بچه بفهمد یکی به دیگری <b>بد می‌گوید یا توهین می‌کند</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: برچسب فقط آشکار است</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی برچسب فقط آشکار است.</div>
+<div class="fa"><b>جواب درست:</b> دو نوع برچسب داریم: آشکار (در گفته‌ها) و پنهان (در عمل یا معنی کارها).</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: برچسب خوب = بی‌ضرر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی برچسب خوب بی‌ضرر است.</div>
+<div class="fa"><b>جواب درست:</b> هر برچسبی (خوب یا بد) عوارض منفی دارد، چون <b>واقعیت نیست</b>. تنها برچسب درست: انسان.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: یک بار گفتن تنبل = تنبل شدن</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی یک بار گفتن تنبل کافی است تا بچه تنبل شود.</div>
+<div class="fa"><b>جواب درست:</b> اگر یک بار بگوییم، بچه تنبل نمی‌شود. وقتی آسیب می‌زند که <b>باور کنیم یا او باور کند</b> که تنبل است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: برچسب پنهان = بی‌اهمیت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی برچسب پنهان بی‌اهمیت است.</div>
+<div class="fa"><b>جواب درست:</b> خطای برچسب <b>بدترین نوع خطا</b> است و مشکلش این است که گاهی آشکار نیست.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: تربیت = برچسب زدن</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی برچسب زدن به بچه تربیت است.</div>
+<div class="fa"><b>جواب درست:</b> برچسب زدن به شخصیت بچه آسیب می‌زند و مشکل را حل نمی‌کند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: خطای دروغ = فقط دروغ بزرگ</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط دروغ بزرگ خطاست.</div>
+<div class="fa"><b>جواب درست:</b> هر دروغی به بچه، از «لولو می‌خورتت» تا «دوستت ندارم»، خطاست.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: خطاهای فرزندپروری کم‌اهمیت هستند</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی خطاها بی‌اهمیت هستند.</div>
+<div class="fa"><b>جواب درست:</b> خطاها می‌توانند به روان بچه آسیب بزنند و شخصیت او را تحت تأثیر قرار دهند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: گزینه‌های با مترادف، فقط، همیشه</h3>
+<div class="fa"><b>دام چیه:</b> گزینه‌های مطلق را انتخاب می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> در مورد این فصل، گزینه‌های با «مترادف»، «فقط»، «همیشه» معمولاً نادرست‌اند.</div>
+</div>
+</section>
+
+<!-- ========== کوییز ========== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل دهم — خطاها در فرزندپروری</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · شیوه‌های فرزندپروری و آموزش والدین · فصل دهم: خطاها در فرزندپروری — نویسنده: سعید جهانشاهی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"خطا در فرزندپروری یعنی چه؟",options:["کاری که پدر و مادر انجام می‌دهند و نادرست است","کاری که بچه انجام می‌دهد","تنبیه کردن بچه","تشویق کردن بچه"],answer:0,explanation:"خطا: کاری یا رفتاری که از پدر و مادر سر بزند و واضحاً نادرست باشد."},
+{q:"بچه‌ها کار بد می‌کنند اما...؟",options:["بد هستند","بد نیستند","همیشه بد هستند","هیچ‌کدام"],answer:1,explanation:"بچه‌ها کار بد می‌کنند اما بد نیستند."},
+{q:"خطای تو بدی یعنی چه؟",options:["گفتن «تو خوب هستی»","گفتن «تو بد هستی»","گفتن «تو مهم نیستی»","گفتن «تو تنبلی»"],answer:1,explanation:"خطای تو بدی: معنی کار ما «تو بد هستی» باشد."},
+{q:"رایج‌ترین نوع خطای تو بدی چیست؟",options:["تشویق","سرزنش کردن","بی‌توجهی","جایزه دادن"],answer:1,explanation:"سرزنش کردن رایج‌ترین نوع خطای تو بدی است."},
+{q:"خطای تو مهم نیستی چه معنایی دارد؟",options:["بابا مهم است، تو مهم نیستی","تو مهم هستی","همه مهم هستند","هیچ‌کس مهم نیست"],answer:0,explanation:"خطای تو مهم نیستی: والد مهم است، بچه مهم نیست."},
+{q:"خطای انتظار چه زمانی رخ می‌دهد؟",options:["از بچه انتظار داریم، نه از خودمان","از خودمان انتظار داریم","هیچ انتظاری نداریم","از بچه انتظار نداریم"],answer:0,explanation:"خطای انتظار: از بچه انتظار داریم، نه از خودمان."},
+{q:"پدر و مادرهای عصبی و خسته بیشتر کدام خطا را می‌کنند؟",options:["خطای تو بدی","خطای انتظار","خطای دخالت","خطای برچسب"],answer:0,explanation:"پدر و مادرهای عصبی و خسته بیشتر خطای تو بدی می‌کنند."},
+{q:"خطای نادیده گرفتن یعنی چه؟",options:["بچه و احساسش دیده نمی‌شود","بچه را تشویق می‌کنیم","بچه را تنبیه می‌کنیم","بچه را جایزه می‌دهیم"],answer:0,explanation:"خطای نادیده گرفتن: بچه و احساسش دیده نمی‌شود."},
+{q:"در نمایش ناهار، چرا بچه گرسنه‌اش نبود؟",options:["واقعاً گرسنه نبود","تلویزیون تماشا می‌کرد","غذا دوست نداشت","بیمار بود"],answer:1,explanation:"بچه تلویزیون تماشا می‌کرد؛ والدین این را ندیدند."},
+{q:"خطای سوءاستفاده از قدرت یعنی چه؟",options:["قدرت داشتن","زور گفتن به بچه","تشویق کردن","بی‌توجهی"],answer:1,explanation:"سوءاستفاده از قدرت: زور گفتن به بچه."},
+{q:"خطای دخالت چه زمانی رخ می‌دهد؟",options:["در حریم بچه وارد می‌شویم","به بچه توجه می‌کنیم","بچه را تشویق می‌کنیم","بچه را تنبیه می‌کنیم"],answer:0,explanation:"خطای دخالت: ورود به حریم بچه."},
+{q:"کدام یک از مصادیق خطای دخالت است؟",options:["جواب دادن به جای بچه","گوش دادن به بچه","تشویق بچه","بی‌توجهی به بچه"],answer:0,explanation:"جواب دادن به جای بچه، خطای دخالت است."},
+{q:"خطای دخالت چه قانونی را می‌شکند؟",options:["قانون امنیت","قانون استقلال","قانون آگاهی","قانون رفتار انسانی"],answer:1,explanation:"خطای دخالت، قانون استقلال را می‌شکند."},
+{q:"خطای دروغ یعنی چه؟",options:["گفتن واقعیت به بچه","دروغ گفتن به بچه","گوش دادن به بچه","تشویق بچه"],answer:1,explanation:"خطای دروغ: دروغ گفتن به بچه."},
+{q:"کدام یک از مصادیق خطای دروغ است؟",options:["«اگر غذا نخوری می‌گم لولو بخورتت»","«دوستت دارم»","«آفرین»","«خوب گوش کن»"],answer:0,explanation:"«اگر غذا نخوری می‌گم لولو بخورتت» دروغ است."},
+{q:"اختلاف نظر والدین چه زمانی خطاست؟",options:["همیشه خطاست","وقتی بچه بفهمد یکی به دیگری بد می‌گوید","هیچ‌وقت خطا نیست","فقط وقتی جلوی بچه باشد"],answer:1,explanation:"اختلاف نظر خطا نیست، اما توهین و بدگویی خطاست."},
+{q:"خطای برچسب چند نوع دارد؟",options:["یک نوع","دو نوع: آشکار و پنهان","سه نوع","چهار نوع"],answer:1,explanation:"دو نوع برچسب: آشکار و پنهان."},
+{q:"خطای برچسب آشکار یعنی چه؟",options:["برچسب در گفته‌ها آشکار است","برچسب در عمل پنهان است","هیچ برچسبی نیست","برچسب خوب"],answer:0,explanation:"برچسب آشکار: برچسب در گفته‌ها آشکار است."},
+{q:"خطای برچسب پنهان یعنی چه؟",options:["برچسب در گفته‌ها آشکار است","برچسب در عمل یا معنی کارها پنهان است","هیچ برچسبی نیست","برچسب خوب"],answer:1,explanation:"برچسب پنهان: برچسب در عمل یا معنی کارها پنهان است."},
+{q:"آیا برچسب خوب هم عوارض دارد؟",options:["خیر، برچسب خوب بی‌ضرر است","بله، هر برچسبی عوارض دارد چون واقعیت نیست","فقط برچسب بد ضرر دارد","فقط برچسب خوب ضرر دارد"],answer:1,explanation:"هر برچسبی (خوب یا بد) عوارض دارد چون واقعیت نیست."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

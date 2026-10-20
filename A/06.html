@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · معارف اسلامی · سری 06</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"06";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>معارف اسلامی · سری 06</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی معارف اسلامی · سری 06</h2>
+  <p>تحلیل کامل ۳۰ سوال با پاسخنامه تشریحی، تعریف ساده مفاهیم و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">۳۰ سوال</span><span class="pill">۶ دسته موضوعی</span><span class="pill">۱۵+ مفهوم کلیدی</span><span class="pill">۶ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد معارف اسلامی طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۳۰</b><span>سوال</span></div>
+<div class="stat"><b>۶</b><span>دسته موضوعی</span></div>
+<div class="stat"><b>۱۵+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۶</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">۰۱ · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، شخصیت‌ها...">
+
+<div id="questionList">
+
+<div class="card question" data-search="درک خداشناسی اسلامی مقایسه ادیان">
+<span class="qnum">سوال ۱</span>
+<div class="fa"><b>متن سوال:</b> درک اهمیت، عمق و غنای خداشناسی اسلامی چگونه امکان‌پذیر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مقایسه دیدگاه اسلام با سایر ادیان و آیین‌ها</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برای درک عمق خداشناسی اسلامی باید آن را با سایر ادیان و آیین‌ها مقایسه کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- توجه به مظاهر مادی: کافی نیست.<br>
+- شناخت تاریخ کهن: کافی نیست.<br>
+- فطرت خداجو: بخشی از بحث است.<br>
+<b>نکته کلیدی:</b> درک خداشناسی اسلامی = مقایسه با سایر ادیان
+</div>
+</div>
+
+<div class="card question" data-search="بهترین شیوه حیات شناخت تصور خالص خدا">
+<span class="qnum">سوال ۲</span>
+<div class="fa"><b>متن سوال:</b> گزینه‌ای گزینه بهترین شیوه حیات چگونه امکان‌پذیر است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">با شناخت تصور خالص از خدای خویش</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بهترین شیوه حیات با شناخت تصور خالص از خدا امکان‌پذیر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شناخت حیات دینی: نتیجه است نه علت.<br>
+- برداشت از اوصاف: بخشی از راه است.<br>
+- شواهد تاریخی: کافی نیست.<br>
+<b>نکته کلیدی:</b> بهترین شیوه حیات = تصور خالص از خدا
+</div>
+</div>
+
+<div class="card question" data-search="حضرت امیر بدین پروردگار تا چیزی نبینی راه دل">
+<span class="qnum">سوال ۳</span>
+<div class="fa"><b>متن سوال:</b> پاسخ حضرت امیر علیه السلام مبنی بر «بدین پروردگار که تا چیزی را نبینی نمی‌پرستد» اشاره به کدام راه خداشناسی دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">راه دل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> این جمله اشاره به راه دل (فطرت) دارد؛ یعنی خداشناسی از طریق شهود قلبی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تدبر در آفریدگان: راه عقلی است.<br>
+- راه تجربه: محدود است.<br>
+- راه عقل: استدلالی است.<br>
+<b>نکته کلیدی:</b> «تا چیزی را نبینی نمی‌پرستد» = راه دل
+</div>
+</div>
+
+<div class="card question" data-search="امتیاز راه عقلی شناخت خدا شبهات ملحدان">
+<span class="qnum">سوال ۴</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه به امتیاز «راه عقلی شناخت خداوند» اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در منافع علمی با شبهات ملحدان از آن سود جست</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راه عقلی به ما امکان می‌دهد تا با شبهات ملحدان مقابله کنیم.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نشانه‌های تکوینی: مربوط به برهان نظم است.<br>
+- پدیده‌های اجتماعی: مربوط به جامعه‌شناسی است.<br>
+- هیچکدام: نادرست است.<br>
+<b>نکته کلیدی:</b> راه عقلی = مقابله با شبهات ملحدان
+</div>
+</div>
+
+<div class="card question" data-search="امتناع دور اجتماع نقیضین تقدم معلول">
+<span class="qnum">سوال ۵</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه اشاره به امتناع دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> دور مستلزم اجتماع نقیضین است، تقدم معلول بر علت محال است، و تاخر علت بر وجود هم محال است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر گزینه فقط یک جنبه را نشان می‌دهد.<br>
+<b>نکته کلیدی:</b> امتناع = دور + تقدم معلول + تاخر علت
+</div>
+</div>
+
+<div class="card question" data-search="روش تنزیهی قرآن اوصاف الهی فهم ناپذیری">
+<span class="qnum">سوال ۶</span>
+<div class="fa"><b>متن سوال:</b> روش تنزیهی قرآن در رابطه با اوصاف الهی چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فهم ناپذیری اوصاف الهی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روش تنزیهی قرآن یعنی خدا را از هر نقص و شبیه بودن به مخلوقات تنزیه می‌کند و می‌گوید اوصاف الهی به طور کامل قابل فهم نیستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فهم‌پذیری: ناقص است.<br>
+- تشبیه: نقطه مقابل تنزیه است.<br>
+- عدم آگاهی: نادرست است.<br>
+<b>نکته کلیدی:</b> تنزیه = فهم ناپذیری کامل اوصاف
+</div>
+</div>
+
+<div class="card question" data-search="آیه الا یعلم من خلق تلازم آفرینندگی علم">
+<span class="qnum">سوال ۷</span>
+<div class="fa"><b>متن سوال:</b> پیام آیه کریمه «أَلا يَعْلَمُ مَنْ خَلَقَ وَ هُوَ اللَّطِيفُ الْخَبِيرُ»</div>
+<b>پاسخ صحیح:</b> <span class="answer">تلازم میان آفرینندگی و علم به آفریدگان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آیه می‌گوید کسی که آفرید، مگر از آفریده خود خبر ندارد؟ پس بین آفرینندگی و علم به آفریدگان تلازم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- علم محدود: نادرست است.<br>
+- آگاهی از ممکنات: ناقص است.<br>
+- علم به معادن: نادرست است.<br>
+<b>نکته کلیدی:</b> آفرینندگی = علم به آفریدگان
+</div>
+</div>
+
+<div class="card question" data-search="محال ذاتی امر فی حد نفسه ناسازگاری">
+<span class="qnum">سوال ۸</span>
+<div class="fa"><b>متن سوال:</b> امری که فی حد نفسه و در ذات خویش محال و ناسازگاری است بدون آنکه پای امر دیگری در میان باشد، چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">محال ذاتی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> محال ذاتی یعنی چیزی که در ذات خودش محال است و به چیز دیگری وابسته نیست.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- محال عادی: به عادت وابسته است.<br>
+- محال وقوعی: به شرایط وابسته است.<br>
+- همه موارد: نادرست است.<br>
+<b>نکته کلیدی:</b> محال ذاتی = محال فی حد نفسه
+</div>
+</div>
+
+<div class="card question" data-search="آیه کل شیء هالک الا وجهه وجه الله بقا">
+<span class="qnum">سوال ۹</span>
+<div class="fa"><b>متن سوال:</b> در آیه کریمه «كُلُّ شَيْءٍ هَالِكٌ إِلَّا وَجْهَهُ» مقصود مفسران از «وجه الله» چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بقا و ابدیت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مفسران «وجه الله» را به بقا و ابدیت الهی تفسیر کرده‌اند؛ یعنی هر چیزی فانی است جز ذات خدا.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- وجود الهی: کلی است.<br>
+- ذات الهی: ناقص است.<br>
+- فناناپذیری: مترادف بقا است.<br>
+<b>نکته کلیدی:</b> وجه الله = بقا و ابدیت
+</div>
+</div>
+
+<div class="card question" data-search="تفاوت تکوینی تبعیض ظرفیت وجود عطا">
+<span class="qnum">سوال ۱۰</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خداوند به همه آفریدگان به اندازه ظرفیت آنها وجود عطا کرده است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خداوند به هر موجودی به اندازه ظرفیت و استعدادش وجود و کمال عطا کرده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تفاوت تبعیض: نادرست است.<br>
+- تناسب قراردادی: نادرست است.<br>
+- حالل: نادرست است.<br>
+<b>نکته کلیدی:</b> عطای وجود = به اندازه ظرفیت
+</div>
+</div>
+
+<div class="card question" data-search="مائت انسان امتناع اختیار تکلیف">
+<span class="qnum">سوال ۱۱</span>
+<div class="fa"><b>متن سوال:</b> منظور از «مائت» در نگاه مفسران از اینکه انسان امتناع دارد کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اختیار یا تکلیف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> «مائت» اشاره به اختیار و تکلیف انسان دارد؛ یعنی انسان موجودی مختار و مکلف است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- جایگاه رفیع: کلی است.<br>
+- ظرفیت علمی: بخشی از بحث است.<br>
+- جهان کارگر: نادرست است.<br>
+<b>نکته کلیدی:</b> مائت = اختیار و تکلیف
+</div>
+</div>
+
+<div class="card question" data-search="خرد آدمی قضای الهی خاضع شک">
+<span class="qnum">سوال ۱۲</span>
+<div class="fa"><b>متن سوال:</b> اگر خرد آدمی در برابر قضای الهی خاضع نگردد، نقش چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایجاد شک بیشتر به حقایق</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اگر عقل در برابر قضای الهی تسلیم نشود، شک و تردید در او بیشتر می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گرایش ضعیف: ناقص است.<br>
+- گرایش قوی: نادرست است.<br>
+- عدم پذیرش: ناقص است.<br>
+<b>نکته کلیدی:</b> خاضع نشدن عقل = شک بیشتر
+</div>
+</div>
+
+<div class="card question" data-search="تسلسل محال سلسله نامتناهی معلول‌ها">
+<span class="qnum">سوال ۱۳</span>
+<div class="fa"><b>متن سوال:</b> چرا تسلسل محال است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سلسله نامتناهی از معلول‌ها موجود می‌آید</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تسلسل یعنی سلسله نامتناهی از معلول‌ها که محال است چون هر معلولی نیاز به علت دارد و این سلسله نمی‌تواند بی‌نهایت باشد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سلسله متناهی: محال نیست.<br>
+- اجتماع نقیضین: مربوط به دور است.<br>
+- ارتفاع نقیضین: مربوط به بحث دیگری است.<br>
+<b>نکته کلیدی:</b> تسلسل محال = سلسله نامتناهی معلول‌ها
+</div>
+</div>
+
+<div class="card question" data-search="حدیث امیرالمومنین لم یطلع العقول تنزیهی">
+<span class="qnum">سوال ۱۴</span>
+<div class="fa"><b>متن سوال:</b> در حدیث حضرت امیر علیه السلام کدامین امر تصریح شده است؟ «لم يطلع العقول علی تحدید صفته و لم يحجبها عن واجب معرفته»</div>
+<b>پاسخ صحیح:</b> <span class="answer">تنزیهی بودن اوصاف الهی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حدیث می‌گوید عقل‌ها به کنه صفات خدا راه ندارند (تنزیه) اما از معرفت واجب خدا محروم نیستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فهم ناپذیری: ناقص است.<br>
+- تشبیه: نقطه مقابل تنزیه است.<br>
+- تفاوت جدی: کلی است.<br>
+<b>نکته کلیدی:</b> «لم یطلع العقول» = تنزیهی بودن اوصاف
+</div>
+</div>
+
+<div class="card question" data-search="توحید عملی باورهای توحیدی صحنه عمل">
+<span class="qnum">سوال ۱۵</span>
+<div class="fa"><b>متن سوال:</b> اگر انسان باورهای توحیدی خویش را در صحنه عمل حاکمیت بخشد و رفتارش مقتضای اندیشه توحیدی باشد، به کدام توحید اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عملی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> توحید عملی یعنی انسان باورهای توحیدی خود را در عمل پیاده کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ذاتی: مربوط به ذات خداست.<br>
+- صفاتی: مربوط به صفات خداست.<br>
+- افعالی: مربوط به افعال خداست.<br>
+<b>نکته کلیدی:</b> توحید در عمل = توحید عملی
+</div>
+</div>
+
+<div class="card question" data-search="عدم تعلق قدرت سنگ حرکت اجتماع نقیضین">
+<span class="qnum">سوال ۱۶</span>
+<div class="fa"><b>متن سوال:</b> عدم تعلق قدرت برآفریدن سنگی که آفریدگار قادر بر حرکت آن نباشد کدام گزینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اجتماع نقیضین</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> این فرض مستلزم اجتماع نقیضین است؛ یعنی هم خدا قادر باشد و هم نباشد که محال است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- محدودیت قدرت: نادرست است.<br>
+- نقصان قدرت: نادرست است.<br>
+- نقصان ذات سنگ: نادرست است.<br>
+<b>نکته کلیدی:</b> سنگ و قدرت = اجتماع نقیضین
+</div>
+</div>
+
+<div class="card question" data-search="حکمت تناسب فاعل فعل نتایج معقول">
+<span class="qnum">سوال ۱۷</span>
+<div class="fa"><b>متن سوال:</b> تناسب و سنخیت هر فاعلی با فعلش به کدام معنای حکمت اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">فاعل افعال خود را بر اساس نتایج معقول و اغراضی خردپسند انجام می‌دهد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حکمت یعنی فاعل افعال خود را بر اساس اهداف و نتایج معقول انجام می‌دهد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- معرفت و شناخت: مربوط به علم است.<br>
+- استواری افعال: ناقص است.<br>
+- دوری از فعل قبیح: بخشی از حکمت است.<br>
+<b>نکته کلیدی:</b> حکمت = انجام افعال بر اساس نتایج معقول
+</div>
+</div>
+
+<div class="card question" data-search="رکوع سر نماز تسبیح جاودانگی طبیعت">
+<span class="qnum">سوال ۱۸</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">حقیقت «تسبیح» خارج شدن نمازگزار از حد تشبیه و تعطیل است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حقیقت تسبیح یعنی نمازگزار خدا را از تشبیه به مخلوقات و تعطیل صفات پاک کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رکوع سر تمام نماز: نادرست است.<br>
+- عادل خدشه: نادرست است.<br>
+- جاودانگی طبیعت: نادرست است.<br>
+<b>نکته کلیدی:</b> تسبیح = خارج شدن از تشبیه و تعطیل
+</div>
+</div>
+
+<div class="card question" data-search="مقام باطنی اذان فراخواندن هستی">
+<span class="qnum">سوال ۱۹</span>
+<div class="fa"><b>متن سوال:</b> مقام باطنی اذان یعنی .....</div>
+<b>پاسخ صحیح:</b> <span class="answer">فراخواندن تمام هستی برای حضور در پیشگاه حق تعالی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مقام باطنی اذان یعنی فراخواندن تمام هستی به حضور خداوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- جلوه عظمت: بخشی از معناست.<br>
+- رسیدن به فلاح: نتیجه است.<br>
+- اعلام وقت نماز: ظاهر اذان است.<br>
+<b>نکته کلیدی:</b> باطن اذان = فراخواندن هستی
+</div>
+</div>
+
+<div class="card question" data-search="فهم تعالیم شناخت انسان">
+<span class="qnum">سوال ۲۰</span>
+<div class="fa"><b>متن سوال:</b> فهم درست تعالیم اعتقادی، اخلاقی، حقوقی با کدام شناخت میسر می‌گردد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شناخت انسان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> برای فهم درست تعالیم دینی باید انسان را شناخت؛ چون این تعالیم برای هدایت انسان آمده‌اند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- موجودات انسان‌نما: نادرست است.<br>
+- ساحت طبیعی: ناقص است.<br>
+- ساحت غیرجسمانی: ناقص است.<br>
+<b>نکته کلیدی:</b> فهم تعالیم = شناخت انسان
+</div>
+</div>
+
+<div class="card question" data-search="اسماء حقایق کلی آدم نام ها">
+<span class="qnum">سوال ۲۱</span>
+<div class="fa"><b>متن سوال:</b> حقیقت دانستن «اسماء» چیست؟ (خدا همه نام‌ها را به آدم آموخت)</div>
+<b>پاسخ صحیح:</b> <span class="answer">آگاهی از حقایق کلی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حقیقت دانستن اسماء یعنی آگاهی از حقایق کلی و مفاهیم کلی هستی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شناسایی واژه‌ها: ناقص است.<br>
+- شناسایی علوم: ناقص است.<br>
+- آگاهی از نادانی: نادرست است.<br>
+<b>نکته کلیدی:</b> اسماء = حقایق کلی
+</div>
+</div>
+
+<div class="card question" data-search="علم خدا فعل اختیاری جبر عمومیت خالقیت">
+<span class="qnum">سوال ۲۲</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اختیاری بودن رفتار یعنی با میل و رغبت انجام پذیرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اختیاری بودن رفتار یعنی رفتار با میل و رغبت و انتخاب آزاد انجام شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- علم خدا جبری: نادرست است.<br>
+- علم خدا خاص: نادرست است.<br>
+- عمومیت خالقیت = جبر: نادرست است.<br>
+<b>نکته کلیدی:</b> اختیار = میل و رغبت
+</div>
+</div>
+
+<div class="card question" data-search="رابطه عالم غیب شهادت ریشه">
+<span class="qnum">سوال ۲۳</span>
+<div class="fa"><b>متن سوال:</b> رابطه عالم غیب و شهادت چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هرچه در عالم شهادت است ریشه در عالم غیب دارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عالم شهادت (مادی) ریشه در عالم غیب (ماوراء ماده) دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- متفاوت: نادرست است.<br>
+- شبیه: نادرست است.<br>
+- یکی: نادرست است.<br>
+<b>نکته کلیدی:</b> شهادت ریشه در غیب دارد
+</div>
+</div>
+
+<div class="card question" data-search="ضرورت معاد حکمت الهی">
+<span class="qnum">سوال ۲۴</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه ضرورت معاد را اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">حکمت الهی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حکمت الهی ایجاب می‌کند که معاد وجود داشته باشد تا نیکوکاران پاداش و بدکاران مجازات شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- انکار معاد فاقد دلیل: ناقص است.<br>
+- آفرینش نخستین: دلیل امکان است.<br>
+- قدرت بی‌کران: دلیل امکان است.<br>
+<b>نکته کلیدی:</b> ضرورت معاد = حکمت الهی
+</div>
+</div>
+
+<div class="card question" data-search="یوم الازفة روز بسیار نزدیک قیامت">
+<span class="qnum">سوال ۲۵</span>
+<div class="fa"><b>متن سوال:</b> یکی از اسامی قیامت «یوم الازفة» است یعنی چه؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روز بسیار نزدیک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> «یوم الازفة» یعنی روز بسیار نزدیک (قیامت).<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روز جدایی: نام دیگر قیامت است.<br>
+- روز جمع شدن: نام دیگر قیامت است.<br>
+- روز خارج شدن: نام دیگر قیامت است.<br>
+<b>نکته کلیدی:</b> یوم الازفة = روز نزدیک
+</div>
+</div>
+
+<div class="card question" data-search="نخستین نظریه روح مجرد افلاطون">
+<span class="qnum">سوال ۲۶</span>
+<div class="fa"><b>متن سوال:</b> نخستین کسی که نظریه روح و جان مجرد را شرح داد کیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">افلاطون</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> افلاطون نخستین فیلسوفی است که نظریه روح و جان مجرد را به تفصیل شرح داد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ارسطو: شاگرد افلاطون است.<br>
+- سقراط: استاد افلاطون است.<br>
+- فلوطین: بعد از افلاطون است.<br>
+<b>نکته کلیدی:</b> روح مجرد = افلاطون
+</div>
+</div>
+
+<div class="card question" data-search="روح عالم امر خلق شهادت">
+<span class="qnum">سوال ۲۷</span>
+<div class="fa"><b>متن سوال:</b> روح مربوط به کدامین عالم است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">امر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> روح مربوط به عالم امر است؛ چون روح مجرد است و از عالم ماده نیست.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خلق: مربوط به عالم ماده است.<br>
+- شهادت: مربوط به عالم ماده است.<br>
+- دنیا: مربوط به عالم ماده است.<br>
+<b>نکته کلیدی:</b> روح = عالم امر
+</div>
+</div>
+
+<div class="card question" data-search="تمایز وحی رسالت علم بشری خطا سهو">
+<span class="qnum">سوال ۲۸</span>
+<div class="fa"><b>متن سوال:</b> دلیل تمایز وحی و رسالت از علم و معرفت بشری کدام گزینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> وحی از هر خطا و سهو پیراسته است، از سرچشمه علم نامتناهی الهی بهره‌مند است، و آموزه‌های آن با براهین علمی و عقلی قابل تأیید است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر گزینه فقط یک جنبه را نشان می‌دهد.<br>
+<b>نکته کلیدی:</b> تمایز وحی = هر سه مورد
+</div>
+</div>
+
+<div class="card question" data-search="جن شعور اختیار تکلیف بی مبالاتی">
+<span class="qnum">سوال ۲۹</span>
+<div class="fa"><b>متن سوال:</b> از اینکه خداوند در میان حیات نیز بی‌مبالاتی را برانگیخته تا آیات الهی را برای آنان عرضه کنند اشاره به کدامین ویژگی جِنّ دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شعور و اختیار و تکلیف</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> این آیه اشاره به شعور، اختیار و تکلیف جن دارد؛ چون جن نیز مانند انسان مکلف است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سرشت جن: کلی است.<br>
+- زندگی جمعی: ناقص است.<br>
+- رابطه جن و انسان: نادرست است.<br>
+<b>نکته کلیدی:</b> جن = شعور + اختیار + تکلیف
+</div>
+</div>
+
+<div class="card question" data-search="سرشت فرشتگان عقلانی">
+<span class="qnum">سوال ۳۰</span>
+<div class="fa"><b>متن سوال:</b> سرشت فرشتگان چگونه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عقلانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> سرشت فرشتگان عقلانی است؛ یعنی موجوداتی مجرد و عقلانی هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نفسانی: مربوط به انسان است.<br>
+- شهوانی: مربوط به حیوان است.<br>
+- مادی: فرشتگان مجردند.<br>
+<b>نکته کلیدی:</b> فرشتگان = سرشت عقلانی
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۲ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>خداشناسی</h3></div>
+<div class="grid2">
+<div class="box"><h4>درک خداشناسی اسلامی</h4>
+<div class="fa">مقایسه با سایر ادیان</div>
+</div>
+<div class="box"><h4>راه دل</h4>
+<div class="fa">«تا چیزی را نبینی نمی‌پرستد»</div>
+</div>
+<div class="box"><h4>راه عقلی</h4>
+<div class="fa">مقابله با شبهات ملحدان</div>
+</div>
+<div class="box"><h4>تنزیه</h4>
+<div class="fa">فهم ناپذیری کامل اوصاف</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توحید</h3></div>
+<div class="grid2">
+<div class="box"><h4>توحید عملی</h4>
+<div class="fa">باورهای توحیدی در عمل</div>
+</div>
+<div class="box"><h4>وجه الله</h4>
+<div class="fa">بقا و ابدیت</div>
+</div>
+<div class="box"><h4>عطای وجود</h4>
+<div class="fa">به اندازه ظرفیت</div>
+</div>
+<div class="box"><h4>مائت</h4>
+<div class="fa">اختیار و تکلیف</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>محال و تسلسل</h3></div>
+<div class="fa"><b>محال ذاتی:</b> محال فی حد نفسه</div>
+<div class="fa"><b>تسلسل محال:</b> سلسله نامتناهی معلول‌ها</div>
+<div class="fa"><b>سنگ و قدرت:</b> اجتماع نقیضین</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معاد و آخرت</h3></div>
+<div class="fa"><b>ضرورت معاد:</b> حکمت الهی</div>
+<div class="fa"><b>یوم الازفة:</b> روز بسیار نزدیک</div>
+<div class="fa"><b>رابطه غیب و شهادت:</b> شهادت ریشه در غیب</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روح و مجردات</h3></div>
+<div class="fa"><b>افلاطون:</b> نخستین نظریه روح مجرد</div>
+<div class="fa"><b>روح:</b> عالم امر</div>
+<div class="fa"><b>فرشتگان:</b> سرشت عقلانی</div>
+<div class="fa"><b>جن:</b> شعور + اختیار + تکلیف</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">تعریف ساده و قابل فهم + نکته امتحانی برای هر مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>راه دل</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی خداشناسی از طریق شهود قلبی و بدون استدلال عقلی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> راه دل = «تا چیزی را نبینی نمی‌پرستد»
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه عقلی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی خداشناسی از طریق استدلال و برهان عقلی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> راه عقلی = مقابله با شبهات ملحدان
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تنزیه</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی پاک دانستن خدا از هر نقص و شبیه بودن به مخلوقات.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تنزیه = فهم ناپذیری کامل اوصاف
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>محال ذاتی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی چیزی که در ذات خودش محال است و به چیز دیگری وابسته نیست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> محال ذاتی = محال فی حد نفسه
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وجه الله</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی بقا و ابدیت الهی؛ هر چیزی فانی است جز ذات خدا.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> وجه الله = بقا و ابدیت
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توحید عملی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی انسان باورهای توحیدی خود را در عمل پیاده کند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> توحید عملی = باور در عمل
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تسلسل</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی سلسله نامتناهی از معلول‌ها که محال است چون هر معلولی نیاز به علت دارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تسلسل محال = سلسله نامتناهی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حکمت الهی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی خدا افعال خود را بر اساس اهداف و نتایج معقول انجام می‌دهد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حکمت = نتایج معقول
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>یوم الازفة</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی روز بسیار نزدیک (قیامت).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> یوم الازفة = روز نزدیک
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روح مجرد</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی روحی که از ماده جداست و مربوط به عالم امر است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> افلاطون = نخستین نظریه روح مجرد / روح = عالم امر
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وحی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی ارتباط ویژه خدا با پیامبران که از هر خطا و سهو پیراسته است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تمایز وحی = پیراستگی + سرچشمه الهی + تأیید عقلی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جن</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی موجودی که شعور، اختیار و تکلیف دارد و مانند انسان مکلف است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جن = شعور + اختیار + تکلیف
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرشتگان</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی موجودات مجردی که سرشت عقلانی دارند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فرشتگان = سرشت عقلانی
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۴ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">تفاوت ساده و نکته امتحانی برای هر جفت مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>راه دل vs راه عقل</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> راه دل = شهودی و بدون استدلال / راه عقل = استدلالی و برهانی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دل = شهود / عقل = استدلال
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>محال ذاتی vs محال عادی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> ذاتی = محال فی حد نفسه / عادی = محال به خاطر عادت</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ذاتی = بدون واسطه
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توحید ذاتی vs صفاتی vs افعالی vs عملی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> ذاتی = یگانگی ذات / صفاتی = یگانگی صفات / افعالی = یگانگی در فاعلیت / عملی = پیاده کردن در عمل</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عملی = عمل به باور
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علم حصولی vs علم حضوری</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> حصولی = با واسطه مفهوم / حضوری = بدون واسطه</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حصولی به حضوری برمی‌گردد
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جن vs فرشته</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> جن = شعور + اختیار + تکلیف / فرشته = سرشت عقلانی بدون تکلیف</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جن = مکلف / فرشته = عقلانی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امکان معاد vs ضرورت معاد</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> امکان = آفرینش دوباره / ضرورت = حکمت الهی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امکان = آفرینش / ضرورت = حکمت
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۵ · شخصیت‌ها و نشانه‌های تشخیصی</h2>
+<p class="section-sub">هر شخصیت + نظر ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>افلاطون</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف یونانی</div>
+<div class="fa"><b>نظر ساده:</b> نخستین کسی که نظریه روح و جان مجرد را شرح داد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> افلاطون = روح مجرد
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ارسطو</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف یونانی</div>
+<div class="fa"><b>نظر ساده:</b> «عقل داور به حق است».</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ارسطو = عقل داور به حق
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حضرت امیر (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام اول شیعیان</div>
+<div class="fa"><b>نظر ساده:</b> «لم یطلع العقول علی تحدید صفته» - عقل‌ها به کنه صفات خدا راه ندارند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حضرت امیر = تنزیهی بودن اوصاف
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فلوطین</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف نوافلاطونی</div>
+<div class="fa"><b>نظر ساده:</b> ادامه‌دهنده فلسفه افلاطون.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فلوطین = نوافلاطونی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سقراط</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف یونانی</div>
+<div class="fa"><b>نظر ساده:</b> استاد افلاطون و بنیان‌گذار فلسفه اخلاق.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سقراط = استاد افلاطون
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امام صادق (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام ششم شیعیان</div>
+<div class="fa"><b>نظر ساده:</b> «مائت» اشاره به اختیار و تکلیف انسان دارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مائت = اختیار و تکلیف
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">دام چیه + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: درک خداشناسی اسلامی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی با توجه به مظاهر مادی می‌شه خداشناسی اسلامی رو درک کرد.</div>
+<div class="fa"><b>جواب درست:</b> مقایسه با سایر ادیان</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> درک خداشناسی = مقایسه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: راه دل vs راه عقل</h3>
+<div class="fa"><b>دام چیه:</b> راه دل و راه عقل رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> راه دل = شهودی / راه عقل = استدلالی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دل = شهود
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: محال ذاتی vs عادی</h3>
+<div class="fa"><b>دام چیه:</b> محال ذاتی و عادی رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ذاتی = فی حد نفسه / عادی = به خاطر عادت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ذاتی = بدون واسطه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: توحید عملی vs ذاتی</h3>
+<div class="fa"><b>دام چیه:</b> توحید عملی رو با توحید ذاتی قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> عملی = پیاده کردن باور در عمل</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عملی = عمل به باور
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: ضرورت معاد vs امکان معاد</h3>
+<div class="fa"><b>دام چیه:</b> ضرورت معاد رو با امکان معاد قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ضرورت = حکمت الهی / امکان = آفرینش دوباره</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ضرورت = حکمت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: روح عالم امر vs خلق</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی روح مربوط به عالم خلقه.</div>
+<div class="fa"><b>جواب درست:</b> روح = عالم امر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روح = امر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: جن vs فرشته</h3>
+<div class="fa"><b>دام چیه:</b> جن و فرشته رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> جن = مکلف / فرشته = عقلانی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جن = اختیار و تکلیف
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: افلاطون vs ارسطو</h3>
+<div class="fa"><b>دام چیه:</b> افلاطون و ارسطو رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> افلاطون = روح مجرد / ارسطو = عقل داور به حق</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> افلاطون = روح
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 06 · معارف اسلامی · ۳۰ سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{q:"درک عمق خداشناسی اسلامی چگونه ممکن است؟",options:["توجه به مظاهر مادی","شناخت تاریخ کهن","مقایسه با سایر ادیان","فطرت خداجو"],answer:2,explanation:"درک خداشناسی = مقایسه با ادیان."},
+{q:"بهترین شیوه حیات چگونه ممکن است؟",options:["شناخت حیات دینی","تصور خالص از خدا","برداشت از اوصاف","شواهد تاریخی"],answer:1,explanation:"بهترین شیوه حیات = تصور خالص از خدا."},
+{q:"«تا چیزی را نبینی نمی‌پرستد» اشاره به کدام راه دارد؟",options:["راه دل","تدبر در آفریدگان","راه تجربه","راه عقل"],answer:0,explanation:"راه دل = شهود."},
+{q:"امتیاز راه عقلی شناخت خدا چیست؟",options:["مقابله با شبهات ملحدان","نشانه‌های تکوینی","پدیده‌های اجتماعی","هیچکدام"],answer:0,explanation:"راه عقلی = مقابله با شبهات."},
+{q:"کدام گزینه اشاره به امتناع دارد؟",options:["دور مستلزم اجتماع نقیضین","تقدم معلول","تاخر علت","همه موارد"],answer:3,explanation:"امتناع = همه موارد."},
+{q:"روش تنزیهی قرآن چگونه است؟",options:["فهم‌پذیری اوصاف","فهم ناپذیری اوصاف","تشبیه","عدم آگاهی"],answer:1,explanation:"تنزیه = فهم ناپذیری کامل."},
+{q:"پیام آیه «ألا یعلم من خلق» چیست؟",options:["تلازم آفرینندگی و علم","علم محدود","آگاهی از ممکنات","علم به معادن"],answer:0,explanation:"آفرینندگی = علم به آفریدگان."},
+{q:"امری که فی حد نفسه محال است چیست؟",options:["محال ذاتی","محال عادی","محال وقوعی","همه موارد"],answer:0,explanation:"محال ذاتی = فی حد نفسه."},
+{q:"مقصود مفسران از «وجه الله» چیست؟",options:["وجود الهی","ذات الهی","بقا و ابدیت","فناناپذیری"],answer:2,explanation:"وجه الله = بقا و ابدیت."},
+{q:"کدام گزینه صحیح است؟",options:["تفاوت تبعیض","تناسب قراردادی","عطای وجود به اندازه ظرفیت","حالل"],answer:2,explanation:"عطای وجود = به اندازه ظرفیت."},
+{q:"منظور از «مائت» چیست؟",options:["اختیار و تکلیف","جایگاه رفیع","ظرفیت علمی","جهان کارگر"],answer:0,explanation:"مائت = اختیار و تکلیف."},
+{q:"اگر خرد در برابر قضای الهی خاضع نشود چه می‌شود؟",options:["گرایش ضعیف","گرایش قوی","شک بیشتر","عدم پذیرش"],answer:2,explanation:"خاضع نشدن = شک بیشتر."},
+{q:"چرا تسلسل محال است؟",options:["سلسله نامتناهی معلول‌ها","سلسله متناهی","اجتماع نقیضین","ارتفاع نقیضین"],answer:0,explanation:"تسلسل محال = سلسله نامتناهی."},
+{q:"حدیث «لم یطلع العقول» بر چه چیزی تصریح دارد؟",options:["تنزیهی بودن اوصاف","فهم ناپذیری","تشبیه","تفاوت جدی"],answer:0,explanation:"تنزیهی بودن اوصاف."},
+{q:"توحید در عمل چه نام دارد؟",options:["ذاتی","صفاتی","افعالی","عملی"],answer:3,explanation:"توحید عملی = عمل به باور."},
+{q:"عدم تعلق قدرت بر سنگ و حرکت کدام است؟",options:["محدودیت قدرت","نقصان قدرت","نقصان ذات سنگ","اجتماع نقیضین"],answer:3,explanation:"اجتماع نقیضین."},
+{q:"تناسب فاعل با فعلش به کدام معنای حکمت اشاره دارد؟",options:["معرفت به حقایق","استواری افعال","دوری از فعل قبیح","نتایج معقول"],answer:3,explanation:"حکمت = نتایج معقول."},
+{q:"کدام گزینه صحیح است؟",options:["رکوع سر نماز","حقیقت تسبیح","عادل خدشه","جاودانگی طبیعت"],answer:1,explanation:"تسبیح = خارج شدن از تشبیه و تعطیل."},
+{q:"مقام باطنی اذان چیست؟",options:["فراخواندن هستی","جلوه عظمت","رسیدن به فلاح","اعلام وقت نماز"],answer:0,explanation:"باطن اذان = فراخواندن هستی."},
+{q:"فهم تعالیم دینی با کدام شناخت میسر است؟",options:["شناخت انسان","موجودات انسان‌نما","ساحت طبیعی","ساحت غیرجسمانی"],answer:0,explanation:"فهم تعالیم = شناخت انسان."},
+{q:"حقیقت دانستن اسماء چیست؟",options:["شناسایی واژه‌ها","آگاهی از حقایق کلی","شناسایی علوم","آگاهی از نادانی"],answer:1,explanation:"اسماء = حقایق کلی."},
+{q:"کدام گزینه صحیح است؟",options:["علم خدا جبری","علم خدا خاص","اختیار = میل و رغبت","عمومیت خالقیت = جبر"],answer:2,explanation:"اختیار = میل و رغبت."},
+{q:"رابطه عالم غیب و شهادت چگونه است؟",options:["شهادت ریشه در غیب دارد","متفاوت","شبیه","یکی"],answer:0,explanation:"شهادت ریشه در غیب دارد."},
+{q:"کدام گزینه ضرورت معاد را نشان می‌دهد؟",options:["حکمت الهی","انکار معاد","آفرینش نخستین","قدرت بی‌کران"],answer:0,explanation:"ضرورت معاد = حکمت الهی."},
+{q:"«یوم الازفة» یعنی چه؟",options:["روز بسیار نزدیک","روز جدایی","روز جمع شدن","روز خارج شدن"],answer:0,explanation:"یوم الازفة = روز نزدیک."},
+{q:"نخستین کسی که نظریه روح مجرد را شرح داد کیست؟",options:["ارسطو","افلاطون","سقراط","فلوطین"],answer:1,explanation:"افلاطون = روح مجرد."},
+{q:"روح مربوط به کدام عالم است؟",options:["امر","خلق","شهادت","دنیا"],answer:0,explanation:"روح = عالم امر."},
+{q:"دلیل تمایز وحی از علم بشری چیست؟",options:["پیراستگی از خطا","سرچشمه الهی","تأیید عقلی","همه موارد"],answer:3,explanation:"تمایز وحی = همه موارد."},
+{q:"آیه بی‌مبالاتی جن اشاره به چه دارد؟",options:["سرشت جن","شعور و اختیار و تکلیف","زندگی جمعی","رابطه جن و انسان"],answer:1,explanation:"جن = شعور + اختیار + تکلیف."},
+{q:"سرشت فرشتگان چگونه است؟",options:["نفسانی","شهوانی","عقلانی","مادی"],answer:2,explanation:"فرشتگان = سرشت عقلانی."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

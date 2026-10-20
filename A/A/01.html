@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>آزمون مرور سریع - معارف اسلامی</title>
+    <style>
+        :root {
+            --pink: #fa4779;
+            --pink2: #ff7aa6;
+            --pink-soft: rgba(250, 71, 121, 0.12);
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e5e7eb;
+            --correct: #7fd1b9;
+        }
+        body.dark {
+            --bg: #0b1020;
+            --card: #131a33;
+            --text: #e5e7eb;
+            --border: #263056;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 70px auto;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 26px;
+        }
+        .card, .sheet, .json-card {
+            background: var(--card);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.18);
+        }
+        .json-card {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+        }
+        .progress-wrap {
+            height: 12px;
+            background: linear-gradient(90deg, #eee, #ddd);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            transition: .4s;
+        }
+        .question {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 22px;
+            line-height: 1.8;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .option {
+            padding: 16px 18px;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            transition: background .3s, border-color .3s;
+            font-size: 15px;
+        }
+        .option:hover {
+            background: var(--pink-soft);
+            border-color: var(--pink);
+        }
+        .next {
+            margin-top: 28px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 22px;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background .3s;
+        }
+        .next:hover {
+            background: var(--pink2);
+        }
+        .sheet {
+            max-height: 620px;
+            overflow: auto;
+        }
+        .sheet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .sheet-cell {
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 10px 12px;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 8px;
+            align-items: center;
+        }
+        .sheet-cell.active {
+            border-color: var(--pink);
+            box-shadow: 0 0 0 3px var(--pink-soft);
+        }
+        .answers {
+            display: flex;
+            justify-content: space-between;
+        }
+        .bubble {
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 12px;
+        }
+        .bubble.correct {
+            background: var(--correct);
+            color: #fff;
+            border: none;
+        }
+        .bubble.wrong {
+            background: var(--pink);
+            color: #fff;
+            border: none;
+        }
+        .result {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .score {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--pink);
+        }
+        .desc {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .print {
+            margin-top: 24px;
+            padding: 14px 34px;
+            border-radius: 999px;
+            border: none;
+            background: #111;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background .3s;
+        }
+        .print:hover {
+            background: #333;
+        }
+        .json-card textarea {
+            width: 100%;
+            min-height: 160px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 14px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            background: var(--bg);
+            color: var(--text);
+            resize: vertical;
+            direction: ltr;
+            text-align: left;
+        }
+        .json-card .json-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .json-card .json-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .copy-json-btn {
+            padding: 8px 24px;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .copy-json-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(250, 71, 121, 0.35);
+        }
+        .copy-feedback {
+            font-size: 14px;
+            color: var(--correct);
+            font-weight: 600;
+            display: none;
+        }
+        .quizly-logo {
+            position: fixed;
+            top: 16px;
+            right: 18px;
+            z-index: 999;
+        }
+        .quizly-logo img {
+            width: 60px;
+            cursor: pointer;
+            animation: quizlyFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 28px rgba(250, 71, 121, .55));
+            transition: transform .35s ease, filter .35s ease;
+        }
+        .quizly-logo img:hover {
+            transform: scale(1.12) rotate(3deg);
+            filter: drop-shadow(0 16px 40px rgba(250, 71, 121, .85));
+        }
+        @keyframes quizlyFloat {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+        @media (max-width: 820px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
+            .options {
+                grid-template-columns: 1fr;
+            }
+            .sheet-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media print {
+            .theme-toggle, .next, .json-card { display: none; }
+            body { background: #fff; }
+        }
+    </style>
+</head>
+<body>
+<div class="quizly-logo">
+    <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo">
+</div>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+<div class="wrapper">
+    <div class="card">
+        <div class="progress-wrap">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="quiz"></div>
+        <button class="next" id="nextBtn" onclick="next()">بعدی</button>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="sheet">
+        <div class="sheet-grid" id="sheet"></div>
+    </div>
+
+    <!-- بخش JSON -->
+    <div class="json-card" id="jsonCard">
+        <div class="json-header">
+            <h3>📋 کپی JSON نتایج</h3>
+            <div>
+                <button class="copy-json-btn" onclick="copyJSON()">کپی JSON</button>
+                <span class="copy-feedback" id="copyFeedback">✓ کپی شد!</span>
+            </div>
+        </div>
+        <textarea id="jsonOutput" readonly placeholder="نتایج به‌صورت JSON اینجا نمایش داده می‌شود..."></textarea>
+    </div>
+</div>
+
+<script>
+
+const questions = [
+    {
+        q: "وجه جامع آسیب های انسان معاصر کدام است؟",
+        options: ["معنوی", "اخلاقی", "اجتماعی", "خانوادگی"],
+        answer: 2
+    },
+    {
+        q: "دوره تقدم و ترجیح ایمان بر عقل از ویژگی های کدام دوره است؟",
+        options: ["دوره قدیم", "دوره یونان", "دوره قرون وسطی", "دوره معاصر"],
+        answer: 2
+    },
+    {
+        q: "دو جریان افراطی و تفریطی که پس از رنسانس در عرصه معرفت شناسی غرب پدید آمد کدام گزینه است؟",
+        options: ["اصالت سود - اصالت لذت", "اصالت حس - اصالت عقل", "اصالت اخلاق - اصالت تجربه", "اصالت معنویت - اصالت عرفان"],
+        answer: 1
+    },
+    {
+        q: "از اساسی ترین مفاهیم در ادیان الهی کدام است؟",
+        options: ["معنویت", "عقل", "ایمان", "اخلاق"],
+        answer: 0
+    },
+    {
+        q: "کدام مورد به عنوان حاصل ایمان و نوعی وابستگی به خداوند به عنوان مبدأ هستی و پدید آورنده مخلوقات محسوب می شود؟",
+        options: ["عشق", "دین", "اخلاق", "معنویت"],
+        answer: 3
+    },
+    {
+        q: "کدام مورد است که در معارف الهی به عنوان بزرگترین دشمن تلقی شده و مبارزه با آن جهاد اکبر نامیده شده است؟",
+        options: ["نفس اماره", "شیطان رجیم", "استکبار جهانی", "نفس لوامه"],
+        answer: 0
+    },
+    {
+        q: "کدام طریق خداشناسی است که در آن استدلال و برهان عقلی و فلسفی برای اثبات خداوند استفاده نمی شود بلکه نوعی شهود و احساس حضور پروردگار است؟",
+        options: ["برهان نظم", "راه دل و فطرت", "برهان امکان و وجوب", "راه عقل و استدلال"],
+        answer: 1
+    },
+    {
+        q: "وجودی که مقتضی ضرورت وجود یا امتناع وجود در خارج نیست بلکه نسبت او به وجود و عدم یکسان است چه نام دارد؟",
+        options: ["جایز الوجود", "واجب الوجود", "ممتنع الوجود", "ممکن الوجود"],
+        answer: 3
+    },
+    {
+        q: "این بیت \"در اندرون من خسته دل ندانم کیست / که من خموشم و او در فغان و غوغاست\" مربوط به کدامیک از راههای خداشناسی است؟",
+        options: ["راه فطرت", "راه عقل", "راه نقل", "برهان امکان و وجوب"],
+        answer: 0
+    },
+    {
+        q: "صفاتی که در یک نسبت و رابطه وجودی میان خداوند و مخلوقات ایجاد می‌شود چه نام دارد؟",
+        options: ["صفات اضافی", "صفات نفسی", "صفات ذاتی", "صفات فعلی"],
+        answer: 0
+    },
+    {
+        q: "آیه شریفه \"يَعْلَمُ خَائِنَةَ الْأَعْيُنِ وَ مَا تُخْفِي الصُّدُور\" (او چشمهایی را که به خیانت گردش می‌کند می‌داند، و آنچه در سینه ها پنهان است با خبر است) مربوط به کدامیک از صفات الهی است؟",
+        options: ["قدرت خداوند", "علم گسترده خداوند", "حکمت خداوند", "خالقیت خداوند"],
+        answer: 1
+    },
+    {
+        q: "آیه شریفه \"كُلَّ يَوْمٍ هُوَ فِي شَأْنٍ\" (او هر روز در شان و کاری است) به کدامیک از صفات خداوند اشاره دارد؟",
+        options: ["حیات", "قدرت", "علم", "حکمت"],
+        answer: 1
+    },
+    {
+        q: "کدام گزینه به مهمترین تفاوت قضا و قدر اشاره دارد؟",
+        options: ["قضا مربوط به قدرت خداوند است قدر مربوط به علم خداوند", "قضا مربوط به حد و نهایت است قدر مربوط به حتمیت و ضرورت", "در قدر ضرورت و حتمی بودن است ولی در قضا خصوصیات حدود و معلول است", "در قضا ضرورت و حتمی بودن است ولی قدر مربوط به خصوصیات و حدود معلول است"],
+        answer: 3
+    },
+    {
+        q: "حوادث و اموری که براساس قانون علت و معلول و سبب و مسبب در جهان روی می‌دهد اصطلاحاً چه نامیده می‌شود؟",
+        options: ["قضا و قدر تکوینی", "قضا و قدر تشریعی", "قضا و قدر علمی", "قضا و قدر عقلی"],
+        answer: 0
+    },
+    {
+        q: "گزینه صحیح در باره این عبارت \"در اصطلاح متکلمان به معنای نفی و سلب فعل از انسان و انتساب آن به خداوند است\" کدام است؟",
+        options: ["قدر", "قضا", "اختیار", "جبر"],
+        answer: 3
+    },
+    {
+        q: "وجدان از دلایل کدام مورد است؟",
+        options: ["امتحان", "اختیار", "جبر", "تقدیر"],
+        answer: 1
+    },
+    {
+        q: "راه حل اسلام و متفکران مسلمان در جستجوی معنای زندگی مبتنی بر کدام مورد است؟",
+        options: ["جعل معنا", "کشف معنا", "اختراع معنا", "اراده معطوف به معنا"],
+        answer: 1
+    },
+    {
+        q: "در قرآن کریم چند آیه مربوط به مسئله معاد است؟",
+        options: ["بیش از ۲۰۰۰ آیه", "بیش از ۳۰۰۰ آیه", "بیش از ۱۰۰۰ آیه", "۱۱۴ آیه"],
+        answer: 2
+    },
+    {
+        q: "معاد در اسلام به چه معنایی است؟",
+        options: ["تنها معاد روحانی", "تنها معاد جسمانی", "بازگشت روح به عالم برزخ", "بازگشت روح به بدن در قیامت"],
+        answer: 3
+    },
+    {
+        q: "از دیدگاه صدر المتالهین شیرازی بسیاری از خصوصیات معاد را از کدام طریق می‌توان اثبات کرد؟",
+        options: ["نور نبوت و مشکات ولایت", "قرآن و معارف غنی آن", "عقل و براهین عقلی", "عرفان و کشف و شهود"],
+        answer: 3
+    },
+    {
+        q: "کدام مورد است که آدمی را از احساس پوچی و بی‌هدفی نجات داده و دل اورا برای درک حقیقت هستی آماده می‌کند؟",
+        options: ["کشفیات و مشاهدات عرفانی", "مطالعه در آفرینش موجودات جهان هستی", "دقت در براهین و دلایل عقلی", "دقت در آیات قرآن و کلام معصومین علیهم السلام"],
+        answer: 3
+    },
+    {
+        q: "کدام گزینه در مورد معنای وعده و وعید صحیح است؟",
+        options: ["خلف وعده در وعید جایز است", "وعده و وعید هر دو به معنای بشارت به پاداش الهی است", "وعده به معنای ترساندن از جهنم و وعید به معنای بشارت به بهشت", "وعده به معنای بشارت به بهشت و وعید به معنای ترساندن از جهنم"],
+        answer: 3
+    },
+    {
+        q: "قرآن کریم زنده شدن زمین مرده را شاهد بر چه مطلبی می‌داند؟",
+        options: ["حتمی بودن معاد", "امکان معاد", "ضرورت معاد", "وقوع معاد"],
+        answer: 1
+    },
+    {
+        q: "از دیدگاه علامه طباطبایی مسئله تجرد نفس از آموزه های مسلم چیست؟",
+        options: ["ادیان الهی", "کتاب های آسمانی", "قرآن و سنت", "عقل"],
+        answer: 3
+    },
+    {
+        q: "بزرگترین نعمتی که در روز قیامت از انسان پرسیده می شود کدام نعمت است؟",
+        options: ["عمر", "مال و ثروت", "هدایت و ولایت", "جوانی"],
+        answer: 2
+    },
+    {
+        q: "طبق این آیه شریفه \"يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ ارْجِعِي إِلَى رَبِّكِ رَاضِيَةً مَرْضِيَّةً فَادْخُلِي فِي عِبَادِي وَادْخُلِي جَنَّتِي\" (ای نفس مطمئنه خشنود و خداپسند به سوی پروردگارت بازگرد و در میان بندگان من درآی و در بهشت من داخل شو) عالی ترین مرتبه بهشت کدام است؟",
+        options: ["لقای پروردگار", "جنت", "بهشت برین", "فردوس اعلی"],
+        answer: 0
+    },
+    {
+        q: "در میان عوامل ورود به بهشت کدام عامل علت اصلی و سبب ورود انسان به بهشت است؟",
+        options: ["ایمان و عمل صالح", "تقوا و پرهیزگاری", "بندگی خدا", "احسان و نیکوکاری"],
+        answer: 2
+    },
+    {
+        q: "جهنم در لغت به معنای چیست؟",
+        options: ["چاه بسیار عمیق و تاریک", "جایگاهی در مقابل بهشت", "جایگاه انسانهای طغیانگر", "محل مجازات گناهکاران"],
+        answer: 0
+    },
+    {
+        q: "از دیدگاه بسیاری از متفکران (مانند شیخ مفید و دیگران) خلود در جهنم مخصوص چه کسانی است؟",
+        options: ["یابکاری", "قتل نفس", "عاق والدین", "کفار و مشرکان"],
+        answer: 3
+    },
+    {
+        q: "خداوند در قرآن کریم \"خوردن مال یتیم\" را به چه چیزی تشبیه کرده است؟",
+        options: ["خوردن آب داغ هنگام تشنگی شدید", "خوردن آتش", "خوردن گوشت برادر مرده", "هم نشینی با درندگان"],
+        answer: 1
+    }
+];
+
+    let index = 0;
+    let correctCount = 0;
+    const userAnswers = Array(questions.length).fill(null);
+    const letters = ["الف", "ب", "ج", "د"];
+
+    const quiz = document.getElementById("quiz");
+    const sheet = document.getElementById("sheet");
+    const nextBtn = document.getElementById("nextBtn");
+    const progress = document.getElementById("progress");
+    const jsonOutput = document.getElementById("jsonOutput");
+    const copyFeedback = document.getElementById("copyFeedback");
+
+    function render() {
+        const q = questions[index];
+        quiz.innerHTML = `
+            <div class="question">${index+1}. ${q.q}</div>
+            <div class="options">
+                ${q.options.map((o, i) => `<div class="option" onclick="select(${i})">${letters[i]}) ${o}</div>`).join("")}
+            </div>`;
+        nextBtn.style.display = "none";
+        updateProgress();
+        renderSheet();
+        updateJSON();
+    }
+
+    function updateProgress() {
+        progress.style.width = `${(index / questions.length) * 100}%`;
+    }
+
+    function renderSheet() {
+        sheet.innerHTML = questions.map((q, i) => {
+            const ua = userAnswers[i];
+            return `
+                <div class="sheet-cell ${i === index ? "active" : ""}">
+                    <b>${i + 1}</b>
+                    <div class="answers">
+                        ${[0, 1, 2, 3].map((j) => {
+                            let c = "";
+                            if (ua !== null) {
+                                c = j === q.answer ? "correct" : (j === ua ? "wrong" : "");
+                            }
+                            return `<div class="bubble ${c}">${letters[j]}</div>`;
+                        }).join("")}
+                    </div>
+                </div>`;
+        }).join("");
+    }
+
+    function select(i) {
+        if (userAnswers[index] !== null) return;
+        userAnswers[index] = i;
+        if (i === questions[index].answer) correctCount++;
+        nextBtn.style.display = "block";
+        renderSheet();
+        updateJSON();
+    }
+
+    function next() {
+        index++;
+        if (index < questions.length) {
+            render();
+        } else {
+            finish();
+        }
+    }
+
+    function finish() {
+        progress.style.width = "100%";
+        const totalQuestions = questions.length;
+        const answeredQuestions = userAnswers.filter(answer => answer !== null).length;
+        const grade = ((correctCount / totalQuestions) * 20).toFixed(2);
+        const percentage = ((correctCount / totalQuestions) * 100).toFixed(2);
+        let desc = "";
+        if (grade >= 18) desc = "عالی و مسلط";
+        else if (grade >= 15) desc = "خوب";
+        else if (grade >= 12) desc = "قابل قبول";
+        else desc = "نیازمند تمرین جدی";
+
+        quiz.innerHTML = `
+            <div class="score">${grade} / ۲۰</div>
+            <div class="desc">${desc}</div>
+            <div>شما ${answeredQuestions} از ${totalQuestions} سوال را پاسخ داده‌اید. (${percentage}%)</div>
+            <div style="margin-top:10px;color:var(--text-secondary);font-size:14px;">
+                ✅ ${correctCount} صحیح | ❌ ${answeredQuestions - correctCount} غلط
+            </div>
+            <button class="print" onclick="openPrintWindow()">🖨 چاپ</button>
+        `;
+        updateJSON();
+    }
+
+    function openPrintWindow() {
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(`
+            <html lang="fa" dir="rtl">
+            <head>
+                <meta charset="UTF-8">
+                <title>نتیجه آزمون</title>
+                <style>
+                    body { font-family: 'Vazirmatn', Tahoma, sans-serif; direction: rtl; padding: 20px; }
+                    .result { text-align: center; margin: 20px; }
+                    .table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                    .table th, .table td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+                    .table th { background: #fa4779; color: #fff; }
+                    .table td.correct { background: #7fd1b9; }
+                    .table td.wrong { background: #fa4779; color: #fff; }
+                </style>
+            </head>
+            <body>
+                <div class="result">
+                    <h1>نتیجه آزمون</h1>
+                    <div style="font-size:48px;font-weight:900;color:#fa4779;">${(correctCount / questions.length * 20).toFixed(2)} / ۲۰</div>
+                    <div>شما ${userAnswers.filter(answer => answer !== null).length} از ${questions.length} سوال را پاسخ داده‌اید.</div>
+                    <table class="table">
+                        <thead>
+                            <tr><th>سوال</th><th>پاسخ شما</th><th>پاسخ صحیح</th></tr>
+                        </thead>
+                        <tbody>
+                            ${questions.map((q, i) => `
+                                <tr>
+                                    <td>${q.q}</td>
+                                    <td class="${userAnswers[i] === q.answer ? 'correct' : 'wrong'}">${userAnswers[i] !== null ? letters[userAnswers[i]] : 'پاسخ داده نشده'}</td>
+                                    <td>${letters[q.answer]}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            </body>
+            </html>
+        `);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+    }
+
+    // ===== JSON GENERATOR =====
+    function generateJSON() {
+        const totalQuestions = questions.length;
+        const answered = userAnswers.filter(a => a !== null).length;
+        const correct = correctCount;
+        const wrong = answered - correct;
+        const grade = ((correct / totalQuestions) * 20);
+        const percentage = ((correct / totalQuestions) * 100);
+
+        const results = questions.map((q, i) => {
+            const userAns = userAnswers[i];
+            return {
+                question_number: i + 1,
+                question: q.q,
+                options: q.options,
+                correct_answer: letters[q.answer],
+                user_answer: userAns !== null ? letters[userAns] : "پاسخ داده نشده",
+                is_correct: userAns !== null ? (userAns === q.answer) : false
+            };
+        });
+
+        return {
+            total_questions: totalQuestions,
+            answered_questions: answered,
+            correct_answers: correct,
+            wrong_answers: wrong,
+            grade: parseFloat(grade.toFixed(2)),
+            percentage: parseFloat(percentage.toFixed(2)),
+            results: results
+        };
+    }
+
+    function updateJSON() {
+        const data = generateJSON();
+        jsonOutput.value = JSON.stringify(data, null, 2);
+    }
+
+    function copyJSON() {
+        jsonOutput.select();
+        navigator.clipboard.writeText(jsonOutput.value).then(() => {
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        }).catch(() => {
+            document.execCommand("copy");
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        });
+    }
+
+    render();
+</script>
+</body>
+</html>

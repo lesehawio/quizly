@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · جهنم و جهنمیان · سری 22</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"22";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>جهنم و جهنمیان · سری 22</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>جهنم و جهنمیان</h2>
+  <p>جزوه جامع امتحانی · تعریف ساده + نکته امتحانی + دام آزمون · ویژه آزمون چهارگزینه‌ای</p>
+  <div class="pills"><span class="pill">۷ بخش</span><span class="pill">۵ علت جهنم</span><span class="pill">۴ مسئله خلود</span><span class="pill">۵ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان ساده و برای آمادگی امتحان چهارگزینه‌ای طراحی شده است. هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۷</b><span>بخش اصلی</span></div>
+<div class="stat"><b>۵</b><span>علت جهنم</span></div>
+<div class="stat"><b>۴</b><span>مسئله خلود</span></div>
+<div class="stat"><b>۵</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>جهنم در لغت و اصطلاح</h3></div>
+<div class="grid2">
+<div class="box"><h4>جهنم در لغت</h4>
+<div class="fa">چاه بسیار عمیق و تاریک</div>
+</div>
+<div class="box"><h4>جهنم در اصطلاح</h4>
+<div class="fa">جایگاهی در آخرت در مقابل بهشت که طغیان‌گران در آن مجازات می‌شوند</div>
+</div>
+<div class="box"><h4>نام‌های جهنم</h4>
+<div class="fa">سقر، حجیم، هاویه</div>
+</div>
+<div class="box"><h4>جایگاه جهنم</h4>
+<div class="fa">مقصد سلوک انسان تبهکار + در نظام احسن</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علل و اسباب جهنمی شدن</h3></div>
+<div class="grid2">
+<div class="box"><h4>۱. کفر و نفاق</h4>
+<div class="fa">توبه/۶۸</div>
+</div>
+<div class="box"><h4>۲. شرک و بت‌پرستی</h4>
+<div class="fa">لقمان/۱۳ — شرک ظلم عظیم</div>
+</div>
+<div class="box"><h4>۳. پیروی از شیطان</h4>
+<div class="fa">حجر/۴۲-۴۳</div>
+</div>
+<div class="box"><h4>۴. تمسخر ارزش‌ها</h4>
+<div class="fa">بقره/۱۴</div>
+</div>
+<div class="box"><h4>۵. ظلم و ستم</h4>
+<div class="fa">تکبر، مال‌اندوزی، رباخواری، خوردن مال یتیم و...</div>
+</div>
+<div class="box"><h4>عامل اصلی</h4>
+<div class="fa">گناه و نافرمانی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مسئله خلود</h3></div>
+<div class="grid2">
+<div class="box"><h4>خلود در لغت</h4>
+<div class="fa">بقا، سکون، قرار، همیشگی، جاودانگی، مکث طولانی</div>
+</div>
+<div class="box"><h4>خلود در اصطلاح</h4>
+<div class="fa">دوام و بقای همیشگی انسان در بهشت یا جهنم</div>
+</div>
+<div class="box"><h4>اهل خلود (نظر شیعه)</h4>
+<div class="fa">کفار و مشرکان</div>
+</div>
+<div class="box"><h4>اهل خلود (خوارج و معتزله)</h4>
+<div class="fa">مرتکبان گناه کبیره بدون توبه</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دلایل مخالفان خلود</h3></div>
+<div class="fa">۱. نظام حکیمانه و غایتمند جهان هستی</div>
+<div class="fa">۲. رحمت وسیع پروردگار</div>
+<div class="fa">۳. فطرت و سرشت توحیدی انسان</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ملاک و مناط خلود</h3></div>
+<div class="fa"><b>نظر علامه طباطبائی:</b> اگر صورت در نفس رسوخ کرد و هویت او را متحول کرد، عذاب دائمی می‌شود</div>
+<div class="fa"><b>نکته:</b> عذاب دائمی ناشی از ملکاتی است که در نفس رسوخ کرده و فطرت ثانویه ایجاد کرده است</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>جهنم در لغت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> به معنای چاه بسیار عمیق و تاریک است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جهنم در لغت = چاه بسیار عمیق و تاریک. اگر سوال پرسید «جهنم در لغت چیست؟» جواب: چاه بسیار عمیق و تاریک.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جهنم در اصطلاح</h3></div>
+<div class="fa"><b>تعریف ساده:</b> جایگاهی در آخرت است که در مقابل بهشت قرار دارد و انسان‌های طغیان‌گر و بزهکار در آنجا مجازات می‌شوند.</div>
+<div class="fa">قرآن کریم از جهنم با نام‌های دیگر مانند: سقر، حجیم و هاویه نیز نام برده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جهنم در اصطلاح = جایگاه مجازات طغیان‌گران + نام‌های قرآن: سقر، حجیم، هاویه. اگر سوال پرسید «نام‌های جهنم در قرآن کدامند؟» جواب: سقر، حجیم، هاویه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جایگاه جهنم در نظام احسن</h3></div>
+<div class="fa"><b>تعریف ساده:</b> جهنم و دوزخ نیز همانند بهشت مرتبه‌ای از سلوک انسان بوده و درواقع مقصد سلوک و حرکت انسان تبهکار است.</div>
+<div class="fa">ازاین‌رو در مجموعه نظام احسن قرار دارد؛ زیرا در نظام احسن هیچ سلوک و حرکتی خالی از مقصد و غایت نیست.</div>
+<div class="fa">گرچه اراده خداوند متعال بر این تعلق گرفته است که غایت نهایی انسان بهشت و رسیدن به جمال الهی باشد، اما انسان به این دلیل که از اراده و اختیار برخوردار است، مسیری را انتخاب می‌کند که منتهی به مقصدی به نام جهنم و دوزخ می‌شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جهنم = مقصد سلوک انسان تبهکار + در نظام احسن. اگر سوال پرسید «جایگاه جهنم در نظام احسن چیست؟» جواب: مقصد سلوک انسان تبهکار.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیات مربوط به جهنم</h3></div>
+<div class="fa"><b>نمل/۹۰:</b> «وَمَن جَاءَ بِالسَّيِّئَةِ فَكُبَّتْ وُجُوهُهُمْ فِي النَّارِ هَلْ تُجْزَوْنَ إِلَّا مَا كُنتُمْ تَعْمَلُونَ»</div>
+<div class="fa"><b>تحریم/۷:</b> «يَا أَيُّهَا الَّذِينَ كَفَرُوا لَا تَعْتَذِرُوا الْيَوْمَ إِنَّمَا تُجْزَوْنَ مَا كُنتُمْ تَعْمَلُونَ»</div>
+<div class="fa"><b>زلزال/۷-۸:</b> «فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> زلزال/۷-۸ = دیدن نتیجه اعمال. اگر سوال پرسید «کدام آیه به دیدن نتیجه اعمال اشاره دارد؟» جواب: زلزال/۷-۸.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علل و اسباب جهنمی شدن — کفر و نفاق</h3></div>
+<div class="fa"><b>تعریف ساده:</b> کافران و منافقان از مصداق‌های روشن کسانی هستند که وارد دوزخ می‌شوند.</div>
+<div class="fa"><b>آیه توبه/۶۸:</b> «وَعَدَ اللَّهُ الْمُنَافِقِينَ وَالْمُنَافِقَاتِ وَالْكُفَّارَ نَارَ جَهَنَّمَ خَالِدِينَ فِيهَا هِيَ حَسْبُهُمْ وَلَعَنَهُمُ اللَّهُ وَلَهُمْ عَذَابٌ مُّقِيمٌ»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> توبه/۶۸ = وعده آتش دوزخ به منافقان و کفار. اگر سوال پرسید «کدام آیه به وعده آتش به منافقان اشاره دارد؟» جواب: توبه/۶۸.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علل و اسباب جهنمی شدن — شرک</h3></div>
+<div class="fa"><b>تعریف ساده:</b> خداوند در قرآن شرک را ظلم عظیم توصیف کرده است.</div>
+<div class="fa"><b>آیه لقمان/۱۳:</b> «إِنَّ الشِّرْكَ لَظُلْمٌ عَظِيمٌ» — شرک ظلم عظیمی است.</div>
+<div class="fa"><b>علامه طباطبائی:</b> عظمت هر عملی به عظمت اثر آن است، و عظمت معصیت، به عظمت کسی است که نافرمانی‌اش می‌شود. بنابراین بزرگ‌ترین گناهان و نافرمانی‌ها، نافرمانی خداست و بزرگ‌ترین نافرمانی‌های او این است که برایش شریک قائل شوی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شرک = ظلم عظیم (لقمان/۱۳). اگر سوال پرسید «کدام آیه شرک را ظلم عظیم می‌داند؟» جواب: لقمان/۱۳.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علل و اسباب جهنمی شدن — پیروی از شیطان</h3></div>
+<div class="fa"><b>تعریف ساده:</b> پیروی از شیطان یکی دیگر از علل جهنمی شدن است.</div>
+<div class="fa"><b>آیه حجر/۴۲-۴۳:</b> «إِنَّ عِبَادِي لَيْسَ لَكَ عَلَيْهِمْ سُلْطَانٌ إِلَّا مَنِ اتَّبَعَكَ مِنَ الْغَاوِينَ وَإِنَّ جَهَنَّمَ لَمَوْعِدُهُمْ أَجْمَعِينَ»</div>
+<div class="fa"><b>حدیث امام جواد (ع):</b> «مَنْ أَصْغَى إِلَى نَاطِقٍ فَقَدْ عَبَدَهُ، فَإِنْ كَانَ النَّاطِقُ عَنِ اللَّهِ فَقَدْ عَبَدَ اللَّهَ، وَإِنْ كَانَ النَّاطِقُ عَنْ إِبْلِيسَ فَقَدْ عَبَدَ إِبْلِيسَ» — کسی که به سخن گوینده‌ای گوش فرا دهد، همانا بندگی او را کرده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حدیث امام جواد = گوش دادن به گوینده = بندگی او. اگر سوال پرسید «حدیث امام جواد درباره پیروی از شیطان چیست؟» جواب: گوش دادن به گوینده بندگی اوست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علل و اسباب جهنمی شدن — تمسخر ارزش‌ها</h3></div>
+<div class="fa"><b>تعریف ساده:</b> سراسر آیات قرآن و سخنان معصومان (ع) سخن از ارزش‌ها و بایدها و نبایدهایی است که هدف از آنها ایجاد جامعه‌ای سالم و پاک و تأمین سعادت واقعی انسان و استکمال انسان است.</div>
+<div class="fa">تمسخر هر کدام از ارزش‌ها درواقع به تمسخر خداوند که واضع این ارزش‌هاست — برمی‌گردد و بی‌تردید از علل و عوامل گرفتاری انسان در دوزخ خواهد بود.</div>
+<div class="fa"><b>آیه بقره/۱۴:</b> «وَإِذَا لَقُوا الَّذِينَ آمَنُوا قَالُوا آمَنَّا وَإِذَا خَلَوْا إِلَىٰ شَيَاطِينِهِمْ قَالُوا إِنَّا مَعَكُمْ إِنَّمَا نَحْنُ مُسْتَهْزِئُونَ»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تمسخر ارزش‌ها = تمسخر خدا. اگر سوال پرسید «تمسخر ارزش‌ها به چه چیزی برمی‌گردد؟» جواب: به تمسخر خداوند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علل و اسباب جهنمی شدن — ظلم و ستم</h3></div>
+<div class="fa"><b>تعریف ساده:</b> تکبر، مال‌اندوزی، دشمنی با خدا و رسول خدا و اهل‌بیت پیامبر (ص)، توبه نکردن، تکذیب آیات الهی، کفران نعمت، تکیه و اعتماد بر ستمگران، فراموشی آخرت، ترک نماز، رباخواری، خوردن مال یتیم، کم‌فروشی، عیب‌جویی، اسراف و تبذیر، هوس‌رانی و... از علل و اسباب دیگر ورود انسان به جهنم هستند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ظلم و ستم = یکی از علل جهنمی شدن. اگر سوال پرسید «عوامل دیگر جهنمی شدن کدامند؟» این موارد را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلود در لغت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> به معنای بقا، سکون، قرار، همیشگی، جاودانگی، مکث طولانی و... است.</div>
+<div class="fa">به عقیده برخی اهل لغت، خلود به بقای چیزی در یک حالت می‌گویند و مخلد چیزی است که مدتی طولانی باقی باشد. لذا به مردی که دیرتر پیر می‌شود، مخلّد می‌گویند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلود در لغت = بقا، سکون، قرار، همیشگی، جاودانگی، مکث طولانی. اگر سوال پرسید «خلود در لغت چیست؟» جواب: بقا، سکون، قرار، همیشگی، جاودانگی، مکث طولانی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلود در اصطلاح</h3></div>
+<div class="fa"><b>تعریف ساده:</b> به معنای دوام و بقای همیشگی انسان در بهشت یا در جهنم است.</div>
+<div class="fa">این بحث از مباحث مهم است و در حدود و قلمرو آن اختلاف و تشتت آراء وجود دارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلود در اصطلاح = دوام و بقای همیشگی در بهشت یا جهنم. اگر سوال پرسید «خلود در اصطلاح چیست؟» جواب: دوام و بقای همیشگی در بهشت یا جهنم.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهل خلود</h3></div>
+<div class="fa"><b>نظر بیشتر مسلمانان:</b> خلود را مختص کفار و مشرکان می‌دانند و معتقدند مؤمن و مسلمان هرچند فاسق و گناهکار هم باشد، در عذاب همیشگی نخواهد بود؛ بلکه پس از مدتی از عذاب رهایی خواهد یافت.</div>
+<div class="fa"><b>نظر خوارج و معتزله:</b> مرتکبان گناه کبیره را که بدون توبه می‌میرند، مخلد در آتش می‌دانند.</div>
+<div class="fa"><b>نظر بسیاری از متفکران شیعه:</b> مانند شیخ مفید، صدرالمتألهین، علامه طباطبائی و... خلود را مخصوص کفار و مشرکان دانسته‌اند.</div>
+<div class="fa"><b>نظر صدرالمتألهین:</b> در توجیه برخی روایات که می‌گویند گناهانی مانند: قتل نفس، عاق والدین، ترک نماز، رباخواری و... باعث خلود انسان در جهنم می‌شود، می‌گوید: خلود در این موارد به معنای مکث طولانی در عذاب است، نه استقرار همیشگی در عذاب جهنم.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نظر شیعه = خلود مختص کفار و مشرکان. اگر سوال پرسید «نظر شیعه درباره اهل خلود چیست؟» جواب: کفار و مشرکان.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دلایل مخالفان خلود — نظام حکیمانه</h3></div>
+<div class="fa"><b>تعریف ساده:</b> موجودات ازجمله انسان طوری آفریده شده‌اند که براساس سرشت و طبیعت خود به‌دنبال کمالند و ذاتاً به‌سوی آن در حرکتند؛ مگر اینکه مانعی باعث نرسیدن به مقصود شود.</div>
+<div class="fa">ولی موانع دائمی نیستند؛ ازاین‌رو هرکس که ذاتاً حب به لقای پروردگار داشته باشد، خداوند نیز حب به لقای او دارد و هرکس که در اثر عروض مانع و انحرافی لقای خدا را دوست نداشته باشد، این امر موقتی است و پس از عذاب و رنج موقتی، به فطرت اولیه خویش بازگشته و درد و عذاب از او زایل می‌شود.</div>
+<div class="fa"><b>پاسخ:</b> شکی نیست که نظام عالم حکیمانه و غایتمند است و نرسیدن موجود به غایت و کمال مطلوب خود ناشی از موانع و عواملی است که انسان با اختیار و اراده خود آن را فراهم کرده است. اما ازآنجاکه خداوند انسان را مختار آفریده است، بنابراین عمل اختیاری انسان نیز جزو نظام آفرینش است و خارج از نظام حکیمانه آفرینش نیست.</div>
+<div class="fa"><b>مولوی:</b> «این جهان کوه است و فعل ما ندا / سوی ما آید نداها را صدا»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نظام حکیمانه = دلیل مخالفان خلود. اگر سوال پرسید «دلایل مخالفان خلود چیست؟» جواب: نظام حکیمانه، رحمت وسیع، فطرت توحیدی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دلایل مخالفان خلود — رحمت وسیع پروردگار</h3></div>
+<div class="fa"><b>تعریف ساده:</b> رحمت الهی بسیار وسیع است و همه چیز را در برگرفته و چیزی نیست که مشمول رحمت پروردگار نباشد. چنین رحمت گسترده‌ای خلاصی از عذاب را می‌طلبد.</div>
+<div class="fa"><b>آیه اعراف/۱۵۶:</b> «عَذَابِي أُصِيبُ بِهِ مَنْ أَشَاءُ وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ»</div>
+<div class="fa"><b>پاسخ:</b> شکی نیست که رحمت پروردگار وسیع و گسترده است، اما باید توجه کرد که رحمت وقتی درباره خدای متعال به‌کار می‌رود، به‌معنای رقت قلب و ناراحتی باطنی نیست. رحمت درباره او باید به معنای بخشش و افاضه چیزهایی باشد که مناسب با استعداد هر انسان است. وقتی کسی با اراده و اختیار خود شرایط را طوری فراهم کرد که استعداد و شایستگی دریافت صورت شقاوت را دارد، براساس رحمت عام خدا از این دریافت محروم نمی‌شود و چنین صورتی به او داده می‌شود و نتیجه آن عذاب دائمی است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> رحمت وسیع = دلیل مخالفان خلود. اگر سوال پرسید «آیه رحمت وسیع کدام است؟» جواب: اعراف/۱۵۶.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دلایل مخالفان خلود — فطرت توحیدی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> فطرت انسان بر این سرشته شده است که از زمره سالکان راه خدا و توحید باشد؛ اما ازآنجاکه انسان موجودی مختار است، اگر مسیر حق و حقیقت را بپیماید، براساس فطرت خود عمل کرده و اهل سعادت خواهد بود و اگر برخلاف فطرت خود عمل کند، از فطرت خود دور شده و عذاب می‌شود.</div>
+<div class="fa">با این حال فطرت اصلی و اولیه او اگرچه زیر غبار عصیان و انحراف مدفون است، اما از بین نرفته و همچنان باقی است.</div>
+<div class="fa"><b>پاسخ:</b> عصیان و طغیان انسان در برابر خداوند متعال اگر از مرتبه حال ارتقا یافته و به ملکه تبدیل شود، فطرت اولی انسان به فطرت ثانوی تبدیل شده و امر ذاتی خواهد بود و امر ذاتی آثار و نتایج دائمی را خواهد داشت.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فطرت توحیدی = دلیل مخالفان خلود. اگر سوال پرسید «پاسخ به دلیل فطرت توحیدی چیست؟» جواب: اگر عصیان به ملکه تبدیل شود، فطرت ثانویه ذاتی می‌شود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شبهه اول خلود — گناه محدود، عذاب دائمی</h3></div>
+<div class="fa"><b>شبهه:</b> گناهی که انسان گناهکار مرتکب شده است، متناهی بوده و نهایت دارد؛ پس چرا باید با عذاب همیشگی مجازات شود؟</div>
+<div class="fa"><b>پاسخ:</b> عذاب در حقیقت نتیجه طبیعی حالت و صورت شقاوت و بدبختی است که انسان با اختیار خود بر روح و روانش وارد کرده است. درواقع این اثر و نتیجه طبیعی و منطقی، معلول حالت و صورتی است که انسان پس از فراهم کردن شرایط و امکانات مخالفت و طغیان در خود به وجود آورده است.</div>
+<div class="fa"><b>مثال:</b> فردی ۴۰ سال در وادی مخالفت با خداوند بوده است و عواملی که در شکل‌گیری چنین هویت و شخصیتی محدود بودند، جوهر و ذات و هویت وجودی فرد را دگرگون کرده و حالت و صورتی در او پدید آورده است که نتیجه آن صدور مخالفت دائمی است.</div>
+<div class="fa"><b>مثال معتاد:</b> مانند فرد معتادی که سبب اعتیاد او مصرف محدود مواد مخدر است، ولی وقتی روح و جان فرد با مواد عجین شده و جان او درگیر آن شد، دیگر گرفتاری او محدود نخواهد بود، بلکه تا مدت‌ها آثار آن با او خواهد ماند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پاسخ شبهه اول = عذاب نتیجه طبیعی صورت شقاوت است. اگر سوال پرسید «پاسخ شبهه گناه محدود و عذاب دائمی چیست؟» جواب: عذاب نتیجه طبیعی صورت شقاوت است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شبهه دوم خلود — انتقام‌گیری</h3></div>
+<div class="fa"><b>شبهه:</b> عذاب کسی که از دستورات و نواهی خدا سرپیچی کرده، نوعی انتقام‌گیری است و انتقام برای جبران نقصان است؛ نقصان و کمبودی که گناهکارِ ستمگر بر منتقم وارد کرده است؛ درحالی‌که چنین چیزی بر خداوند جایز نیست؛ زیرا او غنی مطلق است. پس چگونه عذاب به‌ویژه عذاب دائمی برای خدا جایز باشد؟</div>
+<div class="fa"><b>پاسخ:</b> عذاب همیشگی در انسان، به صورت و هویتی که در خود ایجاد کرده است، استناد دارد. استناد این عذاب به خدای سبحان به سبب انتقام و تشفی خاطر نیست؛ زیرا انتقام و تشفی خاطر، برای خدا محال است.</div>
+<div class="fa">البته انتقام به معنای جزای سخت و اثر بدی که بنده در مقابل تجاوز و تعدی خروج از عبودیت و اطاعت گرفتار آن شده است، بر خدا صدق می‌کند؛ ولی باید توجه داشت که این صدق ملازم آن نیست که چنین انتقامی برای خدا اشکال داشته باشد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پاسخ شبهه دوم = عذاب استناد به صورت و هویت خود انسان دارد. اگر سوال پرسید «پاسخ شبهه انتقام‌گیری چیست؟» جواب: عذاب به صورت و هویت خود انسان استناد دارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ملاک و مناط خلود</h3></div>
+<div class="fa"><b>تعریف ساده:</b> با بررسی برخی از شبهات خلود و نیز دقت در دلایل مخالفان خلود می‌توان به راحتی ضابطه و ملاک خلود به‌معنای دوام و گرفتاری همیشگی مشرکان و کفار در عذاب را به‌دست آورد.</div>
+<div class="fa"><b>نظر علامه طباطبائی:</b> احوال و ملکاتی که انسان کسب می‌کند، در صفحه نفس تأثیرگذار بوده و در نفس، صورتی نیکو یا زشت ایجاد می‌کنند. نفس افراد خوشبخت و سعید از صورت‌های نیکو لذت می‌برد و نفس افراد شقی از صورت قبیح و زشت در رنج و عذابند.</div>
+<div class="fa">صورتی که هنوز در نفس و جان انسان رسوخ نکرده و هویت و شخصیت حقیقی او را متحول نکرده‌اند، زوال‌پذیر و فانی هستند و انسان با توبه و بازگشت به خدا می‌تواند آثار آن را از بین ببرد.</div>
+<div class="fa">اما کسی که چنان با گناه سنخیت یافته و عصیان، روح و جان و حقیقت او شده و به اصطلاح نوعیت جدیدی شده است، چنین صورتی برای انسان همیشگی و دائمی و بدون زوال خواهد بود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ملاک خلود = ملکاتی که در نفس رسوخ کرده و هویت او را متحول کرده است. اگر سوال پرسید «ملاک خلود چیست؟» جواب: ملکاتی که در نفس رسوخ کرده و هویت او را متحول کرده است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تجسم اعمال</h3></div>
+<div class="fa"><b>تعریف ساده:</b> تجسم عمل در اصطلاح معارف اسلامی به این معنا است که عقاید، افکار، اخلاق، عملکردها و حتی مقاصد و نیات انسان به شکل جسم و پیکر مادی درمی‌آید و درواقع باطن امر غیرمادی مانند افکار و نیات، در ظاهر خود را در قالب امر مادی و پیکر جسمانی نشان می‌دهد.</div>
+<div class="fa">هر گناه و معصیت علاوه بر ظاهر باطنی‌اش که حقیقت آن عمل است، در آخرت که «یوم تبلی السرائر» است، به صورت مناسب با پیکر جسمانی و ظاهری آن عمل نشان داده می‌شود.</div>
+<div class="fa"><b>مثال:</b> خوردن مال یتیم در حقیقت به‌مثابه خوردن لقمه‌های آتش است که تجلی و ظهور جسمانی آن به‌ویژه در جهنم، به شکل خوردن پاره‌های آتش نمایان می‌شود: «إِنَّ الَّذِينَ يَأْكُلُونَ أَمْوَالَ الْيَتَامَىٰ ظُلْمًا إِنَّمَا يَأْكُلُونَ فِي بُطُونِهِمْ نَارًا وَسَيَصْلَوْنَ سَعِيرًا» (نساء/۱۰)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تجسم اعمال = ظهور باطن اعمال به صورت جسمانی. اگر سوال پرسید «تجسم اعمال چیست؟» جواب: ظهور باطن اعمال به صورت جسمانی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت تناسخ و تجسم اعمال</h3></div>
+<div class="fa"><b>تعریف ساده:</b> در مبحث تناسخ اشاره کردیم که بسیاری از بزرگان مانند صدرالمتألهین و علامه طباطبائی تناسخ را باطل می‌دانند و آن‌دسته از مطالب دینی را که بیانگر مسخ انسان در دنیا و حشر انسان در آخرت به‌صورت حیوانات هستند، مصداق «تناسخ ملکوتی» می‌دانند؛ چیزی که در زبان دین به «تجسم اعمال» نیز تعبیر می‌شود.</div>
+<div class="fa"><b>مرز دقیق تناسخ و مسخ باطل، با تجسم اعمال در این است که:</b></div>
+<div class="fa">در تناسخ، انسان هویت انسانی خود را ترک می‌کند و درواقع از انسانیت خارج می‌شود و به جرگه حیوانات درمی‌آید.</div>
+<div class="fa">ولی در تجسم اعمال، انسان به کلی حیوان نمی‌شود؛ بلکه انسانی است که در حد خلق‌وخوی و عملکرد حیوانات بلکه پایین‌تر از آن تنزل می‌کند؛ زیرا نفس و روح آدمی همواره در تحول ذاتی و استکمال جوهری است و ملکاتی که انسان کسب می‌کند، در ساختار باطنی او تأثیرگذار بوده و اعمال او با لوازمی که همراه آن است، قابلیت تأثیر و ایجاد اثر مطلوب یا نامطلوب در نفس را فراهم می‌کند.</div>
+<div class="fa"><b>نظر علامه طباطبائی:</b> «حقیقت معاد ظهور حقیقت اشیا پس از خفای آنهاست.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تفاوت تناسخ و تجسم اعمال = در تناسخ هویت انسانی ترک می‌شود؛ در تجسم اعمال انسان همچنان انسان است. اگر سوال پرسید «تفاوت تناسخ و تجسم اعمال چیست؟» جواب: در تناسخ هویت انسانی ترک می‌شود، در تجسم اعمال انسان همچنان انسان است.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">هر جفت مفهوم + تفاوت ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>جهنم در لغت vs جهنم در اصطلاح</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>جهنم در لغت</th><th>جهنم در اصطلاح</th></tr></thead>
+<tbody>
+<tr><td>معنا</td><td>چاه بسیار عمیق و تاریک</td><td>جایگاهی در آخرت در مقابل بهشت که طغیان‌گران در آن مجازات می‌شوند</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جهنم در لغت = چاه عمیق. اگر سوال پرسید «جهنم در لغت چیست؟» جواب: چاه بسیار عمیق و تاریک.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلود در لغت vs خلود در اصطلاح</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>خلود در لغت</th><th>خلود در اصطلاح</th></tr></thead>
+<tbody>
+<tr><td>معنا</td><td>بقا، سکون، قرار، همیشگی، جاودانگی، مکث طولانی</td><td>دوام و بقای همیشگی انسان در بهشت یا در جهنم</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلود در لغت = بقا و مکث طولانی. اگر سوال پرسید «خلود در لغت چیست؟» جواب: بقا، سکون، قرار، همیشگی، جاودانگی، مکث طولانی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهل خلود — نظر شیعه vs خوارج و معتزله</h3></div>
+<table class="compare">
+<thead><tr><th>گروه</th><th>نظر</th></tr></thead>
+<tbody>
+<tr><td>شیعه (شیخ مفید، صدرالمتألهین، علامه طباطبائی)</td><td>کفار و مشرکان</td></tr>
+<tr><td>خوارج و معتزله</td><td>مرتکبان گناه کبیره بدون توبه</td></tr>
+<tr><td>بیشتر مسلمانان</td><td>کفار و مشرکان + مؤمن فاسق پس از مدتی رهایی می‌یابد</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نظر شیعه = کفار و مشرکان. اگر سوال پرسید «نظر شیعه درباره اهل خلود چیست؟» جواب: کفار و مشرکان.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دلایل مخالفان خلود</h3></div>
+<table class="compare">
+<thead><tr><th>دلیل</th><th>محتوا</th></tr></thead>
+<tbody>
+<tr><td>نظام حکیمانه</td><td>موانع دائمی نیستند + همه باید به کمال برسند</td></tr>
+<tr><td>رحمت وسیع</td><td>رحمت الهی همه چیز را در برگرفته (اعراف/۱۵۶)</td></tr>
+<tr><td>فطرت توحیدی</td><td>فطرت اصلی از بین نمی‌رود + کفر عارضی است</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دلایل مخالفان = نظام حکیمانه + رحمت وسیع + فطرت توحیدی. اگر سوال پرسید «دلایل مخالفان خلود کدامند؟» این سه را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تناسخ vs تجسم اعمال</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>تناسخ</th><th>تجسم اعمال</th></tr></thead>
+<tbody>
+<tr><td>هویت انسانی</td><td>ترک می‌شود</td><td>حفظ می‌شود</td></tr>
+<tr><td>نتیجه</td><td>خروج از انسانیت</td><td>تنزل در حد خلق‌وخوی حیوانات</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تناسخ = خروج از انسانیت / تجسم اعمال = انسان همچنان انسان است. اگر سوال پرسید «تفاوت تناسخ و تجسم اعمال چیست؟» جواب: در تناسخ هویت انسانی ترک می‌شود، در تجسم اعمال انسان همچنان انسان است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کفر و نفاق vs شرک</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> کفر و نفاق = انکار خدا و رسالت / شرک = شریک قائل شدن برای خدا</div>
+<div class="fa"><b>نکته:</b> شرک در قرآن ظلم عظیم توصیف شده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شرک = ظلم عظیم. اگر سوال پرسید «کدام گناه در قرآن ظلم عظیم توصیف شده است؟» جواب: شرک.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عذاب موقت vs عذاب دائمی (خلود)</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> موقت = برای گناهکاران مؤمن / دائمی (خلود) = برای کفار و مشرکان</div>
+<div class="fa"><b>ملاک:</b> رسوخ ملکات در نفس و تبدیل فطرت اولی به فطرت ثانویه</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ملاک خلود = رسوخ ملکات. اگر سوال پرسید «ملاک خلود چیست؟» جواب: رسوخ ملکات در نفس.
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۴ · شخصیت‌ها و نظریه‌پردازان</h2>
+<p class="section-sub">هر شخصیت + نظریه ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>علامه طباطبائی</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و مفسر معاصر</div>
+<div class="fa"><b>نظریه ساده:</b> عظمت هر عملی به عظمت اثر آن است، و عظمت معصیت، به عظمت کسی است که نافرمانی‌اش می‌شود. بنابراین بزرگ‌ترین گناهان و نافرمانی‌ها، نافرمانی خداست و بزرگ‌ترین نافرمانی‌های او این است که برایش شریک قائل شوی. در ملاک خلود: احوال و ملکاتی که انسان کسب می‌کند، در صفحه نفس تأثیرگذار بوده و در نفس، صورتی نیکو یا زشت ایجاد می‌کنند. «حقیقت معاد ظهور حقیقت اشیا پس از خفای آنهاست.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبائی = عظمت شرک + ملاک خلود + حقیقت معاد. اگر سوال پرسید «نظر علامه طباطبائی درباره ملاک خلود چیست؟» جواب: ملکاتی که در نفس رسوخ کرده و هویت او را متحول کرده است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صدرالمتألهین (ملاصدرا)</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف بزرگ ایرانی، بنیان‌گذار حکمت متعالیه</div>
+<div class="fa"><b>نظریه ساده:</b> در توجیه برخی روایات که می‌گویند گناهانی مانند: قتل نفس، عاق والدین، ترک نماز، رباخواری و... باعث خلود انسان در جهنم می‌شود، می‌گوید: خلود در این موارد به معنای مکث طولانی در عذاب است، نه استقرار همیشگی در عذاب جهنم. چنان‌که به کسی که مدت زیادی در زندان حبس می‌شود، حبس دائمی گویند؛ درحالی‌که مراد از آن، مکث طولانی در زندان است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> صدرالمتألهین = خلود در برخی روایات به معنای مکث طولانی. اگر سوال پرسید «نظر ملاصدرا درباره خلود در روایات چیست؟» جواب: مکث طولانی در عذاب، نه استقرار همیشگی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شیخ مفید</h3></div>
+<div class="fa"><b>کی بود:</b> متکلم بزرگ شیعه</div>
+<div class="fa"><b>نظریه ساده:</b> از متفکران شیعه که خلود را مخصوص کفار و مشرکان دانسته است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شیخ مفید = خلود مخصوص کفار و مشرکان. اگر سوال پرسید «نظر شیخ مفید درباره خلود چیست؟» جواب: خلود مخصوص کفار و مشرکان.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امام جواد (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام نهم شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> «مَنْ أَصْغَى إِلَى نَاطِقٍ فَقَدْ عَبَدَهُ، فَإِنْ كَانَ النَّاطِقُ عَنِ اللَّهِ فَقَدْ عَبَدَ اللَّهَ، وَإِنْ كَانَ النَّاطِقُ عَنْ إِبْلِيسَ فَقَدْ عَبَدَ إِبْلِيسَ» — کسی که به سخن گوینده‌ای گوش فرا دهد، همانا بندگی او را کرده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام جواد = گوش دادن به گوینده بندگی اوست. اگر سوال پرسید «حدیث امام جواد درباره پیروی از شیطان چیست؟» جواب: گوش دادن به گوینده بندگی اوست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خواجه عبدالله انصاری</h3></div>
+<div class="fa"><b>کی بود:</b> عارف و مفسر</div>
+<div class="fa"><b>نظریه ساده:</b> ای مسکین! یکی بر اندیش تا چه کرده‌ای و چه ساخته‌ای؟! آن روز را هرچه کرده‌ای، از اعمال و هر چه گفته‌ای از اقوال، هم‌سنگ ذره‌ای فرو نگذارند و همه را در حساب آرند و جزای آن را به تمامی برسانند. آن روز خروش مظلومان برآید؛ فریاد از ظالمان برخیزد؛ سرگشتگی عاصیان ظاهر شود؛ اقویا در دست ضعفا اسیر شوند؛ فقرا بر امرا امیر گردند؛ مطیع که طاعت‌دارست، شادان و خندان بود؛ مقصر که تقصیر کرده، گریان و سوزان بود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خواجه عبدالله انصاری = توصیف روز قیامت. اگر سوال پرسید «توصیف خواجه عبدالله انصاری از روز قیامت چیست؟» جواب: خروش مظلومان برآید و فریاد از ظالمان برخیزد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مولوی</h3></div>
+<div class="fa"><b>کی بود:</b> شاعر و عارف بزرگ</div>
+<div class="fa"><b>نظریه ساده:</b> «این جهان کوه است و فعل ما ندا / سوی ما آید نداها را صدا»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مولوی = فعل ما ندا. اگر سوال پرسید «شعر مولوی درباره فعل ما چیست؟» جواب: این جهان کوه است و فعل ما ندا.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: جهنم در لغت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جهنم در لغت یعنی جایگاه مجازات.</div>
+<div class="fa"><b>جواب درست:</b> جهنم در لغت = چاه بسیار عمیق و تاریک</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جهنم در لغت = چاه عمیق
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: نام‌های جهنم</h3>
+<div class="fa"><b>دام چیه:</b> نام‌های جهنم رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> سقر، حجیم، هاویه</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نام‌های جهنم = سقر + حجیم + هاویه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: جایگاه جهنم در نظام احسن</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جهنم خارج از نظام احسن است.</div>
+<div class="fa"><b>جواب درست:</b> جهنم در نظام احسن قرار دارد (مقصد سلوک انسان تبهکار)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جهنم = مقصد سلوک انسان تبهکار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: علل جهنمی شدن</h3>
+<div class="fa"><b>دام چیه:</b> علل جهنمی شدن رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ۵ علت = کفر و نفاق + شرک + پیروی از شیطان + تمسخر ارزش‌ها + ظلم و ستم</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۵ علت جهنم
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: آیه لقمان/۱۳</h3>
+<div class="fa"><b>دام چیه:</b> آیه لقمان/۱۳ رو به موضوع دیگری نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> لقمان/۱۳ = شرک ظلم عظیم</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> لقمان/۱۳ = شرک ظلم عظیم
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: آیه توبه/۶۸</h3>
+<div class="fa"><b>دام چیه:</b> آیه توبه/۶۸ رو به موضوع دیگری نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> توبه/۶۸ = وعده آتش دوزخ به منافقان و کفار</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> توبه/۶۸ = وعده آتش به منافقان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: آیه حجر/۴۲-۴۳</h3>
+<div class="fa"><b>دام چیه:</b> آیه حجر/۴۲-۴۳ رو به موضوع دیگری نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> حجر/۴۲-۴۳ = پیروی از شیطان</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حجر/۴۲-۴۳ = پیروی از شیطان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: حدیث امام جواد</h3>
+<div class="fa"><b>دام چیه:</b> حدیث امام جواد رو به کسی غیر از امام جواد نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> امام جواد (ع) = «من أصغى إلى ناطق فقد عبده»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حدیث = امام جواد
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: خلود در لغت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی خلود فقط به معنای جاودانگی است.</div>
+<div class="fa"><b>جواب درست:</b> خلود در لغت = بقا، سکون، قرار، همیشگی، جاودانگی، مکث طولانی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلود = مکث طولانی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: اهل خلود (نظر شیعه)</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی نظر شیعه درباره اهل خلود، مرتکبان گناه کبیره است.</div>
+<div class="fa"><b>جواب درست:</b> کفار و مشرکان</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نظر شیعه = کفار و مشرکان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: دلایل مخالفان خلود</h3>
+<div class="fa"><b>دام چیه:</b> دلایل مخالفان خلود رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ۳ دلیل = نظام حکیمانه + رحمت وسیع + فطرت توحیدی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۳ دلیل مخالفان خلود
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: ملاک خلود</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ملاک خلود، مدت زمان گناه است.</div>
+<div class="fa"><b>جواب درست:</b> ملاک خلود = رسوخ ملکات در نفس و تبدیل فطرت اولی به فطرت ثانویه</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ملاک = رسوخ ملکات
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: تجسم اعمال</h3>
+<div class="fa"><b>دام چیه:</b> تجسم اعمال رو با تناسخ قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> تجسم اعمال = انسان همچنان انسان است / تناسخ = خروج از انسانیت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تجسم اعمال = انسان می‌ماند
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: نظر علامه طباطبائی درباره حقیقت معاد</h3>
+<div class="fa"><b>دام چیه:</b> نظر علامه طباطبائی درباره حقیقت معاد رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> «حقیقت معاد ظهور حقیقت اشیا پس از خفای آنهاست.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حقیقت معاد = ظهور حقیقت اشیا
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: نظر صدرالمتألهین درباره خلود</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی صدرالمتألهین خلود در برخی روایات را استقرار همیشگی می‌داند.</div>
+<div class="fa"><b>جواب درست:</b> مکث طولانی در عذاب، نه استقرار همیشگی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ملاصدرا = مکث طولانی
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 22 · جهنم و جهنمیان · جزوه جامع امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"جهنم در لغت به چه معناست؟",options:["چاه بسیار عمیق و تاریک","جایگاه مجازات","آتش","دوزخ"],answer:0,explanation:"جهنم در لغت = چاه بسیار عمیق و تاریک."},
+{q:"جهنم در اصطلاح به چه معناست؟",options:["جایگاهی در آخرت در مقابل بهشت","چاه عمیق","آتش","دوزخ"],answer:0,explanation:"جهنم در اصطلاح = جایگاهی در آخرت در مقابل بهشت."},
+{q:"کدام یک از نام‌های جهنم در قرآن است؟",options:["سقر","حجیم","هاویه","همه موارد"],answer:3,explanation:"همه موارد = نام‌های جهنم."},
+{q:"جایگاه جهنم در نظام احسن چیست؟",options:["مقصد سلوک انسان تبهکار","خارج از نظام احسن","مقصد سلوک انسان مؤمن","مقصد سلوک همه انسان‌ها"],answer:0,explanation:"جهنم = مقصد سلوک انسان تبهکار."},
+{q:"کدام آیه به دیدن نتیجه اعمال اشاره دارد؟",options:["زلزال/۷-۸","لقمان/۱۳","توبه/۶۸","حجر/۴۲-۴۳"],answer:0,explanation:"زلزال/۷-۸ = دیدن نتیجه اعمال."},
+{q:"کدام آیه به وعده آتش به منافقان اشاره دارد؟",options:["توبه/۶۸","لقمان/۱۳","زلزال/۷-۸","حجر/۴۲-۴۳"],answer:0,explanation:"توبه/۶۸ = وعده آتش به منافقان و کفار."},
+{q:"کدام آیه شرک را ظلم عظیم می‌داند؟",options:["لقمان/۱۳","توبه/۶۸","زلزال/۷-۸","حجر/۴۲-۴۳"],answer:0,explanation:"لقمان/۱۳ = شرک ظلم عظیم."},
+{q:"کدام آیه به پیروی از شیطان اشاره دارد؟",options:["حجر/۴۲-۴۳","لقمان/۱۳","توبه/۶۸","زلزال/۷-۸"],answer:0,explanation:"حجر/۴۲-۴۳ = پیروی از شیطان."},
+{q:"حدیث «من أصغى إلى ناطق فقد عبده» از کیست؟",options:["امام جواد (ع)","امام صادق (ع)","امام باقر (ع)","امام علی (ع)"],answer:0,explanation:"حدیث = امام جواد (ع)."},
+{q:"کدام آیه به تمسخر ارزش‌ها اشاره دارد؟",options:["بقره/۱۴","لقمان/۱۳","توبه/۶۸","زلزال/۷-۸"],answer:0,explanation:"بقره/۱۴ = تمسخر ارزش‌ها."},
+{q:"خلود در لغت به چه معناست؟",options:["بقا، سکون، قرار، همیشگی، جاودانگی، مکث طولانی","فقط جاودانگی","فقط بقا","فقط مکث"],answer:0,explanation:"خلود در لغت = بقا، سکون، قرار، همیشگی، جاودانگی، مکث طولانی."},
+{q:"خلود در اصطلاح به چه معناست؟",options:["دوام و بقای همیشگی در بهشت یا جهنم","فقط بقا","فقط مکث طولانی","فقط جاودانگی"],answer:0,explanation:"خلود در اصطلاح = دوام و بقای همیشگی در بهشت یا جهنم."},
+{q:"نظر شیعه درباره اهل خلود چیست؟",options:["کفار و مشرکان","مرتکبان گناه کبیره","همه گناهکاران","همه انسان‌ها"],answer:0,explanation:"نظر شیعه = کفار و مشرکان."},
+{q:"نظر خوارج و معتزله درباره اهل خلود چیست؟",options:["مرتکبان گناه کبیره بدون توبه","کفار و مشرکان","همه گناهکاران","مؤمنان"],answer:0,explanation:"نظر خوارج و معتزله = مرتکبان گناه کبیره بدون توبه."},
+{q:"نظر صدرالمتألهین درباره خلود در برخی روایات چیست؟",options:["مکث طولانی در عذاب","استقرار همیشگی","انکار خلود","تأیید خلود"],answer:0,explanation:"ملاصدرا = مکث طولانی در عذاب."},
+{q:"کدام یک از دلایل مخالفان خلود است؟",options:["نظام حکیمانه","رحمت وسیع","فطرت توحیدی","همه موارد"],answer:3,explanation:"همه موارد = دلایل مخالفان خلود."},
+{q:"آیه اعراف/۱۵۶ به چه اشاره دارد؟",options:["رحمت وسیع پروردگار","نظام حکیمانه","فطرت توحیدی","خلود"],answer:0,explanation:"اعراف/۱۵۶ = رحمت وسیع پروردگار."},
+{q:"ملاک و مناط خلود چیست؟",options:["رسوخ ملکات در نفس","مدت زمان گناه","نوع گناه","تعداد گناهان"],answer:0,explanation:"ملاک خلود = رسوخ ملکات در نفس."},
+{q:"نظر علامه طباطبائی درباره حقیقت معاد چیست؟",options:["ظهور حقیقت اشیا پس از خفای آنها","انکار معاد","معاد جسمانی","معاد روحانی"],answer:0,explanation:"علامه طباطبائی = ظهور حقیقت اشیا پس از خفای آنها."},
+{q:"تجسم اعمال چیست؟",options:["ظهور باطن اعمال به صورت جسمانی","تناسخ","مسخ","خروج از انسانیت"],answer:0,explanation:"تجسم اعمال = ظهور باطن اعمال به صورت جسمانی."},
+{q:"تفاوت تناسخ و تجسم اعمال چیست؟",options:["در تناسخ هویت انسانی ترک می‌شود، در تجسم اعمال انسان همچنان انسان است","هر دو یکی هستند","در تجسم اعمال انسان حیوان می‌شود","در تناسخ انسان می‌ماند"],answer:0,explanation:"تناسخ = خروج از انسانیت / تجسم اعمال = انسان می‌ماند."},
+{q:"آیه نساء/۱۰ به چه اشاره دارد؟",options:["خوردن مال یتیم = خوردن آتش","شرک","نفاق","پیروی از شیطان"],answer:0,explanation:"نساء/۱۰ = خوردن مال یتیم = خوردن آتش."},
+{q:"حقیقت معاد از دیدگاه علامه طباطبائی چیست؟",options:["ظهور حقیقت اشیا پس از خفای آنها","انکار معاد","معاد جسمانی","معاد روحانی"],answer:0,explanation:"علامه طباطبائی = ظهور حقیقت اشیا پس از خفای آنها."},
+{q:"کدام یک از علل جهنمی شدن است؟",options:["کفر و نفاق","شرک","پیروی از شیطان","همه موارد"],answer:3,explanation:"همه موارد = علل جهنمی شدن."},
+{q:"آیه حجر/۴۲-۴۳ به چه اشاره دارد؟",options:["پیروی از شیطان","شرک","نفاق","تمسخر"],answer:0,explanation:"حجر/۴۲-۴۳ = پیروی از شیطان."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

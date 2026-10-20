@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · ورزش ۱ · سری 08 · فصل سوم: ورزش و سلامت جسمانی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"08";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>ورزش ۱ · سری 08 · فصل سوم</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل سوم: ورزش و سلامت جسمانی</h2>
+  <p>همه چیز به زبان ساده — انگار دارم برای یه دوست توضیح می‌دم که هیچ پیش‌زمینه‌ای نداره</p>
+  <div class="pills"><span class="pill">۵ گفتار</span><span class="pill">۳ عامل تهدید</span><span class="pill">۳ بیماری اصلی</span><span class="pill">آماده امتحان</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان خیلی ساده نوشته شده. هدف کلی فصل اینه که بفهمی ورزش چطور روی <b>دستگاه‌های جسمانی</b> (قلب، عروق، اعصاب) اثر می‌ذاره و چطور از بیماری‌ها جلوگیری می‌کنه.</div>
+
+<div class="stats">
+<div class="stat"><b>۵</b><span>گفتار</span></div>
+<div class="stat"><b>۳</b><span>عامل تهدید</span></div>
+<div class="stat"><b>۳</b><span>بیماری اصلی</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#goals">هدف کلی</a><a href="#intro">مقدمه</a><a href="#threats">عوامل تهدید</a><a href="#concepts">گفتارها</a><a href="#compare">تفاوت‌ها</a><a href="#traps">دام‌های آزمون</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="goals" class="section">
+<h2 class="section-title">۰۱ · هدف کلی و چارچوب فصل</h2>
+<p class="section-sub">اول بفهمیم این فصل اصلاً می‌خواد چی بگه</p>
+
+<div class="card">
+<div class="card-head"><h3>هدف کلی فصل</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این فصل می‌خواد بگه ورزش چطور روی <b>دستگاه‌های جسمانی</b> (مثل قلب، عروق، اعصاب) اثر می‌ذاره و چطور از بیماری‌ها جلوگیری می‌کنه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سه بیماری اصلی که این فصل بررسی می‌کنه = سکته قلبی + فشار خون + ناراحتی‌های عصبی (و تصلب شرایین).
+</div>
+</div>
+</section>
+
+<section id="intro" class="section">
+<h2 class="section-title">۰۲ · مقدمه: بیماری‌های قلبی و عروقی</h2>
+<p class="section-sub">اول بفهمیم قلب چیه و چه بیماری‌هایی تهدیدش می‌کنه</p>
+
+<div class="card">
+<div class="card-head"><h3>سکته قلبی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> قلب هم مثل بقیه عضلات، به خون نیاز داره. این خون از <b>رگ‌های کرونر</b> میاد. اگه چربی توی دیواره‌ی این رگ‌ها رسوب کنه، خون نمی‌تونه رد بشه و بخشی از قلب از کار می‌افته. به این حالت <b>سکته قلبی</b> می‌گن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سکته قلبی = انسداد رگ کرونر (به خاطر رسوب چربی) → از کار افتادن بخشی از قلب.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فشار خون</h3></div>
+<div class="fa"><b>به زبان ساده:</b> خونی که توی رگ‌ها جریان داره، یه فشاری به دیواره‌ی رگ وارد می‌کنه. این فشار از <b>انقباض بطن چپ</b> میاد.</div>
+<div class="fa"><b>مقدار طبیعی:</b> ۱۲۰ میلی‌متر جیوه (یعنی ۱۲).</div>
+<div class="fa"><b>پرفشاری خون:</b> اگه فشار بالاتر از این حد بره، بهش «پرفشاری خون» یا «بیماری فشار خون» می‌گن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> فشار خون طبیعی = ۱۲۰ میلی‌متر جیوه = ۱۲.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ناراحتی‌های عصبی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> دستگاه عصبی شامل <b>اعصاب مرکزی</b> (مغز و نخاع) و <b>اعصاب محیطی</b> (آوران و وابران) هست.</div>
+<div class="fa"><b>یه فرق مهم:</b> «ناراحتی عصبی» با «بیماری عصبی» فرق داره.</div>
+<div class="fa">• ناراحتی عصبی = مشکل شدید نیست، ولی ممکنه مقدمه‌ای برای بیماری عصبی باشه.</div>
+<div class="fa">• بیماری عصبی = مشکل جدی و شدیده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> ناراحتی عصبی رو با بیماری عصبی قاطی نکن. ناراحتی عصبی خفیف‌تره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تصلب شرایین</h3></div>
+<div class="fa"><b>به زبان ساده:</b> یعنی <b>سفت و سخت شدن دیواره‌ی رگ‌ها</b>. علتش هم تجمع موادی مثل <b>کلسترول</b> توی رگه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تصلب شرایین = سفت شدن رگ‌ها به خاطر رسوب کلسترول.
+</div>
+</div>
+</section>
+
+<section id="threats" class="section">
+<h2 class="section-title">۰۳ · سه عامل تهدیدکننده قلب و عروق</h2>
+<p class="section-sub">این سه تا رو حفظ کن — سؤال امتحانی مهمیه</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) چاقی و اضافه وزن</h3></div>
+<div class="fa"><b>چاقی یعنی چی؟</b> وقتی چربی بدن نسبت به وزن کل بدن زیاد باشه.</div>
+<div class="fa"><b>حد چاقی:</b></div>
+<div class="fa">• <b>زنان</b>: چربی بیش از ۲۵٪ وزن بدن = اضافه وزن</div>
+<div class="fa">• <b>مردان</b>: چربی بیش از ۱۵٪ وزن بدن = اضافه وزن</div>
+<div class="fa"><b>مشکل چاقی چیه؟</b> چاقی باعث می‌شه قلب و ریه نتونن اکسیژن کافی به بافت‌ها برسونن.</div>
+<div class="fa"><b>علل چاقی:</b> پرخوری + بی‌تحرکی + اختلال در غده تیروئید.</div>
+<div class="fa"><b>یه نکته مهم:</b> چاقی در سنین زیر بلوغ، آدم رو مستعد چاقی در بزرگسالی می‌کنه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> حد چاقی = زنان بیش از ۲۵٪ + مردان بیش از ۱۵٪.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> این اعداد (۲۵ و ۱۵) با اعداد فصل اول (۳۰ و ۲۰) اشتباه نشن! توی این فصل، حد چاقی ۲۵ و ۱۵ هست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) مصرف غذاهای چرب</h3></div>
+<div class="fa"><b>به زبان ساده:</b> غذاهای پرچرب باعث می‌شن چربی توی رگ‌های خونی رسوب کنه.</div>
+<div class="fa"><b>نتیجه:</b></div>
+<div class="fa">• مقاومت رگ‌ها زیاد می‌شه</div>
+<div class="fa">• فشار خون بالا می‌ره</div>
+<div class="fa">• تصلب شرایین ایجاد می‌شه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) مصرف دخانیات</h3></div>
+<div class="fa"><b>به زبان ساده:</b> آدم‌های سیگاری بیشتر از بقیه در معرض <b>سکته قلبی</b> هستن.</div>
+<div class="fa"><b>اثرات سیگار:</b></div>
+<div class="fa">• ناراحتی بیماران فشار خونی رو شدیدتر می‌کنه</div>
+<div class="fa">• خطر بیماری‌های قلبی رو زیاد می‌کنه</div>
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#ffe8f0,#fff0cc);border-color:#f94779">
+<div class="card-head"><h3>📌 جمع‌بندی ۳ عامل تهدید</h3></div>
+<div class="fa">۱) چاقی و اضافه وزن</div>
+<div class="fa">۲) مصرف غذاهای چرب</div>
+<div class="fa">۳) مصرف دخانیات</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۴ · گفتارها با تحلیل جامع</h2>
+<p class="section-sub">هر گفتار با توضیح ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>گفتار ۱: ورزش و کاهش وزن</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> اگه می‌خوای وزن کم کنی، فقط رژیم کافی نیست. باید ورزش هم بکنی.</div>
+<div class="fa"><b>چرا؟</b> چون رژیم بدون ورزش، همراه با چربی، <b>عضله</b> رو هم از بین می‌بره. و این بده!</div>
+<div class="fa"><b>چی مهمه؟</b> کاهش <b>درصد چربی بدن</b>، نه از دست دادن عضله.</div>
+<div class="fa"><b>توده عضلانی:</b> هر چی عضله‌هات حجیم‌تر باشه، بدنت قوی‌تره و مقاومتت در برابر بیماری‌ها بیشتره.</div>
+<div class="fa"><b>سرعت کاهش وزن:</b> به اختلاف بین غذایی که می‌خوری و غذایی که می‌سوزونی بستگی داره. پس صبر لازمه!</div>
+<div class="fa"><b>یه نکته عجیب:</b> بعضی آدم‌های چاق اول ورزش، <b>وزن اضافه</b> می‌کنن! چون چربی از بین می‌ره و عضله جاش رو می‌گیره.</div>
+<div class="fa"><b>معیارهای یک برنامه کاهش وزن موفق:</b></div>
+<div class="fa">• تغییرات پایدار در عادات زندگی</div>
+<div class="fa">• آموزش انتخاب غذاهای مناسب و کنترل پروتئین</div>
+<div class="fa">• تعیین اهداف قابل قبول</div>
+<div class="fa">• محدود نکردن شدید کالری (که آدم دائم گرسنه باشه)</div>
+<div class="fa">• تمرینات هوازی منظم</div>
+<div class="fa">• کاهش وزن ۰/۵ تا ۱ کیلوگرم در هفته</div>
+<div class="fa">• خوردن انواع غذاها</div>
+<div class="fa">• شناسایی الگوهای رفتاری مؤثر در اضافه وزن</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> رژیم بدون ورزش = محکوم به شکست + کاهش وزن ایده‌آل = ۰/۵ تا ۱ کیلوگرم در هفته.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گفتار ۲: ورزش و تصلب شرایین</h3></div>
+<div class="fa"><b>به زبان ساده:</b> ورزش چربی رو توی رگ‌ها آب می‌کنه! یعنی چربی که توی دیواره‌ی رگ‌ها رسوب کرده، با ورزش کم می‌شه.</div>
+<div class="fa"><b>شبکه مویرگی:</b> ورزش باعث می‌شه مویرگ‌های بیشتری دور عضله‌ها شکل بگیره:</div>
+<div class="fa">• آدم‌های <b>فعال</b>: ۵ تا ۷ مویرگ برای هر تار عضلانی</div>
+<div class="fa">• آدم‌های <b>غیرفعال</b>: ۳ تا ۴ مویرگ برای هر تار عضلانی</div>
+<div class="fa"><b>نیاز عضلات به خون:</b> وقتی عضله‌ها با حداکثر قدرت کار می‌کنن، تا <b>۱۰۰ برابر</b> زمان استراحت به خون نیاز دارن!</div>
+<div class="fa"><b>نتیجه:</b> این باعث می‌شه شبکه‌ی مویرگی توسعه پیدا کنه و زمینه‌ی تصلب شرایین کم بشه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> افراد فعال ۵-۷ مویرگ / افراد غیرفعال ۳-۴ مویرگ. نیاز عضله در حداکثر فعالیت: تا ۱۰۰ برابر.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> این اعداد رو با فصل دوم اشتباه نکن! توی فصل دوم، هر تار عضلانی ۳ تا ۴ مویرگ داشت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گفتار ۳: ورزش و ناراحتی‌های عصبی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> تنش عصبی، غده‌های هورمون‌ساز رو مختل می‌کنه و <b>آدرنالین</b> و <b>کورتیزول</b> رو زیاد می‌کنه. این دو هورمون روی فشار خون، تپش قلب و سوخت‌وساز اثر بد می‌ذارن.</div>
+<div class="fa"><b>بهترین راه کاهش تنش:</b></div>
+<div class="fa">• فعالیت‌های ورزشی نرم و سبک</div>
+<div class="fa">• محیط‌های مفرح</div>
+<div class="fa">• خلاصی از زندگی یکنواخت</div>
+<div class="fa">• مدیریت فردی برای کنترل فشارها</div>
+<div class="fa"><b>تأثیر ورزش بر دستگاه عصبی:</b> ورزش ارتباط بین دستگاه عصبی و عضلانی رو بیشتر می‌کنه و هماهنگی‌شون رو زیاد می‌کنه.</div>
+<div class="fa"><b>نتیجه:</b> آدم‌های با اعصاب قوی‌تر، تسلط بیشتری روی جسم خودشون دارن و کمتر دچار ناراحتی عصبی، پرخاشگری و بی‌حوصلگی می‌شن.</div>
+<div class="fa"><b>کاربرد درمانی:</b> امروزه روان‌شناسان از ورزش برای درمان بیماران روانی استفاده می‌کنن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> در تنش عصبی، هورمون‌های <b>آدرنالین</b> و <b>کورتیزول</b> زیاد می‌شن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گفتار ۴: ورزش و مصرف دخانیات</h3></div>
+<div class="fa"><b>به زبان ساده:</b> ورزش توان بدنی رو زیاد می‌کنه، ولی سیگار این توانمندی رو کم می‌کنه و استقامت قلبی-ریوی رو پایین میاره.</div>
+<div class="fa"><b>ارتباط ورزش و دخانیات:</b></div>
+<div class="fa">• <b>ورزشکاران حرفه‌ای:</b> چون به قدرت بدنی بالا نیاز دارن، سیگار و مواد مخدر رو کم می‌کنن.</div>
+<div class="fa">• <b>سایر افراد:</b> ورزش باعث کاهش سیگار نمی‌شه! یعنی رابطه‌ی معکوسی بین افزایش قدرت بدنی و میل به سیگار وجود نداره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> ورزشکار حرفه‌ای = مصرف سیگار کم / افراد عادی = ورزش باعث کاهش سیگار نمی‌شه. این دو رو قاطی نکن!
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گفتار ۵: نوع ورزش و سلامت قلب و عروق</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> ورزش‌های <b>استقامتی</b> برای قلب بهتر از ورزش‌های <b>قدرتی</b> هستن.</div>
+<div class="fa"><b>چرا؟</b> ورزش‌های قدرتی با حداکثر فشار، برای قلب آدم‌های میانسال و بالاتر اثر منفی دارن.</div>
+<div class="fa"><b>ورزش‌های مناسب برای قلب:</b></div>
+<div class="fa">• پیاده‌روی</div>
+<div class="fa">• شنا</div>
+<div class="fa">• راه رفتن تند (جایگینگ)</div>
+<div class="fa">• دوچرخه‌سواری</div>
+<div class="fa"><b>نتیجه:</b> این ورزش‌ها عملکرد قلب و عروق رو بهتر می‌کنن و استقامت عمومی بدن رو زیاد می‌کنن.</div>
+<div class="fa"><b>دویدن:</b> ورزش مطلوبی برای کاهش وزن و تناسب عضلات.</div>
+<div class="fa"><b>جدول ۱:</b> بر اساس جدول، <b>دونرم و دوچرخه‌سواری</b> بیشترین امتیاز رو در کنترل وزن و تناسب عضلانی دارن. بهترین ورزش برای کنترل وزن = <b>دونرم</b>.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> بهترین ورزش برای کنترل وزن = دونرم. مؤثرترین ورزش برای قلب = استقامتی.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۵ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">جفت‌هایی که ممکنه اشتباه بگیری</p>
+
+<div class="card">
+<div class="card-head"><h3>ورزش استقامتی vs ورزش قدرتی</h3></div>
+<table class="compare">
+<thead><tr><th>ورزش استقامتی</th><th>ورزش قدرتی</th></tr></thead>
+<tbody>
+<tr><td>برای قلب و عروق مفیدتر</td><td>فشار زیاد لحظه‌ای به قلب</td></tr>
+<tr><td>مناسب همه سنین</td><td>برای میانسالان و بالاتر مضر</td></tr>
+<tr><td>مثال: پیاده‌روی، شنا، دوچرخه</td><td>مثال: وزنه‌برداری، پرتاب‌ها</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> استقامتی = دوست قلب / قدرتی = فشار لحظه‌ای.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ناراحتی عصبی vs بیماری عصبی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> ناراحتی عصبی = مشکل خفیف، ممکنه مقدمه‌ی بیماری باشه / بیماری عصبی = مشکل جدی و شدید.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کاهش چربی vs کاهش عضله در رژیم</h3></div>
+<div class="fa"><b>به زبان ساده:</b> رژیم تنها = چربی + عضله رو با هم از بین می‌بره / رژیم + ورزش = فقط چربی رو کم می‌کنه (خوبه!).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هدف برنامه کاهش وزن = کاهش <b>درصد چربی</b>، نه کاهش عضله.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>افراد فعال vs افراد غیرفعال (مویرگ)</h3></div>
+<div class="fa"><b>به زبان ساده:</b> افراد فعال = ۵ تا ۷ مویرگ برای هر تار عضلانی / افراد غیرفعال = ۳ تا ۴ مویرگ.</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: حد چاقی زن و مرد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۳۰ و ۲۰ (اعداد فصل اول) هست.</div>
+<div class="fa"><b>جواب درست:</b> زنان بیش از ۲۵٪ + مردان بیش از ۱۵٪</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این فصل، اعداد خودش رو داره (۲۵ و ۱۵) که با فصل اول (۳۰ و ۲۰) فرق داره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: فشار خون طبیعی</h3>
+<div class="fa"><b>دام چیه:</b> عدد فشار خون رو اشتباه می‌زنی.</div>
+<div class="fa"><b>جواب درست:</b> ۱۲۰ میلی‌متر جیوه (یعنی ۱۲)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بالاتر از این = پرفشاری خون.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: مویرگ‌های افراد فعال</h3>
+<div class="fa"><b>دام چیه:</b> عدد ۳ تا ۴ (فصل دوم) رو برای افراد فعال می‌زنی.</div>
+<div class="fa"><b>جواب درست:</b> افراد فعال = ۵ تا ۷ مویرگ / افراد غیرفعال = ۳ تا ۴ مویرگ</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این فصل اعداد رو برعکس فصل دوم می‌گه. دقت کن!
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: هورمون‌های تنش عصبی</h3>
+<div class="fa"><b>دام چیه:</b> فقط آدرنالین رو می‌گی.</div>
+<div class="fa"><b>جواب درست:</b> آدرنالین + کورتیزول</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هر دو هورمون مهمن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: ورزش و سیگار در افراد عادی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ورزش در همه باعث کاهش سیگار می‌شه.</div>
+<div class="fa"><b>جواب درست:</b> فقط در ورزشکاران حرفه‌ای / در افراد عادی رابطه‌ی معکوس وجود نداره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این یه استثنای مهمه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: بهترین ورزش برای کنترل وزن</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی شنا بهترینه.</div>
+<div class="fa"><b>جواب درست:</b> دونرم (بر اساس جدول ۱)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شنا برای قلب خوبه، ولی برای کنترل وزن، دونرم بالاترین امتیاز رو داره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: نیاز عضله به خون</h3>
+<div class="fa"><b>دام چیه:</b> عدد رو اشتباه می‌زنی.</div>
+<div class="fa"><b>جواب درست:</b> تا ۱۰۰ برابر زمان استراحت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عضله در حداکثر فعالیت، ۱۰۰ برابر خون می‌خواد.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل سوم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 08 · ورزش ۱ · فصل سوم: ورزش و سلامت جسمانی · جزوه ساده و امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"سکته قلبی به چه علت رخ می‌دهد؟",options:["فشار خون پایین","انسداد رگ‌های کرونر به دلیل رسوب چربی","ضعف عضلات","کم‌خونی"],answer:1,explanation:"سکته قلبی = انسداد رگ کرونر → از کار افتادن بخشی از قلب."},
+{q:"مقدار طبیعی فشار خون چقدر است؟",options:["۸۰ میلی‌متر جیوه","۱۰۰ میلی‌متر جیوه","۱۲۰ میلی‌متر جیوه (۱۲)","۱۴۰ میلی‌متر جیوه"],answer:2,explanation:"فشار خون طبیعی = ۱۲۰ میلی‌متر جیوه = ۱۲."},
+{q:"حد چاقی برای زنان و مردان به ترتیب چقدر است؟",options:["۲۰٪ و ۳۰٪","۲۵٪ و ۱۵٪","۱۵٪ و ۲۵٪","۳۰٪ و ۲۰٪"],answer:1,explanation:"زنان بیش از ۲۵٪ + مردان بیش از ۱۵٪ = اضافه وزن."},
+{q:"کدام یک از علل چاقی نیست؟",options:["پرخوری","بی‌تحرکی","اختلال غده تیروئید","ورزش زیاد"],answer:3,explanation:"ورزش زیاد علت چاقی نیست، بلکه درمانشه."},
+{q:"تصلب شرایین یعنی چه؟",options:["نرم شدن رگ‌ها","سفت و سخت شدن رگ‌ها به خاطر رسوب کلسترول","گشاد شدن رگ‌ها","باریک شدن موقت رگ‌ها"],answer:1,explanation:"تصلب شرایین = سفت شدن رگ‌ها به خاطر کلسترول."},
+{q:"سه عامل تهدیدکننده قلب و عروق کدامند؟",options:["چاقی + غذاهای چرب + دخانیات","فقط چاقی","فقط سیگار","فقط غذای چرب"],answer:0,explanation:"سه عامل = چاقی + غذاهای چرب + دخانیات."},
+{q:"چرا رژیم بدون ورزش محکوم به شکست است؟",options:["چون کالری کم می‌شه","چون همراه چربی، بافت عضلانی هم از دست می‌ره","چون گرونه","چون سخته"],answer:1,explanation:"رژیم تنها باعث کاهش عضله هم می‌شه، نه فقط چربی."},
+{q:"کاهش وزن ایده‌آل در هفته چقدر است؟",options:["۱ تا ۲ کیلوگرم","۲ تا ۳ کیلوگرم","۰.۵ تا ۱ کیلوگرم","۳ تا ۴ کیلوگرم"],answer:2,explanation:"کاهش وزن ۰/۵ تا ۱ کیلوگرم در هفته."},
+{q:"افراد فعال چند مویرگ برای هر تار عضلانی دارند؟",options:["۱ تا ۲","۳ تا ۴","۵ تا ۷","۱۰ تا ۱۲"],answer:2,explanation:"افراد فعال ۵ تا ۷ مویرگ / افراد غیرفعال ۳ تا ۴ مویرگ."},
+{q:"عضلات در حداکثر فعالیت تا چند برابر زمان استراحت به خون نیاز دارند؟",options:["۱۰ برابر","۵۰ برابر","۱۰۰ برابر","۲۰ برابر"],answer:2,explanation:"تا ۱۰۰ برابر زمان استراحت."},
+{q:"هورمون‌های افزایش‌یافته در تنش عصبی کدامند؟",options:["انسولین و تیروکسین","آدرنالین و کورتیزول","تستوسترون و استروژن","هورمون رشد و پرولاکتین"],answer:1,explanation:"در تنش عصبی، آدرنالین و کورتیزول زیاد می‌شن."},
+{q:"بهترین راه کاهش تنش عصبی چیست؟",options:["ورزش سنگین","فعالیت‌های ورزشی نرم و سبک","استراحت مطلق","خواب زیاد"],answer:1,explanation:"ورزش نرم و سبک در محیط مفرح، بهترین راه کاهش تنشه."},
+{q:"کدام ورزش برای سلامت قلب و عروق مفیدتر است؟",options:["قدرتی","استقامتی","تناوبی شدید","بی‌حرکتی"],answer:1,explanation:"ورزش‌های استقامتی برای قلب مفیدترن."},
+{q:"ورزش و سیگار در افراد عادی چه رابطه‌ای دارد؟",options:["ورزش باعث کاهش سیگار می‌شه","رابطه معکوسی بین قدرت بدنی و میل به سیگار وجود نداره","ورزش باعث افزایش سیگار می‌شه","هیچ ربطی ندارن"],answer:1,explanation:"در افراد عادی، ورزش باعث کاهش سیگار نمی‌شه."},
+{q:"بهترین ورزش برای کنترل وزن کدام است؟",options:["شنا","دونرم","پیاده‌روی","دوچرخه‌سواری"],answer:1,explanation:"بر اساس جدول ۱، دونرم بهترین ورزش برای کنترل وزنه."},
+{q:"ناراحتی عصبی با بیماری عصبی چه تفاوتی دارد؟",options:["هیچ فرقی ندارن","ناراحتی عصبی شدیدتره","ناراحتی عصبی خفیف‌تره و ممکنه مقدمه بیماری باشه","بیماری عصبی خفیف‌تره"],answer:2,explanation:"ناراحتی عصبی خفیف‌تره و ممکنه مقدمه‌ی بیماری عصبی باشه."},
+{q:"چاقی در سنین زیر بلوغ چه اثری دارد؟",options:["هیچ اثری","مستعدکننده چاقی در بزرگسالی","درمان چاقی","کاهش وزن"],answer:1,explanation:"چاقی زیر بلوغ، آدم رو مستعد چاقی در بزرگسالی می‌کنه."},
+{q:"ورزش چطور بر تصلب شرایین اثر می‌ذاره؟",options:["چربی رگ‌ها رو زیاد می‌کنه","چربی رگ‌ها رو کم می‌کنه و شبکه مویرگی رو توسعه می‌ده","هیچ اثری نداره","فقط در جوان‌ها اثر داره"],answer:1,explanation:"ورزش چربی رگ‌ها رو کم و شبکه مویرگی رو توسعه می‌ده."},
+{q:"کدام ورزش برای میانسالان و بالاتر اثر منفی داره؟",options:["پیاده‌روی","شنا","ورزش قدرتی با حداکثر فشار","دوچرخه‌سواری"],answer:2,explanation:"ورزش‌های قدرتی با حداکثر فشار برای میانسالان مضرن."},
+{q:"کدام مورد جزء معیارهای یک برنامه کاهش وزن موفق نیست؟",options:["تغییرات پایدار در عادات زندگی","محدود کردن شدید کالری","تمرینات هوازی منظم","کاهش وزن ۰.۵ تا ۱ کیلوگرم در هفته"],answer:1,explanation:"محدود کردن شدید کالری جزء معیارهای برنامه موفق نیست."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

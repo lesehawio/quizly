@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره بهداشت روانی · سری 01 · فصل سیزدهم: اعتیاد به الکل و مواد</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"13";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره بهداشت روانی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل سیزدهم: اعتیاد به الکل و مواد مخدر</h2>
+  <p>تاریخچه، مکانیسم مغزی، شخصیت، عوامل محیطی، جرم و همبودی — به زبان ساده</p>
+  <div class="pills"><span class="pill">تعریف اعتیاد</span><span class="pill">سوءمصرف/وابستگی</span><span class="pill">VTA/NAc</span><span class="pill">دوپامین</span><span class="pill">تحمل/ترک/عود</span><span class="pill">شخصیت</span><span class="pill">ACE</span><span class="pill">همبودی</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس سرفصل‌های <b>فصل سیزدهم کتاب «بهداشت روانی» میلانی‌فر</b> تدوین شده است: <b>تاریخچه و تعریف اعتیاد</b>، <b>ویژگی‌های دارویی و فیزیولوژیک</b>، <b>شخصیت و اعتیاد</b>، <b>عوامل محیطی/اجتماعی/تربیتی</b>، <b>رابطه اعتیاد با جرم و بیماری‌های روانی</b>. همه‌چیز به زبان ساده و خودمونی توضیح داده شده.</div>
+
+<div class="stats">
+<div class="stat"><b>۵</b><span>دسته ماده</span></div>
+<div class="stat"><b>۳</b><span>اصطلاح کلیدی</span></div>
+<div class="stat"><b>۳</b><span>نوع رابطه با جرم</span></div>
+<div class="stat"><b>۲۰</b><span>سؤال آزمون</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ========== هسته امتحانی ========== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>اعتیاد چیه؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>اعتیاد (Addiction)</b> یک <b>بیماری مزمن و عودکننده</b> است که با <b>جست‌وجوی اجباری مواد</b>، <b>مصرف کنترل‌نشده</b> و <b>تغییرات پایدار در مغز</b> مشخص می‌شود.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته طلایی:</b> اعتیاد یک <b>ضعف اخلاقی نیست</b>؛ یک <b>اختلال مغزی</b> است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت سوءمصرف و وابستگی</h3><span class="badge s">حفظ کن</span></div>
+<table class="compare">
+<thead><tr><th>سوءمصرف (Abuse)</th><th>وابستگی (Dependence)</th></tr></thead>
+<tbody>
+<tr><td>مصرف <b>مکرر</b> با <b>پیامدهای منفی</b></td><td><b>مصرف اجباری</b> با <b>تحمل و ترک</b></td></tr>
+<tr><td>بدون علائم جسمانی</td><td>با علائم جسمانی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پنج دسته اصلی مواد</h3></div>
+<table class="compare">
+<thead><tr><th>دسته</th><th>مثال</th><th>اثر اصلی</th></tr></thead>
+<tbody>
+<tr><td>مخدرها (Opioids)</td><td>تریاک، هروئین، متادون</td><td>تسکین درد، سرخوشی</td></tr>
+<tr><td>محرک‌ها (Stimulants)</td><td>کوکائین، متامفتامین، نیکوتین</td><td>افزایش انرژی و هوشیاری</td></tr>
+<tr><td>مهارکننده‌ها (Depressants)</td><td>الکل، بنزودیازپین</td><td>کاهش فعالیت عصبی</td></tr>
+<tr><td>توهم‌زاها (Hallucinogens)</td><td>LSD، مسکالین</td><td>تغییر ادراک</td></tr>
+<tr><td>حشیش (Cannabis)</td><td>ماری‌جوانا، گل</td><td>آرام‌بخش، توهم‌زای خفیف</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مسیر مزولیمبیک و دوپامین</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>مسیر مزولیمبیک:</b> مسیر اصلی <b>پاداش و اعتیاد</b> که از <b>VTA</b> (ناحیه تگمنتال شکمی) به <b>NAc</b> (نوکلئوس آکومبنس) می‌رود.</div>
+<div class="fa"><b>دوپامین:</b> نوروترانسمیتر اصلی <b>پاداش</b> است. مواد اعتیادآور، دوپامین را به‌طور <b>غیرطبیعی</b> افزایش می‌دهند.</div>
+<div class="fa"><b>نوروبلاستیسیتی:</b> مصرف مکرر مواد، <b>مدارهای مغزی</b> را <b>بازسازی</b> می‌کند و به <b>رفتارهای اجباری</b> منجر می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تحمل، ترک و عود</h3></div>
+<table class="compare">
+<thead><tr><th>اصطلاح</th><th>تعریف</th></tr></thead>
+<tbody>
+<tr><td>تحمل (Tolerance)</td><td>نیاز به <b>دوز بیشتر</b> برای اثر مشابه</td></tr>
+<tr><td>ترک (Withdrawal)</td><td><b>علائم جسمانی و روانی</b> پس از قطع مصرف</td></tr>
+<tr><td>عود (Relapse)</td><td><b>بازگشت</b> به مصرف پس از دوره ترک</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> عود بخشی از <b>طبیعت مزمن</b> اعتیاد است، نه نشانه <b>شکست درمان</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل خطر — خلاصه</h3></div>
+<div class="fa"><b>شخصیتی:</b> تکانشگری — حساسیت به پاداش — روان‌رنجوری — وظیفه‌شناسی پایین — مخالفت‌جویی.</div>
+<div class="fa"><b>خانوادگی:</b> سابقه خانوادگی اعتیاد — تعارض خانوادگی — فقدان نظارت والدین — خشونت خانگی — طلاق.</div>
+<div class="fa"><b>اجتماعی:</b> همسالان مصرف‌کننده — دسترسی آسان — فقر — بیکاری — محله پرجرم — تبلیغات مواد.</div>
+<div class="fa"><b>تربیتی:</b> والدگری مستبدانه (کنترل شدید بدون گرما) — والدگری سهل‌گیرانه (فقدان نظارت).</div>
+<div class="fa"><b>اقتصادی:</b> فقر — نابرابری — بیکاری.</div>
+<div class="fa"><b>فرهنگی:</b> فرهنگ مصرف — باورهای غلط — کاهش انگ.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>مهم‌ترین نکته:</b> <b>والدگری مقتدرانه</b> (گرما + نظارت) <b>کمترین خطر</b> اعتیاد را دارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ACE — تجربه‌های آسیب‌زا کودکی</h3></div>
+<div class="fa"><b>ACE</b> (تجربه‌های آسیب‌زا کودکی) یکی از <b>قوی‌ترین پیش‌بینی‌کننده‌های</b> اعتیاد در بزرگسالی است.</div>
+<div class="fa"><b>انواع ACE:</b> سوءاستفاده جسمی، جنسی، عاطفی، غفلت، خشونت خانگی، اعتیاد والدین، بیماری روانی والدین.</div>
+<div class="fa"><b>نکته:</b> <b>تجربه‌های مثبت کودکی</b> می‌تواند اثر ACE را <b>تعدیل</b> کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اعتیاد و جرم / بیماری روانی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>اعتیاد و جرم:</b> رابطه <b>پیچیده و دوطرفه</b> — اعتیاد ← جرم (تأمین هزینه، قاچاق، خشونت) و جرم ← اعتیاد (محیط زندان، همسالان بزهکار).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> نسبت‌دادن <b>قطعی</b> جرم به اعتیاد نادرست است. اکثر مصرف‌کنندگان مواد مرتکب جرم نمی‌شوند.
+</div>
+<div class="fa"><b>همبودی (Comorbidity):</b> همزمانی اعتیاد و اختلال روانی <b>شایع</b> است — افسردگی (شایع‌ترین) — اضطراب — PTSD — اختلال شخصیت مرزی — ضداجتماعی — ADHD — اسکیزوفرنی.</div>
+<div class="fa"><b>سه مسیر همبودی:</b></div>
+<div class="fa">• <b>اختلال روانی ← اعتیاد:</b> خوددرمانی (تسکین نشانه‌ها)</div>
+<div class="fa">• <b>اعتیاد ← اختلال روانی:</b> تغییرات مغزی و نشانه‌های روانی</div>
+<div class="fa">• <b>عوامل مشترک:</b> ژنتیک، تروما، استرس</div>
+</div>
+</section>
+
+<!-- ========== مفاهیم ========== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با توضیح ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) تاریخچه مصرف مواد</h3></div>
+<div class="fa"><b>مصرف مواد</b> به قدمت <b>تاریخ بشر</b> است. انسان‌ها از دیرباز برای <b>تسکین درد، تغییر خلق یا اهداف مذهبی</b> از گیاهان استفاده می‌کردند.</div>
+<div class="fa"><b>تحولات کلیدی:</b></div>
+<div class="fa">• <b>قدیم:</b> مصرف طبیعی (تریاک، حشیش، الکل) در مراسم مذهبی یا درمانی.</div>
+<div class="fa">• <b>قرن ۱۹:</b> <b>استخراج مواد فعال</b> (مورفین از تریاک) و <b>مصرف پزشکی</b> گسترده.</div>
+<div class="fa">• <b>قرن ۲۰:</b> <b>قانون‌گذاری</b> و <b>ممنوعیت</b> مواد، گسترش <b>مواد صناعی</b> (متامفتامین، LSD).</div>
+<div class="fa">• <b>امروز:</b> <b>اپیدمی مواد صناعی</b> و <b>مواد جدید روان‌گردان (NPS)</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) تعریف اعتیاد</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>اعتیاد (Addiction)</b> یک <b>بیماری مزمن و عودکننده</b> است که با <b>جست‌وجوی اجباری مواد</b>، <b>مصرف کنترل‌نشده</b> و <b>تغییرات پایدار در مغز</b> مشخص می‌شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> اعتیاد یک <b>ضعف اخلاقی</b> نیست؛ یک <b>اختلال مغزی</b> است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) تفاوت سوءمصرف و وابستگی</h3></div>
+<table class="compare">
+<thead><tr><th>سوءمصرف (Abuse)</th><th>وابستگی (Dependence)</th></tr></thead>
+<tbody>
+<tr><td>مصرف <b>مکرر</b> با <b>پیامدهای منفی</b></td><td><b>مصرف اجباری</b> با <b>تحمل و ترک</b></td></tr>
+<tr><td>بدون علائم جسمانی</td><td>با علائم جسمانی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) طبقه‌بندی مواد</h3></div>
+<table class="compare">
+<thead><tr><th>دسته</th><th>مثال</th><th>اثر اصلی</th></tr></thead>
+<tbody>
+<tr><td>مخدرها (Opioids)</td><td>تریاک، هروئین، متادون</td><td>تسکین درد، سرخوشی</td></tr>
+<tr><td>محرک‌ها (Stimulants)</td><td>کوکائین، متامفتامین، نیکوتین</td><td>افزایش انرژی و هوشیاری</td></tr>
+<tr><td>مهارکننده‌ها (Depressants)</td><td>الکل، بنزودیازپین</td><td>کاهش فعالیت عصبی</td></tr>
+<tr><td>توهم‌زاها (Hallucinogens)</td><td>LSD، مسکالین</td><td>تغییر ادراک</td></tr>
+<tr><td>حشیش (Cannabis)</td><td>ماری‌جوانا، گل</td><td>آرام‌بخش، توهم‌زای خفیف</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) مکانیسم اثر مواد بر مغز</h3></div>
+<div class="fa"><b>مسیر مزولیمبیک:</b> مسیر اصلی <b>پاداش و اعتیاد</b> که از <b>VTA</b> (ناحیه تگمنتال شکمی) به <b>NAc</b> (نوکلئوس آکومبنس) می‌رود.</div>
+<div class="fa"><b>دوپامین:</b> نوروترانسمیتر اصلی <b>پاداش</b> است. مواد اعتیادآور، <b>دوپامین</b> را به‌طور <b>غیرطبیعی</b> افزایش می‌دهند.</div>
+<div class="fa"><b>نوروبلاستیسیتی:</b> مصرف مکرر مواد، <b>مدارهای مغزی</b> را <b>بازسازی</b> می‌کند و به <b>رفتارهای اجباری</b> منجر می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶) تحمل، ترک و عود</h3></div>
+<table class="compare">
+<thead><tr><th>اصطلاح</th><th>تعریف</th></tr></thead>
+<tbody>
+<tr><td>تحمل (Tolerance)</td><td>نیاز به <b>دوز بیشتر</b> برای اثر مشابه</td></tr>
+<tr><td>ترک (Withdrawal)</td><td><b>علائم جسمانی و روانی</b> پس از قطع مصرف</td></tr>
+<tr><td>عود (Relapse)</td><td><b>بازگشت</b> به مصرف پس از دوره ترک</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> عود بخشی از <b>طبیعت مزمن</b> اعتیاد است، نه نشانه <b>شکست درمان</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۷) آسیب‌های جسمانی مواد</h3></div>
+<div class="fa">• <b>الکل:</b> آسیب کبدی، سرطان‌زا (گروه ۱)، آسیب مغزی.</div>
+<div class="fa">• <b>مخدرها:</b> اختلال تنفسی، عفونت (HIV، هپاتیت در مصرف تزریقی).</div>
+<div class="fa">• <b>محرک‌ها:</b> آسیب قلبی، سکته، روان‌پریشی.</div>
+<div class="fa">• <b>حشیش:</b> اختلال حافظه، انگیزه، خطر روان‌پریشی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۸) ویژگی‌های شخصیتی مرتبط با اعتیاد</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱) تکانشگری (Impulsivity):</b> تمایل به <b>عمل سریع بدون تفکر</b> درباره پیامدها.</div>
+<div class="fa"><b>۲) حساسیت به پاداش:</b> تمایل به <b>جست‌وجوی هیجان</b> و <b>پاداش فوری</b>.</div>
+<div class="fa"><b>۳) روان‌رنجوری (Neuroticism):</b> تمایل به <b>هیجانات منفی</b> (اضطراب، افسردگی).</div>
+<div class="fa"><b>۴) وظیفه‌شناسی پایین:</b> <b>بی‌نظمی</b> و <b>عدم پایبندی</b> به قوانین.</div>
+<div class="fa"><b>۵) مخالفت‌جویی (Antagonism):</b> <b>خصومت</b> و <b>بی‌اعتمادی</b> به دیگران.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۹) نظریه شخصیت و اعتیاد — مدل پنج عاملی</h3></div>
+<div class="fa"><b>مدل پنج عاملی شخصیت (Big Five):</b></div>
+<div class="fa">• <b>روان‌رنجوری بالا:</b> خطر بیشتر اعتیاد.</div>
+<div class="fa">• <b>وظیفه‌شناسی پایین:</b> خطر بیشتر اعتیاد.</div>
+<div class="fa">• <b>توافق‌پذیری پایین:</b> خطر بیشتر اعتیاد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> شخصیت <b>تعیین‌کننده قطعی</b> نیست؛ <b>تعامل</b> با محیط نقش دارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰) «شخصیت اعتیادآور» (Addictive Personality)</h3></div>
+<div class="fa"><b>مفهوم:</b> آیا شخصیت خاصی وجود دارد که فرد را <b>مستعد اعتیاد</b> می‌کند؟</div>
+<div class="fa"><b>پاسخ علمی:</b> <b>هیچ شخصیت واحدی</b> وجود ندارد که <b>قطعاً</b> به اعتیاد منجر شود. اما <b>برخی ویژگی‌ها</b> (تکانشگری، حساسیت به پاداش) <b>خطر را افزایش</b> می‌دهند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> «شخصیت اعتیادآور» یک <b>مفهوم عامیانه</b> است، نه یک <b>تشخیص بالینی</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۱) اختلالات شخصیت و اعتیاد</h3></div>
+<div class="fa"><b>همبودی بالا:</b> اختلالات شخصیت (به‌ویژه <b>مرزی</b> و <b>ضداجتماعی</b>) با <b>اعتیاد</b> همبودی بالایی دارند.</div>
+<div class="fa"><b>نکته:</b> این همبودی <b>دوطرفه</b> است: اختلال شخصیت ← اعتیاد و اعتیاد ← تشدید اختلال شخصیت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۲) عوامل خانوادگی</h3></div>
+<table class="compare">
+<thead><tr><th>عامل</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>سابقه خانوادگی اعتیاد</td><td>ژنتیک + الگوسازی</td></tr>
+<tr><td>تعارض خانوادگی</td><td>محیط پراسترس</td></tr>
+<tr><td>فقدان نظارت والدین</td><td>فرصت مصرف</td></tr>
+<tr><td>خشونت خانگی</td><td>تجربه آسیب‌زا</td></tr>
+<tr><td>طلاق و جدایی</td><td>فقدان حمایت</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۳) عوامل اجتماعی</h3></div>
+<table class="compare">
+<thead><tr><th>عامل</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>همسالان مصرف‌کننده</td><td>فشار همسالان</td></tr>
+<tr><td>دسترسی آسان به مواد</td><td>فرصت مصرف</td></tr>
+<tr><td>فقر و محرومیت</td><td>استرس مزمن</td></tr>
+<tr><td>بیکاری</td><td>فقدان هدف و هویت</td></tr>
+<tr><td>محله پرجرم</td><td>الگوهای ناسازگار</td></tr>
+<tr><td>تبلیغات مواد</td><td>ترویج مصرف</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۴) عوامل تربیتی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">• <b>والدگری مستبدانه:</b> <b>کنترل شدید</b> بدون <b>گرما</b> ← خطر بیشتر.</div>
+<div class="fa">• <b>والدگری سهل‌گیرانه:</b> <b>فقدان نظارت</b> ← خطر بیشتر.</div>
+<div class="fa">• <b>والدگری مقتدرانه:</b> <b>گرما + نظارت</b> ← <b>کمترین خطر</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> <b>والدگری مقتدرانه</b> (Authoritative) <b>مؤثرترین</b> سبک برای پیشگیری از اعتیاد است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۵) عوامل اقتصادی</h3></div>
+<div class="fa">• <b>فقر:</b> استرس مزمن + دسترسی محدود به خدمات.</div>
+<div class="fa">• <b>نابرابری اقتصادی:</b> احساس <b>بی‌عدالتی</b> و <b>ناامیدی</b>.</div>
+<div class="fa">• <b>بیکاری:</b> فقدان <b>هدف</b> و <b>هویت</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۶) عوامل فرهنگی</h3></div>
+<div class="fa">• <b>فرهنگ مصرف:</b> <b>پذیرش اجتماعی</b> مصرف (مثلاً الکل در برخی فرهنگ‌ها).</div>
+<div class="fa">• <b>باورهای غلط:</b> «مواد عملکرد را بهبود می‌دهد».</div>
+<div class="fa">• <b>کاهش انگ:</b> <b>مراجعه بیشتر</b> برای درمان.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۷) تجربه‌های آسیب‌زا کودکی (ACE)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>ACE</b> (تجربه‌های آسیب‌زا کودکی) یکی از <b>قوی‌ترین پیش‌بینی‌کننده‌های</b> اعتیاد در بزرگسالی است.</div>
+<div class="fa"><b>انواع ACE:</b> سوءاستفاده جسمی، جنسی، عاطفی، غفلت، خشونت خانگی، اعتیاد والدین، بیماری روانی والدین.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> <b>تجربه‌های مثبت کودکی</b> می‌تواند اثر ACE را <b>تعدیل</b> کند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۸) رابطه اعتیاد و جرم</h3></div>
+<div class="fa"><b>رابطه پیچیده و دوطرفه:</b></div>
+<div class="fa">• <b>اعتیاد ← جرم:</b> برای <b>تأمین هزینه مواد</b> (سرقت)، <b>قاچاق</b>، <b>خشونت</b> تحت تأثیر مواد.</div>
+<div class="fa">• <b>جرم ← اعتیاد:</b> <b>محیط زندان</b>، <b>همسالان بزهکار</b>، <b>فقدان فرصت‌های سالم</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> <b>نسبت‌دادن قطعی جرم به اعتیاد نادرست است.</b> اکثر مصرف‌کنندگان مواد <b>مرتکب جرم نمی‌شوند</b> و بسیاری از جرائم <b>مرتبط با مواد نیستند</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۹) رابطه اعتیاد و بیماری‌های روانی</h3></div>
+<div class="fa"><b>همبودی (Comorbidity):</b> همزمانی اعتیاد و اختلال روانی <b>شایع</b> است.</div>
+<div class="fa"><b>مسیرها:</b></div>
+<div class="fa">• <b>اختلال روانی ← اعتیاد:</b> فرد برای <b>تسکین نشانه‌ها</b> (مثلاً اضطراب، افسردگی) مواد مصرف می‌کند (خوددرمانی).</div>
+<div class="fa">• <b>اعتیاد ← اختلال روانی:</b> مواد موجب <b>تغییرات مغزی</b> و <b>نشانه‌های روانی</b> می‌شوند.</div>
+<div class="fa">• <b>عوامل مشترک:</b> ژنتیک، تروما، استرس.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> همبودی <b>تشخیص و درمان را پیچیده‌تر</b> می‌کند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۰) اختلالات روانی شایع همراه با اعتیاد</h3></div>
+<table class="compare">
+<thead><tr><th>اختلال</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>افسردگی</td><td>شایع‌ترین اختلال همراه</td></tr>
+<tr><td>اختلالات اضطرابی</td><td>اضطراب فراگیر، هراس</td></tr>
+<tr><td>PTSD</td><td>تجربه تروما</td></tr>
+<tr><td>اختلال شخصیت مرزی</td><td>تکانشگری، بی‌ثباتی هیجانی</td></tr>
+<tr><td>اختلال شخصیت ضداجتماعی</td><td>بی‌توجهی به حقوق دیگران</td></tr>
+<tr><td>ADHD</td><td>نقص توجه و بیش‌فعالی</td></tr>
+<tr><td>اسکیزوفرنی</td><td>روان‌پریشی (مصرف حشیش خطر را افزایش می‌دهد)</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۱) اعتیاد و خودکشی</h3></div>
+<div class="fa"><b>خطر خودکشی</b> در افراد مبتلا به اعتیاد <b>بالاتر</b> از جمعیت عمومی است.</div>
+<div class="fa"><b>عوامل:</b> <b>ناامیدی</b>، <b>همبودی با افسردگی</b>، <b>تکانشگری</b>، <b>فقدان حمایت</b>.</div>
+</div>
+</section>
+
+<!-- ========== تفاوت‌ها ========== -->
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>سوءمصرف vs وابستگی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>سوءمصرف</th><th>وابستگی</th></tr></thead>
+<tbody>
+<tr><td>مصرف مکرر با پیامد منفی</td><td>مصرف اجباری با تحمل و ترک</td></tr>
+<tr><td>بدون علائم جسمانی</td><td>با علائم جسمانی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه‌ای که این دو را مترادف بگیرد، نادرست است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تحمل vs ترک vs عود</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>تحمل</th><th>ترک</th><th>عود</th></tr></thead>
+<tbody>
+<tr><td>دوز بیشتر</td><td>علائم قطع</td><td>بازگشت به مصرف</td></tr>
+<tr><td>طی مصرف</td><td>پس از قطع</td><td>پس از دوره ترک</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>VTA vs NAc</h3></div>
+<table class="compare">
+<thead><tr><th>VTA</th><th>NAc</th></tr></thead>
+<tbody>
+<tr><td>منشأ مسیر مزولیمبیک</td><td>مقصد مسیر مزولیمبیک</td></tr>
+<tr><td>ناحیه تگمنتال شکمی</td><td>نوکلئوس آکومبنس</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اعتیاد vs ضعف اخلاقی</h3></div>
+<table class="compare">
+<thead><tr><th>اعتیاد</th><th>ضعف اخلاقی</th></tr></thead>
+<tbody>
+<tr><td>بیماری مزمن مغزی</td><td>مفهوم غیرعلمی</td></tr>
+<tr><td>نیاز به درمان</td><td>سرزنش اخلاقی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>«شخصیت اعتیادآور» vs تشخیص بالینی</h3></div>
+<table class="compare">
+<thead><tr><th>«شخصیت اعتیادآور»</th><th>تشخیص بالینی</th></tr></thead>
+<tbody>
+<tr><td>مفهوم عامیانه</td><td>تشخیص مبتنی بر معیار</td></tr>
+<tr><td>بدون پشتوانه علمی کافی</td><td>پشتوانه علمی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>والدگری مقتدرانه vs مستبدانه vs سهل‌گیرانه</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>مقتدرانه</th><th>مستبدانه</th><th>سهل‌گیرانه</th></tr></thead>
+<tbody>
+<tr><td>گرما + نظارت</td><td>کنترل بدون گرما</td><td>فقدان نظارت</td></tr>
+<tr><td>کمترین خطر اعتیاد</td><td>خطر بیشتر</td><td>خطر بیشتر</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اعتیاد و جرم — رابطه</h3></div>
+<table class="compare">
+<thead><tr><th>اعتیاد ← جرم</th><th>جرم ← اعتیاد</th></tr></thead>
+<tbody>
+<tr><td>تأمین هزینه، قاچاق، خشونت</td><td>محیط زندان، همسالان بزهکار</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> رابطه <b>پیچیده و دوطرفه</b> است، نه <b>علت قطعی</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خوددرمانی vs اعتیاد اولیه</h3></div>
+<table class="compare">
+<thead><tr><th>خوددرمانی</th><th>اعتیاد اولیه</th></tr></thead>
+<tbody>
+<tr><td>اختلال روانی ← مصرف برای تسکین</td><td>مصرف بدون اختلال زمینه‌ای</td></tr>
+<tr><td>همبودی</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ========== نظریه‌پردازان ========== -->
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان و چارچوب‌های تخصصی</h2>
+<p class="section-sub">هر چارچوب + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>مدل بیماری مغزی اعتیاد (Brain Disease Model)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>مفهوم:</b> اعتیاد یک <b>بیماری مزمن مغزی</b> است که با تغییرات پایدار در مدارهای پاداش، انگیزه و کنترل مهاری مشخص می‌شود.</div>
+<div class="fa"><b>مبنای عصب‌زیستی:</b> مسیر مزولیمبیک (VTA → NAc) — دوپامین — نوروبلاستیسیتی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این مدل تأکید می‌کند که اعتیاد <b>ضعف اخلاقی نیست</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مدل پنج عاملی شخصیت (Big Five)</h3></div>
+<div class="fa"><b>مفهوم:</b> پنج عامل اصلی شخصیت: روان‌رنجوری — برون‌گرایی — گشودگی — توافق‌پذیری — وظیفه‌شناسی.</div>
+<div class="fa"><b>ارتباط با اعتیاد:</b> روان‌رنجوری بالا، وظیفه‌شناسی پایین، توافق‌پذیری پایین = خطر بیشتر اعتیاد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ACE — تجربه‌های آسیب‌زا کودکی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>نام کامل:</b> Adverse Childhood Experiences</div>
+<div class="fa"><b>مفهوم:</b> تجربه‌های آسیب‌زا در کودکی (سوءاستفاده، غفلت، خشونت خانگی و...) که با <b>خطر بالاتر اعتیاد</b> در بزرگسالی مرتبط است.</div>
+<div class="fa"><b>ارتباط با فصل:</b> یکی از <b>قوی‌ترین پیش‌بینی‌کننده‌های</b> اعتیاد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مدل زیستی-روانی-اجتماعی (انگل)</h3></div>
+<div class="fa"><b>مفهوم:</b> اعتیاد حاصل تعامل عوامل زیستی (ژنتیک، مغز)، روانی (شخصیت، هیجان) و اجتماعی (خانواده، همسالان، فقر) است.</div>
+<div class="fa"><b>ارتباط با فصل:</b> مبنای نظری برای درک چندعاملی اعتیاد.</div>
+</div>
+</section>
+
+<!-- ========== دام‌ها ========== -->
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: اعتیاد = ضعف اخلاقی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اعتیاد ضعف اخلاقیه.</div>
+<div class="fa"><b>جواب درست:</b> اعتیاد یک <b>بیماری مزمن مغزی</b> است، نه ضعف اخلاقی.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: سوءمصرف = وابستگی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> سوءمصرف = مصرف مکرر با پیامد منفی (بدون علائم جسمانی) / وابستگی = مصرف اجباری با تحمل و ترک.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: تحمل = وابستگی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> تحمل = نیاز به دوز بیشتر / وابستگی = مصرف اجباری با تحمل و ترک.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: ترک = عود</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> ترک = علائم قطع مصرف / عود = بازگشت به مصرف پس از دوره ترک.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: عود = شکست درمان</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی عود نشانه شکست درمانه.</div>
+<div class="fa"><b>جواب درست:</b> عود بخشی از <b>طبیعت مزمن</b> اعتیاد است، نه نشانه شکست درمان.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: VTA = مقصد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی VTA مقصد مسیر مزولیمبیکه.</div>
+<div class="fa"><b>جواب درست:</b> VTA = <b>منشأ</b> / NAc = <b>مقصد</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: دوپامین = فقط مهار</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دوپامین فقط نقش مهاری داره.</div>
+<div class="fa"><b>جواب درست:</b> دوپامین نوروترانسمیتر <b>پاداش</b> است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: «شخصیت اعتیادآور» = تشخیص</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی «شخصیت اعتیادآور» یک تشخیص بالینیه.</div>
+<div class="fa"><b>جواب درست:</b> یک <b>مفهوم عامیانه</b> است، نه تشخیص بالینی. هیچ شخصیت واحدی قطعاً به اعتیاد منجر نمی‌شود.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: تکانشگری = عامل محافظت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تکانشگری عامل محافظته.</div>
+<div class="fa"><b>جواب درست:</b> تکانشگری <b>عامل خطر</b> است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: والدگری مستبدانه = کمترین خطر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی والدگری مستبدانه کمترین خطر رو داره.</div>
+<div class="fa"><b>جواب درست:</b> <b>والدگری مقتدرانه</b> (گرما + نظارت) کمترین خطر را دارد. مستبدانه و سهل‌گیرانه خطر بیشتری دارند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: ACE بی‌تأثیر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ACE نقشی در اعتیاد نداره.</div>
+<div class="fa"><b>جواب درست:</b> ACE یکی از <b>قوی‌ترین پیش‌بینی‌کننده‌های</b> اعتیاد در بزرگسالی است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: اعتیاد = علت قطعی جرم</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اعتیاد علت قطعی جرمه.</div>
+<div class="fa"><b>جواب درست:</b> رابطه <b>پیچیده و دوطرفه</b> است، نه علت قطعی. اکثر مصرف‌کنندگان مواد مرتکب جرم نمی‌شوند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: همبودی نادر است</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی همبودی اعتیاد و اختلال روانی نادر است.</div>
+<div class="fa"><b>جواب درست:</b> همبودی <b>شایع</b> است — افسردگی شایع‌ترین اختلال همراه.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: خوددرمانی = درمان توسط خود</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی خوددرمانی یعنی درمان توسط خود فرد.</div>
+<div class="fa"><b>جواب درست:</b> خوددرمانی = مصرف مواد برای <b>تسکین نشانه‌ها</b>ی اختلال روانی.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: گزینه‌های با مترادف، فقط، همیشه</h3>
+<div class="fa"><b>دام چیه:</b> گزینه‌های مطلق رو انتخاب می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> در مورد اعتیاد، گزینه‌های با «مترادف»، «فقط»، «همیشه» معمولاً نادرست‌اند.</div>
+</div>
+</section>
+
+<!-- ========== کوییز ========== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل سیزدهم — اعتیاد به الکل و مواد</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · مشاوره بهداشت روانی · فصل سیزدهم: اعتیاد به الکل و مواد مخدر — بر اساس کتاب بهداشت روانی میلانی‌فر</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"اعتیاد چه نوع بیماری است؟",options:["حاد","مزمن و عودکننده","موقت","ارثی محض"],answer:1,explanation:"اعتیاد بیماری مزمن و عودکننده است."},
+{q:"تفاوت «سوءمصرف» و «وابستگی» چیه؟",options:["مترادف هستند","سوءمصرف مکرر؛ وابستگی اجباری","وابستگی مکرر","هیچ تفاوتی ندارند"],answer:1,explanation:"سوءمصرف مکرر با پیامد منفی؛ وابستگی اجباری با تحمل و ترک."},
+{q:"«تحمل» به چه معناست؟",options:["علائم قطع","نیاز به دوز بیشتر","بازگشت به مصرف","مصرف اجباری"],answer:1,explanation:"تحمل: نیاز به دوز بیشتر برای اثر مشابه."},
+{q:"«عود» به چه معناست؟",options:["نیاز به دوز بیشتر","علائم قطع","بازگشت به مصرف","مصرف اجباری"],answer:2,explanation:"عود: بازگشت به مصرف پس از دوره ترک."},
+{q:"«مسیر مزولیمبیک» از کجا به کجا می‌رود؟",options:["NAc → VTA","VTA → NAc","PFC → Amygdala","Hippocampus → NAc"],answer:1,explanation:"مسیر مزولیمبیک: VTA → NAc."},
+{q:"کدام ویژگی شخصیتی با اعتیاد مرتبط است؟",options:["تکانشگری","وظیفه‌شناسی بالا","توافق‌پذیری بالا","روان‌رنجوری پایین"],answer:0,explanation:"تکانشگری از ویژگی‌های شخصیتی مرتبط با اعتیاد است."},
+{q:"«شخصیت اعتیادآور» چیه؟",options:["تشخیص بالینی","مفهوم عامیانه","اختلال شخصیت","بیماری ژنتیکی"],answer:1,explanation:"«شخصیت اعتیادآور» یک مفهوم عامیانه است، نه تشخیص بالینی."},
+{q:"کدام سبک والدگری کمترین خطر اعتیاد رو داره؟",options:["مستبدانه","سهل‌گیرانه","مقتدرانه","بی‌اعتنا"],answer:2,explanation:"والدگری مقتدرانه (گرما + نظارت) کمترین خطر اعتیاد را دارد."},
+{q:"«ACE» به چه معناست؟",options:["تجربه‌های مثبت کودکی","تجربه‌های آسیب‌زا کودکی","ابزار غربالگری","داروی ضداعتیاد"],answer:1,explanation:"ACE = تجربه‌های آسیب‌زا کودکی."},
+{q:"کدام عامل اجتماعی با اعتیاد مرتبط است؟",options:["همسالان مصرف‌کننده","حمایت اجتماعی","موفقیت تحصیلی","نظارت والدین"],answer:0,explanation:"همسالان مصرف‌کننده از عوامل خطر اجتماعی است."},
+{q:"رابطه اعتیاد و جرم چگونه است؟",options:["یک‌طرفه: اعتیاد ← جرم","یک‌طرفه: جرم ← اعتیاد","پیچیده و دوطرفه","هیچ رابطه‌ای ندارند"],answer:2,explanation:"رابطه پیچیده و دوطرفه است، نه علت قطعی."},
+{q:"کدام اختلال روانی شایع‌ترین همبودی با اعتیاد را دارد؟",options:["اسکیزوفرنی","افسردگی","OCD","اختلال دوقطبی"],answer:1,explanation:"افسردگی شایع‌ترین اختلال همراه با اعتیاد است."},
+{q:"«خوددرمانی» در اعتیاد به چه معناست؟",options:["درمان توسط خود فرد","مصرف مواد برای تسکین نشانه‌ها","درمان دارویی","درمان گروهی"],answer:1,explanation:"خوددرمانی: مصرف مواد برای تسکین نشانه‌های اختلال روانی."},
+{q:"مصرف کدام ماده خطر روان‌پریشی را افزایش می‌دهد؟",options:["الکل","حشیش","نیکوتین","کافئین"],answer:1,explanation:"حشیش خطر روان‌پریشی را افزایش می‌دهد."},
+{q:"خطر خودکشی در افراد مبتلا به اعتیاد چگونه است؟",options:["کمتر از جمعیت عمومی","بالاتر از جمعیت عمومی","برابر","صفر"],answer:1,explanation:"خطر خودکشی در افراد مبتلا به اعتیاد بالاتر است."},
+{q:"«دوپامین» چه نقشی در اعتیاد دارد؟",options:["نوروترانسمیتر مهار","نوروترانسمیتر پاداش","هورمون استرس","نوروترانسمیتر خواب"],answer:1,explanation:"دوپامین نوروترانسمیتر اصلی پاداش است."},
+{q:"کدام گزینه یک «آسیب جسمانی الکل» است؟",options:["آسیب کبدی","بهبود حافظه","کاهش سرطان","افزایش تمرکز"],answer:0,explanation:"الکل موجب آسیب کبدی، سرطان‌زایی و آسیب مغزی می‌شود."},
+{q:"«نوروبلاستیسیتی» در اعتیاد به چه معناست؟",options:["بازسازی مدارهای مغزی","کاهش دوپامین","افزایش حافظه","کاهش تحمل"],answer:0,explanation:"نوروبلاستیسیتی: مصرف مکرر مواد مدارهای مغزی را بازسازی می‌کند."},
+{q:"کدام گزینه درباره «اعتیاد» صحیح است؟",options:["ضعف اخلاقی است","بیماری مزمن مغزی است","مترادف سوءمصرف است","با اراده درمان می‌شود"],answer:1,explanation:"اعتیاد بیماری مزمن مغزی است، نه ضعف اخلاقی."},
+{q:"کدام گزینه یک «عامل خطر خانوادگی» اعتیاد است؟",options:["نظارت والدین","فقدان نظارت والدین","گرمای خانوادگی","حمایت خانواده"],answer:1,explanation:"فقدان نظارت والدین از عوامل خطر خانوادگی است."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

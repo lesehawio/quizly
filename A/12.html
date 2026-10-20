@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · صفات خدا · سری 12</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"12";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>صفات خدا · سری 12</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>صفات خداوند</h2>
+  <p>جزوه جامع امتحانی · تعریف ساده + نکته امتحانی + دام آزمون · ویژه آزمون چهارگزینه‌ای</p>
+  <div class="pills"><span class="pill">۶ بخش</span><span class="pill">۴ تقسیم صفات</span><span class="pill">۱۵+ مفهوم</span><span class="pill">۶ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان ساده و برای آمادگی امتحان چهارگزینه‌ای طراحی شده است. هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۶</b><span>بخش اصلی</span></div>
+<div class="stat"><b>۴</b><span>تقسیم صفات</span></div>
+<div class="stat"><b>۱۵+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۶</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>اقسام صفات خدا</h3></div>
+<div class="grid2">
+<div class="box"><h4>صفات ذاتی</h4>
+<div class="fa">تنها از ذات انتزاع می‌شود + چه مخلوق باشد چه نباشد (حیات، علم، قدرت)</div>
+</div>
+<div class="box"><h4>صفات فعلی</h4>
+<div class="fa">از مقام فعل و آفرینش + نیازمند مخلوق (خالق، رازق)</div>
+</div>
+<div class="box"><h4>صفات ثبوتیه (جمال)</h4>
+<div class="fa">کمال وجودی + ثبوتشان ضروری (عالم، قادر، حی، مرید)</div>
+</div>
+<div class="box"><h4>صفات سلبیه (جلال)</h4>
+<div class="fa">باید سلب شوند + ثبوتشان محال (جسم بودن، مرکب بودن)</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه صفت اساسی</h3></div>
+<div class="grid2">
+<div class="box"><h4>علم</h4>
+<div class="fa">ذاتی، نامحدود، حضوری، خطاناپذیر</div>
+</div>
+<div class="box"><h4>قدرت</h4>
+<div class="fa">مطلق، نامحدود، متضمن اختیار</div>
+</div>
+<div class="box"><h4>حیات</h4>
+<div class="fa">به معنای ادراک و فعالیت + مبدأ علم و قدرت</div>
+</div>
+<div class="box"><h4>عدل و حکمت</h4>
+<div class="fa">عدل = هر چیز در جای خود + حکمت = هدفمندی و اتقان</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدرت و محال</h3></div>
+<div class="fa"><b>قدرت خدا:</b> به محال ذاتی تعلق نمی‌گیرد</div>
+<div class="fa"><b>محال ذاتی:</b> مثل آفریدن خدای دیگر / قرار دادن جهان در تخم‌مرغ</div>
+<div class="fa"><b>نکته:</b> قدرت داشتن بر هر کاری ≠ انجام دادن همه آنها</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حکمت و شرور</h3></div>
+<div class="fa"><b>حکمت:</b> هدفمندی + اتقان فعل + علم کامل</div>
+<div class="fa"><b>شر:</b> هرچه مانع رسیدن به هدف باشد</div>
+<div class="fa"><b>پاسخ به شرور:</b> تزاحم عالم ماده + دخالت نادرست انسان + شکوفایی استعداد + امتحان الهی</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>صفات ذاتی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> صفاتی است که تنها از ذات انتزاع شده و به ذات نسبت داده می‌شود؛ چه مخلوقی موجود باشد، چه نباشد.</div>
+<div class="fa"><b>مثال:</b> حیات، علم و قدرت.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> صفات ذاتی = فقط از ذات انتزاع می‌شود. اگر سوال پرسید «صفات ذاتی چیست؟» جواب: صفاتی که فقط از ذات انتزاع می‌شود و به مخلوق نیاز ندارد.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> «خالق» و «رازق» صفات ذاتی نیستند، بلکه صفات فعلی هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات فعلی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> صفاتی است که از مقام فعل و آفرینش خداوند برداشت می‌شود.</div>
+<div class="fa"><b>مثال:</b> صفت خالق و رازق.</div>
+<div class="fa"><b>نکته:</b> اوصاف فعلی در یک نسبت و رابطه وجودی میان خداوند و مخلوقات ایجاد می‌شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> صفات فعلی = نیازمند مخلوق. اگر سوال پرسید «صفت خالق ذاتی است یا فعلی؟» جواب: فعلی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات ثبوتیه (جمال)</h3></div>
+<div class="fa"><b>تعریف ساده:</b> صفاتی که از کمال وجودی در خداوند حکایت دارند و ثبوت و وجودشان برای واجب‌الوجود ضروری و سلب آنها محال است.</div>
+<div class="fa"><b>مثال:</b> عالم، قادر، حی، مرید.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> صفات ثبوتیه = کمال وجودی + سلبشان محال. اگر سوال پرسید «صفات ثبوتیه چیست؟» جواب: صفاتی که کمال وجودی را نشان می‌دهند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات سلبیه (جلال و تنزیهی)</h3></div>
+<div class="fa"><b>تعریف ساده:</b> صفاتی که از خداوند باید سلب و نفی شود و ثبوت آنها برای خداوند محال است؛ زیرا حکایت از نقص و کمبود دارند.</div>
+<div class="fa"><b>مثال:</b> جسم بودن، مرکب بودن از اجزاء، نیاز و احتیاج.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> صفات سلبیه = نفی نقص. اگر سوال پرسید «صفات سلبیه چیست؟» جواب: صفاتی که باید از خدا سلب شوند چون نقص هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات نفسی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> صفاتی که ذات خداوند بدون نسبت و اضافه به غیر، بدان متصف است.</div>
+<div class="fa"><b>مثال:</b> حق بودن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> صفات نفسی = بدون نیاز به غیر. اگر سوال پرسید «صفات نفسی چیست؟» جواب: صفاتی که ذات بدون نسبت به غیر بدان متصف است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات نسبی (اضافی)</h3></div>
+<div class="fa"><b>تعریف ساده:</b> صفاتی که برای انتساب آن به خدا نوعی انتساب و اضافه به چیز دیگر لازم است.</div>
+<div class="fa"><b>مثال:</b> علم (عالم همواره با معلوم در نظر گرفته می‌شود).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> صفات نسبی = نیازمند اضافه به غیر. اگر سوال پرسید «صفات نسبی چیست؟» جواب: صفاتی که نیازمند نسبت به غیر هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علم خدا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یکی از صفات ثبوتی خداوند است. مفهوم علم در ساده‌ترین معنا، آگاهی است و در برابر جهل قرار دارد.</div>
+<div class="fa"><b>سه دلیل اثبات علم خدا:</b></div>
+<div class="fa">۱. ما و موجودات دیگر دارای علم هستیم + اعطاکننده علم نمی‌تواند فاقد آن باشد.</div>
+<div class="fa">۲. نظم و اتقان جهان = حکایت از علم آفریدگار.</div>
+<div class="fa">۳. مطالعه در نظام آفرینش (آل‌عمران/۱۹۰).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علم خدا = ذاتی + نامحدود + حضوری + خطاناپذیر. اگر سوال پرسید «سه دلیل اثبات علم خدا چیست؟» هر سه را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدرت خدا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یکی از اوصاف ثبوتیه خداوند است. مقصود از قدرت، قوّت و توانایی است.</div>
+<div class="fa"><b>تعریف متکلمان:</b> فاعل هرگاه بخواهد کاری را انجام بدهد، می‌تواند آن را انجام دهد و هرگاه بخواهد می‌تواند آن را ترک کند.</div>
+<div class="fa"><b>نکته مهم:</b> قدرت متضمن اختیار نیز هست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قدرت خدا = مطلق + نامحدود + متضمن اختیار. اگر سوال پرسید «قدرت خدا به چه چیزی تعلق نمی‌گیرد؟» جواب: محال ذاتی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حیات خدا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> حیات در خداوند به معنای ادراک و فعالیت است. وقتی می‌گوییم خداوند حیّ است، یعنی دراک و فعال است.</div>
+<div class="fa"><b>رابطه با علم و قدرت:</b> حیات منشأ دو صفت علم و قدرت است و علم و قدرت به حیات قابل بازگشت است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حیات خدا = ادراک + فعالیت = مبدأ علم و قدرت. اگر سوال پرسید «حیات خدا به چه معناست؟» جواب: ادراک و فعالیت.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> حیات خدا مثل حیات گیاه و حیوان نیست. حیات خدا = ادراک و فعالیت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عدل خدا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> عدل به معنای تساوی، تعادل، میانه‌روی و دوری از افراط و تفریط آمده است.</div>
+<div class="fa"><b>معنای جامع:</b> قرار گرفتن هر چیزی در جایگاه مناسب خود.</div>
+<div class="fa"><b>حدیث امام علی (ع):</b> «عدل هر چیزی را در جای خود قرار می‌دهد.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عدل = هر چیز در جای خود. اگر سوال پرسید «عدل چیست؟» جواب: قرار گرفتن هر چیز در جایگاه مناسب خود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حکمت خدا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> حکمت معانی متعددی دارد:</div>
+<div class="fa">۱. <b>هدفمندی:</b> خداوند آفریدگان را بی‌هدف و بیهوده نمی‌آفریند.</div>
+<div class="fa">۲. <b>اتقان و استحکام فعل خدا:</b> آفرینش خداوند همراه با استحکام و اتقان است.</div>
+<div class="fa">۳. <b>حکمت علمی:</b> خداوند حکیم است، یعنی کامل‌ترین و بالاترین علم را دارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حکمت = هدفمندی + اتقان + علم کامل. اگر سوال پرسید «حکمت خدا چیست؟» هر سه معنا را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شر و پاسخ به شبهات شرور</h3></div>
+<div class="fa"><b>تعریف ساده:</b> هرآنچه انسان آن را مانع رسیدن به هدف خود می‌پندارد، شر می‌نامد. خیر مساوی با وجود است.</div>
+<div class="fa"><b>پاسخ‌های چهارگانه:</b></div>
+<div class="fa">۱. تزاحمات عالم ماده: عالم ماده عالم تزاحم است و برخورد پدیده‌ها رنج ایجاد می‌کند.</div>
+<div class="fa">۲. دخالت نادرست انسان یا شکوفایی استعداد: تصرف نادرست انسان در طبیعت + مشکلات عامل ترقی و حرکت انسان.</div>
+<div class="fa">۳. عملکرد نادرست انسان: ظلم، قتل، غارت ناشی از اختیار نادرست انسان است.</div>
+<div class="fa">۴. امتحان الهی: شرور گاهی امتحان الهی است تا بندگان واقعی از دیگران بازشناخته شوند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۴ پاسخ به شبهه شرور = تزاحم عالم ماده + دخالت نادرست انسان و شکوفایی استعداد + عملکرد نادرست انسان + امتحان الهی. اگر سوال پرسید «چرا شر در عالم وجود دارد؟» این چهار پاسخ را در نظر بگیرید.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">هر جفت مفهوم + تفاوت ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>صفات ذاتی vs صفات فعلی</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>صفات ذاتی</th><th>صفات فعلی</th></tr></thead>
+<tbody>
+<tr><td>منشأ انتزاع</td><td>تنها از ذات</td><td>از مقام فعل و آفرینش</td></tr>
+<tr><td>نیاز به مخلوق</td><td>ندارد</td><td>دارد</td></tr>
+<tr><td>مثال</td><td>حیات، علم، قدرت</td><td>خالق، رازق</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ذاتی = بدون نیاز به مخلوق / فعلی = نیازمند مخلوق. اگر سوال پرسید «تفاوت صفات ذاتی و فعلی چیست؟» این دو ویژگی را مدنظر داشته باشید.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> صفت «خالق» را به ذاتی نسبت ندهید. خالق صفت فعلی است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات ثبوتیه vs صفات سلبیه</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>صفات ثبوتیه</th><th>صفات سلبیه</th></tr></thead>
+<tbody>
+<tr><td>محتوا</td><td>کمال وجودی</td><td>نفی نقص</td></tr>
+<tr><td>حکم</td><td>ثبوتشان ضروری</td><td>ثبوتشان محال</td></tr>
+<tr><td>مثال</td><td>عالم، قادر، حی</td><td>جسم بودن، مرکب بودن</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ثبوتیه = کمال / سلبیه = نفی نقص. اگر سوال پرسید «صفات ثبوتیه چیست؟» جواب: صفاتی که کمال وجودی را نشان می‌دهند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات نفسی vs صفات نسبی</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>صفات نفسی</th><th>صفات نسبی</th></tr></thead>
+<tbody>
+<tr><td>نیاز به غیر</td><td>ندارد</td><td>دارد</td></tr>
+<tr><td>مثال</td><td>حق بودن</td><td>علم (با معلوم)</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نفسی = بدون نیاز به غیر / نسبی = نیازمند اضافه به غیر. اگر سوال پرسید «صفات نفسی چیست؟» جواب: صفاتی که ذات بدون نسبت به غیر بدان متصف است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علم خدا vs علم انسان</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>علم خدا</th><th>علم انسان</th></tr></thead>
+<tbody>
+<tr><td>محدوده</td><td>ذاتی، نامحدود</td><td>محدود</td></tr>
+<tr><td>نوع</td><td>حضوری</td><td>حصولی و حضوری</td></tr>
+<tr><td>خطا</td><td>خطاناپذیر</td><td>خطاپذیر</td></tr>
+<tr><td>ابزار</td><td>بدون ابزار و حواس</td><td>همراه با حواس و قواى معرفتی</td></tr>
+<tr><td>ثبات</td><td>ابدی، ثابت و تغییرناپذیر</td><td>متغیر</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علم خدا = ذاتی + نامحدود + خطاناپذیر. اگر سوال پرسید «تفاوت علم خدا و انسان چیست؟» این پنج ویژگی را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حیات گیاه و حیوان vs حیات خدا</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> حیات گیاه و حیوان = تغذیه، رشد، احساس و حرکت / حیات خدا = ادراک و فعالیت</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حیات خدا = ادراک و فعالیت. اگر سوال پرسید «حیات خدا به چه معناست؟» جواب: ادراک و فعالیت.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> حیات خدا مثل حیات گیاه و حیوان نیست. این حیات مستلزم نقص و مادی بودن است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عدل vs حکمت</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> عدل = قرار گرفتن هر چیز در جایگاه مناسب خود / حکمت = هدفمندی + اتقان + علم کامل</div>
+<div class="fa"><b>نکته:</b> بین حکمت در مقام فعل و عدل ملازمه برقرار است و عدل یکی از شعب حکمت است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عدل = شعب حکمت. اگر سوال پرسید «رابطه عدل و حکمت چیست؟» جواب: عدل یکی از شعب حکمت است.
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۴ · شخصیت‌ها و نظریه‌پردازان</h2>
+<p class="section-sub">هر شخصیت + نظریه ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>امام علی (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام اول شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> «عدل هر چیزی را در جای خود قرار می‌دهد.» در پاسخ به سوال درباره قدرت خدا بر قرار دادن دنیا در تخم‌مرغ فرمود: «إن الله تبارك و تعالى لا ينسب إلى العجز والذى سألتنى لا يكون.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام علی = تعریف عدل + پاسخ به شبهه قدرت. اگر سوال پرسید «حدیث عدل از کیست؟» جواب: امام علی (ع).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امام صادق (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام ششم شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> در پاسخ به سوال درباره قدرت خدا بر قرار دادن دنیا در تخم‌مرغ فرمود: «إن الله تبارك و تعالى لا ينسب إلى العجز...»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام صادق = پاسخ به شبهه قدرت. اگر سوال پرسید «حدیث درباره قدرت خدا از کیست؟» جواب: امام صادق (ع).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امام باقر (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام پنجم شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> «كَانَ اللَّهُ عَزَّوَجَلَّ وَلَمْ يَكُنْ مَعَهُ شَيْءٌ وَلَمْ يَزَلْ عَلِيمًا بِمَا يَكُونُ، فَعَلِمَهُ بِهِ قَبْلَ كَوْنِهِ كَعِلْمِهِ بِهِ بَعْدَ كَوْنِهِ» — خداوند موجود بود، درحالی‌که غیر از او نبود و او همواره به هر چه وجود دارد، آگاه است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام باقر = علم خدا قبل و بعد از آفرینش. اگر سوال پرسید «حدیث درباره علم خدا قبل از آفرینش از کیست؟» جواب: امام باقر (ع).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امام هادی (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام دهم شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> «إِنَّ اللَّهَ عَالِمٌ بِالْأَشْيَاءِ قَبْلَ أَنْ يَخْلُقَ الْأَشْيَاءَ كَعِلْمِهِ بِالْأَشْيَاءِ بَعْدَ مَا خَلَقَ الْأَشْيَاءَ» — خداوند همواره به همه‌چیز پیش از آنکه آنها را بیافریند، آگاه است؛ همان‌گونه که به همه اشیاء پس از آفرینش آنها علم دارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام هادی = علم خدا قبل و بعد از آفرینش. اگر سوال پرسید «حدیث درباره علم خدا قبل از آفرینش از کیست؟» جواب: امام هادی (ع).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علامه طباطبائی</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و مفسر معاصر</div>
+<div class="fa"><b>نظریه ساده:</b> در معرفی صفت حیات فرمود: حیات در خداوند به معنای ادراک و فعالیت است و حیات منشأ دو صفت علم و قدرت است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبائی = حیات = مبدأ علم و قدرت. اگر سوال پرسید «حیات خدا چیست؟» جواب: ادراک و فعالیت، مبدأ علم و قدرت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>متکلمان</h3></div>
+<div class="fa"><b>کی بودند:</b> علمای علم کلام</div>
+<div class="fa"><b>نظریه ساده:</b> قدرت یعنی فاعل هرگاه بخواهد کاری را انجام بدهد، می‌تواند آن را انجام دهد و هرگاه بخواهد می‌تواند آن را ترک کند. برخی نیز گفته‌اند: قدرت عبارت است از صحت یعنی امکان فعل و ترک.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> متکلمان = قدرت یعنی صحت فعل و ترک. اگر سوال پرسید «تعریف متکلمان از قدرت چیست؟» جواب: امکان فعل و ترک.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: صفات ذاتی vs فعلی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی «خالق» صفت ذاتی است.</div>
+<div class="fa"><b>جواب درست:</b> خالق صفت فعلی است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خالق = فعلی / علم و قدرت = ذاتی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: صفات ثبوتیه vs سلبیه</h3>
+<div class="fa"><b>دام چیه:</b> صفات ثبوتیه و سلبیه رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ثبوتیه = کمال / سلبیه = نفی نقص</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ثبوتیه = کمال وجودی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: صفات نفسی vs نسبی</h3>
+<div class="fa"><b>دام چیه:</b> صفات نفسی و نسبی رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> نفسی = بدون نیاز به غیر / نسبی = نیازمند اضافه به غیر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نفسی = بدون غیر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: علم خدا vs علم انسان</h3>
+<div class="fa"><b>دام چیه:</b> علم خدا و انسان رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> علم خدا = ذاتی + نامحدود + خطاناپذیر / علم انسان = محدود + خطاپذیر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علم خدا = نامحدود
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: حیات خدا</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی حیات خدا مثل حیات گیاه و حیوان است.</div>
+<div class="fa"><b>جواب درست:</b> حیات خدا = ادراک و فعالیت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حیات خدا = ادراک و فعالیت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: قدرت خدا و محال</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی قدرت خدا به محال هم تعلق می‌گیرد.</div>
+<div class="fa"><b>جواب درست:</b> قدرت خدا به محال ذاتی تعلق نمی‌گیرد</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قدرت خدا ≠ محال
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: قدرت خدا و انجام همه کارها</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی قدرت داشتن بر هر کاری یعنی انجام دادن همه آنها.</div>
+<div class="fa"><b>جواب درست:</b> قدرت داشتن ≠ انجام دادن همه</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خدای حکیم فقط کار شایسته را انجام می‌دهد
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: عدل و حکمت</h3>
+<div class="fa"><b>دام چیه:</b> عدل و حکمت رو دو چیز کاملاً جدا می‌دونی.</div>
+<div class="fa"><b>جواب درست:</b> عدل یکی از شعب حکمت است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عدل = شعب حکمت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: پاسخ به شبهه شرور</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط یک پاسخ برای شبهه شرور وجود دارد.</div>
+<div class="fa"><b>جواب درست:</b> ۴ پاسخ = تزاحم + دخالت نادرست و شکوفایی + عملکرد نادرست + امتحان</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۴ پاسخ برای شبهه شرور
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: حدیث عدل</h3>
+<div class="fa"><b>دام چیه:</b> حدیث «عدل هر چیزی را در جای خود قرار می‌دهد» را به کسی غیر از امام علی نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> امام علی (ع)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حدیث عدل = امام علی (ع)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: حدیث قدرت و تخم‌مرغ</h3>
+<div class="fa"><b>دام چیه:</b> حدیث قدرت و تخم‌مرغ را به کسی غیر از امام صادق یا امام علی نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> از امام صادق (ع) و امام علی (ع)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حدیث قدرت و تخم‌مرغ = امام صادق (ع) و امام علی (ع)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: علم خدا و جزئیات</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی علم خدا فقط به کلیات است.</div>
+<div class="fa"><b>جواب درست:</b> علم خدا به جزئیات هم هست</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علم خدا = کلیات + جزئیات
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 12 · صفات خدا · جزوه جامع امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"صفات ذاتی چه ویژگی دارند؟",options:["تنها از ذات انتزاع می‌شود","نیازمند مخلوق است","از مقام فعل است","از افعال خدا برداشت می‌شود"],answer:0,explanation:"صفات ذاتی = تنها از ذات انتزاع می‌شود."},
+{q:"کدام یک صفت فعلی است؟",options:["علم","قدرت","خالق","حیات"],answer:2,explanation:"خالق صفت فعلی است."},
+{q:"صفات ثبوتیه چه ویژگی دارند؟",options:["کمال وجودی","نفی نقص","نیازمند غیر","محال بودن"],answer:0,explanation:"صفات ثبوتیه = کمال وجودی."},
+{q:"صفات سلبیه چه ویژگی دارند؟",options:["کمال وجودی","نفی نقص","نیازمند غیر","ثبوت ضروری"],answer:1,explanation:"صفات سلبیه = نفی نقص."},
+{q:"صفات نفسی چه ویژگی دارند؟",options:["بدون نیاز به غیر","نیازمند اضافه به غیر","از مقام فعل","از افعال خدا"],answer:0,explanation:"صفات نفسی = بدون نیاز به غیر."},
+{q:"صفات نسبی چه ویژگی دارند؟",options:["بدون نیاز به غیر","نیازمند اضافه به غیر","از ذات تنها","از مقام فعل"],answer:1,explanation:"صفات نسبی = نیازمند اضافه به غیر."},
+{q:"یکی از دلایل اثبات علم خدا چیست؟",options:["نظم و اتقان جهان","حرکت","امکان و وجوب","فطرت"],answer:0,explanation:"نظم و اتقان جهان = دلیل علم خدا."},
+{q:"علم خدا چه ویژگی دارد؟",options:["محدود","نامحدود","خطاپذیر","متغیر"],answer:1,explanation:"علم خدا نامحدود است."},
+{q:"تعریف متکلمان از قدرت چیست؟",options:["امکان فعل و ترک","فقط فعل","فقط ترک","امکان فعل فقط"],answer:0,explanation:"قدرت = امکان فعل و ترک."},
+{q:"قدرت خدا به چه چیزی تعلق نمی‌گیرد؟",options:["امور ممکن","محال ذاتی","کارهای شایسته","کارهای حکیمانه"],answer:1,explanation:"قدرت خدا به محال ذاتی تعلق نمی‌گیرد."},
+{q:"حیات خدا به چه معناست؟",options:["تغذیه و رشد","احساس و حرکت","ادراک و فعالیت","زنده بودن مادی"],answer:2,explanation:"حیات خدا = ادراک و فعالیت."},
+{q:"حیات مبدأ کدام صفات است؟",options:["علم و قدرت","عدل و حکمت","خالق و رازق","جسم و ماده"],answer:0,explanation:"حیات = مبدأ علم و قدرت."},
+{q:"عدل به چه معناست؟",options:["قرار گرفتن هر چیز در جایگاه مناسب خود","تساوی مطلق","دوری از عدالت","ظلم"],answer:0,explanation:"عدل = قرار گرفتن هر چیز در جایگاه مناسب خود."},
+{q:"حدیث «عدل هر چیزی را در جای خود قرار می‌دهد» از کیست؟",options:["امام باقر","امام علی","امام صادق","امام هادی"],answer:1,explanation:"حدیث عدل از امام علی (ع) است."},
+{q:"حکمت به چه معناست؟",options:["هدفمندی + اتقان + علم کامل","فقط هدفمندی","فقط اتقان","فقط علم"],answer:0,explanation:"حکمت = هدفمندی + اتقان + علم کامل."},
+{q:"شر چیست؟",options:["هرچه مانع رسیدن به هدف باشد","وجود","کمال","خیر"],answer:0,explanation:"شر = هرچه مانع رسیدن به هدف باشد."},
+{q:"کدام یک از پاسخ‌های شبهه شرور است؟",options:["تزاحمات عالم ماده","فقط ظلم","فقط زلزله","فقط سیل"],answer:0,explanation:"تزاحمات عالم ماده = یکی از پاسخ‌ها."},
+{q:"حدیث علم خدا قبل از آفرینش از کیست؟",options:["امام باقر و امام هادی","امام علی","امام صادق","پیامبر"],answer:0,explanation:"امام باقر و امام هادی = علم خدا قبل از آفرینش."},
+{q:"رابطه عدل و حکمت چیست؟",options:["عدل یکی از شعب حکمت است","کاملاً جدا هستند","متناقض هستند","بی‌ربط هستند"],answer:0,explanation:"عدل یکی از شعب حکمت است."},
+{q:"حدیث قدرت خدا و تخم‌مرغ از کیست؟",options:["امام صادق و امام علی","امام باقر","امام هادی","پیامبر"],answer:0,explanation:"حدیث قدرت و تخم‌مرغ از امام صادق و امام علی است."},
+{q:"قدرت خدا چه ویژگی دارد؟",options:["مطلق و نامحدود","محدود","متضمن جبر","محدود به مادیات"],answer:0,explanation:"قدرت خدا = مطلق و نامحدود."},
+{q:"علم خدا به جزئیات چگونه است؟",options:["فقط کلیات","کلیات + جزئیات","فقط جزئیات","هیچکدام"],answer:1,explanation:"علم خدا = کلیات + جزئیات."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

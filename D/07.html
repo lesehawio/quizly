@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره بهداشت روانی · سری 01 · فصل هفتم: بهداشت روانی در دوره‌های مختلف زندگی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"07";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره بهداشت روانی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل هفتم: بهداشت روانی در دوره‌های مختلف زندگی</h2>
+  <p>دوران جنینی، کودکی، بلوغ، بزرگسالی، میانسالی، سالمندی و ازدواج/طلاق</p>
+  <div class="pills"><span class="pill">دوران جنینی</span><span class="pill">دلبستگی</span><span class="pill">اریکسون</span><span class="pill">بلوغ</span><span class="pill">بزرگسالی</span><span class="pill">ازدواج</span><span class="pill">طلاق</span><span class="pill">سالمندی</span><span class="pill">پیشگیری</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس سرفصل‌های <b>فصل هفتم کتاب «بهداشت روانی» میلانی‌فر</b> تدوین شده است. عناوین دقیقاً مطابق ساختار فصل ارائه شده‌اند: <b>دوران قبل از تولد و زمان تولد</b>، <b>آغاز کودکی</b>، <b>بلوغ</b>، <b>بلوغ و جرائم نوجوانان</b>، <b>بزرگسالی</b>، <b>ازدواج موفق</b>، <b>طلاق</b>، <b>میانسالی</b>، <b>سالمندی</b> و <b>پیشگیری بیماری‌های مخصوص</b>.</div>
+
+<div class="stats">
+<div class="stat"><b>۸</b><span>مرحله اریکسون</span></div>
+<div class="stat"><b>۱۰</b><span>عامل موفقیت ازدواج</span></div>
+<div class="stat"><b>۳</b><span>نوع طلاق</span></div>
+<div class="stat"><b>۲۰</b><span>سؤال آزمون</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ========== هسته امتحانی ========== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>دوران قبل از تولد و زمان تولد</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>دوران جنینی:</b> حساس‌ترین دوره رشد مغز. اگرچه تعداد نورون‌ها در بدو تولد تقریباً کامل است، اما <b>شبکه‌های عصبی</b> و <b>ارتباطات سیناپسی</b> پس از تولد شکل می‌گیرند.</div>
+<div class="fa"><b>عوامل خطر در دوران بارداری:</b> عفونت‌ها (سرخجه، سیفیلیس، توکسوپلاسموز) — مواد (الکل، داروها، تنباکو) — تغذیه نامناسب مادر — استرس شدید مادر — عوارض زایمان (زایمان سخت، زودرس، هیپوکسی، یرقان شدید).</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b> مراقبت‌های پره‌ناتال — آموزش مادران درباره تغذیه و پرهیز از مواد — مشاوره ژنتیک — حمایت روانی از مادر.</div>
+<div class="fa"><b>عوامل خطر در زمان تولد:</b> زایمان زودرس — هیپوکسی (کمبود اکسیژن) — یرقان شدید — زایمان سخت.</div>
+<div class="fa"><b>اقدامات پیشگیرانه زمان تولد:</b> مراقبت‌های زایمانی استاندارد — دسترسی به خدمات اورژانس زایمان — آموزش پرسنل پزشکی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دلبستگی در نوزادی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>نظریه دلبستگی (بالبی و اینسورث):</b> دلبستگی در <b>سال اول زندگی</b> شکل می‌گیرد و بر سلامت روان در تمام عمر اثر می‌گذارد.</div>
+<div class="fa"><b>الگوهای دلبستگی:</b></div>
+<div class="fa">• <b>ایمن:</b> عامل محافظت‌کننده</div>
+<div class="fa">• <b>اجتنابی:</b> عامل خطر</div>
+<div class="fa">• <b>دوسوگرا:</b> عامل خطر</div>
+<div class="fa">• <b>آشفته:</b> عامل خطر شدید</div>
+<div class="fa"><b>عوامل محافظت‌کننده:</b> مراقبت پاسخگو و حساس — ارتباط عاطفی پایدار — محیط امن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آغاز کودکی (۰-۳ سال)</h3></div>
+<div class="fa"><b>چالش اریکسونی:</b> اعتماد در برابر بی‌اعتمادی (۰-۱.۵ سال) و خودمختاری در برابر شرم (۱.۵-۳ سال).</div>
+<div class="fa"><b>نیازها:</b> دلبستگی ایمن — محیط امن و پیش‌بینی‌پذیر — مراقبت پاسخگو — فرصت کاوش در محیط امن.</div>
+<div class="fa"><b>عوامل خطر:</b> بی‌توجهی یا غفلت — خشونت خانگی — جدایی مکرر از مراقب اولیه — افسردگی مادر (به‌ویژه افسردگی پس از زایمان).</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b> آموزش والدگری مؤثر — حمایت از مادران در معرض خطر — برنامه‌های خانه‌ای برای خانواده‌های آسیب‌پذیر — غربالگری اختلالات رشدی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> «سه سال اول زندگی» برای شکل‌گیری <b>اعتماد پایه</b> و <b>دلبستگی ایمن</b> حیاتی است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بلوغ</h3></div>
+<div class="fa"><b>تعریف:</b> دوره‌ای است که با تغییرات هورمونی و رشد جسمانی همراه است.</div>
+<div class="fa"><b>تغییرات:</b> جسمانی (رشد قد، تغییرات جنسی) — هیجانی (نوسانات خلقی) — شناختی (تفکر انتزاعی) — اجتماعی (تغییر روابط با همسالان).</div>
+<div class="fa"><b>چالش‌ها:</b> نوسانات خلقی — حساسیت به قضاوت همسالان — تعارض با والدین — نگرانی درباره تصویر بدن — فشار تحصیلی.</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b> آموزش والدین درباره تغییرات بلوغ — آموزش نوجوانان درباره تغییرات طبیعی — حمایت مدرسه و مشاوره — تشویق فعالیت‌های سالم.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بلوغ و جرائم نوجوانان</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف:</b> رفتارهای مغایر با قانون که توسط افراد ۱۲-۱۸ سال انجام می‌شود.</div>
+<div class="fa"><b>انواع:</b> جرائم علیه اشخاص — جرائم علیه اموال — جرائم مربوط به مواد — جرائم جنسی.</div>
+<table class="compare">
+<thead><tr><th>سطح</th><th>عوامل خطر</th></tr></thead>
+<tbody>
+<tr><td>فردی</td><td>تکانشگری، اختلالات روانی درمان‌نشده، سوءمصرف مواد</td></tr>
+<tr><td>خانوادگی</td><td>تعارض خانوادگی، غفلت، خشونت، فقدان نظارت</td></tr>
+<tr><td>اجتماعی</td><td>همسالان بزهکار، محرومیت اقتصادی، دسترسی به مواد</td></tr>
+<tr><td>محیطی</td><td>محله پرجرم، کمبود فرصت‌های سالم</td></tr>
+</tbody>
+</table>
+<div class="fa"><b>پیامدها:</b> برای نوجوان: زندان، انگ، قطع تحصیل، کاهش فرصت‌های شغلی — برای خانواده: شرم، فشار مالی، گسست روابط — برای جامعه: افزایش جرم، هزینه‌های قضایی و زندان.</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b> برنامه‌های مدرسه‌محور (آموزش مهارت‌های زندگی، حل تعارض) — حمایت خانوادگی — برنامه‌های جامعه‌محور — مداخله زودهنگام — خدمات مشاوره‌ای.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بزرگسالی و میانسالی</h3></div>
+<div class="fa"><b>بزرگسالی:</b> دوره‌ای با نقش‌های اجتماعی جدید. جوانی (۱۸-۴۰): صمیمیت در برابر انزوا — میانسالی (۴۰-۶۰): مولدبودن در برابر رکود.</div>
+<div class="fa"><b>چالش‌های بزرگسالی:</b> انتخاب شغل و استقرار حرفه‌ای — ازدواج و تشکیل خانواده — تعادل کار-زندگی — فشار مالی — مراقبت از والدین سالخورده و فرزندان.</div>
+<div class="fa"><b>عوامل خطر:</b> استرس شغلی و فرسودگی — بیکاری یا ناامنی شغلی — تعارضات خانوادگی — طلاق یا فقدان همسر — بیماری‌های جسمانی.</div>
+<div class="fa"><b>چالش‌های میانسالی:</b> بحران میانسالی — مراقبت از والدین سالخورده و فرزندان — فشار شغلی و احساس فرسودگی — تغییرات هورمونی — نگرانی از آینده.</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b> تعادل کار-زندگی — حمایت اجتماعی قوی — مهارت‌های مقابله‌ای — دسترسی به مشاوره — سبک زندگی سالم — معنا و هدف در کار و زندگی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ازدواج موفق و طلاق</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>عوامل موفقیت ازدواج:</b> ارتباط مؤثر — احترام متقابل — اعتماد — تعهد — تناسب (ارزش‌ها، اهداف، علایق مشترک) — حمایت عاطفی — حل تعارض — صمیمیت — انعطاف‌پذیری — مدیریت مالی.</div>
+<div class="fa"><b>عوامل تهدیدکننده ازدواج:</b> ارتباط ضعیف — عدم احترام — خیانت — تعارضات حل‌نشده — مشکلات مالی — عدم تناسب — خشونت خانگی — اعتیاد.</div>
+<div class="fa"><b>طلاق:</b> پایان قانونی ازدواج. انواع: توافقی (با توافق دو طرف) — یک‌طرفه (به درخواست یک طرف) — قضایی (با حکم دادگاه).</div>
+<table class="compare">
+<thead><tr><th>سطح</th><th>عوامل خطر طلاق</th></tr></thead>
+<tbody>
+<tr><td>فردی</td><td>اختلالات روانی، اعتیاد، تکانشگری</td></tr>
+<tr><td>زوجی</td><td>ارتباط ضعیف، تعارض، خیانت</td></tr>
+<tr><td>خانوادگی</td><td>دخالت خانواده‌ها، تعارض با خانواده همسر</td></tr>
+<tr><td>اجتماعی</td><td>مشکلات مالی، بیکاری، فشارهای فرهنگی</td></tr>
+</tbody>
+</table>
+<div class="fa"><b>پیامدهای طلاق برای زوجین:</b> افسردگی، اضطراب — کاهش عزت‌نفس — انزوای اجتماعی — مشکلات مالی.</div>
+<div class="fa"><b>پیامدهای طلاق برای فرزندان:</b> افت تحصیلی — مشکلات رفتاری — اضطراب و افسردگی — تعارض وفاداری.</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b> آموزش مهارت‌های ارتباطی قبل از ازدواج — مشاوره پیش از ازدواج — مشاوره زوجی — حمایت اجتماعی — کاهش انگ طلاق.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سالمندی (۶۰+ سال)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>چالش اریکسونی:</b> یکپارچگی در برابر ناامیدی. مرور زندگی: موفقیت ← یکپارچگی / شکست ← ناامیدی.</div>
+<div class="fa"><b>چالش‌ها:</b> انزوای اجتماعی (فقدان همسر، دوستان) — بیماری‌های مزمن (قلب، دیابت، آلزایمر) — فقدان‌های مکرر — کاهش عملکرد شناختی — بازنشستگی و از‌دست‌دادن نقش — افسردگی.</div>
+<div class="fa"><b>داده‌های شیوع (مطالعه اردکان):</b> ۱۷٪ سالمندان افسردگی — ۱۲٪ اضطراب — ۷۳٪ افراد افسرده را زنان تشکیل می‌دهند — ۵۵٪ افراد افسرده تحصیلات ابتدایی داشتند.</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b> حمایت خانوادگی و شبکه اجتماعی — فعالیت بدنی و مشارکت اجتماعی — معنویت و احساس هدف — مراقبت سلامت منظم — بازنگری مثبت زندگی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیشگیری اولیه در دوره‌های زندگی</h3></div>
+<div class="fa"><b>پیشگیری از عقب‌ماندگی ذهنی:</b></div>
+<div class="fa">• <b>قبل از تولد:</b> مشاوره ژنتیک — مراقبت‌های پره‌ناتال — پرهیز از مواد — تغذیه مناسب — پیشگیری از عفونت‌ها</div>
+<div class="fa">• <b>زمان تولد:</b> مراقبت‌های زایمانی — پیشگیری از هیپوکسی — درمان یرقان</div>
+<div class="fa">• <b>پس از تولد:</b> غربالگری اختلالات متابولیک — واکسیناسیون — تغذیه مناسب — تحریک روانی-اجتماعی</div>
+<div class="fa"><b>پیشگیری اولیه در اسکیزوفرنی:</b> مشاوره ژنتیک — پیشگیری از عفونت‌ها در بارداری — کاهش استرس مادر — پیشگیری از مصرف مواد در نوجوانی — مداخله زودهنگام.</div>
+<div class="fa"><b>پیشگیری از اختلالات رفتاری و شخصیتی:</b> آموزش والدگری مؤثر — پیشگیری از خشونت خانگی — آموزش مهارت‌های زندگی — مداخله زودهنگام — حمایت از خانواده‌های آسیب‌پذیر.</div>
+<div class="fa"><b>نتایج پیشگیری اولیه:</b> کاهش بروز اختلالات — کاهش بار بیماری — بهبود کیفیت زندگی — افزایش بهره‌وری — کاهش هزینه‌های درمان — ارتقای سلامت روان جامعه.</div>
+</div>
+</section>
+
+<!-- ========== مفاهیم ========== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با تعریف ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) اهمیت دوران قبل از تولد</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>دوران جنینی</b> حساس‌ترین دوره رشد مغز است. اگرچه تعداد نورون‌ها در بدو تولد تقریباً کامل است، اما <b>شبکه‌های عصبی</b> و <b>ارتباطات سیناپسی</b> پس از تولد شکل می‌گیرند.</div>
+<div class="fa"><b>عوامل خطر در دوران بارداری:</b></div>
+<div class="fa">• <b>عفونت‌ها:</b> سرخجه، سیفیلیس، توکسوپلاسموز</div>
+<div class="fa">• <b>مواد:</b> الکل، داروها، تنباکو</div>
+<div class="fa">• <b>تغذیه نامناسب</b> مادر</div>
+<div class="fa">• <b>استرس شدید مادر</b></div>
+<div class="fa">• <b>عوارض زایمان:</b> زایمان سخت، زایمان زودرس، هیپوکسی، یرقان شدید</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b> مراقبت‌های پره‌ناتال (قبل از تولد) — آموزش مادران درباره تغذیه و پرهیز از مواد — مشاوره ژنتیک در موارد لازم — حمایت روانی از مادر در دوران بارداری.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) زمان تولد</h3></div>
+<div class="fa"><b>عوامل خطر در زمان تولد:</b></div>
+<div class="fa">• <b>زایمان زودرس:</b> خطر بالاتر اختلالات رشدی</div>
+<div class="fa">• <b>هیپوکسی (کمبود اکسیژن):</b> آسیب مغزی</div>
+<div class="fa">• <b>یرقان شدید:</b> آسیب به سیستم عصبی</div>
+<div class="fa">• <b>زایمان سخت:</b> آسیب جسمانی</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b> مراقبت‌های زایمانی استاندارد — دسترسی به خدمات اورژانس زایمان — آموزش پرسنل پزشکی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) دلبستگی در نوزادی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نظریه دلبستگی (بالبی و اینسورث):</b> دلبستگی در <b>سال اول زندگی</b> شکل می‌گیرد و بر سلامت روان در تمام عمر اثر می‌گذارد.</div>
+<div class="fa"><b>الگوهای دلبستگی:</b></div>
+<div class="fa">• <b>ایمن:</b> عامل محافظت‌کننده</div>
+<div class="fa">• <b>اجتنابی:</b> عامل خطر</div>
+<div class="fa">• <b>دوسوگرا:</b> عامل خطر</div>
+<div class="fa">• <b>آشفته:</b> عامل خطر شدید</div>
+<div class="fa"><b>عوامل محافظت‌کننده:</b> مراقبت پاسخگو و حساس — ارتباط عاطفی پایدار — محیط امن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) ویژگی‌های آغاز کودکی (۰-۳ سال)</h3></div>
+<div class="fa"><b>چالش اریکسونی:</b> <b>اعتماد در برابر بی‌اعتمادی</b> (۰-۱.۵ سال) و <b>خودمختاری در برابر شرم</b> (۱.۵-۳ سال).</div>
+<div class="fa"><b>نیازها:</b></div>
+<div class="fa">• <b>دلبستگی ایمن</b></div>
+<div class="fa">• <b>محیط امن و پیش‌بینی‌پذیر</b></div>
+<div class="fa">• <b>مراقبت پاسخگو</b></div>
+<div class="fa">• <b>فرصت کاوش</b> در محیط امن</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) عوامل خطر در آغاز کودکی</h3></div>
+<div class="fa">• <b>بی‌توجهی</b> یا <b>غفلت</b></div>
+<div class="fa">• <b>خشونت خانگی</b></div>
+<div class="fa">• <b>جدایی مکرر</b> از مراقب اولیه</div>
+<div class="fa">• <b>افسردگی مادر</b> (به‌ویژه افسردگی پس از زایمان)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶) اقدامات پیشگیرانه در آغاز کودکی</h3></div>
+<div class="fa">• <b>آموزش والدگری مؤثر</b></div>
+<div class="fa">• <b>حمایت از مادران</b> در معرض خطر</div>
+<div class="fa">• <b>برنامه‌های خانه‌ای</b> برای خانواده‌های آسیب‌پذیر</div>
+<div class="fa">• <b>غربالگری</b> اختلالات رشدی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> «سه سال اول زندگی» برای شکل‌گیری <b>اعتماد پایه</b> و <b>دلبستگی ایمن</b> حیاتی است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۷) ویژگی‌های بلوغ</h3></div>
+<div class="fa"><b>بلوغ</b> دوره‌ای است که با <b>تغییرات هورمونی</b> و <b>رشد جسمانی</b> همراه است.</div>
+<div class="fa"><b>تغییرات:</b></div>
+<div class="fa">• <b>جسمانی:</b> رشد قد، تغییرات جنسی</div>
+<div class="fa">• <b>هیجانی:</b> نوسانات خلقی</div>
+<div class="fa">• <b>شناختی:</b> تفکر انتزاعی</div>
+<div class="fa">• <b>اجتماعی:</b> تغییر روابط با همسالان</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۸) چالش‌های بلوغ</h3></div>
+<div class="fa">• <b>نوسانات خلقی</b></div>
+<div class="fa">• <b>حساسیت به قضاوت همسالان</b></div>
+<div class="fa">• <b>تعارض با والدین</b></div>
+<div class="fa">• <b>نگرانی درباره تصویر بدن</b></div>
+<div class="fa">• <b>فشار تحصیلی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۹) اقدامات پیشگیرانه در بلوغ</h3></div>
+<div class="fa">• <b>آموزش والدین</b> درباره تغییرات بلوغ</div>
+<div class="fa">• <b>آموزش نوجوانان</b> درباره تغییرات طبیعی</div>
+<div class="fa">• <b>حمایت مدرسه</b> و مشاوره</div>
+<div class="fa">• <b>تشویق فعالیت‌های سالم</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰) تعریف جرائم نوجوانان</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>جرائم نوجوانان</b> به رفتارهای <b>مغایر با قانون</b> گفته می‌شود که توسط افراد <b>۱۲-۱۸ سال</b> انجام می‌شود.</div>
+<div class="fa"><b>انواع:</b></div>
+<div class="fa">• <b>جرائم علیه اشخاص:</b> خشونت، تهدید</div>
+<div class="fa">• <b>جرائم علیه اموال:</b> سرقت، تخریب</div>
+<div class="fa">• <b>جرائم مربوط به مواد:</b> مصرف، فروش</div>
+<div class="fa">• <b>جرائم جنسی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۱) عوامل خطر جرائم نوجوانان</h3></div>
+<table class="compare">
+<thead><tr><th>سطح</th><th>عوامل خطر</th></tr></thead>
+<tbody>
+<tr><td>فردی</td><td>تکانشگری، اختلالات روانی درمان‌نشده، سوءمصرف مواد</td></tr>
+<tr><td>خانوادگی</td><td>تعارض خانوادگی، غفلت، خشونت، فقدان نظارت</td></tr>
+<tr><td>اجتماعی</td><td>همسالان بزهکار، محرومیت اقتصادی، دسترسی به مواد</td></tr>
+<tr><td>محیطی</td><td>محله پرجرم، کمبود فرصت‌های سالم</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۲) پیامدهای جرائم نوجوانان</h3></div>
+<div class="fa">• <b>برای نوجوان:</b> زندان، انگ، قطع تحصیل، کاهش فرصت‌های شغلی</div>
+<div class="fa">• <b>برای خانواده:</b> شرم، فشار مالی، گسست روابط</div>
+<div class="fa">• <b>برای جامعه:</b> افزایش جرم، هزینه‌های قضایی و زندان</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۳) اقدامات پیشگیرانه جرائم نوجوانان</h3></div>
+<div class="fa">• <b>برنامه‌های مدرسه‌محور:</b> آموزش مهارت‌های زندگی، حل تعارض</div>
+<div class="fa">• <b>حمایت خانوادگی:</b> آموزش والدین، تقویت نظارت</div>
+<div class="fa">• <b>برنامه‌های جامعه‌محور:</b> فعالیت‌های سالم، ورزش، هنر</div>
+<div class="fa">• <b>مداخله زودهنگام:</b> شناسایی نوجوانان در معرض خطر</div>
+<div class="fa">• <b>خدمات مشاوره‌ای:</b> برای نوجوانان و خانواده‌ها</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۴) ویژگی‌های بزرگسالی</h3></div>
+<div class="fa"><b>بزرگسالی</b> دوره‌ای است که با <b>نقش‌های اجتماعی</b> جدید همراه است.</div>
+<div class="fa"><b>مراحل:</b></div>
+<div class="fa">• <b>جوانی (۱۸-۴۰):</b> صمیمیت در برابر انزوا</div>
+<div class="fa">• <b>میانسالی (۴۰-۶۰):</b> مولدبودن در برابر رکود</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۵) چالش‌های بزرگسالی</h3></div>
+<div class="fa">• <b>انتخاب شغل</b> و <b>استقرار حرفه‌ای</b></div>
+<div class="fa">• <b>ازدواج</b> و <b>تشکیل خانواده</b></div>
+<div class="fa">• <b>تعادل کار-زندگی</b></div>
+<div class="fa">• <b>فشار مالی</b></div>
+<div class="fa">• <b>مراقبت از والدین سالخورده</b> و <b>فرزندان</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۶) عوامل خطر در بزرگسالی</h3></div>
+<div class="fa">• <b>استرس شغلی</b> و <b>فرسودگی</b></div>
+<div class="fa">• <b>بیکاری</b> یا <b>ناامنی شغلی</b></div>
+<div class="fa">• <b>تعارضات خانوادگی</b></div>
+<div class="fa">• <b>طلاق</b> یا <b>فقدان همسر</b></div>
+<div class="fa">• <b>بیماری‌های جسمانی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۷) اقدامات پیشگیرانه در بزرگسالی</h3></div>
+<div class="fa">• <b>تعادل کار-زندگی</b></div>
+<div class="fa">• <b>حمایت اجتماعی</b> قوی</div>
+<div class="fa">• <b>مهارت‌های مقابله‌ای</b></div>
+<div class="fa">• <b>دسترسی به مشاوره</b></div>
+<div class="fa">• <b>سبک زندگی سالم</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۸) عوامل موفقیت ازدواج</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>عامل</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>ارتباط مؤثر</td><td>گفت‌وگوی باز، گوش دادن فعال</td></tr>
+<tr><td>احترام متقابل</td><td>احترام به تفاوت‌ها، کرامت</td></tr>
+<tr><td>اعتماد</td><td>صداقت، وفاداری</td></tr>
+<tr><td>تعهد</td><td>پایبندی به رابطه</td></tr>
+<tr><td>تناسب</td><td>ارزش‌ها، اهداف، علایق مشترک</td></tr>
+<tr><td>حمایت عاطفی</td><td>همدلی، درک متقابل</td></tr>
+<tr><td>حل تعارض</td><td>مهارت‌های حل مسئله</td></tr>
+<tr><td>صمیمیت</td><td>صمیمیت عاطفی و جسمانی</td></tr>
+<tr><td>انعطاف‌پذیری</td><td>سازگاری با تغییرات</td></tr>
+<tr><td>مدیریت مالی</td><td>توافق بر مسائل مالی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۹) عواملی که ازدواج را تهدید می‌کند</h3></div>
+<div class="fa">• <b>ارتباط ضعیف</b></div>
+<div class="fa">• <b>عدم احترام</b></div>
+<div class="fa">• <b>خیانت</b></div>
+<div class="fa">• <b>تعارضات حل‌نشده</b></div>
+<div class="fa">• <b>مشکلات مالی</b></div>
+<div class="fa">• <b>عدم تناسب</b></div>
+<div class="fa">• <b>خشونت خانگی</b></div>
+<div class="fa">• <b>اعتیاد</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۰) تعریف طلاق</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>طلاق</b> <b>پایان قانونی</b> ازدواج است.</div>
+<div class="fa"><b>انواع:</b></div>
+<div class="fa">• <b>طلاق توافقی:</b> با توافق دو طرف</div>
+<div class="fa">• <b>طلاق یک‌طرفه:</b> به درخواست یک طرف</div>
+<div class="fa">• <b>طلاق قضایی:</b> با حکم دادگاه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۱) عوامل خطر طلاق</h3></div>
+<table class="compare">
+<thead><tr><th>سطح</th><th>عوامل خطر</th></tr></thead>
+<tbody>
+<tr><td>فردی</td><td>اختلالات روانی، اعتیاد، تکانشگری</td></tr>
+<tr><td>زوجی</td><td>ارتباط ضعیف، تعارض، خیانت</td></tr>
+<tr><td>خانوادگی</td><td>دخالت خانواده‌ها، تعارض با خانواده همسر</td></tr>
+<tr><td>اجتماعی</td><td>مشکلات مالی، بیکاری، فشارهای فرهنگی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۲) پیامدهای طلاق</h3></div>
+<div class="fa"><b>برای زوجین:</b></div>
+<div class="fa">• <b>افسردگی، اضطراب</b></div>
+<div class="fa">• <b>کاهش عزت‌نفس</b></div>
+<div class="fa">• <b>انزوای اجتماعی</b></div>
+<div class="fa">• <b>مشکلات مالی</b></div>
+<div class="fa"><b>برای فرزندان:</b></div>
+<div class="fa">• <b>افت تحصیلی</b></div>
+<div class="fa">• <b>مشکلات رفتاری</b></div>
+<div class="fa">• <b>اضطراب و افسردگی</b></div>
+<div class="fa">• <b>تعارض وفاداری</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۳) اقدامات پیشگیرانه طلاق</h3></div>
+<div class="fa">• <b>آموزش مهارت‌های ارتباطی</b> قبل از ازدواج</div>
+<div class="fa">• <b>مشاوره پیش از ازدواج</b></div>
+<div class="fa">• <b>مشاوره زوجی</b> در زمان تعارض</div>
+<div class="fa">• <b>حمایت اجتماعی</b> از زوجین</div>
+<div class="fa">• <b>کاهش انگ طلاق</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۴) ویژگی‌های میانسالی (۴۰-۶۰ سال)</h3></div>
+<div class="fa"><b>چالش اریکسونی:</b> <b>مولدبودن در برابر رکود</b>.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">• کمک به <b>نسل بعد</b> (فرزندان، شاگردان، جامعه)</div>
+<div class="fa">• <b>بازنگری در اهداف</b> زندگی</div>
+<div class="fa">• <b>تغییرات جسمانی</b> (یائسگی، کاهش انرژی)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۵) چالش‌های میانسالی</h3></div>
+<div class="fa">• <b>بحران میانسالی</b></div>
+<div class="fa">• <b>مراقبت از والدین سالخورده</b> و <b>فرزندان</b></div>
+<div class="fa">• <b>فشار شغلی</b> و <b>احساس فرسودگی</b></div>
+<div class="fa">• <b>تغییرات هورمونی</b></div>
+<div class="fa">• <b>نگرانی از آینده</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۶) عوامل خطر در میانسالی</h3></div>
+<div class="fa">• <b>بیماری‌های جسمانی</b> (قلب، دیابت)</div>
+<div class="fa">• <b>استرس مزمن شغلی</b></div>
+<div class="fa">• <b>تعارضات خانوادگی</b></div>
+<div class="fa">• <b>فقدان والدین</b></div>
+<div class="fa">• <b>افسردگی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۷) اقدامات پیشگیرانه در میانسالی</h3></div>
+<div class="fa">• <b>معنا و هدف</b> در کار و زندگی</div>
+<div class="fa">• <b>سلامت جسمانی</b> و <b>فعالیت بدنی</b></div>
+<div class="fa">• <b>شبکه اجتماعی</b> قوی</div>
+<div class="fa">• <b>تعادل کار-زندگی</b></div>
+<div class="fa">• <b>مشاوره</b> در صورت نیاز</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۸) ویژگی‌های سالمندی (۶۰+ سال)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>چالش اریکسونی:</b> <b>یکپارچگی در برابر ناامیدی</b>.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">• مرور زندگی</div>
+<div class="fa">• <b>موفقیت</b> ← یکپارچگی</div>
+<div class="fa">• <b>شکست</b> ← ناامیدی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۹) چالش‌های سالمندی</h3></div>
+<div class="fa">• <b>انزوای اجتماعی</b> (فقدان همسر، دوستان)</div>
+<div class="fa">• <b>بیماری‌های مزمن</b> (قلب، دیابت، آلزایمر)</div>
+<div class="fa">• <b>فقدان‌های مکرر</b></div>
+<div class="fa">• <b>کاهش عملکرد شناختی</b></div>
+<div class="fa">• <b>بازنشستگی</b> و <b>از‌دست‌دادن نقش</b></div>
+<div class="fa">• <b>افسردگی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۰) داده‌های شیوع سالمندان</h3></div>
+<div class="fa">مطالعه‌ای در اردکان (ایران) نشان داد:</div>
+<div class="fa">• <b>۱۷٪</b> سالمندان افسردگی</div>
+<div class="fa">• <b>۱۲٪</b> اضطراب</div>
+<div class="fa">• <b>۷۳٪</b> افراد افسرده را <b>زنان</b> تشکیل می‌دهند</div>
+<div class="fa">• <b>۵۵٪</b> افراد افسرده تحصیلات ابتدایی داشتند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۱) اقدامات پیشگیرانه در سالمندی</h3></div>
+<div class="fa">• <b>حمایت خانوادگی</b> و <b>شبکه اجتماعی</b></div>
+<div class="fa">• <b>فعالیت بدنی</b> و <b>مشارکت اجتماعی</b></div>
+<div class="fa">• <b>معنویت</b> و <b>احساس هدف</b></div>
+<div class="fa">• <b>مراقبت سلامت</b> منظم</div>
+<div class="fa">• <b>بازنگری مثبت زندگی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۲) پیشگیری بیماری‌های مخصوص سالمندان</h3></div>
+<div class="fa">• <b>پیشگیری از افتادن</b></div>
+<div class="fa">• <b>پیشگیری از دمانس</b></div>
+<div class="fa">• <b>پیشگیری از افسردگی</b></div>
+<div class="fa">• <b>پیشگیری از انزوای اجتماعی</b></div>
+<div class="fa">• <b>پیشگیری از سوءتغذیه</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۳) روش‌های پیشگیری از عقب‌ماندگی ذهنی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>قبل از تولد:</b></div>
+<div class="fa">• <b>مشاوره ژنتیک</b> برای خانواده‌های پرخطر</div>
+<div class="fa">• <b>مراقبت‌های پره‌ناتال</b></div>
+<div class="fa">• <b>پرهیز از مواد</b> (الکل، تنباکو)</div>
+<div class="fa">• <b>تغذیه مناسب</b> مادر</div>
+<div class="fa">• <b>پیشگیری از عفونت‌ها</b></div>
+<div class="fa"><b>زمان تولد:</b></div>
+<div class="fa">• <b>مراقبت‌های زایمانی</b> استاندارد</div>
+<div class="fa">• <b>پیشگیری از هیپوکسی</b></div>
+<div class="fa">• <b>درمان یرقان</b></div>
+<div class="fa"><b>پس از تولد:</b></div>
+<div class="fa">• <b>غربالگری</b> اختلالات متابولیک</div>
+<div class="fa">• <b>واکسیناسیون</b></div>
+<div class="fa">• <b>تغذیه مناسب</b></div>
+<div class="fa">• <b>تحریک روانی-اجتماعی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۴) پیشگیری اولیه در اسکیزوفرنی</h3></div>
+<div class="fa"><b>عوامل خطر:</b></div>
+<div class="fa">• <b>ژنتیک:</b> سابقه خانوادگی</div>
+<div class="fa">• <b>محیطی:</b> عفونت‌های دوران بارداری، استرس مادر</div>
+<div class="fa">• <b>مصرف مواد:</b> حشیش، محرک‌ها</div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b></div>
+<div class="fa">• <b>مشاوره ژنتیک</b> برای خانواده‌های پرخطر</div>
+<div class="fa">• <b>پیشگیری از عفونت‌ها</b> در دوران بارداری</div>
+<div class="fa">• <b>کاهش استرس مادر</b></div>
+<div class="fa">• <b>پیشگیری از مصرف مواد</b> در نوجوانی</div>
+<div class="fa">• <b>مداخله زودهنگام</b> در افراد با نشانه‌های زیرآستانه‌ای</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۵) پیشگیری از اختلالات رفتاری و شخصیتی</h3></div>
+<div class="fa"><b>عوامل خطر:</b></div>
+<div class="fa">• <b>ژنتیک</b></div>
+<div class="fa">• <b>تجربه‌های آسیب‌زا کودکی</b></div>
+<div class="fa">• <b>والدگری ناسازگار</b></div>
+<div class="fa">• <b>محیط پرخاشگرانه</b></div>
+<div class="fa"><b>اقدامات پیشگیرانه:</b></div>
+<div class="fa">• <b>آموزش والدگری مؤثر</b></div>
+<div class="fa">• <b>پیشگیری از خشونت خانگی</b></div>
+<div class="fa">• <b>آموزش مهارت‌های زندگی</b> به کودکان</div>
+<div class="fa">• <b>مداخله زودهنگام</b> در کودکان با مشکلات رفتاری</div>
+<div class="fa">• <b>حمایت از خانواده‌های آسیب‌پذیر</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۶) پیشگیری اولیه در انواع دیگر اختلالات</h3></div>
+<div class="fa"><b>اختلالات اضطرابی:</b> آموزش مهارت‌های مقابله‌ای — کاهش استرس — سبک زندگی سالم.</div>
+<div class="fa"><b>اختلالات خلقی:</b> تقویت حمایت اجتماعی — آموزش حل مسئله — مداخله زودهنگام.</div>
+<div class="fa"><b>اختلالات مصرف مواد:</b> آموزش مهارت‌های مقاومت — تقویت نظارت والدین — کاهش دسترسی به مواد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۷) نتایج حاصل از پیشگیری اولیه</h3></div>
+<div class="fa">• <b>کاهش بروز</b> اختلالات روانی</div>
+<div class="fa">• <b>کاهش بار بیماری</b> بر فرد، خانواده و جامعه</div>
+<div class="fa">• <b>بهبود کیفیت زندگی</b></div>
+<div class="fa">• <b>افزایش بهره‌وری</b></div>
+<div class="fa">• <b>کاهش هزینه‌های درمان</b></div>
+<div class="fa">• <b>ارتقای سلامت روان</b> جامعه</div>
+</div>
+</section>
+
+<!-- ========== تفاوت‌ها ========== -->
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>دوران جنینی vs دوران تولد</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>دوران جنینی</th><th>زمان تولد</th></tr></thead>
+<tbody>
+<tr><td>عفونت‌ها، مواد، تغذیه نامناسب، استرس مادر</td><td>زایمان زودرس، هیپوکسی، یرقان شدید، زایمان سخت</td></tr>
+<tr><td>مراقبت‌های پره‌ناتال</td><td>مراقبت‌های زایمانی استاندارد</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دلبستگی ایمن vs ناایمن</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>ایمن</th><th>ناایمن (اجتنابی/دوسوگرا/آشفته)</th></tr></thead>
+<tbody>
+<tr><td>عامل محافظت‌کننده</td><td>عامل خطر</td></tr>
+<tr><td>مراقبت پاسخگو و حساس</td><td>مراقبت ناپایدار یا غفلت</td></tr>
+<tr><td>ارتباط عاطفی پایدار</td><td>جدایی مکرر از مراقب</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بلوغ vs بزرگسالی</h3></div>
+<table class="compare">
+<thead><tr><th>بلوغ</th><th>بزرگسالی</th></tr></thead>
+<tbody>
+<tr><td>تغییرات هورمونی و جسمانی</td><td>نقش‌های اجتماعی جدید</td></tr>
+<tr><td>نوسانات خلقی، حساسیت به همسالان</td><td>انتخاب شغل، ازدواج، تعادل کار-زندگی</td></tr>
+<tr><td>چالش اریکسونی: هویت vs سردرگمی</td><td>چالش اریکسونی: صمیمیت vs انزوا</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ازدواج موفق vs ازدواج تهدیدشده</h3></div>
+<table class="compare">
+<thead><tr><th>موفق</th><th>تهدیدشده</th></tr></thead>
+<tbody>
+<tr><td>ارتباط مؤثر</td><td>ارتباط ضعیف</td></tr>
+<tr><td>احترام متقابل</td><td>عدم احترام</td></tr>
+<tr><td>اعتماد</td><td>خیانت</td></tr>
+<tr><td>تعهد</td><td>تعارضات حل‌نشده</td></tr>
+<tr><td>تناسب</td><td>عدم تناسب</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>طلاق توافقی vs یک‌طرفه vs قضایی</h3></div>
+<table class="compare">
+<thead><tr><th>توافقی</th><th>یک‌طرفه</th><th>قضایی</th></tr></thead>
+<tbody>
+<tr><td>با توافق دو طرف</td><td>به درخواست یک طرف</td><td>با حکم دادگاه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>میانسالی vs سالمندی</h3></div>
+<table class="compare">
+<thead><tr><th>میانسالی (۴۰-۶۰)</th><th>سالمندی (۶۰+)</th></tr></thead>
+<tbody>
+<tr><td>مولدبودن vs رکود</td><td>یکپارچگی vs ناامیدی</td></tr>
+<tr><td>بحران میانسالی، مراقبت از والدین</td><td>انزوا، بیماری مزمن، فقدان‌های مکرر</td></tr>
+<tr><td>معنا و هدف در کار</td><td>بازنگری مثبت زندگی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیشگیری اولیه vs ثانویه</h3></div>
+<table class="compare">
+<thead><tr><th>پیشگیری اولیه</th><th>پیشگیری ثانویه</th></tr></thead>
+<tbody>
+<tr><td>قبل از بروز</td><td>مراحل اولیه</td></tr>
+<tr><td>کاهش بروز</td><td>کاهش شیوع/مدت</td></tr>
+<tr><td>آموزش مهارت‌های زندگی</td><td>غربالگری، درمان زودهنگام</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراحل اریکسون — جدول کامل</h3><span class="badge s">حفظ کن</span></div>
+<table class="compare">
+<thead><tr><th>مرحله</th><th>سن</th><th>چالش</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>۰-۱.۵ سال</td><td>اعتماد vs بی‌اعتمادی</td></tr>
+<tr><td>۲</td><td>۱.۵-۳ سال</td><td>خودمختاری vs شرم</td></tr>
+<tr><td>۳</td><td>۳-۶ سال</td><td>ابتکار vs گناه</td></tr>
+<tr><td>۴</td><td>۶-۱۲ سال</td><td>مهارت‌آموزی vs حقارت</td></tr>
+<tr><td>۵</td><td>۱۲-۱۸ سال</td><td>هویت vs سردرگمی</td></tr>
+<tr><td>۶</td><td>۱۸-۴۰ سال</td><td>صمیمیت vs انزوا</td></tr>
+<tr><td>۷</td><td>۴۰-۶۰ سال</td><td>مولدبودن vs رکود</td></tr>
+<tr><td>۸</td><td>۶۰+ سال</td><td>یکپارچگی vs ناامیدی</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ========== نظریه‌پردازان ========== -->
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان</h2>
+<p class="section-sub">هر کی چی گفته + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>اریک اریکسون — نظریه رشد روانی-اجتماعی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نام اصلی:</b> Erik Erikson</div>
+<div class="fa"><b>مفهوم:</b> Psychosocial Development</div>
+<div class="fa"><b>ایده اصلی:</b> رشد انسان در <b>هشت مرحله</b> رخ می‌دهد که هر مرحله یک <b>چالش (بحران)</b> دارد. موفقیت در هر مرحله به <b>سلامت روان</b> در مراحل بعدی کمک می‌کند.</div>
+<div class="fa"><b>مراحل:</b></div>
+<div class="fa">• ۰-۱.۵ سال: اعتماد vs بی‌اعتمادی</div>
+<div class="fa">• ۱.۵-۳ سال: خودمختاری vs شرم</div>
+<div class="fa">• ۳-۶ سال: ابتکار vs گناه</div>
+<div class="fa">• ۶-۱۲ سال: مهارت‌آموزی vs حقارت</div>
+<div class="fa">• ۱۲-۱۸ سال: هویت vs سردرگمی</div>
+<div class="fa">• ۱۸-۴۰ سال: صمیمیت vs انزوا</div>
+<div class="fa">• ۴۰-۶۰ سال: مولدبودن vs رکود</div>
+<div class="fa">• ۶۰+ سال: یکپارچگی vs ناامیدی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اریکسون ≠ پیاژه (پیاژه بر رشد شناختی تمرکز دارد).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جان بالبی — نظریه دلبستگی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نام اصلی:</b> John Bowlby</div>
+<div class="fa"><b>مفهوم:</b> Attachment Theory</div>
+<div class="fa"><b>ایده اصلی:</b> دلبستگی در <b>سال اول زندگی</b> شکل می‌گیرد و بر سلامت روان در تمام عمر اثر می‌گذارد.</div>
+<div class="fa"><b>ارتباط با فصل:</b> دلبستگی ایمن = عامل محافظت‌کننده؛ دلبستگی ناایمن = عامل خطر.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مری اینسورث — الگوهای دلبستگی</h3></div>
+<div class="fa"><b>نام اصلی:</b> Mary Ainsworth</div>
+<div class="fa"><b>مفهوم:</b> Strange Situation (موقعیت ناآشنا)</div>
+<div class="fa"><b>ایده اصلی:</b> چهار الگوی دلبستگی: <b>ایمن</b>، <b>اجتنابی</b>، <b>دوسوگرا</b>، <b>آشفته</b>.</div>
+<div class="fa"><b>ارتباط با فصل:</b> الگوی ایمن عامل محافظت‌کننده؛ سایر الگوها عامل خطر.</div>
+</div>
+</section>
+
+<!-- ========== دام‌ها ========== -->
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: اریکسون vs پیاژه</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> اریکسون = رشد روانی-اجتماعی / پیاژه = رشد شناختی.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: دلبستگی فقط کودکی نیست</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دلبستگی فقط در کودکی اهمیت دارد.</div>
+<div class="fa"><b>جواب درست:</b> دلبستگی در سال اول زندگی شکل می‌گیرد و بر سلامت روان <b>در تمام عمر</b> اثر می‌گذارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: افسردگی سالمندان نادر است</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی افسردگی در سالمندان نادر است.</div>
+<div class="fa"><b>جواب درست:</b> بر اساس مطالعه اردکان، <b>۱۷٪</b> سالمندان افسردگی دارند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: دوقطبی فقط در جوانان</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اختلال دوقطبی فقط در جوانان رخ می‌دهد.</div>
+<div class="fa"><b>جواب درست:</b> <b>دوقطبی دیررس</b> در <b>۲۵٪</b> بیماران دوقطبی وجود دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: پیشگیری اولیه vs ثانویه</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> پیشگیری اولیه = قبل از بروز / ثانویه = مراحل اولیه.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: عقب‌ماندگی ذهنی با دارو درمان می‌شود</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی عقب‌ماندگی ذهنی با دارو درمان می‌شود.</div>
+<div class="fa"><b>جواب درست:</b> عقب‌ماندگی ذهنی <b>بیماری نیست</b>؛ پیشگیری اولیه (مشاوره ژنتیک، مراقبت پره‌ناتال) اهمیت دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: طلاق = جدایی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> طلاق <b>پایان قانونی</b> ازدواج است؛ جدایی می‌تواند بدون طلاق باشد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: مراحل اریکسون — جابه‌جایی سن</h3>
+<div class="fa"><b>دام چیه:</b> سن مراحل اریکسون را جابه‌جا می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> اعتماد vs بی‌اعتمادی = ۰-۱.۵ سال / خودمختاری vs شرم = ۱.۵-۳ سال / ابتکار vs گناه = ۳-۶ سال / مهارت‌آموزی vs حقارت = ۶-۱۲ سال / هویت vs سردرگمی = ۱۲-۱۸ سال / صمیمیت vs انزوا = ۱۸-۴۰ سال / مولدبودن vs رکود = ۴۰-۶۰ سال / یکپارچگی vs ناامیدی = ۶۰+ سال.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: «دوران جنینی کم‌اهمیت است»</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دوران جنینی کم‌اهمیت است.</div>
+<div class="fa"><b>جواب درست:</b> دوران جنینی <b>حساس‌ترین دوره رشد مغز</b> است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: «دلبستگی فقط کودکی است»</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دلبستگی فقط در کودکی اهمیت دارد.</div>
+<div class="fa"><b>جواب درست:</b> دلبستگی بر سلامت روان <b>در تمام عمر</b> اثر می‌گذارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: «پیشگیری اولیه = مراحل اولیه»</h3>
+<div class="fa"><b>دام چیه:</b> پیشگیری اولیه را با مراحل اولیه اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> پیشگیری اولیه <b>قبل از بروز</b> عمل می‌کند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: «طلاق توافقی = یک‌طرفه»</h3>
+<div class="fa"><b>دام چیه:</b> انواع طلاق را جابه‌جا می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> توافقی = با توافق دو طرف / یک‌طرفه = به درخواست یک طرف / قضایی = با حکم دادگاه.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: «مرحله یکپارچگی در میانسالی است»</h3>
+<div class="fa"><b>دام چیه:</b> مرحله یکپارچگی vs ناامیدی را به میانسالی نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> یکپارچگی vs ناامیدی مربوط به <b>سالمندی (۶۰+ سال)</b> است؛ میانسالی = مولدبودن vs رکود.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: «عقب‌ماندگی ذهنی بیماری است»</h3>
+<div class="fa"><b>دام چیه:</b> عقب‌ماندگی ذهنی را بیماری می‌دانی.</div>
+<div class="fa"><b>جواب درست:</b> عقب‌ماندگی ذهنی <b>بیماری نیست</b>؛ یک وضعیت رشدی است که پیشگیری اولیه اهمیت دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: «گزینه‌های با مترادف، فقط، همیشه»</h3>
+<div class="fa"><b>دام چیه:</b> گزینه‌های مطلق را انتخاب می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> در مورد دوره‌های زندگی و پیشگیری، گزینه‌های با «مترادف»، «فقط»، «همیشه» معمولاً نادرست‌اند.</div>
+</div>
+</section>
+
+<!-- ========== کوییز ========== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل هفتم — بهداشت روانی در دوره‌های مختلف زندگی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · مشاوره بهداشت روانی · فصل هفتم: بهداشت روانی در دوره‌های مختلف زندگی — بر اساس کتاب بهداشت روانی میلانی‌فر</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"«دلبستگی» در کدام دوره شکل می‌گیرد؟",options:["نوجوانی","سال اول زندگی","کودکی میانی","بلوغ"],answer:1,explanation:"دلبستگی در سال اول زندگی شکل می‌گیرد."},
+{q:"چالش اریکسونی «اعتماد vs. بی‌اعتمادی» در کدام دوره است؟",options:["۰-۱.۵ سال","۱.۵-۳ سال","۳-۶ سال","۶-۱۲ سال"],answer:0,explanation:"اعتماد vs بی‌اعتمادی: ۰-۱.۵ سال."},
+{q:"چالش اریکسونی «هویت vs. سردرگمی» در کدام دوره است؟",options:["۶-۱۲ سال","۱۲-۱۸ سال","۱۸-۴۰ سال","۴۰-۶۰ سال"],answer:1,explanation:"هویت vs سردرگمی: ۱۲-۱۸ سال."},
+{q:"چالش اریکسونی «مولدبودن vs. رکود» در کدام دوره است؟",options:["۱۸-۴۰ سال","۴۰-۶۰ سال","۶۰+ سال","۱۲-۱۸ سال"],answer:1,explanation:"مولدبودن vs رکود: ۴۰-۶۰ سال."},
+{q:"چالش اریکسونی «یکپارچگی vs. ناامیدی» در کدام دوره است؟",options:["۴۰-۶۰ سال","۶۰+ سال","۱۸-۴۰ سال","۱۲-۱۸ سال"],answer:1,explanation:"یکپارچگی vs ناامیدی: ۶۰+ سال."},
+{q:"کدام گزینه یک «عامل موفقیت ازدواج» است؟",options:["ارتباط ضعیف","ارتباط مؤثر","خیانت","عدم احترام"],answer:1,explanation:"ارتباط مؤثر از عوامل موفقیت ازدواج است."},
+{q:"کدام گزینه یک «عامل خطر طلاق» است؟",options:["ارتباط مؤثر","اعتیاد","احترام متقابل","تعهد"],answer:1,explanation:"اعتیاد از عوامل خطر طلاق است."},
+{q:"کدام گزینه یک «پیامد طلاق برای فرزندان» است؟",options:["بهبود تحصیل","افت تحصیلی","افزایش عزت‌نفس","کاهش اضطراب"],answer:1,explanation:"افت تحصیلی از پیامدهای طلاق برای فرزندان است."},
+{q:"«طلاق توافقی» به چه معناست؟",options:["با حکم دادگاه","با توافق دو طرف","به درخواست یک طرف","بدون رضایت"],answer:1,explanation:"طلاق توافقی: با توافق دو طرف."},
+{q:"کدام گزینه یک «اقدام پیشگیرانه طلاق» است؟",options:["عدم مشاوره","مشاوره پیش از ازدواج","افزایش تعارض","عدم ارتباط"],answer:1,explanation:"مشاوره پیش از ازدواج از اقدامات پیشگیرانه است."},
+{q:"«افسردگی سالمندان» بر اساس مطالعه اردکان چقدر است؟",options:["۵٪","۱۷٪","۳۰٪","۵۰٪"],answer:1,explanation:"بر اساس مطالعه اردکان، ۱۷٪ سالمندان افسردگی دارند."},
+{q:"«دوقطبی دیررس» چند درصد بیماران دوقطبی را تشکیل می‌دهد؟",options:["۵٪","۱۵٪","۲۵٪","۵۰٪"],answer:2,explanation:"دوقطبی دیررس ۲۵٪ بیماران دوقطبی را تشکیل می‌دهد."},
+{q:"کدام گزینه یک «چالش سالمندی» است؟",options:["افزایش حمایت اجتماعی","انزوای اجتماعی","بهبود حافظه","کاهش بیماری"],answer:1,explanation:"انزوای اجتماعی از چالش‌های سالمندی است."},
+{q:"کدام گزینه یک «اقدام پیشگیرانه در سالمندی» است؟",options:["انزوا","فعالیت بدنی","کم‌تحرکی","عدم مراقبت"],answer:1,explanation:"فعالیت بدنی از اقدامات پیشگیرانه در سالمندی است."},
+{q:"«پیشگیری از افتادن» در کدام دوره اهمیت دارد؟",options:["کودکی","نوجوانی","سالمندی","جوانی"],answer:2,explanation:"پیشگیری از افتادن در سالمندی اهمیت دارد."},
+{q:"«پیشگیری اولیه» چه زمانی عمل می‌کند؟",options:["قبل از بروز","مراحل اولیه","پس از استقرار","پس از بهبودی"],answer:0,explanation:"پیشگیری اولیه قبل از بروز عمل می‌کند."},
+{q:"کدام گزینه یک «اقدام پیشگیرانه عقب‌ماندگی ذهنی» است؟",options:["مشاوره ژنتیک","عدم مراقبت پره‌ناتال","مصرف مواد","عدم واکسیناسیون"],answer:0,explanation:"مشاوره ژنتیک از اقدامات پیشگیرانه عقب‌ماندگی ذهنی است."},
+{q:"کدام گزینه یک «عامل خطر اسکیزوفرنی» است؟",options:["سابقه خانوادگی","تغذیه مناسب","حمایت اجتماعی","ورزش"],answer:0,explanation:"سابقه خانوادگی از عوامل خطر اسکیزوفرنی است."},
+{q:"کدام گزینه یک «اقدام پیشگیرانه اسکیزوفرنی» است؟",options:["مشاوره ژنتیک","مصرف حشیش","استرس مادر","عفونت دوران بارداری"],answer:0,explanation:"مشاوره ژنتیک از اقدامات پیشگیرانه اسکیزوفرنی است."},
+{q:"کدام گزینه یک «نتیجه پیشگیری اولیه» است؟",options:["افزایش بروز","کاهش بار بیماری","افزایش هزینه","کاهش کیفیت زندگی"],answer:1,explanation:"کاهش بار بیماری از نتایج پیشگیری اولیه است."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

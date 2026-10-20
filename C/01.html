@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · سنجش و اندازه‌گیری در مشاوره · سری 01 · فصل اول</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"01";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>سنجش و اندازه‌گیری در مشاوره · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل اول: تعریف اصطلاحات</h2>
+  <p>سنجش و اندازه‌گیری در مشاوره — همه چیز به زبان ساده و خودمونی</p>
+  <div class="pills"><span class="pill">هسته امتحانی</span><span class="pill">مفاهیم</span><span class="pill">تفاوت‌ها</span><span class="pill">نظریه‌پردازان</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این فصل درباره‌ی <b>اصطلاحات پایه‌ای</b> سنجش و اندازه‌گیریه. باید فرق بین <b>اندازه‌گیری، آزمون، آزمودن، سنجش، ارزشیابی، پژوهش و پژوهش ارزشیابی</b> رو بفهمی. این اصطلاحات پایه‌ی تمام فصل‌های بعدی هستن.</div>
+
+<div class="stats">
+<div class="stat"><b>۸</b><span>اصطلاح کلیدی</span></div>
+<div class="stat"><b>۵</b><span>تفاوت مهم</span></div>
+<div class="stat"><b>۶</b><span>نظریه‌پرداز</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>زنجیره‌ی گستردگی اصطلاحات</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> این اصطلاحات رو از <b>کوچیک به بزرگ</b> حفظ کن:</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px;text-align:center">
+<b>آزمودن ← اندازه‌گیری ← سنجش ← ارزشیابی</b>
+</div>
+<div class="fa">• <b>آزمودن:</b> محدودترین اصطلاح (فقط با آزمون یا پرسشنامه).</div>
+<div class="fa">• <b>اندازه‌گیری:</b> گسترده‌تر از آزمودن (می‌تونه بدون آزمون هم باشه).</div>
+<div class="fa">• <b>سنجش:</b> گسترده‌تر از هر دو (برای گردآوری اطلاعات).</div>
+<div class="fa">• <b>ارزشیابی:</b> گسترده‌ترین (داوری ارزشی).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اگه پرسیدن «کدام محدودتره؟» جواب: آزمودن. «کدام گسترده‌تره؟» جواب: ارزشیابی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلاصه‌ی هر اصطلاح در یک خط</h3></div>
+<div class="fa"><b>اندازه‌گیری:</b> تعیین مقدار یک ویژگی + گزارش با عدد (کمیت).</div>
+<div class="fa"><b>آزمون:</b> وسیله‌ی نظام‌دار برای اندازه‌گیری نمونه‌ای از رفتار.</div>
+<div class="fa"><b>پرسشنامه:</b> وسیله‌ی سنجش ویژگی‌های غیرتوانایی (مثل شخصیت).</div>
+<div class="fa"><b>آزمودن:</b> نوع خاصی از اندازه‌گیری که فقط با آزمون یا پرسشنامه انجام می‌شه.</div>
+<div class="fa"><b>سنجش:</b> فرآیند گردآوری اطلاعات برای تصمیم‌گیری (کمّی + کیفی).</div>
+<div class="fa"><b>ارزشیابی:</b> داوری ارزشی درباره‌ی کیفیت (تعیین ارزش).</div>
+<div class="fa"><b>پژوهش آموزشی:</b> فعالیت علمی برای درک پدیده‌ها + وابسته به نظریه.</div>
+<div class="fa"><b>پژوهش ارزشیابی:</b> کاربرد روش‌های پژوهش در مسائل ارزشیابی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات کلیدی که حتماً باید بلد باشی</h3></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱)</b> هر <b>آزمودن</b>، نوعی <b>اندازه‌گیری</b>ه، ولی هر <b>اندازه‌گیری</b>، الزاماً <b>آزمودن</b> نیست.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲)</b> <b>آزمون</b> برای <b>توانایی</b>ها / <b>پرسشنامه</b> برای <b>غیرتوانایی</b>ها (شخصیت).
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳)</b> <b>اندازه‌گیری و آزمودن</b> = فقط <b>کمّی</b> / <b>سنجش</b> = <b>کمّی + کیفی</b>.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۴)</b> <b>ویژگی‌های فیزیکی</b> = مستقیم / <b>ویژگی‌های روانی</b> = غیرمستقیم.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵)</b> <b>ارزشیابی</b> = تعیین کیفیت + مبنای تصمیم‌گیری / <b>پژوهش</b> = تولید دانش + خالی از ارزش.
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با تعریف ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>اندازه‌گیری</h3></div>
+<div class="fa"><b>به زبان ساده:</b> اندازه‌گیری یعنی <b>تعیین کردن اینکه یه شخص یا یه شیء چه مقدار از یه ویژگی رو داره</b>. نتیجه‌ش هم به‌صورت <b>عدد یا رقم</b> گزارش می‌شه.</div>
+<div class="fa"><b>تعریف گی (۱۹۹۱):</b> «اندازه‌گیری فرآیندی است که تعیین می‌کند یک شخص یا یک شیء چه مقدار از یک ویژگی برخوردار است.»</div>
+<div class="fa"><b>تعریف نیکو (۲۰۰۱) — اندازه‌گیری آموزشی:</b> «نسبت دادن یه عدد (که معمولاً بهش نمره می‌گن) به یه صفت یا ویژگی معین یه شخص، طوری که اون عدد نشون‌دهنده‌ی درجه‌ای از اون صفت باشه.»</div>
+<div class="fa"><b>تعریف نانالی (۱۹۷۸):</b> «اندازه‌گیری شامل قواعدیه برای نسبت دادن اعداد به اشیاء یا افراد، طوری که صفت‌هایی از اون‌ها رو به‌صورت کمیت نشون بده.»</div>
+<div class="fa"><b>قاعده یعنی چی؟</b> یعنی روش‌های نسبت دادن اعداد باید <b>روشن و واضح</b> بیان بشن.</div>
+<div class="fa"><b>مثال ۱:</b> به‌جای اینکه بگیم «حسن نسبت به سن و قدش لاغره»، می‌گیم: «حسن ۱۶ سال داره، قدش ۱۷۵ سانتی‌متره، ولی ۴ کیلوگرم وزن داره».</div>
+<div class="fa"><b>مثال ۲:</b> به‌جای اینکه بگیم «پروین از زهرا باهوش‌تره»، می‌گیم: «هوش‌بهر پروین ۱۱۱ و هوش‌بهر زهرا ۱۰۲ه».</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اندازه‌گیری = تبدیل ویژگی به عدد (نمره یا کمیت).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اندازه‌گیری مستقیم و غیرمستقیم</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱) مستقیم:</b>
+</div>
+<div class="fa">• برای <b>ویژگی‌های فیزیکی (جسمی)</b> و <b>رفتارهای آشکار</b>.</div>
+<div class="fa">• مثال: دانش‌آموزی صندلی‌اش رو ترک می‌کنه (رفتار آشکار) یا تعداد مسائل ریاضی که درست حل می‌کنه (محصول رفتار).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲) غیرمستقیم:</b>
+</div>
+<div class="fa">• برای <b>ویژگی‌های روانی</b> مثل هوش، خلاقیت، انگیزش، نگرش، یادگیری.</div>
+<div class="fa">• چرا غیرمستقیم؟ چون <b>هیچ‌کس به‌طور مستقیم به این ویژگی‌ها دسترسی نداره</b>.</div>
+<div class="fa">• معمول‌ترین وسیله = <b>آزمودن</b>.</div>
+<div class="fa">• متخصص یه <b>نمونه</b> از رفتارهای معرف ویژگی روانی رو انتخاب می‌کنه و آزمونش رو بر پایه‌ی اون نمونه می‌سازه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مستقیم = ویژگی فیزیکی / غیرمستقیم = ویژگی روانی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آزمون</h3></div>
+<div class="fa"><b>تعریف گرانالند و لیس (۱۹۹۰):</b> «آزمون وسیله یا روشی <b>نظام‌دار</b> برای اندازه‌گیری <b>نمونه‌ای از رفتار</b> است.»</div>
+<div class="fa"><b>یه نکته:</b> هر چی نمونه‌ی رفتارهای انتخاب‌شده <b>معرف‌تر</b> باشه، نتایج <b>دقیق‌تر و قابل‌اعتمادترن</b>.</div>
+<div class="fa"><b>تعریف ساده‌تر:</b> آزمون = مجموعه‌ای از سؤال‌ها که غالباً به‌صورت <b>کتبی (مداد و کاغذی)</b> در اختیار آزمون‌شوندگان قرار می‌گیره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آزمودن</h3></div>
+<div class="fa"><b>به زبان ساده:</b> هر وقت <b>آزمون به کار می‌ره</b>، یعنی آزمودن اتفاق می‌افته و نوعی <b>اندازه‌گیری</b> هم انجام می‌شه.</div>
+<div class="fa"><b>اما نکته‌ی مهم:</b> <b>هر اندازه‌گیری، الزاماً آزمودن نیست</b>.</div>
+<div class="fa"><b>چرا؟</b> چون اندازه‌گیری از آزمودن <b>گسترده‌تره</b> و آزمودن یه <b>نوع خاصی</b> از اندازه‌گیریه.</div>
+<div class="fa"><b>مثال:</b> معلمی که با <b>مشاهده</b> و شمردن تعداد دفعاتی که یه دانش‌آموز هم‌کلاسی‌اش رو آزار می‌ده، رفتار پرخاشگرانه‌اش رو اندازه‌گیری می‌کنه. اینجا اندازه‌گیری هست، ولی آزمونی در کار نیست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آزمودن = نوع خاصی از اندازه‌گیری + فقط کمّی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سنجش</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف نیکو (۲۰۰۱):</b> «سنجش یه اصطلاح کلیه و به‌صورت <b>فرآیندی</b> تعریف می‌شه که برای <b>گردآوری اطلاعات</b> مورد نیاز <b>تصمیم‌گیری</b> درباره دانش‌آموزان، برنامه‌های درسی و سیاست‌های آموزشی استفاده می‌شه.»</div>
+<div class="fa"><b>تعریف اگن و کاوچاک (۲۰۰۱) — سنجش کلاسی:</b> «تمامی فرآیندهای مورد نیاز برای تصمیم‌گیری درباره یادگیری دانش‌آموزان.»</div>
+<div class="fa"><b>وسایل و فنون سنجش:</b></div>
+<div class="fa">• آزمون • پرسشنامه • مقیاس درجه‌بندی • فهرست وارسی (چک‌لیست) • کار آزمایشگاهی • پروژه تحقیقی • امتحان شفاهی • تکلیف درسی • مصاحبه • مشاهده عملکرد و رفتار</div>
+<div class="fa"><b>ویژگی مهم:</b> سنجش هم می‌تونه توسط <b>معلم کلاسی</b> طراحی بشه، هم توسط مؤسسه‌های آموزشی، ادارات محلی، ایالتی و ملی.</div>
+<div class="fa"><b>امروزه:</b> سنجش از سؤال‌های مداد و کاغذی خیلی فراتر رفته و شامل <b>مشاهده عملکرد، ایجاد کارپوشه (پورتفولیو) و کارهای دست‌ساز یادگیرندگان</b> هم می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سنجش = گسترده‌تر از اندازه‌گیری و آزمودن + کمّی و کیفی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ارزشیابی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف جامع گی (۱۹۹۱):</b> «ارزشیابی یه فرآیند <b>نظام‌دار</b> برای <b>جمع‌آوری، تحلیل و تفسیر اطلاعات</b> گفته می‌شه، به این منظور که تعیین بشه آیا هدف‌های مورد نظر <b>تحقق یافته‌اند</b> یا در حال تحقق یافتن هستن و <b>به چه میزانی</b>.»</div>
+<div class="fa"><b>مفهوم کیفیت:</b> یکی از ویژگی‌های مهم ارزشیابی، <b>تعیین کیفیت</b>ه. تعریف کیفیت در ارزشیابی پیشرفت تحصیلی (نیکو، ۲۰۰۱): «دانش، مهارت‌ها و توانایی‌هایی که از دانش‌آموزان پس از آموزش انتظار می‌ره.»</div>
+<div class="fa"><b>مثال:</b> فرض کن دانش‌آموزی رو در <b>توانایی نوشتن</b> نسبت به پایه‌ی تحصیلی‌اش، <b>بسیار خوب</b> ارزشیابی کرده‌ای. مجموعه نوشته‌هاش رو مرور کردی، با هم‌کلاسی‌هاش مقایسه کردی (تعیین کیفیت)، داوری‌ات به این نتیجه رسیده که کیفیت خوبی دارن، پس توصیه کردی در یه مسابقه‌ی ملی مقاله‌نویسی شرکت کنه. این یعنی ارزشیابی، <b>مبنای تصمیم‌گیری</b>ه.</div>
+<div class="fa"><b>حوزه‌های ارزشیابی آموزشی:</b></div>
+<div class="fa">• ارزشیابی پیشرفت تحصیلی</div>
+<div class="fa">• عملکرد معلمان و مدیران</div>
+<div class="fa">• روش‌های آموزشی • برنامه‌های درسی • دوره‌های آموزشی • مواد آموزشی • پروژه‌های آموزشی • گروه‌های آموزشی • سازمان‌های آموزشی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پژوهش ارزشیابی</h3></div>
+<div class="fa"><b>تعریف روسی (۱۹۸۲):</b> «ارزشیابی‌ای که بر پایه <b>شواهد تجربی</b> جمع‌آوری‌شده، به راه‌هایی که <b>قابل تکرار</b> باشن استواره و در اون مسائل مربوط به <b>روایی درونی، روایی بیرونی و روایی سازه</b> منظور می‌شه، <b>پژوهش ارزشیابی</b> نام داره.»</div>
+<div class="fa"><b>به زبان ساده:</b> پژوهش ارزشیابی = <b>کاربرد روش‌های پژوهش در مسائل ارزشیابی</b>.</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>آزمون vs پرسشنامه</h3></div>
+<table class="compare">
+<thead><tr><th>آزمون</th><th>پرسشنامه</th></tr></thead>
+<tbody>
+<tr><td>اندازه‌گیری عملکرد بیشینه</td><td>اندازه‌گیری عملکرد نوعی</td></tr>
+<tr><td>توانایی‌ها را می‌سنجد</td><td>ویژگی‌های غیرتوانایی را می‌سنجد</td></tr>
+<tr><td>مثال: هوش، استعداد</td><td>مثال: شخصیت، نگرش</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آزمون = توانایی / پرسشنامه = غیرتوانایی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اندازه‌گیری vs آزمودن vs سنجش</h3></div>
+<table class="compare">
+<thead><tr><th>اصطلاح</th><th>ویژگی</th><th>جنبه</th></tr></thead>
+<tbody>
+<tr><td>آزمودن</td><td>نوعی اندازه‌گیری، فقط با آزمون یا پرسشنامه</td><td>فقط کمّی</td></tr>
+<tr><td>اندازه‌گیری</td><td>گسترده‌تر از آزمودن، می‌تونه بدون آزمون باشه</td><td>فقط کمّی</td></tr>
+<tr><td>سنجش</td><td>گسترده‌تر از هر دو، برای تصمیم‌گیری</td><td>کمّی + کیفی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> این سه تا رو با هم قاطی نکن! آزمودن محدودترین، سنجش گسترده‌ترین.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سنجش vs ارزشیابی (نظر آندرسون و بورک، ۲۰۰۱)</h3></div>
+<table class="compare">
+<thead><tr><th>سنجش</th><th>ارزشیابی</th></tr></thead>
+<tbody>
+<tr><td>جمع‌آوری اطلاعات</td><td>داوری درباره ارزش اطلاعات</td></tr>
+<tr><td>«از کدام ویژگی‌ها برخوردار است؟»</td><td>«آیا این ویژگی‌ها درست هستند؟»</td></tr>
+<tr><td>«مقدار ویژگی چقدر است؟»</td><td>«آیا این مقدار کافی است؟»</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اندازه‌گیری مستقیم vs غیرمستقیم</h3></div>
+<table class="compare">
+<thead><tr><th>مستقیم</th><th>غیرمستقیم</th></tr></thead>
+<tbody>
+<tr><td>ویژگی‌های فیزیکی و رفتار آشکار</td><td>ویژگی‌های روانی</td></tr>
+<tr><td>مثال: قد، وزن، حل مسئله ریاضی</td><td>مثال: هوش، خلاقیت، انگیزش</td></tr>
+<tr><td>دسترسی مستقیم داریم</td><td>دسترسی مستقیم نداریم</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پژوهش آموزشی vs ارزشیابی آموزشی</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>پژوهش آموزشی</th><th>ارزشیابی آموزشی</th></tr></thead>
+<tbody>
+<tr><td>هدف</td><td>درک پدیده‌ها</td><td>تصمیم‌گیری</td></tr>
+<tr><td>تعمیم‌پذیری</td><td>بسیار مهم</td><td>نقشی ندارد</td></tr>
+<tr><td>ارزش‌داوری</td><td>خالی از ارزش</td><td>با ارزش سر و کار دارد</td></tr>
+<tr><td>رابطه با نظریه</td><td>وابسته به نظریه</td><td>الزاماً نظری نیست</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>شباهت:</b> هر دو نظام‌دارند + جزو فعالیت‌های علمی‌اند + از ابزارها و روش‌های مشابه استفاده می‌کنند.
+</div>
+</div>
+</section>
+
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان و تعریف‌هایشان</h2>
+<p class="section-sub">هر کی چی گفته + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>گی (۱۹۹۱)</h3></div>
+<div class="fa"><b>تعریف اندازه‌گیری:</b> «اندازه‌گیری فرآیندی است که تعیین می‌کند یک شخص یا یک شیء چه مقدار از یک ویژگی برخوردار است.»</div>
+<div class="fa"><b>تعریف ارزشیابی:</b> «ارزشیابی یه فرآیند نظام‌دار برای جمع‌آوری، تحلیل و تفسیر اطلاعاته، به این منظور که تعیین بشه آیا هدف‌های مورد نظر تحقق یافته‌اند یا در حال تحقق یافتن هستند و به چه میزانی.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گی هم اندازه‌گیری رو تعریف کرده هم ارزشیابی رو.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نیکو (۲۰۰۱)</h3></div>
+<div class="fa"><b>تعریف اندازه‌گیری آموزشی:</b> «نسبت دادن یه عدد (که معمولاً بهش نمره می‌گن) به یه صفت یا ویژگی معین یه شخص، طوری که اون عدد نشون‌دهنده‌ی درجه‌ای از اون صفت باشه.»</div>
+<div class="fa"><b>تعریف سنجش:</b> «سنجش یه اصطلاح کلیه و به‌صورت فرآیندی تعریف می‌شه که برای گردآوری اطلاعات مورد نیاز تصمیم‌گیری درباره دانش‌آموزان، برنامه‌های درسی و سیاست‌های آموزشی استفاده می‌شه.»</div>
+<div class="fa"><b>تعریف کیفیت:</b> «دانش، مهارت‌ها و توانایی‌هایی که از دانش‌آموزان پس از آموزش انتظار می‌ره.»</div>
+<div class="fa"><b>نظر مهم نیکو درباره ارزشیابی:</b> «شما می‌تونید دانش‌آموزان رو براساس سنجش حاصل از مشاهدات نظام‌دار و توصیف‌های کیفی ارزشیابی کنید، بدون اینکه به اندازه‌گیری اقدام کنید. در همه ارزشیابی‌ها، میزانی از ذهنیت، ناهمخوانی و سوگیری وجود داره. آزمودن و اندازه‌گیری، چون از سایر روش‌های سنجش عینی‌ترند، پاره‌ای از ناهمخوانی‌ها و ذهنیت‌ها رو کاهش می‌دن.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نیکو سه تعریف مهم داره: اندازه‌گیری آموزشی + سنجش + کیفیت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نانالی (۱۹۷۸)</h3></div>
+<div class="fa"><b>تعریف اندازه‌گیری:</b> «اندازه‌گیری دربرگیرنده قواعدیه برای نسبت دادن اعداد به اشیاء یا افراد، طوری که صفت‌هایی از اون‌ها رو به‌صورت کمیت نشون بده.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> تعریف نانالی رو با گی قاطی نکن! نانالی روی «قاعده» تأکید داره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گرانالند و لیس (۱۹۹۰)</h3></div>
+<div class="fa"><b>تعریف آزمون:</b> «آزمون وسیله یا روشی نظام‌دار (یا نظام‌مند) برای اندازه‌گیری نمونه‌ای از رفتار است.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تعریف آزمون = نظام‌دار + نمونه‌ای از رفتار.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اگن و کاوچاک (۲۰۰۱)</h3></div>
+<div class="fa"><b>تعریف سنجش کلاسی:</b> «تمامی فرآیندهای مورد نیاز برای تصمیم‌گیری درباره یادگیری دانش‌آموزان.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سانتروک (۲۰۰۱)</h3></div>
+<div class="fa"><b>نظر:</b> «مشاهدات غیررسمی می‌تونه درباره میزان انگیزش دانش‌آموزان نسبت به یادگیری موضوع‌های درسی اطلاعات مفیدی بده. همچنین اگه رابطه‌ی خوبی با دانش‌آموزانت داشته باشی، پرسش‌های مستقیم از اون‌ها توی یه گفتگوی خصوصی، تو رو از نگرش اون‌ها نسبت به درس و مدرسه آگاه می‌کنه.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وولفلک (۲۰۰۴)</h3></div>
+<div class="fa"><b>نظر:</b> «سنجش اصطلاح کلی‌تری از آزمودن و اندازه‌گیریه، چون سنجش شامل همه‌ی راه‌های نمونه‌گیری و مشاهده مهارت‌ها، دانش و توانایی‌های دانش‌آموزانه.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> وولفلک = سنجش کلی‌تر از آزمودن و اندازه‌گیری.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آنز (۱۹۹۴)</h3></div>
+<div class="fa"><b>نظر:</b> «اصطلاح سنجش معمولاً به مجموعه‌ی کاملی از اطلاعات که توسط معلمان درباره دانش‌آموزان و پیشرفتشان جمع‌آوری و دسته‌بندی می‌شن اشاره می‌کنه. اطلاعات رو می‌شه به‌طور غیررسمی (مشاهده یا سؤال کلامی) یا رسمی (تکالیف، آزمون‌ها، گزارش‌های کتبی) به دست آورد. حتی اطلاعات مربوط به کلاس‌های درس و آموزش معلمان هم می‌تونه بخشی از سنجش باشه.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آندرسون و بورک (۲۰۰۱)</h3></div>
+<div class="fa"><b>نظر درباره تفاوت سنجش و ارزشیابی:</b></div>
+<div class="fa">• سنجش = جمع‌آوری اطلاعات درباره ویژگی‌های عاطفی</div>
+<div class="fa">• ارزشیابی = داوری یا قضاوت درباره ارزش آن ویژگی</div>
+<div class="fa"><b>مثال:</b> سنجش می‌گه «ارزش‌های آموزشی این معلم کدام‌اند؟» / ارزشیابی می‌گه «آیا ارزش‌های آموزشی این معلم درست هستند؟»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ورنتن و سندرز (۱۹۸۷)</h3></div>
+<div class="fa"><b>نظر:</b> «اگه شخص شاهد آزمون‌هایی که به دانش‌آموزان داده می‌شه باشه یا ببینه که چطور داده‌های مربوط به زمان صرف‌شده در تکلیف در کلاس جمع‌آوری می‌شن، به سختی می‌تونه بگه که این فعالیت مربوط به یه کار پژوهشی‌ه یا یه کار ارزشیابی.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>یوفام (۱۹۷۵)</h3></div>
+<div class="fa"><b>نظر درباره ارزشیابی آموزشی:</b> «بر موقعیت موجود و تصمیماتی که درباره اون می‌شه گرفت تأکید می‌شه.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پین (۱۹۹۴)</h3></div>
+<div class="fa"><b>نظر درباره رابطه پژوهش و نظریه:</b> «پژوهش وابسته به نظریه‌ست اما ارزشیابی الزاماً مبنای نظری نداره.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پین = پژوهش وابسته به نظریه / ارزشیابی الزاماً نظری نیست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روسی (۱۹۸۲)</h3></div>
+<div class="fa"><b>تعریف پژوهش ارزشیابی:</b> «ارزشیابی‌ای که بر پایه شواهد تجربی جمع‌آوری‌شده، به راه‌هایی که قابل تکرار باشن استواره و در اون مسائل مربوط به روایی درونی، روایی بیرونی و روایی سازه منظور می‌شه، پژوهش ارزشیابی نام داره.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مک بیت و مک گلین (۲۰۰۱)</h3></div>
+<div class="fa"><b>نظر درباره ارزشیابی از آموزشگاه:</b> «ارزشیابی از آموزشگاه باید نشون بده که یادگیری چطور در اون اتفاق می‌افته و چطور می‌تونه در این جهت بهبود پیدا کنه. این ارزشیابی باید مسائل مهمی مثل مشورت و تصمیم‌گیری رو که می‌تونه بر اخلاقیات کارکنان آموزشی تأثیر بذاره در نظر بگیره. این ارزشیابی باید امیدها و آرزوهای شاگردان و رضایت اون‌ها از چگونگی برآورده شدن اون امیدها و آرزوها رو نشون بده.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کوهن و سوردلیک (۲۰۰۲)</h3></div>
+<div class="fa"><b>تعریف قواعد اندازه‌گیری:</b> «خط‌مشی‌هایی هستند برای نشون دادن مقدار (یا نوعی ویژگی دیگر) شیء مورد اندازه‌گیری.»</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: گستردگی اصطلاحات</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی همه‌ی این اصطلاحات هم‌معنی‌اند.</div>
+<div class="fa"><b>جواب درست:</b> از کم به زیاد: آزمودن ← اندازه‌گیری ← سنجش ← ارزشیابی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هر کدوم از قبلی گسترده‌تره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: آزمون و پرسشنامه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی آزمون و پرسشنامه یکی هستند.</div>
+<div class="fa"><b>جواب درست:</b> آزمون = توانایی / پرسشنامه = غیرتوانایی (شخصیت)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فرقشون در نوع ویژگی مورد اندازه‌گیریه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: آزمودن و اندازه‌گیری</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر اندازه‌گیری، آزمودنه.</div>
+<div class="fa"><b>جواب درست:</b> نه! اندازه‌گیری می‌تونه بدون آزمون هم انجام بشه (مثل مشاهده).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آزمودن = نوع خاصی از اندازه‌گیری.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: کمّی یا کیفی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی سنجش هم فقط کمّیه.</div>
+<div class="fa"><b>جواب درست:</b> سنجش هم کمّی و هم کیفی داره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اندازه‌گیری و آزمودن = فقط کمّی / سنجش = کمّی + کیفی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: تعمیم‌پذیری در ارزشیابی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تعمیم‌پذیری در ارزشیابی هم مهمه.</div>
+<div class="fa"><b>جواب درست:</b> تعمیم‌پذیری فقط در پژوهش مهمه، نه ارزشیابی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ارزشیابی روی یه موقعیت ویژه متمرکزه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: ارزش‌داوری در پژوهش</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی پژوهش هم ارزش‌داوری می‌کنه.</div>
+<div class="fa"><b>جواب درست:</b> پژوهش خالی از ارزشه؛ فقط ارزشیابی ارزش‌داوری می‌کنه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پژوهشگر دنبال حقایق علمیه، نه خوبی/بدی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: تعریف گی و نیکو</h3>
+<div class="fa"><b>دام چیه:</b> تعریف نیکو رو با تعریف گی قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> گی (۱۹۹۱) = «فرآیندی که تعیین می‌کند چه مقدار از یک ویژگی» / نیکو (۲۰۰۱) = «نسبت دادن عدد (نمره) به صفت»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اسم و سال هر تعریف رو به خاطر بسپار.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل اول — سنجش و اندازه‌گیری در مشاوره</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · سنجش و اندازه‌گیری در مشاوره · فصل اول: تعریف اصطلاحات</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"اندازه‌گیری طبق تعریف گی (۱۹۹۱) چیست؟",options:["نسبت دادن عدد به صفت","فرآیندی که تعیین می‌کند یک شخص یا شیء چه مقدار از یک ویژگی برخوردار است","جمع‌آوری اطلاعات","داوری ارزشی"],answer:1,explanation:"تعریف گی = فرآیندی که تعیین می‌کند چه مقدار از یک ویژگی."},
+{q:"کدام ویژگی به‌طور مستقیم اندازه‌گیری می‌شود؟",options:["هوش","خلاقیت","قد و وزن","انگیزش"],answer:2,explanation:"قد و وزن ویژگی فیزیکی هستند و مستقیم اندازه‌گیری می‌شوند."},
+{q:"ویژگی‌های روانی چگونه اندازه‌گیری می‌شوند؟",options:["مستقیم","غیرمستقیم","نیازی به اندازه‌گیری ندارند","فقط با مشاهده"],answer:1,explanation:"ویژگی‌های روانی به‌طور غیرمستقیم اندازه‌گیری می‌شوند."},
+{q:"معمول‌ترین وسیله اندازه‌گیری ویژگی‌های روانی چیست؟",options:["مشاهده","مصاحبه","آزمودن","پرسشنامه شفاهی"],answer:2,explanation:"معمول‌ترین وسیله = آزمودن."},
+{q:"آزمون طبق تعریف گرانالند و لیس چیست؟",options:["مجموعه‌ای از سؤال","وسیله یا روشی نظام‌دار برای اندازه‌گیری نمونه‌ای از رفتار","ابزار شخصیت‌سنجی","روش مشاهده"],answer:1,explanation:"آزمون = وسیله نظام‌دار برای اندازه‌گیری نمونه‌ای از رفتار."},
+{q:"تفاوت اصلی آزمون و پرسشنامه چیست؟",options:["آزمون برای توانایی، پرسشنامه برای غیرتوانایی","آزمون کتبی، پرسشنامه شفاهی","آزمون سخت‌تر است","هیچ فرقی ندارند"],answer:0,explanation:"آزمون = توانایی / پرسشنامه = غیرتوانایی (شخصیت)."},
+{q:"کدام گزینه درست است؟",options:["هر اندازه‌گیری، آزمودن است","هر آزمودن، اندازه‌گیری است","آزمودن گسترده‌تر از اندازه‌گیری است","این دو یکی هستند"],answer:1,explanation:"هر آزمودن، نوعی اندازه‌گیری است اما برعکسش درست نیست."},
+{q:"کدام اصطلاح گسترده‌ترین مفهوم را دارد؟",options:["آزمودن","اندازه‌گیری","سنجش","ارزشیابی"],answer:3,explanation:"ارزشیابی گسترده‌ترین اصطلاح است."},
+{q:"کدام اصطلاح محدودترین مفهوم را دارد؟",options:["ارزشیابی","سنجش","اندازه‌گیری","آزمودن"],answer:3,explanation:"آزمودن محدودترین اصطلاح است."},
+{q:"سنجش طبق تعریف نیکو (۲۰۰۱) چیست؟",options:["نسبت دادن عدد","فرآیندی برای گردآوری اطلاعات مورد نیاز تصمیم‌گیری","داوری ارزشی","پژوهش آموزشی"],answer:1,explanation:"سنجش = فرآیند گردآوری اطلاعات برای تصمیم‌گیری."},
+{q:"سنجش با کدام جنبه سر و کار دارد؟",options:["فقط کمّی","فقط کیفی","کمّی و کیفی","هیچ‌کدام"],answer:2,explanation:"سنجش هم کمّی و هم کیفی است."},
+{q:"اندازه‌گیری و آزمودن با کدام جنبه سر و کار دارند؟",options:["فقط کمّی","فقط کیفی","کمّی و کیفی","هیچ‌کدام"],answer:0,explanation:"اندازه‌گیری و آزمودن فقط کمّی هستند."},
+{q:"ارزشیابی طبق تعریف گی (۱۹۹۱) چیست؟",options:["نسبت دادن عدد","فرآیند نظام‌دار برای جمع‌آوری، تحلیل و تفسیر اطلاعات","سنجش شخصیت","پژوهش"],answer:1,explanation:"ارزشیابی = فرآیند نظام‌دار برای جمع‌آوری، تحلیل و تفسیر اطلاعات."},
+{q:"مفهوم کیفیت در ارزشیابی یعنی چه؟",options:["تعداد سؤال","دانش، مهارت‌ها و توانایی‌هایی که از دانش‌آموزان پس از آموزش انتظار می‌رود","سرعت پاسخگویی","نمره عددی"],answer:1,explanation:"کیفیت = دانش، مهارت‌ها و توانایی‌های مورد انتظار."},
+{q:"کدام گزینه جزو حوزه‌های ارزشیابی آموزشی نیست؟",options:["عملکرد معلمان","برنامه‌های درسی","مواد آموزشی","دمای هوا کلاس"],answer:3,explanation:"دمای هوا جزو حوزه‌های ارزشیابی آموزشی نیست."},
+{q:"نظر آندرسون و بورک درباره تفاوت سنجش و ارزشیابی چیست؟",options:["سنجش = جمع‌آوری اطلاعات / ارزشیابی = داوری ارزش","سنجش = داوری / ارزشیابی = جمع‌آوری","هر دو یکی هستند","هیچ فرقی ندارند"],answer:0,explanation:"سنجش = جمع‌آوری اطلاعات / ارزشیابی = داوری درباره ارزش."},
+{q:"هدف اصلی ارزشیابی چیست؟",options:["درک پدیده‌ها","تصمیم‌گیری","تولید دانش","تعمیم نتایج"],answer:1,explanation:"هدف ارزشیابی = تصمیم‌گیری."},
+{q:"هدف اصلی پژوهش چیست؟",options:["تصمیم‌گیری","حل مشکل عملی","درک پدیده‌ها برای شناسایی بهتر آن‌ها","داوری ارزشی"],answer:2,explanation:"هدف پژوهش = درک پدیده‌ها."},
+{q:"تعمیم‌پذیری در کدام یک اهمیت دارد؟",options:["ارزشیابی","پژوهش","سنجش","آزمودن"],answer:1,explanation:"تعمیم‌پذیری در پژوهش مهم است."},
+{q:"کدام‌یک خالی از ارزش است؟",options:["ارزشیابی","پژوهش","سنجش","آزمودن"],answer:1,explanation:"پژوهش خالی از ارزش است."},
+{q:"نظر پین (۱۹۹۴) درباره رابطه پژوهش و نظریه چیست؟",options:["هر دو وابسته به نظریه‌اند","پژوهش وابسته به نظریه، ارزشیابی الزاماً نظری نیست","هیچ‌کدام وابسته نیستند","ارزشیابی وابسته، پژوهش نیست"],answer:1,explanation:"پژوهش وابسته به نظریه، ارزشیابی الزاماً نظری نیست."},
+{q:"پژوهش ارزشیابی طبق تعریف روسی (۱۹۸۲) چیست؟",options:["مشاهده ساده","ارزشیابی مبتنی بر شواهد تجربی قابل تکرار","پرسشنامه","آزمون"],answer:1,explanation:"پژوهش ارزشیابی = ارزشیابی مبتنی بر شواهد تجربی قابل تکرار."},
+{q:"کدام گزینه جزء وسایل سنجش نیست؟",options:["آزمون","پرسشنامه","مشاهده","فقط خواب"],answer:3,explanation:"خواب وسیله سنجش نیست."},
+{q:"در کدام رشته سنجش بیشتر به کار می‌رود؟",options:["ریاضی","روان‌شناسی بالینی و آموزش و پرورش","فیزیک","شیمی"],answer:1,explanation:"سنجش بیشتر در روان‌شناسی بالینی و آموزش و پرورش."},
+{q:"نظر وولفلک (۲۰۰۴) درباره سنجش چیست؟",options:["سنجش محدودتر از آزمودن","سنجش اصطلاح کلی‌تر از آزمودن و اندازه‌گیری","سنجش = آزمودن","سنجش = ارزشیابی"],answer:1,explanation:"سنجش کلی‌تر از آزمودن و اندازه‌گیری است."},
+{q:"کدام یک از فعالیت‌های زیر معرف سنجش مستقیم است؟",options:["اجرای پرسشنامه اضطراب","تعیین رفتار پرخاشگرانه از راه مشاهده","اجرای آزمون هوش","اجرای آزمون ریاضی"],answer:1,explanation:"تعیین رفتار پرخاشگرانه از راه مشاهده = سنجش مستقیم."},
+{q:"کدام مورد درست است؟",options:["اندازه‌گیری و آزمودن دو اصطلاح معادل هستند","اندازه‌گیری و آزمودن بخشی از سنجش یادگیری هستند","سنجش زیرمجموعه اندازه‌گیری است","سنجش نوعی اندازه‌گیری بدون آزمون است"],answer:1,explanation:"اندازه‌گیری و آزمودن بخشی از سنجش یادگیری هستند."},
+{q:"کدام اصطلاح معنای محدودتری دارد؟",options:["اندازه‌گیری","سنجش","آزمودن","ارزشیابی"],answer:2,explanation:"آزمودن محدودترین معنای اصطلاحی را دارد."},
+{q:"پژوهش آموزشی و ارزشیابی آموزشی در چه چیزی شبیه هم هستند؟",options:["تعمیم نتایج","درک روابط بین امور","ارزش داوری","روش‌های بررسی تجربی"],answer:3,explanation:"هر دو از روش‌های بررسی تجربی استفاده می‌کنند."},
+{q:"کدام مورد یا موارد زیر ابزار کمّی اندازه‌گیری در روان‌شناسی و علوم تربیتی است؟",options:["آزمون","پرسشنامه","مصاحبه","مشاهده","الف و ب"],answer:4,explanation:"آزمون و پرسشنامه ابزارهای کمّی هستند."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

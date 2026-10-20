@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · معارف اسلامی · سری 05</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"05";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>معارف اسلامی · سری 05</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی معارف اسلامی · سری 05</h2>
+  <p>تحلیل کامل ۲۰ سوال با پاسخنامه تشریحی، تعریف ساده مفاهیم و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">۲۰ سوال</span><span class="pill">۵ دسته موضوعی</span><span class="pill">۱۲+ مفهوم کلیدی</span><span class="pill">۵ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد معارف اسلامی طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۲۰</b><span>سوال</span></div>
+<div class="stat"><b>۵</b><span>دسته موضوعی</span></div>
+<div class="stat"><b>۱۲+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۵</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">۰۱ · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، شخصیت‌ها...">
+
+<div id="questionList">
+
+<div class="card question" data-search="برزخ اولین بار قرآن">
+<span class="qnum">سوال ۱</span>
+<div class="fa"><b>متن سوال:</b> کلمه «برزخ» اولین بار در کجا به کار رفته است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">قرآن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کلمه «برزخ» اولین بار در قرآن کریم به کار رفته است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- صحیفه سجادیه: بعد از قرآن است.<br>
+- نهج البلاغه: بعد از قرآن است.<br>
+- روایات: بعد از قرآن هستند.<br>
+<b>نکته کلیدی:</b> برزخ = اولین بار در قرآن
+</div>
+</div>
+
+<div class="card question" data-search="تئوری روانشناسی مکتب ماتریالیسم">
+<span class="qnum">سوال ۲</span>
+<div class="fa"><b>متن سوال:</b> غالب تئوری‌ها و نظرات در عرصه روانشناسی، مبتنی بر چه نوع مکتبی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ماتریالیسم</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> غالب تئوری‌های روانشناسی مبتنی بر ماتریالیسم (ماده‌گرایی) هستند؛ یعنی فقط به بعد مادی انسان توجه دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اومانیسم: انسان‌محوری است.<br>
+- اگزیستانسیالیسم: اصالت وجود است.<br>
+- رئالیسم: واقع‌گرایی است.<br>
+<b>نکته کلیدی:</b> روانشناسی غربی = ماتریالیسم
+</div>
+</div>
+
+<div class="card question" data-search="قبر منابع دینی قبر مادی افکار اعمال">
+<span class="qnum">سوال ۳</span>
+<div class="fa"><b>متن سوال:</b> منظور از قبر در منابع دینی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هم قبر مادی و هم قبر افکار و اعمال مدنظر است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در منابع دینی، قبر هم به معنای قبر مادی است و هم به معنای قبر افکار و اعمال.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- فقط افکار: ناقص است.<br>
+- حالات قیامتی: مربوط به قیامت است.<br>
+- فقط قبر مادی: ناقص است.<br>
+<b>نکته کلیدی:</b> قبر = مادی + افکار و اعمال
+</div>
+</div>
+
+<div class="card question" data-search="نظم برهان نظم تکوینی حقیقی">
+<span class="qnum">سوال ۴</span>
+<div class="fa"><b>متن سوال:</b> مقصود از نظم در مجموعه منظم (در برهان نظم)، چه نوع نظمی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نظم تکوینی و حقیقی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در برهان نظم، مقصود نظم تکوینی و حقیقی است؛ یعنی نظمی که در ذات و ساختار موجودات وجود دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نظم مصنوعی: ساختگی است.<br>
+- هر نوع نظم: کلی است.<br>
+- نظم ساختگی: نادرست است.<br>
+<b>نکته کلیدی:</b> برهان نظم = نظم تکوینی و حقیقی
+</div>
+</div>
+
+<div class="card question" data-search="دوره قرون وسطی تقدم ایمان عقل خدا محوری">
+<span class="qnum">سوال ۵</span>
+<div class="fa"><b>متن سوال:</b> کدام دوره تاریخی دوره تقدم ایمان بر عقل و خدا محوری است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دوره قرون وسطی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در قرون وسطی، ایمان بر عقل تقدم داشت و خدا محوری حاکم بود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- دوره معاصر: عقل محوری است.<br>
+- دوره یونان باستان: عقل محوری بود.<br>
+- دوره قدیم: عقل و ایمان متعادل‌تر بودند.<br>
+<b>نکته کلیدی:</b> قرون وسطی = ایمان بر عقل + خدا محوری
+</div>
+</div>
+
+<div class="card question" data-search="مغر عبادت اعتقادات">
+<span class="qnum">سوال ۶</span>
+<div class="fa"><b>متن سوال:</b> بر اساس روایات، «مغر» عبادت چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اعتقادات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بر اساس روایات، «مغر» (مغز و اساس) عبادت، اعتقادات است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- دعا: بخشی از عبادت است.<br>
+- اخلاق: بخشی از عبادت است.<br>
+- احکام: بخشی از عبادت است.<br>
+<b>نکته کلیدی:</b> مغر عبادت = اعتقادات
+</div>
+</div>
+
+<div class="card question" data-search="بهشت لغت عبری">
+<span class="qnum">سوال ۷</span>
+<div class="fa"><b>متن سوال:</b> «بهشت» چه نوع لغتی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عبری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کلمه «بهشت» ریشه عبری دارد و به معنای باغ است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عربی: بهشت معرب است.<br>
+- اوستایی: نادرست است.<br>
+- رومی: نادرست است.<br>
+<b>نکته کلیدی:</b> بهشت = لغت عبری
+</div>
+</div>
+
+<div class="card question" data-search="ممکن محتاج علت بدیهی عقلی">
+<span class="qnum">سوال ۸</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه در مورد این سخن: «ممکن، محتاج علت است» صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بی‌نیاز از برهان است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> قضیه «ممکن محتاج علت است» از بدیهیات عقلی است و نیازی به برهان ندارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نیازمند برهان: نادرست است.<br>
+- غیر بدیهی: نادرست است.<br>
+- ممکن علت است: نادرست است.<br>
+<b>نکته کلیدی:</b> «ممکن محتاج علت است» = بدیهی عقلی
+</div>
+</div>
+
+<div class="card question" data-search="حیات معقول مرحله اختیار آزادی رهایی">
+<span class="qnum">سوال ۹</span>
+<div class="fa"><b>متن سوال:</b> در کدام مرحله از مراحل رسیدن به حیات معقول، «علاوه بر رهایی از قیدوبندها، می‌توان بین دو یا چندین راه یکی را برگزید»؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مرحله اختیار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مرحله اختیار یعنی هم رهایی از قیدوبندها و هم توانایی انتخاب بین چند راه.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مرحله آزادی: فقط رهایی است.<br>
+- مرحله رهایی: فقط رهایی است.<br>
+- مرحله انسانیت: کلی است.<br>
+<b>نکته کلیدی:</b> رهایی + انتخاب = مرحله اختیار
+</div>
+</div>
+
+<div class="card question" data-search="معاد ادیان آسمانی عنصر معاد">
+<span class="qnum">سوال ۱۰</span>
+<div class="fa"><b>متن سوال:</b> کدام عبارت در مورد «معاد» صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ادیان آسمانی دارای عنصر معاد هستند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه ادیان آسمانی (الهی) دارای عنصر معاد هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- همه ادیان: ادیان بشری ممکن است معاد نداشته باشند.<br>
+- هیچ دینی: نادرست است.<br>
+- ادیان بشری: ممکن است معاد نداشته باشند.<br>
+<b>نکته کلیدی:</b> معاد = ادیان آسمانی
+</div>
+</div>
+
+<div class="card question" data-search="وجوب نماز روزه قدر تشریعی قضای تشریعی">
+<span class="qnum">سوال ۱۱</span>
+<div class="fa"><b>متن سوال:</b> «وجوب نماز و روزه و ......» مربوط به کدام مورد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">قضای تشریعی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> وجوب نماز و روزه از احکام شرعی هستند که در قضای تشریعی قرار می‌گیرند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- قدر تشریعی: مربوط به اندازه‌ها است.<br>
+- قضای تکوینی: مربوط به قوانین طبیعی است.<br>
+- قدر تکوینی: مربوط به اندازه‌های طبیعی است.<br>
+<b>نکته کلیدی:</b> احکام شرعی = قضای تشریعی
+</div>
+</div>
+
+<div class="card question" data-search="ادله نقلی تجرد نفس آیات روایات">
+<span class="qnum">سوال ۱۲</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه، «ادله نقلی تجرد نفس» را نشان می‌دهد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">آیات و روایات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ادله نقلی یعنی ادله‌ای که از قرآن (آیات) و روایات گرفته شده‌اند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عقل و روایات: عقل، دلیل عقلی است نه نقلی.<br>
+- روایات و ادراکات کلی: ادراکات کلی، عقلی است.<br>
+- آیات و عقل: عقل، دلیل عقلی است.<br>
+<b>نکته کلیدی:</b> ادله نقلی = آیات + روایات
+</div>
+</div>
+
+<div class="card question" data-search="ویژگی فطرت تبدیل ناپذیر">
+<span class="qnum">سوال ۱۳</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه از ویژگی‌های فطرت است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">امری تبدیل ناپذیر است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فطرت امری ثابت و تبدیل‌ناپذیر است؛ یعنی در همه انسان‌ها مشترک و تغییرناپذیر است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- قابل تغییر: نادرست است.<br>
+- همان غریزه: فطرت با غریزه فرق دارد.<br>
+- امری اعتباری: نادرست است.<br>
+<b>نکته کلیدی:</b> فطرت = تبدیل‌ناپذیر
+</div>
+</div>
+
+<div class="card question" data-search="امر بین الامرین استناد افعال انسان خدا">
+<span class="qnum">سوال ۱۴</span>
+<div class="fa"><b>متن سوال:</b> کدام عبارت در مورد دیدگاه «امر بین الامرین» صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">استناد افعال انسان هم به خودش و هم به خدا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> امر بین الامرین یعنی نه جبر و نه تفویض؛ بلکه افعال انسان هم به خودش و هم به خدا استناد دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مخالف اراده: نادرست است.<br>
+- موافق اراده صد در صدی: مربوط به تفویض است.<br>
+- نه اراده انسان: مربوط به جبر است.<br>
+<b>نکته کلیدی:</b> امر بین الامرین = استناد به انسان و خدا
+</div>
+</div>
+
+<div class="card question" data-search="ایمان معنای اصطلاحی تصدیق قلبی اختیار">
+<span class="qnum">سوال ۱۵</span>
+<div class="fa"><b>متن سوال:</b> کدام عبارت، «معنای اصطلاحی ایمان» را نشان می‌دهد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">تصدیق قلبی و باطنی همراه با اختیار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ایمان در اصطلاح یعنی تصدیق قلبی و باطنی که همراه با اختیار و انتخاب است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بدون اختیار: نادرست است.<br>
+- تصدیق زبانی: ایمان فقط زبانی نیست.<br>
+- تصدیق ظاهری: نادرست است.<br>
+<b>نکته کلیدی:</b> ایمان = تصدیق قلبی + اختیار
+</div>
+</div>
+
+<div class="card question" data-search="بعد فطرت شعور باطنی معرفت شناسانه">
+<span class="qnum">سوال ۱۶</span>
+<div class="fa"><b>متن سوال:</b> کدام بعد از ابعاد فطرت را «شعور باطنی» می‌نامند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بعد معرفت‌شناسانه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بعد معرفت‌شناسانه فطرت را «شعور باطنی» می‌نامند؛ یعنی آگاهی درونی انسان از خدا.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- بعد عاطفی و گرایشی: مربوط به احساسات است.<br>
+- همه ابعاد: کلی است.<br>
+- بعد وجودی: مربوط به هستی است.<br>
+<b>نکته کلیدی:</b> شعور باطنی = بعد معرفت‌شناسانه
+</div>
+</div>
+
+<div class="card question" data-search="وجود برزخی عالم مادی غیر مادی">
+<span class="qnum">سوال ۱۷</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه در مورد «وجود برزخی» صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عالمی که ماده دارد اما برخی ویژگی‌های ماده را دارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عالم برزخ ماده دارد ولی نه ماده کامل؛ بلکه برخی ویژگی‌های ماده را دارد (مثل صورت بدون قوه).<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تماماً مادی: نادرست است.<br>
+- هیچ مادیتی ندارد: نادرست است.<br>
+- گاهی مادی گاهی غیرمادی: نادرست است.<br>
+<b>نکته کلیدی:</b> برزخ = ماده با برخی ویژگی‌ها
+</div>
+</div>
+
+<div class="card question" data-search="اتفاق نظر مسلمین معاد جسمانی روحانی">
+<span class="qnum">سوال ۱۸</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه مورد اتفاق نظر همه مسلمین و بلکه همه شرایع است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">معاد جسمانی و روحانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> همه مسلمین و شرایع اتفاق نظر دارند که معاد هم جسمانی است و هم روحانی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- معاد جسمانی: ناقص است.<br>
+- نه روحانی نه جسمانی: نادرست است.<br>
+- معاد روحانی: ناقص است.<br>
+<b>نکته کلیدی:</b> اتفاق نظر = معاد جسمانی و روحانی
+</div>
+</div>
+
+<div class="card question" data-search="غریزه مشترک حیوان انسان">
+<span class="qnum">سوال ۱۹</span>
+<div class="fa"><b>متن سوال:</b> کدام عبارت در مورد «غریزه» صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مشترک میان حیوان و انسان است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> غریزه در انسان و حیوان مشترک است؛ مثل غریزه گرسنگی و تشنگی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نه در انسان نه در حیوان: نادرست است.<br>
+- فقط مختص انسان: فطرت مختص انسان است.<br>
+- فقط مختص حیوان: نادرست است.<br>
+<b>نکته کلیدی:</b> غریزه = مشترک انسان و حیوان
+</div>
+</div>
+
+<div class="card question" data-search="عقل داور به حق ارسطو">
+<span class="qnum">سوال ۲۰</span>
+<div class="fa"><b>متن سوال:</b> عبارت «عقل داور به حق است» از کدام فیلسوف است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ارسطو</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عبارت «عقل داور به حق است» از ارسطو است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ابن سینا: فیلسوف مسلمان است.<br>
+- بیکن: فیلسوف تجربی است.<br>
+- هیوم: فیلسوف حسی است.<br>
+<b>نکته کلیدی:</b> «عقل داور به حق» = ارسطو
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۲ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>برزخ و معاد</h3></div>
+<div class="grid2">
+<div class="box"><h4>برزخ</h4>
+<div class="fa">اولین بار در قرآن + عالمی با برخی ویژگی‌های ماده</div>
+</div>
+<div class="box"><h4>معاد</h4>
+<div class="fa">ادیان آسمانی + جسمانی و روحانی</div>
+</div>
+<div class="box"><h4>قبر</h4>
+<div class="fa">قبر مادی + افکار و اعمال</div>
+</div>
+<div class="box"><h4>بهشت</h4>
+<div class="fa">لغت عبری</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خداشناسی و براهین</h3></div>
+<div class="grid2">
+<div class="box"><h4>برهان نظم</h4>
+<div class="fa">نظم تکوینی و حقیقی</div>
+</div>
+<div class="box"><h4>قرون وسطی</h4>
+<div class="fa">ایمان بر عقل + خدا محوری</div>
+</div>
+<div class="box"><h4>ممکن محتاج علت</h4>
+<div class="fa">بدیهی عقلی</div>
+</div>
+<div class="box"><h4>ارسطو</h4>
+<div class="fa">«عقل داور به حق است»</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضا و قدر</h3></div>
+<div class="fa"><b>قضای تشریعی:</b> وجوب نماز و روزه</div>
+<div class="fa"><b>امر بین الامرین:</b> استناد افعال به انسان و خدا</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فطرت و ایمان</h3></div>
+<div class="fa"><b>ویژگی فطرت:</b> تبدیل‌ناپذیر</div>
+<div class="fa"><b>شعور باطنی:</b> بعد معرفت‌شناسانه</div>
+<div class="fa"><b>ایمان اصطلاحی:</b> تصدیق قلبی + اختیار</div>
+<div class="fa"><b>غریزه:</b> مشترک انسان و حیوان</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نفس و تجرد</h3></div>
+<div class="fa"><b>ادله نقلی تجرد نفس:</b> آیات + روایات</div>
+<div class="fa"><b>روانشناسی غربی:</b> ماتریالیسم</div>
+<div class="fa"><b>حیات معقول:</b> مرحله اختیار (رهایی + انتخاب)</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">تعریف ساده و قابل فهم + نکته امتحانی برای هر مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>برزخ</h3></div>
+<div class="fa"><b>تعریف ساده:</b> عالمی بین دنیا و آخرت که اولین بار در قرآن ذکر شده و ماده دارد ولی نه ماده کامل.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برزخ = اولین بار در قرآن + ماده با برخی ویژگی‌ها
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ماتریالیسم</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی ماده‌گرایی؛ یعنی فقط به بعد مادی انسان و جهان توجه داره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روانشناسی غربی = ماتریالیسم
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قبر</h3></div>
+<div class="fa"><b>تعریف ساده:</b> در منابع دینی، قبر هم قبر مادی است و هم قبر افکار و اعمال.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قبر = مادی + افکار و اعمال
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>برهان نظم</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی از نظم موجود در جهان به وجود ناظم (خدا) پی می‌بریم.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برهان نظم = نظم تکوینی و حقیقی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مغر عبادت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی مغز و اساس عبادت که اعتقادات است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مغر عبادت = اعتقادات
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ممکن محتاج علت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی هر چیزی که ممکن‌الوجوده، برای وجودش نیاز به علت داره. این قضیه بدیهی عقلیه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> «ممکن محتاج علت» = بدیهی عقلی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حیات معقول</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی زندگی عقلانی که مراحلی داره: رهایی، اختیار، انسانیت.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> رهایی + انتخاب = مرحله اختیار
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضای تشریعی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی قوانین و دستورات دینی که خدا برای هدایت انسان وضع کرده (مثل وجوب نماز و روزه).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> احکام شرعی = قضای تشریعی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ادله نقلی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی ادله‌ای که از قرآن (آیات) و روایات گرفته شده‌اند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ادله نقلی = آیات + روایات
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فطرت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی سرشت و ذات انسان که ثابت و تبدیل‌ناپذیره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فطرت = تبدیل‌ناپذیر
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امر بین الامرین</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی نه جبر و نه تفویض؛ افعال انسان هم به خودش و هم به خدا استناد داره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امر بین الامرین = استناد به انسان و خدا
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ایمان</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی تصدیق قلبی و باطنی که همراه با اختیار و انتخابه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ایمان = تصدیق قلبی + اختیار
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شعور باطنی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی آگاهی درونی انسان از خدا که بعد معرفت‌شناسانه فطرت نام داره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شعور باطنی = بعد معرفت‌شناسانه
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>غریزه</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی تمایلاتی که در انسان و حیوان مشترکند (مثل گرسنگی).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> غریزه = مشترک انسان و حیوان
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معاد</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی بازگشت به آخرت که همه ادیان آسمانی دارای آن هستند و هم جسمانی و هم روحانی است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معاد = ادیان آسمانی + جسمانی و روحانی
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۴ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">تفاوت ساده و نکته امتحانی برای هر جفت مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>فطرت vs غریزه</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> فطرت = مختص انسان + تبدیل‌ناپذیر / غریزه = مشترک انسان و حیوان</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فطرت = انسان / غریزه = مشترک
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جبر vs تفویض vs امر بین الامرین</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> جبر = فقط خدا / تفویض = فقط انسان / امر بین الامرین = هر دو</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امر بین الامرین = استناد به انسان و خدا
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضای تشریعی vs قضای تکوینی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> تشریعی = قوانین دینی / تکوینی = قوانین طبیعی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تشریعی = احکام شرعی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ادله نقلی vs ادله عقلی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> نقلی = آیات و روایات / عقلی = استدلال عقلی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نقلی = آیات + روایات
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معاد جسمانی vs معاد روحانی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> جسمانی = فقط بدن / روحانی = فقط روح / هر دو = نظر اسلام</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معاد = جسمانی + روحانی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دوره قرون وسطی vs دوره معاصر</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> قرون وسطی = ایمان بر عقل + خدا محوری / معاصر = عقل محوری</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قرون وسطی = ایمان بر عقل
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۵ · شخصیت‌ها و نشانه‌های تشخیصی</h2>
+<p class="section-sub">هر شخصیت + نظر ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>ارسطو</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف یونانی</div>
+<div class="fa"><b>نظر ساده:</b> «عقل داور به حق است».</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ارسطو = عقل داور به حق
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ابن سینا</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف مسلمان</div>
+<div class="fa"><b>نظر ساده:</b> فیلسوف مشایی و صاحب برهان سینوی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ابن سینا = فیلسوف مشایی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بیکن</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف انگلیسی</div>
+<div class="fa"><b>نظر ساده:</b> بنیان‌گذار تجربه‌گرایی و روش استقراء.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بیکن = تجربه‌گرایی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هیوم</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف اسکاتلندی</div>
+<div class="fa"><b>نظر ساده:</b> مفاهیم عقلی چون غیرحسی هستند، فاقد اعتبارند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هیوم = مفاهیم عقلی بی‌اعتبار
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ماتریالیسم</h3></div>
+<div class="fa"><b>کی بود:</b> مکتب فکری</div>
+<div class="fa"><b>نظر ساده:</b> فقط ماده معتبر است و غالب روانشناسی غربی مبتنی بر آن است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ماتریالیسم = روانشناسی غربی
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">دام چیه + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: برزخ و اولین کاربرد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی برزخ اولین بار در نهج البلاغه اومده.</div>
+<div class="fa"><b>جواب درست:</b> قرآن</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برزخ = قرآن
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: روانشناسی و ماتریالیسم</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی روانشناسی مبتنی بر اومانیسمه.</div>
+<div class="fa"><b>جواب درست:</b> ماتریالیسم</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روانشناسی غربی = ماتریالیسم
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: قبر فقط مادی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی قبر فقط قبر مادیه.</div>
+<div class="fa"><b>جواب درست:</b> قبر مادی + افکار و اعمال</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قبر = مادی + افکار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: برهان نظم و نوع نظم</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر نوع نظمی مقصوده.</div>
+<div class="fa"><b>جواب درست:</b> نظم تکوینی و حقیقی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برهان نظم = تکوینی و حقیقی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: قضای تشریعی vs قدر تشریعی</h3>
+<div class="fa"><b>دام چیه:</b> قضای تشریعی و قدر تشریعی رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> قضای تشریعی = احکام شرعی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نماز و روزه = قضای تشریعی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: فطرت vs غریزه</h3>
+<div class="fa"><b>دام چیه:</b> فطرت و غریزه رو یکی می‌دونی.</div>
+<div class="fa"><b>جواب درست:</b> فطرت = مختص انسان / غریزه = مشترک</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فطرت = انسان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: امر بین الامرین vs جبر و تفویض</h3>
+<div class="fa"><b>دام چیه:</b> امر بین الامرین رو با جبر یا تفویض قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> استناد افعال به انسان و خدا</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امر بین الامرین = هر دو
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: معاد فقط جسمانی یا روحانی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی معاد فقط جسمانی یا فقط روحانیه.</div>
+<div class="fa"><b>جواب درست:</b> جسمانی و روحانی (اتفاق نظر)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معاد = جسمانی + روحانی
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 05 · معارف اسلامی · ۲۰ سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{q:"کلمه «برزخ» اولین بار در کجا به کار رفته است؟",options:["صحیفه سجادیه","نهج البلاغه","روایات","قرآن"],answer:3,explanation:"برزخ = اولین بار در قرآن."},
+{q:"غالب تئوری‌های روانشناسی مبتنی بر چه مکتبی است؟",options:["اومانیسم","ماتریالیسم","اگزیستانسیالیسم","رئالیسم"],answer:1,explanation:"روانشناسی غربی = ماتریالیسم."},
+{q:"منظور از قبر در منابع دینی چیست؟",options:["فقط افکار و اعمال","حالات قیامتی","قبر مادی و افکار و اعمال","فقط قبر مادی"],answer:2,explanation:"قبر = مادی + افکار و اعمال."},
+{q:"مقصود از نظم در برهان نظم چیست؟",options:["نظم مصنوعی","هر نوع نظم","نظم ساختگی","نظم تکوینی و حقیقی"],answer:3,explanation:"برهان نظم = نظم تکوینی و حقیقی."},
+{q:"دوره تقدم ایمان بر عقل کدام است؟",options:["قرون وسطی","معاصر","یونان باستان","قدیم"],answer:0,explanation:"قرون وسطی = ایمان بر عقل."},
+{q:"بر اساس روایات، مغر عبادت چیست؟",options:["دعا","اخلاق","احکام","اعتقادات"],answer:3,explanation:"مغر عبادت = اعتقادات."},
+{q:"«بهشت» چه نوع لغتی است؟",options:["عربی","عبری","اوستایی","رومی"],answer:1,explanation:"بهشت = لغت عبری."},
+{q:"کدام گزینه در مورد «ممکن محتاج علت است» صحیح است؟",options:["بی‌نیاز از برهان","نیازمند برهان","غیر بدیهی","ممکن علت است"],answer:0,explanation:"«ممکن محتاج علت» = بدیهی عقلی."},
+{q:"در کدام مرحله حیات معقول می‌توان بین چند راه یکی را برگزید؟",options:["آزادی","رهایی","انسانیت","اختیار"],answer:3,explanation:"مرحله اختیار = رهایی + انتخاب."},
+{q:"کدام عبارت در مورد معاد صحیح است؟",options:["همه ادیان دارای معاد","ادیان آسمانی دارای معاد","هیچ دینی معاد ندارد","ادیان بشری دارای معاد"],answer:1,explanation:"معاد = ادیان آسمانی."},
+{q:"«وجوب نماز و روزه» مربوط به کدام است؟",options:["قدر تشریعی","قضای تشریعی","قضای تکوینی","قدر تکوینی"],answer:1,explanation:"احکام شرعی = قضای تشریعی."},
+{q:"کدام گزینه ادله نقلی تجرد نفس است؟",options:["عقل و روایات","روایات و ادراکات کلی","آیات و عقل","آیات و روایات"],answer:3,explanation:"ادله نقلی = آیات + روایات."},
+{q:"کدام گزینه از ویژگی‌های فطرت است؟",options:["قابل تغییر","همان غریزه","امری اعتباری","تبدیل‌ناپذیر"],answer:3,explanation:"فطرت = تبدیل‌ناپذیر."},
+{q:"کدام عبارت در مورد امر بین الامرین صحیح است؟",options:["مخالف اراده","موافق اراده صد در صدی","استناد افعال به انسان و خدا","نه اراده انسان نه عدم آن"],answer:2,explanation:"امر بین الامرین = استناد به انسان و خدا."},
+{q:"کدام عبارت معنای اصطلاحی ایمان است؟",options:["تصدیق قلبی بدون اختیار","تصدیق قلبی با اختیار","تصدیق زبانی بدون اختیار","تصدیق زبانی با اختیار"],answer:1,explanation:"ایمان = تصدیق قلبی + اختیار."},
+{q:"کدام بعد فطرت را شعور باطنی می‌نامند؟",options:["معرفت‌شناسانه","عاطفی و گرایشی","همه ابعاد","وجودی"],answer:0,explanation:"شعور باطنی = بعد معرفت‌شناسانه."},
+{q:"کدام گزینه در مورد وجود برزخی صحیح است؟",options:["تماماً مادی","هیچ مادیتی ندارد","گاهی مادی گاهی غیرمادی","ماده دارد با برخی ویژگی‌ها"],answer:3,explanation:"برزخ = ماده با برخی ویژگی‌ها."},
+{q:"کدام گزینه مورد اتفاق نظر همه مسلمین است؟",options:["معاد جسمانی","نه روحانی نه جسمانی","معاد جسمانی و روحانی","معاد روحانی"],answer:2,explanation:"اتفاق نظر = جسمانی و روحانی."},
+{q:"کدام عبارت در مورد غریزه صحیح است؟",options:["نه در انسان نه در حیوان","فقط مختص انسان","فقط مختص حیوان","مشترک انسان و حیوان"],answer:3,explanation:"غریزه = مشترک."},
+{q:"عبارت «عقل داور به حق است» از کدام فیلسوف است؟",options:["ابن سینا","بیکن","هیوم","ارسطو"],answer:3,explanation:"ارسطو = عقل داور به حق."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

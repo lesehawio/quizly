@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · ورزش ۱ · سری 14 · فصل نهم: کسب آمادگی جسمانی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"14";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>ورزش ۱ · سری 14 · فصل نهم</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل نهم: کسب آمادگی جسمانی</h2>
+  <p>همه چیز به زبان ساده — انگار دارم برای یه دوست توضیح می‌دم که هیچ پیش‌زمینه‌ای نداره</p>
+  <div class="pills"><span class="pill">۴ گفتار</span><span class="pill">۳ روش کشش</span><span class="pill">۶ آزمون آمادگی</span><span class="pill">آماده امتحان</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان خیلی ساده نوشته شده. هدف کلی فصل اینه که با روش‌های <b>گرم کردن</b>، <b>سرد کردن</b>، <b>انعطاف‌پذیری</b> و <b>تمرین‌های آمادگی جسمانی</b> آشنا بشی.</div>
+
+<div class="stats">
+<div class="stat"><b>۴</b><span>گفتار</span></div>
+<div class="stat"><b>۳</b><span>روش کشش</span></div>
+<div class="stat"><b>۶</b><span>آزمون آمادگی</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#goals">هدف کلی</a><a href="#warmup">گرم کردن</a><a href="#cooldown">سرد کردن</a><a href="#flex">انعطاف‌پذیری</a><a href="#tests">آزمون‌ها</a><a href="#compare">تفاوت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="goals" class="section">
+<h2 class="section-title">۰۱ · هدف کلی و چارچوب فصل</h2>
+<p class="section-sub">اول بفهمیم این فصل اصلاً می‌خواد چی بگه</p>
+
+<div class="card">
+<div class="card-head"><h3>هدف کلی فصل</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این فصل می‌خواد تو رو با روش‌های <b>گرم کردن</b> و <b>بازگشت به حالت اولیه</b> و <b>تمرین‌های آمادگی جسمانی</b> آشنا کنه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این فصل ۴ گفتار داره: ۱) گرم کردن ۲) سرد کردن ۳) تمرین‌های کششی ۴) تمرین‌های آمادگی جسمانی. به‌علاوه پیوست آزمون‌ها.
+</div>
+</div>
+</section>
+
+<section id="warmup" class="section">
+<h2 class="section-title">۰۲ · گفتار ۱: گرم کردن بدن</h2>
+<p class="section-sub">چرا باید قبل از ورزش، بدن رو گرم کنیم؟</p>
+
+<div class="card">
+<div class="card-head"><h3>گرم کردن یعنی چی؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> گرم کردن یعنی یه سری فعالیت‌های مقدماتی مثل <b>دو نرم</b>، <b>حرکات کششی</b> و <b>نرمش</b> که بدن رو برای تمرین‌های سنگین آماده می‌کنه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> گرم کردن = دو نرم + حرکات کششی + نرمش، برای آماده کردن بدن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مزایای گرم کردن</h3></div>
+<div class="fa"><b>به زبان ساده:</b> گرم کردن سه تا فایده‌ی اصلی داره:</div>
+<div class="fa">۱) <b>افزایش سرعت جریان خون</b> و موجود بودن اکسیژن در حد نیاز تمرین</div>
+<div class="fa">۲) <b>افزایش سرعت انقباض</b> و کاهش زمان بازتاب + تسهیل واکنش‌های سوخت‌وسازی</div>
+<div class="fa">۳) <b>کاهش صدمه‌های عضلانی، وتری و مفصلی</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> مزایای گرم کردن = خون و اکسیژن + سرعت انقباض + کاهش صدمات.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظر استراند</h3></div>
+<div class="fa"><b>به زبان ساده:</b> یه دانشمند به اسم <b>استراند</b> می‌گه: گرم کردن بدن در شروع ورزش، حدود <b>۲ تا ۵ درصد</b> در بهبود رکوردهای ورزشی مؤثره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> عدد ۲ تا ۵ درصد رو حفظ کن. این عدد مخصوص نظر استرانده.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراحل گرم کردن</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> گرم کردن ۴ مرحله داره:</div>
+<div class="fa"><b>مرحله ۱:</b> <b>۵ دقیقه</b> راه رفتن تند یا دویدن نرم و آهسته.</div>
+<div class="fa"><b>مرحله ۲:</b> تمرین‌های <b>کششی</b> برای افزایش انعطاف‌پذیری مفاصل و عضلات.</div>
+<div class="fa"><b>مرحله ۳:</b> تمرین‌های <b>نرمشی</b> برای توسعه قدرت عضلات (بعد از تمرین‌های کششی). مدت این مرحله <b>۵ تا ۱۰ دقیقه</b>ست.</div>
+<div class="fa"><b>مرحله ۴:</b> آخرین مرحله = اجرای فعالیت‌های <b>مربوط به ورزش مورد نظر</b>.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> ترتیب گرم کردن = دویدن نرم ← کششی ← نرمشی ← فعالیت اختصاصی.
+</div>
+</div>
+</section>
+
+<section id="cooldown" class="section">
+<h2 class="section-title">۰۳ · گفتار ۲: بازگشت به حالت اولیه (سرد کردن)</h2>
+<p class="section-sub">چرا بعد از ورزش باید بدن رو سرد کنیم؟</p>
+
+<div class="card">
+<div class="card-head"><h3>اهمیت سرد کردن</h3></div>
+<div class="fa"><b>به زبان ساده:</b> همون‌طور که تمرین رو یه‌باره شروع نمی‌کنیم، بعد از تمرین‌های سنگین هم فعالیت رو <b>یه‌باره متوقف نمی‌کنیم</b>. باید آروم‌آروم بدن رو به حالت اولیه برگردونیم.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مزایای سرد کردن</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> سرد کردن دو تا فایده‌ی اصلی داره:</div>
+<div class="fa">۱) <b>جلوگیری از جمع شدن خون</b> در اندام‌ها (مخصوصاً اندام‌های تحتانی). انقباض‌های نرم و سبک عضلانی باعث می‌شه خون راحت‌تر و سریع‌تر برای تصفیه و اکسیژن‌گیری به قلب برگرده.</div>
+<div class="fa">۲) <b>کاهش سریع‌تر اسید لاکتیک خون</b>. سطح اسید لاکتیک با فعالیت‌های سبک بعد از تمرین، نسبت به استراحت مطلق، سریع‌تر کاهش پیدا می‌کنه و بدن زودتر از خستگی رها می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> مزایای سرد کردن = جلوگیری از جمع شدن خون + کاهش سریع‌تر اسید لاکتیک.
+</div>
+</div>
+</section>
+
+<section id="flex" class="section">
+<h2 class="section-title">۰۴ · انعطاف‌پذیری و روش‌های افزایش آن</h2>
+<p class="section-sub">انعطاف‌پذیری چیه و چطور زیاد می‌شه؟</p>
+
+<div class="card">
+<div class="card-head"><h3>انعطاف‌پذیری یعنی چی؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> انعطاف یعنی <b>قابلیت کشیده شدن عضلات و تاندون‌ها</b> برای اینکه مفاصل بتونن <b>دامنه‌ی حرکتی بیشتری</b> داشته باشن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> انعطاف = کشیده شدن عضلات و تاندون‌ها + دامنه حرکتی بیشتر مفاصل.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل مؤثر بر انعطاف‌پذیری</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این چیزها روی انعطاف اثر دارن:</div>
+<div class="fa">• لیگامنت‌ها (رباط‌ها)</div>
+<div class="fa">• عضلات</div>
+<div class="fa">• غضروف‌ها</div>
+<div class="fa">• تاندون‌ها</div>
+<div class="fa">• پوست</div>
+<div class="fa">• درصد چربی بدن</div>
+<div class="fa">• جنسیت</div>
+<div class="fa">• شرایط آب و هوایی</div>
+<div class="fa"><b>یه نکته مهم:</b> <b>کپسول مفصلی</b> و <b>بافت‌های مربوط به عضله</b>، بیشترین مقاومت رو برای ایجاد انعطاف مناسب به‌وجود میارن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مهم‌ترین عوامل = کپسول مفصلی + بافت‌های عضله.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه روش افزایش انعطاف‌پذیری</h3><span class="badge s">کلیدی</span></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱) کشش استاتیک (ساکن):</b>
+</div>
+<div class="fa">• کشش‌های <b>بدون حرکت</b> و فشاری.</div>
+<div class="fa">• عضلات در وضعیت <b>کشیدگی نهایی</b> برای مدتی نگه داشته می‌شن.</div>
+<div class="fa">• روش <b>امن و توصیه‌شده</b>ست.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲) کشش بالستیک (تابی):</b>
+</div>
+<div class="fa">• تکان، ضربه یا تاب فعالی که با حرکت اعضای بدن به‌وجود میاد.</div>
+<div class="fa">• <b>توصیه نمی‌شه!</b> چرا؟ چون باعث <b>رفلکس دوک عضلانی</b> می‌شه و عضله‌ی در حال کشش، <b>منقبض</b> می‌شه.</div>
+<div class="fa">• گاهی منجر به <b>پارگی تارهای عضلانی</b> می‌شه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳) کشش PNF (کشش تدریجی معکوس):</b>
+</div>
+<div class="fa">• شامل <b>کشش + انقباض + انبساط + ریلکس</b> (آزادسازی عضلانی).</div>
+<div class="fa">• هر تکنیک شامل <b>۵ تا ۱۰ ثانیه کشش</b> و <b>۵ تا ۱۰ ثانیه آزادسازی</b> عضله‌ست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> سه روش = استاتیک (امن) + بالستیک (خطرناک - توصیه نمی‌شه) + PNF (کشش تدریجی معکوس).
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> کشش بالستیک رو با استاتیک قاطی نکن. بالستیک توصیه نمی‌شه چون خطر پارگی داره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تمرین‌های کششی — توصیه‌ها</h3></div>
+<div class="fa"><b>هدف:</b> نرم و منعطف ساختن عضلات و مفاصل بدن + رسیدن به حداکثر دامنه‌ی حرکت قبل از تمرین.</div>
+<div class="fa"><b>توصیه‌ی تعداد جلسات:</b></div>
+<div class="fa">• <b>۳ جلسه در هفته</b> برای <b>افزایش</b> انعطاف‌پذیری</div>
+<div class="fa">• <b>۱ تا ۲ جلسه در هفته</b> برای <b>حفظ</b> انعطاف کسب‌شده</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> این اعداد با فصل‌های قبلی فرق داره! توی این فصل: افزایش = ۳ جلسه / حفظ = ۱-۲ جلسه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راهنمایی برای حرکات کششی ایستا</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این نکات رو رعایت کن:</div>
+<div class="fa">۱) حرکت رو در طول دامنه‌ی حرکتی <b>به آرامی</b> انجام بده و بین <b>۱۰ تا ۳۰ ثانیه</b> حفظ کن.</div>
+<div class="fa">۲) به مفاصل بیش از دامنه‌ی حرکتی‌شون <b>فشار نیار</b>.</div>
+<div class="fa">۳) <b>آرام‌سازی عضلانی</b> باید جزئی از برنامه‌ی کششی باشه.</div>
+<div class="fa">۴) در حالت آرام‌سازی، <b>آروم و عمیق</b> تنفس کن.</div>
+<div class="fa">۵) برای هر تمرین حداقل <b>۵ تکرار</b> در نظر بگیر.</div>
+<div class="fa">۶) <b>اجرای صحیح</b> هر حرکت خیلی مهمه.</div>
+</div>
+</section>
+
+<section id="tests" class="section">
+<h2 class="section-title">۰۵ · گفتار ۳ و ۴: تمرین‌های آمادگی جسمانی و آزمون‌ها</h2>
+<p class="section-sub">تمرین‌های آمادگی جسمانی + آزمون‌های آقایان و خانم‌ها</p>
+
+<div class="card">
+<div class="card-head"><h3>تمرین‌های آمادگی جسمانی — هدف</h3></div>
+<div class="fa"><b>به زبان ساده:</b> هدف این تمرین‌ها:</div>
+<div class="fa">• طرح و اجرای تمرین‌های آمادگی جسمانی</div>
+<div class="fa">• مشخص کردن اثر اجرای تمرین‌ها روی اندام‌های مختلف بدن</div>
+<div class="fa"><b>ویژگی مهم:</b> این تمرین‌ها نیاز به <b>هیچ‌گونه وسایل کمکی</b> (حتی وسایل اولیه) ندارن و به‌صورت <b>یک‌نفره</b> قابل اجران.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهداف تمرین‌ها</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این تمرین‌ها برای این چهار هدف هستن:</div>
+<div class="fa">۱) تقویت نیروی عضلانی <b>کمربند شانه و بازو</b></div>
+<div class="fa">۲) تقویت عضلات <b>ناحیه‌ی شکمی و پایین تنه</b></div>
+<div class="fa">۳) تقویت <b>چابکی بدن</b> در تغییر مسیر حرکت و تغییر وضعیت</div>
+<div class="fa">۴) توسعه <b>استقامت دستگاه قلبی-ریوی</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۴ هدف = شانه و بازو + شکم و پایین تنه + چابکی + استقامت قلبی-ریوی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نمونه تمرین‌ها</h3></div>
+<div class="fa"><b>برای تقویت عضلات بارفیکس:</b> تمرین‌های شنا سوئدی، بارفیکس با یک دست خمیده و کشیده، پشت بازو.</div>
+<div class="fa"><b>برای تقویت عضلات دراز و نشست:</b> بلند کردن پاها و چرخش تنه، حرکت پاها به شکل عدد ۸، دراز و نشست کامل.</div>
+<div class="fa"><b>برای تقویت عضلات پرش جفت:</b> پرش به جهات مختلف، پرش از حالت چمباتمه، پرش با خم کردن زانوها به سمت شکم.</div>
+<div class="fa"><b>برای تقویت دوی رفت و برگشت (۳۶ متر):</b> حرکت برپی + دوهای سریع و کوتاه در مسیر ۱۰۰ تا ۵۰۰ متر.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>استقامت عمومی و فارتلیک</h3></div>
+<div class="fa"><b>به زبان ساده:</b> برای افزایش <b>استقامت عمومی</b> بدن، بیشتر از <b>تمرین‌های هوازی</b> مثل دویدن‌ها با سرعت‌های متفاوت، شنا و دوچرخه‌سواری استفاده می‌شه.</div>
+<div class="fa"><b>دویدن فارتلیک:</b> دوهای <b>سریع و آهسته‌ی متناوب</b> که در زمین‌ها و جاده‌های طبیعی و حواشی شهرها قابل اجراست.</div>
+<div class="fa"><b>نکته مهم:</b> فارتلیک یه نوع تمرین <b>هوازی</b>ه که فاصله‌های زمانی استراحت و تمرینش <b>به‌طور دقیق اندازه‌گیری نمی‌شه</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> فارتلیک = هوازی + تناوب سریع/آهسته + بدون اندازه‌گیری دقیق زمان.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آزمون‌های آمادگی جسمانی آقایان</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> ۶ آزمون برای آقایان:</div>
+<div class="fa">۱) <b>کشش بارفیکس</b> = استقامت عضلات کمربند شانه و بازوها</div>
+<div class="fa">۲) <b>دراز و نشست</b> = استقامت عضلات ناحیه شکم</div>
+<div class="fa">۳) <b>دو رفت و برگشت (۳۶ متر)</b> = چابکی بدن در تغییر مسیر</div>
+<div class="fa">۴) <b>پرش طول جفتی</b> = نیروی عضلات پاها در پرتاب بدن به بالا و جلو</div>
+<div class="fa">۵) <b>دو سرعت (۴۵ متر)</b> = سرعت عمومی بدن در انتقال از یک نقطه به نقطه دیگر</div>
+<div class="fa">۶) <b>دو ۵۴۸ متر نیمه استقامت</b> = استقامت عمومی بدن + دستگاه‌های قلبی و تنفسی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> ۶ آزمون آقایان = بارفیکس + دراز و نشست + دو ۳۶ متر + پرش طول + دو ۴۵ متر + دو ۵۴۸ متر.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آزمون‌های آمادگی جسمانی خانم‌ها</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> ۵ آزمون برای خانم‌ها:</div>
+<div class="fa">۱) <b>دراز و نشست</b> (با تفاوت: دست‌ها در جلو سینه)</div>
+<div class="fa">۲) <b>کشش بارفیکس</b> (با تفاوت: با پرش میله رو می‌گیره و خودش رو بالا نگه می‌داره — امتیاز بر حسب زمان)</div>
+<div class="fa">۳) <b>دو ۴۵۸ متر نیمه استقامت</b></div>
+<div class="fa">۴) <b>دو رفت و برگشت ۳۶ متر</b></div>
+<div class="fa">۵) <b>آزمون انعطاف‌پذیری</b> (با سکو یا صندلی و خط‌کش مدرج)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> تفاوت‌های خانم‌ها = دراز و نشست با دست‌های جلو سینه + بارفیکس با پرش و نگه داشتن (بر حسب زمان) + آزمون انعطاف با سکو.
+</div>
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#ffe8f0,#fff0cc);border-color:#f94779">
+<div class="card-head"><h3>📌 جمع‌بندی آزمون‌ها</h3></div>
+<div class="fa"><b>آقایان:</b> بارفیکس + دراز و نشست + دو ۳۶ متر + پرش طول + دو ۴۵ متر + دو ۵۴۸ متر</div>
+<div class="fa"><b>خانم‌ها:</b> دراز و نشست (دست جلو سینه) + بارفیکس (با پرش و نگه داشتن) + دو ۴۵۸ متر + دو ۳۶ متر + انعطاف (سکو)</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۶ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">جفت‌هایی که ممکنه اشتباه بگیری</p>
+
+<div class="card">
+<div class="card-head"><h3>کشش استاتیک vs بالستیک</h3></div>
+<table class="compare">
+<thead><tr><th>کشش استاتیک (ساکن)</th><th>کشش بالستیک (تابی)</th></tr></thead>
+<tbody>
+<tr><td>بدون حرکت و فشاری</td><td>تکان، ضربه، تاب فعال</td></tr>
+<tr><td>عضله در کشیدگی نهایی نگه داشته می‌شود</td><td>باعث رفلکس دوک عضلانی می‌شود</td></tr>
+<tr><td>امن و توصیه‌شده</td><td>خطرناک و توصیه نمی‌شود</td></tr>
+<tr><td>—</td><td>گاهی منجر به پارگی تارهای عضلانی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> استاتیک = امن / بالستیک = خطرناک.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گرم کردن vs سرد کردن</h3></div>
+<table class="compare">
+<thead><tr><th>گرم کردن</th><th>سرد کردن</th></tr></thead>
+<tbody>
+<tr><td>قبل از تمرین</td><td>بعد از تمرین</td></tr>
+<tr><td>آماده‌سازی بدن</td><td>بازگشت به حالت اولیه</td></tr>
+<tr><td>افزایش خون و اکسیژن</td><td>جلوگیری از جمع شدن خون</td></tr>
+<tr><td>کاهش صدمات</td><td>کاهش اسید لاکتیک</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گرم کردن = قبل / سرد کردن = بعد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>افزایش انعطاف vs حفظ انعطاف</h3></div>
+<div class="fa"><b>به زبان ساده:</b> افزایش = ۳ جلسه در هفته / حفظ = ۱ تا ۲ جلسه در هفته.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> این اعداد با فصل‌های قبلی (۵ و ۳) فرق داره! توی این فصل: ۳ و ۱-۲.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آزمون‌های آقایان vs خانم‌ها</h3></div>
+<div class="fa"><b>به زبان ساده:</b> آقایان: ۶ آزمون / خانم‌ها: ۵ آزمون (با تفاوت‌هایی در اجرا).</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۷ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: نظر استراند</h3>
+<div class="fa"><b>دام چیه:</b> عدد ۲ تا ۵ درصد رو فراموش می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ۲ تا ۵ درصد بهبود رکوردهای ورزشی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گرم کردن ۲-۵٪ رکورد رو بهتر می‌کنه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: ترتیب مراحل گرم کردن</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب رو جابه‌جا می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> دویدن نرم ← کششی ← نرمشی ← فعالیت اختصاصی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ترتیب رو حفظ کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: کشش بالستیک</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بالستیک هم توصیه می‌شه.</div>
+<div class="fa"><b>جواب درست:</b> بالستیک توصیه نمی‌شه (خطر پارگی)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بالستیک خطرناکه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: جلسات کششی</h3>
+<div class="fa"><b>دام چیه:</b> اعداد فصل‌های قبلی (۵ و ۳) رو می‌زنی.</div>
+<div class="fa"><b>جواب درست:</b> ۳ جلسه برای افزایش + ۱-۲ جلسه برای حفظ</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> توی این فصل اعداد فرق دارن!
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: فارتلیک</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فارتلیک تمرین قدرتیه یا زمان دقیق داره.</div>
+<div class="fa"><b>جواب درست:</b> فارتلیک = هوازی + بدون اندازه‌گیری دقیق زمان</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فارتلیک = بازی با سرعت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: تفاوت آزمون آقایان و خانم‌ها</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی آزمون‌ها یکسانن.</div>
+<div class="fa"><b>جواب درست:</b> خانم‌ها: دراز و نشست با دست‌های جلو سینه + بارفیکس با پرش و نگه داشتن + آزمون انعطاف با سکو.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تفاوت‌ها رو حفظ کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: مزایای سرد کردن</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی سرد کردن فقط برای استراحته.</div>
+<div class="fa"><b>جواب درست:</b> جلوگیری از جمع شدن خون + کاهش اسید لاکتیک</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سرد کردن دو فایده دقیق داره.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۸ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل نهم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 14 · ورزش ۱ · فصل نهم: کسب آمادگی جسمانی · جزوه ساده و امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"گرم کردن بدن یعنی چه؟",options:["فقط دویدن","مجموعه‌ای از فعالیت‌های مقدماتی مانند دو نرم، حرکات کششی و نرمش","فقط حرکات کششی","فقط نرمش"],answer:1,explanation:"گرم کردن = دو نرم + حرکات کششی + نرمش."},
+{q:"کدام گزینه از مزایای گرم کردن نیست؟",options:["افزایش سرعت جریان خون","افزایش سرعت انقباض","کاهش صدمات عضلانی","افزایش خستگی"],answer:3,explanation:"گرم کردن خستگی را کاهش می‌دهد، نه افزایش."},
+{q:"نظر استراند درباره گرم کردن چیست؟",options:["۵ تا ۱۰ درصد","۲ تا ۵ درصد","۱۰ تا ۲۰ درصد","بی‌تأثیر"],answer:1,explanation:"نظر استراند: ۲ تا ۵ درصد بهبود رکورد."},
+{q:"مرحله اول گرم کردن چیست؟",options:["کششی","نرمشی","راه رفتن تند یا دویدن نرم","فعالیت اختصاصی"],answer:2,explanation:"مرحله اول = دویدن نرم."},
+{q:"مدت زمان مرحله نرمشی گرم کردن چقدر است؟",options:["۱ تا ۲ دقیقه","۵ تا ۱۰ دقیقه","۱۵ تا ۲۰ دقیقه","۳۰ دقیقه"],answer:1,explanation:"مرحله نرمشی ۵ تا ۱۰ دقیقه."},
+{q:"آخرین مرحله گرم کردن چیست؟",options:["دویدن نرم","کششی","اجرای فعالیت‌های ورزش مورد نظر","نرمش"],answer:2,explanation:"آخرین مرحله = فعالیت اختصاصی."},
+{q:"مزیت سرد کردن چیست؟",options:["افزایش ضربان","جلوگیری از جمع شدن خون + کاهش اسید لاکتیک","افزایش خستگی","افزایش فشار خون"],answer:1,explanation:"سرد کردن = جلوگیری از جمع خون + کاهش اسید لاکتیک."},
+{q:"انعطاف‌پذیری یعنی چه؟",options:["قدرت عضلات","قابلیت کشیده شدن عضلات و تاندون‌ها برای دامنه حرکتی بیشتر","سرعت حرکت","استقامت"],answer:1,explanation:"انعطاف = کشیده شدن عضلات و تاندون‌ها."},
+{q:"کدام عامل بیشترین مقاومت را برای انعطاف ایجاد می‌کند؟",options:["پوست","کپسول مفصلی و بافت‌های عضله","چربی","جنسیت"],answer:1,explanation:"کپسول مفصلی + بافت‌های عضله بیشترین مقاومت را دارند."},
+{q:"کشش استاتیک چیست؟",options:["کشش با حرکت","کشش بدون حرکت و فشاری","کشش با ضربه","کشش با تاب"],answer:1,explanation:"استاتیک = کشش بدون حرکت."},
+{q:"کشش بالستیک چگونه است؟",options:["بدون حرکت","تکان، ضربه یا تاب فعال","کشش تدریجی","کشش با انقباض"],answer:1,explanation:"بالستیک = تکان، ضربه یا تاب فعال."},
+{q:"چرا کشش بالستیک توصیه نمی‌شود؟",options:["چون سخت است","چون باعث رفلکس دوک عضلانی و خطر پارگی می‌شود","چون وقت‌گیر است","چون گران است"],answer:1,explanation:"بالستیک خطر پارگی دارد."},
+{q:"کشش PNF شامل چه مراحلی است؟",options:["فقط کشش","کشش، انقباض، انبساط، ریلکس","فقط انقباض","فقط ریلکس"],answer:1,explanation:"PNF = کشش + انقباض + انبساط + ریلکس."},
+{q:"هر تکنیک PNF چند ثانیه کشش و آزادسازی دارد؟",options:["۱-۲ ثانیه","۵-۱۰ ثانیه","۱۵-۲۰ ثانیه","۳۰ ثانیه"],answer:1,explanation:"۵ تا ۱۰ ثانیه کشش و ۵ تا ۱۰ ثانیه آزادسازی."},
+{q:"برای افزایش انعطاف‌پذیری چند جلسه در هفته لازم است؟",options:["۱ جلسه","۲ جلسه","۳ جلسه","۵ جلسه"],answer:2,explanation:"۳ جلسه در هفته برای افزایش انعطاف."},
+{q:"برای حفظ انعطاف کسب‌شده چند جلسه کافی است؟",options:["۱ تا ۲ جلسه","۳ جلسه","۴ جلسه","۵ جلسه"],answer:0,explanation:"۱ تا ۲ جلسه برای حفظ انعطاف."},
+{q:"حرکات کششی ایستا چند ثانیه حفظ می‌شود؟",options:["۱-۵ ثانیه","۵-۱۰ ثانیه","۱۰-۳۰ ثانیه","۶۰ ثانیه"],answer:2,explanation:"۱۰ تا ۳۰ ثانیه حفظ شود."},
+{q:"حداقل تعداد تکرار در تمرین کششی چقدر است؟",options:["۱ تکرار","۳ تکرار","۵ تکرار","۱۰ تکرار"],answer:2,explanation:"حداقل ۵ تکرار برای هر تمرین."},
+{q:"ویژگی تمرین‌های آمادگی جسمانی چیست؟",options:["نیاز به وسایل گران‌قیمت","بدون نیاز به وسایل کمکی و یک‌نفره","فقط گروهی","فقط با مربی"],answer:1,explanation:"تمرین‌ها بدون وسیله و یک‌نفره‌اند."},
+{q:"هدف تمرین‌های آمادگی جسمانی کدام نیست؟",options:["تقویت کمربند شانه و بازو","تقویت شکم و پایین تنه","افزایش چابکی","کاهش استقامت قلبی-ریوی"],answer:3,explanation:"تمرین‌ها استقامت قلبی-ریوی را افزایش می‌دهند، نه کاهش."},
+{q:"دویدن فارتلیک چیست؟",options:["دویدن آهسته","دوهای سریع و آهسته متناوب","دویدن با وزنه","دویدن در سرازیری"],answer:1,explanation:"فارتلیک = دوهای سریع و آهسته متناوب."},
+{q:"فارتلیک چه نوع تمرینی است؟",options:["قدرتی","هوازی","انعطافی","سرعتی"],answer:1,explanation:"فارتلیک تمرین هوازی است."},
+{q:"در فارتلیک، زمان استراحت و تمرین چگونه است؟",options:["دقیق اندازه‌گیری می‌شود","به‌طور دقیق اندازه‌گیری نمی‌شود","فقط استراحت دقیق است","فقط تمرین دقیق است"],answer:1,explanation:"زمان دقیق اندازه‌گیری نمی‌شود."},
+{q:"چند آزمون آمادگی جسمانی برای آقایان وجود دارد؟",options:["۴","۵","۶","۷"],answer:2,explanation:"۶ آزمون برای آقایان."},
+{q:"آزمون کشش بارفیکس چه چیزی را می‌سنجد؟",options:["استقامت شکم","استقامت کمربند شانه و بازوها","چابکی","سرعت"],answer:1,explanation:"بارفیکس = استقامت شانه و بازو."},
+{q:"آزمون دراز و نشست چه چیزی را می‌سنجد؟",options:["استقامت شکم","استقامت شانه","چابکی","سرعت"],answer:0,explanation:"دراز و نشست = استقامت شکم."},
+{q:"آزمون دو ۳۶ متر چه چیزی را می‌سنجد؟",options:["سرعت","چابکی","استقامت","قدرت"],answer:1,explanation:"دو ۳۶ متر = چابکی."},
+{q:"آزمون دو ۴۵ متر چه چیزی را می‌سنجد؟",options:["چابکی","سرعت عمومی","استقامت","قدرت"],answer:1,explanation:"دو ۴۵ متر = سرعت."},
+{q:"آزمون دو ۵۴۸ متر چه چیزی را می‌سنجد؟",options:["سرعت","چابکی","استقامت عمومی و قلبی-تنفسی","قدرت"],answer:2,explanation:"دو ۵۴۸ متر = استقامت."},
+{q:"تفاوت آزمون دراز و نشست خانم‌ها با آقایان چیست؟",options:["تعداد","دست‌ها در جلو سینه","زمان","مکان"],answer:1,explanation:"خانم‌ها دست‌ها را در جلو سینه قرار می‌دهند."},
+{q:"آزمون کشش بارفیکس خانم‌ها چگونه است؟",options:["بدون پرش","با پرش و نگه داشتن (امتیاز بر حسب زمان)","فقط با یک دست","مثل آقایان"],answer:1,explanation:"خانم‌ها با پرش میله را می‌گیرند و خود را نگه می‌دارند."},
+{q:"آزمون انعطاف‌پذیری خانم‌ها با چه چیزی انجام می‌شود؟",options:["با دست","با سکو یا صندلی و خط‌کش مدرج","با آینه","با متر"],answer:1,explanation:"با سکو یا صندلی و خط‌کش مدرج."},
+{q:"آزمون دو ۴۵۸ متر برای چه کسانی است؟",options:["فقط آقایان","فقط خانم‌ها","همه","کودکان"],answer:1,explanation:"دو ۴۵۸ متر مخصوص خانم‌هاست."},
+{q:"آزمون دو ۵۴۸ متر برای چه کسانی است؟",options:["فقط آقایان","فقط خانم‌ها","همه","کودکان"],answer:0,explanation:"دو ۵۴۸ متر مخصوص آقایان است."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
