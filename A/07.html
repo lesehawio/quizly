@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · معارف اسلامی · سری 07</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"07";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>معارف اسلامی · سری 07</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی معارف اسلامی · سری 07</h2>
+  <p>تحلیل کامل ۲۰ سوال با پاسخنامه تشریحی، تعریف ساده مفاهیم و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">۲۰ سوال</span><span class="pill">۵ دسته موضوعی</span><span class="pill">۱۲+ مفهوم کلیدی</span><span class="pill">۴ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد معارف اسلامی طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۲۰</b><span>سوال</span></div>
+<div class="stat"><b>۵</b><span>دسته موضوعی</span></div>
+<div class="stat"><b>۱۲+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۴</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">۰۱ · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، شخصیت‌ها...">
+
+<div id="questionList">
+
+<div class="card question" data-search="قرآن ویژگی پرهیزگاران پیش شرط هدایت ایمان غیب">
+<span class="qnum">سوال ۱</span>
+<div class="fa"><b>متن سوال:</b> در قرآن کریم نخستین ویژگی پرهیزگاران و پیش شرط هدایت‌یابی آدمیان کدام گزینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایمان به عالم غیب</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در قرآن اولین ویژگی پرهیزگاران، ایمان به عالم غیب است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ایمان به شهادت: بعد از ایمان به غیب است.<br>
+- انفاق: از ویژگی‌های بعدی است.<br>
+- هیچکدام: نادرست است.<br>
+<b>نکته کلیدی:</b> اولین ویژگی پرهیزگاران = ایمان به غیب
+</div>
+</div>
+
+<div class="card question" data-search="امانت الهی اختیار آسمان زمین کوه انسان">
+<span class="qnum">سوال ۲</span>
+<div class="fa"><b>متن سوال:</b> بسیاری از مفسران امانتی الهی که آسمان و زمین و کوه‌ها نتوانستند تحمل کنند اما انسان پذیرفت را چه می‌دانند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اختیار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بسیاری از مفسران امانت الهی را اختیار و تکلیف انسان می‌دانند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اخلاق: بخشی از امانت است.<br>
+- علم: بخشی از امانت است.<br>
+- توبت: نادرست است.<br>
+<b>نکته کلیدی:</b> امانت الهی = اختیار
+</div>
+</div>
+
+<div class="card question" data-search="شناخت پدیده ها قوانین چیرگی طبیعت جهان شناسی علمی">
+<span class="qnum">سوال ۳</span>
+<div class="fa"><b>متن سوال:</b> شناخت پدیده‌ها و قوانین حاکم بر آنها و چیرگی انسان بر طبیعت و بهره‌برداری از آن حکایت از چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">جهان‌شناسی علمی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شناخت پدیده‌ها و قوانین طبیعت و چیرگی بر آن، جهان‌شناسی علمی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- انسان‌شناسی فلسفی: مربوط به انسان است.<br>
+- جهان‌شناسی دینی: مربوط به دین است.<br>
+- انسان‌شناسی دینی: مربوط به انسان در دین است.<br>
+<b>نکته کلیدی:</b> شناخت قوانین طبیعت = جهان‌شناسی علمی
+</div>
+</div>
+
+<div class="card question" data-search="آیه و ما منا الا له مقام معلوم فرشتگان مراتب">
+<span class="qnum">سوال ۴</span>
+<div class="fa"><b>متن سوال:</b> آیه کریمه «وَ مَا مِنَّا إِلَّا لَهُ مَقَامٌ مَعْلُومٌ» به کدام دیدگاه در مورد فرشتگان اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اوصاف و مراتب فرشتگان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آیه می‌گوید هر فرشته‌ای مقام معلومی دارد؛ یعنی فرشتگان مراتب و اوصاف مختلف دارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ماهیت: مربوط به ذات است.<br>
+- عصمت: بخشی از اوصاف است.<br>
+- رسالت: بخشی از اوصاف است.<br>
+<b>نکته کلیدی:</b> «مقام معلوم» = اوصاف و مراتب فرشتگان
+</div>
+</div>
+
+<div class="card question" data-search="آیه یا ایها الناس انتم الفقراء نیازمندی وابستگی وجودی">
+<span class="qnum">سوال ۵</span>
+<div class="fa"><b>متن سوال:</b> مهم‌ترین معنای «نیازمندی» در آیه ذیل از سوره فاطر کدام است؟ «يَا أَيُّهَا النَّاسُ أَنتُمُ الْفُقَرَاءُ إِلَى اللَّهِ وَاللَّهُ هُوَ الْغَنِيُّ الْحَمِيدُ»</div>
+<b>پاسخ صحیح:</b> <span class="answer">وابستگی وجودی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آیه می‌گوید همه انسان‌ها فقیر و نیازمند به خدا هستند؛ یعنی وابستگی وجودی دارند و بدون خدا هیچ‌اند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- وابستگی جسمی: ناقص است.<br>
+- وابستگی مالی: ناقص است.<br>
+- وابستگی عقلی: ناقص است.<br>
+<b>نکته کلیدی:</b> فقر الی الله = وابستگی وجودی
+</div>
+</div>
+
+<div class="card question" data-search="یوم القیامة روز برخاستن وجوه روز واپسین">
+<span class="qnum">سوال ۶</span>
+<div class="fa"><b>متن سوال:</b> واژه «یوم القیامة» کدام ویژگی از وجوه روز واپسین را بیان می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">روز برخاستن</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> «یوم القیامة» از ریشه «قیام» به معنای برخاستن است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- روز جمع شدن: نام دیگر قیامت است.<br>
+- روز بسیار نزدیک: یوم الازفة است.<br>
+- روز برانگیخته شدن: نام دیگر قیامت است.<br>
+<b>نکته کلیدی:</b> یوم القیامة = روز برخاستن
+</div>
+</div>
+
+<div class="card question" data-search="فرشتگان سرشت عقلانی ادراک حسی رسالت">
+<span class="qnum">سوال ۷</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه در مورد فرشتگان صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فرشتگان سرشت عقلانی دارند، قابل ادراک حسی نیستند و دارای رسالت الهی هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر گزینه فقط یک جنبه را نشان می‌دهد.<br>
+<b>نکته کلیدی:</b> فرشتگان = سرشت عقلانی + غیرمحسوس + رسالت
+</div>
+</div>
+
+<div class="card question" data-search="مسخر گیتی انسان کرامت ذات انسانی">
+<span class="qnum">سوال ۸</span>
+<div class="fa"><b>متن سوال:</b> مسخر قرار دادن سراسر گیتی برای انسان نشانه چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کرامت ذات انسانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> مسخر قرار دادن گیتی برای انسان نشانه کرامت ذاتی انسان است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- امانتدار الهی: بخشی از کرامت است.<br>
+- جهان کارگزار: ناقص است.<br>
+- مسجود فرشتگان: بخشی از کرامت است.<br>
+<b>نکته کلیدی:</b> مسخر گیتی = کرامت ذات انسانی
+</div>
+</div>
+
+<div class="card question" data-search="انشاءنا خلقنا خلقت گوهر روحانی">
+<span class="qnum">سوال ۹</span>
+<div class="fa"><b>متن سوال:</b> استفاده از فعل «انشاءنا» به جای «خلقنا» در بیان نحوه خلقت آدمیان به کدامین امر اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خلقت گوهر روحانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> فعل «انشاءنا» به معنای ایجاد و آفرینش بدون ماده قبلی است و اشاره به خلقت گوهر روحانی دارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مراقبت کامل از بدن: نادرست است.<br>
+- خلقت روح قبل از جسم: نادرست است.<br>
+- خلقت بعد جسمانی: نادرست است.<br>
+<b>نکته کلیدی:</b> انشاءنا = خلقت گوهر روحانی
+</div>
+</div>
+
+<div class="card question" data-search="ساحت وجود انسان گوهر جسمانی غیر جسمانی">
+<span class="qnum">سوال ۱۰</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خداوند پس از تکمیل ساحت جسمانی ساحت غیر جسمانی را در کالبد او می‌دهد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بر اساس آیات قرآن، خداوند پس از تکمیل خلقت جسمانی انسان، روح (ساحت غیرجسمانی) را در او می‌دمد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کاملاً مادی: نادرست است.<br>
+- اصالت جسمانی: نادرست است.<br>
+- ماهیت جسم: نادرست است.<br>
+<b>نکته کلیدی:</b> تکمیل جسم + دمیدن روح
+</div>
+</div>
+
+<div class="card question" data-search="عدم تعلق قدرت محالات ذاتی وقوعی نقصان قابل">
+<span class="qnum">سوال ۱۱</span>
+<div class="fa"><b>متن سوال:</b> علت عدم تعلق قدرت خداوند به محالات ذاتی و وقوعی چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نقصان و کاستی به قابل باز می‌گردد و نه فاعل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> محالات ذاتاً ممکن نیستند؛ پس نقصان به خود محال (قابل) برمی‌گردد نه به خدا (فاعل).<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نقصان به فاعل: نادرست است.<br>
+- محدودیت حکمت: نادرست است.<br>
+- محدودیت قدرت: نادرست است.<br>
+<b>نکته کلیدی:</b> محال = نقصان در قابل نه فاعل
+</div>
+</div>
+
+<div class="card question" data-search="کرامت عمومی بنی آدم کرامت ذاتی توانایی ویژه">
+<span class="qnum">سوال ۱۲</span>
+<div class="fa"><b>متن سوال:</b> مقصود از «کرامت عمومی» در آیه «وَ لَقَدْ كَرَّمْنَا بَنِي آدَمَ» چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کرامت ذاتی که به لحاظ توانایی‌های ویژه انسان شامل همه آدمیان می‌گردد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کرامت عمومی یعنی همه انسان‌ها به خاطر توانایی‌های ویژه‌شان دارای کرامت ذاتی هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شامل حضرت آدم: ناقص است.<br>
+- برخی فرزندان: نادرست است.<br>
+- تنها صالحین: نادرست است.<br>
+<b>نکته کلیدی:</b> کرامت عمومی = همه انسان‌ها
+</div>
+</div>
+
+<div class="card question" data-search="ذات الهی شناخت ناپذیر اوصاف افعال خداشناسی">
+<span class="qnum">سوال ۱۳</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خداشناسی از رهگذر اوصاف و افعال الهی برای انسان میسر است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ذات خدا قابل شناخت کامل نیست، اما از طریق اوصاف و افعال الهی می‌توان خدا را شناخت.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ذات قابل شناخت: نادرست است.<br>
+- صفات شناخت ناپذیر: نادرست است.<br>
+- محرومیت از معرفت: نادرست است.<br>
+<b>نکته کلیدی:</b> خداشناسی = از رهگذر اوصاف و افعال
+</div>
+</div>
+
+<div class="card question" data-search="خلف وعده کذب ظلم حکمت دوری فعل قبیح">
+<span class="qnum">سوال ۱۴</span>
+<div class="fa"><b>متن سوال:</b> خداوند هیچگاه مرتکب خلف وعده کذب و نیز ظلم نمی‌گردد اشاره به معنای حکمت است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دوری از انجام فعل قبیح و ناشایست</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حکمت یعنی خدا از انجام فعل قبیح و ناشایست دور است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- افعال در غایت کمال: بخشی از حکمت است.<br>
+- معرفت به حقایق: مربوط به علم است.<br>
+- اساس غایات معقول: بخشی از حکمت است.<br>
+<b>نکته کلیدی:</b> حکمت = دوری از فعل قبیح
+</div>
+</div>
+
+<div class="card question" data-search="اصل علیت هر موجود ممکن نیازمند علت">
+<span class="qnum">سوال ۱۵</span>
+<div class="fa"><b>متن سوال:</b> مفاد اصل علیت چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هر موجود ممکنی نیازمند علت است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> اصل علیت یعنی هر موجود ممکنی برای وجودش نیازمند علت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ممکن وابسته نیست: نادرست است.<br>
+- ممکن ضرورت دارد: نادرست است.<br>
+- هر موجودی نیازمند علت: شامل واجب هم می‌شود که نادرست است.<br>
+<b>نکته کلیدی:</b> اصل علیت = ممکن نیازمند علت
+</div>
+</div>
+
+<div class="card question" data-search="سر تمام نماز آخرین منزل تقرب سجده">
+<span class="qnum">سوال ۱۶</span>
+<div class="fa"><b>متن سوال:</b> در نزد اهل معرفت سرّ تمام نماز و آخرین منزل تقرب به محبوب کدامین گزینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">سجده</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در نزد اهل معرفت، سجده سرّ تمام نماز و آخرین منزل تقرب به خداست.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- سلام: پایان نماز است.<br>
+- رکوع: بخشی از نماز است.<br>
+- تشهد: بخشی از نماز است.<br>
+<b>نکته کلیدی:</b> سرّ نماز = سجده
+</div>
+</div>
+
+<div class="card question" data-search="حیات خدا ازلی عین ذات نامحدود">
+<span class="qnum">سوال ۱۷</span>
+<div class="fa"><b>متن سوال:</b> چرا حیات خداوند ازلی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">زیرا حیات عین ذات اوست و به تبع ذات غیر متناهی و نامحدود است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حیات خدا عین ذات اوست و چون ذاتش نامحدود است، حیاتش هم ازلی و ابدی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- حیات حادث: نادرست است.<br>
+- صفت عرضی: نادرست است.<br>
+- متناهی: نادرست است.<br>
+<b>نکته کلیدی:</b> حیات خدا = عین ذات + نامحدود
+</div>
+</div>
+
+<div class="card question" data-search="شالوده نظام اخلاقی اسلام توحید">
+<span class="qnum">سوال ۱۸</span>
+<div class="fa"><b>متن سوال:</b> شالوده نظام اخلاقی اسلام بر کدام اصل استوار است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">توحید</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شالوده نظام اخلاقی اسلام توحید است؛ یعنی همه ارزش‌های اخلاقی بر پایه باور به یگانگی خدا استوارند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- علم: ابزار است.<br>
+- قدرت: صفت است.<br>
+- اراده: صفت است.<br>
+<b>نکته کلیدی:</b> شالوده اخلاق اسلامی = توحید
+</div>
+</div>
+
+<div class="card question" data-search="نیت اولیای الهی عزم اطاعت تعظیم ربوبی">
+<span class="qnum">سوال ۱۹</span>
+<div class="fa"><b>متن سوال:</b> نیت در نزد اولیای الهی به چه معنا است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عزم بر اطاعت همراه با تعظیم و بزرگداشت مقام ربوبی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> نیت در نزد اولیای الهی یعنی عزم بر اطاعت خدا همراه با تعظیم و بزرگداشت مقام ربوبی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- از سر اشتیاق: ناقص است.<br>
+- از سر طمع: نادرست است.<br>
+- برای فنا: ناقص است.<br>
+<b>نکته کلیدی:</b> نیت اولیا = عزم + تعظیم
+</div>
+</div>
+
+<div class="card question" data-search="راههای عمومی خدایابی دل تجربه عقل">
+<span class="qnum">سوال ۲۰</span>
+<div class="fa"><b>متن سوال:</b> عمده‌ترین راه‌های عمومی خدایابی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">راه دل - راه تجربه - راه عقل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راه‌های عمومی خدایابی شامل راه دل، راه تجربه و راه عقل است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شناخت اوصاف: بخشی از راه است.<br>
+- رابطه خدا با جهان: بخشی از بحث است.<br>
+- رابطه خدا با انسان: بخشی از بحث است.<br>
+<b>نکته کلیدی:</b> راه‌های خدایابی = دل + تجربه + عقل
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۲ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>خداشناسی</h3></div>
+<div class="grid2">
+<div class="box"><h4>راه‌های خدایابی</h4>
+<div class="fa">دل + تجربه + عقل</div>
+</div>
+<div class="box"><h4>خداشناسی</h4>
+<div class="fa">از رهگذر اوصاف و افعال</div>
+</div>
+<div class="box"><h4>حکمت</h4>
+<div class="fa">دوری از فعل قبیح</div>
+</div>
+<div class="box"><h4>حیات خدا</h4>
+<div class="fa">عین ذات + نامحدود</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انسان‌شناسی</h3></div>
+<div class="grid2">
+<div class="box"><h4>امانت الهی</h4>
+<div class="fa">اختیار</div>
+</div>
+<div class="box"><h4>کرامت عمومی</h4>
+<div class="fa">همه انسان‌ها</div>
+</div>
+<div class="box"><h4>مسخر گیتی</h4>
+<div class="fa">کرامت ذات انسانی</div>
+</div>
+<div class="box"><h4>خلقت انسان</h4>
+<div class="fa">تکمیل جسم + دمیدن روح</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرشتگان و غیب</h3></div>
+<div class="fa"><b>اولین ویژگی پرهیزگاران:</b> ایمان به عالم غیب</div>
+<div class="fa"><b>فرشتگان:</b> سرشت عقلانی + مراتب + رسالت</div>
+<div class="fa"><b>یوم القیامة:</b> روز برخاستن</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اصول و مبانی</h3></div>
+<div class="fa"><b>اصل علیت:</b> ممکن نیازمند علت</div>
+<div class="fa"><b>محال:</b> نقصان در قابل نه فاعل</div>
+<div class="fa"><b>شالوده اخلاق اسلامی:</b> توحید</div>
+<div class="fa"><b>نیت اولیا:</b> عزم + تعظیم</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عبادت</h3></div>
+<div class="fa"><b>سرّ نماز:</b> سجده</div>
+<div class="fa"><b>جهان‌شناسی علمی:</b> شناخت قوانین طبیعت</div>
+<div class="fa"><b>انشاءنا:</b> خلقت گوهر روحانی</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">تعریف ساده و قابل فهم + نکته امتحانی برای هر مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>ایمان به غیب</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی باور به چیزهایی که با حس قابل درک نیستند (مثل خدا، فرشتگان، قیامت).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اولین ویژگی پرهیزگاران = ایمان به غیب
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امانت الهی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی مسئولیتی که خدا به انسان داد و آسمان و زمین نتوانستند آن را بپذیرند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امانت الهی = اختیار
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جهان‌شناسی علمی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی شناخت پدیده‌ها و قوانین طبیعت و چیرگی بر آن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شناخت قوانین طبیعت = جهان‌شناسی علمی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کرامت ذاتی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی ارزش و شرافتی که همه انسان‌ها به خاطر انسان بودنشان دارند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کرامت عمومی = همه انسان‌ها
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وابستگی وجودی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی انسان در وجودش کاملاً وابسته به خداست و بدون خدا هیچ است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فقر الی الله = وابستگی وجودی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>یوم القیامة</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی روز برخاستن و زنده شدن مردگان.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> یوم القیامة = روز برخاستن
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انشاء</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی ایجاد و آفرینش بدون ماده قبلی که اشاره به خلقت گوهر روحانی دارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> انشاءنا = خلقت گوهر روحانی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>محال ذاتی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی چیزی که در ذات خودش محال است و به چیز دیگری وابسته نیست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> محال = نقصان در قابل نه فاعل
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اصل علیت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی هر موجود ممکنی برای وجودش نیازمند علت است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اصل علیت = ممکن نیازمند علت
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حکمت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی خدا افعال خود را بر اساس اهداف معقول انجام می‌دهد و از فعل قبیح دور است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حکمت = دوری از فعل قبیح
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سجده</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی سرّ تمام نماز و آخرین منزل تقرب به خدا.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سرّ نماز = سجده
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توحید</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی باور به یگانگی خدا که شالوده نظام اخلاقی اسلام است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شالوده اخلاق اسلامی = توحید
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نیت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی عزم بر اطاعت خدا همراه با تعظیم و بزرگداشت مقام ربوبی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نیت اولیا = عزم + تعظیم
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۴ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">تفاوت ساده و نکته امتحانی برای هر جفت مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>جهان‌شناسی علمی vs دینی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> علمی = شناخت قوانین طبیعت / دینی = شناخت جهان از منظر دین</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علمی = قوانین طبیعت
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انسان‌شناسی فلسفی vs دینی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> فلسفی = با عقل / دینی = با وحی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فلسفی = عقل
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کرامت عمومی vs کرامت اختصاصی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> عمومی = همه انسان‌ها / اختصاصی = مؤمنان و صالحان</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عمومی = همه انسان‌ها
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلقنا vs انشاءنا</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> خلقنا = آفرینش با ماده قبلی / انشاءنا = آفرینش بدون ماده (روح)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> انشاءنا = گوهر روحانی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>محال ذاتی vs محال وقوعی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> ذاتی = فی حد نفسه محال / وقوعی = به خاطر شرایط خارجی محال</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> محال = نقصان در قابل
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>یوم القیامة vs یوم الازفة</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> القیامة = روز برخاستن / الازفة = روز بسیار نزدیک</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> القیامة = برخاستن
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۵ · شخصیت‌ها و نشانه‌های تشخیصی</h2>
+<p class="section-sub">هر شخصیت + نظر ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>مفسران</h3></div>
+<div class="fa"><b>کی بودند:</b> مفسران قرآن</div>
+<div class="fa"><b>نظر ساده:</b> امانت الهی را اختیار و تکلیف انسان می‌دانند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امانت الهی = اختیار
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهل معرفت</h3></div>
+<div class="fa"><b>کی بودند:</b> عارفان و اهل سلوک</div>
+<div class="fa"><b>نظر ساده:</b> سرّ تمام نماز و آخرین منزل تقرب به خدا، سجده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سرّ نماز = سجده
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اولیای الهی</h3></div>
+<div class="fa"><b>کی بودند:</b> بندگان خاص خدا</div>
+<div class="fa"><b>نظر ساده:</b> نیت یعنی عزم بر اطاعت همراه با تعظیم مقام ربوبی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نیت اولیا = عزم + تعظیم
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>متکلمان</h3></div>
+<div class="fa"><b>کی بودند:</b> علمای علم کلام</div>
+<div class="fa"><b>نظر ساده:</b> محال ذاتی و وقوعی، نقصان در قابل است نه فاعل.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> محال = نقصان در قابل
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">دام چیه + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: اولین ویژگی پرهیزگاران</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی انفاق اولین ویژگیه.</div>
+<div class="fa"><b>جواب درست:</b> ایمان به عالم غیب</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اولین = ایمان به غیب
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: امانت الهی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی امانت الهی علم یا اخلاقه.</div>
+<div class="fa"><b>جواب درست:</b> اختیار</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امانت = اختیار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: جهان‌شناسی علمی vs دینی</h3>
+<div class="fa"><b>دام چیه:</b> جهان‌شناسی علمی و دینی رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> شناخت قوانین طبیعت = علمی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علمی = قوانین طبیعت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: یوم القیامة vs یوم الازفة</h3>
+<div class="fa"><b>دام چیه:</b> یوم القیامة و یوم الازفة رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> القیامة = برخاستن / الازفة = نزدیک</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> القیامة = برخاستن
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: انشاءنا vs خلقنا</h3>
+<div class="fa"><b>دام چیه:</b> انشاءنا و خلقنا رو یکی می‌دونی.</div>
+<div class="fa"><b>جواب درست:</b> انشاءنا = بدون ماده (روح)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> انشاءنا = گوهر روحانی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: محال ذاتی و فاعل</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی محال ذاتی به خدا مربوطه.</div>
+<div class="fa"><b>جواب درست:</b> نقصان در قابل نه فاعل</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> محال = قابل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: کرامت عمومی vs اختصاصی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی کرامت فقط مال مؤمنانه.</div>
+<div class="fa"><b>جواب درست:</b> کرامت عمومی = همه انسان‌ها</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عمومی = همه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: سرّ نماز</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی رکوع یا تشهد سرّ نمازه.</div>
+<div class="fa"><b>جواب درست:</b> سجده</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سرّ نماز = سجده
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 07 · معارف اسلامی · ۲۰ سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{q:"نخستین ویژگی پرهیزگاران در قرآن چیست؟",options:["ایمان به عالم غیب","ایمان به شهادت","انفاق","هیچکدام"],answer:0,explanation:"اولین ویژگی = ایمان به غیب."},
+{q:"امانت الهی که انسان پذیرفت چیست؟",options:["اخلاق","اختیار","علم","توبت"],answer:1,explanation:"امانت الهی = اختیار."},
+{q:"شناخت قوانین طبیعت و چیرگی بر آن چیست؟",options:["انسان‌شناسی فلسفی","جهان‌شناسی دینی","جهان‌شناسی علمی","انسان‌شناسی دینی"],answer:2,explanation:"جهان‌شناسی علمی."},
+{q:"آیه «و ما منا الا له مقام معلوم» به چه اشاره دارد؟",options:["اوصاف و مراتب فرشتگان","ماهیت فرشتگان","عصمت فرشتگان","رسالت الهی"],answer:0,explanation:"اوصاف و مراتب فرشتگان."},
+{q:"آیه «انتم الفقراء الی الله» به چه اشاره دارد؟",options:["وابستگی جسمی","وابستگی مالی","وابستگی وجودی","وابستگی عقلی"],answer:2,explanation:"وابستگی وجودی."},
+{q:"«یوم القیامة» کدام ویژگی را بیان می‌کند؟",options:["روز برخاستن","روز جمع شدن","روز نزدیک","روز برانگیخته شدن"],answer:0,explanation:"یوم القیامة = روز برخاستن."},
+{q:"کدام گزینه در مورد فرشتگان صحیح است؟",options:["سرشت عقلانی","غیرمحسوس","رسالت الهی","همه موارد"],answer:3,explanation:"همه موارد صحیح است."},
+{q:"مسخر گیتی برای انسان نشانه چیست؟",options:["کرامت ذات انسانی","امانتدار الهی","جهان کارگزار","مسجود فرشتگان"],answer:0,explanation:"کرامت ذات انسانی."},
+{q:"«انشاءنا» به چه اشاره دارد؟",options:["مراقبت از بدن","خلقت روح قبل از جسم","خلقت گوهر روحانی","خلقت بعد جسمانی"],answer:2,explanation:"خلقت گوهر روحانی."},
+{q:"کدام گزینه صحیح است؟",options:["کاملاً مادی","اصالت جسمانی","تکمیل جسم سپس روح","ماهیت جسم پیچیده"],answer:2,explanation:"تکمیل جسم سپس دمیدن روح."},
+{q:"علت عدم تعلق قدرت به محالات چیست؟",options:["نقصان به فاعل","محدودیت حکمت","محدودیت قدرت","نقصان به قابل"],answer:3,explanation:"نقصان به قابل نه فاعل."},
+{q:"مقصود از کرامت عمومی چیست؟",options:["شامل حضرت آدم","شامل همه آدمیان","شامل برخی","شامل صالحین"],answer:1,explanation:"کرامت عمومی = همه انسان‌ها."},
+{q:"کدام گزینه صحیح است؟",options:["ذات قابل شناخت","صفات شناخت ناپذیر","خداشناسی از اوصاف و افعال","محرومیت از معرفت"],answer:2,explanation:"خداشناسی از اوصاف و افعال."},
+{q:"خدا مرتکب خلف وعده نمی‌شود اشاره به کدام معنای حکمت است؟",options:["افعال در غایت کمال","دوری از فعل قبیح","معرفت به حقایق","غایات معقول"],answer:1,explanation:"دوری از فعل قبیح."},
+{q:"مفاد اصل علیت چیست؟",options:["ممکن وابسته نیست","هر ممکن نیازمند علت","ممکن ضرورت دارد","هر موجودی نیازمند علت"],answer:1,explanation:"ممکن نیازمند علت."},
+{q:"سرّ تمام نماز چیست؟",options:["سلام","سجده","رکوع","تشهد"],answer:1,explanation:"سرّ نماز = سجده."},
+{q:"چرا حیات خدا ازلی است؟",options:["عین ذات و نامحدود","حادث","عرضی","متناهی"],answer:0,explanation:"حیات عین ذات و نامحدود."},
+{q:"شالوده نظام اخلاقی اسلام چیست؟",options:["علم","قدرت","اراده","توحید"],answer:3,explanation:"شالوده اخلاق = توحید."},
+{q:"نیت در نزد اولیای الهی چیست؟",options:["عزم + تعظیم","از سر اشتیاق","از سر طمع","برای فنا"],answer:0,explanation:"عزم + تعظیم."},
+{q:"راه‌های عمومی خدایابی کدام است؟",options:["شناخت اوصاف","دل-تجربه-عقل","رابطه با جهان","رابطه با انسان"],answer:1,explanation:"دل + تجربه + عقل."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

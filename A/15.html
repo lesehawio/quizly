@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · معاد و معنابخشی به زندگی · سری 15</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"15";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>معاد و معنابخشی به زندگی · سری 15</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>معاد و معنابخشی به زندگی</h2>
+  <p>جزوه جامع امتحانی · تعریف ساده + نکته امتحانی + دام آزمون · ویژه آزمون چهارگزینه‌ای</p>
+  <div class="pills"><span class="pill">۵ بخش</span><span class="pill">۲ رویکرد اصلی</span><span class="pill">۱۵+ مفهوم</span><span class="pill">۷ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان ساده و برای آمادگی امتحان چهارگزینه‌ای طراحی شده است. هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۵</b><span>بخش اصلی</span></div>
+<div class="stat"><b>۲</b><span>رویکرد اصلی</span></div>
+<div class="stat"><b>۱۵+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۷</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>دو رویکرد به معنای زندگی</h3></div>
+<div class="grid2">
+<div class="box"><h4>کشف معنا</h4>
+<div class="fa">زندگی در ذات خود دارای معنا، ارزش و غایت است (اسلام)</div>
+</div>
+<div class="box"><h4>جعل معنا</h4>
+<div class="fa">زندگی ذاتاً بی‌معناست؛ انسان باید به آن معنا بخشد (فرانکل، استیس)</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علل احساس پوچی</h3></div>
+<div class="grid2">
+<div class="box"><h4>آرمان‌های زودگذر</h4>
+<div class="fa">وابستگی به آرمان‌های موقت</div>
+</div>
+<div class="box"><h4>خیال‌بافی و پندارهای پوچ</h4>
+<div class="fa">تعمیم پندارهای ذهنی به همه انسان‌ها</div>
+</div>
+<div class="box"><h4>مکاتب فلسفی و تکنولوژی</h4>
+<div class="fa">نگاه مادی و ابزاری به انسان</div>
+</div>
+<div class="box"><h4>دو جنگ جهانی</h4>
+<div class="fa">کشتار و ویرانی = خلأ وجودی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفاهیم کلیدی</h3></div>
+<div class="fa"><b>خلأ وجودی:</b> پوچی و بی‌معنایی در زندگی (ویکتور فرانکل)</div>
+<div class="fa"><b>بی‌قراری:</b> از نشانه‌های دوره جدید و مدرنیته (گابریل مارسل)</div>
+<div class="fa"><b>جنون فناوری:</b> نگرش افراطی به تکنولوژی (گابریل مارسل)</div>
+<div class="fa"><b>روحیه تملک:</b> حرص و طمع برای در اختیار گرفتن همه‌چیز (گابریل مارسل)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه‌حل اسلام: کشف معنا</h3></div>
+<div class="fa"><b>نکته کلیدی:</b> حذف یا غفلت از خداوند = بی‌معنایی + انکار معاد</div>
+<div class="fa"><b>کلام امیرالمؤمنین:</b> «الدنیا خلقت لغیرها و لم تخلق لنفسها» — دنیا برای آخرت آفریده شده، نه برای خود.</div>
+<div class="fa"><b>ذکر و یاد خدا:</b> «أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ» — با یاد خدا دل‌ها آرامش می‌یابد.</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>معنای زندگی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> مقصود از معنای زندگی این است که آیا زندگی چندین ساله انسان که آمیخته‌ای از خوشی‌ها و ناخوشی‌هاست، ارزش ادامه و استمرار دارد یا نه؟</div>
+<div class="fa"><b>دو جهت بحث:</b></div>
+<div class="fa">۱. آیا برای زندگی غایت و هدفی فراتر از اهداف روزمره وجود دارد؟</div>
+<div class="fa">۲. چه معتقد به معاد باشیم و چه نباشیم، آیا همین چند روز زندگی می‌تواند برخوردار از چنان اهداف عالی باشد که زندگی را توجیه کند؟</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معنای زندگی = ارزش ادامه و استمرار زندگی + هدف فراتر از اهداف روزمره. اگر سوال پرسید «مقصود از معنای زندگی چیست؟» جواب: ارزش ادامه زندگی و هدف فراتر از اهداف روزمره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو رویکرد به معنای زندگی</h3></div>
+<div class="fa"><b>کشف معنا:</b> معتقد است زندگی در ذات خود دارای معنا، ارزش و غایت است. (اسلام و متفکران مسلمان)</div>
+<div class="fa"><b>جعل معنا:</b> معتقد است زندگی ذاتاً بی‌معناست و انسان باید به آن معنا بخشد. (ویکتور فرانکل، والتر استیس، مادی‌گرایان)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کشف معنا = اسلام / جعل معنا = فرانکل و استیس. اگر سوال پرسید «راه‌حل اسلام برای معنای زندگی چیست؟» جواب: کشف معنا.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> فرانکل و استیس را به عنوان طرفداران کشف معنا معرفی نکنید. آنها طرفدار جعل معنا هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلأ وجودی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> به عقیده ویکتور فرانکل، کسانی که می‌پندارند زندگی نه هدفی دارد و نه مقصدی، علمی برای زنده بودن ندارند و در خلأ وجودی به‌سر می‌برند.</div>
+<div class="fa"><b>نشانه‌ها:</b> احساس پوچی، بی‌معنایی، ناامیدی، خودکشی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلأ وجودی = بی‌معنایی در زندگی (ویکتور فرانکل). اگر سوال پرسید «خلأ وجودی از کیست؟» جواب: ویکتور فرانکل.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بی‌قراری</h3></div>
+<div class="fa"><b>تعریف ساده:</b> به عقیده گابریل مارسل، بی‌قراری از نشانه‌ها و شاخصه‌های دوره جدید و مدرنیته است.</div>
+<div class="fa"><b>علل:</b> از دست دادن یقین نسبت به ماهیت انسان، بیگانگی با خود، گم کردن راه در هستی، تکنولوژی و جنون فناوری.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بی‌قراری = نشانه دوره جدید (گابریل مارسل). اگر سوال پرسید «بی‌قراری از کیست؟» جواب: گابریل مارسل.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جنون فناوری</h3></div>
+<div class="fa"><b>تعریف ساده:</b> نگرش افراطی به تکنولوژی که انسان را به مرتبه‌ای می‌برد که اصل زندگی و هستی او را تهدید می‌کند.</div>
+<div class="fa"><b>نظر گابریل مارسل:</b> استفاده از تکنولوژی موهبتی است که خدا به انسان داده است؛ اما آنچه برای روح انسان خطرناک است نگرش افراطی به تکنولوژی است.</div>
+<div class="fa"><b>خطرات:</b> انسان را وسوسه می‌کند خود را تنها ارزش‌آفرین هستی بداند + تواضع را از دست می‌دهد + به فروپاشی زندگی می‌انجامد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جنون فناوری = نگرش افراطی به تکنولوژی (گابریل مارسل). اگر سوال پرسید «جنون فناوری چیست؟» جواب: نگرش افراطی به تکنولوژی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روحیه تملک</h3></div>
+<div class="fa"><b>تعریف ساده:</b> به عقیده گابریل مارسل، روحیه تملک از مهم‌ترین عوامل بی‌قراری انسان است. یعنی انسان همواره حرص و طمع دارد که همه‌چیز را به تملک خود درآورد.</div>
+<div class="fa"><b>سه تمایل ناشی از روحیه تملک:</b></div>
+<div class="fa">۱. تمایل به مطیع کردن همه‌چیز و نگرش کاربردی و ابزاری به همه‌چیز به‌ویژه انسان.</div>
+<div class="fa">۲. دل‌بستگی و دل‌مشغولی به اشیاء.</div>
+<div class="fa">۳. تمایل به طرد دیگران از تصاحب آنها.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روحیه تملک = حرص و طمع برای در اختیار گرفتن همه‌چیز (گابریل مارسل). اگر سوال پرسید «روحیه تملک چیست؟» جواب: حرص و طمع برای در اختیار گرفتن همه‌چیز.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌نژندی و روان‌پریشی</h3></div>
+<div class="fa"><b>روان‌نژندی (neurosis):</b> اختلال خفیف ذهنی است که ویژگی آن ناآگاهی بیمار از ناراحتی خود، کشمکش‌ها، تعارض‌ها و واکنش‌های ناشی از اضطراب و لطمه‌دیدن جزیی از شخصیت است و همراه با اختلال‌های گوارشی، رفتارهای ناشی از وسواس‌ها و اجبارهای درونی همراه است.</div>
+<div class="fa"><b>روان‌پریشی (psychosis):</b> اختلال شدید ذهنی است که ویژگی آن بی‌نظمی روند تفکر، اختلالات هیجانی و عاطفی، تشخیص ندادن زمان و مکان و اشخاص و در مواردی هذیان‌گویی و توهم است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روان‌نژندی = اختلال خفیف / روان‌پریشی = اختلال شدید. اگر سوال پرسید «تفاوت روان‌نژندی و روان‌پریشی چیست؟» جواب: روان‌نژندی خفیف، روان‌پریشی شدید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اراده معطوف به معنا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> ویکتور فرانکل برای حل مشکل احساس بی‌معنایی در زندگی، اراده معطوف به معنا را پیشنهاد می‌کند.</div>
+<div class="fa"><b>نظر فرانکل:</b> هیچ‌کس و هیچ‌چیز نه پدر، مادر، همسر و نه مردم نمی‌توانند به ما احساس معنا و منظور در زندگی بدهند. این مسئولیت خود ماست که راهمان را پیدا کنیم و وقتی یافتیم، در آن پایداری کنیم.</div>
+<div class="fa"><b>نقد:</b> این نظریه مبتنی بر اصول و مبانی فلسفی و دینی بیان نشده است؛ بلکه برخاسته از تجربه شخصی و حاصل اتفاقاتی است که در اردوگاه‌های اجباری آلمان‌ها در جنگ جهانی دوم اتفاق افتاده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اراده معطوف به معنا = راه‌حل فرانکل (جعل معنا). اگر سوال پرسید «راه‌حل فرانکل چیست؟» جواب: اراده معطوف به معنا (جعل معنا).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه‌حل اسلام: کشف معنا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> اسلام مکتبی جامع و کامل است که معارف آن دربرگیرنده همه نیازهای جسمی و روحی انسان است. بهترین و جامع‌ترین راه‌حل در جستجوی معنای زندگی، در این مکتب یافت می‌شود.</div>
+<div class="fa"><b>نکته کلیدی:</b> حذف یا غفلت و نادیده گرفتن حضور خداوند در زندگی، انسان را به سمت بی‌معنایی سوق خواهد داد. با حذف یا غفلت از خداوند، معاد نیز انکار خواهد شد و افق‌های واقعی به روی انسان بسته می‌گردد.</div>
+<div class="fa"><b>علامه طباطبائی:</b> دنیا و کالاهای آن برای کسی که از یاد خدا اعراض می‌کند و به پروردگار خود ایمان نمی‌آورد، نه حُسنی دارد و نه گشایش و توسعه‌ای در زندگی او ایجاد می‌کند؛ هرچند به ظاهر ثروت و مقام برتری در دنیا داشته باشد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کشف معنا = راه‌حل اسلام. اگر سوال پرسید «راه‌حل اسلام برای معنای زندگی چیست؟» جواب: کشف معنا + توجه به معاد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ذکر و یاد خدا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> ذکر و یاد خدا دل‌ها را آرام و مطمئن می‌کند؛ زیرا انسان در زندگی خود هم‌وغمی جز رسیدن به سعادت و نعمت و نگرانی جز گرفتاری و بدبختی ندارد.</div>
+<div class="fa"><b>آیه:</b> «أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ» (رعد/۲۸)</div>
+<div class="fa"><b>نظر علامه طباطبائی:</b> یاد خدا برای کسی که گرفتار حوادث است و همواره در جستجوی تکیه‌گاهی استوار است تا سعادت او را تضمین کند و برای کسی که متحیر است و نمی‌داند به کجا رود و او را به کجا می‌برند، نوش‌دارویی است که مایه انبساط و آرامش او را فراهم می‌کند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ذکر خدا = آرامش قلب. اگر سوال پرسید «نتیجه ذکر چیست؟» جواب: آرامش قلب.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کلام امیرالمؤمنین (ع) درباره معنای زندگی</h3></div>
+<div class="fa"><b>۱. «الدنیا خلقت لغیرها و لم تخلق لنفسها»</b> — دنیا برای رسیدن به آخرت آفریده شده است، نه برای رسیدن به خود.</div>
+<div class="fa"><b>۲. «فان الله سبحانه لم یخلقکم عباً و لم یرسلکم سدى»</b> — همانا خدای سبحان شما را بیهوده نیافرید و به حال خود وانگذاشت.</div>
+<div class="fa"><b>۳. «ایها الناس انما الدنیا دار مجاز و الآخره دار قرار فخذوا من ممراکم لمقرکم»</b> — ای مردم! دنیا سرای گذار و آخرت خانه جاودان است. پس از گذرگاه خویش برای سرمنزل جاودانه توشه برگیرید.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کلام امیرالمؤمنین = دنیا دار مجاز، آخرت دار قرار. اگر سوال پرسید «نظر امام علی درباره دنیا چیست؟» جواب: دنیا سرای گذار و آخرت خانه جاودان.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظر علامه جعفری درباره درک معنای زندگی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> انسان باید از جایگاه خود در جهان هستی آگاه باشد و بداند او به منزله کلمه نیست که در کتاب تاریخ بشری افتاده باشد و هیچ وظیفه و الزامی برای تعیین جایگاه و نقش خود در این کتاب نداشته باشد.</div>
+<div class="fa">قانون الهی به انسان می‌گوید: تو در کتاب هستی قرار گرفته‌ای و همان ارزشی را داری که کتاب هستی دارد و تو هرگز در این کتاب، حرف ربط نیستی.</div>
+<div class="fa">شرط اساسی فهم معنای زندگی تأمل در «خود» و «شناخت هویت خود» است و نقطه آغازین شناخت خویشتن خویش، پاسخ به این پرسش‌هاست: من کیستم؟ از کجا آمده‌ام؟</div>
+<div class="fa">در توجه به خود باید از «خود طبیعی» و «حیات طبیعی محض» فراتر رفته و به «خود حقیقی» و «حیات معقول» نزدیک شد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شرط اساسی فهم معنای زندگی = شناخت هویت خود (علامه جعفری). اگر سوال پرسید «شرط اساسی فهم معنای زندگی چیست؟» جواب: شناخت هویت خود.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">هر جفت مفهوم + تفاوت ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>کشف معنا vs جعل معنا</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>کشف معنا</th><th>جعل معنا</th></tr></thead>
+<tbody>
+<tr><td>ماهیت</td><td>زندگی در ذات خود دارای معنا، ارزش و غایت است</td><td>زندگی ذاتاً بی‌معناست؛ انسان باید به آن معنا بخشد</td></tr>
+<tr><td>طرفداران</td><td>اسلام، متفکران مسلمان</td><td>ویکتور فرانکل، والتر استیس، مادی‌گرایان</td></tr>
+<tr><td>نقد</td><td>—</td><td>مبتنی بر اصول فلسفی و دینی نیست؛ برخاسته از تجربه شخصی است</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کشف معنا = اسلام / جعل معنا = فرانکل و استیس. اگر سوال پرسید «تفاوت کشف معنا و جعل معنا چیست؟» این دو رویکرد را مدنظر داشته باشید.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> فرانکل و استیس را طرفدار کشف معنا معرفی نکنید. آنها طرفدار جعل معنا هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌نژندی vs روان‌پریشی</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>روان‌نژندی (neurosis)</th><th>روان‌پریشی (psychosis)</th></tr></thead>
+<tbody>
+<tr><td>شدت</td><td>اختلال خفیف ذهنی</td><td>اختلال شدید ذهنی</td></tr>
+<tr><td>ویژگی</td><td>ناآگاهی از ناراحتی خود، کشمکش‌ها، اضطراب</td><td>بی‌نظمی تفکر، اختلالات هیجانی، هذیان‌گویی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روان‌نژندی = خفیف / روان‌پریشی = شدید. اگر سوال پرسید «تفاوت روان‌نژندی و روان‌پریشی چیست؟» جواب: خفیف vs شدید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلأ وجودی vs بی‌قراری</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> خلأ وجودی = بی‌معنایی در زندگی (ویکتور فرانکل) / بی‌قراری = نشانه دوره جدید (گابریل مارسل)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلأ وجودی = فرانکل / بی‌قراری = مارسل. اگر سوال پرسید «خلأ وجودی از کیست؟» جواب: ویکتور فرانکل.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جنون فناوری vs روحیه تملک</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> جنون فناوری = نگرش افراطی به تکنولوژی / روحیه تملک = حرص و طمع برای در اختیار گرفتن همه‌چیز</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هر دو از گابریل مارسل. اگر سوال پرسید «جنون فناوری چیست؟» جواب: نگرش افراطی به تکنولوژی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دنیا vs آخرت</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> دنیا = سرای گذار (دار مجاز) / آخرت = خانه جاودان (دار قرار)</div>
+<div class="fa"><b>کلام امیرالمؤمنین:</b> «ایها الناس انما الدنیا دار مجاز و الآخره دار قرار فخذوا من ممراکم لمقرکم»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دنیا = گذرگاه / آخرت = مقصد. اگر سوال پرسید «دنیا و آخرت در کلام امام علی چه ویژگی دارند؟» جواب: دنیا سرای گذار، آخرت خانه جاودان.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دوره جوانی vs میان‌سالی vs پیری (یونگ)</h3></div>
+<table class="compare">
+<thead><tr><th>دوره</th><th>ویژگی</th></tr></thead>
+<tbody>
+<tr><td>نوجوانی و جوانی</td><td>هدف: کسب موفقیت و یافتن جایگاه در جهان</td></tr>
+<tr><td>میان‌سالی (۴۰ سالگی)</td><td>ارزش‌های دوره جوانی (پول، جاه و مقام) معنای خود را از دست می‌دهند</td></tr>
+<tr><td>پیری و کهولت</td><td>دوران کمال شخصیت + نیاز به هدف آینده + سقوط ارزش‌های دینی زیانبار است</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> یونگ = تحول قطعی شخصیت در ۳۵ تا ۵۰ سالگی. اگر سوال پرسید «نظر یونگ درباره دوره‌های زندگی چیست؟» این سه دوره را مدنظر داشته باشید.
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۴ · شخصیت‌ها و نظریه‌پردازان</h2>
+<p class="section-sub">هر شخصیت + نظریه ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>ویکتور فرانکل (۱۹۰۵-۱۹۹۷ م)</h3></div>
+<div class="fa"><b>کی بود:</b> روان‌شناس اتریشی</div>
+<div class="fa"><b>نظریه ساده:</b> کسانی که می‌پندارند زندگی نه هدفی دارد و نه مقصدی، علمی برای زنده بودن ندارند و در خلأ وجودی به‌سر می‌برند. راه‌حل: اراده معطوف به معنا (جعل معنا).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فرانکل = خلأ وجودی + اراده معطوف به معنا. اگر سوال پرسید «خلأ وجودی از کیست؟» جواب: ویکتور فرانکل.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گابریل مارسل (۱۸۸۹-۱۹۷۳ م)</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف فرانسوی</div>
+<div class="fa"><b>نظریه ساده:</b> بی‌قراری از نشانه‌های دوره جدید و مدرنیته است. نقد تکنولوژی: جنون فناوری، تنزل منزلت آدمی، روحیه تملک.</div>
+<div class="fa"><b>نقل قول از مارسل:</b> انسان در عصر جدید، یقینش را نسبت به ماهیتش از دست داده و با خود بیگانه است. او راه خود را در هستی گم کرده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مارسل = بی‌قراری + نقد تکنولوژی + جنون فناوری + روحیه تملک. اگر سوال پرسید «نقد تکنولوژی از کیست؟» جواب: گابریل مارسل.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گوستاو یونگ (۱۸۷۵-۱۹۶۱ م)</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و روان‌پزشک سوئیسی</div>
+<div class="fa"><b>نظریه ساده:</b> برخلاف فروید که می‌گفت رشد شخصیت انسان از حدود پنج سالگی متوقف می‌شود، معتقد به تکامل شخصیت در سراسر زندگی انسان است. تحول قطعی در شخصیت را میان ۳۵ تا ۵۰ سالگی می‌دانست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> یونگ = تکامل شخصیت در سراسر زندگی + تحول قطعی در ۳۵ تا ۵۰ سالگی. اگر سوال پرسید «نظر یونگ درباره تحول شخصیت چیست؟» جواب: تکامل در سراسر زندگی، تحول قطعی در ۳۵-۵۰ سالگی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>والتر ترانس استیس (۱۸۸۸-۱۹۶۷ م)</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف قرن بیستم</div>
+<div class="fa"><b>نظریه ساده:</b> بی‌معنایی که انسان غربی گرفتار آن شده است، نتیجه نگرش مادی و پوزیتیویستی به عالم و آدم است. برای زندگی معنای ذاتی قائل نیست و جعل معنا را پیشنهاد می‌کند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> استیس = جعل معنا + نقد پوزیتیویسم. اگر سوال پرسید «جعل معنا از کیست؟» جواب: فرانکل و استیس.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علامه طباطبائی</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و مفسر معاصر</div>
+<div class="fa"><b>نظریه ساده:</b> دنیا و کالاهای آن برای کسی که از یاد خدا اعراض می‌کند و به پروردگار خود ایمان نمی‌آورد، نه حُسنی دارد و نه گشایش و توسعه‌ای در زندگی او ایجاد می‌کند؛ هرچند به ظاهر ثروت و مقام برتری در دنیا داشته باشد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبائی = زندگی حیوانی در غفلت از خدا. اگر سوال پرسید «نظر علامه طباطبائی درباره زندگی بدون خدا چیست؟» جواب: زندگی حیوانی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امام علی (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام اول شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> «الدنیا خلقت لغیرها و لم تخلق لنفسها» — دنیا برای رسیدن به آخرت آفریده شده است، نه برای رسیدن به خود. «رحمه الله امراً عرف من أین و فی أین و إلی أین» — خداوند رحمت کند آن کسی را که بداند از کجا آمده، برای چه آمده و به کجا می‌رود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام علی = دنیا گذرگاه + شناخت مبدأ و معاد. اگر سوال پرسید «کلام امام علی درباره معنای زندگی چیست؟» جواب: دنیا برای آخرت آفریده شده، نه برای خود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علامه محمدتقی جعفری</h3></div>
+<div class="fa"><b>کی بود:</b> متفکر و فیلسوف اسلامی</div>
+<div class="fa"><b>نظریه ساده:</b> شرط اساسی فهم معنای زندگی تأمل در «خود» و «شناخت هویت خود» است. در توجه به خود باید از «خود طبیعی» و «حیات طبیعی محض» فراتر رفته و به «خود حقیقی» و «حیات معقول» نزدیک شد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه جعفری = شناخت هویت خود + حیات معقول. اگر سوال پرسید «شرط اساسی فهم معنای زندگی از دیدگاه علامه جعفری چیست؟» جواب: شناخت هویت خود.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: کشف معنا vs جعل معنا</h3>
+<div class="fa"><b>دام چیه:</b> کشف معنا و جعل معنا رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> کشف معنا = اسلام / جعل معنا = فرانکل و استیس</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کشف = اسلام
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: خلأ وجودی</h3>
+<div class="fa"><b>دام چیه:</b> خلأ وجودی را به کسی غیر از فرانکل نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> خلأ وجودی = ویکتور فرانکل</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلأ وجودی = فرانکل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: بی‌قراری</h3>
+<div class="fa"><b>دام چیه:</b> بی‌قراری را به کسی غیر از مارسل نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> بی‌قراری = گابریل مارسل</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بی‌قراری = مارسل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: جنون فناوری</h3>
+<div class="fa"><b>دام چیه:</b> جنون فناوری را به کسی غیر از مارسل نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> جنون فناوری = گابریل مارسل</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جنون فناوری = مارسل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: روحیه تملک</h3>
+<div class="fa"><b>دام چیه:</b> روحیه تملک را به کسی غیر از مارسل نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> روحیه تملک = گابریل مارسل</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روحیه تملک = مارسل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: اراده معطوف به معنا</h3>
+<div class="fa"><b>دام چیه:</b> اراده معطوف به معنا را به کسی غیر از فرانکل نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> اراده معطوف به معنا = ویکتور فرانکل</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اراده معطوف به معنا = فرانکل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: روان‌نژندی vs روان‌پریشی</h3>
+<div class="fa"><b>دام چیه:</b> روان‌نژندی و روان‌پریشی رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> روان‌نژندی = خفیف / روان‌پریشی = شدید</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روان‌نژندی = خفیف
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: یونگ و تحول شخصیت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی یونگ مثل فروید می‌گوید رشد شخصیت در ۵ سالگی متوقف می‌شود.</div>
+<div class="fa"><b>جواب درست:</b> یونگ = تکامل شخصیت در سراسر زندگی + تحول قطعی در ۳۵-۵۰ سالگی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> یونگ = تکامل در سراسر زندگی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: شرط فهم معنای زندگی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی شرط فهم معنای زندگی «شناخت جامعه» است.</div>
+<div class="fa"><b>جواب درست:</b> شناخت هویت خود (علامه جعفری)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شرط فهم معنای زندگی = شناخت هویت خود
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: دنیا و آخرت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دنیا خانه جاودان است.</div>
+<div class="fa"><b>جواب درست:</b> دنیا = سرای گذار / آخرت = خانه جاودان</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دنیا = گذرگاه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: علل احساس پوچی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط یک علت برای احساس پوچی وجود دارد.</div>
+<div class="fa"><b>جواب درست:</b> ۴ علت = آرمان‌های زودگذر + خیال‌بافی + مکاتب فلسفی و تکنولوژی + دو جنگ جهانی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۴ علت احساس پوچی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: حذف خداوند و بی‌معنایی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی حذف خداوند تأثیری در بی‌معنایی ندارد.</div>
+<div class="fa"><b>جواب درست:</b> حذف یا غفلت از خداوند = بی‌معنایی + انکار معاد</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حذف خدا = بی‌معنایی
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 15 · معاد و معنابخشی به زندگی · جزوه جامع امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"مقصود از معنای زندگی چیست؟",options:["ارزش ادامه و استمرار زندگی + هدف فراتر از اهداف روزمره","فقط هدف روزمره","فقط ارزش مادی","فقط خوشی"],answer:0,explanation:"معنای زندگی = ارزش ادامه + هدف فراتر از اهداف روزمره."},
+{q:"راه‌حل اسلام برای معنای زندگی چیست؟",options:["جعل معنا","کشف معنا","انکار معنا","ساخت معنا"],answer:1,explanation:"اسلام = کشف معنا."},
+{q:"راه‌حل ویکتور فرانکل برای معنای زندگی چیست؟",options:["کشف معنا","جعل معنا (اراده معطوف به معنا)","انکار معنا","ساخت معنا"],answer:1,explanation:"فرانکل = جعل معنا (اراده معطوف به معنا)."},
+{q:"خلأ وجودی از کیست؟",options:["گابریل مارسل","ویکتور فرانکل","گوستاو یونگ","والتر استیس"],answer:1,explanation:"خلأ وجودی = ویکتور فرانکل."},
+{q:"بی‌قراری از کیست؟",options:["ویکتور فرانکل","گابریل مارسل","گوستاو یونگ","والتر استیس"],answer:1,explanation:"بی‌قراری = گابریل مارسل."},
+{q:"جنون فناوری از کیست؟",options:["ویکتور فرانکل","گابریل مارسل","گوستاو یونگ","والتر استیس"],answer:1,explanation:"جنون فناوری = گابریل مارسل."},
+{q:"روحیه تملک از کیست؟",options:["ویکتور فرانکل","گابریل مارسل","گوستاو یونگ","والتر استیس"],answer:1,explanation:"روحیه تملک = گابریل مارسل."},
+{q:"نظر یونگ درباره تحول شخصیت چیست؟",options:["توقف در ۵ سالگی","تکامل در سراسر زندگی + تحول قطعی در ۳۵-۵۰ سالگی","توقف در ۲۰ سالگی","تحول در ۶۰ سالگی"],answer:1,explanation:"یونگ = تکامل در سراسر زندگی، تحول قطعی در ۳۵-۵۰ سالگی."},
+{q:"والتر استیس چه راه‌حلی برای معنای زندگی پیشنهاد می‌کند؟",options:["کشف معنا","جعل معنا","انکار معنا","ساخت معنا"],answer:1,explanation:"استیس = جعل معنا."},
+{q:"روان‌نژندی چه اختلالی است؟",options:["اختلال خفیف ذهنی","اختلال شدید ذهنی","اختلال جسمی","اختلال اجتماعی"],answer:0,explanation:"روان‌نژندی = اختلال خفیف ذهنی."},
+{q:"روان‌پریشی چه اختلالی است؟",options:["اختلال خفیف ذهنی","اختلال شدید ذهنی","اختلال جسمی","اختلال اجتماعی"],answer:1,explanation:"روان‌پریشی = اختلال شدید ذهنی."},
+{q:"کدام یک از علل احساس پوچی است؟",options:["آرمان‌های زودگذر","خیال‌بافی","مکاتب فلسفی و تکنولوژی","همه موارد"],answer:3,explanation:"علل احساس پوچی = آرمان‌های زودگذر + خیال‌بافی + مکاتب فلسفی + دو جنگ جهانی."},
+{q:"نظر علامه طباطبائی درباره زندگی بدون خدا چیست؟",options:["زندگی معنادار","زندگی حیوانی","زندگی مادی","زندگی اجتماعی"],answer:1,explanation:"علامه طباطبائی = زندگی حیوانی در غفلت از خدا."},
+{q:"کلام امام علی درباره دنیا چیست؟",options:["دنیا خانه جاودان","دنیا سرای گذار (دار مجاز)","دنیا هدف اصلی","دنیا بی‌ارزش"],answer:1,explanation:"امام علی = دنیا سرای گذار (دار مجاز)."},
+{q:"کلام امام علی درباره آخرت چیست؟",options:["آخرت سرای گذار","آخرت خانه جاودان (دار قرار)","آخرت بی‌ارزش","آخرت هدف فرعی"],answer:1,explanation:"امام علی = آخرت خانه جاودان (دار قرار)."},
+{q:"شرط اساسی فهم معنای زندگی از دیدگاه علامه جعفری چیست؟",options:["شناخت جامعه","شناخت هویت خود","شناخت طبیعت","شناخت تاریخ"],answer:1,explanation:"علامه جعفری = شناخت هویت خود."},
+{q:"نتیجه ذکر و یاد خدا چیست؟",options:["اضطراب","آرامش قلب","پوچی","افسردگی"],answer:1,explanation:"ذکر = آرامش قلب."},
+{q:"حذف یا غفلت از خداوند منجر به چه می‌شود؟",options:["معناداری","بی‌معنایی + انکار معاد","آرامش","خوشبختی"],answer:1,explanation:"حذف خدا = بی‌معنایی + انکار معاد."},
+{q:"نقد راه‌حل فرانکل چیست؟",options:["مبتنی بر اصول فلسفی و دینی نیست","برخاسته از تجربه شخصی است","هر دو مورد","هیچکدام"],answer:2,explanation:"راه‌حل فرانکل = مبتنی بر اصول فلسفی و دینی نیست + برخاسته از تجربه شخصی است."},
+{q:"آیه «أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ» به چه اشاره دارد؟",options:["آرامش قلب با یاد خدا","بی‌معنایی","پوچی","افسردگی"],answer:0,explanation:"آیه به آرامش قلب با یاد خدا اشاره دارد."},
+{q:"دو رویکرد به معنای زندگی کدامند؟",options:["کشف معنا و جعل معنا","کشف معنا و انکار معنا","جعل معنا و انکار معنا","هیچکدام"],answer:0,explanation:"دو رویکرد = کشف معنا و جعل معنا."},
+{q:"کدام یک از مظاهر بی‌قراری انسان جدید است؟",options:["خودکشی","جنون فناوری","روحیه تملک","همه موارد"],answer:3,explanation:"مظاهر بی‌قراری = خودکشی + جنون فناوری + روحیه تملک."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · سنجش و اندازه‌گیری در مشاوره · سری 05 · فصل دهم: آزمون تشریحی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"05";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>سنجش و اندازه‌گیری در مشاوره · سری 05</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل دهم: آزمون تشریحی</h2>
+  <p>سنجش یادگیری به کمک آزمون تشریحی — همه چیز به زبان ساده و خودمونی</p>
+  <div class="pills"><span class="pill">هسته امتحانی</span><span class="pill">مفاهیم</span><span class="pill">تفاوت‌ها</span><span class="pill">نظریه‌پردازان</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این فصل درباره‌ی <b>آزمون تشریحی</b>ه. باید بفهمی این آزمون چیه، دو نوعش (گسترده پاسخ و محدود پاسخ) چیه، قواعد تهیه و تصحیحش چیه، امتیازها و محدودیت‌هاش چیه، و آزمون شفاهی و بیرون بردنی چیه.</div>
+
+<div class="stats">
+<div class="stat"><b>۲</b><span>نوع اصلی</span></div>
+<div class="stat"><b>۱۰</b><span>قاعده تهیه</span></div>
+<div class="stat"><b>۱۰</b><span>قاعده تصحیح</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف آزمون تشریحی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> آزمون تشریحی (انشایی) یعنی آزمونی که معلم سؤال‌ها رو می‌سازه و در اختیار دانش‌آموز می‌ذاره، و دانش‌آموز باید جواب‌ها رو <b>خودش بسازه و بنویسه</b>.</div>
+<div class="fa"><b>سه ویژگی مهم:</b></div>
+<div class="fa">۱) هیچ پاسخ واحدی برای سؤال‌ها وجود نداره که صددرصد درست باشه.</div>
+<div class="fa">۲) پاسخ‌ها از لحاظ <b>درجه کیفیت</b> با هم فرق دارن.</div>
+<div class="fa">۳) به آزمون‌شونده <b>آزادی عمل زیادی</b> داده می‌شه (خصوصاً در نوع گسترده پاسخ).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو نوع آزمون تشریحی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px;text-align:center">
+<b>گسترده پاسخ ← محدود پاسخ</b>
+</div>
+<div class="fa"><b>گسترده پاسخ:</b> آزمون‌شونده <b>آزادی کامل</b> داره (هم از لحاظ زمان، هم مقدار پاسخ). مناسب برای <b>تحلیل، ترکیب (آفرینندگی) و ارزشیابی</b>.</div>
+<div class="fa"><b>محدود پاسخ:</b> آزمون‌شونده <b>محدود</b> به موضوع خاص و مقدار مشخص پاسخه. مناسب برای <b>فهمیدن، کاربستن و تحلیل</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امتیازها و محدودیت‌ها</h3></div>
+<div class="fa" style="background:#dff7ee;border-color:#1f9d73;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵ امتیاز:</b>
+</div>
+<div class="fa">۱) تهیه‌ش از آزمون عینی <b>آسان‌تره</b>.</div>
+<div class="fa">۲) بهترین وسیله برای سنجش <b>توانایی پروراندن و سازمان دادن مطالب</b>.</div>
+<div class="fa">۳) توانایی <b>تولید پاسخ</b> رو می‌سنجه، نه گزینش پاسخ.</div>
+<div class="fa">۴) موقعیت‌های <b>واقعی‌تر</b> رو ارائه می‌ده.</div>
+<div class="fa">۵) بر <b>روش یادگیری</b> دانش‌آموزان تأثیر مثبت داره.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳ محدودیت:</b>
+</div>
+<div class="fa">۱) یه آزمون تشریحی <b>نمونه کوچکی</b> از محتوا و هدف‌ها رو می‌سنجه.</div>
+<div class="fa">۲) تصحیح پاسخ‌ها با <b>دقت کافی</b> امکان‌پذیر نیست.</div>
+<div class="fa">۳) تصحیح پاسخ‌ها <b>بسیار وقت‌گیره</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات کلیدی که حتماً باید بلد باشی</h3></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱)</b> آزمون تشریحی رو برای <b>سطوح بالای یادگیری</b> استفاده کن (تحلیل، ارزشیابی، آفریدن).
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲)</b> از کلمات واضح استفاده کن: <b>تعریف کنید، حل کنید، خلاصه کنید، طبقه‌بندی کنید</b> بهتر از «بحث کنید» و «بررسی کنید».
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳)</b> در تصحیح، پاسخ‌ها رو <b>سؤال به سؤال</b> تصحیح کن، نه برگه به برگه.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۴)</b> <b>نام صاحبان</b> برگه‌ها رو در هنگام تصحیح <b>نشناس</b>.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵)</b> <b>آزمون شفاهی</b> = نوعی آزمون تشریحی غیررسمی + برای مقاصد تشخیصی.
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با تعریف ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) آزمون تشریحی گسترده پاسخ</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> آزمون‌شونده <b>آزادی کامل</b> داره. هم از لحاظ زمان، هم از لحاظ مقدار پاسخ.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">• هیچ محدودیتی برای آزمون‌شونده نیست.</div>
+<div class="fa">• آزمون‌شونده می‌تونه هر طور که می‌خواد پاسخش رو پروراند و سازمان بده.</div>
+<div class="fa">• آزمون‌شونده باید اندیشه‌هاش رو به‌نحو <b>منطقی، منسجم و بدیع</b> روی کاغذ بیاره.</div>
+<div class="fa"><b>برای چه هدف‌هایی مناسبه:</b> <b>تحلیل، ترکیب (آفرینندگی) و ارزشیابی</b> — بالاترین طبقه‌های هدف‌های آموزشی.</div>
+<div class="fa"><b>مثال:</b> «شرطی شدن کلاسیک پاولفی و شرطی شدن کنشگر اسکینری را با هم مقایسه کنید. در توضیحات خود از کاربرد هر یک در زمینه‌های آموزشی و بالینی مثال‌هایی بیاورید.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) آزمون تشریحی محدود پاسخ</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> آزمون‌شونده <b>آزادی کامل نداره</b>. صورت سؤال، پاسخ رو محدود به موضوع و مقدار مشخص می‌کنه.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">• هم از لحاظ زمان و هم از لحاظ مقدار پاسخ محدودیت داره.</div>
+<div class="fa">• آزمون‌شونده رو محدود به جواب دادن درباره یک موضوع خاص می‌کنه.</div>
+<div class="fa">• تصحیح پاسخ‌ها <b>هماهنگ‌تر و آسان‌تره</b>.</div>
+<div class="fa">• اما آزمون‌شونده نمی‌تونه توانایی خودش رو در ترکیب کردن اندیشه‌ها ابراز کنه.</div>
+<div class="fa"><b>برای چه هدف‌هایی مناسبه:</b> <b>فهمیدن، کاربستن و تحلیل</b>.</div>
+<div class="fa"><b>برای چه هدف‌هایی مناسب نیست:</b> <b>ترکیب (خلاقیت) و ارزشیابی</b>.</div>
+<div class="fa"><b>مثال:</b> «توضیح دهید چرا فشارسنج یکی از ابزارهای مفید برای پیش‌بینی هواست. جواب خود را در یک پاراگراف بنویسید.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰ قاعده تهیه سؤال تشریحی</h3><span class="badge s">کلیدی</span></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱ — هدف آموزشی مستقیم:</b>
+</div>
+<div class="fa">سؤال‌ها باید مستقیماً به هدف‌های آموزشی مربوط باشن. چون تعداد سؤال‌ها کمه، بد بودن یک سؤال خیلی بیشتر لطمه می‌زنه. قبلش <b>جدول مشخصات</b> آماده کن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۲ — فقط برای هدف‌های بالا:</b>
+</div>
+<div class="fa">آزمون تشریحی رو فقط برای هدف‌هایی استفاده کن که با آزمون‌های دیگه قابل اندازه‌گیری نیستن. <b>برای سنجش دانش استفاده نکن</b>. گسترده پاسخ برای تحلیل، ترکیب و ارزشیابی / محدود پاسخ برای فهمیدن و کاربستن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۳ — روشنی صورت سؤال:</b>
+</div>
+<div class="fa">از کلمات واضح استفاده کن: «تعریف کنید»، «حل کنید»، «خلاصه کنید»، «طبقه‌بندی کنید» بهتر از «بحث کنید» و «بررسی کنید» هستن. اگه «توضیح دهید» و «مقایسه کنید» استفاده می‌کنی، منظور رو صریح بگو.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۴ — پرهیز از کلمات نامناسب:</b>
+</div>
+<div class="fa">از «چه کسی»، «چه وقت»، «کجا» بپرهیز. اینا فقط برای یادآوری اطلاعات جزئی مناسبن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۵ — محدود کردن پاسخ:</b>
+</div>
+<div class="fa">پاسخ آزمون‌شونده رو به یک موضوع خاص محدود کن. این کار تصحیح رو آسان‌تر می‌کنه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۶ — مشخص کردن نمره:</b>
+</div>
+<div class="fa">برای هر سؤال، نمره‌اش رو مشخص کن. این به دانش‌آموز کمک می‌کنه اهمیت نسبی سؤال‌ها رو بدونه و وقتش رو تنظیم کنه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۷ — پاسخ کامل:</b>
+</div>
+<div class="fa">سؤال‌ها رو طوری بنویس که آزمون‌شونده بتونه کامل جواب بده. سؤال‌های چندبخشی گیج‌کننده‌اند.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۸ — تناسب با زمان:</b>
+</div>
+<div class="fa">تعداد سؤال‌ها متناسب با زمان امتحان باشه. آزمون‌شونده باید بتونه در زمان تعیین‌شده جواب بده.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۹ — عدم حق انتخاب:</b>
+</div>
+<div class="fa">به آزمون‌شوندگان حق انتخاب تعدادی سؤال از میان مجموعه‌ای سؤال رو <b>نده</b>.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۰ — پرهیز از سؤال حدسی:</b>
+</div>
+<div class="fa">از سؤال‌هایی که پاسخشون رو می‌شه آسان حدس زد بپرهیز.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰ قاعده تصحیح پاسخ‌های تشریحی</h3><span class="badge s">کلیدی</span></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱ — فقط براساس هدف:</b>
+</div>
+<div class="fa">پاسخ‌ها رو فقط براساس هدفی که در سؤال گنجانیده شده تصحیح کن. از دخالت دادن نکات <b>دستوری، املایی، انشایی، خوش‌نویسی</b> خودداری کن (مگه اینکه امتحان مربوط به همون‌ها باشه).</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۲ — سؤال به سؤال، نه برگه به برگه:</b>
+</div>
+<div class="fa">اول پاسخ سؤال اول همه برگه‌ها، بعد سؤال دوم همه برگه‌ها و... . این باعث مقایسه بهتر و کاربرد <b>ملاک واحد</b> می‌شه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۳ — عدم شناسایی نام صاحبان:</b>
+</div>
+<div class="fa">در هنگام تصحیح، نام صاحبان برگه‌ها رو نشناس. از <b>سربرگ‌های جدا شدنی</b> یا <b>رمز عددی</b> استفاده کن. حتی برگه‌ها رو قبل از تصحیح <b>به هم بزن</b>.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۴ — تصحیح توسط چند نفر:</b>
+</div>
+<div class="fa">اگه ممکنه، از یکی-دو همکار بخواه سؤال‌ها رو دوباره تصحیح کنن. میانگین نمرات مصححان مستقل <b>دقیق‌تره</b>.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۵ — تصحیح پیوسته:</b>
+</div>
+<div class="fa">تمام پاسخ‌های آزمون‌شوندگان به یک سؤال رو در یک نشست و بدون وقفه زمانی تصحیح کن. چون حالات آدم از روزی به روز دیگه تغییر می‌کنه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۶ — عدم نگاه به نمرات قبلی:</b>
+</div>
+<div class="fa">به نمرات سؤال‌هایی که قبلاً تصحیح کردی نگاه نکن. این باعث استقلال تصحیح می‌شه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۷ — بازخورد دادن:</b>
+</div>
+<div class="fa">اشتباهات دانش‌آموزان رو تصحیح کن و اظهارنظرها و توضیحات کتبی <b>به‌عنوان الگوی بهبود</b> بده. (بیج، ۱۹۵۸؛ وولفلک، ۱۹۸۷)</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۸ — شیوه نمره‌گذاری یکنواخت:</b>
+</div>
+<div class="fa">از یک شیوه نمره‌گذاری یکنواخت که از قبل تعیین شده استفاده کن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۹ — ملاک واحد:</b>
+</div>
+<div class="fa">از یک ملاک واحد برای همه آزمون‌شوندگان استفاده کن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۰ — ثبت جداگانه نمرات:</b>
+</div>
+<div class="fa">نمره هر سؤال رو جداگانه ثبت کن و از جمع کردن نمرات تا پایان تصحیح خودداری کن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرسش شفاهی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> پرسش شفاهی = نوعی <b>آزمون تشریحی غیررسمی</b> که سؤال و جوابش شفاهی‌ه.</div>
+<div class="fa"><b>موارد استفاده:</b></div>
+<div class="fa">• برای <b>مقاصد تشخیصی</b> و رفع مشکلات یادگیری</div>
+<div class="fa">• برای دادن <b>بازخورد فوری</b> به دانش‌آموز و معلم</div>
+<div class="fa">• برای دانش‌آموزان <b>معلول جسمی</b> (مثل نابینا یا معلول دست)</div>
+<div class="fa">• در <b>مصاحبه‌های استخدامی</b> (مثل معلمی یا دکتری)</div>
+<div class="fa"><b>نکته مهم:</b> پرسش شفاهی برای <b>نمره دادن</b> توصیه نمی‌شه چون وقت‌گیر و غیردقیقه.</div>
+<div class="fa"><b>مزیت:</b> چون پرسشگر و پاسخ‌دهنده رو در رو هستن، <b>ابهام سؤال</b> برطرف می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نظر مهرنز و لهمان (۱۹۸۴):</b> «یک پرسشگر ماهر می‌تواند پاسخ‌هایی را در دانش‌آموزان برانگیزاند که نشان‌دهنده فرایندهای فکری او باشند.»
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آزمون بیرون بردنی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> آزمون‌شونده سؤال‌ها رو می‌گیره و به <b>خارج از کلاس</b> می‌بره (کتابخانه، منزل، اتاق کامپیوتر). می‌تونه از هر منبعی کمک بگیره و با هر کس مشورت کنه. در ساعت مقرر جواب رو تحویل می‌ده.</div>
+<div class="fa"><b>نظر ریس، براون و اسمیت (۲۰۰۵):</b> این نوع آزمون‌ها از لحاظ <b>روایی</b> خیلی خوبن، چون با زندگی واقعی منطبق‌اند. ولی مشکل <b>اعتماد کردن</b> به جواب‌ها وجود داره.</div>
+<div class="fa"><b>مثال:</b> آزمون از ۸ صبح تا ۴ بعدازظهر. می‌شه تا چند روز (مثلاً تعطیلات آخر هفته) هم گسترش داد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>موارد استفاده آزمون تشریحی</h3></div>
+<div class="fa"><b>جدول ۱۰-۱ (لین و گرانلاند، ۲۰۰۰):</b></div>
+<div class="fa"><b>سؤال محدود پاسخ:</b> تبیین روابط علت و معلولی، توصیف کاربرد اصول، ارائه دلایل، تدوین فرضیه‌ها، نتیجه‌گیری، بیان فرض‌ها، توصیف محدودیت داده‌ها، تبیین روش‌ها.</div>
+<div class="fa"><b>سؤال گسترده پاسخ:</b> تولید، سازمان دادن و بیان اندیشه‌ها، ترکیب یادگیری‌ها از زمینه‌های متفاوت، آفریدن شکل‌های نو یا اصیل، خلاصه کردن، ساختن داستان، تبیین مفاهیم، متقاعد کردن خواننده.</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>گسترده پاسخ vs محدود پاسخ</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>گسترده پاسخ</th><th>محدود پاسخ</th></tr></thead>
+<tbody>
+<tr><td>آزادی کامل آزمون‌شونده</td><td>محدودیت در پاسخ</td></tr>
+<tr><td>بدون محدودیت زمان و مقدار</td><td>محدود به موضوع و مقدار مشخص</td></tr>
+<tr><td>برای تحلیل، ترکیب، ارزشیابی</td><td>برای فهمیدن، کاربستن، تحلیل</td></tr>
+<tr><td>تصحیح سخت‌تر</td><td>تصحیح آسان‌تر</td></tr>
+<tr><td>مثال: مقایسه دو نظریه</td><td>مثال: توضیح در یک پاراگراف</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آزمون تشریحی vs آزمون عینی</h3></div>
+<table class="compare">
+<thead><tr><th>تشریحی</th><th>عینی</th></tr></thead>
+<tbody>
+<tr><td>تهیه آسان‌تر</td><td>تهیه سخت‌تر</td></tr>
+<tr><td>تصحیح سخت‌تر</td><td>تصحیح آسان‌تر</td></tr>
+<tr><td>تولید پاسخ</td><td>گزینش پاسخ</td></tr>
+<tr><td>تعداد سؤال کمتر</td><td>تعداد سؤال بیشتر</td></tr>
+<tr><td>برای سطوح بالا</td><td>برای همه سطوح</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سؤال ضعیف vs سؤال بهتر</h3></div>
+<table class="compare">
+<thead><tr><th>سؤال ضعیف</th><th>سؤال بهتر</th></tr></thead>
+<tbody>
+<tr><td>«بحث کنید»</td><td>«تعریف کنید، حل کنید»</td></tr>
+<tr><td>«چه کسی، چه وقت، کجا»</td><td>«چرا، چگونه، مقایسه کنید»</td></tr>
+<tr><td>بدون نمره مشخص</td><td>با نمره مشخص</td></tr>
+<tr><td>چندبخشی و گیج‌کننده</td><td>یک موضوع مشخص</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تصحیح برگه‌به‌برگه vs سؤال‌به‌سؤال</h3></div>
+<table class="compare">
+<thead><tr><th>برگه به برگه (غلط)</th><th>سؤال به سؤال (درست)</th></tr></thead>
+<tbody>
+<tr><td>مقایسه سخت</td><td>مقایسه راحت</td></tr>
+<tr><td>ملاک واحد مشکل</td><td>ملاک واحد آسان</td></tr>
+<tr><td>تأثیر نمرات قبلی</td><td>استقلال نمره‌گذاری</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرسش شفاهی vs امتحان کتبی</h3></div>
+<table class="compare">
+<thead><tr><th>پرسش شفاهی</th><th>امتحان کتبی</th></tr></thead>
+<tbody>
+<tr><td>غیررسمی</td><td>رسمی</td></tr>
+<tr><td>بازخورد فوری</td><td>بازخورد با تأخیر</td></tr>
+<tr><td>ابهام رفع می‌شود</td><td>ابهام باقی می‌ماند</td></tr>
+<tr><td>برای مقاصد تشخیصی</td><td>برای نمره‌گذاری</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان و تعریف‌هایشان</h2>
+<p class="section-sub">هر کی چی گفته + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>مهرنز و لهمان (۱۹۷۳، ۱۹۸۴)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>سه ویژگی آزمون تشریحی:</b> ۱) هیچ پاسخ واحدی وجود نداره ۲) پاسخ‌ها از لحاظ درجه کیفیت فرق دارن ۳) آزادی عمل زیاد آزمون‌شونده (خصوصاً در گسترده پاسخ).</div>
+<div class="fa"><b>مثال گسترده پاسخ:</b> «آنچه را که به نظر شما باید در یک برنامه امتحانی یک آموزشگاه کنکور باشد بنویسید.»</div>
+<div class="fa"><b>مثال محدود پاسخ:</b> «پاولف در آزمایش‌های خود مشاهده کرد سگی که شرطی شده بود... علت این امر چیست؟ جواب خود را حداکثر در نصف صفحه بنویسید.»</div>
+<div class="fa"><b>نظر درباره پرسش شفاهی:</b> کاربرد پرسش‌های شفاهی رو برای مقاصد تشخیصی پیشنهاد می‌کنن. «یک پرسشگر ماهر می‌تواند پاسخ‌هایی را در دانش‌آموزان برانگیزاند که نشان‌دهنده فرایندهای فکری او باشند.» (ص ۱۲۱)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کوهن و سوردلیک (۲۰۰۵)</h3></div>
+<div class="fa"><b>مثال گسترده پاسخ:</b> «شرطی شدن کلاسیک پاولفی و شرطی شدن کنشگر اسکینری را با هم مقایسه کنید. در توضیحات خود از کاربرد هر یک از این دو نوع شرطی شدن در زمینه‌های آموزشی و بالینی مثال‌هایی بیاورید.» (ص ۲۰۵)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لین و گرانلاند (۲۰۰۰)</h3></div>
+<div class="fa"><b>مثال گسترده پاسخ:</b> «تأثیر قانون مندل را بر تکامل زیست‌شناسی به عنوان یک علم شرح دهید.» (ص ۲۳۸)</div>
+<div class="fa"><b>مثال محدود پاسخ:</b> «توضیح دهید چرا فشارسنج (بارومتر) یکی از ابزارهای مفید برای پیش‌بینی هواست. جواب خود را در یک پاراگراف بنویسید.» (ص ۲۳۷)</div>
+<div class="fa"><b>جدول ۱۰-۱ (ص ۲۴۰):</b> انواع یادگیری‌هایی که با سؤال محدود پاسخ و گسترده پاسخ سنجش می‌شن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بیج (۱۹۵۸) و وولفلک (۱۹۸۷)</h3></div>
+<div class="fa"><b>نظر:</b> یکی از هدف‌های مهم درسی، راهنمایی دانش‌آموزان به‌سوی <b>عملکرد بهتر</b>ه. بازخورد دادن به دانش‌آموزان در مورد چگونگی پاسخ‌ها، نقاط قوت و ضعف، و چگونگی بهبود اون‌ها مفیده.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پین (۱۹۷۹، ۲۰۰۳)</h3></div>
+<div class="fa"><b>نظر درباره تصحیح توسط دیگران:</b> اگه تصحیح برگه‌ها توسط سایر اشخاص ممکن نیست، <b>دست‌کم نمونه‌ای</b> از اون‌ها رو برای تصمیم‌های کمکی واگذار کن. (۱۹۷۹)</div>
+<div class="fa"><b>مثال سؤال محدود پاسخ:</b> «وزن شما در سطح کره ماه و در سطح خورشید بیشتر یا کمتر از وزن شما در سطح زمین خواهد بود؟ دلایل خود را بنویسید.» (۲۰۰۳، ص ۲۳۵)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ریس، براون و اسمیت (۲۰۰۵)</h3></div>
+<div class="fa"><b>نظر درباره آزمون بیرون بردنی:</b> این نوع آزمون‌ها از لحاظ <b>روایی</b> خیلی خوبن، چون با زندگی واقعی منطبق‌اند. ولی مشکل <b>اعتماد کردن</b> به جواب‌ها وجود داره. (ص ۵۴)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بلوم و همکاران (۱۹۵۹)</h3></div>
+<div class="fa"><b>مثال آفریدن:</b> «به زمانی در زندگی خود فکر کنید که با مشکلی رو به رو بودید... درباره این مشکل داستانی بسازید و آن را برای کلاس بگویید.» (ترجمه سیف و علی‌آبادی، ۱۳۶۸)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کوبیسزین و برریج (۲۰۰۳)</h3></div>
+<div class="fa"><b>مثال کاربستن روندی:</b> «فرض کنید تولدتان را جشن گرفته‌اید و ۹ نفر از دوستان خود را دعوت کرده‌اید. دو پیتزای بزرگ سفارش داده‌اید اما هر یک از آن‌ها به چهار قسمت تقسیم شده است. مشکل شما چیست؟» (ص ۱۳۱)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نیکور (۲۰۰۱)</h3></div>
+<div class="fa"><b>مثال تحلیل:</b> «مقاله پیوست را بخوانید. بیاناتی را که نشان‌دهنده عقیده نویسنده‌اند مشخص کنید. دلایل خود را ذکر نمایید.» (ص ۱۹۲)</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: استفاده از آزمون تشریحی برای دانش</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی آزمون تشریحی برای سنجش دانش هم مناسبه.</div>
+<div class="fa"><b>جواب درست:</b> نه! آزمون تشریحی رو فقط برای <b>سطوح بالای یادگیری</b> (تحلیل، ارزشیابی، آفریدن) استفاده کن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برای سنجش دانش از آزمون‌های عینی استفاده کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: گسترده پاسخ vs محدود پاسخ</h3>
+<div class="fa"><b>دام چیه:</b> هدف‌های هر کدوم رو با هم قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> گسترده پاسخ = تحلیل، ترکیب، ارزشیابی / محدود پاسخ = فهمیدن، کاربستن، تحلیل.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ترکیب و ارزشیابی فقط با گسترده پاسخ.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: تصحیح برگه به برگه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی باید هر برگه رو کامل تصحیح کرد بعد برگه بعدی.</div>
+<div class="fa"><b>جواب درست:</b> نه! باید <b>سؤال به سؤال</b> تصحیح کنی (اول سؤال اول همه برگه‌ها، بعد سؤال دوم...).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این روش برای ملاک واحد و مقایسه بهتر.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: شناسایی نام صاحبان برگه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اشکالی نداره معلم بدونه برگه مال کیه.</div>
+<div class="fa"><b>جواب درست:</b> باید <b>نام‌ها رو نشناسه</b> (سربرگ جدا، رمز عددی، به‌هم‌زدن برگه‌ها).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این برای کاستن از نظر شخصی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: حق انتخاب سؤال</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دادن حق انتخاب به دانش‌آموز خوبه.</div>
+<div class="fa"><b>جواب درست:</b> نه! به آزمون‌شوندگان حق انتخاب تعدادی سؤال از میان مجموعه‌ای سؤال <b>نده</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این قاعده ۹ تهیه سؤال تشریحیه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: پرسش شفاهی برای نمره‌دهی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی پرسش شفاهی برای نمره‌دادن مناسبه.</div>
+<div class="fa"><b>جواب درست:</b> پرسش شفاهی برای <b>مقاصد تشخیصی</b> و بازخورد مناسبه، نه نمره‌دهی (وقت‌گیر و غیردقیقه).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> استثنا: دانش‌آموزان معلول جسمی (مثل نابینا).
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: آزمون بیرون بردنی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی این آزمون فقط مشکل داره.</div>
+<div class="fa"><b>جواب درست:</b> <b>امتیاز</b> = روایی بالا (منطبق با زندگی واقعی) / <b>مشکل</b> = اعتمادپذیری.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هر دو طرف رو ببین.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل دهم — آزمون تشریحی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 05 · سنجش و اندازه‌گیری در مشاوره · فصل دهم: آزمون تشریحی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"آزمون تشریحی به چند دسته تقسیم می‌شود؟",options:["۱","۲","۳","۴"],answer:1,explanation:"دو دسته = گسترده پاسخ + محدود پاسخ."},
+{q:"در آزمون گسترده پاسخ، آزمون‌شونده چه وضعی دارد؟",options:["محدود به موضوع خاص","آزادی کامل در زمان و مقدار پاسخ","فقط در زمان محدود","فقط در مقدار محدود"],answer:1,explanation:"آزادی کامل در گسترده پاسخ."},
+{q:"آزمون گسترده پاسخ برای چه هدف‌هایی مناسب است؟",options:["یادآوری و فهمیدن","تحلیل، ترکیب، ارزشیابی","فقط کاربستن","همه سطوح"],answer:1,explanation:"گسترده پاسخ برای تحلیل، ترکیب، ارزشیابی."},
+{q:"آزمون محدود پاسخ برای چه هدف‌هایی مناسب است؟",options:["ترکیب و ارزشیابی","فهمیدن، کاربستن، تحلیل","فقط یادآوری","همه سطوح"],answer:1,explanation:"محدود پاسخ برای فهمیدن، کاربستن، تحلیل."},
+{q:"در آزمون محدود پاسخ، پاسخ آزمون‌شونده چه وضعی دارد؟",options:["آزاد است","محدود به موضوع و مقدار مشخص","بی‌نهایت","بدون محدودیت"],answer:1,explanation:"محدود به موضوع و مقدار مشخص."},
+{q:"چند قاعده برای تهیه سؤال‌های تشریحی وجود دارد؟",options:["۵","۷","۱۰","۱۵"],answer:2,explanation:"۱۰ قاعده تهیه."},
+{q:"طبق قاعده ۱، سؤال‌ها باید چگونه باشند؟",options:["کلی","مستقیماً مربوط به هدف‌های آموزشی","طولانی","مبهم"],answer:1,explanation:"مستقیماً مربوط به هدف‌های آموزشی."},
+{q:"طبق قاعده ۲، آزمون تشریحی را برای چه هدف‌هایی استفاده کنیم؟",options:["همه سطوح","فقط سطوح بالای یادگیری","فقط یادآوری","فقط دانش"],answer:1,explanation:"فقط برای سطوح بالای یادگیری."},
+{q:"کدام کلمات در سؤال تشریحی واضح‌ترند؟",options:["بحث کنید","بررسی کنید","تعریف کنید، حل کنید","توجه کنید"],answer:2,explanation:"تعریف، حل، خلاصه، طبقه‌بندی واضح‌ترند."},
+{q:"طبق قاعده ۴، از کدام کلمات باید پرهیز کرد؟",options:["تعریف کنید","چه کسی، چه وقت، کجا","مقایسه کنید","توضیح دهید"],answer:1,explanation:"چه کسی، چه وقت، کجا = فقط یادآوری."},
+{q:"طبق قاعده ۵، پاسخ آزمون‌شونده را چه کنیم؟",options:["آزاد بگذاریم","به موضوع خاص محدود کنیم","طولانی کنیم","بدون محدودیت کنیم"],answer:1,explanation:"محدود به موضوع خاص."},
+{q:"طبق قاعده ۶، برای هر سؤال چه کنیم؟",options:["نمره مشخص کنیم","زمان مشخص کنیم","تعداد مشخص کنیم","هیچ‌کدام"],answer:0,explanation:"نمره هر سؤال مشخص کنیم."},
+{q:"طبق قاعده ۹، حق انتخاب سؤال به آزمون‌شونده...",options:["بدهیم","ندهیم","گاهی بدهیم","به اختیار او"],answer:1,explanation:"حق انتخاب سؤال ندهیم."},
+{q:"چند قاعده برای تصحیح پاسخ‌های تشریحی وجود دارد؟",options:["۵","۷","۱۰","۱۵"],answer:2,explanation:"۱۰ قاعده تصحیح."},
+{q:"طبق قاعده ۱ تصحیح، پاسخ‌ها را براساس چه چیزی تصحیح کنیم؟",options:["دستور زبان","املا","فقط هدف سؤال","خوش‌نویسی"],answer:2,explanation:"فقط براساس هدف سؤال."},
+{q:"طبق قاعده ۲ تصحیح، پاسخ‌ها را چگونه تصحیح کنیم؟",options:["برگه به برگه","سؤال به سؤال","تصادفی","هر دو"],answer:1,explanation:"سؤال به سؤال تصحیح کنیم."},
+{q:"طبق قاعده ۳ تصحیح، نام صاحبان برگه‌ها را...",options:["بشناسیم","نشناسیم","گاهی بشناسیم","مهم نیست"],answer:1,explanation:"نام صاحبان را نشناسیم."},
+{q:"طبق قاعده ۴ تصحیح، چه کسی باید تصحیح کند؟",options:["فقط معلم","یکی-دو همکار دیگر هم تصحیح کنند","دانش‌آموزان","مدیر"],answer:1,explanation:"از همکاران کمک بگیریم."},
+{q:"طبق قاعده ۵ تصحیح، پاسخ‌های یک سؤال را چه زمانی تصحیح کنیم؟",options:["در چند روز","در یک نشست بدون وقفه","در یک هفته","هر وقت"],answer:1,explanation:"در یک نشست بدون وقفه."},
+{q:"طبق قاعده ۶ تصحیح، به نمرات سؤال‌های قبلی...",options:["نگاه کنیم","نگاه نکنیم","گاهی نگاه کنیم","مهم نیست"],answer:1,explanation:"به نمرات قبلی نگاه نکنیم."},
+{q:"طبق قاعده ۷ تصحیح، چه کاری برای دانش‌آموز مفید است؟",options:["فقط نمره دادن","بازخورد دادن و تصحیح اشتباهات","نادیده گرفتن","فقط جمع نمرات"],answer:1,explanation:"بازخورد دادن و تصحیح اشتباهات."},
+{q:"طبق قاعده ۸ تصحیح، از چه شیوه‌ای استفاده کنیم؟",options:["تصادفی","یکنواخت و از پیش تعیین‌شده","متفاوت","مهم نیست"],answer:1,explanation:"شیوه یکنواخت و از پیش تعیین‌شده."},
+{q:"طبق قاعده ۱۰ تصحیح، نمره هر سؤال را چگونه ثبت کنیم؟",options:["جمع کنیم","جداگانه ثبت کنیم","حذف کنیم","مهم نیست"],answer:1,explanation:"جداگانه ثبت کنیم."},
+{q:"چند امتیاز برای آزمون تشریحی ذکر شده؟",options:["۳","۴","۵","۶"],answer:2,explanation:"۵ امتیاز."},
+{q:"کدام گزینه جزو امتیازهای آزمون تشریحی نیست؟",options:["تهیه آسان‌تر","تصحیح آسان‌تر","سنجش تولید پاسخ","تأثیر مثبت بر روش یادگیری"],answer:1,explanation:"تصحیح آزمون تشریحی سخت‌تره، نه آسان‌تر."},
+{q:"چند محدودیت برای آزمون تشریحی ذکر شده؟",options:["۲","۳","۴","۵"],answer:1,explanation:"۳ محدودیت."},
+{q:"کدام گزینه جزو محدودیت‌های آزمون تشریحی است؟",options:["تهیه سخت‌تر","تصحیح وقت‌گیر","سنجش گزینش پاسخ","بدون تأثیر"],answer:1,explanation:"تصحیح وقت‌گیر = محدودیت."},
+{q:"آزمون تشریحی چه چیزی را می‌سنجد؟",options:["گزینش پاسخ","تولید پاسخ","فقط دانش","فقط حافظه"],answer:1,explanation:"تولید پاسخ."},
+{q:"پرسش شفاهی چه نوع آزمونی است؟",options:["عینی","نوعی آزمون تشریحی غیررسمی","چندگزینه‌ای","صحیح-غلط"],answer:1,explanation:"نوعی آزمون تشریحی غیررسمی."},
+{q:"پرسش شفاهی برای چه مقاصدی پیشنهاد می‌شود؟",options:["نمره‌دهی","مقاصد تشخیصی","فقط رسمی","فقط کتبی"],answer:1,explanation:"برای مقاصد تشخیصی."},
+{q:"پرسش شفاهی برای کدام دانش‌آموزان مفید است؟",options:["همه","معلولان جسمی (مثل نابینا)","فقط تیزهوشان","فقط بزرگسالان"],answer:1,explanation:"برای معلولان جسمی."},
+{q:"مزیت پرسش شفاهی نسبت به کتبی چیست؟",options:["سرعت","رفع ابهام سؤال به‌خاطر رودررو بودن","دقت بیشتر","نمره‌دهی آسان"],answer:1,explanation:"رفع ابهام به‌خاطر رودررو بودن."},
+{q:"نظر مهرنز و لهمان درباره پرسش شفاهی چیست؟",options:["برای نمره‌دهی","برای مقاصد تشخیصی","برای سرگرمی","برای تفریح"],answer:1,explanation:"برای مقاصد تشخیصی."},
+{q:"آزمون بیرون بردنی چه ویژگی‌ای دارد؟",options:["بسته و محدود","آزمون‌شونده سؤال را به خارج می‌برد و از منابع کمک می‌گیرد","فقط شفاهی","فقط کتبی"],answer:1,explanation:"سؤال به خارج برده می‌شود."},
+{q:"نظر ریس، براون و اسمیت درباره آزمون بیرون بردنی چیست؟",options:["روایی پایین","روایی بالا ولی مشکل اعتمادپذیری","بدون مشکل","بهترین آزمون"],answer:1,explanation:"روایی بالا، مشکل اعتمادپذیری."},
+{q:"سؤال «توضیح دهید چرا فشارسنج برای پیش‌بینی هواست. جواب در یک پاراگراف» چه نوع سؤالی است؟",options:["گسترده پاسخ","محدود پاسخ","چندگزینه‌ای","صحیح-غلط"],answer:1,explanation:"محدود پاسخ (محدود به یک پاراگراف)."},
+{q:"سؤال «شرطی شدن کلاسیک و کنشگر را مقایسه کنید» چه نوع سؤالی است؟",options:["محدود پاسخ","گسترده پاسخ","چندگزینه‌ای","صحیح-غلط"],answer:1,explanation:"گسترده پاسخ (آزادی در پاسخ)."},
+{q:"طبق جدول ۱۰-۱، سؤال گسترده پاسخ برای چه توانایی‌هایی است؟",options:["تبیین روابط علت و معلولی","تولید، سازمان دادن، آفریدن","کاربستن اصول","توصیف داده‌ها"],answer:1,explanation:"تولید، سازمان دادن و آفریدن."},
+{q:"طبق جدول ۱۰-۱، سؤال محدود پاسخ برای چه توانایی‌هایی است؟",options:["آفریدن","تبیین روابط علت و معلولی و کاربستن اصول","ترکیب یادگیری‌ها","ساختن داستان"],answer:1,explanation:"تبیین روابط، کاربستن اصول و... ."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

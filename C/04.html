@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · سنجش و اندازه‌گیری در مشاوره · سری 04 · فصل نهم: آزمون چندگزینه‌ای</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"04";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>سنجش و اندازه‌گیری در مشاوره · سری 04</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل نهم: آزمون چندگزینه‌ای</h2>
+  <p>سنجش یادگیری به کمک آزمون چندگزینه‌ای — همه چیز به زبان ساده و خودمونی</p>
+  <div class="pills"><span class="pill">هسته امتحانی</span><span class="pill">مفاهیم</span><span class="pill">تفاوت‌ها</span><span class="pill">نظریه‌پردازان</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این فصل درباره‌ی <b>آزمون چندگزینه‌ای</b>ه. باید بفهمی این آزمون چیه، از چه قسمت‌هایی تشکیل شده، چه انواعی داره، ۲۲ قاعده برای تهیه‌ش وجود داره، و چه امتیازها و محدودیت‌هایی داره.</div>
+
+<div class="stats">
+<div class="stat"><b>۳</b><span>جزء اصلی</span></div>
+<div class="stat"><b>۷</b><span>نوع سؤال</span></div>
+<div class="stat"><b>۲۲</b><span>قاعده تهیه</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف آزمون چندگزینه‌ای</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> آزمون چندگزینه‌ای <b>معروف‌ترین و پرکاربردترین</b> آزمون نوع گزینش پاسخه.</div>
+<div class="fa"><b>هر سؤال از سه قسمت تشکیل شده:</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px;text-align:center">
+<b>تنه سؤال + گزینه کلید + گزینه‌های انحرافی</b>
+</div>
+<div class="fa">• <b>تنه سؤال:</b> متن یا صورت سؤال.</div>
+<div class="fa">• <b>گزینه کلید:</b> پاسخ درست سؤال.</div>
+<div class="fa">• <b>گزینه‌های انحرافی:</b> پاسخ‌های غلط که ظاهری درست‌نما دارن و آزمون‌شوندگان نامطلع رو جلب می‌کنن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هفت نوع سؤال چندگزینه‌ای</h3></div>
+<div class="fa">۱) <b>نوع پرسشی:</b> سؤال به‌صورت جمله پرسشی.</div>
+<div class="fa">۲) <b>نوع ناتمام:</b> جمله ناتمام که گزینه‌ها مکملش هستن.</div>
+<div class="fa">۳) <b>نوع تنها گزینه درست:</b> فقط یکی درسته، بقیه غلط.</div>
+<div class="fa">۴) <b>نوع بهترین گزینه:</b> همه درستن، ولی یکی درست‌تره.</div>
+<div class="fa">۵) <b>نوع منفی:</b> تنه سؤال منفیه، همه گزینه‌ها بجز یکی درستن.</div>
+<div class="fa">۶) <b>نوع جایگزینی:</b> غلط‌هایی در متن هست که باید جایگزین بشن.</div>
+<div class="fa">۷) <b>نوع پاسخ ترکیبی:</b> جمله‌های یه پاراگراف به‌هم‌ریخته که باید مرتب بشن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این ۷ نوع رو حتماً حفظ کن. معمولاً سوال از تعداد یا اسم‌شون میاد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مهم‌ترین قواعد تهیه (از ۲۲ قاعده)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>به زبان ساده:</b> این قواعد رو حتماً بلد باش:</div>
+<div class="fa">• <b>قاعده ۱:</b> هر سؤال باید یک هدف مهم رو بسنجه.</div>
+<div class="fa">• <b>قاعده ۲:</b> بیشتر از یک هدف در هر سؤال نذار.</div>
+<div class="fa">• <b>قاعده ۳:</b> سؤال رو کاملاً روشن بنویس.</div>
+<div class="fa">• <b>قاعده ۴:</b> از تکرار مطالب در گزینه‌ها خودداری کن.</div>
+<div class="fa">• <b>قاعده ۵:</b> مطالب اصلی رو کامل در تنه سؤال بنویس.</div>
+<div class="fa">• <b>قاعده ۶:</b> همه گزینه‌ها به موضوع واحد مربوط باشن.</div>
+<div class="fa">• <b>قاعده ۷:</b> پاسخ درست، تنها پاسخ درست یا قطعاً درست‌ترین باشه.</div>
+<div class="fa">• <b>قاعده ۸:</b> برای فرآیندهای پیچیده ذهنی، از موقعیت‌های تازه استفاده کن.</div>
+<div class="fa">• <b>قاعده ۹:</b> گزینه‌های انحرافی باید توجه بی‌اطلاع‌ها رو جلب کنن.</div>
+<div class="fa">• <b>قاعده ۱۰:</b> گزینه‌ها از نظر دستوری مکمل درست تنه سؤال باشن.</div>
+<div class="fa">• <b>قاعده ۱۱:</b> از اشاره‌های دستوری نامربوط خودداری کن.</div>
+<div class="fa">• <b>قاعده ۱۲:</b> در سؤالات منفی، کلمات منفی رو برجسته کن.</div>
+<div class="fa">• <b>قاعده ۱۳:</b> تا حد امکان از «هیچ‌کدام» پرهیز کن.</div>
+<div class="fa">• <b>قاعده ۱۴:</b> سؤال‌ها رو مستقل از هم بنویس.</div>
+<div class="fa">• <b>قاعده ۱۵:</b> از سؤال‌های گمراه‌کننده بپرهیز.</div>
+<div class="fa">• <b>قاعده ۱۸:</b> گزینه درست رو تصادفی انتخاب کن.</div>
+<div class="fa">• <b>قاعده ۱۹:</b> برای هر سؤال ۳ تا ۵ گزینه در نظر بگیر.</div>
+<div class="fa">• <b>قاعده ۲۰:</b> در آزمون‌های تکوینی از «نمی‌دانم» استفاده کن.</div>
+<div class="fa">• <b>قاعده ۲۱:</b> در جمله‌های ناتمام، جای خالی رو آخر بذار.</div>
+<div class="fa">• <b>قاعده ۲۲:</b> تا ممکنه از جمله پرسشی استفاده کن، نه ناتمام.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات کلیدی که حتماً باید بلد باشی</h3></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱)</b> بهترین مورد استفاده «هیچ‌کدام» = <b>سؤالات ریاضی</b>.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲)</b> <b>۶ امتیاز</b> = انعطاف‌پذیری + نمونه‌گیری بزرگ + حدس کمتر + تصحیح آسان + ترجیح معلمان + تشخیص مشکلات.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳)</b> <b>۵ محدودیت</b> = دشواری ساخت + سنجش اطلاعات جزئی + وقت‌گیر + نمره منفی + زیان تفکر واگرا.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۴)</b> سؤال‌های چندگزینه‌ای برای <b>یادآوری، فهمیدن و کاربستن</b> مفیدن.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵)</b> با دقت و ابتکار، می‌شه یادگیری‌های <b>پیچیده‌تر</b> رو هم سنجید.
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با تعریف ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>ساختار آزمون چندگزینه‌ای</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> هر سؤال چندگزینه‌ای از سه قسمت تشکیل شده:</div>
+<div class="fa"><b>۱) تنه سؤال:</b> متن یا صورت سؤال. باید مطالب اصلی رو کامل داشته باشه.</div>
+<div class="fa"><b>۲) گزینه کلید:</b> پاسخ درست سؤال.</div>
+<div class="fa"><b>۳) گزینه‌های انحرافی:</b> پاسخ‌های غلط که ظاهری درست‌نما دارن و آزمون‌شوندگان نامطلع رو جلب می‌کنن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سه جزء = تنه + کلید + انحرافی. این رو حفظ کن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انواع سؤالات چندگزینه‌ای</h3></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱) نوع پرسشی:</b>
+</div>
+<div class="fa">سؤال به‌صورت یک جمله پرسشی نوشته می‌شه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲) نوع ناتمام:</b>
+</div>
+<div class="fa">جمله ناتمامه و گزینه‌ها مکملش هستن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳) نوع تنها گزینه درست:</b>
+</div>
+<div class="fa">فقط یکی از گزینه‌ها درسته و بقیه غلط هستن.</div>
+<div class="fa"><b>مثال:</b> «کدام یک از اشخاص زیر ماشین خیاطی را اختراع کرد؟ الف) فولتون ب) هرو پ) سینگر ت) وایت ث) ویتنی»</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۴) نوع بهترین گزینه:</b>
+</div>
+<div class="fa">همه گزینه‌ها به‌طریقی درستن، ولی یکی از همه درست‌تره.</div>
+<div class="fa"><b>کاربرد:</b> در علوم انسانی و اجتماعی که جواب قطعی پیدا نمی‌شه.</div>
+<div class="fa"><b>مثال:</b> «بنا به تعریف، یادگیری عبارت است از... الف) کسب اطلاعات تازه ب) ایجاد تغییرات نسبتاً پایدار در توان رفتاری پ) ایجاد تغییرات مطلوب و هدایت‌شده ت) توانایی به ظاهر سپردن»</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵) نوع منفی:</b>
+</div>
+<div class="fa">تنه سؤال منفیه و همه گزینه‌ها بجز یکی درست هستن.</div>
+<div class="fa"><b>مثال:</b> «کدام مورد زیر از قواعد تهیه آزمون‌های چندگزینه‌ای نیست؟»</div>
+<div class="fa"><b>کِی استفاده می‌شه؟</b> وقتی تهیه گزینه‌های انحرافی غلط سخته، ولی گزینه‌های درست آسونه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۶) نوع جایگزینی:</b>
+</div>
+<div class="fa">غلط‌هایی در متن یا تنه سؤال گنجانیده می‌شه و آزمون‌شونده باید اون‌ها رو با گزینه‌های پیشنهادی جایگزین کنه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۷) نوع پاسخ ترکیبی:</b>
+</div>
+<div class="fa">جمله‌های یه پاراگراف به‌هم‌ریخته‌ان و از آزمون‌شونده خواسته می‌شه اون‌ها رو مرتب کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۲ قاعده تهیه سؤال چندگزینه‌ای</h3><span class="badge s">کلیدی</span></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱ — هدف مهم:</b>
+</div>
+<div class="fa">هر سؤال باید یک موضوع مهم یا یک هدف آموزشی رو بسنجه. نویسنده سؤال باید بپرسه: «آیا دانستن و ندانستن پاسخ، تأثیر داره؟»</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۲ — یک هدف در هر سؤال:</b>
+</div>
+<div class="fa">بیشتر از یک هدف یا مطلب در هر سؤال نذار. اگه چند هدف باشه، سؤال پیچیده می‌شه و نمی‌فهمیم علت شکست چیه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۳ — روشنی سؤال:</b>
+</div>
+<div class="fa">سؤال‌ها رو کاملاً روشن و در حد درک آزمون‌شوندگان بنویس. کلمات دشوار می‌تونن باعث بشن دانش‌آموز جواب درست رو بدونه ولی نتونه جواب بده.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۴ — عدم تکرار:</b>
+</div>
+<div class="fa">از تکرار مطالب در گزینه‌ها خودداری کن. پاسخ‌ها رو مختصر بنویس و مطالب رو یک بار در تنه سؤال بیار.</div>
+<div class="fa"><b>مثال ضعیف:</b> «در آزمون‌های عینی، اصطلاح عینی... الف) به روش مشخص کردن نتایج یادگیری مربوط است ب) به روش انتخاب متمادی آزمون مربوط است...»</div>
+<div class="fa"><b>مثال بهتر:</b> «در آزمون‌های عینی، اصطلاح عینی به روش ... مربوط است. الف) مشخص کردن نتایج یادگیری ب) انتخاب متمادی آزمون...»</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۵ — مطالب اصلی در تنه:</b>
+</div>
+<div class="fa">تنه سؤال باید شامل مطالب مهم باشه، طوری که آزمون‌شونده پیش از دیدن گزینه‌ها، اندیشه اصلی رو بفهمه.</div>
+<div class="fa"><b>راه حل:</b> روی گزینه‌ها رو بپوشون و تنه سؤال رو تنها بخون. اگه مطلب کامل نبود، تجدیدنظر کن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۶ — تجانس گزینه‌ها:</b>
+</div>
+<div class="fa">همه گزینه‌ها باید به موضوع واحدی مربوط باشن. اگه هر گزینه به مطلب جداگانه اشاره کنه، سؤال از حالت چندگزینه‌ای خارج می‌شه.</div>
+<div class="fa"><b>نکته:</b> هر چی گزینه‌ها متجانس‌تر باشن، سؤال دشوارتره.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۷ — پاسخ درست:</b>
+</div>
+<div class="fa">سؤال رو طوری بنویس که پاسخ درست، تنها پاسخ درست یا قطعاً درست‌ترین پاسخ باشه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۸ — موقعیت‌های تازه:</b>
+</div>
+<div class="fa">برای سنجش فرآیندهای پیچیده ذهنی، از موقعیت‌های تازه استفاده کن. مثال‌های کتاب و کلاس فقط دانش رو می‌سنجن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۹ — گزینه‌های انحرافی:</b>
+</div>
+<div class="fa">گزینه‌های انحرافی رو طوری بنویس که توجه بی‌اطلاع‌ها رو جلب کنن. باید ظاهری منطقی داشته باشن و در بررسی سطحی درست جلوه کنن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۰ — هماهنگی دستوری:</b>
+</div>
+<div class="fa">گزینه‌ها از نظر دستوری و جمله‌بندی مکمل درست تنه سؤال باشن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۱ — اشاره‌های دستوری نامربوط:</b>
+</div>
+<div class="fa">از اشاره‌های دستوری نامربوط (زمان افعال، مفرد و جمع، حروف تعریف) استفاده نکن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۲ — سؤالات منفی:</b>
+</div>
+<div class="fa">کلمات منفی رو برجسته کن (سیاه نوشتن یا زیر خط کشیدن).</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۳ — «هیچ‌کدام»:</b>
+</div>
+<div class="fa">تا حد امکان از «هیچ یک از موارد بالا» پرهیز کن. بهترین کاربردش = سؤالات ریاضی.</div>
+<div class="fa"><b>مثال ضعیف:</b> «مساحت مثلثی ۳ و ۴ سانتی‌متر: الف) ۷ ب) ۱۲ پ) ۲۵ ت) هیچ‌کدام» — جواب ۶ هست و دانش‌آموزی که غلط حل کنه (مثلاً ۵) گزینه ت رو انتخاب می‌کنه.</div>
+<div class="fa"><b>مثال بهتر:</b> گزینه الف رو ۶ بذار و «هیچ‌کدام» رو گزینه ت بذار.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۴ — استقلال سؤال‌ها:</b>
+</div>
+<div class="fa">پاسخ دادن به یه سؤال نباید شرط لازم برای پاسخ دادن به سؤال دیگه باشه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۵ — عدم گمراه‌کنندگی:</b>
+</div>
+<div class="fa">از طرح سؤال‌های گمراه‌کننده بپرهیز. این سؤال‌ها با هدف آزمون پیشرفت تحصیلی مغایرن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۸ — انتخاب تصادفی گزینه درست:</b>
+</div>
+<div class="fa">گزینه درست رو تصادفی انتخاب کن. اگه نظم و ترتیب باشه، آزمون‌شونده کشف می‌کنه.</div>
+<div class="fa"><b>روش شماره صفحات:</b> کتابی رو باز کن، اگه صفحه فرد بود: رقم ۱ → الف، ۳ → ب، ۵ → پ، ۷ → ت، ۹ → ث.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۱۹ — تعداد گزینه‌ها:</b>
+</div>
+<div class="fa">برای هر سؤال ۳ تا ۵ گزینه در نظر بگیر. نظری هرچی بیشتر بهتر، ولی نوشتن گزینه انحرافی سخته.</div>
+<div class="fa"><b>توصیه مهرنز و لهمان (۱۹۸۴):</b> کلاس دوم = ۳ گزینه / کلاس سوم و چهارم = ۳ تا ۴ گزینه / کلاس ششم و بالاتر = ۴ تا ۵ گزینه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۲۰ — «نمی‌دانم»:</b>
+</div>
+<div class="fa">در آزمون‌های تکوینی (برای تشخیص مشکلات یادگیری، نه نمره دادن) از گزینه «نمی‌دانم» استفاده کن.</div>
+<div class="fa"><b>فایده:</b> به نفع دانش‌آموز و معلمه. حدس کورکورانه نمی‌زنه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۲۱ — جای خالی در آخر:</b>
+</div>
+<div class="fa">در جمله‌های ناتمام، جای خالی رو در آخر جمله بذار، نه اول یا وسط.</div>
+<div class="fa"><b>مثال ضعیف:</b> «طبق نظر رابینسون، ... عامل اصلی بیماری قلبی است. الف) کلسترول ب) غربی...»</div>
+<div class="fa"><b>مثال بهتر:</b> «طبق نظر رابینسون، عامل اصلی بیماری قلبی ... است. الف) کلسترول ب) غربی...»</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاعده ۲۲ — جمله پرسشی بهتر از ناتمام:</b>
+</div>
+<div class="fa">تا ممکنه از جمله پرسشی استفاده کن، نه ناتمام. جمله پرسشی هدف رو آشکارتر بیان می‌کنه.</div>
+<div class="fa"><b>نظر پین (۲۰۰۳):</b> جمله ناتمام باعث می‌شه آزمون‌شونده سؤال ذهن آزمون‌ساز رو بازسازی کنه که وقت و نیروش هدر می‌ره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امتیازها و محدودیت‌های آزمون چندگزینه‌ای</h3></div>
+
+<div class="fa" style="background:#dff7ee;border-color:#1f9d73;color:#251820;font-size:13px;padding:8px 12px">
+<b>۶ امتیاز:</b>
+</div>
+<div class="fa">۱) <b>انعطاف‌پذیری</b></div>
+<div class="fa">۲) <b>توانایی نمونه‌گیری بزرگ</b> محتوا و هدف‌ها</div>
+<div class="fa">۳) <b>حدس زدن کورکورانه کمتر</b> از آزمون‌های صحیح-غلط</div>
+<div class="fa">۴) <b>قابل تصحیح بودن</b> پاسخ‌ها با سهولت و عینیت</div>
+<div class="fa">۵) <b>ترجیح داشتن</b> بر سایر آزمون‌های عینی از سوی معلمان و دانش‌آموزان</div>
+<div class="fa">۶) <b>فراهم آوردن امکان تشخیص</b> مشکلات یادگیری دانش‌آموزان</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵ محدودیت:</b>
+</div>
+<div class="fa">۱) <b>دشواری ساخت</b> (معلمان نمی‌تونن گزینه انحرافی خوب بسازن)</div>
+<div class="fa">۲) <b>سنجش اطلاعات جزئی و کم‌اهمیت</b></div>
+<div class="fa">۳) <b>نیاز به وقت زیادتر</b> برای یافتن جواب (اگه گزینه‌ها شبیه هم باشن)</div>
+<div class="fa">۴) <b>نمره کمتر دانش‌آموزان قوی‌تر</b> در آزمون‌های با نمره منفی</div>
+<div class="fa">۵) <b>زیان دیدن دانش‌آموزان دارای تفکر واگرا</b> (چون فقط یه جواب درست وجود داره)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>موارد استفاده</h3></div>
+<div class="fa"><b>به زبان ساده:</b> سؤال‌های چندگزینه‌ای برای سنجش هدف‌های <b>یادآوری، فهمیدن و کاربستن</b> مفیدن.</div>
+<div class="fa"><b>با دقت و ابتکار:</b> می‌شه یادگیری‌های <b>پیچیده‌تر</b> مثل <b>تحلیل</b> رو هم سنجید.</div>
+<div class="fa"><b>مزیت مهم:</b> اکثریت آزمون‌های استاندارد شده از سؤال‌های چندگزینه‌ای استفاده کرده‌اند.</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>نوع تنها گزینه درست vs نوع بهترین گزینه</h3></div>
+<table class="compare">
+<thead><tr><th>تنها گزینه درست</th><th>بهترین گزینه</th></tr></thead>
+<tbody>
+<tr><td>فقط یکی درسته، بقیه غلط</td><td>همه درستن، یکی درست‌تره</td></tr>
+<tr><td>برای علوم دقیق</td><td>برای علوم انسانی و اجتماعی</td></tr>
+<tr><td>مثال: ماشین خیاطی</td><td>مثال: تعریف یادگیری</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نوع پرسشی vs نوع ناتمام</h3></div>
+<table class="compare">
+<thead><tr><th>نوع پرسشی</th><th>نوع ناتمام</th></tr></thead>
+<tbody>
+<tr><td>جمله پرسشی</td><td>جمله ناتمام</td></tr>
+<tr><td>هدف آشکارتر</td><td>هدف پنهان‌تر</td></tr>
+<tr><td>توصیه‌شده (قاعده ۲۲)</td><td>گاهی لازمه</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>توصیه پین (۲۰۰۳):</b> جمله ناتمام باعث می‌شه آزمون‌شونده سؤال ذهن آزمون‌ساز رو بازسازی کنه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سؤال ضعیف vs سؤال بهتر (مثال قاعده ۲۱)</h3></div>
+<table class="compare">
+<thead><tr><th>سؤال ضعیف</th><th>سؤال بهتر</th></tr></thead>
+<tbody>
+<tr><td>جای خالی وسط سؤال</td><td>جای خالی آخر سؤال</td></tr>
+<tr><td>آزمون‌شونده سردرگم می‌شه</td><td>آزمون‌شونده هدف رو می‌فهمه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>«همه موارد بالا» vs «هیچ‌کدام»</h3></div>
+<table class="compare">
+<thead><tr><th>همه موارد بالا</th><th>هیچ‌کدام</th></tr></thead>
+<tbody>
+<tr><td>صاحب‌نظران پیشنهاد نمی‌کنن</td><td>صاحب‌نظران پیشنهاد نمی‌کنن</td></tr>
+<tr><td>کاربرد محدود</td><td>بهترین کاربرد: ریاضی</td></tr>
+<tr><td>در قاعده ۱۳ ذکر شده</td><td>در قاعده ۱۳ ذکر شده</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعداد گزینه بر اساس سطح کلاس (مهرنز و لهمان، ۱۹۸۴)</h3></div>
+<table class="compare">
+<thead><tr><th>سطح کلاس</th><th>تعداد گزینه</th></tr></thead>
+<tbody>
+<tr><td>کلاس دوم</td><td>۳ گزینه</td></tr>
+<tr><td>کلاس سوم و چهارم</td><td>۳ تا ۴ گزینه</td></tr>
+<tr><td>کلاس ششم و بالاتر</td><td>۴ تا ۵ گزینه</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان و تعریف‌هایشان</h2>
+<p class="section-sub">هر کی چی گفته + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>نیکو (۱۹۸۳)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نظر درباره تهیه سؤال:</b> ابتدا یک هدف آموزشی یا مطلب مهم رو انتخاب کن و تصمیم بگیر برای اون چند سؤال تهیه می‌کنی. بعد برای نوشتن هر سؤال:</div>
+<div class="fa">الف) با نوشتن یک جمله سؤالی یا ناتمام، تنه سؤال رو بنویس.</div>
+<div class="fa">ب) جواب سؤال رو به‌صورت گزینه کلید بنویس.</div>
+<div class="fa">پ) گزینه‌های انحرافی رو طوری بنویس که نظر دانش‌آموزان نامطلع رو جلب کنن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این سه مرحله‌ی نیکو رو حفظ کن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لین و گرانلند (۲۰۰۰)</h3></div>
+<div class="fa"><b>پیشنهادهایی برای نوشتن گزینه‌های انحرافی:</b></div>
+<div class="fa">• از غلط‌های معمول دانش‌آموزان استفاده کن.</div>
+<div class="fa">• از کلمات «مهم» (با اهمیت، معنی‌دار، دقیق) که به تنه سؤال ربط دارن استفاده کن.</div>
+<div class="fa">• از کلمات با تداعی کلامی (سیاست‌مدار، سیاسی) استفاده کن.</div>
+<div class="fa">• از زبان کتاب درسی و عبارت‌های درست‌نما استفاده کن.</div>
+<div class="fa">• از غلط‌های ناشی از کج‌فهمی و بی‌دقتی دانش‌آموزان استفاده کن.</div>
+<div class="fa">• از گزینه‌های متجانس و شبیه به گزینه درست استفاده کن.</div>
+<div class="fa">• گزینه‌های انحرافی رو از لحاظ طول، واژگان، ساختار جمله و پیچیدگی شبیه گزینه درست بنویس.</div>
+<div class="fa"><b>احتیاط:</b> گزینه‌های انحرافی باید بی‌اطلاع‌ها رو منحرف کنن، نه مسلط‌ها رو گمراه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نظر لین و گرانلند (۲۰۰۰):</b> سؤال‌های چندگزینه‌ای با محتوای غالب موضوع‌های درسی سازگاری دارن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پین (۲۰۰۳)</h3></div>
+<div class="fa"><b>نظر درباره «هیچ‌کدام»:</b> با نگرانی، مثال سؤال ریاضی رو ذکر کرده که جواب ۶ هست ولی گزینه‌ها ۷، ۱۲، ۲۵ و «هیچ‌کدام» هستن. دانش‌آموزی که غلط حل کنه (مثلاً ۵) گزینه «هیچ‌کدام» رو انتخاب می‌کنه.</div>
+<div class="fa"><b>نظر درباره جمله ناتمام:</b> «یکی از مشکلات استفاده از جمله‌های ناتمام این است که آزمون‌شونده سؤالی را که در ذهن آزمون‌ساز بوده بازسازی کند، که باعث به هدر رفتن وقت و نیروی آزمون‌شونده می‌شود.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مهرنز و لهمان (۱۹۸۴)</h3></div>
+<div class="fa"><b>پیشنهاد درباره تعداد گزینه‌ها:</b></div>
+<div class="fa">• برای سطوح پایین‌تر، سؤال‌های با گزینه کمتر.</div>
+<div class="fa">• کلاس دوم = ۳ گزینه</div>
+<div class="fa">• کلاس سوم و چهارم = ۳ تا ۴ گزینه</div>
+<div class="fa">• کلاس ششم و بالاتر = ۴ تا ۵ گزینه</div>
+<div class="fa"><b>نظر درباره جای خالی:</b> جای خالی رو در انتهای تنه سؤال بذار، نه اول یا وسط.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ریس، براون و اسمیت (۲۰۰۵)</h3></div>
+<div class="fa"><b>نکته درباره «هیچ‌کدام»:</b> دانش‌آموزان قوی بعضی وقت‌ها در گزینه صحیح اشکال می‌بینن و به همین دلیل «هیچ‌کدام» رو انتخاب می‌کنن. (ص ۴۷)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بلوم و همکاران (۱۹۵۶)</h3></div>
+<div class="fa"><b>کاربرد:</b> مثال‌های متعددی برای سطوح مختلف یادگیری (یادآوری، فهمیدن، کاربستن، تحلیل) با سؤال‌های چندگزینه‌ای ارائه دادن.</div>
+<div class="fa"><b>ترجمه:</b> سیف و علی‌آبادی (۱۳۶۸).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اگن و کاوچاک (۲۰۰۱)</h3></div>
+<div class="fa"><b>کاربرد:</b> مثال‌هایی برای سؤال‌های چندگزینه‌ای در سطوح مختلف یادگیری آورده‌اند. (ص ۴۰۶)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وولفلک (۲۰۰۴)</h3></div>
+<div class="fa"><b>کاربرد:</b> مثال سؤال در سطح تحلیل (درباره نمره z) ارائه داده. (ص ۵۵۰)</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: جمله پرسشی vs ناتمام</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جمله ناتمام بهتر از جمله پرسشیه.</div>
+<div class="fa"><b>جواب درست:</b> جمله پرسشی بهتره (قاعده ۲۲).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پین (۲۰۰۳) می‌گه جمله ناتمام وقت آزمون‌شونده رو هدر می‌ده.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: جای خالی در جمله ناتمام</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جای خالی وسط یا اول جمله بهتره.</div>
+<div class="fa"><b>جواب درست:</b> جای خالی در <b>آخر</b> جمله (قاعده ۲۱).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مهرنز و لهمان (۱۹۸۴) این رو توصیه کردن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: «هیچ‌کدام» و «همه موارد بالا»</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی این گزینه‌ها همیشه خوب هستن.</div>
+<div class="fa"><b>جواب درست:</b> صاحب‌نظران استفاده از این دو گزینه رو <b>پیشنهاد نمی‌کنن</b> (قاعده ۱۳).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهترین کاربرد «هیچ‌کدام» فقط در ریاضیاته.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: گزینه‌های انحرافی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی گزینه‌های انحرافی باید آشکارا غلط باشن.</div>
+<div class="fa"><b>جواب درست:</b> باید <b>ظاهری منطقی</b> داشته باشن و در بررسی سطحی <b>درست جلوه</b> کنن (قاعده ۹).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ولی نباید مسلط‌ها رو گمراه کنن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: محل گزینه درست</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی همیشه گزینه درست باید اول یا وسط باشه.</div>
+<div class="fa"><b>جواب درست:</b> گزینه درست رو <b>تصادفی</b> انتخاب کن (قاعده ۱۸).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روش شماره صفحات کتاب رو می‌تونی به کار ببری.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: تعداد گزینه‌ها</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هرچی تعداد گزینه بیشتر باشه، بهتره.</div>
+<div class="fa"><b>جواب درست:</b> ۳ تا ۵ گزینه کافیه (قاعده ۱۹). نوشتن گزینه انحرافی زیاد سخته.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برای سطوح پایین، گزینه کمتر بهتره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: محدودیت‌های آزمون چندگزینه‌ای</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی این آزمون برای همه دانش‌آموزان مناسبه.</div>
+<div class="fa"><b>جواب درست:</b> دانش‌آموزان دارای <b>تفکر واگرا</b> ضرر می‌بینن. چون فقط یه جواب درست وجود داره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این یکی از ۵ محدودیت مهمه.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل نهم — آزمون چندگزینه‌ای</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 04 · سنجش و اندازه‌گیری در مشاوره · فصل نهم: آزمون چندگزینه‌ای</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"هر سؤال چندگزینه‌ای از چند قسمت تشکیل شده؟",options:["۲","۳","۴","۵"],answer:1,explanation:"سه قسمت = تنه سؤال + گزینه کلید + گزینه‌های انحرافی."},
+{q:"کدام قسمت پاسخ درست سؤال است؟",options:["تنه سؤال","گزینه کلید","گزینه انحرافی","هیچ‌کدام"],answer:1,explanation:"گزینه کلید = پاسخ درست."},
+{q:"گزینه‌های انحرافی چه ویژگی‌ای دارند؟",options:["کاملاً غلط و آشکار","ظاهری درست‌نما و جلب‌کننده نامطلع‌ها","بدون ارتباط با سؤال","همیشه درست"],answer:1,explanation:"گزینه‌های انحرافی ظاهری درست‌نما دارن."},
+{q:"چند نوع سؤال چندگزینه‌ای وجود دارد؟",options:["۳","۵","۷","۹"],answer:2,explanation:"۷ نوع سؤال چندگزینه‌ای."},
+{q:"در کدام نوع سؤال، فقط یکی از گزینه‌ها درست است؟",options:["بهترین گزینه","تنها گزینه درست","نوع منفی","نوع جایگزینی"],answer:1,explanation:"تنها گزینه درست = فقط یکی درست."},
+{q:"در کدام نوع سؤال، همه گزینه‌ها به طریقی درست هستند؟",options:["تنها گزینه درست","بهترین گزینه","نوع منفی","نوع ناتمام"],answer:1,explanation:"بهترین گزینه = همه درستن، یکی درست‌تر."},
+{q:"نوع بهترین گزینه در کدام زمینه‌ها مفید است؟",options:["ریاضی و فیزیک","علوم انسانی و اجتماعی","شیمی و زیست","فقط هنر"],answer:1,explanation:"بهترین گزینه برای علوم انسانی و اجتماعی."},
+{q:"در کدام نوع سؤال، تنه سؤال منفی است؟",options:["نوع پرسشی","نوع ناتمام","نوع منفی","نوع جایگزینی"],answer:2,explanation:"نوع منفی = تنه سؤال منفی."},
+{q:"نوع منفی کِی استفاده می‌شود؟",options:["وقتی گزینه درست سخته","وقتی تهیه گزینه‌های انحرافی غلط سخته ولی گزینه‌های درست آسونه","وقتی سؤال ساده است","همیشه"],answer:1,explanation:"نوع منفی وقتی که تهیه گزینه انحرافی سخته."},
+{q:"در کدام نوع سؤال، جمله‌های یک پاراگراف به‌هم‌ریخته است؟",options:["نوع پرسشی","نوع ناتمام","نوع پاسخ ترکیبی","نوع جایگزینی"],answer:2,explanation:"نوع پاسخ ترکیبی = جمله‌های به‌هم‌ریخته."},
+{q:"در کدام نوع سؤال، غلط‌هایی در متن گنجانیده می‌شود؟",options:["نوع جایگزینی","نوع منفی","نوع ترکیبی","نوع بهترین گزینه"],answer:0,explanation:"نوع جایگزینی = غلط‌ها در متن."},
+{q:"چند قاعده برای تهیه سؤال‌های چندگزینه‌ای در این فصل وجود دارد؟",options:["۱۰","۱۵","۲۲","۳۰"],answer:2,explanation:"۲۲ قاعده تهیه سؤال."},
+{q:"قاعده ۱ چه می‌گوید؟",options:["هر سؤال یک هدف مهم را بسنجد","چند هدف در هر سؤال","گزینه‌ها متجانس نباشند","سؤال روشن نباشد"],answer:0,explanation:"قاعده ۱ = هر سؤال یک هدف مهم."},
+{q:"قاعده ۲ چه می‌گوید؟",options:["چند هدف در هر سؤال","بیشتر از یک هدف در هر سؤال نباشد","سؤال پیچیده باشد","گزینه‌ها مبهم باشند"],answer:1,explanation:"قاعده ۲ = یک هدف در هر سؤال."},
+{q:"قاعده ۴ چه می‌گوید؟",options:["تکرار مطالب در گزینه‌ها","از تکرار مطالب در گزینه‌ها خودداری کن","گزینه‌ها طولانی باشند","مطالب فقط در گزینه‌ها"],answer:1,explanation:"قاعده ۴ = عدم تکرار در گزینه‌ها."},
+{q:"طبق قاعده ۵، مطالب اصلی سؤال کجا باید نوشته شود؟",options:["در گزینه‌ها","در تنه سؤال","در هر دو","هیچ‌کدام"],answer:1,explanation:"مطالب اصلی در تنه سؤال."},
+{q:"طبق قاعده ۶، گزینه‌ها باید چگونه باشند؟",options:["متنوع و نامتجانس","متجانس و مربوط به موضوع واحد","طولانی","کوتاه"],answer:1,explanation:"گزینه‌ها متجانس باشند."},
+{q:"هرچه گزینه‌ها متجانس‌تر باشند، سؤال چگونه می‌شود؟",options:["ساده‌تر","دشوارتر","بی‌تغییر","بی‌معنی"],answer:1,explanation:"تجانس بیشتر = سؤال دشوارتر."},
+{q:"طبق قاعده ۸، برای سنجش فرآیندهای پیچیده ذهنی از چه استفاده کنیم؟",options:["مثال‌های کتاب","موقعیت‌های تازه","سؤال‌های ساده","تکرار مطالب"],answer:1,explanation:"موقعیت‌های تازه."},
+{q:"طبق قاعده ۱۲، کلمات منفی در سؤالات منفی چگونه باشند؟",options:["پنهان","برجسته","حذف","کم‌رنگ"],answer:1,explanation:"کلمات منفی برجسته باشند."},
+{q:"بهترین کاربرد گزینه «هیچ‌کدام» کجاست؟",options:["علوم انسانی","ریاضیات","ادبیات","هنر"],answer:1,explanation:"بهترین کاربرد = ریاضیات."},
+{q:"طبق قاعده ۱۴، سؤال‌ها چگونه باشند؟",options:["وابسته به هم","مستقل از هم","تکراری","پیچیده"],answer:1,explanation:"سؤال‌ها مستقل باشند."},
+{q:"طبق قاعده ۱۸، گزینه درست چگونه انتخاب شود؟",options:["همیشه اول","همیشه آخر","تصادفی","به ترتیب"],answer:2,explanation:"تصادفی انتخاب کن."},
+{q:"روش شماره صفحات برای چه کاری استفاده می‌شود؟",options:["تعیین تعداد سؤال","تعیین محل تصادفی گزینه درست","تعیین نمره","تعیین سطح دشواری"],answer:1,explanation:"تعیین محل گزینه درست."},
+{q:"طبق قاعده ۱۹، برای هر سؤال چند گزینه مناسب است؟",options:["۲","۳ تا ۵","۶","بیش از ۱۰"],answer:1,explanation:"۳ تا ۵ گزینه."},
+{q:"طبق توصیه مهرنز و لهمان، کلاس دوم چند گزینه داشته باشد؟",options:["۲","۳","۴","۵"],answer:1,explanation:"کلاس دوم = ۳ گزینه."},
+{q:"طبق توصیه مهرنز و لهمان، کلاس ششم و بالاتر چند گزینه؟",options:["۲ تا ۳","۳ تا ۴","۴ تا ۵","۶ تا ۷"],answer:2,explanation:"کلاس ششم و بالاتر = ۴ تا ۵ گزینه."},
+{q:"طبق قاعده ۲۰، گزینه «نمی‌دانم» در کدام آزمون‌ها استفاده شود؟",options:["آزمون‌های نهایی","آزمون‌های تکوینی","آزمون‌های استاندارد","همه آزمون‌ها"],answer:1,explanation:"آزمون‌های تکوینی."},
+{q:"طبق قاعده ۲۱، جای خالی در جمله ناتمام کجا باشد؟",options:["اول جمله","وسط جمله","آخر جمله","هر جا"],answer:2,explanation:"آخر جمله."},
+{q:"طبق قاعده ۲۲، کدام نوع جمله بهتر است؟",options:["ناتمام","پرسشی","ترکیبی","جایگزینی"],answer:1,explanation:"جمله پرسشی بهتره."},
+{q:"طبق نظر پین (۲۰۰۳)، مشکل جمله ناتمام چیست؟",options:["سؤال آسان می‌شود","آزمون‌شونده باید سؤال ذهن آزمون‌ساز را بازسازی کند","سؤال دشوار می‌شود","گزینه‌ها مبهم می‌شوند"],answer:1,explanation:"بازسازی سؤال ذهن آزمون‌ساز."},
+{q:"امتیاز آزمون چندگزینه‌ای کدام است؟",options:["دشواری ساخت","انعطاف‌پذیری","سنجش اطلاعات جزئی","وقت‌گیر بودن"],answer:1,explanation:"انعطاف‌پذیری = امتیاز."},
+{q:"محدودیت آزمون چندگزینه‌ای کدام است؟",options:["انعطاف‌پذیری","تصحیح آسان","دشواری ساخت","حدس کمتر"],answer:2,explanation:"دشواری ساخت = محدودیت."},
+{q:"دانش‌آموزان دارای تفکر واگرا در آزمون چندگزینه‌ای چه وضعی دارند؟",options:["مورد تشویق قرار می‌گیرند","زیان می‌بینند","نمره بهتر می‌گیرند","برابر با بقیه"],answer:1,explanation:"دانش‌آموزان واگرا زیان می‌بینند."},
+{q:"سؤال‌های چندگزینه‌ای عموماً برای سنجش چه هدف‌هایی مفیدند؟",options:["فقط یادآوری","یادآوری، فهمیدن و کاربستن","فقط تحلیل","فقط ارزشیابی"],answer:1,explanation:"یادآوری، فهمیدن، کاربستن."},
+{q:"با دقت و ابتکار، می‌توان چه سطحی از یادگیری را هم سنجید؟",options:["فقط دانش","یادگیری‌های پیچیده‌تر مثل تحلیل","فقط حفظ کردن","هیچ‌کدام"],answer:1,explanation:"یادگیری‌های پیچیده‌تر."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

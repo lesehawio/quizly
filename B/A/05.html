@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>آزمون مرور سریع - ورزش ۱ (سری پنجم)</title>
+    <style>
+        :root {
+            --pink: #fa4779;
+            --pink2: #ff7aa6;
+            --pink-soft: rgba(250, 71, 121, 0.12);
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e5e7eb;
+            --correct: #7fd1b9;
+        }
+        body.dark {
+            --bg: #0b1020;
+            --card: #131a33;
+            --text: #e5e7eb;
+            --border: #263056;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 70px auto;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 26px;
+        }
+        .card, .sheet, .json-card {
+            background: var(--card);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.18);
+        }
+        .json-card {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+        }
+        .progress-wrap {
+            height: 12px;
+            background: linear-gradient(90deg, #eee, #ddd);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            transition: .4s;
+        }
+        .question {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 22px;
+            line-height: 1.8;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .option {
+            padding: 16px 18px;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            transition: background .3s, border-color .3s;
+            font-size: 15px;
+        }
+        .option:hover {
+            background: var(--pink-soft);
+            border-color: var(--pink);
+        }
+        .next {
+            margin-top: 28px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 22px;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background .3s;
+        }
+        .next:hover {
+            background: var(--pink2);
+        }
+        .sheet {
+            max-height: 620px;
+            overflow: auto;
+        }
+        .sheet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .sheet-cell {
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 10px 12px;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 8px;
+            align-items: center;
+        }
+        .sheet-cell.active {
+            border-color: var(--pink);
+            box-shadow: 0 0 0 3px var(--pink-soft);
+        }
+        .answers {
+            display: flex;
+            justify-content: space-between;
+        }
+        .bubble {
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 12px;
+        }
+        .bubble.correct {
+            background: var(--correct);
+            color: #fff;
+            border: none;
+        }
+        .bubble.wrong {
+            background: var(--pink);
+            color: #fff;
+            border: none;
+        }
+        .result {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .score {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--pink);
+        }
+        .desc {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .print {
+            margin-top: 24px;
+            padding: 14px 34px;
+            border-radius: 999px;
+            border: none;
+            background: #111;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background .3s;
+        }
+        .print:hover {
+            background: #333;
+        }
+        .json-card textarea {
+            width: 100%;
+            min-height: 160px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 14px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            background: var(--bg);
+            color: var(--text);
+            resize: vertical;
+            direction: ltr;
+            text-align: left;
+        }
+        .json-card .json-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .json-card .json-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .copy-json-btn {
+            padding: 8px 24px;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .copy-json-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(250, 71, 121, 0.35);
+        }
+        .copy-feedback {
+            font-size: 14px;
+            color: var(--correct);
+            font-weight: 600;
+            display: none;
+        }
+        .quizly-logo {
+            position: fixed;
+            top: 16px;
+            right: 18px;
+            z-index: 999;
+        }
+        .quizly-logo img {
+            width: 60px;
+            cursor: pointer;
+            animation: quizlyFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 28px rgba(250, 71, 121, .55));
+            transition: transform .35s ease, filter .35s ease;
+        }
+        .quizly-logo img:hover {
+            transform: scale(1.12) rotate(3deg);
+            filter: drop-shadow(0 16px 40px rgba(250, 71, 121, .85));
+        }
+        @keyframes quizlyFloat {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+        @media (max-width: 820px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
+            .options {
+                grid-template-columns: 1fr;
+            }
+            .sheet-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media print {
+            .theme-toggle, .next, .json-card { display: none; }
+            body { background: #fff; }
+        }
+    </style>
+</head>
+<body>
+<div class="quizly-logo">
+    <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo">
+</div>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+<div class="wrapper">
+    <div class="card">
+        <div class="progress-wrap">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="quiz"></div>
+        <button class="next" id="nextBtn" onclick="next()">بعدی</button>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="sheet">
+        <div class="sheet-grid" id="sheet"></div>
+    </div>
+
+    <!-- بخش JSON -->
+    <div class="json-card" id="jsonCard">
+        <div class="json-header">
+            <h3>📋 کپی JSON نتایج</h3>
+            <div>
+                <button class="copy-json-btn" onclick="copyJSON()">کپی JSON</button>
+                <span class="copy-feedback" id="copyFeedback">✓ کپی شد!</span>
+            </div>
+        </div>
+        <textarea id="jsonOutput" readonly placeholder="نتایج به‌صورت JSON اینجا نمایش داده می‌شود..."></textarea>
+    </div>
+</div>
+
+<script>
+
+const questions = [
+    {
+        q: "در نتیجه شرکت در فعالیت های بدنی کدام تغییرات در فرد ایجاد می شود؟",
+        options: ["آشنایی با قوانین اجتماعی و احترام به قوانین فردی", "احترام به قوانین فردی", "بروز استعدادهای اجتماعی و آشنایی با قوانین اجتماعی", "بروز استعدادهای اجتماعی"],
+        answer: 2
+    },
+    {
+        q: "گرفتگی کدام سرخرگ موجب سکته قلبی می شود؟",
+        options: ["کرونر", "کاروتید", "آئورت", "ششی"],
+        answer: 0
+    },
+    {
+        q: "فشار ناشی از انقباض کدام حفره قلبی موجب می شود تا خون به تمام بافت های بدن برسد؟",
+        options: ["بطن چپ", "دهلیز چپ", "بطن راست", "دهلیز راست"],
+        answer: 0
+    },
+    {
+        q: "کدام مرد بیشتر مستعد چاقی است؟",
+        options: ["۲۰ ساله", "۲۴ ساله", "۳۴ ساله", "۵۰ ساله"],
+        answer: 3
+    },
+    {
+        q: "افزایش تحرک و فعالیت یک عضو چه تغییری در شبکه مویرگی اطراف آن عضو ایجاد می کند؟",
+        options: ["موجب کاهش آن می شود.", "موجب افزایش آن می شود.", "تغییری در آن ایجاد نمی کند.", "فقط در کودکان تمرین کرده موجب افزایش آن می شود"],
+        answer: 1
+    },
+    {
+        q: "در مورد مصرف سیگار و ورزشکاران کدام جمله صحیح است؟",
+        options: [
+            "ورزش کردن موجب تولید ماده ای می شود که میل ورزشکار به سیگار را کم می کند.",
+            "ورزش کردن نیازمند توان بدنی بالا است و مصرف سیگار توان بدنی را کاهش می دهد.",
+            "بین قدرت بدنی و میل نداشتن به سیگار رابطه فیزیولوژیکی وجود دارد.",
+            "هر سه گزینه صحیح است."
+        ],
+        answer: 3
+    },
+    {
+        q: "کدام دسته از ورزش ها برای سلامتی دستگاه قلبی - عروقی موثرتر است؟",
+        options: ["ورزش های قدرتی", "ورزش های آبی", "ورزش های تناوبی شدید", "ورزش های استقامتی"],
+        answer: 3
+    },
+    {
+        q: "کدام شنا سریعترین نوع شنا است و در آموزش افراد مبتدی از آن استفاده می شود؟",
+        options: ["کرال سینه", "کرال پشت", "قورباغه", "پروانه"],
+        answer: 0
+    },
+    {
+        q: "شناگر عامل نفس گیری را با حرکت کدام اندام از بدنش هماهنگ می کند؟",
+        options: ["پاها", "دست ها", "سر", "تنه"],
+        answer: 1
+    },
+    {
+        q: "در نفس گیری ورزش شنا، عمل بازدم از کدام طریق انجام می گیرد؟",
+        options: ["دهان", "بینی", "دهان و بینی", "در افراد مبتدی از طریق بینی"],
+        answer: 2
+    },
+    {
+        q: "اولین ضربه به توپ برای شروع بازی والیبال چه نام دارد؟",
+        options: ["پاس", "آبشار", "دفاع", "سرویس"],
+        answer: 3
+    },
+    {
+        q: "هدف از دفاع روی تور در بازی والیبال کدام گزینه است؟",
+        options: ["مهار کردن توپ", "جلوگیری از سقوط توپ در داخل زمین", "کنترل توپ", "مهار کردن توپ و جلوگیری از سقوط توپ در داخل زمین"],
+        answer: 3
+    },
+    {
+        q: "ارتفاع تور از سطح زمین در بازی والیبال مردان چند سانتی متر است؟",
+        options: ["۲۴۳ سانتی متر", "۲۲۴ سانتی متر", "۳۴۲ سانتی متر", "۲۸۳ سانتی متر"],
+        answer: 0
+    },
+    {
+        q: "در بازی فوتسال، حمل توپ توسط بازیکن با ضربات آهسته و متوالی چه نام دارد؟",
+        options: ["پاس", "دریبل", "شوت", "کنترل توپ"],
+        answer: 1
+    },
+    {
+        q: "در مورد اجرای پرتاب اوت در بازی فوتسال کدام جمله صحیح است؟",
+        options: [
+            "در اجرای این مهارت فقط از یک دست استفاده می شود.",
+            "توپ را می توان از جلوی سینه هم پرتاب کرد.",
+            "توپ از عقب و از پایین ناحیه سر به بالا پرتاب می شود.",
+            "در لحظه پرتاب توپ هر دو پا با زمین در تماس هستند."
+        ],
+        answer: 3
+    },
+    {
+        q: "در بازی بسکتبال کدام نوع پاس بیشتر توسط افراد قد بلند استفاده می شود و در رساندن توپ به بازیکن دیگر روش مطمئن تری نسبت به انواع دیگر پاس است؟",
+        options: ["پاس زمینی", "پاس بیسبالی", "پاس دو دستی بالای سر", "پاس سینه دو دستی"],
+        answer: 2
+    },
+    {
+        q: "کدام شوت بسکتبال بیشتر در بازیکنان مبتدی استفاده می شود و کاربرد آن در افراد ماهر بسیار کم است؟",
+        options: ["شوت هوک", "شوت بلند", "شوت کوتاه", "شوت دو دستی از سینه"],
+        answer: 2
+    },
+    {
+        q: "هر پرتاب آزاد در بازی بسکتبال چند امتیاز دارد؟",
+        options: ["سه امتیاز", "دو امتیاز", "یک امتیاز", "بسته به شرایط بازی می تواند متفاوت باشد."],
+        answer: 2
+    },
+    {
+        q: "یکی از مقدماتی ترین مهارت ها در بازی تنیس روی میز چیست؟",
+        options: ["ضربه فورهند", "ضربه لوب", "ضربه درایو", "پیچش در توپ"],
+        answer: 0
+    },
+    {
+        q: "ارتفاع تور وسط میز تنیس روی میز چند سانتی متر است؟",
+        options: ["۱۰ سانتی متر", "۱۵ سانتی متر", "۱۷.۵ سانتی متر", "۲۰ سانتی متر"],
+        answer: 2
+    },
+    {
+        q: "مدت زمان لازم برای گرم کردن قبل از فعالیت اصلی چقدر است؟",
+        options: ["نیم ساعت", "۲ تا ۳ دقیقه", "۵ تا ۱۰ دقیقه", "۱۵ تا ۲۰ دقیقه"],
+        answer: 2
+    },
+    {
+        q: "کدام تغییر یا تغییرات فیزیولوژیک از اهداف فعالیت های گرم کردن است؟",
+        options: ["افزایش ضربان قلب", "افزایش درجه حرارت بدن", "افزایش انعطاف پذیری", "همه موارد از اهداف فعالیت های گرم کردن هستند."],
+        answer: 3
+    },
+    {
+        q: "برای افزایش انعطاف پذیری بدن چند جلسه تمرین در هفته لازم است؟",
+        options: ["دو جلسه", "سه جلسه", "چهار جلسه", "پنج جلسه"],
+        answer: 3
+    },
+    {
+        q: "برای افزایش استقامت عمومی بدن، بیشتر از چه نوع تمریناتی استفاده می شود؟",
+        options: ["تمرینات هوازی", "تمرینات قدرتی", "تمرینات با وزنه", "تمرینات تناوبی خیلی شدید"],
+        answer: 0
+    },
+    {
+        q: "هدف آزمون کشش بارفیکس سنجش کدام قابلیت است؟",
+        options: ["قدرت عضلانی", "استقامت عضلانی", "توان", "قدرت عمومی"],
+        answer: 1
+    },
+    {
+        q: "در بازی فوتسال، فاصله نقطه پنالتی تا خط دروازه چند متر است؟",
+        options: ["۸ متر", "۱۰ متر", "۱۱ متر", "۱۶.۵ متر"],
+        answer: 1
+    },
+    {
+        q: "در بازی والیبال، کدام تکنیک تهاجمی برای فرود توپ در زمین مقابل استفاده می شود به طوری که امکان کنترل توپ برای حریف نباشد؟",
+        options: ["سرویس بلند", "آبشار", "پاس", "دفاع"],
+        answer: 1
+    },
+    {
+        q: "تعداد بازیکنان هر تیم والیبال در داخل زمین چند نفر است؟",
+        options: ["۵ نفر", "۶ نفر", "۷ نفر", "۸ نفر"],
+        answer: 1
+    },
+    {
+        q: "اعصابی که پیام ها را از محیط به دستگاه عصبی مرکزی ارسال می کنند، چه نام دارند؟",
+        options: ["اعصاب مرکزی", "اعصاب آوران", "اعصاب وابران", "اعصاب غیر مستقیم"],
+        answer: 1
+    },
+    {
+        q: "در بازی بسکتبال هر تیم از چند بازیکن ذخیره برای تعویض بازیکنان اصلی استفاده می کند؟",
+        options: ["۶ بازیکن", "۳ تا ۵ بازیکن", "۵ تا ۷ بازیکن", "۷ تا ۹ بازیکن"],
+        answer: 2
+    }
+];
+
+    let index = 0;
+    let correctCount = 0;
+    const userAnswers = Array(questions.length).fill(null);
+    const letters = ["الف", "ب", "ج", "د"];
+
+    const quiz = document.getElementById("quiz");
+    const sheet = document.getElementById("sheet");
+    const nextBtn = document.getElementById("nextBtn");
+    const progress = document.getElementById("progress");
+    const jsonOutput = document.getElementById("jsonOutput");
+    const copyFeedback = document.getElementById("copyFeedback");
+
+    function render() {
+        const q = questions[index];
+        quiz.innerHTML = `
+            <div class="question">${index+1}. ${q.q}</div>
+            <div class="options">
+                ${q.options.map((o, i) => `<div class="option" onclick="select(${i})">${letters[i]}) ${o}</div>`).join("")}
+            </div>`;
+        nextBtn.style.display = "none";
+        updateProgress();
+        renderSheet();
+        updateJSON();
+    }
+
+    function updateProgress() {
+        progress.style.width = `${(index / questions.length) * 100}%`;
+    }
+
+    function renderSheet() {
+        sheet.innerHTML = questions.map((q, i) => {
+            const ua = userAnswers[i];
+            return `
+                <div class="sheet-cell ${i === index ? "active" : ""}">
+                    <b>${i + 1}</b>
+                    <div class="answers">
+                        ${[0, 1, 2, 3].map((j) => {
+                            let c = "";
+                            if (ua !== null) {
+                                c = j === q.answer ? "correct" : (j === ua ? "wrong" : "");
+                            }
+                            return `<div class="bubble ${c}">${letters[j]}</div>`;
+                        }).join("")}
+                    </div>
+                </div>`;
+        }).join("");
+    }
+
+    function select(i) {
+        if (userAnswers[index] !== null) return;
+        userAnswers[index] = i;
+        if (i === questions[index].answer) correctCount++;
+        nextBtn.style.display = "block";
+        renderSheet();
+        updateJSON();
+    }
+
+    function next() {
+        index++;
+        if (index < questions.length) {
+            render();
+        } else {
+            finish();
+        }
+    }
+
+    function finish() {
+        progress.style.width = "100%";
+        const totalQuestions = questions.length;
+        const answeredQuestions = userAnswers.filter(answer => answer !== null).length;
+        const grade = ((correctCount / totalQuestions) * 20).toFixed(2);
+        const percentage = ((correctCount / totalQuestions) * 100).toFixed(2);
+        let desc = "";
+        if (grade >= 18) desc = "عالی و مسلط";
+        else if (grade >= 15) desc = "خوب";
+        else if (grade >= 12) desc = "قابل قبول";
+        else desc = "نیازمند تمرین جدی";
+
+        quiz.innerHTML = `
+            <div class="score">${grade} / ۲۰</div>
+            <div class="desc">${desc}</div>
+            <div>شما ${answeredQuestions} از ${totalQuestions} سوال را پاسخ داده‌اید. (${percentage}%)</div>
+            <div style="margin-top:10px;color:var(--text-secondary);font-size:14px;">
+                ✅ ${correctCount} صحیح | ❌ ${answeredQuestions - correctCount} غلط
+            </div>
+            <button class="print" onclick="openPrintWindow()">🖨 چاپ</button>
+        `;
+        updateJSON();
+    }
+
+    function openPrintWindow() {
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(`
+            <html lang="fa" dir="rtl">
+            <head>
+                <meta charset="UTF-8">
+                <title>نتیجه آزمون</title>
+                <style>
+                    body { font-family: 'Vazirmatn', Tahoma, sans-serif; direction: rtl; padding: 20px; }
+                    .result { text-align: center; margin: 20px; }
+                    .table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                    .table th, .table td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+                    .table th { background: #fa4779; color: #fff; }
+                    .table td.correct { background: #7fd1b9; }
+                    .table td.wrong { background: #fa4779; color: #fff; }
+                </style>
+            </head>
+            <body>
+                <div class="result">
+                    <h1>نتیجه آزمون</h1>
+                    <div style="font-size:48px;font-weight:900;color:#fa4779;">${(correctCount / questions.length * 20).toFixed(2)} / ۲۰</div>
+                    <div>شما ${userAnswers.filter(answer => answer !== null).length} از ${questions.length} سوال را پاسخ داده‌اید.</div>
+                    <table class="table">
+                        <thead>
+                            <tr><th>سوال</th><th>پاسخ شما</th><th>پاسخ صحیح</th></tr>
+                        </thead>
+                        <tbody>
+                            ${questions.map((q, i) => `
+                                <tr>
+                                    <td>${q.q}</td>
+                                    <td class="${userAnswers[i] === q.answer ? 'correct' : 'wrong'}">${userAnswers[i] !== null ? letters[userAnswers[i]] : 'پاسخ داده نشده'}</td>
+                                    <td>${letters[q.answer]}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            </body>
+            </html>
+        `);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+    }
+
+    // ===== JSON GENERATOR =====
+    function generateJSON() {
+        const totalQuestions = questions.length;
+        const answered = userAnswers.filter(a => a !== null).length;
+        const correct = correctCount;
+        const wrong = answered - correct;
+        const grade = ((correct / totalQuestions) * 20);
+        const percentage = ((correct / totalQuestions) * 100);
+
+        const results = questions.map((q, i) => {
+            const userAns = userAnswers[i];
+            return {
+                question_number: i + 1,
+                question: q.q,
+                options: q.options,
+                correct_answer: letters[q.answer],
+                user_answer: userAns !== null ? letters[userAns] : "پاسخ داده نشده",
+                is_correct: userAns !== null ? (userAns === q.answer) : false
+            };
+        });
+
+        return {
+            total_questions: totalQuestions,
+            answered_questions: answered,
+            correct_answers: correct,
+            wrong_answers: wrong,
+            grade: parseFloat(grade.toFixed(2)),
+            percentage: parseFloat(percentage.toFixed(2)),
+            results: results
+        };
+    }
+
+    function updateJSON() {
+        const data = generateJSON();
+        jsonOutput.value = JSON.stringify(data, null, 2);
+    }
+
+    function copyJSON() {
+        jsonOutput.select();
+        navigator.clipboard.writeText(jsonOutput.value).then(() => {
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        }).catch(() => {
+            document.execCommand("copy");
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        });
+    }
+
+    render();
+</script>
+</body>
+</html>

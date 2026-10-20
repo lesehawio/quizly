@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · معارف اسلامی · سری 01</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"01";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px}.word{background:var(--soft);padding:4px 10px;border-radius:10px;font-family:"Segoe UI",sans-serif;font-size:12px;border:1px solid var(--line)}
+details{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:0 14px;margin-top:10px}
+summary{cursor:pointer;padding:10px 0;font-weight:bold;font-size:14px;touch-action:manipulation}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>معارف اسلامی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی معارف اسلامی</h2>
+  <p>تحلیل کامل ۳۰ سوال با پاسخنامه تشریحی، نقشه امتحانی و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">۳۰ سوال</span><span class="pill">۶ دسته موضوعی</span><span class="pill">۱۵+ مفهوم کلیدی</span><span class="pill">۸ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد معارف اسلامی طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۳۰</b><span>سوال</span></div>
+<div class="stat"><b>۶</b><span>دسته موضوعی</span></div>
+<div class="stat"><b>۱۵+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۸</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">۰۱ · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، شخصیت‌ها...">
+
+<div id="questionList">
+
+<div class="card question" data-search="معنویت آسیب انسان معاصر">
+<span class="qnum">سوال ۱</span>
+<div class="fa"><b>متن سوال:</b> وجه جامع آسیب‌های انسان معاصر کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">معنوی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> وجه جامع آسیب‌های انسان معاصر، بُعد معنوی است. یعنی ریشه همه آسیب‌های اخلاقی، اجتماعی و خانوادگی، بحران معنویت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اخلاقی: فقط یک لایه از آسیب است.<br>
+- اجتماعی: معلول بحران معنوی است.<br>
+- خانوادگی: نتیجه آسیب‌های عمیق‌تر است.<br>
+<b>نکته کلیدی:</b> معنویت = مادر همه آسیب‌ها
+</div>
+</div>
+
+<div class="card question" data-search="قرون وسطی ایمان عقل تقدم">
+<span class="qnum">سوال ۲</span>
+<div class="fa"><b>متن سوال:</b> دوره تقدم و ترجیح ایمان بر عقل از ویژگی‌های کدام دوره است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">دوره قرون وسطی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در قرون وسطی، ایمان بر عقل تقدم و ترجیح داشت. شعار معروف: «ایمان می‌آورم تا بفهمم».<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- دوره قدیم: عقل و ایمان متعادل‌تر بودند.<br>
+- دوره یونان: عقل محور بود.<br>
+- گزینه ۴ تکراری است.<br>
+<b>نکته کلیدی:</b> قرون وسطی = ایمان بر عقل
+</div>
+</div>
+
+<div class="card question" data-search="رنسانس اصالت حس عقل افراط تفریط">
+<span class="qnum">سوال ۳</span>
+<div class="fa"><b>متن سوال:</b> دو جریان افراطی و تفریطی که پس از رنسانس در عرصه معرفت‌شناسی غرب پدید آمد کدام گزینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اصالت حس - اصالت عقل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> پس از رنسانس دو جریان افراطی در معرفت‌شناسی غرب پدید آمد: اصالت حس (حسیون) و اصالت عقل (عقلیون).<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اصالت سود/لذت: مربوط به فلسفه اخلاق است.<br>
+- اصالت اخلاق/تجربه: ترکیب اشتباه است.<br>
+- اصالت معنویت/عرفان: مربوط به معرفت‌شناسی غربی نیست.<br>
+<b>نکته کلیدی:</b> حس vs عقل = دو افراط معرفت‌شناختی
+</div>
+</div>
+
+<div class="card question" data-search="ادیان الهی معنویت اساسی ترین مفاهیم">
+<span class="qnum">سوال ۴</span>
+<div class="fa"><b>متن سوال:</b> از اساسی‌ترین مفاهیم در ادیان الهی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">معنویت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از اساسی‌ترین مفاهیم در ادیان الهی، معنویت است. چون همه ادیان الهی دنبال دادن معنا و هدف به زندگی انسان هستند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عقل: ابزار است، نه اساسی‌ترین مفهوم دین.<br>
+- ایمان: مهم است ولی زیرمجموعه معنویت.<br>
+- اخلاق: نتیجه معنویت است.<br>
+<b>نکته کلیدی:</b> معنویت = روح ادیان الهی
+</div>
+</div>
+
+<div class="card question" data-search="ایمان وابستگی خدا معنویت">
+<span class="qnum">سوال ۵</span>
+<div class="fa"><b>متن سوال:</b> کدام مورد به عنوان حاصل ایمان و نوعی وابستگی به خداوند به عنوان مبدأ هستی و پدید آورنده مخلوقات محسوب می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">معنویت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> معنویت حاصل ایمان و نوعی وابستگی به خداوند به عنوان مبدأ هستی و پدیدآورنده مخلوقات است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عشق: احساس است، ولی تعریف معنویت نیست.<br>
+- دین: مجموعه اعتقادات و اعمال است.<br>
+- اخلاق: رفتار و منش است.<br>
+<b>نکته کلیدی:</b> معنویت = ایمان + وابستگی به خدا
+</div>
+</div>
+
+<div class="card question" data-search="نفس اماره دشمن جهاد اکبر">
+<span class="qnum">سوال ۶</span>
+<div class="fa"><b>متن سوال:</b> کدام مورد است که در معارف الهی به عنوان بزرگترین دشمن تلقی شده و مبارزه با آن جهاد اکبر نامیده شده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نفس اماره</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در معارف الهی، نفس اماره بزرگترین دشمن تلقی شده و مبارزه با آن جهاد اکبر نامیده شده است. پیامبر (ص) فرمود: «دشمن‌ترین دشمنان تو نفس توست که در درون توست».<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شیطان رجیم: دشمن است، ولی از بیرون وسوسه می‌کند.<br>
+- استکبار جهانی: دشمن بیرونی و سیاسی.<br>
+- نفس لوامه: نفس سرزنش‌گر است، نه دشمن.<br>
+<b>نکته کلیدی:</b> نفس اماره = دشمن درونی = جهاد اکبر
+</div>
+</div>
+
+<div class="card question" data-search="راه دل فطرت خداشناسی شهود">
+<span class="qnum">سوال ۷</span>
+<div class="fa"><b>متن سوال:</b> کدام طریق خداشناسی است که در آن استدلال و برهان عقلی و فلسفی برای اثبات خداوند استفاده نمی‌شود بلکه نوعی شهود و احساس حضور پروردگار است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">راه دل و فطرت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راه دل و فطرت راهی است که در آن استدلال و برهان عقلی و فلسفی برای اثبات خداوند استفاده نمی‌شود، بلکه نوعی شهود و احساس حضور پروردگار است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- برهان نظم: عقلی و استدلالی.<br>
+- برهان امکان و وجوب: عقلی و فلسفی.<br>
+- راه عقل و استدلال: همان راه عقلی.<br>
+<b>نکته کلیدی:</b> فطرت = بدون استدلال، شهودی
+</div>
+</div>
+
+<div class="card question" data-search="ممکن الوجود واجب الوجود نسبت وجود عدم">
+<span class="qnum">سوال ۸</span>
+<div class="fa"><b>متن سوال:</b> وجودی که مقتضی ضرورت وجود یا امتناع وجود در خارج نیست بلکه نسبت او به وجود و عدم یکسان است چه نام دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ممکن‌الوجود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ممکن‌الوجود موجودی است که نسبتش به وجود و عدم یکسان است؛ نه وجودش ضروری است نه عدمش.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- جایز الوجود: معادل ممکن‌الوجود، ولی در گزینه‌ها نیست.<br>
+- واجب‌الوجود: وجودش ضروری است.<br>
+- ممکن‌الوجود: پاسخ درست است.<br>
+<b>نکته کلیدی:</b> ممکن‌الوجود = نسبت یکسان به وجود و عدم
+</div>
+</div>
+
+<div class="card question" data-search="شعر اندرون من خسته دل راه فطرت">
+<span class="qnum">سوال ۹</span>
+<div class="fa"><b>متن سوال:</b> این بیت «در اندرون من خسته دل ندانم کیست / که من خموشم و او در فغان و غوغاست» مربوط به کدام‌یک از راه‌های خداشناسی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">راه فطرت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بیت «در اندرون من خسته دل ندانم کیست / که من خموشم و او در فغان و غوغاست» اشاره به راه فطرت دارد. یعنی یک صدای درونی که بدون استدلال، خدا را نشان می‌دهد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- راه عقل: استدلالی.<br>
+- راه نقل: از قرآن و حدیث.<br>
+- برهان امکان و وجوب: عقلی و فلسفی.<br>
+<b>نکته کلیدی:</b> شعر درون = فطرت
+</div>
+</div>
+
+<div class="card question" data-search="صفات اضافی صفات نفسی رابطه خدا مخلوق">
+<span class="qnum">سوال ۱۰</span>
+<div class="fa"><b>متن سوال:</b> صفاتی که در یک نسبت و رابطه وجودی میان خداوند و مخلوقات ایجاد می‌شود چه نام دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">صفات اضافی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> صفات اضافی صفاتی هستند که در یک نسبت و رابطه وجودی میان خداوند و مخلوقات ایجاد می‌شوند. مثل: خالقیت، رازقیت، رحیمیت.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- صفات نفسی: صفاتی که عین ذات هستند (علم، قدرت، حیات).<br>
+- صفات ذاتی: همان صفات نفسی.<br>
+- صفات فعلی: مربوط به افعال خدا (خالقیت).<br>
+<b>نکته کلیدی:</b> اضافی = نیازمند رابطه با مخلوق
+</div>
+</div>
+
+<div class="card question" data-search="آیه یعلم خائنة الاعین علم خدا">
+<span class="qnum">سوال ۱۱</span>
+<div class="fa"><b>متن سوال:</b> آیه شریفه «يَعْلَمُ خَائِنَةَ الْأَعْيُنِ وَ مَا تُخْفِي الصُّدُور» (او چشم‌هایی را که به خیانت گردش می‌کند می‌داند، و آنچه در سینه‌ها پنهان است با خبر است) مربوط به کدام‌یک از صفات الهی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">علم گسترده خداوند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آیه «يَعْلَمُ خَائِنَةَ الْأَعْيُنِ وَ مَا تُخْفِي الصُّدُور» مربوط به علم گسترده خداوند است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- قدرت: مربوط به توانایی.<br>
+- حکمت: مربوط به هدفمندی.<br>
+- خالقیت: مربوط به آفرینش.<br>
+<b>نکته کلیدی:</b> یعلم = علم
+</div>
+</div>
+
+<div class="card question" data-search="آیه کل یوم هو فی شأن قدرت خدا">
+<span class="qnum">سوال ۱۲</span>
+<div class="fa"><b>متن سوال:</b> آیه شریفه «كُلَّ يَوْمٍ هُوَ فِي شَأْنٍ» (او هر روز در شان و کاری است) به کدام‌یک از صفات خداوند اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">قدرت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آیه «كُلَّ يَوْمٍ هُوَ فِي شَأْنٍ» به قدرت خداوند اشاره دارد؛ یعنی هر لحظه در حال ایجاد، تدبیر و اداره امور است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- حیات: زنده بودن.<br>
+- علم: دانستن.<br>
+- حکمت: هدفمندی.<br>
+<b>نکته کلیدی:</b> شأن = کار = قدرت
+</div>
+</div>
+
+<div class="card question" data-search="قضا قدر تفاوت حتمیت اندازه">
+<span class="qnum">سوال ۱۳</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه به مهم‌ترین تفاوت قضا و قدر اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">در قضا ضرورت و حتمی بودن است ولی قدر مربوط به خصوصیات و حدود معلول است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> قضا = حکم قطعی و حتمی خداوند به وجود یک چیز (ضرورت و حتمیت). قدر = تعیین خصوصیات، حدود و اندازه‌های یک موجود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گزینه ۱: قضا مربوط به علم و قدرت نیست.<br>
+- گزینه ۲: برعکس گفته.<br>
+- گزینه ۳: برعکس گفته.<br>
+<b>نکته کلیدی:</b> قضا = حتمیت / قدر = اندازه
+</div>
+</div>
+
+<div class="card question" data-search="قضا قدر تکوینی علت معلول">
+<span class="qnum">سوال ۱۴</span>
+<div class="fa"><b>متن سوال:</b> حوادث و اموری که براساس قانون علت و معلول و سبب و مسبب در جهان روی می‌دهد اصطلاحاً چه نامیده می‌شود؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">قضا و قدر تکوینی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حوادث و اموری که براساس قانون علت و معلول و سبب و مسبب در جهان روی می‌دهد، قضا و قدر تکوینی نامیده می‌شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تشریعی: مربوط به قوانین دینی و شرعی.<br>
+- علمی: مربوط به علم خدا.<br>
+- عقلی: اصطلاح رایجی نیست.<br>
+<b>نکته کلیدی:</b> تکوینی = علت و معلول
+</div>
+</div>
+
+<div class="card question" data-search="جبر نفی فعل انسان">
+<span class="qnum">سوال ۱۵</span>
+<div class="fa"><b>متن سوال:</b> گزینه صحیح در باره این عبارت «در اصطلاح متکلمان به معنای نفی و سلب فعل از انسان و انتساب آن به خداوند است» کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">جبر</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جبر در اصطلاح متکلمان به معنای نفی و سلب فعل از انسان و انتساب آن به خداوند است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- قدر: اندازه‌گیری.<br>
+- قضا: حکم حتمی.<br>
+- اختیار: آزادی انتخاب.<br>
+<b>نکته کلیدی:</b> جبر = نفی فعل از انسان
+</div>
+</div>
+
+<div class="card question" data-search="وجدان دلیل اختیار">
+<span class="qnum">سوال ۱۶</span>
+<div class="fa"><b>متن سوال:</b> وجدان از دلایل کدام مورد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اختیار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> وجدان از دلایل اختیار است. چون انسان در درون خود احساس می‌کند که می‌تواند انتخاب کند و مسئول اعمالش است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- امتحان: نتیجه اختیار.<br>
+- جبر: مخالف اختیار.<br>
+- تقدیر: مربوط به قضا و قدر.<br>
+<b>نکته کلیدی:</b> وجدان = دلیل اختیار
+</div>
+</div>
+
+<div class="card question" data-search="معنای زندگی کشف معنا اسلام">
+<span class="qnum">سوال ۱۷</span>
+<div class="fa"><b>متن سوال:</b> راه حل اسلام و متفکران مسلمان در جستجوی معنای زندگی مبتنی بر کدام مورد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کشف معنا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> راه حل اسلام و متفکران مسلمان در جستجوی معنای زندگی مبتنی بر کشف معنا است؛ یعنی معنا در هستی وجود دارد و ما باید آن را کشف کنیم، نه اینکه بسازیم.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- جعل معنا: مربوط به اگزیستانسیالیسم‌های الحادی.<br>
+- اختراع معنا: همان جعل معنا.<br>
+- اراده معطوف به معنا: مربوط به ویکتور فرانکل.<br>
+<b>نکته کلیدی:</b> اسلام = کشف معنا
+</div>
+</div>
+
+<div class="card question" data-search="معاد قرآن آیات تعداد">
+<span class="qnum">سوال ۱۸</span>
+<div class="fa"><b>متن سوال:</b> در قرآن کریم چند آیه مربوط به مسئله معاد است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بیش از ۱۰۰۰ آیه</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در قرآن کریم بیش از ۱۰۰۰ آیه مربوط به مسئله معاد است. (بعضی منابع تا ۱۲۰۰ آیه هم گفته‌اند)<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ۲۰۰۰ آیه: اغراق.<br>
+- ۳۰۰۰ آیه: اغراق.<br>
+- ۱۱۴ آیه: تعداد سوره‌های قرآن است، نه آیات معاد.<br>
+<b>نکته کلیدی:</b> معاد = بیش از ۱۰۰۰ آیه
+</div>
+</div>
+
+<div class="card question" data-search="معاد روح بدن قیامت">
+<span class="qnum">سوال ۱۹</span>
+<div class="fa"><b>متن سوال:</b> معاد در اسلام به چه معنایی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بازگشت روح به بدن در قیامت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> معاد در اسلام به معنای بازگشت روح به بدن در قیامت است. یعنی معاد هم جسمانی است هم روحانی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تنها روحانی: ناقص.<br>
+- تنها جسمانی: ناقص.<br>
+- بازگشت به برزخ: مربوط به عالم برزخ است، نه قیامت.<br>
+<b>نکته کلیدی:</b> معاد = روح + بدن در قیامت
+</div>
+</div>
+
+<div class="card question" data-search="ملاصدرا معاد عقل برهان">
+<span class="qnum">سوال ۲۰</span>
+<div class="fa"><b>متن سوال:</b> از دیدگاه صدر المتالهین شیرازی بسیاری از خصوصیات معاد را از کدام طریق می‌توان اثبات کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عقل و براهین عقلی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از دیدگاه صدرالمتألهین شیرازی (ملاصدرا)، بسیاری از خصوصیات معاد را از طریق عقل و براهین عقلی می‌توان اثبات کرد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نور نبوت و مشکات ولایت: مربوط به منابع نقلی.<br>
+- قرآن و معارف: منبع نقلی.<br>
+- عرفان و کشف: منبع شهودی.<br>
+<b>نکته کلیدی:</b> ملاصدرا = عقل و برهان
+</div>
+</div>
+
+<div class="card question" data-search="نجات پوچی کشفیات مشاهدات عرفانی">
+<span class="qnum">سوال ۲۱</span>
+<div class="fa"><b>متن سوال:</b> کدام مورد است که آدمی را از احساس پوچی و بی‌هدفی نجات داده و دل اورا برای درک حقیقت هستی آماده می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کشفیات و مشاهدات عرفانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> کشفیات و مشاهدات عرفانی آدمی را از احساس پوچی و بی‌هدفی نجات می‌دهد و دل او را برای درک حقیقت هستی آماده می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- مطالعه در آفرینش: مفید است ولی نجات‌بخش نیست.<br>
+- براهین عقلی: مفید است ولی کافی نیست.<br>
+- آیات قرآن: مفید است ولی مرحله بعدی است.<br>
+<b>نکته کلیدی:</b> نجات از پوچی = کشف و شهود عرفانی
+</div>
+</div>
+
+<div class="card question" data-search="وعده وعید بهشت جهنم">
+<span class="qnum">سوال ۲۲</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه در مورد معنای وعده و وعید صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">وعده به معنای بشارت به بهشت و وعید به معنای ترساندن از جهنم</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> وعده: بشارت به بهشت و پاداش. وعید: ترساندن از جهنم و عذاب.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خلف وعده در وعید جایز است: بحثی مفصل دارد ولی تعریف وعده/وعید نیست.<br>
+- هر دو به معنای بشارت: غلط.<br>
+- وعده = ترساندن: برعکس.<br>
+<b>نکته کلیدی:</b> وعده = بهشت / وعید = جهنم
+</div>
+</div>
+
+<div class="card question" data-search="زمین مرده امکان معاد">
+<span class="qnum">سوال ۲۳</span>
+<div class="fa"><b>متن سوال:</b> قرآن کریم زنده شدن زمین مرده را شاهد بر چه مطلبی می‌داند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">امکان معاد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> قرآن کریم زنده شدن زمین مرده را شاهد بر امکان معاد می‌داند؛ یعنی همان‌طور که زمین مرده زنده می‌شود، انسان‌ها هم می‌توانند دوباره زنده شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- حتمی بودن: از امکان قوی‌تر است.<br>
+- ضرورت: از امکان قوی‌تر است.<br>
+- وقوع: مربوط به وقوع معاد است، نه امکان.<br>
+<b>نکته کلیدی:</b> زمین مرده = امکان معاد
+</div>
+</div>
+
+<div class="card question" data-search="علامه طباطبایی تجرد نفس عقل">
+<span class="qnum">سوال ۲۴</span>
+<div class="fa"><b>متن سوال:</b> از دیدگاه علامه طباطبایی مسئله تجرد نفس از آموزه‌های مسلم چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">عقل</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از دیدگاه علامه طباطبایی، مسئله تجرد نفس از آموزه‌های مسلم عقل است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ادیان الهی: کلی است.<br>
+- کتاب‌های آسمانی: منبع نقلی.<br>
+- قرآن و سنت: منبع نقلی.<br>
+<b>نکته کلیدی:</b> علامه طباطبایی = عقل
+</div>
+</div>
+
+<div class="card question" data-search="بزرگترین نعمت قیامت هدایت ولایت">
+<span class="qnum">سوال ۲۵</span>
+<div class="fa"><b>متن سوال:</b> بزرگترین نعمتی که در روز قیامت از انسان پرسیده می‌شود کدام نعمت است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">هدایت و ولایت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> بزرگترین نعمتی که در روز قیامت از انسان پرسیده می‌شود، هدایت و ولایت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- عمر: مهم است ولی بزرگترین نیست.<br>
+- مال و ثروت: مهم است ولی بزرگترین نیست.<br>
+- جوانی: مهم است ولی بزرگترین نیست.<br>
+<b>نکته کلیدی:</b> بزرگترین نعمت = هدایت و ولایت
+</div>
+</div>
+
+<div class="card question" data-search="نفس مطمئنه لقای پروردگار عالی ترین بهشت">
+<span class="qnum">سوال ۲۶</span>
+<div class="fa"><b>متن سوال:</b> طبق این آیه شریفه «يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ ارْجِعِي إِلَى رَبِّكِ رَاضِيَةً مَرْضِيَّةً فَادْخُلِي فِي عِبَادِي وَادْخُلِي جَنَّتِي» (ای نفس مطمئنه خشنود و خداپسند به سوی پروردگارت بازگرد و در میان بندگان من درآی و در بهشت من داخل شو) عالی‌ترین مرتبه بهشت کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">لقای پروردگار</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> طبق آیه «يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ...» عالی‌ترین مرتبه بهشت لقای پروردگار است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- جنت: خود بهشت.<br>
+- بهشت برین: مرتبه‌ای از بهشت.<br>
+- فردوس اعلی: مرتبه‌ای از بهشت.<br>
+<b>نکته کلیدی:</b> عالی‌ترین بهشت = لقای خدا
+</div>
+</div>
+
+<div class="card question" data-search="علت اصلی ورود بهشت بندگی خدا">
+<span class="qnum">سوال ۲۷</span>
+<div class="fa"><b>متن سوال:</b> در میان عوامل ورود به بهشت کدام عامل علت اصلی و سبب ورود انسان به بهشت است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بندگی خدا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در میان عوامل ورود به بهشت، بندگی خدا علت اصلی و سبب ورود انسان به بهشت است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- ایمان و عمل صالح: لازم است ولی علت اصلی نیست.<br>
+- تقوا: لازم است.<br>
+- احسان: لازم است.<br>
+<b>نکته کلیدی:</b> علت اصلی بهشت = بندگی
+</div>
+</div>
+
+<div class="card question" data-search="جهنم لغت چاه عمیق تاریک">
+<span class="qnum">سوال ۲۸</span>
+<div class="fa"><b>متن سوال:</b> جهنم در لغت به معنای چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">چاه بسیار عمیق و تاریک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> جهنم در لغت به معنای چاه بسیار عمیق و تاریک است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- جایگاهی در مقابل بهشت: معنای اصطلاحی.<br>
+- جایگاه طغیانگران: معنای اصطلاحی.<br>
+- محل مجازات: معنای اصطلاحی.<br>
+<b>نکته کلیدی:</b> جهنم = چاه عمیق و تاریک
+</div>
+</div>
+
+<div class="card question" data-search="خلود جهنم کفار مشرکان شیخ مفید">
+<span class="qnum">سوال ۲۹</span>
+<div class="fa"><b>متن سوال:</b> از دیدگاه بسیاری از متفکران (مانند شیخ مفید و دیگران) خلود در جهنم مخصوص چه کسانی است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">کفار و مشرکان</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> از دیدگاه بسیاری از متفکران (مانند شیخ مفید و دیگران) خلود در جهنم مخصوص کفار و مشرکان است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- یابکاری: گناه است ولی خلود ندارد.<br>
+- قتل نفس: گناه است ولی خلود ندارد.<br>
+- عاق والدین: گناه است ولی خلود ندارد.<br>
+<b>نکته کلیدی:</b> خلود = کفار و مشرکان
+</div>
+</div>
+
+<div class="card question" data-search="مال یتیم خوردن آتش">
+<span class="qnum">سوال ۳۰</span>
+<div class="fa"><b>متن سوال:</b> خداوند در قرآن کریم «خوردن مال یتیم» را به چه چیزی تشبیه کرده است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خوردن آتش</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خداوند در قرآن کریم «خوردن مال یتیم» را به خوردن آتش تشبیه کرده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- آب داغ: تشبیه دیگری.<br>
+- گوشت برادر مرده: تشبیه غیبت.<br>
+- هم‌نشینی با درندگان: تشبیه دیگری.<br>
+<b>نکته کلیدی:</b> مال یتیم = آتش
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۲ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>معنویت و دین</h3></div>
+<div class="grid2">
+<div class="box"><h4>معنویت</h4>
+<div class="fa">مادر همه آسیب‌ها + روح ادیان الهی</div>
+</div>
+<div class="box"><h4>قرون وسطی</h4>
+<div class="fa">ایمان بر عقل</div>
+</div>
+<div class="box"><h4>رنسانس</h4>
+<div class="fa">اصالت حس vs اصالت عقل</div>
+</div>
+<div class="box"><h4>نفس اماره</h4>
+<div class="fa">دشمن درون = جهاد اکبر</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خداشناسی و صفات الهی</h3></div>
+<div class="grid2">
+<div class="box"><h4>راه فطرت</h4>
+<div class="fa">بدون استدلال، شهودی</div>
+</div>
+<div class="box"><h4>ممکن‌الوجود</h4>
+<div class="fa">نسبت یکسان به وجود و عدم</div>
+</div>
+<div class="box"><h4>صفات اضافی</h4>
+<div class="fa">رابطه خدا با مخلوق</div>
+</div>
+<div class="box"><h4>صفات نفسی</h4>
+<div class="fa">عین ذات خدا</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضا و قدر</h3></div>
+<div class="fa"><b>قضا:</b> حتمیت / <b>قدر:</b> اندازه</div>
+<div class="fa"><b>جبر:</b> نفی فعل از انسان / <b>اختیار:</b> آزادی انتخاب</div>
+<div class="fa"><b>وجدان:</b> دلیل اختیار</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معاد و معنای زندگی</h3></div>
+<div class="fa"><b>اسلام:</b> کشف معنا</div>
+<div class="fa"><b>معاد:</b> بیش از ۱۰۰۰ آیه + روح و بدن</div>
+<div class="fa"><b>وعده:</b> بهشت / <b>وعید:</b> جهنم</div>
+<div class="fa"><b>زمین مرده:</b> امکان معاد</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آخرت</h3></div>
+<div class="fa"><b>علامه طباطبایی:</b> تجرد نفس از عقل</div>
+<div class="fa"><b>بزرگترین نعمت:</b> هدایت و ولایت</div>
+<div class="fa"><b>عالی‌ترین بهشت:</b> لقای خدا</div>
+<div class="fa"><b>علت اصلی بهشت:</b> بندگی</div>
+<div class="fa"><b>خلود:</b> کفار و مشرکان</div>
+<div class="fa"><b>مال یتیم:</b> خوردن آتش</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">تعریف ساده و قابل فهم + نکته امتحانی برای هر مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>معنویت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی آدم حس کنه به یه چیز بالاتر از خودش وصلِه و زندگی‌اش هدف داره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معنویت = ریشه همه ابعاد زندگی (اخلاق، اجتماع، خانواده)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نفس اماره</h3></div>
+<div class="fa"><b>تعریف ساده:</b> اون صدای درونیه که آدم رو به کار بد می‌کشه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نفس اماره = دشمن درون (نه بیرون) = جهاد اکبر
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه فطرت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی آدم بدون استدلال و دلیل، یه حس درونی داره که خدا هست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فطرت = راه دل (نه راه عقل)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ممکن‌الوجود</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی یه چیزی که می‌تونه باشه، می‌تونه نباشه. هیچی اونو مجبور به بودن نکرده.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ممکن‌الوجود = نسبت یکسان به وجود و عدم
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>واجب‌الوجود</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی یه چیزی که حتماً باید باشه و نمی‌تونه نباشه (خدا).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> واجب‌الوجود = وجودش ضروریه
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات اضافی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> صفاتی که فقط وقتی معنا پیدا می‌کنن که یه مخلوقی باشه. مثل «خالق» که بدون مخلوق بی‌معنیه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اضافی = رابطه خدا با مخلوق
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات نفسی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> صفاتی که مال خود خداست و به هیچ مخلوقی ربطی نداره. مثل «علم» و «قدرت».</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نفسی = عین ذات خدا
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قضا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی خدا یه چیزی رو حتماً قرار داده که بشه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا = حتمیت
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قدر</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی خدا اندازه و ویژگی‌های اون چیز رو هم تعیین کرده.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قدر = اندازه
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جبر</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی آدم هیچ اختیاری نداره و همه کاراش رو خدا انجام می‌ده.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جبر = نفی فعل از انسان
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اختیار</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی آدم خودش می‌تونه انتخاب کنه و مسئول انتخابشه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> وجدان = دلیل اختیار
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کشف معنا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی معنا و هدف زندگی از قبل وجود داره و آدم باید پیداش کنه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اسلام = کشف معنا (نه جعل معنا)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معاد</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی بعد از مرگ، روح دوباره به بدن برمی‌گرده و زنده می‌شن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معاد = روح + بدن در قیامت
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وعده و وعید</h3></div>
+<div class="fa"><b>تعریف ساده:</b> وعده = خدا خبر خوب داده (بهشت) / وعید = خدا ترسونده (جهنم)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> وعده = بهشت / وعید = جهنم
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلود</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی همیشه توی جهنم موندن، بدون اینکه بیرون بیاد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلود = مخصوص کفار و مشرکان
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تجرد نفس</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی روح آدم از بدن جداست و با مرگ بدن، روح از بین نمی‌ره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تجرد نفس = از دیدگاه علامه طباطبایی، از مسلمات عقله
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۴ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">تفاوت ساده و نکته امتحانی برای هر جفت مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>قضا vs قدر</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> قضا = حتماً انجام میشه / قدر = اندازه و ویژگی‌هاش تعیین شده</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا = حتمیت / قدر = اندازه
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وعده vs وعید</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> وعده = خبر خوب (بهشت) / وعید = خبر بد (جهنم)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> وعده = بهشت / وعید = جهنم
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>واجب‌الوجود vs ممکن‌الوجود</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> واجب = حتماً هست / ممکن = می‌تونه باشه می‌تونه نباشه</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> واجب = ضرورت / ممکن = امکان
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صفات نفسی vs صفات اضافی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> نفسی = مال خود خداست / اضافی = فقط با مخلوق معنا پیدا می‌کنه</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نفسی = عین ذات / اضافی = رابطه با مخلوق
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جبر vs اختیار</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> جبر = آدم هیچی نیست / اختیار = آدم خودش انتخاب می‌کنه</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جبر = نفی فعل / اختیار = آزادی انتخاب
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معاد روحانی vs معاد جسمانی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> روحانی = فقط روح / جسمانی = روح + بدن</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معاد در اسلام = روح + بدن (هر دو با هم)
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۵ · شخصیت‌ها و نشانه‌های تشخیصی</h2>
+<p class="section-sub">هر شخصیت + نظر ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>ملاصدرا</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف بزرگ ایرانی</div>
+<div class="fa"><b>نظر ساده:</b> معاد رو با عقل و استدلال می‌شه اثبات کرد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ملاصدرا = عقل و برهان
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علامه طباطبایی</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و مفسر معاصر</div>
+<div class="fa"><b>نظر ساده:</b> تجرد نفس یه چیز عقلیه و از مسلمات عقله.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبایی = تجرد نفس از عقل
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شیخ مفید</h3></div>
+<div class="fa"><b>کی بود:</b> متکلم بزرگ شیعه</div>
+<div class="fa"><b>نظر ساده:</b> خلود در جهنم فقط مال کفار و مشرکانه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شیخ مفید = خلود مخصوص کفار
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیامبر (ص)</h3></div>
+<div class="fa"><b>کی بود:</b> پیامبر اسلام</div>
+<div class="fa"><b>نظر ساده:</b> بزرگترین دشمن آدم، نفس خودشه و مبارزه باهاش جهاد اکبره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پیامبر = جهاد اکبر = نفس اماره
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">دام چیه + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: معنویت vs اخلاق</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جواب «اخلاقی»ه چون معروفه.</div>
+<div class="fa"><b>جواب درست:</b> معنوی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معنویت = ریشه / اخلاق = شاخه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: نفس اماره vs شیطان</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جواب «شیطان»ه چون معروفه.</div>
+<div class="fa"><b>جواب درست:</b> نفس اماره</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اماره = دشمن درون / شیطان = دشمن بیرون
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: فطرت vs عقل</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جواب «عقل»ه چون علمی‌تره.</div>
+<div class="fa"><b>جواب درست:</b> فطرت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فطرت = بدون استدلال / عقل = با استدلال
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: قضا vs قدر</h3>
+<div class="fa"><b>دام چیه:</b> قضا و قدر رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> قضا = حتمیت / قدر = اندازه</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> قضا = قطعی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: وعده vs وعید</h3>
+<div class="fa"><b>دام چیه:</b> وعده و وعید رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> وعده = بهشت / وعید = جهنم</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> وعده = خوبی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: امکان vs ضرورت معاد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جواب «ضرورت»ه چون قوی‌تره.</div>
+<div class="fa"><b>جواب درست:</b> امکان معاد</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> زمین مرده = امکان معاد
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: بهشت vs لقای خدا</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جواب «بهشت»ه چون معروفه.</div>
+<div class="fa"><b>جواب درست:</b> لقای پروردگار</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> لقاء = بالاترین مرتبه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: خلود vs گناه کبیره</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جواب «قتل نفس» یا «یابکاری»ه چون گناه کبیره‌ست.</div>
+<div class="fa"><b>جواب درست:</b> کفار و مشرکان</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلود = کفر (نه هر گناهی)
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · معارف اسلامی · ۳۰ سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{q:"وجه جامع آسیب‌های انسان معاصر کدام است؟",options:["معنوی","اخلاقی","اجتماعی","خانوادگی"],answer:0,explanation:"معنویت مادر همه آسیب‌هاست."},
+{q:"دوره تقدم ایمان بر عقل کدام است؟",options:["دوره قدیم","دوره یونان","دوره قرون وسطی","دوره رنسانس"],answer:2,explanation:"در قرون وسطی ایمان بر عقل تقدم داشت."},
+{q:"دو جریان افراطی پس از رنسانس کدامند؟",options:["اصالت سود - اصالت لذت","اصالت حس - اصالت عقل","اصالت اخلاق - اصالت تجربه","اصالت معنویت - اصالت عرفان"],answer:1,explanation:"اصالت حس و اصالت عقل دو افراط معرفت‌شناختی بودند."},
+{q:"از اساسی‌ترین مفاهیم ادیان الهی کدام است؟",options:["معنویت","عقل","ایمان","اخلاق"],answer:0,explanation:"معنویت روح ادیان الهی است."},
+{q:"حاصل ایمان و وابستگی به خدا چیست؟",options:["عشق","دین","اخلاق","معنویت"],answer:3,explanation:"معنویت حاصل ایمان و وابستگی به خداست."},
+{q:"بزرگترین دشمن انسان که جهاد اکبر نامیده شده چیست؟",options:["نفس اماره","شیطان رجیم","استکبار جهانی","نفس لوامه"],answer:0,explanation:"نفس اماره دشمن درون است."},
+{q:"کدام راه خداشناسی بدون استدلال است؟",options:["برهان نظم","راه دل و فطرت","برهان امکان و وجوب","راه عقل و استدلال"],answer:1,explanation:"راه فطرت شهودی و بدون استدلال است."},
+{q:"وجودی که نسبتش به وجود و عدم یکسان است چه نام دارد؟",options:["جایز الوجود","واجب الوجود","ممکن الوجود","ممتنع الوجود"],answer:2,explanation:"ممکن‌الوجود نسبتش به وجود و عدم یکسان است."},
+{q:"بیت «در اندرون من خسته دل» مربوط به کدام راه است؟",options:["راه فطرت","راه عقل","راه نقل","برهان امکان"],answer:0,explanation:"این بیت اشاره به راه فطرت دارد."},
+{q:"صفاتی که رابطه خدا با مخلوق را نشان می‌دهند چه نام دارند؟",options:["صفات اضافی","صفات نفسی","صفات ذاتی","صفات فعلی"],answer:0,explanation:"صفات اضافی رابطه خدا با مخلوق را نشان می‌دهند."},
+{q:"آیه «یعلم خائنة الأعین» مربوط به کدام صفت است؟",options:["قدرت","علم","حکمت","خالقیت"],answer:1,explanation:"این آیه مربوط به علم گسترده خداست."},
+{q:"آیه «کل یوم هو فی شأن» به کدام صفت اشاره دارد؟",options:["حیات","قدرت","علم","حکمت"],answer:1,explanation:"این آیه به قدرت خدا اشاره دارد."},
+{q:"تفاوت قضا و قدر چیست؟",options:["قضا = قدرت، قدر = علم","قضا = حد، قدر = حتمیت","در قدر حتمیت است","در قضا حتمیت است"],answer:3,explanation:"قضا = حتمیت / قدر = اندازه."},
+{q:"حوادث براساس قانون علت و معلول چه نامیده می‌شود؟",options:["قضا و قدر تکوینی","قضا و قدر تشریعی","قضا و قدر علمی","قضا و قدر عقلی"],answer:0,explanation:"قضا و قدر تکوینی مربوط به قانون علت و معلول است."},
+{q:"نفی فعل از انسان و انتساب آن به خدا چه نام دارد؟",options:["قدر","قضا","اختیار","جبر"],answer:3,explanation:"جبر به معنای نفی فعل از انسان است."},
+{q:"وجدان از دلایل کدام مورد است؟",options:["امتحان","اختیار","جبر","تقدیر"],answer:1,explanation:"وجدان دلیل اختیار است."},
+{q:"راه اسلام در معنای زندگی مبتنی بر چیست؟",options:["جعل معنا","کشف معنا","اختراع معنا","اراده معطوف به معنا"],answer:1,explanation:"اسلام مبتنی بر کشف معناست."},
+{q:"چند آیه قرآن مربوط به معاد است؟",options:["بیش از ۲۰۰۰","بیش از ۳۰۰۰","بیش از ۱۰۰۰","۱۱۴"],answer:2,explanation:"بیش از ۱۰۰۰ آیه مربوط به معاد است."},
+{q:"معاد در اسلام به چه معناست؟",options:["تنها روحانی","تنها جسمانی","بازگشت به برزخ","بازگشت روح به بدن"],answer:3,explanation:"معاد = بازگشت روح به بدن در قیامت."},
+{q:"از دیدگاه ملاصدرا خصوصیات معاد از چه راهی اثبات می‌شود؟",options:["نور نبوت","قرآن","عقل و برهان","عرفان"],answer:2,explanation:"ملاصدرا معاد را با عقل و برهان اثبات می‌کند."},
+{q:"چه چیزی انسان را از پوچی نجات می‌دهد؟",options:["کشفیات عرفانی","مطالعه آفرینش","براهین عقلی","آیات قرآن"],answer:0,explanation:"کشفیات و مشاهدات عرفانی نجات‌بخش است."},
+{q:"وعده و وعید به چه معناست؟",options:["خلف وعده جایز","هر دو بشارت","وعده = ترساندن","وعده = بهشت، وعید = جهنم"],answer:3,explanation:"وعده = بهشت / وعید = جهنم."},
+{q:"زنده شدن زمین مرده شاهد بر چیست؟",options:["حتمی بودن معاد","امکان معاد","ضرورت معاد","وقوع معاد"],answer:1,explanation:"زمین مرده شاهد بر امکان معاد است."},
+{q:"از دیدگاه علامه طباطبایی تجرد نفس از آموزه‌های مسلم چیست؟",options:["ادیان الهی","کتاب‌های آسمانی","قرآن و سنت","عقل"],answer:3,explanation:"علامه طباطبایی تجرد نفس را از عقل می‌داند."},
+{q:"بزرگترین نعمت مورد سوال در قیامت چیست؟",options:["عمر","مال","هدایت و ولایت","جوانی"],answer:2,explanation:"هدایت و ولایت بزرگترین نعمت است."},
+{q:"عالی‌ترین مرتبه بهشت چیست؟",options:["لقای پروردگار","جنت","بهشت برین","فردوس اعلی"],answer:0,explanation:"لقای پروردگار عالی‌ترین مرتبه بهشت است."},
+{q:"علت اصلی ورود به بهشت چیست؟",options:["ایمان و عمل صالح","تقوا","بندگی خدا","احسان"],answer:2,explanation:"بندگی خدا علت اصلی ورود به بهشت است."},
+{q:"جهنم در لغت به چه معناست؟",options:["چاه عمیق و تاریک","جایگاه مقابل بهشت","جایگاه طغیانگران","محل مجازات"],answer:0,explanation:"جهنم در لغت یعنی چاه عمیق و تاریک."},
+{q:"خلود در جهنم مخصوص چه کسانی است؟",options:["یابکاری","قتل نفس","عاق والدین","کفار و مشرکان"],answer:3,explanation:"خلود مخصوص کفار و مشرکان است."},
+{q:"خوردن مال یتیم به چه چیزی تشبیه شده است؟",options:["آب داغ","خوردن آتش","گوشت برادر مرده","هم‌نشینی با درندگان"],answer:1,explanation:"مال یتیم به خوردن آتش تشبیه شده است."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

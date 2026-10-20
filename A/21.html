@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · بهشت و بهشتیان · سری 21</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"21";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>بهشت و بهشتیان · سری 21</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>بهشت و بهشتیان</h2>
+  <p>جزوه جامع امتحانی · تعریف ساده + نکته امتحانی + دام آزمون · ویژه آزمون چهارگزینه‌ای</p>
+  <div class="pills"><span class="pill">۷ بخش</span><span class="pill">۳ مرتبه بهشت</span><span class="pill">۲ نوع بهشت</span><span class="pill">۱۴ عامل ورود</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان ساده و برای آمادگی امتحان چهارگزینه‌ای طراحی شده است. هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۷</b><span>بخش اصلی</span></div>
+<div class="stat"><b>۳</b><span>مرتبه بهشت</span></div>
+<div class="stat"><b>۲</b><span>نوع بهشت</span></div>
+<div class="stat"><b>۱۴</b><span>عامل ورود</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>بهشت در لغت و اصطلاح</h3></div>
+<div class="grid2">
+<div class="box"><h4>بهشت در لغت</h4>
+<div class="fa">لغت اوستایی = خوش‌تر، نیکوتر، جای خوش آب‌وهوا</div>
+</div>
+<div class="box"><h4>بهشت در اصطلاح</h4>
+<div class="fa">عالمی که مؤمنان و نیکوکاران پس از مرگ در آنجا قرار می‌گیرند</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراتب بهشت</h3></div>
+<div class="grid2">
+<div class="box"><h4>مرتبه عادی و متوسط</h4>
+<div class="fa">خوردن و آشامیدن و لذات جسمانی (بقره/۲۵)</div>
+</div>
+<div class="box"><h4>مرتبه برتر</h4>
+<div class="fa">رضوان و لقای پروردگار (توبه/۷۲)</div>
+</div>
+<div class="box"><h4>بالاترین مرتبه</h4>
+<div class="fa">«بهشت من» — مقام فنا (فجر/۲۷-۳۰)</div>
+</div>
+<div class="box"><h4>نام‌های بهشت</h4>
+<div class="fa">جنة الماوی، جنة النعیم، دارالسلام، جنات عدن، فردوس اعلی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو نوع بهشت</h3></div>
+<div class="fa">۱. بهشت جسمانی — لذت‌های مادی</div>
+<div class="fa">۲. بهشت روحانی — لذت‌های معنوی</div>
+<div class="fa"><b>نظر شهید مطهری:</b> معاد هم جسمانی است و هم روحانی، پس بهشت هم جسمانی است و هم روحانی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل ورود به بهشت</h3></div>
+<div class="fa"><b>عامل اصلی:</b> بندگی خدا</div>
+<div class="fa"><b>سایر عوامل:</b> ایمان و عمل صالح، تقوا، پیروی از خدا و رسول، صدق، احسان، محافظت بر نماز، انفاق، دعا، اخلاص، خداترسی، جهاد، شهادت، تولی و تبری، ولایت اهل‌بیت (ع)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیات کلیدی</h3></div>
+<div class="fa"><b>بقره/۲۵:</b> توصیف بهشت متوسط (خوردن و آشامیدن)</div>
+<div class="fa"><b>توبه/۷۲:</b> رضوان خدا بالاتر از همه نعمت‌ها</div>
+<div class="fa"><b>فجر/۲۷-۳۰:</b> بالاترین مرتبه بهشت — «بهشت من»</div>
+<div class="fa"><b>کهف/۱۰۸:</b> «لَا يَبْغُونَ عَنْهَا حِوَلًا»</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>بهشت در لغت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> «بهشت» لغت اوستایی است و به معنای خوش‌تر، نیکوتر و جای خوش آب‌وهوا و فردوس است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهشت در لغت = لغت اوستایی به معنای خوش‌تر و نیکوتر. اگر سوال پرسید «بهشت در لغت چیست؟» جواب: لغت اوستایی به معنای خوش‌تر و نیکوتر.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> بهشت لغت عربی نیست، لغت اوستایی است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بهشت در اصطلاح معارف دینی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> عالمی است که مؤمنان و نیکوکاران پس از مرگ در آنجا قرار می‌گیرند.</div>
+<div class="fa">بهشت و جهنم درواقع نهایت سیر روحی و معنوی و تکاملی انسان‌اند.</div>
+<div class="fa">بهشت نتیجه زندگی خداگونه انسان در دنیاست. همان‌طور که هیچ حرکت و سیری بدون مقصد معنا ندارد، سیر تکاملی انسان مؤمن نیز مقصدی نهایی دارد که «بهشت» نام دارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهشت در اصطلاح = عالمی که مؤمنان و نیکوکاران پس از مرگ در آنجا قرار می‌گیرند. اگر سوال پرسید «بهشت در اصطلاح چیست؟» جواب: عالم مؤمنان و نیکوکاران پس از مرگ.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو نوع بهشت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> بهشت دو نوع است:</div>
+<div class="fa">۱. بهشت مربوط به عالم برزخ</div>
+<div class="fa">۲. بهشتی که پس از عالم برزخ و وقوع قیامت و حسابرسی آغاز می‌شود</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دو نوع بهشت = بهشت برزخی + بهشت پس از قیامت. اگر سوال پرسید «انواع بهشت کدامند؟» این دو را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراتب و درجات بهشت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> بهشت یا به تعبیر قرآن «جنت» نسبت به درجات ایمان و اعتقاد مؤمنان مراتب و طبقات گوناگون دارد.</div>
+<div class="fa">اهل بهشت به تناسب کارکرد خود در مقام و طبقه خاصی قرار می‌گیرند. به همین دلیل خداوند متعال در قرآن از بهشت‌های مختلف سخن گفته است.</div>
+<div class="fa">بنابراین می‌توان از بهشت برین، بهشت متوسطین و بهشت برای افراد عادی و معمولی سخن گفت.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهشت مراتب دارد = برین + متوسطین + عادی. اگر سوال پرسید «آیا بهشت مراتب دارد؟» جواب: بله، به تناسب ایمان و عمل.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیه بقره/۲۵ — توصیف بهشت متوسط</h3></div>
+<div class="fa"><b>آیه:</b> «وَبَشِّرِ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أَنَّ لَهُمْ جَنَّاتٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ...»</div>
+<div class="fa">در این آیه سخن از خوردن و آشامیدن و مانند آن است که در بهشت نصیب مؤمنان می‌شود و درواقع مرتبه متوسط و عادی بهشت است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بقره/۲۵ = توصیف بهشت متوسط. اگر سوال پرسید «کدام آیه بهشت متوسط را توصیف می‌کند؟» جواب: بقره/۲۵.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیه توبه/۷۲ — رضوان خدا</h3></div>
+<div class="fa"><b>آیه:</b> «وَعَدَ اللَّهُ الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ جَنَّاتٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ... وَرِضْوَانٌ مِّنَ اللَّهِ أَكْبَرُ ذَٰلِكَ هُوَ الْفَوْزُ الْعَظِيمُ»</div>
+<div class="fa">خداوند به مردان و زنان با ایمان باغ‌هایی از بهشت وعده داده که نهرها از زیر (درختان) آنها جاری هستند... و رضا (و خشنودی) خدا (از همه اینها) برتر است.</div>
+<div class="fa">روشن است که قرار گرفتن در مقام و مرتبه رضوان، نعمت و لذتی بالاتر از خوردن و آشامیدن است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> توبه/۷۲ = رضوان خدا بالاتر از همه نعمت‌ها. اگر سوال پرسید «کدام آیه رضوان خدا را بالاتر از نعمت‌ها می‌داند؟» جواب: توبه/۷۲.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیه فجر/۲۷-۳۰ — بالاترین مرتبه بهشت</h3></div>
+<div class="fa"><b>آیه:</b> «يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ ارْجِعِي إِلَىٰ رَبِّكِ رَاضِيَةً مَّرْضِيَّةً فَادْخُلِي فِي عِبَادِي وَادْخُلِي جَنَّتِي»</div>
+<div class="fa">خداوند در این آیه از بهشت به «بهشت من» تعبیر کرده است. از اینجا معلوم می‌شود که عالی‌ترین مرتبه بهشت، مرتبه لقای پروردگار است که مقامی کاملاً معنوی و روحانی است.</div>
+<div class="fa">رسیدن به این مرتبه، در نتیجه عبودیت و بندگی تام و کامل است که آرزوی اولیای خاص خداوند است.</div>
+<div class="fa"><b>نکته:</b> این رسیدن و لقا به معنای رؤیت و دیدار حسی نیست؛ بلکه رسیدن به عالی‌ترین مقام بندگی است که از آن به «مقام فنا» نیز یاد می‌شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فجر/۲۷-۳۰ = بالاترین مرتبه بهشت = «بهشت من» + مقام فنا. اگر سوال پرسید «بالاترین مرتبه بهشت چیست؟» جواب: لقای پروردگار (بهشت من).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نام‌های بهشت در قرآن</h3></div>
+<div class="fa">جنة الماوی، جنة النعیم، دارالسلام، جنات عدن، فردوس اعلی و...</div>
+<div class="fa">بندگان مؤمن هر کدام به تناسب ایمان و اعتقاد خود در آنها قرار می‌گیرند و برخی بندگان مؤمن و اولیای خاص به‌دلیل رسیدن به مقام جامعیت، از همه مراتب برخوردارند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نام‌های بهشت = جنة الماوی + جنة النعیم + دارالسلام + جنات عدن + فردوس اعلی. اگر سوال پرسید «نام‌های بهشت در قرآن کدامند؟» این موارد را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیه آل‌عمران/۱۳۳ — وسعت بهشت</h3></div>
+<div class="fa"><b>آیه:</b> «وَسَارِعُوا إِلَىٰ مَغْفِرَةٍ مِّن رَّبِّكُمْ وَجَنَّةٍ عَرْضُهَا السَّمَاوَاتُ وَالْأَرْضُ أُعِدَّتْ لِلْمُتَّقِينَ»</div>
+<div class="fa">منظور از «عرض بهشت» در آیه، عرض در مقابل طول نیست؛ بلکه منظور وسعت آن است.</div>
+<div class="fa">در واقع تعبیر به عرض، کنایه از نهایت درجه وسعت آن و کنایه از این است که وهم و خیال بشری نمی‌تواند آن را بسنجد و برایش حدی تصور کند.</div>
+<div class="fa"><b>میبدی:</b> معنای عرض، فراخی است، نه ضد طول؛ چنان‌که گویند: «این خانه عریض است، یعنی وسیع است.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آل‌عمران/۱۳۳ = وسعت بهشت. اگر سوال پرسید «وسعت بهشت چگونه است؟» جواب: عرض آن آسمان‌ها و زمین است (کنایه از نهایت وسعت).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیه انعام/۱۲۷ — دارالسلام</h3></div>
+<div class="fa"><b>آیه:</b> «لَهُمْ دَارُ السَّلَامِ عِندَ رَبِّهِمْ وَهُوَ وَلِيُّهُم بِمَا كَانُوا يَعْمَلُونَ»</div>
+<div class="fa">برای آنها خانه امن و امان نزد پروردگارشان خواهد بود، و او ولی و یار و یاور آنها است به خاطر اعمال (نیکی) که انجام می‌دادند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> انعام/۱۲۷ = بهشت دارالسلام. اگر سوال پرسید «کدام آیه بهشت را دارالسلام می‌داند؟» جواب: انعام/۱۲۷.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیه انسان/۲۰-۲۲ — توصیف نعمت‌های بهشتی</h3></div>
+<div class="fa"><b>آیه:</b> «وَإِذَا رَأَيْتَ ثَمَّ رَأَيْتَ نَعِيمًا وَمُلْكًا كَبِيرًا...»</div>
+<div class="fa">خداوند در برابر شکیبایی آنان، بهشت و لباس‌های حیرت‌انگیز بهشتی را به آنها پاداش می‌دهد.</div>
+<div class="fa">بر تخت‌های زیبا تکیه کرده‌اند، نه آفتاب را در آنجا می‌بینند، نه سرما را.</div>
+<div class="fa">سایه‌های آن (درختان بهشتی) بر آنها فرو افتاده، و چیدن میوه‌هایش بسیار آسان است.</div>
+<div class="fa">در گرداگرد آنها ظرف‌هایی از نقره، و قدح‌هایی بلورین می‌گردانند. در آنجا از جام‌هایی سیراب می‌شوند که لبریز از شراب طهور است.</div>
+<div class="fa">بر گرد آنها نوجوانانی جاودانی (برای پذیرایی) می‌گردند که هر گاه آنها را ببینی گمان می‌کنی مروارید پراکنده‌اند!</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> انسان/۲۰-۲۲ = توصیف نعمت‌های بهشتی. اگر سوال پرسید «کدام آیه نعمت‌های بهشتی را توصیف می‌کند؟» جواب: انسان/۲۰-۲۲.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیه کهف/۱۰۸ — «لَا يَبْغُونَ عَنْهَا حِوَلًا»</h3></div>
+<div class="fa"><b>آیه:</b> «لَا يَبْغُونَ عَنْهَا حِوَلًا» (کهف/۱۰۸)</div>
+<div class="fa">اهل بهشت جاودانه در آنند و تغییر یافتن از آن را نمی‌خواهند.</div>
+<div class="fa"><b>«حول»</b> در آیه به معنای تحول، تغییر و نقل مکان است.</div>
+<div class="fa">آیه در صدد بیان این است که بهشت و فردوس دارای بهترین نعمت‌ها و مواهب است؛ ازاین‌رو ساکنان آن هرگز خواستار نقل مکان از آن نیستند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کهف/۱۰۸ = «لَا يَبْغُونَ عَنْهَا حِوَلًا» = عدم خستگی در بهشت. اگر سوال پرسید «کدام آیه عدم خستگی در بهشت را بیان می‌کند؟» جواب: کهف/۱۰۸.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو نوع بهشت جسمانی و روحانی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> در بحث معاد جسمانی و روحانی گفته شد که معاد، هم جسمانی است و هم روحانی. بر پایه همین بحث می‌توان از دو نوع بهشت جسمانی و روحانی سخن گفت.</div>
+<div class="fa">انسان همچنان‌که در این دنیا هم از لذایذ مادی و جسمانی و هم از لذایذ معنوی و روحانی برخوردار است، در بهشت نیز از هر دو لذت بهره‌مند خواهد بود.</div>
+<div class="fa"><b>نظر شهید مطهری:</b> در اینکه بهشت جسمانی وجود دارد، شکی نیست و نمی‌توان آن را انکار یا تأویل کرد؛ بلکه لذت جسمانی و روحانی در هر دو عالم وجود دارد، ولی تفاوت‌های بسیاری با یکدیگر دارند؛ زیرا آن عالم عین عالم دنیا و طبیعت نیست.</div>
+<div class="fa">اگر عین عالم دنیا و طبیعت می‌بود، مثل عالم طبیعت تکلیف هم در آنجا بود، ولی تکلیف در بهشت وجود ندارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دو نوع بهشت = جسمانی + روحانی (به تعبیر شهید مطهری). اگر سوال پرسید «آیا بهشت جسمانی است یا روحانی؟» جواب: هر دو.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیه ق/۳۵ و زخرف/۷۱ — لذت‌های بهشتی</h3></div>
+<div class="fa"><b>آیه ق/۳۵:</b> «لَهُم مَّا يَشَاءُونَ فِيهَا وَلَدَيْنَا مَزِيدٌ»</div>
+<div class="fa"><b>آیه زخرف/۷۱:</b> «فِيهَا مَا تَشْتَهِيهِ الْأَنفُسُ وَتَلَذُّ الْأَعْيُنُ»</div>
+<div class="fa">در بهشت آنچه دل می‌خواهد و چشم از آن لذت می‌برد، وجود دارد.</div>
+<div class="fa">لذت دیدن، موضوع «زیبایی» است. زیبایی یک امر روحی و معنوی است، نه جسمی.</div>
+<div class="fa"><b>حدیث نبوی:</b> «وَأَیْتُ بِهِ مَا لَا عَیْنٌ رَأْتُ وَلا أَذْنٌ سَمِعْتُ وَلا خَطَرْتُ عَلَى قَلْبِ بَشَرٍ» — آنجا چیزهایی است که نمونه‌اش را نه چشمی دیده و نه گوشی شنیده و نه به قلب بشری خطور کرده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ق/۳۵ و زخرف/۷۱ = لذت‌های بهشتی = هرچه دل می‌خواهد و چشم لذت می‌برد. اگر سوال پرسید «لذت‌های بهشتی چگونه است؟» جواب: هرچه دل می‌خواهد و چشم لذت می‌برد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیه هود/۱۰۸ — خلود در بهشت</h3></div>
+<div class="fa"><b>آیه:</b> «وَأَمَّا الَّذِينَ سُعِدُوا فَفِي الْجَنَّةِ خَالِدِينَ فِيهَا مَا دَامَتِ السَّمَاوَاتُ وَالْأَرْضُ إِلَّا مَا شَاءَ رَبُّكَ عَطَاءً غَيْرَ مَجْذُوذٍ»</div>
+<div class="fa">علامه طباطبائی با اشاره به این آیه، این نکته را تذکر می‌دهد که گرچه خلود در بهشت قضای حتمی پروردگار است، با این حال این قضا را طوری مطرح کرده است که با سلطنت او منافات ندارد.</div>
+<div class="fa">مسئله خلود در بهشت امری مسلم و غیرقابل انکار بوده و جای اختلاف نیست و کسی که وارد بهشت شد، هرگز از آن خارج نخواهد شد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هود/۱۰۸ = خلود در بهشت. اگر سوال پرسید «آیا اهل بهشت جاودانه در آن می‌مانند؟» جواب: بله، خلود در بهشت امری مسلم است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل ورود به بهشت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> عواملی که انسان را به بهشت می‌رساند، بسیار زیادند. این علل و عوامل از زبان قرآن و روایات معصومان (ع) بیان شده است.</div>
+<div class="fa"><b>در رأس همه این عوامل که علت اصلی و سبب ورود انسان به بهشت می‌شود «بندگی» است.</b></div>
+<div class="fa"><b>برخی علل و عوامل مهم و اسباب ورود به بهشت:</b></div>
+<div class="fa">۱. ایمان و عمل صالح</div>
+<div class="fa">۲. تقوا و پرهیزکاری</div>
+<div class="fa">۳. پیروی از خدا و رسول خدا</div>
+<div class="fa">۴. صدق و راستی</div>
+<div class="fa">۵. احسان و نیکوکاری</div>
+<div class="fa">۶. محافظت بر نماز</div>
+<div class="fa">۷. انفاق در راه خدا</div>
+<div class="fa">۸. دعا و نیایش</div>
+<div class="fa">۹. خلوص نیت و اخلاص در عمل</div>
+<div class="fa">۱۰. خداترسی</div>
+<div class="fa">۱۱. جهاد در راه خدا</div>
+<div class="fa">۱۲. شهادت در راه خدا</div>
+<div class="fa">۱۳. تولی و تبری</div>
+<div class="fa">۱۴. ولایت اهل‌بیت (ع)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علت اصلی ورود به بهشت = بندگی. اگر سوال پرسید «علت اصلی ورود به بهشت چیست؟» جواب: بندگی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عدم راهیابی خستگی و آزردگی در بهشت</h3></div>
+<div class="fa"><b>شبهه:</b> برخی این ایراد را به بهشت می‌گیرند که بهشت خستگی و ملال می‌آورد؛ چون انسان باید جایی زندگی کند که مقداری از احتیاجات خود را داشته باشد و مقداری را نداشته باشد و به‌دنبال آنچه ندارد برود.</div>
+<div class="fa"><b>پاسخ:</b> اگر آنچه در بهشت هست، از نوع آن چیزهایی باشد که در دنیا هست، ایراد وارد است؛ یعنی اگر از نوع چیزهایی است که با مطلوب واقعی انسان سنجش ندارد، انسان وقتی به آن هدف واقعی می‌رسد، معنا ندارد از هدف خودش تنفر پیدا کند.</div>
+<div class="fa">انسان از چیزی تنفر پیدا می‌کند که هدفش نیست. قرآن هم به همین دلیل این تعبیر را درباره بهشت فرموده است: «لَا يَبْغُونَ عَنْهَا حِوَلًا».</div>
+<div class="fa">در انسان همین استعداد بی‌نهایت بزرگ بودن یا آرزوی کمال بی‌نهایت را داشتن وجود دارد. عجیب بودن انسان در این است که در عمق شعور خویش غیر از خدا — که کمال مطلق است — هیچ‌چیز را نمی‌خواهد و به هیچ محدودی راضی نمی‌شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عدم خستگی در بهشت = چون بهشت مطلوب واقعی انسان است. اگر سوال پرسید «چرا در بهشت خستگی معنا ندارد؟» جواب: چون بهشت مطلوب واقعی انسان و کمال مطلق است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حدیث پیامبر درباره ذکر و بهشت</h3></div>
+<div class="fa"><b>حدیث:</b> «إِنَّ جَنَّةَ قَعْبَانِ وَ أَنَّ غَرَاسَهَا سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ» — بهشت به‌مثابه صحرایی خالی از کشت و زرع است و «سبحان الله»، «الحمد لله»، «لا اله الا الله»، «الله اکبر» و «لا حول و لا قوة الا بالله» ذکرهایی است که انسان در دنیا می‌گوید و برای آن درختی در آنجا برای او کاشته می‌شود.</div>
+<div class="fa"><b>حدیث معراج:</b> در شب معراج وارد بهشت شدم و فرشتگانی را دیدم که مشغول ساختن بودند و در ساختن بنا گاهی خشتی از طلا و گاهی خشتی از نقره به کار می‌بردند. گاهی نیز دست از کار می‌کشیدند. پرسیدم: چرا گاهی کار می‌کنید و گاهی دست از کار می‌کشید؟ پاسخ دادند: تا مصالح از دنیا فرستاده نشود، کار نمی‌کنیم. گفتم: مصالح کدامند؟ گفتند: ذکرهایی که مؤمن در دنیا می‌گوید: سبحان الله و الحمد لله و لا اله الا الله و الله اکبر.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ذکر در دنیا = کاشتن درخت در بهشت. اگر سوال پرسید «ذکر چه اثری در بهشت دارد؟» جواب: کاشتن درخت در بهشت.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">هر جفت مفهوم + تفاوت ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>بهشت در لغت vs بهشت در اصطلاح</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>بهشت در لغت</th><th>بهشت در اصطلاح</th></tr></thead>
+<tbody>
+<tr><td>معنا</td><td>لغت اوستایی = خوش‌تر، نیکوتر، جای خوش آب‌وهوا</td><td>عالمی که مؤمنان و نیکوکاران پس از مرگ در آنجا قرار می‌گیرند</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهشت در لغت = لغت اوستایی. اگر سوال پرسید «بهشت در لغت چیست؟» جواب: لغت اوستایی به معنای خوش‌تر و نیکوتر.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> بهشت لغت عربی نیست، لغت اوستایی است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بهشت برزخی vs بهشت پس از قیامت</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> بهشت برزخی = پیش از قیامت / بهشت پس از قیامت = بعد از حسابرسی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دو نوع بهشت = برزخی + پس از قیامت. اگر سوال پرسید «انواع بهشت کدامند؟» این دو را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مرتبه عادی vs مرتبه برتر vs بالاترین مرتبه</h3></div>
+<table class="compare">
+<thead><tr><th>مرتبه</th><th>ویژگی</th><th>آیه</th></tr></thead>
+<tbody>
+<tr><td>مرتبه عادی و متوسط</td><td>خوردن و آشامیدن و لذات جسمانی</td><td>بقره/۲۵</td></tr>
+<tr><td>مرتبه برتر</td><td>رضوان و لقای پروردگار</td><td>توبه/۷۲</td></tr>
+<tr><td>بالاترین مرتبه</td><td>«بهشت من» — مقام فنا</td><td>فجر/۲۷-۳۰</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۳ مرتبه بهشت = عادی + برتر + بالاترین. اگر سوال پرسید «مراتب بهشت کدامند؟» این سه را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بهشت جسمانی vs بهشت روحانی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> جسمانی = لذت‌های مادی / روحانی = لذت‌های معنوی</div>
+<div class="fa"><b>نظر شهید مطهری:</b> هر دو وجود دارد. اگر بهشت عین عالم دنیا و طبیعت می‌بود، تکلیف هم در آنجا بود، ولی تکلیف در بهشت وجود ندارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهشت = جسمانی + روحانی. اگر سوال پرسید «آیا بهشت جسمانی است یا روحانی؟» جواب: هر دو.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رضوان خدا vs لذات جسمانی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> رضوان خدا = بالاترین لذت معنوی / لذات جسمانی = خوردن و آشامیدن</div>
+<div class="fa"><b>آیه توبه/۷۲:</b> «وَرِضْوَانٌ مِّنَ اللَّهِ أَكْبَرُ ذَٰلِكَ هُوَ الْفَوْزُ الْعَظِيمُ»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> رضوان خدا = بالاترین لذت. اگر سوال پرسید «بالاترین لذت در بهشت چیست؟» جواب: رضوان خدا.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلود در بهشت vs خلود در جهنم</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> خلود در بهشت = برای همه اهل بهشت / خلود در جهنم = مخصوص کفار و مشرکان</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلود در بهشت = مسلم. اگر سوال پرسید «آیا اهل بهشت جاودانه در آن می‌مانند؟» جواب: بله، خلود در بهشت امری مسلم است.
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۴ · شخصیت‌ها و نظریه‌پردازان</h2>
+<p class="section-sub">هر شخصیت + نظریه ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>شهید مطهری</h3></div>
+<div class="fa"><b>کی بود:</b> متفکر و فیلسوف اسلامی</div>
+<div class="fa"><b>نظریه ساده:</b> در اینکه بهشت جسمانی وجود دارد، شکی نیست و نمی‌توان آن را انکار یا تأویل کرد؛ بلکه لذت جسمانی و روحانی در هر دو عالم وجود دارد، ولی تفاوت‌های بسیاری با یکدیگر دارند؛ زیرا آن عالم عین عالم دنیا و طبیعت نیست. اگر عین عالم دنیا و طبیعت می‌بود، مثل عالم طبیعت تکلیف هم در آنجا بود، ولی تکلیف در بهشت وجود ندارد. همچنین: مسلمانان و سایر اهل توحید واقعی اگر مرتکب فسق و فجور شوند و به برنامه عملی الهی خیانت کنند، مستحق عذاب‌های طولانی در برزخ و قیامت خواهند بود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شهید مطهری = بهشت جسمانی و روحانی + تفاوت با دنیا. اگر سوال پرسید «نظر شهید مطهری درباره بهشت جسمانی چیست؟» جواب: بهشت جسمانی وجود دارد، ولی با دنیا تفاوت دارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علامه طباطبائی</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و مفسر معاصر</div>
+<div class="fa"><b>نظریه ساده:</b> با اشاره به آیه هود/۱۰۸، این نکته را تذکر می‌دهد که گرچه خلود در بهشت قضای حتمی پروردگار است، با این حال این قضا را طوری مطرح کرده است که با سلطنت او منافات ندارد و طوری نیست که او در این باره مبسوط الید نباشد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبائی = خلود در بهشت قضای حتمی. اگر سوال پرسید «نظر علامه طباطبائی درباره خلود در بهشت چیست؟» جواب: خلود قضای حتمی پروردگار است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امام علی (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام اول شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> «وَ كُلَّ شَيْءٍ مِنَ الدُّنْيَا سَمَاعَةُ الْعَظَمِ مِنْ عِبَادِهِ وَ كُلَّ شَيْءٍ مِنَ الْآخِرَةِ الْعَظَمِ مِنْ سَمَاعِهِ» — شنیدن همه چیز دنیا بزرگ‌تر از دیدن آن است و دیدن همه چیز آخرت بزرگ‌تر از شنیدن آن است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام علی = با الفاظ دنیا نمی‌شود آخرت را بیان کرد. اگر سوال پرسید «کلام امام علی درباره آخرت چیست؟» جواب: دیدن آخرت بزرگ‌تر از شنیدن آن است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>میبدی</h3></div>
+<div class="fa"><b>کی بود:</b> مفسر قرآن</div>
+<div class="fa"><b>نظریه ساده:</b> معنای عرض، فراخی است، نه ضد طول؛ چنان‌که گویند: «این خانه عریض است، یعنی وسیع است.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> میبدی = معنای عرض بهشت = فراخی. اگر سوال پرسید «عرض بهشت به چه معناست؟» جواب: فراخی و وسعت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رسول خدا (ص)</h3></div>
+<div class="fa"><b>کی بود:</b> پیامبر اسلام</div>
+<div class="fa"><b>نظریه ساده:</b> «إِنَّ جَنَّةَ قَعْبَانِ وَ أَنَّ غَرَاسَهَا سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَٰهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ» — بهشت به‌مثابه صحرایی خالی از کشت و زرع است و ذکرها درختان آن هستند. همچنین حدیث معراج درباره فرشتگانی که با ذکر مؤمن در بهشت بنا می‌سازند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پیامبر = ذکر در دنیا = کاشتن درخت در بهشت. اگر سوال پرسید «حدیث پیامبر درباره ذکر و بهشت چیست؟» جواب: ذکر درختان بهشت را می‌کارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ابن‌سینا و صدرالمتألهین</h3></div>
+<div class="fa"><b>کی بودند:</b> حکمای اسلامی</div>
+<div class="fa"><b>نظریه ساده:</b> به نظر حکمای اسلام مانند بوعلی و صدرالمتألهین، بیشتر مردمی که به حقیقت اعتراف ندارند، قاصرند نه مقصر.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ابن‌سینا و صدرالمتألهین = قاصر نه مقصر. اگر سوال پرسید «نظر حکمای اسلامی درباره منکران چیست؟» جواب: بیشتر قاصرند نه مقصر.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: بهشت در لغت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بهشت لغت عربی است.</div>
+<div class="fa"><b>جواب درست:</b> بهشت لغت اوستایی است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهشت = لغت اوستایی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: تعریف بهشت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بهشت فقط یک عالم روحانی است.</div>
+<div class="fa"><b>جواب درست:</b> بهشت = عالمی که مؤمنان و نیکوکاران پس از مرگ در آنجا قرار می‌گیرند</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهشت = عالم مؤمنان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: مراتب بهشت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بهشت فقط یک مرتبه دارد.</div>
+<div class="fa"><b>جواب درست:</b> ۳ مرتبه = عادی + برتر + بالاترین</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۳ مرتبه بهشت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: آیه بقره/۲۵</h3>
+<div class="fa"><b>دام چیه:</b> آیه بقره/۲۵ رو به موضوع دیگری نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> بقره/۲۵ = توصیف بهشت متوسط</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بقره/۲۵ = بهشت متوسط
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: آیه توبه/۷۲</h3>
+<div class="fa"><b>دام چیه:</b> آیه توبه/۷۲ رو به موضوع دیگری نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> توبه/۷۲ = رضوان خدا بالاتر از همه نعمت‌ها</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> توبه/۷۲ = رضوان خدا
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: آیه فجر/۲۷-۳۰</h3>
+<div class="fa"><b>دام چیه:</b> آیه فجر/۲۷-۳۰ رو به موضوع دیگری نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> فجر/۲۷-۳۰ = بالاترین مرتبه بهشت = «بهشت من»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فجر/۲۷-۳۰ = بالاترین مرتبه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: نام‌های بهشت</h3>
+<div class="fa"><b>دام چیه:</b> نام‌های بهشت رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> جنة الماوی + جنة النعیم + دارالسلام + جنات عدن + فردوس اعلی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۵ نام بهشت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: آیه کهف/۱۰۸</h3>
+<div class="fa"><b>دام چیه:</b> آیه کهف/۱۰۸ رو به موضوع دیگری نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> کهف/۱۰۸ = «لَا يَبْغُونَ عَنْهَا حِوَلًا» = عدم خستگی در بهشت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کهف/۱۰۸ = عدم خستگی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: علت اصلی ورود به بهشت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی علت اصلی ورود به بهشت «نماز» است.</div>
+<div class="fa"><b>جواب درست:</b> بندگی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علت اصلی = بندگی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: بهشت جسمانی یا روحانی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بهشت فقط جسمانی یا فقط روحانی است.</div>
+<div class="fa"><b>جواب درست:</b> بهشت جسمانی و روحانی (هر دو با هم)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بهشت = جسمانی + روحانی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: عرض بهشت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی عرض بهشت یعنی عرض در مقابل طول.</div>
+<div class="fa"><b>جواب درست:</b> عرض بهشت یعنی فراخی و وسعت (میبدی)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عرض بهشت = وسعت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: ذکر و بهشت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ذکر در دنیا هیچ اثری در بهشت ندارد.</div>
+<div class="fa"><b>جواب درست:</b> ذکر در دنیا = کاشتن درخت در بهشت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ذکر = درخت بهشتی
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 21 · بهشت و بهشتیان · جزوه جامع امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"بهشت در لغت به چه معناست؟",options:["لغت اوستایی = خوش‌تر، نیکوتر","لغت عربی = باغ","لغت عبری = بهشت","لغت رومی = فردوس"],answer:0,explanation:"بهشت = لغت اوستایی به معنای خوش‌تر و نیکوتر."},
+{q:"بهشت در اصطلاح معارف دینی چیست؟",options:["عالمی که مؤمنان و نیکوکاران پس از مرگ در آنجا قرار می‌گیرند","عالمی مادی","عالمی در دنیا","عالمی بعد از قیامت"],answer:0,explanation:"بهشت = عالم مؤمنان و نیکوکاران پس از مرگ."},
+{q:"انواع بهشت کدامند؟",options:["بهشت برزخی و بهشت پس از قیامت","بهشت جسمانی و مادی","بهشت روحانی و معنوی","بهشت دنیوی و اخروی"],answer:0,explanation:"دو نوع بهشت = برزخی + پس از قیامت."},
+{q:"کدام آیه بهشت متوسط را توصیف می‌کند؟",options:["بقره/۲۵","توبه/۷۲","فجر/۲۷-۳۰","کهف/۱۰۸"],answer:0,explanation:"بقره/۲۵ = توصیف بهشت متوسط."},
+{q:"کدام آیه رضوان خدا را بالاتر از همه نعمت‌ها می‌داند؟",options:["توبه/۷۲","بقره/۲۵","فجر/۲۷-۳۰","کهف/۱۰۸"],answer:0,explanation:"توبه/۷۲ = رضوان خدا بالاتر از همه نعمت‌ها."},
+{q:"کدام آیه بالاترین مرتبه بهشت را بیان می‌کند؟",options:["فجر/۲۷-۳۰","بقره/۲۵","توبه/۷۲","کهف/۱۰۸"],answer:0,explanation:"فجر/۲۷-۳۰ = بالاترین مرتبه بهشت = «بهشت من»."},
+{q:"بالاترین مرتبه بهشت چیست؟",options:["لقای پروردگار","خوردن و آشامیدن","لذات جسمانی","باغ‌های بهشتی"],answer:0,explanation:"بالاترین مرتبه بهشت = لقای پروردگار."},
+{q:"کدام یک از نام‌های بهشت در قرآن است؟",options:["جنة الماوی","جنة النعیم","دارالسلام","همه موارد"],answer:3,explanation:"همه موارد = نام‌های بهشت."},
+{q:"آیه آل‌عمران/۱۳۳ به چه اشاره دارد؟",options:["وسعت بهشت","رضوان خدا","لقای پروردگار","خلود در بهشت"],answer:0,explanation:"آل‌عمران/۱۳۳ = وسعت بهشت."},
+{q:"منظور از عرض بهشت چیست؟",options:["فراخی و وسعت","عرض در مقابل طول","طول بهشت","ارتفاع بهشت"],answer:0,explanation:"عرض بهشت = فراخی و وسعت."},
+{q:"کدام آیه بهشت را دارالسلام می‌داند؟",options:["انعام/۱۲۷","بقره/۲۵","توبه/۷۲","فجر/۲۷-۳۰"],answer:0,explanation:"انعام/۱۲۷ = بهشت دارالسلام."},
+{q:"کدام آیه نعمت‌های بهشتی را توصیف می‌کند؟",options:["انسان/۲۰-۲۲","بقره/۲۵","توبه/۷۲","فجر/۲۷-۳۰"],answer:0,explanation:"انسان/۲۰-۲۲ = توصیف نعمت‌های بهشتی."},
+{q:"آیه کهف/۱۰۸ به چه اشاره دارد؟",options:["عدم خستگی در بهشت","رضوان خدا","لقای پروردگار","خلود در بهشت"],answer:0,explanation:"کهف/۱۰۸ = عدم خستگی در بهشت."},
+{q:"آیا بهشت جسمانی است یا روحانی؟",options:["جسمانی و روحانی","فقط جسمانی","فقط روحانی","هیچکدام"],answer:0,explanation:"بهشت = جسمانی و روحانی."},
+{q:"کدام آیه لذت‌های بهشتی را توصیف می‌کند؟",options:["ق/۳۵ و زخرف/۷۱","بقره/۲۵","توبه/۷۲","فجر/۲۷-۳۰"],answer:0,explanation:"ق/۳۵ و زخرف/۷۱ = لذت‌های بهشتی."},
+{q:"کدام آیه خلود در بهشت را بیان می‌کند؟",options:["هود/۱۰۸","بقره/۲۵","توبه/۷۲","فجر/۲۷-۳۰"],answer:0,explanation:"هود/۱۰۸ = خلود در بهشت."},
+{q:"علت اصلی ورود به بهشت چیست؟",options:["بندگی خدا","نماز","روزه","حج"],answer:0,explanation:"علت اصلی = بندگی خدا."},
+{q:"کدام یک از عوامل ورود به بهشت است؟",options:["ایمان و عمل صالح","تقوا","ولایت اهل‌بیت","همه موارد"],answer:3,explanation:"همه موارد = عوامل ورود به بهشت."},
+{q:"چرا در بهشت خستگی معنا ندارد؟",options:["چون بهشت مطلوب واقعی انسان است","چون بهشت مادی است","چون بهشت محدود است","چون بهشت موقت است"],answer:0,explanation:"عدم خستگی = چون بهشت مطلوب واقعی انسان است."},
+{q:"حدیث «إِنَّ جَنَّةَ قَعْبَانِ» از کیست؟",options:["پیامبر (ص)","امام علی (ع)","امام صادق (ع)","امام باقر (ع)"],answer:0,explanation:"حدیث = پیامبر (ص)."},
+{q:"ذکر در دنیا چه اثری در بهشت دارد؟",options:["کاشتن درخت در بهشت","ساختن قصر","باز کردن در","هیچ اثری ندارد"],answer:0,explanation:"ذکر در دنیا = کاشتن درخت در بهشت."},
+{q:"نظر شهید مطهری درباره بهشت جسمانی چیست؟",options:["بهشت جسمانی وجود دارد ولی با دنیا تفاوت دارد","بهشت فقط روحانی است","بهشت فقط جسمانی است","بهشت انکار شده است"],answer:0,explanation:"شهید مطهری = بهشت جسمانی وجود دارد ولی با دنیا تفاوت دارد."},
+{q:"نظر علامه طباطبائی درباره خلود در بهشت چیست؟",options:["خلود قضای حتمی پروردگار است","خلود موقت است","خلود انکار شده است","خلود اختیاری است"],answer:0,explanation:"علامه طباطبائی = خلود قضای حتمی پروردگار است."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

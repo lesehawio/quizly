@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · فطرت · سری 11</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"11";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>فطرت · سری 11</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فطرت و ابعاد آن</h2>
+  <p>جزوه جامع امتحانی · تعریف ساده + نکته امتحانی + دام آزمون · ویژه آزمون چهارگزینه‌ای</p>
+  <div class="pills"><span class="pill">۷ بخش</span><span class="pill">۳ بُعد فطرت</span><span class="pill">۱۵+ مفهوم</span><span class="pill">۵ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان ساده و برای آمادگی امتحان چهارگزینه‌ای طراحی شده است. هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۷</b><span>بخش اصلی</span></div>
+<div class="stat"><b>۳</b><span>بُعد فطرت</span></div>
+<div class="stat"><b>۱۵+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۵</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>غریزه و فطرت</h3></div>
+<div class="grid2">
+<div class="box"><h4>غریزه</h4>
+<div class="fa">مشترک انسان و حیوان + غیرمتعالی + پایگاه فیزیکی و شیمیایی</div>
+</div>
+<div class="box"><h4>فطرت</h4>
+<div class="fa">مختص انسان + متعالی + ماورای امور حیوانی</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فطرت و شاکله</h3></div>
+<div class="grid2">
+<div class="box"><h4>فطرت</h4>
+<div class="fa">تغییرناپذیر + عین ذات + آفرینش الهی</div>
+</div>
+<div class="box"><h4>شاکله</h4>
+<div class="fa">تغییرپذیر + ساخته انسان + ترکیب نیروها</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه بُعد فطرت</h3></div>
+<div class="grid2">
+<div class="box"><h4>وجودی</h4>
+<div class="fa">نوعی آفرینش + تجهیزات لازم برای رسیدن به غایت</div>
+</div>
+<div class="box"><h4>معرفتی</h4>
+<div class="fa">شعور باطنی + دریافت بدون استدلال</div>
+</div>
+<div class="box"><h4>گرایشی</h4>
+<div class="fa">آزادی، عشق، زیبایی، حقیقت‌جویی، عدالت</div>
+</div>
+<div class="box"><h4>ویژگی‌های فطرت</h4>
+<div class="fa">تبدیل‌ناپذیری + هدایتگری + تکوینی + تضمین سعادت</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دین و فطرت</h3></div>
+<div class="fa"><b>اسلام:</b> دین فطرت است</div>
+<div class="fa"><b>آیه کلیدی:</b> روم/۳۰ — «فِطْرَتَ اللَّهِ الَّتِي فَطَرَ النَّاسَ عَلَيْهَا لَا تَبْدِيلَ لِخَلْقِ اللَّهِ»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هدایت عام و فطرت</h3></div>
+<div class="fa"><b>هدایت عام:</b> حرکت تکوینی همه موجودات به سوی غایت</div>
+<div class="fa"><b>تشریع دین:</b> مطابق فطرت و تکوین</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه فطرت (راه دل)</h3></div>
+<div class="fa"><b>راه فطرت:</b> احساس کشش به موجود برتر بدون استدلال</div>
+<div class="fa"><b>ترس:</b> یادآور اعتقاد فطری است، نه پدیدآورنده آن</div>
+<div class="fa"><b>آیه کلیدی:</b> یونس/۲۲-۲۳ — نشانه فطری بودن اعتقاد به خدا</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>غریزه</h3></div>
+<div class="fa"><b>تعریف ساده:</b> شعور و درک حیوانات که از حد ادراک حسی، خیالی و وهمی بالاتر نمی‌رود و به حد ادراک عقلی نمی‌رسد.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">- حیوانات برخلاف انسان نمی‌توانند مفاهیم عقلی و کلی را تعقل و ادراک کنند.</div>
+<div class="fa">- تمایلاتی است که پایگاه فیزیکی و شیمیایی دارد.</div>
+<div class="fa">- جنبه متعالی ندارد و قدر مشترک میان انسان و حیوان است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> غریزه = مشترک انسان و حیوان + غیرمتعالی. اگر سوال پرسید «غریزه چه ویژگی دارد؟» جواب: مشترک انسان و حیوان، غیرمتعالی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فطرت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> اموری ماورای امور حیوانی و مقدس هستند (شهید مطهری).</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">- اموری مانند: خداجویی، حقیقت‌جویی و زیبایی‌جویی از ارزش‌های انسانی به‌شمار می‌روند.</div>
+<div class="fa">- تمایلاتی که متعالی هستند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فطرت = مختص انسان + متعالی. اگر سوال پرسید «فطرت چه ویژگی دارد؟» جواب: مختص انسان، متعالی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شاکله</h3></div>
+<div class="fa"><b>تعریف ساده:</b> ساختار شخصیتی، ویژگی‌ها و ترکیب نیروهای بدنی انسان که از غرایز، امیال، مزاج، ملکات و عوامل خارجی (آداب، سنن، رسوم و عادات) شکل می‌گیرد.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">- دچار تغییر و تحول می‌شود.</div>
+<div class="fa">- عین ذات یا جزو ذات آدمی نیست؛ ساخته انسان است.</div>
+<div class="fa">- وقتی از حد اقتضا فراتر رفته و ملکه شد، تبدیل به فطرت و طبیعت ثانوی می‌شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شاکله = تغییرپذیر + ساخته انسان. اگر سوال پرسید «شاکله چیست؟» جواب: ساختار شخصیتی تغییرپذیر که ساخته انسان است.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> شاکله عین ذات نیست. اگر سوال پرسید «آیا شاکله عین ذات است؟» جواب: خیر، ساخته انسان است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بُعد وجودی فطرت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> فطرت از بعد وجودی و هستی‌شناسی، نوعی آفرینش است.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">- خداوند در وجود نوع انسان تجهیزات لازم و مناسب برای رسیدن به غایت را تعبیه کرده است.</div>
+<div class="fa">- این نوع آفرینش، انسان را برای تکمیل نواقص و برطرف کردن نیازهایش هدایت می‌کند.</div>
+<div class="fa">- انسان را به سنن و راه و روش خاص زندگی که دارای غایتی مشخص است، راهنمایی می‌کند.</div>
+<div class="fa">- درواقع فطرت و نوع آفرینش، همان هدایتگر و راهنماست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بُعد وجودی = تجهیزات لازم برای رسیدن به غایت + هدایتگر. اگر سوال پرسید «بُعد وجودی فطرت چیست؟» جواب: نوعی آفرینش همراه با تجهیزات لازم برای رسیدن به غایت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بُعد معرفت‌شناسانه فطرت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> مقصود از فطرت در بعد معرفتی، معلوماتی نیست که انسان به هنگام تولد همراه خود داشته باشد؛ بلکه قوا و ادراکاتی است که ویژه انسان بوده و برای راهیابی و هدایت لازم است.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">- این قوا در واقع نوعی دریافت و شعور باطنی است که بدون توسل به برهان و استدلال عقلی، انسان در برهه‌ای از زندگی و یا در سراسر زندگی خود حس و شهود می‌کند.</div>
+<div class="fa">- به‌گونه‌ای که با کمترین توجه درخواهد یافت که از هر جهت به بیرون از خود محتاج و نیازمند است و دیگر اجزای جهان نیز مانند او محتاج و نیازمند هستند و همه نیازهای او را خداوند با واسطه یا بی‌واسطه رفع می‌کند.</div>
+<div class="fa">- فطرت به این معنا با واژه «عقل» نیز به‌کار رفته است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بُعد معرفتی = شعور باطنی + دریافت بدون استدلال. اگر سوال پرسید «بُعد معرفتی فطرت چیست؟» جواب: دریافت و شعور باطنی بدون استدلال.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> فطرت در بُعد معرفتی به معنای معلومات بالفعل هنگام تولد نیست. اگر سوال پرسید «آیا فطرت یعنی معلومات هنگام تولد؟» جواب: خیر.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بُعد گرایشی و احساسی فطرت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> فطرت در بعد خواست‌ها، گرایش‌ها و احساسات در اموری مانند: آزادی، عشق، زیبایی، حقیقت‌جویی و عدالت معرفی شده است.</div>
+<div class="fa"><b>نکته:</b> گاهی از فطرت در این موارد به «شعور باطنی» و زمانی به «الهام فطری» تعبیر می‌کنند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بُعد گرایشی = آزادی، عشق، زیبایی، حقیقت‌جویی، عدالت. اگر سوال پرسید «بُعد گرایشی فطرت شامل چه چیزهایی است؟» جواب: آزادی، عشق، زیبایی، حقیقت‌جویی، عدالت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویژگی‌های فطرت</h3></div>
+<div class="fa">۱. فطرت امری تبدیل‌ناپذیر است.</div>
+<div class="fa">۲. فطرت هدایتگر است.</div>
+<div class="fa">۳. فطرت امر تکوینی و اقتضای تکوین است.</div>
+<div class="fa">۴. فطرت از مصادیق و ذیل قانون کلی هدایت عامه است: «قَالَ رَبُّنَا الَّذِي أَعْطَى كُلَّ شَيْءٍ خَلْقَهُ ثُمَّ هَدَى» (طه/۵۰)</div>
+<div class="fa">۵. فطرت تضمین‌کننده سعادت است.</div>
+<div class="fa">۶. کمال انسان در زندگی، همان چیزی است که فطرت به آن حکم کرده و آن را به‌سوی خود می‌خواند.</div>
+<div class="fa">۷. حکم فطرت همان حکم عقل نظری و عملی است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۷ ویژگی فطرت = تبدیل‌ناپذیری + هدایتگری + تکوینی بودن + ذیل هدایت عامه + تضمین سعادت + کمال‌خواهی + حکم عقل. اگر سوال پرسید «کدام یک از ویژگی‌های فطرت است؟» هر یک از این هفت مورد را در نظر بگیرید.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> فطرت تغییرپذیر نیست. اگر سوال پرسید «آیا فطرت تغییرپذیر است؟» جواب: خیر، تبدیل‌ناپذیر است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعریف جامع فطرت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> فطرت نوعی آفرینش انسان همراه با قوا، قابلیت‌ها، اقتضائات و تجهیزات لازم و مقتضای نظام عام هستی و نظام خاص انسانی در سه عرصه (وجودی، معرفتی و گرایشی) است که مطابق با اقتضای تکوین بوده و تغییرناپذیر است و انسان برای تکمیل نواقص و برطرف کردن نیازهایش آن را به‌کار گرفته و به غایت آفرینش دست می‌یابد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تعریف جامع فطرت = آفرینش + قوا + سه عرصه + تغییرناپذیر + رسیدن به غایت. اگر سوال پرسید «تعریف جامع فطرت چیست؟» این اجزا را مدنظر داشته باشید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دین و فطرت</h3></div>
+<div class="fa">- دین اسلام برپایه فطرت بنا نهاده شده است.</div>
+<div class="fa">- دین امر فطری است و چیزی که فطری باشد، آفرینش در آن نه گمراهی می‌پذیرد و نه حکمش دگرگون می‌گردد.</div>
+<div class="fa">- زیرا فطرت نه مختلف است و نه فعلش تخلف‌پذیر.</div>
+<div class="fa">- چون امر فطری برای هیچ‌کس تردیدپذیر نیست و دین در آفرینش بشر امری فطری است، ازاین‌رو فطرت بشری هرگز آن را رد نمی‌کند.</div>
+<div class="fa">- بنابراین اسلام دین فطرت است و این دین فطرت را با فطرت اصلاح کرده و قوای فطرت را به هنگام لزوم تعدیل می‌کند و زندگی دنیوی و اخروی، و مادی و معنوی انسان را سامان می‌دهد.</div>
+<div class="fa">- بنابراین دین چیزی است که نوع خلقت یعنی فطرت انسان بدان دعوت می‌کند و چیزی جز آداب زندگی و راهی که انسان باید در پیش گیرد تا به رستگاری و سعادت برسد، نیست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اسلام = دین فطرت. اگر سوال پرسید «اسلام چه دینی است؟» جواب: دین فطرت. اگر پرسید «رابطه دین و فطرت چیست؟» جواب: دین برپایه فطرت بنا شده است.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه «دین امری غیرفطری است» غلط است. دین امری فطری است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آیات کلیدی درباره فطرت</h3></div>
+<table class="compare">
+<thead><tr><th>آیه</th><th>مضمون</th></tr></thead>
+<tbody>
+<tr><td>طه/۵۰</td><td>«رَبَّنَا الَّذِي أَعْطَى كُلَّ شَيْءٍ خَلْقَهُ ثُمَّ هَدَى» — پروردگار ما کسی است که به هر موجودی آنچه را لازمه آفرینش او بود داده، سپس رهبریش کرده است.</td></tr>
+<tr><td>اعلی/۲-۳</td><td>«الَّذِي خَلَقَ فَسَوَّىٰ وَالَّذِي قَدَرَ فَهَدَىٰ» — همان خداوندی که آفرید و منظم کرد؛ و همان کس که تقدیر کرد و هدایت فرمود.</td></tr>
+<tr><td>شمس/۷-۸</td><td>«وَنَفْسٍ وَمَا سَوَّاهَا فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَاهَا» — سوگند به نفس و آنکه آن را آفرید و پاکش کرد، سپس بدی‌ها و پرهیزگاری‌اش را به او الهام کرد.</td></tr>
+<tr><td>عبس/۲۰</td><td>«ثُمَّ السَّبِيلَ يَسَّرَهُ» — سپس راه را برای او آسان کرد.</td></tr>
+<tr><td>روم/۳۰</td><td>«فَأَقِمْ وَجْهَكَ لِلدِّينِ حَنِيفًا فِطْرَتَ اللَّهِ الَّتِي فَطَرَ النَّاسَ عَلَيْهَا لَا تَبْدِيلَ لِخَلْقِ اللَّهِ ذَلِكَ الدِّينُ الْقَيِّمُ» — پس روی خود را به سوی دین حنیف کن، همان فطرت الهی که مردم را بر آن آفرید، آفرینش الهی را دگرگونی نیست، این است دین استوار.</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آیه روم/۳۰ مهم‌ترین آیه درباره فطرت است: «فطرت الله التی فطر الناس علیها لا تبدیل لخلق الله». اگر سوال پرسید «کدام آیه بر فطری بودن دین دلالت دارد؟» جواب: روم/۳۰.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هدایت عام موجودات</h3></div>
+<div class="fa">- همه انواع موجودات به سوی تکامل در حرکتند تا به بالاترین درجه کمال برسند.</div>
+<div class="fa">- لذا هر موجودی غایتی تکوینی دارد که می‌خواهد خود را به آن برساند.</div>
+<div class="fa">- هر موجودی با طلب و حرکت تکوینی، در راه رسیدن به غایت است.</div>
+<div class="fa">- این توجه تکوینی «هدایت عام» نام دارد؛ زیرا مستند به خدای تعالی است.</div>
+<div class="fa">- موجودات در این هدایت تکوینی خطا نمی‌روند؛ بلکه با استکمال تدریجی و به کار گرفتن هدایت عام و قوایی که موجود بدان‌ها مجهز است، به‌سوی هدف نهایی حرکت می‌کنند.</div>
+<div class="fa"><b>آیه:</b> «رَبَّنَا الَّذِي أَعْطَى كُلَّ شَيْءٍ خَلْقَهُ ثُمَّ هَدَى» (طه/۵۰)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هدایت عام = حرکت تکوینی همه موجودات به سوی غایت. اگر سوال پرسید «هدایت عام چیست؟» جواب: توجه تکوینی همه موجودات به سوی غایت که مستند به خداست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه فطرت (راه دل)</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یکی از راه‌هایی که می‌توان به وجود خداوند متعال پی برد، فطرت یا راه دل است.</div>
+<div class="fa">در این طریق انسان بدون اینکه به‌دنبال استدلال و برهان منطقی باشد و بدون اینکه آن را در نزد کسی یا مدرسه و دانشگاهی یادگیرد، خودبه‌خود کشش و جذبه‌ای به‌سوی موجودی برتر احساس می‌کند.</div>
+<div class="fa">این جذبه و گرایش و احساس، ریشه در خداگرایی فطری دارد؛ همچنان‌که میل به زیبایی، میل به کمال و... نیز چنین است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> راه فطرت = راه دل = احساس کشش به موجود برتر بدون استدلال. اگر سوال پرسید «راه فطرت چیست؟» جواب: راه دل، احساس کشش به موجود برتر بدون استدلال.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>میل به خدا و دو صورت آن</h3></div>
+<div class="fa"><b>میل به خدا دو صورت دارد:</b></div>
+<div class="fa">۱. به صورت عشق و میل و جذب به دین و تعالیم دینی.</div>
+<div class="fa">۲. به صورت گرایش و میل به خدا.</div>
+<div class="fa"><b>میل به خدا نیز خود را به دو صورت نشان می‌دهد:</b></div>
+<div class="fa">۱. گاهی انسان در اثر صفای باطن و پاکی درون در مرتبه‌ای قرار می‌گیرد که به خدا گرایش پیدا کرده و با وجدان خویش حضور و وجود خدا را مشاهده می‌کند. (شعر: «در اندرون من خسته دل ندانم کیست...»)</div>
+<div class="fa">۲. گاهی این میل و گرایش تحت تأثیر علل و عواملی مانند غفلت و گناه قرار می‌گیرد؛ به‌طوری‌که مانند گردوغبار پرده‌ای بر آینه شفاف فطرت کشیده و انسان گرفتار خدا فراموشی شده و ندای فطرت را در درون خود نمی‌شنود. در این صورت است که برخی حوادث سنگین و سهمگین در زندگی انسان، همچون تلنگری است که انسان را بیدار کرده و متوجه فطرت خداگرایی می‌کند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> میل به خدا دو صورت = عشق به دین + گرایش به خدا. اگر سوال پرسید «میل به خدا چه صورتی دارد؟» این دو را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مثال حوادث سهمگین و ترس</h3></div>
+<div class="fa">برای انسان در موقع بروز حوادث خطرناک، مانند هجوم امواج دریا به کشتی، بروز نقص فنی در هواپیما، بریدن ترمز ماشین و هجوم سیل به شهر و ده، یک حالت عرفانی و توجه خاصی به خدا رخ می‌دهد که او را بیش از پیش به کارگردان جهان متوجه می‌سازد.</div>
+<div class="fa"><b>نکته مهم:</b> در اینجا ترس یادآور آن ندای درونی و اعتقاد فطری انسان است، نه پدیدآورنده اعتقاد به خدا.</div>
+<div class="fa">یعنی از توجه انسان به خدا در این لحظات نباید نتیجه گرفت که اعتقاد به خدا معلول ترس بشر از عوامل خصمانه طبیعت است؛ بلکه باید آن را وسیله توجه به چنین دریافت درونی دانست.</div>
+<div class="fa"><b>آیه:</b> «هُوَ الَّذِي يُسَيِّرُكُمْ فِي الْبَرِّ وَالْبَحْرِ...» (یونس/۲۲-۲۳)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ترس یادآور اعتقاد فطری است، نه پدیدآورنده آن. اگر سوال پرسید «آیا ترس پدیدآورنده اعتقاد به خداست؟» جواب: خیر، یادآور آن است.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه «اعتقاد به خدا معلول ترس است» غلط است. ترس فقط یادآور اعتقاد فطری است.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">هر جفت مفهوم + تفاوت ساده + نکته امتحانی + دام احتمالی</p>
+
+<div class="card">
+<div class="card-head"><h3>غریزه vs فطرت</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>غریزه</th><th>فطرت</th></tr></thead>
+<tbody>
+<tr><td>مشترک بودن</td><td>مشترک انسان و حیوان</td><td>مختص انسان</td></tr>
+<tr><td>تعالی</td><td>غیرمتعالی</td><td>متعالی</td></tr>
+<tr><td>پایگاه</td><td>فیزیکی و شیمیایی</td><td>ماورای امور حیوانی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اگر سوال پرسید «تفاوت غریزه و فطرت چیست؟» جواب: غریزه مشترک و غیرمتعالی، فطرت مختص انسان و متعالی.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه «فطرت مشترک انسان و حیوان است» غلط است. فطرت مختص انسان است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فطرت vs شاکله</h3></div>
+<table class="compare">
+<thead><tr><th>ویژگی</th><th>فطرت</th><th>شاکله</th></tr></thead>
+<tbody>
+<tr><td>تغییرپذیری</td><td>هرگز دچار تغییر و تبدیل نمی‌شود</td><td>دچار تغییر و تحول می‌شود</td></tr>
+<tr><td>ماهیت</td><td>نوعی ساختار وجودی انسان</td><td>ساختار شخصیتی، ویژگی‌ها و ترکیب نیروهای بدنی</td></tr>
+<tr><td>عوامل شکل‌دهنده</td><td>آفرینش الهی</td><td>غرایز، امیال، مزاج، ملکات و عوامل خارجی</td></tr>
+<tr><td>رابطه با ذات</td><td>عین ذات یا جزو ذات آدمی است</td><td>عین ذات یا جزو ذات آدمی نیست؛ ساخته انسان است</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فطرت = تغییرناپذیر + عین ذات / شاکله = تغییرپذیر + ساخته انسان. اگر سوال پرسید «کدام یک تغییرپذیر است؟» جواب: شاکله.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه «شاکله عین ذات است» غلط است. شاکله ساخته انسان است، نه عین ذات.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه بُعد فطرت</h3></div>
+<table class="compare">
+<thead><tr><th>بُعد</th><th>ویژگی</th></tr></thead>
+<tbody>
+<tr><td>وجودی</td><td>نوعی آفرینش + تجهیزات لازم برای رسیدن به غایت</td></tr>
+<tr><td>معرفتی</td><td>شعور باطنی + دریافت بدون استدلال + عقل</td></tr>
+<tr><td>گرایشی</td><td>آزادی، عشق، زیبایی، حقیقت‌جویی، عدالت</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۳ بُعد فطرت = وجودی + معرفتی + گرایشی. اگر سوال پرسید «ابعاد فطرت کدامند؟» این سه را انتخاب کنید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ترس vs اعتقاد فطری</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> ترس یادآور اعتقاد فطری است / اعتقاد فطری ریشه در ذات انسان دارد</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ترس = یادآور / اعتقاد فطری = اصیل. اگر سوال پرسید «رابطه ترس با اعتقاد به خدا چیست؟» جواب: ترس یادآور است، نه پدیدآورنده.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فطرت vs عقل</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> فطرت = شعور باطنی و دریافت بدون استدلال / عقل = ابزار استدلال و تعقل</div>
+<div class="fa"><b>نکته مهم:</b> حکم فطرت همان حکم عقل نظری و عملی است. ابن‌سینا پس از اشاره به چند معنا برای عقل می‌گوید: به فطرت اولی صحیح، عقل گفته می‌شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حکم فطرت = حکم عقل. اگر سوال پرسید «رابطه فطرت و عقل چیست؟» جواب: حکم فطرت همان حکم عقل است.
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۴ · شخصیت‌ها و نظریه‌پردازان</h2>
+<p class="section-sub">هر شخصیت + نظریه ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>شهید مطهری</h3></div>
+<div class="fa"><b>کی بود:</b> متفکر و فیلسوف اسلامی</div>
+<div class="fa"><b>نظریه ساده:</b> فطرت اموری ماورای امور حیوانی و مقدس هستند. «فِطْرَةَ اللَّهِ الَّتِي فَطَرَ النَّاسَ عَلَيْهَا» یعنی آن گونه خاص از آفرینش که ما به انسان داده‌ایم. فطرت انسان یعنی ویژگی‌هایی در اصل خلقت و آفرینش انسان.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شهید مطهری = فطرت = ویژگی‌های اصل خلقت. اگر سوال پرسید «از دیدگاه شهید مطهری فطرت چیست؟» جواب: ویژگی‌های اصل خلقت و آفرینش انسان.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علامه طباطبائی</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و مفسر معاصر</div>
+<div class="fa"><b>نظریه ساده:</b> خداوند ادراک حق و باطل را در نظریات، و ادراک خیر و شر و منافع و مضار را در ادراکات عملی در سرشت انسان گذاشته است. مقتضای دین فطری این است که تجهیزات وجودی انسان لغو نشود و حق هریک از آنها ادا شود و قواى گوناگون عاطفی و احساسی تعدیل شده، به هر کدام تا اندازه‌ای که مزاحم حال دیگران نشود، رخصت عمل داده شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبائی = ادراک حق و باطل + تعدیل قوا. اگر سوال پرسید «از دیدگاه علامه طباطبائی خداوند چه چیزی در سرشت انسان گذاشته؟» جواب: ادراک حق و باطل + ادراک خیر و شر.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ابن‌سینا</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف مسلمان</div>
+<div class="fa"><b>نظریه ساده:</b> پس از اشاره به چند معنا برای عقل می‌گوید: به فطرت اولی صحیح، عقل گفته می‌شود.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ابن‌سینا = فطرت اولی صحیح = عقل. اگر سوال پرسید «چه کسی فطرت اولی صحیح را عقل نامید؟» جواب: ابن‌سینا.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امام صادق (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> امام ششم شیعیان</div>
+<div class="fa"><b>نظریه ساده:</b> در حدیث به مفضل، نظم عالم را دلیل بر وجود خدا دانست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> امام صادق = برهان نظم. اگر سوال پرسید «حدیث امام صادق به مفضل درباره چیست؟» جواب: نظم عالم.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حضرت ابراهیم (ع)</h3></div>
+<div class="fa"><b>کی بود:</b> پیامبر الهی</div>
+<div class="fa"><b>نظریه ساده:</b> برهان فطرت با استفاده از محبت. آیه: «وَكَذَٰلِكَ نُرِي إِبْرَاهِيمَ مَلَكُوتَ السَّمَاوَاتِ وَالْأَرْضِ...» (انعام/۷۵-۷۹). حضرت ابراهیم از محبوب نبودن هر امر غیرازلی و غیرابدئی خبر می‌دهد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حضرت ابراهیم = برهان فطرت با محبت. اگر سوال پرسید «آیه انعام/۷۵-۷۹ مربوط به کدام برهان است؟» جواب: برهان فطرت با محبت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>برخی متفکران</h3></div>
+<div class="fa"><b>نظریه ساده:</b> فطرت عبارت است از جریان طبیعی و قانونی نیروهایی که در انسان به وجود می‌آید. برای هریک از نیروهای غریزی و مغزی و روانی فطریت وجود دارد که جریان طبیعی و منطقی آن نیرو می‌باشد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برخی متفکران = جریان طبیعی و قانونی نیروها. اگر سوال پرسید «برخی متفکران فطرت را چه تعریف کرده‌اند؟» جواب: جریان طبیعی و قانونی نیروهای انسانی.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: غریزه vs فطرت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی غریزه مختص انسان است.</div>
+<div class="fa"><b>جواب درست:</b> غریزه مشترک انسان و حیوان است / فطرت مختص انسان است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> غریزه = مشترک / فطرت = مختص
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: فطرت vs شاکله</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی شاکله عین ذات است.</div>
+<div class="fa"><b>جواب درست:</b> شاکله ساخته انسان است / فطرت عین ذات است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شاکله = ساخته انسان
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: تغییرپذیری فطرت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فطرت تغییرپذیر است.</div>
+<div class="fa"><b>جواب درست:</b> فطرت تغییرناپذیر است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فطرت = تبدیل‌ناپذیر
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: ابعاد فطرت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فطرت فقط یک بُعد دارد.</div>
+<div class="fa"><b>جواب درست:</b> ۳ بُعد = وجودی + معرفتی + گرایشی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ابعاد فطرت = ۳ بُعد
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: بُعد معرفتی فطرت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فطرت در بُعد معرفتی یعنی معلومات هنگام تولد.</div>
+<div class="fa"><b>جواب درست:</b> قوا و ادراکات ویژه انسان برای راهیابی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بُعد معرفتی = شعور باطنی، نه معلومات بالفعل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: دین و فطرت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دین امری غیرفطری است.</div>
+<div class="fa"><b>جواب درست:</b> اسلام دین فطرت است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دین = فطری
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: آیه فطرت</h3>
+<div class="fa"><b>دام چیه:</b> آیه روم/۳۰ را به موضوع دیگری نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> روم/۳۰ = فطرت الله</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> روم/۳۰ = مهم‌ترین آیه فطرت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: ترس و اعتقاد به خدا</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ترس پدیدآورنده اعتقاد به خداست.</div>
+<div class="fa"><b>جواب درست:</b> ترس یادآور اعتقاد فطری است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ترس = یادآور
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: برهان فطرت و اشکال</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی گرایش به موجود برتر دلیل بر وجود خارجی او نیست.</div>
+<div class="fa"><b>جواب درست:</b> پاسخ: تمثیل عطش و سراب — خطا در تطبیق است، نه در واقعیت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پاسخ اشکال = تمثیل عطش و سراب
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: برهان فطرت با محبت</h3>
+<div class="fa"><b>دام چیه:</b> آیه حضرت ابراهیم را به موضوع دیگری نسبت می‌دهی.</div>
+<div class="fa"><b>جواب درست:</b> انعام/۷۵-۷۹ = برهان فطرت با محبت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> انعام/۷۵-۷۹ = برهان فطرت با محبت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: فطرت vs عقل</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فطرت و عقل دو چیز کاملاً متفاوتند.</div>
+<div class="fa"><b>جواب درست:</b> حکم فطرت همان حکم عقل است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حکم فطرت = حکم عقل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: شاکله معتدل و ظالمانه</h3>
+<div class="fa"><b>دام چیه:</b> آثار شاکله معتدل و ظالمانه را قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> معتدل = دستیابی آسان به حق / ظالمانه = دشواری در تلبس به حق</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معتدل = آسان / ظالمانه = دشوار
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 11 · فطرت · جزوه جامع امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"غریزه چه ویژگی دارد؟",options:["مختص انسان","مشترک انسان و حیوان","متعالی","ماورای امور حیوانی"],answer:1,explanation:"غریزه مشترک انسان و حیوان است."},
+{q:"فطرت چه ویژگی دارد؟",options:["مشترک انسان و حیوان","غیرمتعالی","مختص انسان و متعالی","پایگاه فیزیکی"],answer:2,explanation:"فطرت مختص انسان و متعالی است."},
+{q:"کدام یک تغییرپذیر است؟",options:["فطرت","شاکله","عقل","ذات"],answer:1,explanation:"شاکله تغییرپذیر است."},
+{q:"شاکله چیست؟",options:["عین ذات","ساخته انسان","آفرینش الهی","تبدیل‌ناپذیر"],answer:1,explanation:"شاکله ساخته انسان است."},
+{q:"آیه «قل کل یعمل علی شاکله» درباره چیست؟",options:["فطرت","شاکله","عقل","غریزه"],answer:1,explanation:"آیه درباره شاکله است."},
+{q:"ابعاد فطرت کدامند؟",options:["وجودی + معرفتی + گرایشی","فقط وجودی","فقط معرفتی","فقط گرایشی"],answer:0,explanation:"۳ بُعد فطرت."},
+{q:"بُعد معرفتی فطرت چیست؟",options:["معلومات هنگام تولد","شعور باطنی و دریافت بدون استدلال","تجربه حسی","استدلال عقلی"],answer:1,explanation:"بُعد معرفتی = شعور باطنی."},
+{q:"بُعد گرایشی فطرت شامل چه چیزهایی است؟",options:["آزادی، عشق، زیبایی، حقیقت‌جویی، عدالت","فقط عشق","فقط آزادی","فقط عدالت"],answer:0,explanation:"بُعد گرایشی = آزادی، عشق، زیبایی، حقیقت‌جویی، عدالت."},
+{q:"کدام یک از ویژگی‌های فطرت است؟",options:["تغییرپذیری","تبدیل‌ناپذیری","مشترک بودن","غیرمتعالی بودن"],answer:1,explanation:"فطرت تبدیل‌ناپذیر است."},
+{q:"فطرت ذیل کدام قانون کلی است؟",options:["هدایت عامه","علیت","تسلسل","دور"],answer:0,explanation:"فطرت ذیل هدایت عامه است."},
+{q:"اسلام چه دینی است؟",options:["دین فطرت","دین غیرفطری","دین بشری","دین ساختگی"],answer:0,explanation:"اسلام دین فطرت است."},
+{q:"آیه مهم درباره فطرت کدام است؟",options:["روم/۳۰","بقره/۱۶۴","نمل/۸۸","طه/۵۰"],answer:0,explanation:"روم/۳۰ = مهم‌ترین آیه فطرت."},
+{q:"راه فطرت چیست؟",options:["راه استدلال","راه دل","راه تجربه","راه عقل"],answer:1,explanation:"راه فطرت = راه دل."},
+{q:"میل به خدا چه صورتی دارد؟",options:["عشق به دین + گرایش به خدا","فقط عشق به دین","فقط گرایش به خدا","هیچکدام"],answer:0,explanation:"میل به خدا = عشق به دین + گرایش به خدا."},
+{q:"ترس چه نقشی در اعتقاد به خدا دارد؟",options:["پدیدآورنده","یادآور","مخرب","بی‌اثر"],answer:1,explanation:"ترس یادآور اعتقاد فطری است."},
+{q:"کدام آیه بر فطری بودن اعتقاد به خدا دلالت دارد؟",options:["یونس/۲۲-۲۳","بقره/۱۶۴","نمل/۸۸","طه/۵۰"],answer:0,explanation:"یونس/۲۲-۲۳ = فطری بودن اعتقاد به خدا."},
+{q:"پاسخ اشکال بر برهان فطرت چیست؟",options:["تمثیل عطش و سراب","تمثیل ساعت","تمثیل درخت","تمثیل حرکت"],answer:0,explanation:"پاسخ = تمثیل عطش و سراب."},
+{q:"آیه حضرت ابراهیم (انعام/۷۵-۷۹) مربوط به کدام برهان است؟",options:["نظم","حرکت","امکان و وجوب","فطرت با محبت"],answer:3,explanation:"انعام/۷۵-۷۹ = برهان فطرت با محبت."},
+{q:"تفاوت انسان با موجودات دیگر در چیست؟",options:["زندگی اجتماعی","زندگی انفرادی","عدم نیاز به دین","عدم نیاز به قوانین"],answer:0,explanation:"زندگی اجتماعی انسان + نیاز به دین."},
+{q:"رابطه تشریع دین با فطرت چیست؟",options:["مطابق فطرت و تکوین","مخالف فطرت","بی‌ربط","مطابق عقل"],answer:0,explanation:"تشریع دین مطابق فطرت و تکوین است."},
+{q:"شاکله معتدل چه اثری دارد؟",options:["دستیابی آسان به حق","دشواری در تلبس به حق","بی‌اثر","مانع حق"],answer:0,explanation:"شاکله معتدل = دستیابی آسان به حق."},
+{q:"حکم فطرت با حکم عقل چه رابطه‌ای دارد؟",options:["متفاوت","همان","مخالف","بی‌ربط"],answer:1,explanation:"حکم فطرت = حکم عقل."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>آزمون مرور سریع - ورزش ۱ (سری یازدهم)</title>
+    <style>
+        :root {
+            --pink: #fa4779;
+            --pink2: #ff7aa6;
+            --pink-soft: rgba(250, 71, 121, 0.12);
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e5e7eb;
+            --correct: #7fd1b9;
+        }
+        body.dark {
+            --bg: #0b1020;
+            --card: #131a33;
+            --text: #e5e7eb;
+            --border: #263056;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 70px auto;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 26px;
+        }
+        .card, .sheet, .json-card {
+            background: var(--card);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.18);
+        }
+        .json-card {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+        }
+        .progress-wrap {
+            height: 12px;
+            background: linear-gradient(90deg, #eee, #ddd);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            transition: .4s;
+        }
+        .question {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 22px;
+            line-height: 1.8;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .option {
+            padding: 16px 18px;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            transition: background .3s, border-color .3s;
+            font-size: 15px;
+        }
+        .option:hover {
+            background: var(--pink-soft);
+            border-color: var(--pink);
+        }
+        .next {
+            margin-top: 28px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 22px;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background .3s;
+        }
+        .next:hover {
+            background: var(--pink2);
+        }
+        .sheet {
+            max-height: 620px;
+            overflow: auto;
+        }
+        .sheet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .sheet-cell {
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 10px 12px;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 8px;
+            align-items: center;
+        }
+        .sheet-cell.active {
+            border-color: var(--pink);
+            box-shadow: 0 0 0 3px var(--pink-soft);
+        }
+        .answers {
+            display: flex;
+            justify-content: space-between;
+        }
+        .bubble {
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 12px;
+        }
+        .bubble.correct {
+            background: var(--correct);
+            color: #fff;
+            border: none;
+        }
+        .bubble.wrong {
+            background: var(--pink);
+            color: #fff;
+            border: none;
+        }
+        .result {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .score {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--pink);
+        }
+        .desc {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .print {
+            margin-top: 24px;
+            padding: 14px 34px;
+            border-radius: 999px;
+            border: none;
+            background: #111;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background .3s;
+        }
+        .print:hover {
+            background: #333;
+        }
+        .json-card textarea {
+            width: 100%;
+            min-height: 160px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 14px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            background: var(--bg);
+            color: var(--text);
+            resize: vertical;
+            direction: ltr;
+            text-align: left;
+        }
+        .json-card .json-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .json-card .json-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .copy-json-btn {
+            padding: 8px 24px;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .copy-json-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(250, 71, 121, 0.35);
+        }
+        .copy-feedback {
+            font-size: 14px;
+            color: var(--correct);
+            font-weight: 600;
+            display: none;
+        }
+        .quizly-logo {
+            position: fixed;
+            top: 16px;
+            right: 18px;
+            z-index: 999;
+        }
+        .quizly-logo img {
+            width: 60px;
+            cursor: pointer;
+            animation: quizlyFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 28px rgba(250, 71, 121, .55));
+            transition: transform .35s ease, filter .35s ease;
+        }
+        .quizly-logo img:hover {
+            transform: scale(1.12) rotate(3deg);
+            filter: drop-shadow(0 16px 40px rgba(250, 71, 121, .85));
+        }
+        @keyframes quizlyFloat {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+        @media (max-width: 820px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
+            .options {
+                grid-template-columns: 1fr;
+            }
+            .sheet-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media print {
+            .theme-toggle, .next, .json-card { display: none; }
+            body { background: #fff; }
+        }
+    </style>
+</head>
+<body>
+<div class="quizly-logo">
+    <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo">
+</div>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+<div class="wrapper">
+    <div class="card">
+        <div class="progress-wrap">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="quiz"></div>
+        <button class="next" id="nextBtn" onclick="next()">بعدی</button>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="sheet">
+        <div class="sheet-grid" id="sheet"></div>
+    </div>
+
+    <!-- بخش JSON -->
+    <div class="json-card" id="jsonCard">
+        <div class="json-header">
+            <h3>📋 کپی JSON نتایج</h3>
+            <div>
+                <button class="copy-json-btn" onclick="copyJSON()">کپی JSON</button>
+                <span class="copy-feedback" id="copyFeedback">✓ کپی شد!</span>
+            </div>
+        </div>
+        <textarea id="jsonOutput" readonly placeholder="نتایج به‌صورت JSON اینجا نمایش داده می‌شود..."></textarea>
+    </div>
+</div>
+
+<script>
+
+const questions = [
+    {
+        q: "فوتبال چه تأثیری بر بدن دارد؟",
+        options: ["فقط افزایش قدرت", "توسعه استقامت عمومی + بهبود دستگاه تنفسی و قلب + افزایش قدرت پاها", "فقط کاهش وزن", "فقط افزایش سرعت"],
+        answer: 1
+    },
+    {
+        q: "چند مهارت اساسی در فوتبال وجود دارد؟",
+        options: ["۴", "۵", "۶", "۷"],
+        answer: 2
+    },
+    {
+        q: "ضربه آزاد مستقیم یعنی چه؟",
+        options: ["توپ با بازیکن دیگر تماس پیدا می‌کند", "توپ مستقیم وارد دروازه حریف می‌شود", "توپ به بیرون می‌رود", "توپ به تیر می‌خورد"],
+        answer: 1
+    },
+    {
+        q: "ضربه آزاد غیرمستقیم یعنی چه؟",
+        options: ["توپ مستقیم وارد دروازه می‌شود", "توپ با بازیکن دیگر تماس پیدا می‌کند و غیرمستقیم وارد دروازه می‌شود", "توپ به بیرون می‌رود", "توپ به تیر می‌خورد"],
+        answer: 1
+    },
+    {
+        q: "ضربه زدن به توپ با چه ناحیه‌ای انجام می‌شود؟",
+        options: ["با پنجه", "با روی پا", "با پاشنه", "با ساعد"],
+        answer: 1
+    },
+    {
+        q: "فاصله پای تکیه‌گاه از توپ در ضربه زدن چقدر است؟",
+        options: ["۱۰ سانتی‌متر", "۵ سانتی‌متر", "حداکثر ۳ یا ۴ سانتی‌متر", "۲۰ سانتی‌متر"],
+        answer: 2
+    },
+    {
+        q: "کنترل توپ با کدام قسمت‌های بدن انجام می‌شود؟",
+        options: ["فقط با پا", "فقط با دست", "با تمام قسمت‌های بدن به جز دست‌ها", "فقط با سر"],
+        answer: 2
+    },
+    {
+        q: "در کنترل توپ، عضو برخوردکننده با توپ چه می‌کند؟",
+        options: ["سفت و سخت می‌شود", "کمی به عقب کشیده می‌شود", "به جلو می‌رود", "تکان نمی‌خورد"],
+        answer: 1
+    },
+    {
+        q: "دربیل یعنی چه؟",
+        options: ["ضربه به توپ", "حرکت توپ همراه بازیکن با ضربه‌های آهسته و متوالی", "پاس دادن", "هد زدن"],
+        answer: 1
+    },
+    {
+        q: "در دربیل، توپ چه فاصله‌ای از بازیکن دارد؟",
+        options: ["فاصله زیاد", "به مقدار زیاد از بازیکن فاصله نمی‌گیرد", "همیشه دور است", "فاصله مهم نیست"],
+        answer: 1
+    },
+    {
+        q: "پاس دادن در فوتبال چه نقشی دارد؟",
+        options: ["فقط سرگرمی", "ارتباط بین بازیکنان و به تعویق انداختن خستگی", "فقط دفاع", "فقط حمله"],
+        answer: 1
+    },
+    {
+        q: "کدام گزینه جزء انواع پاس نیست؟",
+        options: ["پاس با بغل پا", "پاس با روی پا", "پاس با سر", "پاس با دست"],
+        answer: 3
+    },
+    {
+        q: "هد زدن با کدام ناحیه انجام می‌شود؟",
+        options: ["فرق سر", "پیشانی", "پشت سر", "گونه"],
+        answer: 1
+    },
+    {
+        q: "هد زدن چند نوع دارد؟",
+        options: ["یک نوع", "دو نوع (روی زمین و در حال پرش)", "سه نوع", "چهار نوع"],
+        answer: 1
+    },
+    {
+        q: "در هد زدن همراه با پرش، چه چیزی مهم است؟",
+        options: ["فقط قدرت", "وقت‌شناسی و هماهنگ کردن زمان پرش با حرکت توپ", "فقط سرعت", "فقط قد"],
+        answer: 1
+    },
+    {
+        q: "پرتاب اوت چه زمانی انجام می‌شود؟",
+        options: ["وقتی توپ گل شود", "وقتی توپ از محوطه طولی زمین خارج شود", "وقتی خطا شود", "وقتی بازی شروع شود"],
+        answer: 1
+    },
+    {
+        q: "در پرتاب اوت، چند دست استفاده می‌شود؟",
+        options: ["یک دست", "دو دست", "سه دست", "مهم نیست"],
+        answer: 1
+    },
+    {
+        q: "در لحظه پرتاب اوت، پاها چه وضعیتی دارند؟",
+        options: ["یک پا بالا", "هر دو پا با زمین تماس دارند", "هر دو پا در هوا", "مهم نیست"],
+        answer: 1
+    },
+    {
+        q: "اندازه زمین فوتبال چقدر است؟",
+        options: ["۱۰۰ × ۶۰ متر", "۱۱۰ × ۷۵ متر", "۱۲۰ × ۸۰ متر", "۹۰ × ۶۰ متر"],
+        answer: 1
+    },
+    {
+        q: "فاصله نقطه پنالتی از خط دروازه چقدر است؟",
+        options: ["۱۰ متر", "۱۱ متر", "۱۲ متر", "۱۶.۵ متر"],
+        answer: 1
+    },
+    {
+        q: "تعداد بازیکنان هر تیم فوتبال چند نفر است؟",
+        options: ["۹ نفر", "۱۰ نفر", "۱۱ نفر", "۱۲ نفر"],
+        answer: 2
+    },
+    {
+        q: "زمان بازی فوتبال چقدر است؟",
+        options: ["دو نیمه ۳۰ دقیقه", "دو نیمه ۴۵ دقیقه", "دو نیمه ۶۰ دقیقه", "یک نیمه ۹۰ دقیقه"],
+        answer: 1
+    },
+    {
+        q: "استراحت بین دو نیمه فوتبال چقدر است؟",
+        options: ["۵ دقیقه", "۱۰ دقیقه", "۱۵ دقیقه", "۲۰ دقیقه"],
+        answer: 1
+    },
+    {
+        q: "تیم برنده در فوتبال چگونه تعیین می‌شود؟",
+        options: ["با قرعه‌کشی", "تیمی که گل بیشتری زده باشد", "با وقت اضافه", "با پنالتی"],
+        answer: 1
+    },
+    {
+        q: "کدام یک از خطاهای فوتبال نیست؟",
+        options: ["لگد زدن", "تنه زدن", "پاس دادن", "هل دادن"],
+        answer: 2
+    },
+    {
+        q: "ضربه پنالتی در چه شرایطی اعلام می‌شود؟",
+        options: ["خطا در خارج محوطه جریمه", "خطا در داخل محوطه جریمه", "خطا در نیمه حریف", "خطا در نیمه خودی"],
+        answer: 1
+    },
+    {
+        q: "در لحظه اجرای ضربه پنالتی، چه کسی از دروازه دفاع می‌کند؟",
+        options: ["همه بازیکنان", "تنها دروازه‌بان", "دو مدافع", "هیچ‌کس"],
+        answer: 1
+    },
+    {
+        q: "فاصله محوطه جریمه از تیرهای دروازه چقدر است؟",
+        options: ["۱۱ متر", "۱۴ متر", "۱۶.۵ متر", "۲۰ متر"],
+        answer: 2
+    },
+    {
+        q: "کدام بازیکن می‌تواند با دست توپ را کنترل کند؟",
+        options: ["همه بازیکنان", "فقط دروازه‌بان", "فقط مدافعان", "فقط مهاجمان"],
+        answer: 1
+    },
+    {
+        q: "قوس پشت محوطه جریمه به چه شعاعی رسم می‌شود؟",
+        options: ["۹.۱۵ متر", "۱۰ متر", "۱۱ متر", "۱۶.۵ متر"],
+        answer: 0
+    }
+];
+
+    let index = 0;
+    let correctCount = 0;
+    const userAnswers = Array(questions.length).fill(null);
+    const letters = ["الف", "ب", "ج", "د"];
+
+    const quiz = document.getElementById("quiz");
+    const sheet = document.getElementById("sheet");
+    const nextBtn = document.getElementById("nextBtn");
+    const progress = document.getElementById("progress");
+    const jsonOutput = document.getElementById("jsonOutput");
+    const copyFeedback = document.getElementById("copyFeedback");
+
+    function render() {
+        const q = questions[index];
+        quiz.innerHTML = `
+            <div class="question">${index+1}. ${q.q}</div>
+            <div class="options">
+                ${q.options.map((o, i) => `<div class="option" onclick="select(${i})">${letters[i]}) ${o}</div>`).join("")}
+            </div>`;
+        nextBtn.style.display = "none";
+        updateProgress();
+        renderSheet();
+        updateJSON();
+    }
+
+    function updateProgress() {
+        progress.style.width = `${(index / questions.length) * 100}%`;
+    }
+
+    function renderSheet() {
+        sheet.innerHTML = questions.map((q, i) => {
+            const ua = userAnswers[i];
+            return `
+                <div class="sheet-cell ${i === index ? "active" : ""}">
+                    <b>${i + 1}</b>
+                    <div class="answers">
+                        ${[0, 1, 2, 3].map((j) => {
+                            let c = "";
+                            if (ua !== null) {
+                                c = j === q.answer ? "correct" : (j === ua ? "wrong" : "");
+                            }
+                            return `<div class="bubble ${c}">${letters[j]}</div>`;
+                        }).join("")}
+                    </div>
+                </div>`;
+        }).join("");
+    }
+
+    function select(i) {
+        if (userAnswers[index] !== null) return;
+        userAnswers[index] = i;
+        if (i === questions[index].answer) correctCount++;
+        nextBtn.style.display = "block";
+        renderSheet();
+        updateJSON();
+    }
+
+    function next() {
+        index++;
+        if (index < questions.length) {
+            render();
+        } else {
+            finish();
+        }
+    }
+
+    function finish() {
+        progress.style.width = "100%";
+        const totalQuestions = questions.length;
+        const answeredQuestions = userAnswers.filter(answer => answer !== null).length;
+        const grade = ((correctCount / totalQuestions) * 20).toFixed(2);
+        const percentage = ((correctCount / totalQuestions) * 100).toFixed(2);
+        let desc = "";
+        if (grade >= 18) desc = "عالی و مسلط";
+        else if (grade >= 15) desc = "خوب";
+        else if (grade >= 12) desc = "قابل قبول";
+        else desc = "نیازمند تمرین جدی";
+
+        quiz.innerHTML = `
+            <div class="score">${grade} / ۲۰</div>
+            <div class="desc">${desc}</div>
+            <div>شما ${answeredQuestions} از ${totalQuestions} سوال را پاسخ داده‌اید. (${percentage}%)</div>
+            <div style="margin-top:10px;color:var(--text-secondary);font-size:14px;">
+                ✅ ${correctCount} صحیح | ❌ ${answeredQuestions - correctCount} غلط
+            </div>
+            <button class="print" onclick="openPrintWindow()">🖨 چاپ</button>
+        `;
+        updateJSON();
+    }
+
+    function openPrintWindow() {
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(`
+            <html lang="fa" dir="rtl">
+            <head>
+                <meta charset="UTF-8">
+                <title>نتیجه آزمون</title>
+                <style>
+                    body { font-family: 'Vazirmatn', Tahoma, sans-serif; direction: rtl; padding: 20px; }
+                    .result { text-align: center; margin: 20px; }
+                    .table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                    .table th, .table td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+                    .table th { background: #fa4779; color: #fff; }
+                    .table td.correct { background: #7fd1b9; }
+                    .table td.wrong { background: #fa4779; color: #fff; }
+                </style>
+            </head>
+            <body>
+                <div class="result">
+                    <h1>نتیجه آزمون</h1>
+                    <div style="font-size:48px;font-weight:900;color:#fa4779;">${(correctCount / questions.length * 20).toFixed(2)} / ۲۰</div>
+                    <div>شما ${userAnswers.filter(answer => answer !== null).length} از ${questions.length} سوال را پاسخ داده‌اید.</div>
+                    <table class="table">
+                        <thead>
+                            <tr><th>سوال</th><th>پاسخ شما</th><th>پاسخ صحیح</th></tr>
+                        </thead>
+                        <tbody>
+                            ${questions.map((q, i) => `
+                                <tr>
+                                    <td>${q.q}</td>
+                                    <td class="${userAnswers[i] === q.answer ? 'correct' : 'wrong'}">${userAnswers[i] !== null ? letters[userAnswers[i]] : 'پاسخ داده نشده'}</td>
+                                    <td>${letters[q.answer]}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            </body>
+            </html>
+        `);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+    }
+
+    // ===== JSON GENERATOR =====
+    function generateJSON() {
+        const totalQuestions = questions.length;
+        const answered = userAnswers.filter(a => a !== null).length;
+        const correct = correctCount;
+        const wrong = answered - correct;
+        const grade = ((correct / totalQuestions) * 20);
+        const percentage = ((correct / totalQuestions) * 100);
+
+        const results = questions.map((q, i) => {
+            const userAns = userAnswers[i];
+            return {
+                question_number: i + 1,
+                question: q.q,
+                options: q.options,
+                correct_answer: letters[q.answer],
+                user_answer: userAns !== null ? letters[userAns] : "پاسخ داده نشده",
+                is_correct: userAns !== null ? (userAns === q.answer) : false
+            };
+        });
+
+        return {
+            total_questions: totalQuestions,
+            answered_questions: answered,
+            correct_answers: correct,
+            wrong_answers: wrong,
+            grade: parseFloat(grade.toFixed(2)),
+            percentage: parseFloat(percentage.toFixed(2)),
+            results: results
+        };
+    }
+
+    function updateJSON() {
+        const data = generateJSON();
+        jsonOutput.value = JSON.stringify(data, null, 2);
+    }
+
+    function copyJSON() {
+        jsonOutput.select();
+        navigator.clipboard.writeText(jsonOutput.value).then(() => {
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        }).catch(() => {
+            document.execCommand("copy");
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        });
+    }
+
+    render();
+</script>
+</body>
+</html>

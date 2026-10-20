@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مسیر مطالعه</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;800&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --pink: #e85b91;
+        --pink-light: #ffe7f0;
+        --pink-dark: #c83e72;
+        --text: #472c38;
+        --text-soft: #9c7484;
+        --bg: #fffafc;
+        --white: #ffffff;
+        --line: #f5d9e4;
+        --green: #4caf50;
+        --green-light: #e8f5e9;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Vazirmatn", Tahoma, sans-serif;
+    }
+
+    body {
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        padding: 20px;
+        background-image: radial-gradient(circle at 10% 20%, rgba(232, 91, 145, 0.05), transparent 30%);
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* هدر و نوار پیشرفت */
+    .header-card {
+        background: linear-gradient(135deg, #e95890, #f59abc);
+        border-radius: 24px;
+        padding: 30px;
+        color: white;
+        box-shadow: 0 15px 35px rgba(232, 91, 145, 0.2);
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .header-card h1 {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    .header-card p {
+        font-size: 13px;
+        opacity: 0.9;
+        margin-bottom: 20px;
+    }
+
+    .progress-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .progress-bar {
+        flex: 1;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .progress-fill {
+        height: 100%;
+        background: white;
+        width: 0%;
+        transition: width 0.4s ease;
+        border-radius: 10px;
+    }
+
+    .progress-text {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    /* گرید درس‌ها */
+    .lessons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .lesson-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        transition: transform 0.2s;
+    }
+
+    .lesson-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(232, 91, 145, 0.08);
+    }
+
+    .lesson-title {
+        font-size: 16px;
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: var(--pink-dark);
+    }
+
+    /* باکس‌های داخلی (جزوه، تست، کلیدواژه) */
+    .task-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fafafa;
+        border: 1px solid #eee;
+        padding: 10px 15px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .task-box.done {
+        background: var(--green-light);
+        border-color: #c8e6c9;
+    }
+
+    .task-name {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--text);
+    }
+
+    .task-box.done .task-name {
+        color: var(--green);
+        text-decoration: line-through;
+        opacity: 0.8;
+    }
+
+    /* دکمه انجام شد */
+    .btn-done {
+        background: var(--white);
+        border: 1px solid var(--pink);
+        color: var(--pink);
+        padding: 6px 14px;
+        border-radius: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.2s;
+        font-family: inherit;
+    }
+
+    .btn-done:hover {
+        background: var(--pink);
+        color: white;
+    }
+
+    .task-box.done .btn-done {
+        background: var(--green);
+        border-color: var(--green);
+        color: white;
+    }
+
+    @media (max-width: 600px) {
+        .lessons-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-card">
+        <h1>مسیر مطالعه</h1>
+        <p>با کلیک روی هر دکمه، وضعیت اون بخش رو تغییر بده.</p>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="globalProgress"></div>
+            </div>
+            <div class="progress-text" id="progressText">۰٪</div>
+        </div>
+    </div>
+
+    <div class="lessons-grid" id="lessonsContainer">
+        <!-- درس‌ها توسط جاوااسکریپت اینجا ساخته میشن -->
+    </div>
+</div>
+
+<script>
+    // لیست درس‌ها
+    const lessonsData = [
+        "اندیشه اسلامی ۱",
+        "ورزش ۱",
+        "سنجش و اندازه‌گیری در مشاوره",
+        "مشاوره سلامت روان",
+        "مشاوره کارآفرینی و اشتغال‌پذیری",
+        "مشاوره سالمندی",
+        "شیوه‌های فرزندپروری و آموزش والدین",
+        "مشاوره تأدیبی"
+    ];
+
+    // کلیدهای ذخیره‌سازی
+    const parts = ["notes", "tests", "keywords"];
+    const partsNames = { notes: "جزوه", tests: "تست", keywords: "کلیدواژه" };
+
+    // گرفتن دیتای قبلی از مرورگر یا ساخت دیتای خالی
+    let appData = JSON.parse(localStorage.getItem("studyPathClean")) || {};
+
+    // مقداردهی اولیه دیتا
+    lessonsData.forEach((_, index) => {
+        if (!appData[index]) {
+            appData[index] = { notes: false, tests: false, keywords: false };
+        }
+    });
+
+    // رندر کردن درس‌ها روی صفحه
+    function renderApp() {
+        const container = document.getElementById("lessonsContainer");
+        container.innerHTML = "";
+        let totalTasks = lessonsData.length * 3;
+        let completedTasks = 0;
+
+        lessonsData.forEach((lessonTitle, lessonIndex) => {
+            const card = document.createElement("div");
+            card.className = "lesson-card";
+
+            let cardHTML = `<div class="lesson-title">${lessonTitle}</div>`;
+
+            parts.forEach(partKey => {
+                const isDone = appData[lessonIndex][partKey];
+                if (isDone) completedTasks++;
+
+                cardHTML += `
+                    <div class="task-box ${isDone ? 'done' : ''}">
+                        <span class="task-name">${partsNames[partKey]}</span>
+                        <button class="btn-done" onclick="toggleTask(${lessonIndex}, '${partKey}')">
+                            ${isDone ? 'انجام شد ✓' : 'انجام نشده'}
+                        </button>
+                    </div>
+                `;
+            });
+
+            card.innerHTML = cardHTML;
+            container.appendChild(card);
+        });
+
+        // آپدیت نوار پیشرفت
+        const percent = Math.round((completedTasks / totalTasks) * 100);
+        document.getElementById("globalProgress").style.width = percent + "%";
+        document.getElementById("progressText").textContent = toPersian(percent) + "٪";
+    }
+
+    // تابع تغییر وضعیت
+    function toggleTask(lessonIndex, partKey) {
+        appData[lessonIndex][partKey] = !appData[lessonIndex][partKey];
+        saveData();
+        renderApp(); // رفرش کردن صفحه برای اعمال تغییرات
+    }
+
+    // ذخیره در حافظه مرورگر
+    function saveData() {
+        localStorage.setItem("studyPathClean", JSON.stringify(appData));
+    }
+
+    // تبدیل اعداد به فارسی
+    function toPersian(num) {
+        return String(num).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+    }
+
+    // اجرای اولیه
+    renderApp();
+</script>
+
+</body>
+</html>

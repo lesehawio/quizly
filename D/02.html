@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره بهداشت روانی · سری 01 · فصل دوم: اهمیت، دامنه، حدود و زیان‌بخشی  </title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"02";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره بهداشت روانی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل دوم: اهمیت، دامنه، حدود و زیان‌بخشی  </h2>
+  <p>علل افزایش شیوع بیماری‌های روانی + عوامل افزایش بستری</p>
+  <div class="pills"><span class="pill">علل افزایش شیوع</span><span class="pill">افزایش واقعی vs شناسایی</span><span class="pill">شیوع و بروز</span><span class="pill">عوامل بستری</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه مکمل جزوه شماره ۰۲ (اهمیت، دامنه، حدود و زیان‌بخشی) است و بر اساس دو مبحث مشخص فصل دوم کتاب میلانی‌فر تدوین شده است: <b>۱) علل افزایش و شیوع بیماری‌های روانی</b> و <b>۲) عوامل افزایش بستری بیماران روانی در بیمارستان‌های اخیر</b>. تلاش شده از تکرار مطالب جزوه‌های قبلی پرهیز شود.</div>
+
+<div class="stats">
+<div class="stat"><b>۷</b><span>علت افزایش واقعی</span></div>
+<div class="stat"><b>۵</b><span>علت افزایش شناسایی</span></div>
+<div class="stat"><b>۱۰</b><span>عامل افزایش بستری</span></div>
+<div class="stat"><b>۱۲</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#hospital">بستری</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>چرا بیماری‌های روانی در حال افزایش هستند؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>پرسش اصلی:</b> آیا واقعاً بیماری‌های روانی بیشتر شده‌اند، یا فقط شناسایی آن‌ها بیشتر شده است؟
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>پاسخ:</b> <b>هر دو.</b> بخشی از افزایش آمار، <b>افزایش واقعی</b> است (به دلیل تغییرات سبک زندگی) و بخشی <b>افزایش شناسایی</b> (به دلیل بهبود آگاهی و تشخیص).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۷ علت افزایش واقعی شیوع</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa">۱) <b>تغییرات سبک زندگی:</b> استرس مزمن، کم‌تحرکی، تغذیه نامناسب، اختلال خواب</div>
+<div class="fa">۲) <b>افزایش استرس‌های اجتماعی:</b> فقر، بیکاری، نابرابری اقتصادی، ناامنی شغلی</div>
+<div class="fa">۳) <b>کاهش حمایت اجتماعی:</b> شهرنشینی، زندگی مجردی، کاهش روابط خانوادگی، انزوا</div>
+<div class="fa">۴) <b>تغییرات ساختار خانواده:</b> افزایش طلاق، خانواده‌های تک‌والدی</div>
+<div class="fa">۵) <b>افزایش مصرف مواد و الکل:</b> دسترسی آسان‌تر، تنوع مواد جدید، مصرف در سنین پایین‌تر</div>
+<div class="fa">۶) <b>عوامل زیستی و ژنتیکی:</b> استعداد ژنتیکی (ژن‌ها تغییر نمی‌کنند اما بیان آن‌ها تحت تأثیر محیط است)</div>
+<div class="fa">۷) <b>افزایش امید به زندگی:</b> افزایش جمعیت سالمندان (افسردگی و دمانس شیوع بالایی دارند)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵ علت افزایش شناسایی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa">۱) <b>بهبود آگاهی عمومی:</b> افراد بیشتر نشانه‌ها را می‌شناسند و به دنبال کمک می‌روند</div>
+<div class="fa">۲) <b>کاهش انگ اجتماعی:</b> اگرچه انگ هنوز وجود دارد، اما کاهش نسبی آن موجب مراجعه بیشتر شده</div>
+<div class="fa">۳) <b>بهبود ابزارهای تشخیصی:</b> معیارهای استاندارد (DSM، ICD) و ابزارهای غربالگری</div>
+<div class="fa">۴) <b>گسترش خدمات سلامت روان:</b> افزایش تعداد روان‌پزشکان، روان‌شناسان و مشاوران + ادغام در مراقبت‌های اولیه</div>
+<div class="fa">۵) <b>پوشش بیمه‌ای:</b> کاهش موانع مالی مراجعه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شیوع نقطه‌ای، دوره‌ای و طول عمر</h3><span class="badge s">حفظ کن</span></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>تعریف</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>نقطه‌ای</td><td>لحظه‌ای مشخص</td><td>«همین امروز نشانه داری؟»</td></tr>
+<tr><td>دوره‌ای</td><td>بازه معین (مثلاً ۱۲ ماه)</td><td>«در ۱۲ ماه گذشته؟»</td></tr>
+<tr><td>طول عمر</td><td>تمام زندگی</td><td>«در طول زندگی هرگز؟»</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> شیوع طول عمر همیشه بیشتر از شیوع نقطه‌ای است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابطه شیوع و بروز</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px;text-align:center">
+<b>شیوع ≈ بروز × متوسط مدت بیماری</b>
+</div>
+<div class="fa">• <b>بروز:</b> موارد جدید</div>
+<div class="fa">• <b>شیوع:</b> کل موارد موجود (قدیم + جدید)</div>
+<div class="fa">• <b>مدت:</b> هرچه بیماری طولانی‌تر باشد، شیوع بیشتر است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>مثال:</b> بیماری مزمن با بروز کم اما مدت طولانی، شیوع بالایی دارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰ عامل افزایش بستری بیماران روانی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa">۱) <b>افزایش شیوع</b> اختلالات روانی</div>
+<div class="fa">۲) <b>کاهش سن شروع</b> اختلالات (شروع زودتر = بستری در سنین پایین‌تر)</div>
+<div class="fa">۳) <b>افزایش شدت</b> اختلالات (تأخیر در تشخیص و درمان = تشدید)</div>
+<div class="fa">۴) <b>کاهش حمایت خانوادگی</b> (کوچک‌شدن خانواده، اشتغال زنان، شهرنشینی)</div>
+<div class="fa">۵) <b>کاهش انگ اجتماعی</b> (مراجعه بیشتر برای بستری)</div>
+<div class="fa">۶) <b>بهبود پوشش بیمه‌ای</b> (کاهش موانع مالی)</div>
+<div class="fa">۷) <b>افزایش جمعیت سالمندان</b> (افسردگی، دمانس، دلیریوم)</div>
+<div class="fa">۸) <b>افزایش مصرف مواد</b> (روان‌پریشی ناشی از مواد)</div>
+<div class="fa">۹) <b>کاهش تخت‌های بیمارستانی در گذشته</b> (سیاست «بازگشت به جامعه» = فشار بر تخت‌های موجود)</div>
+<div class="fa">۱۰) <b>افزایش انتظارات جامعه</b> (ترجیح بستری برای درمان سریع)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات کلیدی که حتماً باید بلد باشی</h3></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱)</b> افزایش آمار لزوماً به معنای افزایش واقعی نیست.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲)</b> شیوع طول عمر همیشه بیشتر از شیوع نقطه‌ای است.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳)</b> بروز = موارد جدید / شیوع = کل موارد موجود.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۴)</b> شیوع ≈ بروز × مدت.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵)</b> کاهش حمایت خانوادگی از عوامل اصلی افزایش بستری است.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۶)</b> بستری طولانی می‌تواند به نهادینه‌شدن منجر شود.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۷)</b> رویکرد مدرن: درمان جامعه‌محور به‌جای بستری طولانی‌مدت.
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با تعریف ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>علل افزایش واقعی شیوع — جزئیات</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱) تغییرات سبک زندگی:</b> زندگی مدرن با استرس مزمن، کم‌تحرکی، تغذیه نامناسب و اختلال خواب همراه است.</div>
+<div class="fa"><b>مثال:</b> کارمندی که روزانه ۱۰ ساعت پشت میز می‌نشیند، خواب کافی ندارد و با استرس شغلی مزمن مواجه است.</div>
+<div class="fa"><b>۲) افزایش استرس‌های اجتماعی:</b> فقر، بیکاری، نابرابری اقتصادی، ناامنی شغلی و فشارهای مالی.</div>
+<div class="fa"><b>مثال:</b> بحران اقتصادی می‌تواند موجب افزایش افسردگی و اضطراب در جمعیت شود.</div>
+<div class="fa"><b>۳) کاهش حمایت اجتماعی:</b> شهرنشینی، زندگی مجردی، کاهش روابط خانوادگی و انزوا.</div>
+<div class="fa"><b>مثال:</b> فردی که در شهر بزرگ تنها زندگی می‌کند، در بحران شبکه حمایتی کمتری دارد.</div>
+<div class="fa"><b>۴) تغییرات در ساختار خانواده:</b> افزایش طلاق، خانواده‌های تک‌والدی، کاهش ارتباطات خانوادگی.</div>
+<div class="fa"><b>۵) افزایش مصرف مواد و الکل:</b> دسترسی آسان‌تر، تنوع مواد جدید، مصرف در سنین پایین‌تر.</div>
+<div class="fa"><b>۶) عوامل زیستی و ژنتیکی:</b> استعداد ژنتیکی در اسکیزوفرنی و اختلال دوقطبی. ژن‌ها تغییر نمی‌کنند اما بیان آن‌ها تحت تأثیر محیط است.</div>
+<div class="fa"><b>۷) افزایش امید به زندگی:</b> افزایش جمعیت سالمندان + شیوع بالای افسردگی و دمانس در سالمندان.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علل افزایش شناسایی — جزئیات</h3></div>
+<div class="fa"><b>۱) بهبود آگاهی عمومی:</b> افراد بیشتر نشانه‌ها را می‌شناسند و به دنبال کمک می‌روند.</div>
+<div class="fa"><b>۲) کاهش انگ اجتماعی:</b> اگرچه انگ هنوز وجود دارد، اما کاهش نسبی آن موجب مراجعه بیشتر شده است.</div>
+<div class="fa"><b>۳) بهبود ابزارهای تشخیصی:</b> معیارهای استاندارد (DSM، ICD) و ابزارهای غربالگری موجب شناسایی دقیق‌تر شده‌اند.</div>
+<div class="fa"><b>۴) گسترش خدمات سلامت روان:</b> افزایش تعداد روان‌پزشکان، روان‌شناسان و مشاوران + ادغام سلامت روان در مراقبت‌های اولیه.</div>
+<div class="fa"><b>۵) پوشش بیمه‌ای:</b> پوشش بیمه‌ای خدمات سلامت روان موجب کاهش موانع مالی مراجعه شده است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جدول: علل افزایش واقعی در برابر افزایش شناسایی</h3></div>
+<table class="compare">
+<thead><tr><th>علل افزایش واقعی</th><th>علل افزایش شناسایی</th></tr></thead>
+<tbody>
+<tr><td>تغییرات سبک زندگی</td><td>بهبود آگاهی عمومی</td></tr>
+<tr><td>افزایش استرس‌های اجتماعی</td><td>کاهش انگ اجتماعی</td></tr>
+<tr><td>کاهش حمایت اجتماعی</td><td>بهبود ابزارهای تشخیصی</td></tr>
+<tr><td>تغییرات ساختار خانواده</td><td>گسترش خدمات</td></tr>
+<tr><td>افزایش مصرف مواد</td><td>پوشش بیمه‌ای</td></tr>
+<tr><td>افزایش امید به زندگی</td><td>آموزش متخصصان</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> افزایش آمار لزوماً به معنای افزایش واقعی نیست. شناسایی بهتر می‌تواند آمار را بالا ببرد بدون آنکه شیوع واقعی تغییر کند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت شیوع نقطه‌ای، دوره‌ای و طول عمر</h3></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>تعریف</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>نقطه‌ای</td><td>لحظه‌ای مشخص</td><td>«همین امروز نشانه داری؟»</td></tr>
+<tr><td>دوره‌ای</td><td>بازه معین (مثلاً ۱۲ ماه)</td><td>«در ۱۲ ماه گذشته؟»</td></tr>
+<tr><td>طول عمر</td><td>تمام زندگی</td><td>«در طول زندگی هرگز؟»</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> شیوع طول عمر همیشه بیشتر از شیوع نقطه‌ای است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابطه شیوع و بروز</h3></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px;text-align:center">
+<b>شیوع ≈ بروز × متوسط مدت بیماری</b>
+</div>
+<div class="fa"><b>بروز:</b> موارد جدید</div>
+<div class="fa"><b>شیوع:</b> کل موارد موجود (قدیم + جدید)</div>
+<div class="fa"><b>مدت:</b> هرچه بیماری طولانی‌تر باشد، شیوع بیشتر است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>مثال:</b> بیماری مزمن با بروز کم اما مدت طولانی، شیوع بالایی دارد.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>افزایش واقعی vs افزایش شناسایی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>افزایش واقعی</th><th>افزایش شناسایی</th></tr></thead>
+<tbody>
+<tr><td>تغییرات سبک زندگی</td><td>بهبود آگاهی عمومی</td></tr>
+<tr><td>افزایش استرس‌های اجتماعی</td><td>کاهش انگ اجتماعی</td></tr>
+<tr><td>کاهش حمایت اجتماعی</td><td>بهبود ابزارهای تشخیصی</td></tr>
+<tr><td>تغییرات ساختار خانواده</td><td>گسترش خدمات</td></tr>
+<tr><td>افزایش مصرف مواد</td><td>پوشش بیمه‌ای</td></tr>
+<tr><td>افزایش امید به زندگی</td><td>آموزش متخصصان</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بروز vs شیوع</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>بروز (Incidence)</th><th>شیوع (Prevalence)</th></tr></thead>
+<tbody>
+<tr><td>موارد جدید</td><td>کل موارد موجود (قدیم + جدید)</td></tr>
+<tr><td>معیار پویا</td><td>معیار ایستا</td></tr>
+<tr><td>«چند نفر تازه بیمار شدند؟»</td><td>«چند نفر الان بیمارند؟»</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه‌ای که این دو را مترادف بگیرد، نادرست است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شیوع نقطه‌ای vs طول عمر</h3></div>
+<table class="compare">
+<thead><tr><th>شیوع نقطه‌ای</th><th>شیوع طول عمر</th></tr></thead>
+<tbody>
+<tr><td>لحظه‌ای مشخص</td><td>تمام زندگی</td></tr>
+<tr><td>«همین امروز»</td><td>«در طول زندگی هرگز»</td></tr>
+<tr><td>همیشه کمتر</td><td>همیشه بیشتر</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه‌ای که «شیوع نقطه‌ای همیشه بیشتر از طول عمر است» را درست معرفی کند، نادرست است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بستری اختیاری vs اجباری</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>بستری اختیاری</th><th>بستری اجباری</th></tr></thead>
+<tbody>
+<tr><td>با رضایت فرد</td><td>بدون رضایت فرد</td></tr>
+<tr><td>اکثر موارد</td><td>فقط در موارد خاص</td></tr>
+<tr><td>—</td><td>خطر برای خود یا دیگران</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> بستری اجباری فقط در موارد خاص و با رعایت حقوق فرد انجام می‌شود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بیمارستان روزانه vs بستری کامل</h3></div>
+<table class="compare">
+<thead><tr><th>بیمارستان روزانه</th><th>بستری کامل</th></tr></thead>
+<tbody>
+<tr><td>بیمار روزها در بیمارستان</td><td>بستری شبانه‌روزی</td></tr>
+<tr><td>شب‌ها به خانه می‌رود</td><td>شب‌ها در بیمارستان</td></tr>
+<tr><td>جایگزین بستری</td><td>بستری سنتی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه‌ای که «بیمارستان روزانه = بستری کامل» را درست معرفی کند، نادرست است.
+</div>
+</div>
+</section>
+
+<section id="hospital" class="section">
+<h2 class="section-title">۰۴ · بستری بیماران روانی</h2>
+<p class="section-sub">عوامل، چالش‌ها و جایگزین‌ها</p>
+
+<div class="card">
+<div class="card-head"><h3>۱۰ عامل افزایش بستری</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>عامل</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>افزایش شیوع</td><td>موارد بیشتر = بستری بیشتر</td></tr>
+<tr><td>کاهش سن شروع</td><td>بستری در سنین پایین‌تر</td></tr>
+<tr><td>افزایش شدت</td><td>تأخیر در درمان = تشدید</td></tr>
+<tr><td>کاهش حمایت خانوادگی</td><td>خانواده‌ها توان کمتری دارند</td></tr>
+<tr><td>کاهش انگ</td><td>مراجعه بیشتر</td></tr>
+<tr><td>بهبود بیمه</td><td>کاهش موانع مالی</td></tr>
+<tr><td>افزایش سالمندان</td><td>جمعیت پرخطر</td></tr>
+<tr><td>افزایش مصرف مواد</td><td>روان‌پریشی ناشی از مواد</td></tr>
+<tr><td>کاهش تخت‌های قبلی</td><td>فشار بر تخت‌های موجود</td></tr>
+<tr><td>افزایش انتظارات</td><td>ترجیح بستری</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چالش‌های بستری</h3></div>
+<div class="fa"><b>۱) انگ اجتماعی:</b> بستری می‌تواند برچسب «بیمار روانی» را تشدید کند.</div>
+<div class="fa"><b>۲) هزینه:</b> بستری پرهزینه‌تر از درمان سرپایی است.</div>
+<div class="fa"><b>۳) جدایی از خانواده:</b> بستری موجب جدایی از خانواده و اختلال در نقش‌های اجتماعی می‌شود.</div>
+<div class="fa"><b>۴) خطر نهادینه‌شدن:</b> بستری طولانی می‌تواند به نهادینه‌شدن (Institutionalization) منجر شود.</div>
+<div class="fa"><b>۵) کمبود تخت:</b> در بسیاری از مناطق، کمبود تخت روان‌پزشکی وجود دارد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جایگزین‌های بستری</h3></div>
+<div class="fa"><b>۱) درمان سرپایی:</b> جلسات منظم با روان‌پزشک و روان‌شناس.</div>
+<div class="fa"><b>۲) بیمارستان روزانه:</b> بیمار روزها در بیمارستان است و شب‌ها به خانه می‌رود.</div>
+<div class="fa"><b>۳) تیم درمان در جامعه:</b> تیم سیار برای مراقبت در خانه.</div>
+<div class="fa"><b>۴) خانه‌های حمایتی:</b> اقامت در محیط حمایتی به‌جای بیمارستان.</div>
+<div class="fa"><b>۵) مراکز بحران:</b> برای موارد حاد و کوتاه‌مدت.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> رویکرد مدرن بر درمان جامعه‌محور به‌جای بستری طولانی‌مدت تأکید دارد.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: افزایش واقعی vs افزایش شناسایی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی افزایش آمار همیشه نشانه افزایش واقعی است.</div>
+<div class="fa"><b>جواب درست:</b> افزایش آمار می‌تواند ناشی از افزایش واقعی، افزایش شناسایی یا هر دو باشد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شناسایی بهتر می‌تواند آمار را بالا ببرد بدون آنکه شیوع واقعی تغییر کند.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: شیوع نقطه‌ای vs طول عمر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی شیوع نقطه‌ای همیشه بیشتر از طول عمر است.</div>
+<div class="fa"><b>جواب درست:</b> شیوع طول عمر همیشه بیشتر از شیوع نقطه‌ای است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شیوع طول عمر = تمام زندگی؛ نقطه‌ای = لحظه‌ای مشخص.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: بروز vs شیوع</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> بروز = موارد جدید / شیوع = کل موارد موجود (قدیم + جدید).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شیوع ≈ بروز × مدت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: رابطه شیوع و مدت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی مدت بیماری بر شیوع اثری ندارد.</div>
+<div class="fa"><b>جواب درست:</b> هرچه مدت بیماری طولانی‌تر باشد، شیوع بیشتر است (شیوع ≈ بروز × مدت).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بیماری مزمن با بروز کم اما مدت طولانی، شیوع بالایی دارد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: بستری اختیاری vs اجباری</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> اختیاری = با رضایت فرد / اجباری = بدون رضایت — فقط در موارد خاص (خطر برای خود یا دیگران).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بستری اجباری فقط با رعایت حقوق فرد انجام می‌شود.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: کاهش حمایت خانوادگی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی کاهش حمایت خانوادگی بر بستری اثری ندارد.</div>
+<div class="fa"><b>جواب درست:</b> کاهش حمایت خانوادگی یکی از عوامل اصلی افزایش بستری است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کوچک‌شدن خانواده، اشتغال زنان، شهرنشینی = توان کمتر برای مراقبت در خانه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: نهادینه‌شدن</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بستری طولانی همیشه مفید است.</div>
+<div class="fa"><b>جواب درست:</b> بستری طولانی می‌تواند به نهادینه‌شدن (وابستگی به بیمارستان) منجر شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نهادینه‌شدن = نتیجه بستری طولانی‌مدت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: درمان جامعه‌محور vs بستری</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بستری همیشه بهتر است.</div>
+<div class="fa"><b>جواب درست:</b> رویکرد مدرن بر درمان جامعه‌محور تأکید دارد، نه بستری طولانی‌مدت.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> جایگزین‌های بستری: درمان سرپایی، بیمارستان روزانه، تیم درمان در جامعه، خانه‌های حمایتی، مراکز بحران.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: بیمارستان روزانه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بیمارستان روزانه = بستری کامل.</div>
+<div class="fa"><b>جواب درست:</b> بیمارستان روزانه: بیمار روزها در بیمارستان است و شب‌ها به خانه می‌رود. بستری کامل شبانه‌روزی است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بیمارستان روزانه جایگزین بستری کامل است.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: بیمه vs انگ</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بیمه و انگ یکسان‌اند.</div>
+<div class="fa"><b>جواب درست:</b> بیمه: مانع مالی را کاهش می‌دهد / انگ: مانع روانی-اجتماعی را کاهش می‌دهد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این دو دو نوع مانع متفاوت هستند.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: سالمندان و بستری</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی سالمندان کمتر بستری می‌شوند.</div>
+<div class="fa"><b>جواب درست:</b> سالمندان به دلیل افسردگی، دمانس و دلیریوم بیشتر بستری می‌شوند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> افزایش جمعیت سالمندان = افزایش بستری.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: مصرف مواد و بستری</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی مصرف مواد بر بستری اثری ندارد.</div>
+<div class="fa"><b>جواب درست:</b> مصرف مواد می‌تواند موجب روان‌پریشی ناشی از مواد و بستری شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> افزایش مصرف مواد = افزایش بستری.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل دوم (بخش دوم) — علل افزایش شیوع و بستری</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · مشاوره بهداشت روانی · فصل دوم: اهمیت، دامنه، حدود و زیان‌بخشی (بخش دوم) — بر اساس کتاب بهداشت روانی میلانی‌فر</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"کدام گزینه درباره «افزایش آمار بیماری‌های روانی» صحیح است؟",options:["همیشه نشانه افزایش واقعی است","می‌تواند ناشی از افزایش واقعی یا افزایش شناسایی باشد","همیشه نشانه افزایش شناسایی است","هیچ ارتباطی با شیوع واقعی ندارد"],answer:1,explanation:"افزایش آمار می‌تواند ناشی از افزایش واقعی یا افزایش شناسایی باشد."},
+{q:"کدام گزینه یک «علت افزایش واقعی» شیوع است؟",options:["بهبود ابزارهای تشخیصی","تغییرات سبک زندگی","کاهش انگ اجتماعی","گسترش خدمات"],answer:1,explanation:"تغییرات سبک زندگی از علل افزایش واقعی است."},
+{q:"کدام گزینه یک «علت افزایش شناسایی» است؟",options:["افزایش استرس‌های اجتماعی","بهبود آگاهی عمومی","کاهش حمایت اجتماعی","افزایش مصرف مواد"],answer:1,explanation:"بهبود آگاهی عمومی از علل افزایش شناسایی است."},
+{q:"«شیوع طول عمر» در مقایسه با «شیوع نقطه‌ای» چگونه است؟",options:["همیشه کمتر","همیشه بیشتر","همیشه برابر","بستگی به بیماری دارد"],answer:1,explanation:"شیوع طول عمر همیشه بیشتر از شیوع نقطه‌ای است."},
+{q:"رابطه «شیوع» و «مدت بیماری» چگونه است؟",options:["معکوس","مستقیم","بی‌ارتباط","فقط در بیماری‌های حاد"],answer:1,explanation:"رابطه مستقیم: شیوع ≈ بروز × مدت."},
+{q:"کدام گزینه از «عوامل افزایش بستری» است؟",options:["افزایش حمایت خانوادگی","کاهش حمایت خانوادگی","کاهش شیوع","کاهش سالمندان"],answer:1,explanation:"کاهش حمایت خانوادگی از عوامل افزایش بستری است."},
+{q:"«بستری اختیاری» با کدام گزینه تفاوت دارد؟",options:["با رضایت فرد","بدون رضایت فرد","فقط در موارد خاص","با حکم دادگاه"],answer:0,explanation:"بستری اختیاری با رضایت فرد انجام می‌شود."},
+{q:"«بستری اجباری» در چه شرایطی انجام می‌شود؟",options:["همیشه","خطر برای خود یا دیگران","فقط با درخواست خانواده","فقط در بیمارستان‌های خصوصی"],answer:1,explanation:"بستری اجباری در موارد خطر برای خود یا دیگران."},
+{q:"«بیمارستان روزانه» چه ویژگی دارد؟",options:["بستری شبانه‌روزی","بیمار روزها در بیمارستان، شب‌ها در خانه","فقط برای سالمندان","فقط برای کودکان"],answer:1,explanation:"بیمارستان روزانه: بیمار روزها در بیمارستان، شب‌ها در خانه."},
+{q:"«نهادینه‌شدن» نتیجه چیست؟",options:["درمان سرپایی","بستری طولانی‌مدت","بیمارستان روزانه","درمان جامعه‌محور"],answer:1,explanation:"نهادینه‌شدن نتیجه بستری طولانی‌مدت است."},
+{q:"کدام گزینه درباره «کاهش انگ» صحیح است؟",options:["موجب کاهش مراجعه می‌شود","موجب افزایش مراجعه می‌شود","بی‌تأثیر است","فقط بر بستری اثر دارد"],answer:1,explanation:"کاهش انگ موجب افزایش مراجعه می‌شود."},
+{q:"کدام گزینه درباره «بیمه» صحیح است؟",options:["مانع مالی را کاهش می‌دهد","مانع روانی را کاهش می‌دهد","مترادف انگ است","بی‌تأثیر است"],answer:0,explanation:"بیمه مانع مالی را کاهش می‌دهد."},
+{q:"کدام گزینه درباره «سالمندان» صحیح است؟",options:["کمتر بستری می‌شوند","بیشتر بستری می‌شوند","هیچ ارتباطی با بستری ندارند","فقط در بیمارستان‌های خاص"],answer:1,explanation:"سالمندان به دلیل افسردگی، دمانس و دلیریوم بیشتر بستری می‌شوند."},
+{q:"کدام گزینه درباره «مصرف مواد» صحیح است؟",options:["بر بستری بی‌تأثیر است","می‌تواند موجب بستری شود","فقط بر درمان سرپایی اثر دارد","فقط در جوانان"],answer:1,explanation:"مصرف مواد می‌تواند موجب روان‌پریشی ناشی از مواد و بستری شود."},
+{q:"رویکرد مدرن به بستری چیست؟",options:["بستری طولانی‌مدت","درمان جامعه‌محور","بستری اجباری","نهادینه‌شدن"],answer:1,explanation:"رویکرد مدرن: درمان جامعه‌محور به‌جای بستری طولانی‌مدت."},
+{q:"کدام گزینه درباره «شیوع دوره‌ای» صحیح است؟",options:["لحظه‌ای مشخص","بازه معین (مثلاً ۱۲ ماه)","تمام زندگی","فقط در کودکان"],answer:1,explanation:"شیوع دوره‌ای: بازه معین (مثلاً ۱۲ ماه)."},
+{q:"شیوع ≈ بروز × ...",options:["سن","مدت","جنسیت","شدت"],answer:1,explanation:"شیوع ≈ بروز × متوسط مدت بیماری."},
+{q:"کدام گزینه از «علل افزایش واقعی» شیوع نیست؟",options:["تغییرات سبک زندگی","بهبود ابزارهای تشخیصی","افزایش استرس‌های اجتماعی","افزایش مصرف مواد"],answer:1,explanation:"بهبود ابزارهای تشخیصی از علل افزایش شناسایی است."},
+{q:"کدام گزینه از «جایگزین‌های بستری» است؟",options:["بستری اجباری","بیمارستان روزانه","نهادینه‌شدن","بستری طولانی‌مدت"],answer:1,explanation:"بیمارستان روزانه از جایگزین‌های بستری است."},
+{q:"کدام گزینه درباره «کاهش سن شروع اختلالات» صحیح است؟",options:["موجب کاهش بستری می‌شود","موجب بستری در سنین پایین‌تر می‌شود","بی‌تأثیر است","فقط بر درمان سرپایی اثر دارد"],answer:1,explanation:"کاهش سن شروع موجب بستری در سنین پایین‌تر می‌شود."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

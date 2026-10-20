@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · معارف اسلامی · سری 03</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"03";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>معارف اسلامی · سری 03</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>مبانی معارف اسلامی · سری 03</h2>
+  <p>تحلیل کامل ۲۰ سوال با پاسخنامه تشریحی، تعریف ساده مفاهیم و دام‌های شناسایی شده</p>
+  <div class="pills"><span class="pill">۲۰ سوال</span><span class="pill">۵ دسته موضوعی</span><span class="pill">۱۲+ مفهوم کلیدی</span><span class="pill">۵ شخصیت</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس تحلیل عمیق سوالات استاندارد معارف اسلامی طراحی شده است. هر سوال با پاسخ صحیح، تحلیل کامل و بررسی گزینه‌های غلط ارائه شده است.</div>
+
+<div class="stats">
+<div class="stat"><b>۲۰</b><span>سوال</span></div>
+<div class="stat"><b>۵</b><span>دسته موضوعی</span></div>
+<div class="stat"><b>۱۲+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۵</b><span>شخصیت</span></div>
+</div>
+
+<nav>
+<a href="#questions">سوالات</a><a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">شخصیت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="questions" class="section">
+<h2 class="section-title">۰۱ · بانک سوالات با تحلیل کامل</h2>
+<p class="section-sub">هر سوال با پاسخ صحیح، تحلیل مفهومی، دلیل انتخاب پاسخ و بررسی گزینه‌های غلط</p>
+<input id="search" class="search" placeholder="جستجو در متن سوالات، مفاهیم، شخصیت‌ها...">
+
+<div id="questionList">
+
+<div class="card question" data-search="حیات طیبه قرآن پاکی ذات ایمان عمل صالح">
+<span class="qnum">سوال ۱</span>
+<div class="fa"><b>متن سوال:</b> منظور از حیات طیبه در قرآن کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">پاکی ذات و ایمان که نیازمند عمل صالح است</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> حیات طیبه یعنی زندگی پاک و طیب که از پاکی ذات و ایمان می‌آید و نیازمند عمل صالح است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گزینه ۱: معنویت منهای زندگی نیست.<br>
+- گزینه ۲: تعریف سکولار است.<br>
+- گزینه ۳: معنویت منهای عقلانیت نیست.<br>
+<b>نکته کلیدی:</b> حیات طیبه = پاکی ذات + ایمان + عمل صالح
+</div>
+</div>
+
+<div class="card question" data-search="فرانکل بی معنایی اراده معطوف به معنا">
+<span class="qnum">سوال ۲</span>
+<div class="fa"><b>متن سوال:</b> فرانکل برای حل مشکل احساس بی‌معنایی کدام گزینه را پیشنهاد می‌کند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">اراده معطوف به معنا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ویکتور فرانکل در معنادرمانی معتقد است انسان باید اراده‌ای معطوف به معنا داشته باشد تا از بی‌معنایی نجات یابد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- اراده معطوف به اختیار: اصطلاح فرانکل نیست.<br>
+- اراده معطوف به علم: اصطلاح فرانکل نیست.<br>
+- اراده معطوف به عشق: بخشی از معناست نه راه‌حل اصلی.<br>
+<b>نکته کلیدی:</b> فرانکل = اراده معطوف به معنا
+</div>
+</div>
+
+<div class="card question" data-search="آیه مصیبت کسبت ایدیکم نتیجه عملکرد">
+<span class="qnum">سوال ۳</span>
+<div class="fa"><b>متن سوال:</b> بر اساس آیه کریمه ذیل یکی از دلایل گرفتاری که بر انسان عارض می‌شود نشانه چی است؟ «وَ مَا أَصَابَكُمْ مِنْ مُصِيبَةٍ فَبِمَا كَسَبَتْ أَيْدِيكُمْ»</div>
+<b>پاسخ صحیح:</b> <span class="answer">نتیجه عملکرد انسان در دنیا</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آیه می‌گوید هر مصیبتی که به شما می‌رسد به خاطر اعمال خودتان است؛ یعنی نتیجه عملکرد انسان در دنیا.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- احساس حضور: مربوط به این آیه نیست.<br>
+- وسیله آزمایش: بخشی از فلسفه بلاست.<br>
+- عامل رشد: بخشی دیگر از فلسفه بلاست.<br>
+<b>نکته کلیدی:</b> مصیبت = نتیجه عملکرد انسان
+</div>
+</div>
+
+<div class="card question" data-search="نفس من تقسیم ناپذیری زیاده نقیصه">
+<span class="qnum">سوال ۴</span>
+<div class="fa"><b>متن سوال:</b> از خواص نفس که به «من» یاد می‌شود کدام گزینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">زیاده و نقیصه‌های چاقی و لاغری و کوچک شدن و بزرگ شدن را نمی‌پذیرد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> «من» یا نفس، ثابت است و تغییرات جسمی مثل چاقی و لاغری روی آن اثر ندارد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- قابل تقسیم: نفس تقسیم‌پذیر نیست.<br>
+- قابلیت تغییر: نفس هویت ثابت دارد.<br>
+- مغایر با امور مادی: نفس با بدن در ارتباط است.<br>
+<b>نکته کلیدی:</b> «من» = ثابت + تقسیم‌ناپذیر
+</div>
+</div>
+
+<div class="card question" data-search="والتر استیس بی معنایی نگرش پوزیتیویستی مادی">
+<span class="qnum">سوال ۵</span>
+<div class="fa"><b>متن سوال:</b> والتر ترانس استیس بی‌معنایی را که انسان غربی را گرفتار کرده نشانه چه چیزی می‌داند؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نگرش پوزیتیویستی و مادی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> والتر استیس معتقد است نگرش پوزیتیویستی و مادی، جهان را بی‌معنا نشان می‌دهد و انسان غربی را گرفتار بی‌معنایی کرده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- نگرش الهی: ضد بی‌معنایی است.<br>
+- نگرش شخصی: ربطی به بحران غرب ندارد.<br>
+- اهداف متفرقه: عامل بی‌معنایی نیست.<br>
+<b>نکته کلیدی:</b> والتر استیس = پوزیتیویسم = بی‌معنایی
+</div>
+</div>
+
+<div class="card question" data-search="اصالت عقل تجربه افراط حس عقل">
+<span class="qnum">سوال ۶</span>
+<div class="fa"><b>متن سوال:</b> وجه مشترک اصالت عقل و اصالت تجربه در غرب چیست؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">افراط در حدود دخالت عقل و حس و تجربه در متعلقات و موضوعات</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> هر دو مکتب در استفاده از عقل یا حس افراط کردند و یکی را مطلق کردند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گزینه ۱: فقط نظر اصالت تجربه است.<br>
+- گزینه ۳: فقط نظر اصالت تجربه است.<br>
+- گزینه ۴: فقط نظر اصالت عقل است.<br>
+<b>نکته کلیدی:</b> وجه مشترک = افراط در عقل یا حس
+</div>
+</div>
+
+<div class="card question" data-search="شایع ترین بحران روحی روانی نیست انگاری افسردگی">
+<span class="qnum">سوال ۷</span>
+<div class="fa"><b>متن سوال:</b> شایع‌ترین چهره بحران روحی و روانی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نیست‌انگاری و افسردگی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> شایع‌ترین چهره بحران روحی و روانی در دنیای امروز، نیست‌انگاری و افسردگی است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- لذت‌گرایی: عامل بحران است نه چهره آن.<br>
+- ترس: بخشی از بحران است.<br>
+- رفاه مادی: عامل بحران است.<br>
+<b>نکته کلیدی:</b> شایع‌ترین بحران = نیست‌انگاری + افسردگی
+</div>
+</div>
+
+<div class="card question" data-search="تناسخ محال بازگشت فعلیت قوه کثیر واحد">
+<span class="qnum">سوال ۸</span>
+<div class="fa"><b>متن سوال:</b> تناسخ به کدام دلیل محال است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">بازگشت فعلیت به قوه و کثیر شدن امر واحد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تناسخ یعنی نفس که به فعلیت رسیده، دوباره به قوه برگردد و به بدن دیگری تعلق گیرد. این محال است چون فعلیت به قوه بازنمی‌گردد و یک امر واحد نمی‌تواند کثیر شود.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- گزینه ۱: برعکس است.<br>
+- گزینه ۳ و ۴: مربوط به مسخ است نه تناسخ.<br>
+<b>نکته کلیدی:</b> تناسخ محال = فعلیت به قوه برنمی‌گردد
+</div>
+</div>
+
+<div class="card question" data-search="ویژگی امر مادی زمان مکان اشغال">
+<span class="qnum">سوال ۹</span>
+<div class="fa"><b>متن سوال:</b> ویژگی‌های امر مادی کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">زمان و مکان را اشغال می‌کند</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> امر مادی دارای ابعاد است و زمان و مکان را اشغال می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- زمان‌مند نبودن: ویژگی مجرد است.<br>
+- فناناپذیر: ویژگی مجرد است.<br>
+- غیرقابل انقسام: ویژگی مجرد است.<br>
+<b>نکته کلیدی:</b> مادی = زمان‌مند + مکان‌مند + قابل تقسیم
+</div>
+</div>
+
+<div class="card question" data-search="ارتباط دایمی با خدا توسل اخلاص انقطاع">
+<span class="qnum">سوال ۱۰</span>
+<div class="fa"><b>متن سوال:</b> در مسیر پیشرفت و تعالی اخلاقی کدام گزینه به محفوظ ماندن ارتباط دایمی با خدا اشاره دارد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">همه موارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> توسل به خدا، اخلاص در دعا و انقطاع از اسباب ظاهری، همه به محفوظ ماندن ارتباط دایمی با خدا کمک می‌کنند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- هر گزینه فقط یک راه را نشان می‌دهد.<br>
+<b>نکته کلیدی:</b> ارتباط با خدا = توسل + اخلاص + انقطاع
+</div>
+</div>
+
+<div class="card question" data-search="شاخصه ایمان معنویت اسلام راهنما">
+<span class="qnum">سوال ۱۱</span>
+<div class="fa"><b>متن سوال:</b> کدام شاخصه ایمان و معنویت در اسلام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">ایمان و معنویت مبتنی بر راهنما</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ایمان و معنویت اسلامی مبتنی بر راهنما (پیامبران) است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- رهبانیت: در اسلام نیست.<br>
+- یوگا: مربوط به معنویت هندی است.<br>
+- معنویت منهای نیازهای مادی: نادرست است.<br>
+<b>نکته کلیدی:</b> ایمان اسلامی = مبتنی بر راهنما
+</div>
+</div>
+
+<div class="card question" data-search="عالم برزخ صور جسمی اعراض جسمانی قوه">
+<span class="qnum">سوال ۱۲</span>
+<div class="fa"><b>متن سوال:</b> ویژگی عالم برزخ کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">صور جسمی و اعراض جسمانی را بدون اینکه حامل قوه باشد، دارا می‌باشد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> عالم برزخ صور جسمی دارد اما ماده و قوه ندارد؛ یعنی شکل دارد ولی نه جسم مادی.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- کاملاً مجرد: برزخ مجرد محض نیست.<br>
+- آثار ماده را ندارد: نادرست است.<br>
+- دارای ماده و قوه: نادرست است.<br>
+<b>نکته کلیدی:</b> برزخ = صورت جسمی بدون قوه
+</div>
+</div>
+
+<div class="card question" data-search="شرط اساسی فهم معنای زندگی شناخت هویت خود">
+<span class="qnum">سوال ۱۳</span>
+<div class="fa"><b>متن سوال:</b> شرط اساسی فهم معنای زندگی کدام گزینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شناخت هویت خود</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> تا آدم خودش را نشناسد، نمی‌تواند معنای زندگی را بفهمد.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شناخت زیست دنیوی: مقدمه است.<br>
+- شناخت حیات: کلی است.<br>
+- شناخت افراد جامعه: مربوط به جامعه‌شناسی است.<br>
+<b>نکته کلیدی:</b> فهم معنای زندگی = شناخت هویت خود
+</div>
+</div>
+
+<div class="card question" data-search="انگیزه انکار معاد مقایسه غلط قدرت انسان خدا">
+<span class="qnum">سوال ۱۴</span>
+<div class="fa"><b>متن سوال:</b> یکی از انگیزه‌های انکار معاد یا شک در آن کدام گزینه است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">مقایسه غلط و نادرستی که انسان بین قدرت خود با قدرت خداوند انجام می‌دهد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> انسان قدرت خود را با قدرت خدا مقایسه می‌کند و چون نمی‌تواند معاد را با قدرت محدود خود بسازد، آن را انکار می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- قدرت قادر مطلق: نادرست است.<br>
+- تحولات ذهن: دلیل اصلی نیست.<br>
+- هیچکدام: نادرست است.<br>
+<b>نکته کلیدی:</b> انکار معاد = مقایسه غلط قدرت انسان با خدا
+</div>
+</div>
+
+<div class="card question" data-search="خلف وعده وعید جایز نیست">
+<span class="qnum">سوال ۱۵</span>
+<div class="fa"><b>متن سوال:</b> کدام گزینه صحیح است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">خلف وعده بر خداوند جایز نیست</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> خداوند وعده (بهشت) را خلف نمی‌کند و حتماً به وعده‌اش عمل می‌کند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- خلف وعید: ممکن است خدا وعید را تخفیف دهد.<br>
+- وعید = پاداش: نادرست است.<br>
+- وعده = تهدید: نادرست است.<br>
+<b>نکته کلیدی:</b> خلف وعده بر خدا جایز نیست
+</div>
+</div>
+
+<div class="card question" data-search="آیه لا یبغون عنها حولا نعمت بهشت خستگی">
+<span class="qnum">سوال ۱۶</span>
+<div class="fa"><b>متن سوال:</b> در آیه کریمه ذیل کدامین امر استنباط می‌شود؟ «لا يَبْغُونَ عَنْهَا حَوْلًا»</div>
+<b>پاسخ صحیح:</b> <span class="answer">نعمت‌های بهشت خستگی و دل‌زدگی ندارد</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> آیه می‌گوید بهشتیان از نعمت‌های بهشت روی نمی‌گردانند و از آن خسته نمی‌شوند.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تحول و تغییر: نادرست است.<br>
+- سنخیت: مربوط به آیه نیست.<br>
+- خستگی و ملال: نادرست است.<br>
+<b>نکته کلیدی:</b> نعمت‌های بهشت = بدون خستگی
+</div>
+</div>
+
+<div class="card question" data-search="عظیم نگاه قرآن شرک">
+<span class="qnum">سوال ۱۷</span>
+<div class="fa"><b>متن سوال:</b> عظیم از نگاه قرآن کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">شرک</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در قرآن شرک به عنوان ظلم عظیم معرفی شده است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- شیطان: دشمن است ولی عظیم نیست.<br>
+- نفاق: گناه بزرگ است.<br>
+- مسخر: نادرست است.<br>
+<b>نکته کلیدی:</b> عظیم = شرک (ظلم عظیم)
+</div>
+</div>
+
+<div class="card question" data-search="صدرالمتالهین معاد معرفت شهودی نبوت">
+<span class="qnum">سوال ۱۸</span>
+<div class="fa"><b>متن سوال:</b> بنابر اعتقاد صدرالمتالهین بسیاری از خصوصیات معاد را از کدام طریق می‌توان اثبات کرد؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">نور نبوت و مشکات ولایت</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> ملاصدرا معتقد است بسیاری از خصوصیات معاد از طریق نور نبوت و مشکات ولایت (منابع نقلی) قابل اثبات است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- معرفت شهودی: بخشی از راه است.<br>
+- معرفت حسی: محدود است.<br>
+- آثار گذشتگان: دلیل نیست.<br>
+<b>نکته کلیدی:</b> ملاصدرا = نور نبوت و مشکات ولایت
+</div>
+</div>
+
+<div class="card question" data-search="میل گرایش ابدیت فطری">
+<span class="qnum">سوال ۱۹</span>
+<div class="fa"><b>متن سوال:</b> بر اساس دیدگاه دانشمندان میل و گرایش به ابدیت چگونه امری است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">امری فطری</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> میل به جاودانگی و ابدیت در وجود انسان فطری است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- غیرقابل مشاهده: نادرست است.<br>
+- غیرممکن: نادرست است.<br>
+- تجربی: فطری است نه تجربی.<br>
+<b>نکته کلیدی:</b> میل به ابدیت = فطری
+</div>
+</div>
+
+<div class="card question" data-search="معنویت روش هندی تمرکز ذهن جسمانی">
+<span class="qnum">سوال ۲۰</span>
+<div class="fa"><b>متن سوال:</b> معنویتی که در روش هندی دنبال می‌شود کدام است؟</div>
+<b>پاسخ صحیح:</b> <span class="answer">منصرف کردن ذهن از بیرون و مقهور کردن جنبه جسمانی</span>
+<div class="fa" style="background:#f0f8ff;border-color:#7c4dff;color:#251820;font-size:13px;padding:8px 12px">
+<b>تحلیل کامل:</b><br>
+<b>چرا پاسخ درست است؟</b> در روش هندی (یوگا و مراقبه)، هدف منصرف کردن ذهن از بیرون و مقهور کردن جسم است.<br>
+<b>چرا گزینه‌های دیگر غلط هستند؟</b><br>
+- تمرکز بر حضور قلب: مربوط به عرفان اسلامی است.<br>
+- ریاضت: بخشی از روش است.<br>
+- مبتنی بر عقل: روش هندی مبتنی بر شهود است.<br>
+<b>نکته کلیدی:</b> معنویت هندی = مقهور کردن جسم
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۲ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">نکاتی که اگر فقط ۱۰ دقیقه وقت داشته باشی، باید بخوانی</p>
+
+<div class="card">
+<div class="card-head"><h3>حیات طیبه و معنویت</h3></div>
+<div class="grid2">
+<div class="box"><h4>حیات طیبه</h4>
+<div class="fa">پاکی ذات + ایمان + عمل صالح</div>
+</div>
+<div class="box"><h4>فرانکل</h4>
+<div class="fa">اراده معطوف به معنا</div>
+</div>
+<div class="box"><h4>والتر استیس</h4>
+<div class="fa">پوزیتیویسم = بی‌معنایی</div>
+</div>
+<div class="box"><h4>ایمان اسلامی</h4>
+<div class="fa">مبتنی بر راهنما</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نفس و تجرد</h3></div>
+<div class="grid2">
+<div class="box"><h4>«من»</h4>
+<div class="fa">ثابت + تقسیم‌ناپذیر</div>
+</div>
+<div class="box"><h4>امر مادی</h4>
+<div class="fa">زمان‌مند + مکان‌مند + قابل تقسیم</div>
+</div>
+<div class="box"><h4>میل به ابدیت</h4>
+<div class="fa">فطری</div>
+</div>
+<div class="box"><h4>شرط فهم معنای زندگی</h4>
+<div class="fa">شناخت هویت خود</div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تناسخ و برزخ</h3></div>
+<div class="fa"><b>تناسخ محال:</b> فعلیت به قوه برنمی‌گردد + کثیر شدن واحد</div>
+<div class="fa"><b>عالم برزخ:</b> صورت جسمی بدون قوه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وعده و وعید</h3></div>
+<div class="fa"><b>خلف وعده:</b> بر خدا جایز نیست</div>
+<div class="fa"><b>خلف وعید:</b> ممکن است تخفیف یابد</div>
+<div class="fa"><b>نعمت‌های بهشت:</b> بدون خستگی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معاد و آخرت</h3></div>
+<div class="fa"><b>انگیزه انکار معاد:</b> مقایسه غلط قدرت انسان با خدا</div>
+<div class="fa"><b>ملاصدرا:</b> نور نبوت و مشکات ولایت</div>
+<div class="fa"><b>عظیم:</b> شرک</div>
+<div class="fa"><b>معنویت هندی:</b> مقهور کردن جسم</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · مفاهیم کلیدی با تحلیل جامع</h2>
+<p class="section-sub">تعریف ساده و قابل فهم + نکته امتحانی برای هر مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>حیات طیبه</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی زندگی پاک و پاکیزه که از پاکی ذات و ایمان می‌آید و با عمل صالح همراه است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حیات طیبه = پاکی ذات + ایمان + عمل صالح
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اراده معطوف به معنا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی آدم دنبال معنا و هدف توی زندگی باشه تا از بی‌معنایی نجات پیدا کنه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فرانکل = اراده معطوف به معنا
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پوزیتیویسم</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی فقط چیزی که با حس و تجربه قابل اندازه‌گیری باشه، معتبره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پوزیتیویسم = عامل بی‌معنایی (والتر استیس)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>«من» (نفس)</h3></div>
+<div class="fa"><b>تعریف ساده:</b> اون حقیقت درونی آدم که با تغییرات جسمی عوض نمی‌شه و همیشه ثابته.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> «من» = ثابت + تقسیم‌ناپذیر
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>امر مادی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی چیزی که جسم داره، جا می‌گیره و توی زمان اتفاق می‌افته.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مادی = زمان‌مند + مکان‌مند + قابل تقسیم
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تناسخ</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی نفس بعد از مرگ دوباره به یه بدن دیگه بره. این محاله چون نفس به فعلیت رسیده.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تناسخ محال = فعلیت به قوه برنمی‌گردد
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عالم برزخ</h3></div>
+<div class="fa"><b>تعریف ساده:</b> عالمی بین دنیا و آخرت که صورت جسمی داره ولی ماده و قوه نداره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برزخ = صورت جسمی بدون قوه
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلف وعده</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی خدا به وعده‌اش (بهشت) عمل نکنه. این بر خدا جایز نیست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلف وعده بر خدا جایز نیست (ولی خلف وعید ممکن است)
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شرک</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی برای خدا شریک و همتا قائل شدن. قرآن آن را ظلم عظیم می‌دونه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> عظیم = شرک
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>میل به ابدیت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی آدم ذاتاً دوست داره همیشه بمونه و از بین نره. این یه چیز فطریه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> میل به ابدیت = فطری
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شناخت هویت خود</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی آدم بدونه کیه و چیه تا بتونه معنای زندگی رو بفهمه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شرط فهم معنای زندگی = شناخت هویت خود
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معنویت هندی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی روشی که توی هند برای معنویت هست: ذهن رو از بیرون منصرف می‌کنن و جسم رو مقهور می‌کنن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معنویت هندی = مقهور کردن جسم
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ایمان اسلامی</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یعنی ایمانی که مبتنی بر راهنما (پیامبران) باشه، نه رهبانیت و یوگا.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ایمان اسلامی = مبتنی بر راهنما
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۴ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">تفاوت ساده و نکته امتحانی برای هر جفت مفهوم</p>
+
+<div class="card">
+<div class="card-head"><h3>امر مادی vs امر مجرد</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> مادی = زمان‌مند + مکان‌مند + قابل تقسیم / مجرد = فرازمانی + تقسیم‌ناپذیر</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> مادی = زمان و مکان اشغال می‌کند
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وعده vs وعید</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> وعده = بهشت (خلفش جایز نیست) / وعید = جهنم (خلفش ممکن است)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خلف وعده بر خدا جایز نیست
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معنویت اسلامی vs معنویت هندی</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> اسلامی = مبتنی بر راهنما و عقل / هندی = مقهور کردن جسم و ذهن</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اسلامی = راهنما / هندی = مقهور کردن جسم
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تناسخ vs مسخ</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> تناسخ = بازگشت نفس به بدن دیگر (محال) / مسخ = تبدیل صورت انسان به حیوان</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تناسخ = محال / مسخ = تبدیل صورت
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اصالت عقل vs اصالت تجربه</h3></div>
+<div class="fa"><b>تفاوت ساده:</b> اصالت عقل = فقط عقل معتبره / اصالت تجربه = فقط حس و تجربه معتبره</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> وجه مشترک = افراط
+</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۵ · شخصیت‌ها و نشانه‌های تشخیصی</h2>
+<p class="section-sub">هر شخصیت + نظر ساده + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>ویکتور فرانکل</h3></div>
+<div class="fa"><b>کی بود:</b> روان‌شناس اتریشی، بنیان‌گذار معنادرمانی</div>
+<div class="fa"><b>نظر ساده:</b> انسان باید اراده‌ای معطوف به معنا داشته باشه تا از بی‌معنایی نجات پیدا کنه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فرانکل = اراده معطوف به معنا
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>والتر استیس</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف معاصر</div>
+<div class="fa"><b>نظر ساده:</b> نگرش پوزیتیویستی و مادی، انسان غربی رو گرفتار بی‌معنایی کرده.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> والتر استیس = پوزیتیویسم = بی‌معنایی
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صدرالمتالهین (ملاصدرا)</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف بزرگ ایرانی</div>
+<div class="fa"><b>نظر ساده:</b> بسیاری از خصوصیات معاد از طریق نور نبوت و مشکات ولایت قابل اثبات است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ملاصدرا = نور نبوت و مشکات ولایت
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خواجه نصیرالدین طوسی</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف و متکلم بزرگ ایرانی</div>
+<div class="fa"><b>نظر ساده:</b> چون خدا عالم و قادره، پس زنده‌ست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خواجه نصیر = حی بودن = عالم + قادر
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راسل</h3></div>
+<div class="fa"><b>کی بود:</b> فیلسوف انگلیسی</div>
+<div class="fa"><b>نظر ساده:</b> ما فقط داده‌های حسی رو می‌شناسیم و این منجر به شکاکیت می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> راسل = حسی‌گرایی = شکاکیت
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">دام چیه + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: حیات طیبه vs معنویت تنها</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی حیات طیبه فقط معنویه.</div>
+<div class="fa"><b>جواب درست:</b> پاکی ذات + ایمان + عمل صالح</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حیات طیبه = عمل صالح هم داره
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: فرانکل vs سایر روان‌شناسان</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فرانکل «اراده معطوف به عشق» گفته.</div>
+<div class="fa"><b>جواب درست:</b> اراده معطوف به معنا</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فرانکل = معنا (نه عشق و علم)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: آیه مصیبت vs آزمایش</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی آیه «ما أصابکم» درباره آزمایشه.</div>
+<div class="fa"><b>جواب درست:</b> نتیجه عملکرد انسان</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> «کسبت ایدیکم» = نتیجه عملکرد
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: «من» vs بدن</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی «من» با چاقی و لاغری تغییر می‌کنه.</div>
+<div class="fa"><b>جواب درست:</b> «من» ثابته</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> «من» = تقسیم‌ناپذیر و ثابت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: تناسخ vs مسخ</h3>
+<div class="fa"><b>دام چیه:</b> تناسخ و مسخ رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> تناسخ = بازگشت نفس به بدن دیگر / مسخ = تبدیل صورت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> تناسخ = محال
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: خلف وعده vs خلف وعید</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر دو بر خدا جایز نیستن.</div>
+<div class="fa"><b>جواب درست:</b> خلف وعده جایز نیست / خلف وعید ممکن است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> وعده = حتماً / وعید = ممکن است تخفیف
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: معنویت اسلامی vs هندی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی معنویت هندی هم مبتنی بر عقل و دینه.</div>
+<div class="fa"><b>جواب درست:</b> معنویت هندی = مقهور کردن جسم</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اسلامی = راهنما / هندی = مقهور کردن جسم
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: برزخ vs عالم ماده</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی برزخ هم ماده و قوه داره.</div>
+<div class="fa"><b>جواب درست:</b> برزخ صورت جسمی داره ولی قوه نداره</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برزخ = صورت بدون قوه
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 03 · معارف اسلامی · ۲۰ سوال با تحلیل کامل</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+
+const quizData = [
+{q:"منظور از حیات طیبه در قرآن کدام است؟",options:["معنویت منهای زندگی","درستی وابسته به فایده","معنویت منهای عقلانیت","پاکی ذات و ایمان با عمل صالح"],answer:3,explanation:"حیات طیبه = پاکی ذات + ایمان + عمل صالح."},
+{q:"فرانکل برای حل مشکل بی‌معنایی چه پیشنهاد می‌دهد؟",options:["اراده معطوف به اختیار","اراده معطوف به علم","اراده معطوف به عشق","اراده معطوف به معنا"],answer:3,explanation:"فرانکل = اراده معطوف به معنا."},
+{q:"آیه «ما أصابکم من مصیبة» نشانه چیست؟",options:["احساس حضور","نتیجه عملکرد انسان","وسیله آزمایش","عامل رشد"],answer:1,explanation:"مصیبت = نتیجه عملکرد انسان."},
+{q:"از خواص نفس که به «من» یاد می‌شود کدام است؟",options:["قابل تقسیم","نمی‌پذیرد زیاده و نقیصه","قابلیت تغییر","مغایر با امور مادی"],answer:1,explanation:"«من» = ثابت و تقسیم‌ناپذیر."},
+{q:"والتر استیس بی‌معنایی را نشانه چه می‌داند؟",options:["نگرش پوزیتیویستی و مادی","نگرش الهی","نگرش شخصی","اهداف متفرقه"],answer:0,explanation:"والتر استیس = پوزیتیویسم = بی‌معنایی."},
+{q:"وجه مشترک اصالت عقل و اصالت تجربه چیست؟",options:["شناخت منحصر در حس","افراط در دخالت عقل و حس","مفاهیم عقلی فاقد اعتبار","شناخت حسی بی‌اعتبار"],answer:1,explanation:"وجه مشترک = افراط."},
+{q:"شایع‌ترین چهره بحران روحی و روانی چیست؟",options:["نیست‌انگاری و افسردگی","لذت‌گرایی","ترس","رفاه مادی"],answer:0,explanation:"شایع‌ترین بحران = نیست‌انگاری و افسردگی."},
+{q:"تناسخ به کدام دلیل محال است؟",options:["بازگشت قوه به فعلیت","بازگشت فعلیت به قوه و کثیر شدن واحد","تبدیل حیوان به انسان","تبدیل انسان به حیوان"],answer:1,explanation:"تناسخ محال = فعلیت به قوه برنمی‌گردد."},
+{q:"ویژگی امر مادی کدام است؟",options:["زمان‌مند نبودن","فناناپذیر","غیرقابل انقسام","زمان و مکان را اشغال می‌کند"],answer:3,explanation:"مادی = زمان‌مند + مکان‌مند."},
+{q:"ارتباط دایمی با خدا با چه چیزی محفوظ می‌ماند؟",options:["توسل به خدا","اخلاص در دعا","انقطاع از اسباب","همه موارد"],answer:3,explanation:"همه موارد به ارتباط با خدا کمک می‌کنند."},
+{q:"کدام شاخصه ایمان و معنویت در اسلام است؟",options:["رهبانیت","یوگا","معنویت منهای مادی","مبتنی بر راهنما"],answer:3,explanation:"ایمان اسلامی = مبتنی بر راهنما."},
+{q:"ویژگی عالم برزخ کدام است؟",options:["کاملاً مجرد","آثار ماده را ندارد","صور جسمی بدون قوه","دارای ماده و قوه"],answer:2,explanation:"برزخ = صورت جسمی بدون قوه."},
+{q:"شرط اساسی فهم معنای زندگی کدام است؟",options:["شناخت زیست دنیوی","شناخت حیات","شناخت جامعه","شناخت هویت خود"],answer:3,explanation:"فهم معنای زندگی = شناخت هویت خود."},
+{q:"یکی از انگیزه‌های انکار معاد کدام است؟",options:["قدرت قادر مطلق","مقایسه غلط قدرت انسان با خدا","تحولات ذهن","هیچکدام"],answer:1,explanation:"انکار معاد = مقایسه غلط قدرت."},
+{q:"کدام گزینه صحیح است؟",options:["خلف وعید بر خدا جایز نیست","وعید = پاداش","وعده = تهدید","خلف وعده بر خدا جایز نیست"],answer:3,explanation:"خلف وعده بر خدا جایز نیست."},
+{q:"آیه «لا یبغون عنها حولا» چه چیزی را می‌رساند؟",options:["تحول نعمت‌ها","نعمت‌های بهشت خستگی ندارد","عدم سنخیت","خستگی بهشت"],answer:1,explanation:"نعمت‌های بهشت = بدون خستگی."},
+{q:"عظیم از نگاه قرآن کدام است؟",options:["شیطان","نفاق","مسخر","شرک"],answer:3,explanation:"عظیم = شرک (ظلم عظیم)."},
+{q:"صدرالمتالهین خصوصیات معاد را از چه راهی اثبات می‌کند؟",options:["معرفت شهودی","معرفت حسی","نور نبوت و مشکات ولایت","آثار گذشتگان"],answer:2,explanation:"ملاصدرا = نور نبوت و مشکات ولایت."},
+{q:"میل به ابدیت چگونه امری است؟",options:["غیرقابل مشاهده","فطری","غیرممکن","تجربی"],answer:1,explanation:"میل به ابدیت = فطری."},
+{q:"معنویت در روش هندی کدام است؟",options:["حضور قلب","ریاضت","مبتنی بر عقل","منصرف کردن ذهن و مقهور کردن جسم"],answer:3,explanation:"معنویت هندی = مقهور کردن جسم."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

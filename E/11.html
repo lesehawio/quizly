@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · شیوه‌های فرزندپروری · سری 01 · فصل یازدهم: تکنیک‌ها در بازی فرزندپروری</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"11";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>شیوه‌های فرزندپروری · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل یازدهم: تکنیک‌ها در بازی فرزندپروری</h2>
+  <p>پاکش کن، یادم بده، وکیل مدافع، نقش بازی، مراسم‌سازی، ایست، یادداشت، صندوق پستی، جادو، آرزو، نقاشی، داستان و خاطره</p>
+  <div class="pills"><span class="pill">پاکش کن</span><span class="pill">یادم بده</span><span class="pill">وکیل مدافع</span><span class="pill">نقش بازی</span><span class="pill">مراسم‌سازی</span><span class="pill">ایست</span><span class="pill">یادداشت</span><span class="pill">جادو</span><span class="pill">آرزو</span><span class="pill">نقاشی</span><span class="pill">داستان/خاطره</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس فصل یازدهم کتاب «فرزندپروری مانند یک بازی» (نوشته <b>سعید جهانشاهی</b>) تدوین شده است. محور این فصل: <b>تکنیک‌هایی که در فصل‌های قبل جا مانده‌اند</b> — پاکش کن، یادم بده، وکیل مدافع، نقش بازی کردن، مراسم‌سازی، ایست، یادداشت، صندوق پستی، یادداشت جادویی، جادو، آرزو، نقاشی، داستان و خاطره، خاطره آرزویی. همه‌چیز به زبان ساده و خودمونی.</div>
+
+<div class="stats">
+<div class="stat"><b>۱۳</b><span>تکنیک</span></div>
+<div class="stat"><b>۳</b><span>مراسم</span></div>
+<div class="stat"><b>۳</b><span>نوع یادداشت</span></div>
+<div class="stat"><b>۲۰</b><span>سؤال آزمون</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ========== هسته امتحانی ========== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱۳ تکنیک این فصل</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>تکنیک</th><th>توضیح کوتاه</th></tr></thead>
+<tbody>
+<tr><td>پاکش کن</td><td>وقتی حرف یا کارمان نادرست بود، بگوییم «ببخشید، پاکش کن»</td></tr>
+<tr><td>یادم بده</td><td>از فرزندمان بخواهیم به ما یاد بدهد</td></tr>
+<tr><td>وکیل مدافع</td><td>از فرزندمان دفاع کنیم (با عروسک یا نقش)</td></tr>
+<tr><td>نقش بازی کردن</td><td>نقش عوض کنیم (بچه نقش بابا، بابا نقش بچه)</td></tr>
+<tr><td>مراسم‌سازی</td><td>مراسم‌های خانوادگی برای آموزش و شادی</td></tr>
+<tr><td>ایست</td><td>گفتن کوتاه «ایست» برای آگاهی دادن</td></tr>
+<tr><td>یادداشت</td><td>نوشتن یادداشت برای تشویق یا آگاهی</td></tr>
+<tr><td>صندوق پستی</td><td>دفتر یا پاکت برای نوشتن نظرات خانوادگی</td></tr>
+<tr><td>یادداشت جادویی</td><td>یادداشت از طرف اشیا (مثل سطل زباله)</td></tr>
+<tr><td>جادو</td><td>شوخی و تغییر صدا مثل جادو کردن</td></tr>
+<tr><td>آرزو</td><td>«کاشکی می‌تونستم...» برای همدردی</td></tr>
+<tr><td>نقاشی</td><td>بیان احساس با نقاشی</td></tr>
+<tr><td>داستان و خاطره</td><td>گفتن داستان یا خاطره (خاطره مؤثرتر)</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک پاکش کن</h3><span class="badge s">مهم</span></div>
+<div class="fa">وقتی به کار می‌رود که می‌فهمیم کاری که کردیم و حرفی که زدیم درست نبوده است. کافی است بگوییم: <b>«آخ ببخشید، پاکش کن.»</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> مسافر کوچولوها در بهشت زندگی می‌کردند و به سادگی و راحتی اشتباهات ما را پاک می‌کنند. آن‌ها بعد از ما از بهشت خارج شدند، برای همین بیشتر بوی بهشت می‌دهند، قلب پاک‌تری دارند و بخشنده‌ترند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک یادم بده</h3><span class="badge s">مهم</span></div>
+<div class="fa">اگر بچه‌ها بهتر از ما می‌دانند و بهشتی‌تر از ما هستند، چرا از آن‌ها یاد نگیریم؟ برای اجرا فقط کافی است از فرزندمان بخواهیم به ما یاد بدهد در این شرایط چه کنیم بهتر است.</div>
+<div class="fa"><b>مثال:</b> «بابا جون، تو یادم بده اگه مشقاتو ننوشتی چیکار کنم.»</div>
+<div class="fa"><b>تجربه:</b> ساله است که از مدرسه که می‌رسد نمی‌خواهد ناهار بخورد. پدر و مادر از خودش پرسیدند: «تو هر وقت می‌رسی خونه نمی‌خوای غذا بخوری... خوب حالا خودت به ما یاد بده چیکار کنیم که نه تو اذیت بشی نه ما.» او هم گفت: «بهم یاد بدین چطور خودم غذا را با ماکروفر گرم کنم.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> واقعاً باور داشته باشیم که می‌توانیم از آن‌ها یاد بگیریم و به <b>نیت یاد گرفتن</b> بپرسیم، نه برای امتحان کردن آن‌ها.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک وکیل مدافع</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>اجرا:</b> آرام بنشینیم و تنها یا با کمک همسرمان، فرض کنیم یک مسافر کوچولوی خیالی به عنوان <b>وکیل مدافع</b> فرزندمان آمده و می‌خواهد از او دفاع کند. جدی جدی از او دفاع کنیم. (نویسنده در کلاس‌هایش از یک عروسک به عنوان وکیل مدافع استفاده می‌کند.)</div>
+<div class="fa"><b>شکل دیگر:</b> پدر یا مادر نقش وکیل مدافع را بازی کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>قاضی این دادگاه کیست؟</b> قاضی همیشه و همه جا خداست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک نقش بازی کردن</h3><span class="badge s">مهم</span></div>
+<div class="fa">بچه‌ها خیلی می‌توانند کمک کنند — چه به عنوان وکیل مدافع، چه وقتی به ما یاد می‌دهند. در واقع این تکنیک‌ها حالت‌هایی از <b>نقش بازی کردن</b> هستند.</div>
+<div class="fa"><b>نمونه:</b> دختر نقش بابا را بازی می‌کند و بابا نقش دختر: «دخترم، نمره مهم نیست، باید ببینیم چرا درس‌ها ضعیف شدن. شاید خانم معلمت رو دوس نداری.»</div>
+<div class="fa"><b>نمونه دیگر:</b> مادر نقش امیر را بازی می‌کند و پدر نقش بابا. مادر در نقش امیر: «بابا، منم از شما انتظار دارم اتاقتون مرتب باشه، با مامان دعوا نکنین، سیگار نکشین.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک مراسم‌سازی و سه مراسم</h3></div>
+<div class="fa">خیلی آگاهی‌ها را در فرهنگمان از <b>مراسم‌ها</b> یاد می‌گیریم. مثلاً مراسم ناهار خوردن.</div>
+<div class="fa"><b>سه مراسم معرفی‌شده:</b></div>
+<div class="fa">۱) <b>مراسم رئیس خانه:</b> برای چند ساعت یا یک روز، یکی از بچه‌ها رئیس خانه می‌شود و باید خونه و خانواده را طوری اداره کند که امور عادی بهم نخورد. او فقط دستور می‌دهد؛ کار را «کارمندا» (بابا و مامان) انجام می‌دهند.</div>
+<div class="fa">۲) <b>مراسم گزارش بازرسی:</b> همه دسته‌جمعی در یک روز مشخص از هفته از جاهای مختلف خانه بازدید می‌کنند و اشکال‌ها را می‌گویند. کسی توبیخ نمی‌شود؛ همه چیز توصیفی و برای آگاهی است. بابا و مامان هم بازرسی می‌شوند.</div>
+<div class="fa">۳) <b>مراسم مسابقه:</b> مسابقه‌های ساده مثل «کی می‌تونه زودتر مسواک بزنه» یا «این هفته هر کی بهتر رئیس خونه شد، برنده‌اس».</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> هدف آگاهی دادن و خندیدن است، نه مچ‌گیری. هدف پیشگیری از تنبیه است، نه تنبیه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک ایست</h3></div>
+<div class="fa">به سادگی بگوییم: <b>«ایست، تختخواب برای مطالعه نیست. ایست، کفش برای پرت کردن نیست. ایست، زبون برای فحش دادن نیست.»</b></div>
+<div class="fa"><b>نمونه جالب:</b> مادر فرزندش را می‌زند؛ فرزند رو به مادر: «ایست، دست برای زدن نیست.»</div>
+<div class="fa">این‌طوری آن‌ها هم بهتر آگاهی پیدا می‌کنند. چون آن‌ها هم مسافر کوچولو هستند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک‌های یادداشت، صندوق پستی و یادداشت جادویی</h3></div>
+<div class="fa"><b>یادداشت:</b> کافی است یک یادداشت برایش بگذاریم. «دخترم از اینکه صبح به موقع خودت رو برای رفتن به مدرسه آماده کردی ازت ممنونم. امضاء مامان.»</div>
+<div class="fa"><b>چرا نوشته مؤثرتر از حرف است؟</b> چون نوشته ماندگار است، می‌شود بعداً هم خواندش، اما حرف باد هواست. از طرفی نوشته موضوع را مهم‌تر می‌کند.</div>
+<div class="fa"><b>صندوق پستی:</b> یک دفتر یا پاکت نامه که هر کس نظرش، تشویق توصیفی‌اش، همدردی‌اش یا تکنیک منشی‌اش را در آن برای دیگران می‌نویسد. مناسب والدین گرفتار.</div>
+<div class="fa"><b>یادداشت جادویی:</b> یادداشت از طرف اشیا. مثال: روی سطل زباله یادداشت: «لطفاً من را به بیرون از خانه بگذارید. متشکرم. امضاء آشغال‌ها.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک جادو، آرزو و نقاشی</h3></div>
+<div class="fa"><b>جادو:</b> «آخ دردت اومد. بذار جاش رو ببوسم دردش ساکت بشه.» با شوخی و تغییر صدا، جادو و... بچه‌ها بهتر آگاهی پیدا می‌کنند.</div>
+<div class="fa"><b>آرزو:</b> نوعی درک احساس. «کاشکی می‌تونستم این کار رو برات بکنم» — یعنی می‌فهمم چه احساسی داری و می‌پذیرم. مثال: «می‌دونم عزیزم، کاشکی می‌شد اونو الان برات می‌خریدیم.»</div>
+<div class="fa"><b>نقاشی:</b> کمک می‌کند بچه‌ها احساسشان را بهتر بیان کنند. مادر: «این قلم و کاغذ، بشین بکش ببینم چی می‌گی؟»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> نقاشی حواس بچه را منحرف می‌کند، آرام‌تر می‌شود، مادر هم آرام‌تر می‌شود و بعد درک احساس و تکنیک زدن آسان‌تر می‌شود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک داستان، خاطره و خاطره آرزویی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>داستان:</b> برایش داستان بگوییم. <b>خاطره:</b> برایش خاطره بگوییم.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> مسافر کوچولوها از بهشت آمده‌اند. دروغ بلد نیستند. دروغ هم نمی‌فهمند. اگر تجربه واقعی خودتان است، بگویید «می‌خوام یک خاطره برات بگم». اگر تجربه خودتان نیست، بگویید «می‌خوام یک داستان برات بگم».
+</div>
+<div class="fa"><b>خاطره مؤثرتر از داستان است</b> — به‌خصوص خاطره بابا یا مامان وقتی در سن بچه‌شان بودند. برای بچه‌ها ملموس‌تر و عملی‌تر است.</div>
+<div class="fa"><b>خاطره آرزویی:</b> انگار داریم خاطره تعریف می‌کنیم، اما خاطره‌ای که واقعی نیست. خاطره‌ای است که آرزو داشتیم ای کاش اتفاق افتاده بود.</div>
+<div class="fa"><b>نکته پایانی:</b> در دنیای مسافر کوچولوها چیزی به نام <b>تکنیک نصیحت</b> نداریم. نصیحت مال کسی است که می‌خواهد نصیحت بشود.</div>
+</div>
+</section>
+
+<!-- ========== مفاهیم ========== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با توضیح ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) مقدمه</h3><span class="badge s">مهم</span></div>
+<div class="fa">تکنیک‌های زیادی در حین توضیح تاکتیک‌ها شرح دادیم. بعضی از آن‌ها جا ماند. آن‌ها را آوردیم اینجا تا جداگانه توضیح دهیم.</div>
+<div class="fa">فکر می‌کنم این‌طوری فصول کتاب خیلی کش‌دار نمی‌شود و شما خواننده عزیز هم کمتر خسته می‌شوید. برویم سراغ توضیح تکنیک‌ها.</div>
+<div class="fa">بعد از توضیح این‌همه خطا و ناراحتی از اینکه شاید در حق بچه‌هایمان خطا کردیم، توضیح بحث تکنیک‌ها با معرفی این تکنیک بد نیست:</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) تکنیک پاکش کن</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">تکنیک <b>پاکش کن</b> وقتی به کار می‌رود که می‌فهمیم کاری که کردیم و حرفی که زدیم درست نبوده است. خوب، چیکار کنیم؟ کافی است بگوییم: <b>«آخ ببخشید، پاکش کن.»</b></div>
+<div class="fa">می‌دانید، مسافر کوچولوها در بهشت زندگی می‌کردند؛ آن‌ها به سادگی و راحتی اشتباهات ما را پاک می‌کنند.</div>
+<div class="fa">جالب است بدانیم ما هم مسافر کوچولو بودیم، اما آن‌ها بعد از ما از بهشت خارج شدند، برای همین بیشتر بوی بهشت می‌دهند. قلب پاک‌تری دارند. بخشنده‌ترند.</div>
+<div class="fa"><b>نمایش از اول کتاب:</b></div>
+<div class="fa">بچه: «بابا، بچه‌ها از کجا به دنیا می‌آن؟»</div>
+<div class="fa">پدر: «عزیزم، جواب این سؤال خیلی سخته، چطور برات بگم، ببین ما آدم‌ها از دو جنس زن و مرد هستیم. هر کدام با اون یکی ازدواج می‌کنه، بعد آ آ آ نمی‌دونم چطور برات توضیح بدم، ببین، ... اصلاً ببخشید، پاکش کن، خودت چی فکر می‌کنی؟»</div>
+<div class="fa">بچه: «دوستم گفت بچه‌ها مسافر کوچولوهایی هستن که از آسمون به دنیا اومدن و پیش پدر و مادراشون امانت هستن. گفت اون‌ها باید ما بچه‌ها رو خیلی خوب مواظبت کنن و بدونن به سؤالای ما چطور جواب بدن، گفت این‌ها رو باباش بهش گفته، راست می‌گه بابا؟»</div>
+<div class="fa">بابا: «آره عزیزم.»</div>
+<div class="fa">بچه: «می‌دونستم تو هم جواب سؤالام رو درست می‌دی.»</div>
+<div class="fa"><b>سه تکنیکی که در این نمایش بود:</b> پاکش کن — خودت چی فکر می‌کنی — بی‌توجهی فعال.</div>
+<div class="fa">تکنیک <b>پاکش کن</b> آنجا بود که گفت: «آخ ببخشید، پاکش کن.» تکنیک <b>خودت چی فکر می‌کنی</b> هم که واضح بود. حسن تکنیک‌ها این است که اسم‌های ساده‌ای دارند. این‌طوری حفظ کردن آن‌ها و تشخیصشان در متن‌ها مشکل نیست.</div>
+<div class="fa"><b>اجرای تکنیک بی‌توجهی فعال:</b> آنجایی که بچه گفت: «می‌دونستم تو هم جواب سؤالام رو درست می‌دی.» — به جواب غلط بابایش بی‌توجهی کرد و برای پیشگیری از تنبیه، به بابایش آگاهی داد؛ آن هم با تشویق کار درستی که بابایش کرده بود. کار درست بابا کجا بود؟ آنجایی که گفت: «آره، عزیزم.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> شاید دروغ گفتن بابا تنبیه می‌خواست. اما بچه‌ها مثل ما نیستند که بهانه بگیرند تا تنبیه کنند. آن‌ها بهانه می‌گیرند تا تشویق کنند. برای همین گفت: «می‌دونستم تو هم جواب سؤالام رو درست می‌دی.» بعضی وقت‌ها بچه‌ها تکنیکی‌تر از ما هستند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) تکنیک یادم بده</h3></div>
+<div class="fa">اگر بچه‌ها بهتر از ما می‌دانند و بهشتی‌تر از ما هستند، چرا از آن‌ها یاد نگیریم؟ برای اجرای تکنیک <b>یادم بده</b> فقط کافی است از فرزندمان بخواهیم به ما یاد بدهد در این شرایط چه کنیم بهتر است.</div>
+<div class="fa"><b>مثال:</b> «بابا جون، تو یادم بده اگه مشقاتو ننوشتی چیکار کنم.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) یک تجربه — تکنیک یادم بده</h3></div>
+<div class="fa">ساله است. از مدرسه که می‌رسد نمی‌خواهد ناهار بخورد. نمی‌دانستیم چه کنیم. هر چه فکر کردیم، فکری به ذهنمان نرسید. دوتایی رفتیم سراغ خودش، به او گفتیم: «تو هر وقت می‌رسی خونه نمی‌خوای غذا بخوری. سیر هستی. حق هم داری ولی ما نمی‌تونیم هر وقت تو خواستی غذات رو گرم کنیم. خوب حالا خودت به ما یاد بده چیکار کنیم که نه تو اذیت بشی نه ما.»</div>
+<div class="fa">او هم گفت: «خوب، بهم یاد بدین چطور خودم غذا را با ماکروفر گرم کنم.» به نظر پیشنهاد خوبی بود. تعجب ما از این بود نمی‌دانستیم چطور شد که این فکر به ذهن خودمان نرسید.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> واقعاً باور داشته باشیم که می‌توانیم از آن‌ها یاد بگیریم و به <b>نیت یاد گرفتن</b> بپرسیم. اگر جواب ساده‌ای دادند، در آن دقت کنیم. از بچه‌ها یاد بگیریم، امتحانشان نکنیم.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) تکنیک وکیل مدافع</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>شیوه اجرا:</b> آرام بنشینید و تنها یا با کمک همسرتان فرض کنید یک <b>مسافر کوچولوی خیالی</b> به عنوان <b>وکیل مدافع</b> فرزندتان آمده و می‌خواهد از فرزندتان دفاع کند. خیالی هم که شده، جدی جدی از او دفاع کنید. (نویسنده در کلاس‌هایش از یک عروسک به عنوان وکیل مدافع استفاده می‌کند.)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> اگر این وکیل مدافع مسافر کوچولوهاست، قاضی این دادگاه کیست؟ قاضی همیشه و همه جا خداست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶) یک تجربه — تکنیک وکیل مدافع</h3></div>
+<div class="fa">پسر ۵ ساله‌ام کرده پدرش را می‌زند. یک‌بار که این کار را انجام داد او را به داخل اتاق فرستادم. چند دقیقه بعد به داخل اتاق نگاه کردم. دیدم با خیال راحت مشغول بازی است. ناراحت شدم. او را به داخل انباری فرستادم.</div>
+<div class="fa">اشکال کار در اینجاست که نه تنها هنوز این عادت او ترک نشد... وکیل مدافع گفت: «چون نمی‌دونه می‌تونه بگه، نمی‌دونه چطور بگه، نمی‌دونه اگه بگه چیکارش می‌کنین. این‌دفعه تو چه سوراخی حبسش می‌کنین، نمی‌دونه که...»</div>
+<div class="fa">حرفش را قطع کردم. همین‌قدر برایم کافی بود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> این مادر تکنیک محرومیت موقت را هم به کار برد که البته خیلی خوب اجرایش نکرد. پس این پسر حق دارد اگر از دست مامانش هم عصبانی باشد. ولی به هر صورت، این مادر چون دید تکنیک محرومیت موقت اثر نمی‌کند، تکنیک وکیل مدافع را به کار برد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۷) شکل دیگر تکنیک وکیل مدافع</h3></div>
+<div class="fa">یک شکل دیگر تکنیک وکیل مدافع این است که پدر یا مادر یا هر فرد دیگری نقش وکیل مدافع را بازی کند.</div>
+<div class="fa"><b>نمایش:</b></div>
+<div class="fa">مادر: «می‌گم این بچه غذا نمی‌خوره.»</div>
+<div class="fa">پدر: «می‌خوای وکیل مدافع شم.»</div>
+<div class="fa">مادر: «یعنی کارم اشتباهه؟!»</div>
+<div class="fa">پدر: «من جسارت نکردم.»</div>
+<div class="fa">مادر: «خوب، آقای وکیل مدافع، این پسر ما کم‌اشتها شده، چرا؟»</div>
+<div class="fa">پدر: «شاید باباش هم این غذاها رو دوس نداره.»</div>
+<div class="fa">مادر با تعجب: «تو رو خدا؟!»</div>
+<div class="fa">پدر: «جدی می‌گم، این روزها حواسش یه جای دیگه‌اس.»</div>
+<div class="fa">مادر: «راست می‌گی به خدا.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۸) تکنیک نقش بازی کردن</h3></div>
+<div class="fa">بچه‌ها خیلی در فرزندپروری می‌توانند کمک کنند. چه به عنوان وکیل مدافع، چه وقتی به ما یاد می‌دهند (تکنیک یادم بده). در واقع این تکنیک‌ها حالت‌هایی از <b>نقش بازی کردن</b> هستند.</div>
+<div class="fa"><b>نمایش ۱ (دختر نقش بابا):</b></div>
+<div class="fa">بابا: «دخترم، این چه وضعیه، خیلی نمره‌هات افت کرده.»</div>
+<div class="fa">دختر: «بابا، تو رو خدا اذیت نکنین.»</div>
+<div class="fa">بابا در حالی که می‌خندد: «خیلی خوب، اذیت نمی‌کنم اما باید یک فکری بکنیم، اصلاً بیا یک کار کنیم، تو بشو بابا، من دخترت...»</div>
+<div class="fa">دختر با لحن بابا: «دخترم، نمره مهم نیست، باید ببینیم چرا درس‌ها ضعیف شدن. شاید خانم معلمت رو دوس نداری.»</div>
+<div class="fa"><b>نمایش ۲ (مادر نقش امیر، پدر نقش بابا):</b></div>
+<div class="fa">پدر: «امیر، چرا اتاقت مرتب نیس.»</div>
+<div class="fa">مادر به جای امیر و با بی‌توجهی: «چشم بابا.»</div>
+<div class="fa">پدر: «مرسی پسر.»</div>
+<div class="fa">مادر در نقش خودش: «همین؟! یک کاری بکن، اون‌دفعه هم همین‌طوری دعواش کردی؟ پس قاطعیت چی شد؟»</div>
+<div class="fa">... در ادامه، پدر با قاطعیت و انتظار و همدلی، تکنیک را کامل اجرا می‌کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۹) تکنیک مراسم‌سازی</h3><span class="badge s">مهم</span></div>
+<div class="fa">ما خیلی آگاهی‌ها را در فرهنگمان از <b>مراسم‌ها</b> یاد می‌گیریم. مثلاً مراسم ناهار خوردن در خیلی از خانواده‌ها این‌طور است که سفره می‌اندازند یا دور میز می‌نشینند.</div>
+<div class="fa">اگر در خانه این مراسم درست اجرا نشود (بابا پایین بنشیند، پسر جای بابا، دختر تو بغل بابا، مادر هنوز تو آشپزخانه)، آن‌وقت خانه حسابی هرکی هرکی می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰) مراسم رئیس خانه</h3></div>
+<div class="fa">برای چند ساعت یا یک روز، یکی از بچه‌ها <b>رئیس خانه</b> می‌شود و باید خانه و خانواده را طوری اداره کند که امور عادی زندگی بهم نخورد. همه راضی باشند و زندگی خوب و خوش باشد.</div>
+<div class="fa">البته او فقط <b>دستور</b> می‌دهد. یعنی می‌گوید غذا چی درست کنند و لباس‌ها را بشویند یا نه. او نظر می‌دهد، ولی کار را «کارمندا» می‌کنند — یعنی همان بابا و مامان و هر کسی که کاری از دستش برمی‌آید.</div>
+<div class="fa"><b>فواید:</b> حس مسئولیت‌پذیری — درک احساس خستگی پدر و مادر — سختی تصمیم‌گیری طوری که کسی ضرر نکند — احترامی که لازم است گذاشته شود تا رئیس بتواند کار کند — احساس سهیم بودن در زندگی و خیلی چیزهای دیگر.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۱) مراسم گزارش بازرسی</h3></div>
+<div class="fa">همه دسته‌جمعی و در یک روز مشخص از هفته، حتماً یک روز مشخص، از جاهای مختلف خانه بازدید و بازرسی می‌کنند و اشکال‌ها را می‌گویند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> کسی توبیخ نمی‌شود. همه چیز توصیفی است. برای آگاهی داده شده. آنچه دیده می‌شود فقط گزارش می‌شود.
+</div>
+<div class="fa"><b>نمونه:</b> مادر: «بچه‌ها امروز روز بازرسیه. همه قطار شین.» — همه قطار می‌شوند و پشت سر مادر حرکت می‌کنند و هر اشکالی را می‌بینند بیان می‌کنند: «لباس‌ها شسته نشده، مسواک بابا کنار دستشویی افتاده...»</div>
+<div class="fa"><b>هدف:</b> آگاهی دادن و خندیدن، نه مچ‌گیری. هدف پیشگیری از تنبیه است، نه تنبیه.</div>
+<div class="fa"><b>نکته مهم:</b> بابا و مامان هم بازرسی می‌شوند، چون خودشان هم مسافر کوچولو هستند و مثل مسافر کوچولوها اشتباه می‌کنند. آن‌ها فرشته نیستند، کامل نیستند. آن‌ها هم وقتی اشکالی در کارشان بود، باید از همه عذرخواهی کنند و سعی کنند تکرار نشود. این‌طوری به بچه‌ها عذرخواهی کردن، کامل نبودن و خیلی چیزهای دیگر را یاد می‌دهند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۲) مراسم مسابقه</h3></div>
+<div class="fa">مسابقه‌های ساده‌ای که همه پدر و مادرها با آن آشنا هستند: «کی می‌تونه زودتر مسواک بزنه» یا «این هفته هر کی بهتر رئیس خونه شد، برنده‌اس».</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> هر کاری را که به اسم مسابقه یا هر روش دیگری به صورت تفریحی در بیاوریم، مفید است. بچه‌ها از شوخی و بازی خیلی بیشتر چیز یاد می‌گیرند تا نصیحت و تنبیه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۳) تکنیک ایست</h3></div>
+<div class="fa">می‌توانیم خیلی وقت‌ها به سادگی بگوییم: <b>«ایست، تختخواب برای مطالعه نیست. ایست، کفش برای پرت کردن نیست. ایست، زبون برای فحش دادن نیست.»</b></div>
+<div class="fa">و البته در ذهن پدر و مادرها هم بهتر جا می‌افتد:</div>
+<div class="fa">مادر فرزندش را می‌زند؛ فرزند رو به مادر: «ایست، دست برای زدن نیست.»</div>
+<div class="fa">آن‌ها هم این‌طوری بهتر آگاهی پیدا می‌کنند. چرا؟ آن‌ها هم مسافر کوچولو هستند، مگر نه؟</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۴) تکنیک یادداشت</h3></div>
+<div class="fa">اجرای تکنیک یادداشت ساده است. کافی است یک یادداشت برایش بگذاریم: «دخترم از اینکه صبح به موقع خودت رو برای رفتن به مدرسه آماده کردی ازت ممنونم. امضاء مامان.»</div>
+<div class="fa"><b>چرا نوشته مؤثرتر از حرف است؟</b> چون نوشته ماندگار است، می‌شود بعداً هم خواندش، اما حرف باد هواست. از طرفی نوشته موضوع را مهم‌تر می‌کند.</div>
+<div class="fa">نگران سواد بچه‌ها نباشید، آن‌ها بلدند یکی را پیدا کنند که یادداشت را برایشان بخواند.</div>
+<div class="fa">تکنیک یادداشت کار را ساده می‌کند — بخصوص در دوران پرمشغله. مادر می‌خواست دخترش را که به موقع برای رفتن به مدرسه آماده شده بود، تشویق توصیفی کند، اما صبح وقت نبود. به سر کار رفت و وقتی برگشت، این یادداشت را نوشت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۵) تکنیک صندوق پستی</h3></div>
+<div class="fa">یک شکل اجرای تکنیک یادداشت، <b>تکنیک صندوق پستی</b> است. بخصوص برای پدر و مادرهایی کاربرد دارد که خیلی گرفتارند و نمی‌رسند با هم زیاد حرف بزنند.</div>
+<div class="fa">می‌شود یک دفتر برداشت و هر کدام حرفش، تشویق توصیفی‌اش، همدردی‌اش یا تکنیک منشی‌اش و خلاصه نظرش را در آن دفتر برای دیگری بنویسد. می‌شود یک پاکت مثل پاکت نامه گذاشت، هر کسی نظری دارد، آن را بنویسد و در پاکت بگذارد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۶) تکنیک یادداشت جادویی</h3></div>
+<div class="fa">یک شکل جالب دیگر از تکنیک یادداشت وجود دارد که به آن می‌گوییم <b>تکنیک یادداشت جادویی</b>. بچه‌ها خیلی خوششان می‌آید.</div>
+<div class="fa"><b>تجربه:</b> خیلی وقت‌ها از دست شوهرم ناراحت می‌شدم و به او می‌گفتم «خیلی بچه‌ای» چون واقعاً بچه‌بازی درمی‌آورد. اما وقتی فهمیدم من و شوهرم هم مسافر کوچولو هستیم و ممکن است خوب تربیت نشده باشیم، به سراغ کودک درون شوهرم رفتم تا کم‌کاری مادرش را جبران کنم. به هر حال بهتر از دعوا و ناراحتی بود. رفتم سراغ تکنیک‌ها و سوژه‌ای برای تربیت. یک مدت بود که یادش می‌رفت آشغال‌ها را بیرون از خانه بگذارد. وقتی یادش می‌رفت، قبلاً ناراحت می‌شدم و خودم این کار را می‌کردم. این بار روی سطل زباله یادداشتی گذاشتم: «لطفاً من را به بیرون از خانه بگذارید. متشکرم. امضاء آشغال‌ها.»</div>
+<div class="fa">مثل بچه‌ها خوشش آمده بود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۷) تکنیک جادو</h3></div>
+<div class="fa">تکنیک جادو که جادو می‌کند. حتماً تجربه استفاده از آن را دارید: «آخ دردت اومد. بذار جاش رو ببوسم دردش ساکت بشه.»</div>
+<div class="fa">با شوخی و تغییر صدا، جادو و... بچه‌ها بهتر آگاهی پیدا می‌کنند و حرف ما را بهتر می‌فهمند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۸) تکنیک آرزو</h3><span class="badge s">مهم</span></div>
+<div class="fa">تکنیک آرزو نوعی درک احساس است. تکنیک همدردی را یادتان هست؟ این‌طوری بود: اول احساسش را می‌فهمیم و هر چیزی که هست، بد یا خوب، می‌پذیریم.</div>
+<div class="fa">مثلاً وقتی می‌گوییم <b>«کاشکی می‌تونستم این کار رو برات بکنم»</b>، معنی‌اش این است که می‌فهمم چه احساسی داری و می‌پذیرم که این احساس را داری.</div>
+<div class="fa"><b>مثال بدون آرزو (با همدردی):</b></div>
+<div class="fa">بچه: «بابا من اون اسباب بازی رو می‌خوام.»</div>
+<div class="fa">بابا: «می‌دونم عزیزم، می‌دونم که تو دوس داری اون اسباب بازی رو داشته باشی، اما الان امکان خرید اون نیست. دیگه هم دوست ندارم درباره‌اش صحبت کنیم.»</div>
+<div class="fa"><b>مثال با آرزو:</b></div>
+<div class="fa">بابا: «می‌دونم عزیزم، کاشکی می‌شد اونو الان برات می‌خریدیم.»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> با یک آرزو، کار آن دو سه جمله نمایش قبل را کرد. به بچه فهماند که می‌فهمد او دوست دارد آن اسباب بازی را داشته باشد، اما الان امکانش نیست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۹) تکنیک نقاشی</h3></div>
+<div class="fa">نقاشی می‌تواند کمک کند بچه‌ها احساسشان را بهتر بیان کنند.</div>
+<div class="fa"><b>نمایش:</b> مادر: «من نمی‌فهمم چته، نق زدن روش خوبی برای حرف زدن نیس. نمی‌تونی حرف بزنی، این قلم و کاغذ، بشین بکش ببینم چی می‌گی؟» — بچه یک کاغذ را خط خطی می‌کند.</div>
+<div class="fa">بعد از چند دقیقه، مادر: «خوب، حالا برام بگو ببینم چی کشیدی؟ این خط‌ها یعنی عصبانی بودی؟»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته جالب:</b> نقاشی کردن حواس بچه را منحرف می‌کند. وقتی نقاشی می‌کند کمی آرام‌تر می‌شود. مادر هم کمی آرام‌تر می‌شود. بعد که مادر به خودش مسلط شد، بچه هم به خودش مسلط‌تر شد، آن‌وقت درک احساس و تکنیک زدن برای مادر آسان‌تر می‌شود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۰) تکنیک داستان و خاطره</h3></div>
+<div class="fa"><b>داستان:</b> برایش داستان بگویید. <b>خاطره:</b> برایش خاطره بگویید.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> مسافر کوچولوها از بهشت آمده‌اند. دروغ بلد نیستند. دروغ هم نمی‌فهمند. اگر تجربه واقعی خودتان است، بگویید «می‌خوام یک خاطره برات بگم». اگر تجربه خودتان نیست، بگویید «می‌خوام یک داستان برات بگم».
+</div>
+<div class="fa"><b>خاطره مؤثرتر از داستان است</b> — به‌خصوص خاطره بابا یا مامان وقتی در سن بچه‌شان بودند. خاطره بابا و مامان برای بچه‌ها ملموس‌تر و عملی‌تر به نظر می‌رسد تا داستانی از کسی دیگر.</div>
+<div class="fa"><b>نمایش:</b></div>
+<div class="fa">مادر: «پس می‌ترسی توی اتاق تنها بخوای. از چی می‌ترسی؟»</div>
+<div class="fa">بچه: «از هیولا.»</div>
+<div class="fa">مادر: «هیولا؟ از هیولا می‌ترسی؟ هیولا چی هست؟»</div>
+<div class="fa">بچه: «می‌گن هیولا می‌آد بچه‌ها رو اذیت می‌کنه.»</div>
+<div class="fa">مادر: «بذار برات بگم، وقتی بچه بودم، خیلی دوس داشتم مامانم می‌اومد پیشم، بهم می‌گفت: دختر گلم، از چی می‌ترسی...»</div>
+<div class="fa">در پایان، بچه: «تو مامانت رو دوس داشتی؟» / مادر: «آره.» / بچه: «منم مامانم رو دوس دارم.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۱) تکنیک خاطره آرزویی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">تکنیک <b>خاطره آرزویی</b> این‌طور است که انگار داریم خاطره تعریف می‌کنیم، اما خاطره‌ای که واقعی نیست. خاطره‌ای است که <b>آرزو داشتیم ای کاش اتفاق افتاده بود</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۲) نکته پایانی: تکنیک نصیحت نداریم</h3></div>
+<div class="fa">در دنیای مسافر کوچولوها چیزی به نام <b>تکنیک نصیحت</b> نداریم. نصیحت مال کسی است که می‌خواهد نصیحت بشود. خودمان هم همین‌طوریم، مگر نه؟</div>
+</div>
+</section>
+
+<!-- ========== تفاوت‌ها ========== -->
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک یادم بده vs امتحان کردن</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>یادم بده</th><th>امتحان کردن</th></tr></thead>
+<tbody>
+<tr><td>به نیت یاد گرفتن می‌پرسیم</td><td>برای آزمودن بچه می‌پرسیم</td></tr>
+<tr><td>باور داریم که می‌توانیم یاد بگیریم</td><td>باور نداریم</td></tr>
+<tr><td>مؤثر</td><td>غیرمؤثر</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک وکیل مدافع vs دفاع نکردن</h3></div>
+<table class="compare">
+<thead><tr><th>وکیل مدافع</th><th>دفاع نکردن</th></tr></thead>
+<tbody>
+<tr><td>از فرزندمان دفاع می‌کنیم</td><td>فقط تنبیه می‌کنیم</td></tr>
+<tr><td>فرصت فهمیدن به بچه می‌دهیم</td><td>بدون فهمیدن تنبیه می‌کنیم</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراسم رئیس خانه vs مراسم بازرسی vs مسابقه</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>رئیس خانه</th><th>بازرسی</th><th>مسابقه</th></tr></thead>
+<tbody>
+<tr><td>یک نفر رئیس، بقیه کارمند</td><td>همه با هم بازرسی می‌کنند</td><td>رقابت سالم و شادی</td></tr>
+<tr><td>مسئولیت‌پذیری</td><td>آگاهی از اشکالات</td><td>شادی و انگیزه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نوشته vs حرف</h3></div>
+<table class="compare">
+<thead><tr><th>نوشته (یادداشت)</th><th>حرف</th></tr></thead>
+<tbody>
+<tr><td>ماندگار است، می‌شود بعداً خواند</td><td>باد هواست</td></tr>
+<tr><td>موضوع را مهم‌تر می‌کند</td><td>موضوع را کم‌اهمیت‌تر می‌کند</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آرزو vs همدردی ساده</h3></div>
+<table class="compare">
+<thead><tr><th>آرزو</th><th>همدردی ساده</th></tr></thead>
+<tbody>
+<tr><td>«کاشکی می‌تونستم...»</td><td>«می‌دونم دوس داری، اما امکانش نیست»</td></tr>
+<tr><td>همدردی + آرزو</td><td>همدردی</td></tr>
+<tr><td>در یک جمله کار دو سه جمله را می‌کند</td><td>نیاز به توضیح بیشتر دارد</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>داستان vs خاطره</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>داستان</th><th>خاطره</th></tr></thead>
+<tbody>
+<tr><td>تجربه واقعی خودمان نیست</td><td>تجربه واقعی خودمان است</td></tr>
+<tr><td>کمتر ملموس</td><td>ملموس‌تر و عملی‌تر</td></tr>
+<tr><td>«می‌خوام یک داستان برات بگم»</td><td>«می‌خوام یک خاطره برات بگم»</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خاطره vs خاطره آرزویی</h3></div>
+<table class="compare">
+<thead><tr><th>خاطره</th><th>خاطره آرزویی</th></tr></thead>
+<tbody>
+<tr><td>واقعی است</td><td>واقعی نیست (آرزویی)</td></tr>
+<tr><td>تجربه واقعی</td><td>آرزو داشتیم اتفاق افتاده بود</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک‌های این فصل vs تکنیک نصیحت</h3></div>
+<table class="compare">
+<thead><tr><th>تکنیک‌های این فصل</th><th>تکنیک نصیحت</th></tr></thead>
+<tbody>
+<tr><td>بازی، شوخی، نقش، یادداشت</td><td>وجود ندارد</td></tr>
+<tr><td>بچه‌ها بهتر یاد می‌گیرند</td><td>بچه‌ها کمتر یاد می‌گیرند</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> در دنیای مسافر کوچولوها چیزی به نام تکنیک نصیحت نداریم. نصیحت مال کسی است که می‌خواهد نصیحت بشود.
+</div>
+</div>
+</section>
+
+<!-- ========== نظریه‌پردازان ========== -->
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان</h2>
+<p class="section-sub">نظریه‌پردازان و چارچوب‌های معرفی‌شده در این فصل</p>
+
+<div class="card">
+<div class="card-head"><h3>سعید جهانشاهی — نویسنده کتاب</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نقش در این فصل:</b> نویسنده کتاب «فرزندپروری مانند یک بازی» که در این فصل تکنیک‌هایی را که در فصل‌های قبل جا مانده‌اند معرفی می‌کند: پاکش کن، یادم بده، وکیل مدافع، نقش بازی، مراسم‌سازی، ایست، یادداشت، صندوق پستی، یادداشت جادویی، جادو، آرزو، نقاشی، داستان و خاطره، خاطره آرزویی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نویسنده کتاب <b>سعید جهانشاهی</b> است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفهوم «مسافر کوچولو»</h3></div>
+<div class="fa"><b>مفهوم:</b> بچه‌ها مسافر کوچولوهایی هستند که از بهشت آمده‌اند و امانت الهی هستند.</div>
+<div class="fa"><b>ارتباط با این فصل:</b> نویسنده می‌گوید: «مسافر کوچولوها در بهشت زندگی می‌کردند؛ آن‌ها به سادگی و راحتی اشتباهات ما را پاک می‌کنند. آن‌ها بعد از ما از بهشت خارج شدند، برای همین بیشتر بوی بهشت می‌دهند. قلب پاک‌تری دارند. بخشنده‌ترند.» همچنین: «مسافر کوچولوها دروغ بلد نیستند. دروغ هم نمی‌فهمند.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفهوم «کودک درون» (Inner Child)</h3></div>
+<div class="fa"><b>مفهوم:</b> همه ما کودکی در درون داریم که می‌توانیم تکنیک‌های فرزندپروری را در موردش به کار ببریم.</div>
+<div class="fa"><b>ارتباط با این فصل:</b> در تجربه یادداشت جادویی، نویسنده می‌گوید: «به سراغ کودک درون شوهرم رفتم تا کم‌کاری مادرش را جبران کنم.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>استعاره «قاضی و وکیل مدافع»</h3></div>
+<div class="fa"><b>مفهوم:</b> استعاره‌ای برای دفاع از فرزند در برابر اتهامات و تنبیه‌های نادرست والدین.</div>
+<div class="fa"><b>نکته:</b> «قاضی همیشه و همه جا خداست.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تشبیه رانندگی — چارچوب استعاره‌ای کتاب</h3></div>
+<div class="fa"><b>مفهوم:</b> استفاده از استعاره رانندگی (گاز، ترمز، فرمان) برای آموزش فرزندپروری.</div>
+<div class="fa"><b>ارتباط با این فصل:</b> تکنیک‌های این فصل ابزارهای خلاقانه‌ای برای «فرمان دادن» به بچه و ایجاد ارتباط مؤثر هستند.</div>
+</div>
+</section>
+
+<!-- ========== دام‌ها ========== -->
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: تکنیک پاکش کن = عذرخواهی ساده</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی پاکش کن فقط عذرخواهی است.</div>
+<div class="fa"><b>جواب درست:</b> پاکش کن = پذیرش اشتباه + درخواست پاک کردن آن + شروع دوباره (مثل «ببخشید، پاکش کن، خودت چی فکر می‌کنی؟»).</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: تکنیک یادم بده = امتحان کردن</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> یادم بده = به نیت یاد گرفتن. امتحان کردن = برای آزمودن. از بچه‌ها یاد بگیریم، امتحانشان نکنیم.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: تکنیک وکیل مدافع = دفاع از خودمان</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی وکیل مدافع از ما دفاع می‌کند.</div>
+<div class="fa"><b>جواب درست:</b> وکیل مدافع از <b>فرزند</b> دفاع می‌کند، در برابر اتهامات و تنبیه‌های نادرست والدین.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: قاضی دادگاه = والدین</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی قاضی والدین هستند.</div>
+<div class="fa"><b>جواب درست:</b> قاضی همیشه و همه جا <b>خداست</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: نقش بازی کردن = مسخره بازی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی نقش بازی کردن مسخره بازی است.</div>
+<div class="fa"><b>جواب درست:</b> نقش بازی کردن یک تکنیک جدی برای آموزش و درک متقابل است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: مراسم رئیس خانه = رئیس واقعی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی رئیس خانه واقعاً رئیس است.</div>
+<div class="fa"><b>جواب درست:</b> او فقط دستور می‌دهد؛ کار را «کارمندا» (بابا و مامان) انجام می‌دهند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: مراسم بازرسی = مچ‌گیری</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بازرسی برای مچ‌گیری است.</div>
+<div class="fa"><b>جواب درست:</b> هدف آگاهی دادن و خندیدن است، نه مچ‌گیری. هدف پیشگیری از تنبیه است، نه تنبیه.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: بابا و مامان بازرسی نمی‌شوند</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط بچه‌ها بازرسی می‌شوند.</div>
+<div class="fa"><b>جواب درست:</b> بابا و مامان هم بازرسی می‌شوند، چون خودشان هم مسافر کوچولو هستند و اشتباه می‌کنند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: نوشته = حرف</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> نوشته ماندگار است و موضوع را مهم‌تر می‌کند؛ حرف باد هواست.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: یادداشت جادویی = یادداشت معمولی</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> یادداشت جادویی از طرف اشیا نوشته می‌شود (مثل سطل زباله) و جذابیت بیشتری دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: تکنیک آرزو = تکنیک همدردی</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> آرزو نوعی همدردی است، اما با «کاشکی می‌تونستم...» در یک جمله کار همدردی را می‌کند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: نقاشی فقط سرگرمی است</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی نقاشی فقط سرگرمی است.</div>
+<div class="fa"><b>جواب درست:</b> نقاشی کمک به بیان احساس، حواس‌پرتی مثبت، آرام‌سازی بچه و والد می‌کند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: داستان و خاطره یکسان هستند</h3>
+<div class="fa"><b>دام چیه:</b> این دو را مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> داستان = تجربه غیرواقعی / خاطره = تجربه واقعی. خاطره مؤثرتر است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: خاطره آرزویی = دروغ</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی خاطره آرزویی دروغ است.</div>
+<div class="fa"><b>جواب درست:</b> خاطره آرزویی، خاطره‌ای است که آرزو داشتیم اتفاق افتاده بود — اما باید به بچه بگوییم خاطره نیست، آرزوست.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: گزینه‌های با مترادف، فقط، همیشه</h3>
+<div class="fa"><b>دام چیه:</b> گزینه‌های مطلق را انتخاب می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> در مورد این فصل، گزینه‌های با «مترادف»، «فقط»، «همیشه» معمولاً نادرست‌اند.</div>
+</div>
+</section>
+
+<!-- ========== کوییز ========== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل یازدهم — تکنیک‌ها در بازی فرزندپروری</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · شیوه‌های فرزندپروری و آموزش والدین · فصل یازدهم: تکنیک‌ها در بازی فرزندپروری — نویسنده: سعید جهانشاهی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"تکنیک پاکش کن چه زمانی به کار می‌رود؟",options:["وقتی حرف یا کارمان درست نبوده","وقتی بچه کار بد می‌کند","وقتی می‌خواهیم تنبیه کنیم","وقتی می‌خواهیم جایزه بدهیم"],answer:0,explanation:"پاکش کن: وقتی حرف یا کارمان درست نبوده، بگوییم «ببخشید، پاکش کن»."},
+{q:"در نمایش پاکش کن، کدام سه تکنیک به کار رفت؟",options:["پاکش کن، خودت چی فکر می‌کنی، بی‌توجهی فعال","تنبیه، تشویق، بی‌توجهی","قانون، آگاهی، احساس","نقش بازی، مراسم، جادو"],answer:0,explanation:"سه تکنیک: پاکش کن، خودت چی فکر می‌کنی، بی‌توجهی فعال."},
+{q:"تکنیک یادم بده چه کاری انجام می‌دهد؟",options:["از بچه می‌خواهیم به ما یاد بدهد","به بچه یاد می‌دهیم","بچه را تنبیه می‌کنیم","بچه را تشویق می‌کنیم"],answer:0,explanation:"تکنیک یادم بده: از بچه می‌خواهیم به ما یاد بدهد."},
+{q:"در تکنیک یادم بده، باید به چه نیتی بپرسیم؟",options:["برای امتحان کردن","به نیت یاد گرفتن","برای تنبیه","برای تشویق"],answer:1,explanation:"به نیت یاد گرفتن، نه امتحان کردن."},
+{q:"تکنیک وکیل مدافع چه کاری انجام می‌دهد؟",options:["از فرزندمان دفاع می‌کنیم","فرزندمان را تنبیه می‌کنیم","فرزندمان را تشویق می‌کنیم","فرزندمان را نادیده می‌گیریم"],answer:0,explanation:"وکیل مدافع: از فرزندمان دفاع می‌کنیم."},
+{q:"قاضی دادگاه در تکنیک وکیل مدافع کیست؟",options:["والدین","بچه","خدا","معلم"],answer:2,explanation:"قاضی همیشه و همه جا خداست."},
+{q:"تکنیک نقش بازی کردن چه کاری انجام می‌دهد؟",options:["نقش عوض کردن (بچه نقش بابا، بابا نقش بچه)","فقط تنبیه کردن","فقط تشویق کردن","فقط بی‌توجهی"],answer:0,explanation:"نقش بازی کردن: نقش عوض کردن."},
+{q:"مراسم رئیس خانه چه ویژگی دارد؟",options:["یک نفر رئیس، بقیه کارمند","همه با هم بازرسی می‌کنند","رقابت سالم","هیچ‌کدام"],answer:0,explanation:"رئیس خانه: یک نفر رئیس، بقیه کارمند."},
+{q:"مراسم گزارش بازرسی چه هدفی دارد؟",options:["مچ‌گیری","آگاهی دادن و خندیدن","تنبیه","بی‌توجهی"],answer:1,explanation:"هدف آگاهی دادن و خندیدن، نه مچ‌گیری."},
+{q:"در مراسم بازرسی، چه کسی بازرسی می‌شود؟",options:["فقط بچه‌ها","فقط بابا","همه، حتی بابا و مامان","هیچ‌کس"],answer:2,explanation:"همه بازرسی می‌شوند، حتی بابا و مامان."},
+{q:"مراسم مسابقه چه ویژگی دارد؟",options:["رقابت سالم و شادی","تنبیه","مچ‌گیری","بی‌توجهی"],answer:0,explanation:"مراسم مسابقه: رقابت سالم و شادی."},
+{q:"تکنیک ایست چه کاری انجام می‌دهد؟",options:["گفتن کوتاه «ایست» برای آگاهی","تنبیه کردن","بی‌توجهی","تشویق کردن"],answer:0,explanation:"ایست: گفتن کوتاه «ایست» برای آگاهی."},
+{q:"تکنیک یادداشت چه مزیتی دارد؟",options:["نوشته ماندگار است","نوشته باد هواست","حرف مهم‌تر است","هیچ مزیتی ندارد"],answer:0,explanation:"نوشته ماندگار است و موضوع را مهم‌تر می‌کند."},
+{q:"تکنیک یادداشت جادویی چه ویژگی دارد؟",options:["یادداشت معمولی","یادداشت از طرف اشیا (مثل سطل زباله)","یادداشت فقط برای بچه‌ها","هیچ‌کدام"],answer:1,explanation:"یادداشت جادویی از طرف اشیا نوشته می‌شود."},
+{q:"تکنیک جادو چه کاری انجام می‌دهد؟",options:["شوخی و تغییر صدا مثل جادو کردن","تنبیه کردن","بی‌توجهی","نقش بازی"],answer:0,explanation:"جادو: شوخی و تغییر صدا مثل جادو کردن."},
+{q:"تکنیک آرزو چه جمله‌ای دارد؟",options:["«کاشکی می‌تونستم این کار رو برات بکنم»","«تو بد هستی»","«باید این کار رو بکنی»","«نمی‌دونم»"],answer:0,explanation:"تکنیک آرزو: «کاشکی می‌تونستم این کار رو برات بکنم»."},
+{q:"تکنیک نقاشی چه مزیتی دارد؟",options:["حواس بچه را منحرف و آرام می‌کند","تنبیه می‌کند","بی‌توجهی می‌کند","فقط سرگرمی است"],answer:0,explanation:"نقاشی: حواس‌پرتی مثبت، آرام‌سازی بچه و والد."},
+{q:"تکنیک داستان با تکنیک خاطره چه تفاوتی دارد؟",options:["داستان واقعی نیست، خاطره واقعی است","خاطره واقعی نیست","هر دو یکسان هستند","هیچ تفاوتی ندارند"],answer:0,explanation:"داستان = غیرواقعی؛ خاطره = واقعی. خاطره مؤثرتر است."},
+{q:"خاطره مؤثرتر است یا داستان؟",options:["داستان","خاطره","هر دو یکسان","هیچ‌کدام"],answer:1,explanation:"خاطره مؤثرتر است، بخصوص خاطره والدین در سن بچه‌شان."},
+{q:"تکنیک خاطره آرزویی چیست؟",options:["خاطره واقعی","خاطره‌ای که آرزو داشتیم اتفاق افتاده بود","داستان","نقاشی"],answer:1,explanation:"خاطره آرزویی: خاطره‌ای که آرزو داشتیم ای کاش اتفاق افتاده بود."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>آزمون مرور سریع - اندازه‌گیری و ارزشیابی آموزشی (فصل ۳، ۵ و ۷)</title>
+    <style>
+        :root {
+            --pink: #fa4779;
+            --pink2: #ff7aa6;
+            --pink-soft: rgba(250, 71, 121, 0.12);
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --border: #e5e7eb;
+            --correct: #7fd1b9;
+        }
+        body.dark {
+            --bg: #0b1020;
+            --card: #131a33;
+            --text: #e5e7eb;
+            --border: #263056;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 70px auto;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 26px;
+        }
+        .card, .sheet, .json-card {
+            background: var(--card);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.18);
+        }
+        .json-card { grid-column: 1 / -1; margin-top: 10px; }
+        .progress-wrap {
+            height: 12px;
+            background: linear-gradient(90deg, #eee, #ddd);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            transition: .4s;
+        }
+        .question {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 22px;
+            line-height: 1.8;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .option {
+            padding: 16px 18px;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            transition: background .3s, border-color .3s;
+            font-size: 15px;
+        }
+        .option:hover {
+            background: var(--pink-soft);
+            border-color: var(--pink);
+        }
+        .next {
+            margin-top: 28px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 22px;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background .3s;
+        }
+        .next:hover { background: var(--pink2); }
+        .sheet { max-height: 620px; overflow: auto; }
+        .sheet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .sheet-cell {
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 10px 12px;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 8px;
+            align-items: center;
+        }
+        .sheet-cell.active {
+            border-color: var(--pink);
+            box-shadow: 0 0 0 3px var(--pink-soft);
+        }
+        .answers { display: flex; justify-content: space-between; }
+        .bubble {
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 12px;
+        }
+        .bubble.correct { background: var(--correct); color: #fff; border: none; }
+        .bubble.wrong { background: var(--pink); color: #fff; border: none; }
+        .result { text-align: center; margin-top: 40px; }
+        .score { font-size: 48px; font-weight: 900; color: var(--pink); }
+        .desc { margin-top: 10px; font-size: 20px; font-weight: 600; }
+        .print {
+            margin-top: 24px;
+            padding: 14px 34px;
+            border-radius: 999px;
+            border: none;
+            background: #111;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background .3s;
+        }
+        .print:hover { background: #333; }
+        .json-card textarea {
+            width: 100%;
+            min-height: 160px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 14px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            background: var(--bg);
+            color: var(--text);
+            resize: vertical;
+            direction: ltr;
+            text-align: left;
+        }
+        .json-card .json-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .json-card .json-header h3 { margin: 0; font-size: 18px; }
+        .copy-json-btn {
+            padding: 8px 24px;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .copy-json-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(250, 71, 121, 0.35);
+        }
+        .copy-feedback {
+            font-size: 14px;
+            color: var(--correct);
+            font-weight: 600;
+            display: none;
+        }
+        .quizly-logo {
+            position: fixed;
+            top: 16px;
+            right: 18px;
+            z-index: 999;
+        }
+        .quizly-logo img {
+            width: 60px;
+            cursor: pointer;
+            animation: quizlyFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 28px rgba(250, 71, 121, .55));
+            transition: transform .35s ease, filter .35s ease;
+        }
+        .quizly-logo img:hover {
+            transform: scale(1.12) rotate(3deg);
+            filter: drop-shadow(0 16px 40px rgba(250, 71, 121, .85));
+        }
+        @keyframes quizlyFloat {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+        @media (max-width: 820px) {
+            .wrapper { grid-template-columns: 1fr; }
+            .options { grid-template-columns: 1fr; }
+            .sheet-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media print {
+            .theme-toggle, .next, .json-card { display: none; }
+            body { background: #fff; }
+        }
+    </style>
+</head>
+<body>
+<div class="quizly-logo">
+    <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo">
+</div>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+<div class="wrapper">
+    <div class="card">
+        <div class="progress-wrap">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="quiz"></div>
+        <button class="next" id="nextBtn" onclick="next()">بعدی</button>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="sheet">
+        <div class="sheet-grid" id="sheet"></div>
+    </div>
+
+    <div class="json-card" id="jsonCard">
+        <div class="json-header">
+            <h3>📋 کپی JSON نتایج</h3>
+            <div>
+                <button class="copy-json-btn" onclick="copyJSON()">کپی JSON</button>
+                <span class="copy-feedback" id="copyFeedback">✓ کپی شد!</span>
+            </div>
+        </div>
+        <textarea id="jsonOutput" readonly placeholder="نتایج به‌صورت JSON اینجا نمایش داده می‌شود..."></textarea>
+    </div>
+</div>
+
+<script>
+
+const questions = [
+    {
+        q: "هرچند که الگوهای ارزشیابی آموزشی متنوع‌اند، اما فعالیت‌های اصلی کار ارزشیابی کم‌وبیش یکسان‌اند.",
+        options: ["صحیح", "غلط", "بستگی به موقعیت دارد", "نظری است و قابل قضاوت نیست"],
+        answer: 0
+    },
+    {
+        q: "مراحل سه‌گانه اصلی تصمیم‌گیری در فرایند ارزشیابی کدام‌اند؟",
+        options: [
+            "مرحله طراحی، مرحله فرآیندی (اجرایی)، مرحله فرآورده‌ای (تولیدی)",
+            "مرحله تحلیل، مرحله طراحی، مرحله اجرا",
+            "مرحله جمع‌آوری داده، مرحله تحلیل، مرحله گزارش",
+            "مرحله تعیین هدف، مرحله ارزشیابی، مرحله بازخورد"
+        ],
+        answer: 0
+    },
+    {
+        q: "طرح‌ریزی با این نوع سؤال سر و کار دارد: «چه کاری انجام خواهیم داد؟»",
+        options: ["صحیح", "غلط", "فقط در ارزشیابی تکوینی صحیح است", "فقط در ارزشیابی تراکمی صحیح است"],
+        answer: 0
+    },
+    {
+        q: "مرحله فرآیندی به جواب دادن به سؤال‌هایی از این نوع می‌پردازد: «چگونه آن کار را انجام می‌دهیم؟»",
+        options: ["صحیح", "غلط", "فقط در ارزشیابی تکوینی صحیح است", "فقط در ارزشیابی تراکمی صحیح است"],
+        answer: 0
+    },
+    {
+        q: "مرحله فرآورده‌ای به پرسش‌هایی از این قبیل پاسخ می‌دهد: «چگونه آن کار را انجام دادیم؟»",
+        options: ["صحیح", "غلط", "فقط در ارزشیابی تکوینی صحیح است", "فقط در ارزشیابی تراکمی صحیح است"],
+        answer: 0
+    },
+    {
+        q: "در فصل ارزشیابی برنامه‌ها و پروژه‌های آموزشی، چند مرحله توضیح داده شده است؟",
+        options: ["۷ مرحله", "۸ مرحله", "۹ مرحله", "۱۰ مرحله"],
+        answer: 2
+    },
+    {
+        q: "بهتر است صورت سؤال‌های چندگزینه‌ای را به صورت جمله ناتمام بنویسیم تا جمله پرسشی.",
+        options: ["صحیح", "غلط", "بستگی به نوع سوال دارد", "فقط در علوم انسانی صحیح است"],
+        answer: 1
+    },
+    {
+        q: "جنگ اول جهانی از چه سالی تا چه سالی بود؟",
+        options: ["۱۹۱۲ تا ۱۹۱۰", "۱۹۱۸ تا ۱۹۱۴", "۱۹۲۰ تا ۱۹۱۵", "۱۹۲۸ تا ۱۹۲۵"],
+        answer: 1
+    },
+    {
+        q: "سؤال «جنگ اول جهانی از ...» چه نوع سؤالی است؟",
+        options: ["تنها گزینه درست", "ناتمام", "جایگزینی", "ب و پ"],
+        answer: 1
+    },
+    {
+        q: "نقش گزینه انحرافی در سؤال‌های چندگزینه‌ای چیست؟",
+        options: [
+            "افزودن بر سطح دشواری سؤال",
+            "گمراه کردن آزمون‌شوندگان بی‌اطلاع از موضوع سؤال",
+            "گمراه کردن آزمون‌شوندگانی که دقت کافی ندارند",
+            "افزودن بر قدرت تمیز سؤال"
+        ],
+        answer: 1
+    },
+    {
+        q: "کدام مورد زیر را در رابطه با سؤال‌های چندگزینه‌ای اصلاً نباید به کار برد؟",
+        options: [
+            "استفاده از گزینه «همه موارد بالا»",
+            "استفاده از گزینه «هیچ یک از موارد بالا»",
+            "نوشتن همه مطالب سؤال در تنه سؤال",
+            "اختصاص دادن هر سؤال فقط به یک هدف"
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام گزینه درباره ویژگی‌های سؤال‌های چندگزینه‌ای درست است؟",
+        options: [
+            "تنه سؤال باید روشن و کامل باشد و گزینه‌ها باید متجانس باشند.",
+            "گزینه‌ها باید از نظر محتوا ناهمگون باشند تا سؤال دشوارتر شود.",
+            "بهتر است تنه سؤال ناقص باشد و مطالب اصلی در گزینه‌ها بیاید.",
+            "استفاده از گزینه «همه موارد بالا» همیشه توصیه می‌شود."
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام گزینه از قواعد تهیه سؤال‌های چندگزینه‌ای است؟",
+        options: [
+            "هر سؤال باید فقط به یک هدف آموزشی اختصاص یابد.",
+            "برای دشوارتر شدن سؤال، گزینه‌ها را ناهمگون بنویسید.",
+            "مطالب اصلی سؤال را در گزینه‌ها بنویسید نه در تنه سؤال.",
+            "همیشه از گزینه «همه موارد بالا» استفاده کنید."
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام گزینه از امتیازهای سؤال‌های چندگزینه‌ای است؟",
+        options: [
+            "تصحیح آن‌ها عینی و سریع است و می‌توان تعداد زیادی سؤال را در زمان کم اجرا کرد.",
+            "تصحیح آن‌ها ذهنی و زمان‌بر است.",
+            "نمی‌توانند توانایی‌های پیچیده را بسنجند.",
+            "برای سنجش مهارت‌های نوشتاری مناسب‌ترند."
+        ],
+        answer: 0
+    },
+    {
+        q: "در تصحیح پاسخ سؤال‌های تشریحی، بهتر است ابتدا جواب همه سؤال‌های برگه اول را تصحیح کنیم، بعد سؤال‌های برگه دوم، و الی آخر.",
+        options: ["صحیح", "غلط", "بستگی به تعداد برگه‌ها دارد", "فقط در آزمون‌های سراسری صحیح است"],
+        answer: 1
+    },
+    {
+        q: "سؤال «در یک پاراگراف، به طور خلاصه توضیح دهید که چرا فشارسنج بهترین ابزار پیش‌بینی وضع هواست.» چه نوع هدف آموزشی را می‌سنجد؟",
+        options: ["یادآوری", "فهم", "تحلیل", "ارزشیابی"],
+        answer: 1
+    },
+    {
+        q: "سؤال «در یک پاراگراف، به طور خلاصه توضیح دهید که چرا فشارسنج بهترین ابزار پیش‌بینی وضع هواست.» چه نوع سؤالی است؟",
+        options: ["تشریحی گسترده پاسخ", "تشریحی محدود پاسخ", "چندگزینه‌ای", "صحیح-غلط"],
+        answer: 1
+    },
+    {
+        q: "سؤال «به زمانی در زندگی خود فکر کنید که با مشکلی رو به رو بودید... درباره این مشکل داستانی بسازید و آن را برای کلاس بگویید.» چه نوع هدف آموزشی را می‌سنجد؟",
+        options: ["فهمیدن", "به کار بستن", "تحلیل کردن", "آفریدن"],
+        answer: 3
+    },
+    {
+        q: "سؤال «به زمانی در زندگی خود فکر کنید که با مشکلی رو به رو بودید... درباره این مشکل داستانی بسازید و آن را برای کلاس بگویید.» چه نوع سؤالی است؟",
+        options: ["تشریحی گسترده پاسخ", "تشریحی محدود پاسخ", "چندگزینه‌ای", "صحیح-غلط"],
+        answer: 0
+    },
+    {
+        q: "چرا در آزمون‌های تشریحی به آزمون‌شوندگان حق انتخاب تعدادی سؤال از میان مجموعه‌ای سؤال را نمی‌دهند؟",
+        options: [
+            "چون باعث می‌شود سؤال‌های مختلف برای افراد مختلف سنجیده شود و مقایسه نمرات ناعادلانه شود.",
+            "چون باعث می‌شود زمان آزمون طولانی‌تر شود.",
+            "چون تصحیح آن‌ها دشوارتر می‌شود.",
+            "چون دانش‌آموزان نمی‌توانند سؤال مناسب انتخاب کنند."
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام روش نمره‌گذاری سؤال‌های تشریحی برای پاسخ‌های پیچیده و چندبعدی مناسب‌تر است؟",
+        options: [
+            "روش تحلیلی (تقسیم پاسخ به اجزا و نمره‌دهی جداگانه)",
+            "روش کلی (داوری یکباره کل پاسخ)",
+            "روش سراسری (داوری کلی بدون توجه به اجزا)",
+            "روش خودارزیابی"
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام گزینه از قواعد تهیه سؤال‌های تشریحی است؟",
+        options: [
+            "سؤال‌ها را روشن و صریح بنویسید و زمان کافی برای پاسخ در نظر بگیرید.",
+            "از کلمات «چرا»، «چگونه» و «به چه دلیل» بپرهیزید.",
+            "همیشه از سؤال‌های تازه و موقعیت‌های جدید استفاده نکنید.",
+            "به آزمون‌شوندگان حق انتخاب سؤال بدهید."
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام گزینه از قواعد تصحیح پاسخ‌های تشریحی است؟",
+        options: [
+            "پاسخ‌ها را بدون اطلاع از نام دانش‌آموز و به‌صورت سؤال‌به‌سؤال تصحیح کنید.",
+            "همه پاسخ‌های یک برگه را پشت سر هم تصحیح کنید.",
+            "از تصحیح مجدد توسط همکاران خودداری کنید.",
+            "نمره‌گذاری را فقط بر اساس نظر شخصی خود انجام دهید."
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام گزینه درباره مقایسه سؤال‌های تشریحی گسترده پاسخ و محدود پاسخ درست است؟",
+        options: [
+            "در گسترده پاسخ، آزمون‌شونده آزادی کامل دارد؛ در محدود پاسخ، آزادی او محدود است.",
+            "در محدود پاسخ، آزمون‌شونده آزادی کامل دارد؛ در گسترده پاسخ، آزادی او محدود است.",
+            "هر دو نوع سؤال آزادی کامل به آزمون‌شونده می‌دهند.",
+            "هر دو نوع سؤال آزادی آزمون‌شونده را محدود می‌کنند."
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام گزینه از امتیازهای آزمون‌های تشریحی است؟",
+        options: [
+            "توانایی سنجش توانایی‌های پیچیده مانند تحلیل، ترکیب و ارزشیابی",
+            "تصحیح عینی و سریع",
+            "پوشش وسیع محتوای درس",
+            "عدم تأثیر عوامل شخصی در تصحیح"
+        ],
+        answer: 0
+    },
+    {
+        q: "کدام گزینه از محدودیت‌های آزمون‌های تشریحی است؟",
+        options: [
+            "نمونه کوچکی از محتوای درس را اندازه می‌گیرد و تصحیح آن وقت‌گیر است.",
+            "نمی‌تواند توانایی‌های پیچیده را بسنجد.",
+            "تصحیح آن کاملاً عینی است.",
+            "پوشش وسیع محتوای درس را فراهم می‌کند."
+        ],
+        answer: 0
+    },
+    {
+        q: "آزمون شفاهی چیست و در چه مواردی استفاده می‌شود؟",
+        options: [
+            "آزمونی که در آن سؤال‌ها به‌صورت شفاهی پرسیده می‌شوند و برای سنجش مهارت‌های گفتاری و در مواردی که آزمون کتبی ممکن نیست استفاده می‌شود.",
+            "آزمونی که فقط برای سنجش حافظه استفاده می‌شود.",
+            "آزمونی که فقط در مقطع ابتدایی استفاده می‌شود.",
+            "آزمونی که جایگزین آزمون‌های تشریحی است."
+        ],
+        answer: 0
+    },
+    {
+        q: "آزمون بیرون بردنی (Open-book) چیست و چه خوبی و بدی دارد؟",
+        options: [
+            "آزمونی که در آن استفاده از کتاب و منابع آزاد است؛ خوبی آن سنجش توانایی کاربرد است و بدی آن دشواری طراحی سؤال است.",
+            "آزمونی که در آن استفاده از کتاب ممنوع است؛ خوبی آن سنجش حافظه است.",
+            "آزمونی که فقط برای دروس ریاضی مناسب است.",
+            "آزمونی که فقط به‌صورت شفاهی برگزار می‌شود."
+        ],
+        answer: 0
+    },
+    {
+        q: "برای سنجش نگرش داوطلبان معلمی نسبت به شغل معلمی در مصاحبه استخدامی، کدام نوع سؤال مناسب‌تر است؟",
+        options: [
+            "سؤال‌های باز و موقعیتی مانند «چرا می‌خواهید معلم شوید؟» و «اگر دانش‌آموزی به شما بی‌احترامی کند چه می‌کنید؟»",
+            "سؤال‌های بسته با پاسخ بله/خیر",
+            "سؤال‌های چندگزینه‌ای",
+            "سؤال‌های صحیح-غلط"
+        ],
+        answer: 0
+    }
+];
+
+    let index = 0;
+    let correctCount = 0;
+    const userAnswers = Array(questions.length).fill(null);
+    const letters = ["الف", "ب", "ج", "د"];
+
+    const quiz = document.getElementById("quiz");
+    const sheet = document.getElementById("sheet");
+    const nextBtn = document.getElementById("nextBtn");
+    const progress = document.getElementById("progress");
+    const jsonOutput = document.getElementById("jsonOutput");
+    const copyFeedback = document.getElementById("copyFeedback");
+
+    function render() {
+        const q = questions[index];
+        quiz.innerHTML = `
+            <div class="question">${index+1}. ${q.q}</div>
+            <div class="options">
+                ${q.options.map((o, i) => `<div class="option" onclick="select(${i})">${letters[i]}) ${o}</div>`).join("")}
+            </div>`;
+        nextBtn.style.display = "none";
+        updateProgress();
+        renderSheet();
+        updateJSON();
+    }
+
+    function updateProgress() {
+        progress.style.width = `${(index / questions.length) * 100}%`;
+    }
+
+    function renderSheet() {
+        sheet.innerHTML = questions.map((q, i) => {
+            const ua = userAnswers[i];
+            return `
+                <div class="sheet-cell ${i === index ? "active" : ""}">
+                    <b>${i + 1}</b>
+                    <div class="answers">
+                        ${[0, 1, 2, 3].map((j) => {
+                            let c = "";
+                            if (ua !== null) {
+                                c = j === q.answer ? "correct" : (j === ua ? "wrong" : "");
+                            }
+                            return `<div class="bubble ${c}">${letters[j]}</div>`;
+                        }).join("")}
+                    </div>
+                </div>`;
+        }).join("");
+    }
+
+    function select(i) {
+        if (userAnswers[index] !== null) return;
+        userAnswers[index] = i;
+        if (i === questions[index].answer) correctCount++;
+        nextBtn.style.display = "block";
+        renderSheet();
+        updateJSON();
+    }
+
+    function next() {
+        index++;
+        if (index < questions.length) {
+            render();
+        } else {
+            finish();
+        }
+    }
+
+    function finish() {
+        progress.style.width = "100%";
+        const totalQuestions = questions.length;
+        const answeredQuestions = userAnswers.filter(answer => answer !== null).length;
+        const grade = ((correctCount / totalQuestions) * 20).toFixed(2);
+        const percentage = ((correctCount / totalQuestions) * 100).toFixed(2);
+        let desc = "";
+        if (grade >= 18) desc = "عالی و مسلط";
+        else if (grade >= 15) desc = "خوب";
+        else if (grade >= 12) desc = "قابل قبول";
+        else desc = "نیازمند تمرین جدی";
+
+        quiz.innerHTML = `
+            <div class="score">${grade} / ۲۰</div>
+            <div class="desc">${desc}</div>
+            <div>شما ${answeredQuestions} از ${totalQuestions} سوال را پاسخ داده‌اید. (${percentage}%)</div>
+            <div style="margin-top:10px;color:var(--text-secondary);font-size:14px;">
+                ✅ ${correctCount} صحیح | ❌ ${answeredQuestions - correctCount} غلط
+            </div>
+            <button class="print" onclick="openPrintWindow()">🖨 چاپ</button>
+        `;
+        updateJSON();
+    }
+
+    function openPrintWindow() {
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(`
+            <html lang="fa" dir="rtl">
+            <head>
+                <meta charset="UTF-8">
+                <title>نتیجه آزمون</title>
+                <style>
+                    body { font-family: 'Vazirmatn', Tahoma, sans-serif; direction: rtl; padding: 20px; }
+                    .result { text-align: center; margin: 20px; }
+                    .table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                    .table th, .table td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+                    .table th { background: #fa4779; color: #fff; }
+                    .table td.correct { background: #7fd1b9; }
+                    .table td.wrong { background: #fa4779; color: #fff; }
+                </style>
+            </head>
+            <body>
+                <div class="result">
+                    <h1>نتیجه آزمون</h1>
+                    <div style="font-size:48px;font-weight:900;color:#fa4779;">${(correctCount / questions.length * 20).toFixed(2)} / ۲۰</div>
+                    <div>شما ${userAnswers.filter(answer => answer !== null).length} از ${questions.length} سوال را پاسخ داده‌اید.</div>
+                    <table class="table">
+                        <thead>
+                            <tr><th>سوال</th><th>پاسخ شما</th><th>پاسخ صحیح</th></tr>
+                        </thead>
+                        <tbody>
+                            ${questions.map((q, i) => `
+                                <tr>
+                                    <td>${q.q}</td>
+                                    <td class="${userAnswers[i] === q.answer ? 'correct' : 'wrong'}">${userAnswers[i] !== null ? letters[userAnswers[i]] : 'پاسخ داده نشده'}</td>
+                                    <td>${letters[q.answer]}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            </body>
+            </html>
+        `);
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+        printWindow.close();
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+    }
+
+    function generateJSON() {
+        const totalQuestions = questions.length;
+        const answered = userAnswers.filter(a => a !== null).length;
+        const correct = correctCount;
+        const wrong = answered - correct;
+        const grade = ((correct / totalQuestions) * 20);
+        const percentage = ((correct / totalQuestions) * 100);
+
+        const results = questions.map((q, i) => {
+            const userAns = userAnswers[i];
+            return {
+                question_number: i + 1,
+                question: q.q,
+                options: q.options,
+                correct_answer: letters[q.answer],
+                user_answer: userAns !== null ? letters[userAns] : "پاسخ داده نشده",
+                is_correct: userAns !== null ? (userAns === q.answer) : false
+            };
+        });
+
+        return {
+            total_questions: totalQuestions,
+            answered_questions: answered,
+            correct_answers: correct,
+            wrong_answers: wrong,
+            grade: parseFloat(grade.toFixed(2)),
+            percentage: parseFloat(percentage.toFixed(2)),
+            results: results
+        };
+    }
+
+    function updateJSON() {
+        const data = generateJSON();
+        jsonOutput.value = JSON.stringify(data, null, 2);
+    }
+
+    function copyJSON() {
+        jsonOutput.select();
+        navigator.clipboard.writeText(jsonOutput.value).then(() => {
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        }).catch(() => {
+            document.execCommand("copy");
+            copyFeedback.style.display = "inline";
+            setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+        });
+    }
+
+    render();
+</script>
+</body>
+</html>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره بهداشت روانی · سری 01 · فصل ششم: مکانیسم‌های دفاعی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"06";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره بهداشت روانی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل ششم: مکانیسم‌های دفاعی</h2>
+  <p>مکانیسم‌های روانی یا سازشی — تعاریف، مثال‌ها و تفاوت‌ها</p>
+  <div class="pills"><span class="pill">واپس‌زنی</span><span class="pill">جابه‌جایی</span><span class="pill">فرافکنی</span><span class="pill">انکار</span><span class="pill">بازگشت</span><span class="pill">دلیل‌تراشی</span><span class="pill">واکنش‌سازی</span><span class="pill">درون‌فکنی</span><span class="pill">پرخاشگری</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس سرفصل‌های <b>فصل ششم کتاب «بهداشت روانی» میلانی‌فر</b> تدوین شده است. عناوین دقیقاً مطابق ساختار فصل ارائه شده‌اند: <b>واپس‌زنی/سرکوب</b>، <b>جابه‌جایی/جانشینی</b>، <b>فرافکنی</b>، <b>جبران/تلافی</b>، <b>خیالبافی</b>، <b>همانندسازی</b>، <b>انکار</b>، <b>بازگشت/عقب‌نشینی</b>، <b>دلیل‌تراشی</b>، <b>واکنش‌سازی</b>، <b>تظاهر به بی‌میلی</b>، <b>درون‌فکنی</b> و <b>پرخاشگری/تهاجم</b>.</div>
+
+<div class="stats">
+<div class="stat"><b>۱۹</b><span>مکانیسم دفاعی</span></div>
+<div class="stat"><b>۱۱</b><span>دام تفاوت‌ها</span></div>
+<div class="stat"><b>۲۰</b><span>نکته طلایی</span></div>
+<div class="stat"><b>۲۰</b><span>سؤال آزمون</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ========== هسته امتحانی ========== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف مکانیسم‌های دفاعی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>مکانیسم‌های دفاعی</b> فرآیندهای <b>ناهشیار و خودکار</b> هستند که <b>ego (خود)</b> برای محافظت از فرد در برابر <b>اضطراب</b>، <b>تعارض درونی</b> و <b>تهدیدهای واقعیت</b> به کار می‌گیرد.
+</div>
+<div class="fa"><b>سه ویژگی اصلی:</b></div>
+<div class="fa">• <b>ناهشیار:</b> فرد از استفاده از آن‌ها آگاه نیست.</div>
+<div class="fa">• <b>خودکار:</b> بدون تصمیم‌گیری هشیار فعال می‌شوند.</div>
+<div class="fa">• <b>تحریف‌کننده واقعیت:</b> واقعیت را به شکلی تغییر می‌دهند که اضطراب کمتری ایجاد کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> همه انسان‌ها از مکانیسم‌های دفاعی استفاده می‌کنند. مشکل زمانی است که <b>نابالغ</b> و <b>انعطاف‌ناپذیر</b> شوند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>واپس‌زنی / سرکوب / ممانعت از ظهور تمایلات</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>واپس‌زنی (Repression):</b> <b>اساسی‌ترین و بنیادی‌ترین</b> مکانیسم دفاعی است. افکار، خاطرات یا تکانه‌های اضطراب‌زا به‌صورت <b>ناهشیار</b> از آگاهی رانده می‌شوند.</div>
+<div class="fa"><b>مثال:</b> فردی که خاطره‌ی یک تصادف دردناک را به کلی فراموش می‌کند.</div>
+<div class="fa"><b>سرکوب کردن (Suppression):</b> <b>ممانعت هشیار</b> از ظهور تمایلات است. فرد <b>آگاهانه</b> تصمیم می‌گیرد به موضوعی فکر نکند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فروید واپس‌زنی را <b>سنگ زیربنای روان‌کاوی</b> می‌دانست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جابه‌جایی / جانشینی</h3></div>
+<div class="fa"><b>جابه‌جایی (Displacement):</b> انتقال <b>تکانه یا هیجان اضطراب‌زا</b> از یک <b>هدف تهدیدکننده</b> به یک <b>هدف امن‌تر و قابل‌پذیرش‌تر</b>.</div>
+<div class="fa"><b>مثال:</b> فردی که از رئیس خود عصبانی است، اما خشم خود را سر همسرش خالی می‌کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> در جابه‌جایی، <b>هدف</b> تغییر می‌کند اما <b>هیجان</b> همان است.
+</div>
+<div class="fa"><b>جانشینی (Substitution):</b> جایگزینی یک <b>هدف غیرقابل‌دسترس</b> با یک <b>هدف قابل‌دسترس</b>.</div>
+<div class="fa"><b>مثال:</b> فردی که نمی‌تواند پزشک شود، به پرستاری روی می‌آورد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرافکنی (برون‌فکنی)</h3></div>
+<div class="fa"><b>فرافکنی (Projection):</b> نسبت دادن <b>احساسات، امیال یا تکانه‌های نامطلوب خود</b> به <b>دیگران</b>.</div>
+<div class="fa"><b>مثال:</b> فردی که از دیگران متنفر است، می‌گوید «همه از من متنفرند».</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> فرافکنی <b>نقطه مقابل درون‌فکنی</b> است. در فرافکنی، فرد نمی‌پذیرد که آن احساس متعلق به خودش است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جبران / تلافی</h3></div>
+<div class="fa"><b>جبران (Compensation):</b> تلاش برای <b>پوشاندن ضعف</b> در یک حوزه با <b>قدرت</b> در حوزه دیگر.</div>
+<div class="fa"><b>مثال:</b> فردی که در ورزش ضعیف است، در درس قوی می‌شود.</div>
+<div class="fa"><b>انواع جبران:</b> مستقیم (تلاش در همان حوزه) — غیرمستقیم (جبران در حوزه دیگر).</div>
+<div class="fa"><b>تلافی (Undoing):</b> <b>خنثی‌کردن</b> گفتار یا اعمال ناخوشایند قبلی با <b>رفتار یا آیین خاص</b>.</div>
+<div class="fa"><b>مثال:</b> فردی که فکر گناه‌آلودی داشته، برای جبران آن دعا می‌خواند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خیالبافی / رویاپرستی</h3></div>
+<div class="fa"><b>خیالبافی (Fantasy):</b> <b>پناه بردن به تخیلات</b> برای فرار از واقعیت‌های ناخوشایند.</div>
+<div class="fa"><b>مثال:</b> فردی که در زندگی واقعی موفق نیست، در خیال خود را <b>قهرمان</b> می‌بیند.</div>
+<div class="fa"><b>انواع:</b> سازنده (خیالپردازی برای برنامه‌ریزی آینده) — ناسازگارانه (خیالپردازی برای فرار از واقعیت).</div>
+<div class="fa"><b>رویاپرستی (Dreaming):</b> <b>پناه بردن به رویا</b> برای فرار از واقعیت است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>همانندسازی / همسان‌گری</h3></div>
+<div class="fa"><b>همانندسازی (Identification):</b> <b>الگوبرداری ناهشیار</b> از افکار، رفتار یا ویژگی‌های فرد دیگر است.</div>
+<div class="fa"><b>مثال:</b> کودکی که از پدرش الگوبرداری می‌کند.</div>
+<div class="fa"><b>همسان‌گری:</b> <b>همانندسازی</b> با یک <b>گروه</b> یا <b>الگو</b> است.</div>
+<div class="fa"><b>مثال:</b> نوجوانی که با گروه همسالان خود همسان می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انکار</h3></div>
+<div class="fa"><b>انکار (Denial):</b> <b>رد کردن واقعیت بیرونی</b> که اضطراب‌زا است. فرد وجود یک رویداد یا واقعیت دردناک را <b>انکار</b> می‌کند.</div>
+<div class="fa"><b>مثال:</b> فردی که پس از تشخیص بیماری لاعلاج، می‌گوید «اشتباه شده، من سالم هستم».</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> انکار از <b>مکانیسم‌های نابالغ</b> محسوب می‌شود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بازگشت / عقب‌نشینی</h3></div>
+<div class="fa"><b>بازگشت (Regression):</b> <b>بازگشت به رفتارهای کودکانه</b> و <b>مراحل قبلی رشد</b> در مواجهه با استرس است.</div>
+<div class="fa"><b>مثال:</b> کودک چهارساله‌ای که پس از تولد خواهر/برادرش، دوباره شیشه‌شیر می‌خورد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> بازگشت از <b>مکانیسم‌های نابالغ</b> است.
+</div>
+<div class="fa"><b>عقب‌نشینی (Withdrawal):</b> <b>کناره‌گیری</b> از موقعیت‌های استرس‌زا یا <b>انزوای اجتماعی</b> است.</div>
+<div class="fa"><b>مثال:</b> دانشجویی که پس از شکست در امتحان، از دوستانش فاصله می‌گیرد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دلیل‌تراشی</h3></div>
+<div class="fa"><b>دلیل‌تراشی (Rationalization):</b> استفاده از <b>استدلال‌های منطقی و پذیرفتنی</b> برای <b>توجیه رفتار یا احساسات غیرموجه</b> است.</div>
+<div class="fa"><b>مثال:</b> فردی که در امتحان رد شده، می‌گوید «استاد سؤال‌های غیرمنصفانه داده بود».</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>واکنش معکوس / عکس‌العمل‌سازی</h3></div>
+<div class="fa"><b>واکنش‌سازی (Reaction Formation):</b> ابراز <b>احساسات و رفتارهایی کاملاً متضاد</b> با آنچه فرد واقعاً احساس می‌کند.</div>
+<div class="fa"><b>مثال:</b> فردی که از کسی متنفر است، به‌طور اغراق‌آمیز به او محبت می‌کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> واکنش‌سازی <b>ناهشیار</b> است؛ فرد آگاه نیست که احساس واقعی‌اش متضاد رفتارش است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تظاهر به بی‌میلی</h3></div>
+<div class="fa"><b>تظاهر به بی‌میلی:</b> <b>انکار هشیار</b> تمایل یا علاقه‌ای است که فرد <b>واقعاً</b> دارد اما <b>نمی‌خواهد</b> بپذیرد.</div>
+<div class="fa"><b>مثال:</b> فردی که به کسی علاقه دارد اما می‌گوید «اصلاً برایم مهم نیست».</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>درون‌فکنی</h3></div>
+<div class="fa"><b>درون‌فکنی (Introjection):</b> <b>جذب ارزش‌ها، ویژگی‌ها یا الگوهای رفتاری دیگران</b> در ساختار «خود» است.</div>
+<div class="fa"><b>مثال:</b> کودکی که ارزش‌های والدینش را بدون بررسی می‌پذیرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> درون‌فکنی <b>نقطه مقابل فرافکنی</b> است. از <b>بیرون</b> به <b>درون</b> عمل می‌کند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرخاشگری / تهاجم</h3></div>
+<div class="fa"><b>پرخاشگری (Aggression):</b> <b>ابراز خشم</b> به‌صورت <b>مستقیم</b> یا <b>غیرمستقیم</b> است.</div>
+<div class="fa"><b>انواع:</b> مستقیم (حمله فیزیکی یا کلامی) — غیرمستقیم (پرخاشگری انفعالی).</div>
+<div class="fa"><b>پرخاشگری انفعالی (Passive-Aggressive):</b> <b>ابراز غیرمستقیم خشم</b> بدون رفتار پرخاشگرانه آشکار.</div>
+<div class="fa"><b>مثال:</b> فردی که با <b>تأخیر عمدی</b> یا <b>فراموشی</b> خشم خود را نشان می‌دهد.</div>
+<div class="fa"><b>تهاجم (Acting Out):</b> <b>ابراز رفتار فیزیکی</b> به‌جای <b>صحبت کردن</b> درباره احساسات است.</div>
+<div class="fa"><b>مثال:</b> فردی که به‌جای گفتن «عصبانی‌ام»، به دیوار مشت می‌کوبد.</div>
+</div>
+</section>
+
+<!-- ========== مفاهیم ========== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مکانیسم رو با تعریف ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) تعریف مکانیسم‌های دفاعی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>مکانیسم‌های دفاعی</b> فرآیندهای <b>ناهشیار و خودکار</b> هستند که <b>ego (خود)</b> برای محافظت از فرد در برابر <b>اضطراب</b>، <b>تعارض درونی</b> و <b>تهدیدهای واقعیت</b> به کار می‌گیرد.</div>
+<div class="fa"><b>ویژگی‌ها:</b></div>
+<div class="fa">• <b>ناهشیار:</b> فرد از استفاده از آن‌ها آگاه نیست.</div>
+<div class="fa">• <b>خودکار:</b> بدون تصمیم‌گیری هشیار فعال می‌شوند.</div>
+<div class="fa">• <b>تحریف‌کننده واقعیت:</b> واقعیت را به شکلی تغییر می‌دهند که اضطراب کمتری ایجاد کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> همه انسان‌ها از مکانیسم‌های دفاعی استفاده می‌کنند. مشکل زمانی است که <b>نابالغ</b> و <b>انعطاف‌ناپذیر</b> شوند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) واپس‌زنی (Repression)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>اساسی‌ترین و بنیادی‌ترین</b> مکانیسم دفاعی است. در این مکانیسم، <b>افکار، خاطرات یا تکانه‌های اضطراب‌زا</b> به‌صورت <b>ناهشیار</b> از آگاهی رانده می‌شوند.</div>
+<div class="fa"><b>مثال:</b> فردی که خاطره‌ی یک تصادف دردناک را به کلی فراموش می‌کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) تفاوت واپس‌زنی و فروشانی</h3></div>
+<table class="compare">
+<thead><tr><th>واپس‌زنی (Repression)</th><th>فروشانی (Suppression)</th></tr></thead>
+<tbody>
+<tr><td><b>ناهشیار</b></td><td><b>هشیار</b></td></tr>
+<tr><td>غیرارادی</td><td>ارادی</td></tr>
+<tr><td>مثال: فراموشی خاطره تروما</td><td>مثال: «فعلاً به آن فکر نمی‌کنم»</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فروید واپس‌زنی را <b>سنگ زیربنای روان‌کاوی</b> می‌دانست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) سرکوب کردن (Suppression)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>ممانعت هشیار</b> از ظهور تمایلات است. فرد <b>آگاهانه</b> تصمیم می‌گیرد به موضوعی فکر نکند.</div>
+<div class="fa"><b>تفاوت با واپس‌زنی:</b> سرکوب <b>هشیار</b>؛ واپس‌زنی <b>ناهشیار</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) جابه‌جایی (Displacement)</h3></div>
+<div class="fa"><b>تعریف:</b> انتقال <b>تکانه یا هیجان اضطراب‌زا</b> از یک <b>هدف تهدیدکننده</b> به یک <b>هدف امن‌تر و قابل‌پذیرش‌تر</b> است.</div>
+<div class="fa"><b>مثال:</b> فردی که از رئیس خود عصبانی است، اما خشم خود را سر همسرش خالی می‌کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> در جابه‌جایی، <b>هدف</b> تغییر می‌کند اما <b>هیجان</b> همان است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶) جانشینی (Substitution)</h3></div>
+<div class="fa"><b>تعریف:</b> جایگزینی یک <b>هدف غیرقابل‌دسترس</b> با یک <b>هدف قابل‌دسترس</b> است.</div>
+<div class="fa"><b>مثال:</b> فردی که نمی‌تواند پزشک شود، به پرستاری روی می‌آورد.</div>
+<div class="fa"><b>تفاوت با جابه‌جایی:</b> جابه‌جایی <b>هیجان</b> را منتقل می‌کند؛ جانشینی <b>هدف</b> را جایگزین می‌کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۷) فرافکنی (Projection)</h3></div>
+<div class="fa"><b>تعریف:</b> نسبت دادن <b>احساسات، امیال یا تکانه‌های نامطلوب خود</b> به <b>دیگران</b> است.</div>
+<div class="fa"><b>مثال:</b> فردی که از دیگران متنفر است، می‌گوید «همه از من متنفرند».</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> فرافکنی <b>نقطه مقابل درون‌فکنی</b> است. در فرافکنی، فرد <b>نمی‌پذیرد</b> که آن احساس متعلق به خودش است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۸) تفاوت فرافکنی و درون‌فکنی</h3></div>
+<table class="compare">
+<thead><tr><th>فرافکنی (Projection)</th><th>درون‌فکنی (Introjection)</th></tr></thead>
+<tbody>
+<tr><td>از <b>درون</b> به <b>بیرون</b></td><td>از <b>بیرون</b> به <b>درون</b></td></tr>
+<tr><td>نسبت دادن احساسات خود به دیگران</td><td>جذب ارزش‌های دیگران</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۹) جبران (Compensation)</h3></div>
+<div class="fa"><b>تعریف:</b> تلاش برای <b>پوشاندن ضعف</b> در یک حوزه با <b>قدرت</b> در حوزه دیگر است.</div>
+<div class="fa"><b>مثال:</b> فردی که در ورزش ضعیف است، در درس قوی می‌شود.</div>
+<div class="fa"><b>انواع جبران:</b></div>
+<div class="fa">• <b>مستقیم:</b> تلاش برای جبران در همان حوزه.</div>
+<div class="fa">• <b>غیرمستقیم:</b> جبران در حوزه دیگر.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰) تلافی (Undoing)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>خنثی‌کردن</b> گفتار یا اعمال ناخوشایند قبلی با <b>رفتار یا آیین خاص</b> است.</div>
+<div class="fa"><b>مثال:</b> فردی که فکر گناه‌آلودی داشته، برای جبران آن دعا می‌خواند.</div>
+<div class="fa"><b>تفاوت با جبران:</b> جبران <b>پوشاندن ضعف</b>؛ تلافی <b>خنثی‌کردن عمل قبلی</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۱) خیالبافی (Fantasy)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>پناه بردن به تخیلات</b> برای فرار از واقعیت‌های ناخوشایند است.</div>
+<div class="fa"><b>مثال:</b> فردی که در زندگی واقعی موفق نیست، در خیال خود را <b>قهرمان</b> می‌بیند.</div>
+<div class="fa"><b>انواع:</b></div>
+<div class="fa">• <b>سازنده:</b> خیالپردازی برای <b>برنامه‌ریزی</b> آینده.</div>
+<div class="fa">• <b>ناسازگارانه:</b> خیالپردازی برای <b>فرار</b> از واقعیت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۲) رویاپرستی (Dreaming)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>پناه بردن به رویا</b> برای فرار از واقعیت است.</div>
+<div class="fa"><b>تفاوت با خیالبافی:</b> خیالبافی <b>هشیار</b>؛ رویا <b>ناهشیار</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۳) همانندسازی (Identification)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>الگوبرداری ناهشیار</b> از افکار، رفتار یا ویژگی‌های فرد دیگر است.</div>
+<div class="fa"><b>مثال:</b> کودکی که از پدرش الگوبرداری می‌کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> همانندسازی <b>نقطه مقابل درون‌فکنی</b> است. درون‌فکنی <b>جذب کامل</b> ارزش‌ها؛ همانندسازی <b>الگوبرداری</b> از جنبه‌های خاص.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۴) همسان‌گری</h3></div>
+<div class="fa"><b>تعریف:</b> <b>همانندسازی</b> با یک <b>گروه</b> یا <b>الگو</b> است.</div>
+<div class="fa"><b>مثال:</b> نوجوانی که با گروه همسالان خود همسان می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۵) انکار (Denial)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>رد کردن واقعیت بیرونی</b> که اضطراب‌زا است. فرد وجود یک رویداد یا واقعیت دردناک را <b>انکار</b> می‌کند.</div>
+<div class="fa"><b>مثال:</b> فردی که پس از تشخیص بیماری لاعلاج، می‌گوید «اشتباه شده، من سالم هستم».</div>
+<div class="fa"><b>تفاوت با واپس‌زنی:</b> در انکار، <b>واقعیت بیرونی</b> رد می‌شود؛ در واپس‌زنی، <b>خاطره یا تکانه درونی</b> از آگاهی رانده می‌شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> انکار از <b>مکانیسم‌های نابالغ</b> محسوب می‌شود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۶) بازگشت (Regression)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>بازگشت به رفتارهای کودکانه</b> و <b>مراحل قبلی رشد</b> در مواجهه با استرس است.</div>
+<div class="fa"><b>مثال:</b> کودک چهارساله‌ای که پس از تولد خواهر/برادرش، دوباره شیشه‌شیر می‌خورد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> بازگشت از <b>مکانیسم‌های نابالغ</b> است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۷) عقب‌نشینی (Withdrawal)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>کناره‌گیری</b> از موقعیت‌های استرس‌زا یا <b>انزوای اجتماعی</b> است.</div>
+<div class="fa"><b>مثال:</b> دانشجویی که پس از شکست در امتحان، از دوستانش فاصله می‌گیرد.</div>
+<div class="fa"><b>تفاوت با بازگشت:</b> بازگشت <b>رفتار کودکانه</b>؛ عقب‌نشینی <b>کناره‌گیری</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۸) دلیل‌تراشی (Rationalization)</h3></div>
+<div class="fa"><b>تعریف:</b> استفاده از <b>استدلال‌های منطقی و پذیرفتنی</b> برای <b>توجیه رفتار یا احساسات غیرموجه</b> است.</div>
+<div class="fa"><b>مثال:</b> فردی که در امتحان رد شده، می‌گوید «استاد سؤال‌های غیرمنصفانه داده بود».</div>
+<div class="fa"><b>تفاوت با عقلانی‌سازی (Intellectualization):</b> در دلیل‌تراشی، فرد <b>اشتباه خود</b> را توجیه می‌کند؛ در عقلانی‌سازی، فرد از <b>احساسات</b> خود فاصله می‌گیرد و بر <b>جنبه‌های عقلانی</b> تمرکز می‌کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۹) واکنش‌سازی (Reaction Formation)</h3></div>
+<div class="fa"><b>تعریف:</b> ابراز <b>احساسات و رفتارهایی کاملاً متضاد</b> با آنچه فرد واقعاً احساس می‌کند.</div>
+<div class="fa"><b>مثال:</b> فردی که از کسی متنفر است، به‌طور اغراق‌آمیز به او محبت می‌کند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> رفتار <b>اغراق‌آمیز</b> و <b>غیرطبیعی</b> است. واکنش‌سازی <b>ناهشیار</b> است؛ فرد <b>آگاه نیست</b> که احساس واقعی‌اش متضاد رفتارش است. تفاوت با تظاهر: تظاهر <b>هشیار</b> و <b>ارادی</b> است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۰) تظاهر به بی‌میلی</h3></div>
+<div class="fa"><b>تعریف:</b> <b>انکار هشیار</b> تمایل یا علاقه‌ای است که فرد <b>واقعاً</b> دارد اما <b>نمی‌خواهد</b> بپذیرد.</div>
+<div class="fa"><b>مثال:</b> فردی که به کسی علاقه دارد اما می‌گوید «اصلاً برایم مهم نیست».</div>
+<div class="fa"><b>تفاوت با واکنش‌سازی:</b> واکنش‌سازی <b>ناهشیار</b>؛ تظاهر به بی‌میلی <b>هشیار</b> و <b>ارادی</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۱) درون‌فکنی (Introjection)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>جذب ارزش‌ها، ویژگی‌ها یا الگوهای رفتاری دیگران</b> در ساختار «خود» است.</div>
+<div class="fa"><b>مثال:</b> کودکی که ارزش‌های والدینش را بدون بررسی می‌پذیرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> درون‌فکنی <b>نقطه مقابل فرافکنی</b> است. از <b>بیرون</b> به <b>درون</b> عمل می‌کند. تفاوت با همانندسازی: درون‌فکنی <b>جذب کامل</b> ارزش‌ها؛ همانندسازی <b>الگوبرداری</b> از جنبه‌های خاص.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۲) پرخاشگری (Aggression)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>ابراز خشم</b> به‌صورت <b>مستقیم</b> یا <b>غیرمستقیم</b> است.</div>
+<div class="fa"><b>انواع:</b></div>
+<div class="fa">• <b>مستقیم:</b> حمله فیزیکی یا کلامی.</div>
+<div class="fa">• <b>غیرمستقیم:</b> پرخاشگری انفعالی (Passive-Aggressive).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۳) پرخاشگری انفعالی (Passive-Aggressive)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>ابراز غیرمستقیم خشم</b> بدون رفتار پرخاشگرانه آشکار است.</div>
+<div class="fa"><b>مثال:</b> فردی که با <b>تأخیر عمدی</b> یا <b>فراموشی</b> خشم خود را نشان می‌دهد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> پرخاشگری انفعالی از <b>نابالغ‌ترین</b> مکانیسم‌هاست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۴) تهاجم (Acting Out)</h3></div>
+<div class="fa"><b>تعریف:</b> <b>ابراز رفتار فیزیکی</b> به‌جای <b>صحبت کردن</b> درباره احساسات است.</div>
+<div class="fa"><b>مثال:</b> فردی که به‌جای گفتن «عصبانی‌ام»، به دیوار مشت می‌کوبد.</div>
+<div class="fa"><b>تفاوت با پرخاشگری:</b> تهاجم <b>رفتار فیزیکی</b>؛ پرخاشگری <b>می‌تواند کلامی باشد</b>.</div>
+</div>
+</section>
+
+<!-- ========== تفاوت‌ها ========== -->
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>واپس‌زنی vs سرکوب</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>واپس‌زنی</th><th>سرکوب</th></tr></thead>
+<tbody>
+<tr><td>ناهشیار</td><td>هشیار</td></tr>
+<tr><td>غیرارادی</td><td>ارادی</td></tr>
+<tr><td>فراموشی خاطره تروما</td><td>«فعلاً به آن فکر نمی‌کنم»</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جابه‌جایی vs جانشینی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>جابه‌جایی</th><th>جانشینی</th></tr></thead>
+<tbody>
+<tr><td>انتقال <b>هیجان</b> به هدف امن‌تر</td><td>جایگزینی <b>هدف</b> غیرقابل‌دسترس</td></tr>
+<tr><td>خشم سر همسر</td><td>پرستاری به‌جای پزشکی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرافکنی vs درون‌فکنی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>فرافکنی</th><th>درون‌فکنی</th></tr></thead>
+<tbody>
+<tr><td>از درون به بیرون</td><td>از بیرون به درون</td></tr>
+<tr><td>نسبت دادن احساسات خود به دیگران</td><td>جذب ارزش‌های دیگران</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جبران vs تلافی</h3></div>
+<table class="compare">
+<thead><tr><th>جبران</th><th>تلافی</th></tr></thead>
+<tbody>
+<tr><td>پوشاندن <b>ضعف</b></td><td>خنثی‌کردن <b>عمل قبلی</b></td></tr>
+<tr><td>قوی شدن در درس</td><td>دعا پس از فکر گناه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انکار vs واپس‌زنی</h3></div>
+<table class="compare">
+<thead><tr><th>انکار</th><th>واپس‌زنی</th></tr></thead>
+<tbody>
+<tr><td>رد <b>واقعیت بیرونی</b></td><td>راندن <b>خاطره یا تکانه درونی</b></td></tr>
+<tr><td>«من بیمار نیستم»</td><td>فراموشی تروما</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بازگشت vs عقب‌نشینی</h3></div>
+<table class="compare">
+<thead><tr><th>بازگشت</th><th>عقب‌نشینی</th></tr></thead>
+<tbody>
+<tr><td>رفتار <b>کودکانه</b></td><td><b>کناره‌گیری</b> از موقعیت</td></tr>
+<tr><td>شیشه‌شیر در ۴ سالگی</td><td>انزوا پس از شکست</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دلیل‌تراشی vs عقلانی‌سازی</h3></div>
+<table class="compare">
+<thead><tr><th>دلیل‌تراشی</th><th>عقلانی‌سازی</th></tr></thead>
+<tbody>
+<tr><td>توجیه <b>اشتباه خود</b></td><td>فاصله از <b>احساسات</b></td></tr>
+<tr><td>«استاد غیرمنصف بود»</td><td>تمرکز بر جنبه‌های عقلانی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>واکنش‌سازی vs تظاهر</h3></div>
+<table class="compare">
+<thead><tr><th>واکنش‌سازی</th><th>تظاهر</th></tr></thead>
+<tbody>
+<tr><td><b>ناهشیار</b></td><td><b>هشیار</b></td></tr>
+<tr><td>محبت اغراق‌آمیز به دشمن</td><td>تظاهر ارادی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تظاهر به بی‌میلی vs واکنش‌سازی</h3></div>
+<table class="compare">
+<thead><tr><th>تظاهر به بی‌میلی</th><th>واکنش‌سازی</th></tr></thead>
+<tbody>
+<tr><td><b>هشیار</b></td><td><b>ناهشیار</b></td></tr>
+<tr><td>«برایم مهم نیست»</td><td>محبت اغراق‌آمیز به دشمن</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>درون‌فکنی vs همانندسازی</h3></div>
+<table class="compare">
+<thead><tr><th>درون‌فکنی</th><th>همانندسازی</th></tr></thead>
+<tbody>
+<tr><td>جذب <b>کامل</b> ارزش‌ها</td><td>الگوبرداری از <b>جنبه‌های خاص</b></td></tr>
+<tr><td>پذیرش ارزش‌های والدین</td><td>تقلید از پدر</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرخاشگری vs تهاجم</h3></div>
+<table class="compare">
+<thead><tr><th>پرخاشگری</th><th>تهاجم</th></tr></thead>
+<tbody>
+<tr><td>می‌تواند <b>کلامی</b> باشد</td><td><b>رفتار فیزیکی</b></td></tr>
+<tr><td>حمله کلامی</td><td>مشت به دیوار</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ========== نظریه‌پردازان ========== -->
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان</h2>
+<p class="section-sub">هر کی چی گفته + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>زیگموند فروید — بنیان‌گذار روان‌کاوی و مفهوم مکانیسم‌های دفاعی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نام اصلی:</b> Sigmund Freud</div>
+<div class="fa"><b>مفهوم:</b> Defense Mechanisms</div>
+<div class="fa"><b>ایده اصلی:</b> مکانیسم‌های دفاعی فرآیندهای <b>ناهشیار و خودکار</b> هستند که <b>ego</b> برای محافظت از فرد در برابر <b>اضطراب</b>، <b>تعارض درونی</b> و <b>تهدیدهای واقعیت</b> به کار می‌گیرد.</div>
+<div class="fa"><b>نکته مهم:</b> فروید <b>واپس‌زنی</b> را <b>سنگ زیربنای روان‌کاوی</b> و <b>اساسی‌ترین مکانیسم دفاعی</b> می‌دانست.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فروید بنیان‌گذار روان‌کاوی است. این را با پینل (درمان اخلاقی) اشتباه نگیر.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آنا فروید — بسط و طبقه‌بندی مکانیسم‌های دفاعی</h3></div>
+<div class="fa"><b>نام اصلی:</b> Anna Freud</div>
+<div class="fa"><b>مفهوم:</b> The Ego and the Mechanisms of Defense (1936)</div>
+<div class="fa"><b>ایده اصلی:</b> آنا فروید مکانیسم‌های دفاعی را <b>سیستماتیک</b> کرد و آن‌ها را به سطوح <b>بالغ، نوروتیک و نابالغ</b> طبقه‌بندی کرد.</div>
+<div class="fa"><b>ارتباط با فصل:</b> جدول جامع مکانیسم‌های دفاعی در این فصل بر اساس سطح‌بندی (نوروتیک/نابالغ) تدوین شده است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آنا فروید دختر زیگموند فروید و بسط‌دهنده نظریه مکانیسم‌های دفاعی است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جورج والیانت — طبقه‌بندی سطوح دفاعی</h3></div>
+<div class="fa"><b>نام اصلی:</b> George Vaillant</div>
+<div class="fa"><b>مفهوم:</b> Defense Mechanism Levels</div>
+<div class="fa"><b>ایده اصلی:</b> والیانت مکانیسم‌های دفاعی را به چهار سطح طبقه‌بندی کرد: <b>روان‌پریشی</b>، <b>نابالغ</b>، <b>نوروتیک</b> و <b>بالغ</b>.</div>
+<div class="fa"><b>ارتباط با فصل:</b> والایش (Sublimation) به‌عنوان <b>بالغ‌ترین</b> مکانیسم دفاعی شناخته می‌شود.</div>
+</div>
+</section>
+
+<!-- ========== دام‌ها ========== -->
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: واپس‌زنی vs سرکوب</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> واپس‌زنی <b>ناهشیار</b> و <b>غیرارادی</b> / سرکوب <b>هشیار</b> و <b>ارادی</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: جابه‌جایی vs جانشینی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> جابه‌جایی <b>هیجان</b> را منتقل می‌کند؛ جانشینی <b>هدف</b> را جایگزین می‌کند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: فرافکنی vs درون‌فکنی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو جابه‌جا می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> فرافکنی از <b>درون به بیرون</b> / درون‌فکنی از <b>بیرون به درون</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: جبران vs تلافی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> جبران <b>پوشاندن ضعف</b> / تلافی <b>خنثی‌کردن عمل قبلی</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: انکار vs واپس‌زنی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> انکار <b>رد واقعیت بیرونی</b> / واپس‌زنی <b>راندن خاطره یا تکانه درونی</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: بازگشت vs عقب‌نشینی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو جابه‌جا می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> بازگشت <b>رفتار کودکانه</b> / عقب‌نشینی <b>کناره‌گیری</b> از موقعیت.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: دلیل‌تراشی vs عقلانی‌سازی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> دلیل‌تراشی <b>توجیه اشتباه خود</b> / عقلانی‌سازی <b>فاصله از احساسات</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: واکنش‌سازی vs تظاهر</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> واکنش‌سازی <b>ناهشیار</b> / تظاهر <b>هشیار</b> و <b>ارادی</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: تظاهر به بی‌میلی vs واکنش‌سازی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو جابه‌جا می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> تظاهر به بی‌میلی <b>هشیار</b> / واکنش‌سازی <b>ناهشیار</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: درون‌فکنی vs همانندسازی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> درون‌فکنی <b>جذب کامل ارزش‌ها</b> / همانندسازی <b>الگوبرداری از جنبه‌های خاص</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: پرخاشگری vs تهاجم</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> پرخاشگری <b>می‌تواند کلامی باشد</b> / تهاجم <b>رفتار فیزیکی</b>.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: واپس‌زنی — بنیادی‌ترین</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی انکار بنیادی‌ترین است.</div>
+<div class="fa"><b>جواب درست:</b> <b>واپس‌زنی</b> اساسی‌ترین و بنیادی‌ترین مکانیسم دفاعی است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: بالغ‌ترین vs نابالغ‌ترین</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو جابه‌جا می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> <b>والایش</b> بالغ‌ترین / <b>انکار و بازگشت</b> از نابالغ‌ترین.</div>
+</div>
+</section>
+
+<!-- ========== کوییز ========== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل ششم — مکانیسم‌های دفاعی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · مشاوره بهداشت روانی · فصل ششم: مکانیسم‌های دفاعی — بر اساس کتاب بهداشت روانی میلانی‌فر</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"کدام مکانیسم دفاعی «بنیادی‌ترین» محسوب می‌شود؟",options:["انکار","جابه‌جایی","واپس‌زنی","والایش"],answer:2,explanation:"واپس‌زنی اساسی‌ترین و بنیادی‌ترین مکانیسم دفاعی است."},
+{q:"تفاوت «واپس‌زنی» و «سرکوب» چیست؟",options:["مترادف هستند","واپس‌زنی ناهشیار؛ سرکوب هشیار","واپس‌زنی هشیار","هیچ تفاوتی ندارند"],answer:1,explanation:"واپس‌زنی ناهشیار و غیرارادی؛ سرکوب هشیار و ارادی."},
+{q:"کدام مکانیسم از «بالغ‌ترین» محسوب می‌شود؟",options:["انکار","والایش","فرافکنی","تهاجم"],answer:1,explanation:"والایش بالغ‌ترین مکانیسم دفاعی است."},
+{q:"کدام مکانیسم از «نابالغ‌ترین» محسوب می‌شود؟",options:["والایش","طنز","انکار","پیش‌بینی"],answer:2,explanation:"انکار از مکانیسم‌های نابالغ است."},
+{q:"کدام مکانیسم «ناهشیار» است؟",options:["سرکوب","تظاهر به بی‌میلی","واکنش‌سازی","فروشانی"],answer:2,explanation:"واکنش‌سازی ناهشیار است؛ فرد آگاه نیست که احساس واقعی‌اش متضاد رفتارش است."},
+{q:"فردی که از رئیسش عصبانی است اما خشم خود را سر همسرش خالی می‌کند، از کدام مکانیسم استفاده می‌کند؟",options:["فرافکنی","جابه‌جایی","انکار","والایش"],answer:1,explanation:"جابه‌جایی = انتقال هیجان به هدف امن‌تر."},
+{q:"فردی که از دیگران متنفر است اما می‌گوید «همه از من متنفرند»، از کدام مکانیسم استفاده می‌کند؟",options:["درون‌فکنی","فرافکنی","واکنش‌سازی","دلیل‌تراشی"],answer:1,explanation:"فرافکنی = نسبت دادن احساسات خود به دیگران."},
+{q:"فردی که از کسی متنفر است اما به‌طور اغراق‌آمیز به او محبت می‌کند، از کدام مکانیسم استفاده می‌کند؟",options:["فرافکنی","واکنش‌سازی","جابه‌جایی","والایش"],answer:1,explanation:"واکنش‌سازی = ابراز احساسات متضاد."},
+{q:"کودکی که پس از تولد خواهرش دوباره شیشه‌شیر می‌خورد، از کدام مکانیسم استفاده می‌کند؟",options:["واپس‌زنی","بازگشت","انکار","دلیل‌تراشی"],answer:1,explanation:"بازگشت = رفتار کودکانه در مواجهه با استرس."},
+{q:"فردی که در امتحان رد شده و می‌گوید «استاد سؤال غیرمنصفانه داده بود»، از کدام مکانیسم استفاده می‌کند؟",options:["انکار","دلیل‌تراشی","فرافکنی","والایش"],answer:1,explanation:"دلیل‌تراشی = توجیه اشتباه خود."},
+{q:"تفاوت «جابه‌جایی» و «جانشینی» چیست؟",options:["مترادف هستند","جابه‌جایی انتقال هیجان؛ جانشینی جایگزینی هدف","جانشینی انتقال هیجان","هیچ تفاوتی ندارند"],answer:1,explanation:"جابه‌جایی انتقال هیجان؛ جانشینی جایگزینی هدف."},
+{q:"تفاوت «فرافکنی» و «درون‌فکنی» چیست؟",options:["مترادف هستند","فرافکنی درون به بیرون؛ درون‌فکنی بیرون به درون","درون‌فکنی درون به بیرون","هیچ تفاوتی ندارند"],answer:1,explanation:"فرافکنی درون به بیرون؛ درون‌فکنی بیرون به درون."},
+{q:"تفاوت «جبران» و «تلافی» چیست؟",options:["مترادف هستند","جبران پوشاندن ضعف؛ تلافی خنثی‌کردن عمل قبلی","تلافی پوشاندن ضعف","هیچ تفاوتی ندارند"],answer:1,explanation:"جبران پوشاندن ضعف؛ تلافی خنثی‌کردن عمل قبلی."},
+{q:"تفاوت «واکنش‌سازی» و «تظاهر به بی‌میلی» چیست؟",options:["مترادف هستند","واکنش‌سازی ناهشیار؛ تظاهر به بی‌میلی هشیار","واکنش‌سازی هشیار","هیچ تفاوتی ندارند"],answer:1,explanation:"واکنش‌سازی ناهشیار؛ تظاهر به بی‌میلی هشیار."},
+{q:"تفاوت «بازگشت» و «عقب‌نشینی» چیست؟",options:["مترادف هستند","بازگشت رفتار کودکانه؛ عقب‌نشینی کناره‌گیری","عقب‌نشینی رفتار کودکانه","هیچ تفاوتی ندارند"],answer:1,explanation:"بازگشت رفتار کودکانه؛ عقب‌نشینی کناره‌گیری."},
+{q:"فردی که به‌جای صحبت درباره خشمش، به دیوار مشت می‌کوبد، از کدام مکانیسم استفاده می‌کند؟",options:["والایش","تهاجم","جابه‌جایی","واکنش‌سازی"],answer:1,explanation:"تهاجم = ابراز رفتار فیزیکی به‌جای صحبت کردن."},
+{q:"فردی که با تأخیر عمدی خشم خود را نشان می‌دهد، از کدام مکانیسم استفاده می‌کند؟",options:["پرخاشگری مستقیم","پرخاشگری انفعالی","والایش","جابه‌جایی"],answer:1,explanation:"پرخاشگری انفعالی = ابراز غیرمستقیم خشم."},
+{q:"کودکی که ارزش‌های والدینش را بدون بررسی می‌پذیرد، از کدام مکانیسم استفاده می‌کند؟",options:["فرافکنی","درون‌فکنی","همانندسازی","جبران"],answer:1,explanation:"درون‌فکنی = جذب کامل ارزش‌های دیگران."},
+{q:"فردی که پس از شکست در امتحان، از دوستانش فاصله می‌گیرد، از کدام مکانیسم استفاده می‌کند؟",options:["بازگشت","عقب‌نشینی","انکار","جبران"],answer:1,explanation:"عقب‌نشینی = کناره‌گیری از موقعیت."},
+{q:"کدام مکانیسم «نقطه مقابل فرافکنی» است؟",options:["همانندسازی","درون‌فکنی","جبران","تلافی"],answer:1,explanation:"درون‌فکنی نقطه مقابل فرافکنی است."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

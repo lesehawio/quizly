@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · ایمان دینی، انسان و جهان معاصر · سری 09</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"09";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>ایمان دینی، انسان و جهان معاصر · سری 09</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>ایمان دینی، انسان و جهان معاصر</h2>
+  <p>جزوه جامع امتحانی · تعریف ساده + نکته امتحانی + دام آزمون · ویژه آزمون چهارگزینه‌ای پیام نور</p>
+  <div class="pills"><span class="pill">۷ بخش</span><span class="pill">۳ بحران</span><span class="pill">۱۵+ مفهوم کلیدی</span><span class="pill">آماده امتحان</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان ساده و برای آمادگی امتحان چهارگزینه‌ای طراحی شده است. هر مفهوم با تعریف ساده + نکته امتحانی + دام احتمالی ارائه شده است. برای هر سوال چهارگزینه‌ای، این جزوه به شما می‌گوید کدام گزینه درست است و چرا بقیه غلط هستند.</div>
+
+<div class="stats">
+<div class="stat"><b>۷</b><span>بخش اصلی</span></div>
+<div class="stat"><b>۳</b><span>بحران اصلی</span></div>
+<div class="stat"><b>۱۵+</b><span>مفهوم کلیدی</span></div>
+<div class="stat"><b>۴</b><span>مرحله تربیت نفس</span></div>
+</div>
+
+<nav>
+<a href="#goals">اهداف درس</a><a href="#iman">معنای ایمان</a><a href="#moalaghat">متعلقات ایمان</a><a href="#spirituality">ایمان و معنویت</a><a href="#crises">بحران‌ها و راه‌حل</a><a href="#traps">دام‌های آزمون</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="goals" class="section">
+<h2 class="section-title">۰۱ · اهداف درس</h2>
+<p class="section-sub">قبل از هر چیز باید بدانید این درس چه می‌خواهد</p>
+
+<div class="card">
+<div class="card-head"><h3>هدف کلی درس</h3></div>
+<div class="fa"><b>هدف کلی:</b> آشنایی دانشجو با ایمان دینی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهداف جزئی</h3></div>
+<div class="fa">۱. آشنایی با مفهوم ایمان</div>
+<div class="fa">۲. آشنایی با موضوعات و متعلقات ایمان</div>
+<div class="fa">۳. تبیین نقش ایمان در حل بحران‌های اخلاقی، معرفتی و روانی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۳ بحران اصلی = اخلاقی + معرفتی + روانی. اگر سوال پرسید «نقش ایمان در حل کدام بحران‌ها مطرح می‌شود؟» این سه را انتخاب کنید.
+</div>
+</div>
+</section>
+
+<section id="iman" class="section">
+<h2 class="section-title">۰۲ · معنای ایمان</h2>
+<p class="section-sub">ایمان در لغت + ایمان در اصطلاح + سه دیدگاه مهم</p>
+
+<div class="card">
+<div class="card-head"><h3>ایمان در لغت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> ایمان از ماده «امن» به معنای تصدیق، وثوق، اعتماد، اقرار و اطمینان قلبی و باطنی است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ایمان در لغت = تصدیق + اعتماد + اطمینان قلبی. اگر سوال پرسید «ایمان در لغت به چه معناست؟» این مفاهیم را مدنظر داشته باشید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تجلی ایمان در رفتار</h3></div>
+<div class="fa"><b>تعریف ساده:</b> ایمان در اخلاق، اعمال و رفتار شخص مؤمن تجلی می‌یابد.</div>
+<div class="fa"><b>نمونه‌های تجلی:</b></div>
+<div class="fa">- صدور اعمال صالح</div>
+<div class="fa">- جهاد در راه خدا با مال و جان</div>
+<div class="fa">- وقار و طمأنینه</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ایمان فقط یک حالت قلبی نیست، در رفتار هم تجلی می‌یابد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ایمان در اصطلاح — سه دیدگاه</h3></div>
+<table class="compare">
+<thead><tr><th>دیدگاه</th><th>طرفداران</th><th>محتوا</th></tr></thead>
+<tbody>
+<tr><td>۱. فقط عمل قلب</td><td>برخی</td><td>ایمان = یقین قلبی به خدا و پیامبر و هر آنچه پیامبر آورده است. اقرار به زبان ضرورت ندارد؛ اقرار و عمل از لوازم ایمان‌اند نه خود ایمان.</td></tr>
+<tr><td>۲. فقط اقرار زبانی</td><td>گروهی دیگر</td><td>ایمان = گفتن شهادتین. تصدیق قلبی و انجام اعمال شرط ایمان نیست.</td></tr>
+<tr><td>۳. تصدیق قلب + اقرار زبان</td><td>خواجه نصیرالدین طوسی، علامه حلی و برخی علمای شیعه</td><td>ایمان = تصدیق به قلب و اقرار به زبان. مراد از تصدیق، معرفت است.</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خواجه نصیرالدین طوسی و علامه حلی = دیدگاه سوم (تصدیق قلب + اقرار زبان). اگر سوال پرسید «کدام دیدگاه به خواجه نصیر نسبت داده می‌شود؟» جواب: دیدگاه سوم.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> دیدگاه اول (فقط عمل قلب) را به خواجه نصیر نسبت ندهید. او دیدگاه سوم را قبول دارد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعریف جامع ایمان</h3></div>
+<div class="fa"><b>تعریف ساده:</b> ایمان تصدیق و پذیرش قلبی و باطنی همراه با اختیار و اراده انسان است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ایمان = تصدیق قلبی + اختیار. اگر سوال پرسید «معنای اصطلاحی ایمان چیست؟» جواب: تصدیق قلبی و باطنی همراه با اختیار.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه «تصدیق قلبی بدون اختیار» غلط است. ایمان حتماً با اختیار همراه است.
+</div>
+</div>
+</section>
+
+<section id="moalaghat" class="section">
+<h2 class="section-title">۰۳ · متعلقات ایمان</h2>
+<p class="section-sub">چیزهایی که ایمان به آنها تعلق می‌گیرد</p>
+
+<div class="card">
+<div class="card-head"><h3>مهم‌ترین متعلقات ایمان</h3></div>
+<div class="fa">۱. ایمان به خدا و اسماء و صفات او</div>
+<div class="fa">۲. ایمان به رسالت انبیا که از طرف خداوند برای هدایت انسان‌ها مبعوث شده‌اند</div>
+<div class="fa">۳. ایمان به کتاب‌های آسمانی</div>
+<div class="fa">۴. ایمان به علم غیب؛ عالمی که برخلاف عالم شهادت، با حواس ظاهری و مادی قابل ادراک نیست؛ بلکه با عقل و وحی و شهود باید آن را درک کرد</div>
+<div class="fa">۵. ایمان به معاد و رستاخیز</div>
+<div class="fa">۶. ایمان به امامت امامان به عنوان جانشین پیامبر که از طرف خدا و رسول خدا انتخاب شده‌اند</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> متعلقات ایمان = خدا + رسالت + کتاب‌های آسمانی + غیب + معاد + امامت. اگر سوال پرسید «کدام یک از متعلقات ایمان است؟» این شش مورد را در نظر بگیرید.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> «ایمان به عالم شهادت» جزو متعلقات ایمان نیست؛ متعلق ایمان «عالم غیب» است.
+</div>
+</div>
+</section>
+
+<section id="spirituality" class="section">
+<h2 class="section-title">۰۴ · ایمان و معنویت</h2>
+<p class="section-sub">تعریف معنویت + شاخصه‌های ایمان اسلامی + تفاوت با معنویت هندی</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف معنویت</h3></div>
+<div class="fa"><b>تعریف ساده:</b> معنویت حاصل ایمان و نوعی دل‌بستگی و دلدادگی به خداوند به‌عنوان مبدأ هستی و علت اصلی و پدیدآورنده مخلوقات است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معنویت = حاصل ایمان + دل‌بستگی به خدا. اگر سوال پرسید «معنویت چیست؟» جواب: حاصل ایمان و دل‌بستگی به خدا.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حالت معنویت در انسان</h3></div>
+<div class="fa">- آدمی خود را بنده خدا می‌داند.</div>
+<div class="fa">- به یقین می‌رسد که اصل هستی و هر آنچه در دست اوست، از خداست.</div>
+<div class="fa">- او عین نیاز و احتیاج به خداست.</div>
+<div class="fa">- فقر و نیاز به خداوند، ذات و هویت او را تشکیل می‌دهد.</div>
+<div class="fa">- منهای علت و خداوند هویت و وجودی ندارد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معنویت = احساس بندگی + فقر ذاتی به خدا. اگر سوال پرسید «معنویت چه حالتی در انسان پدید می‌آورد؟» این موارد را مدنظر داشته باشید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شاخصه‌های ایمان و معنویت اسلامی</h3></div>
+<table class="compare">
+<thead><tr><th>شاخصه</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>۱. دعوت انسان به سوی خدا</td><td>بسیاری از معنویت‌های برخاسته از عرفان‌های کاذب و نوظهور، بیش از آنکه خدامحور باشند، انسان‌محور هستند و افراد را به خود دعوت می‌کنند، نه خدا.</td></tr>
+<tr><td>۲. ایمان و معنویت برخاسته از اعتقاد به عالم غیب</td><td>عالم منحصر در عالم ظاهر و طبیعت نیست؛ بلکه عالم غیب حقیقتی دارد بسیار وسیع‌تر و برتر. آیه: «الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ» (بقره/۳)</td></tr>
+<tr><td>۳. هدف‌داری و غایتمندی آفرینش</td><td>جهان و انسان عبث و بیهوده آفریده نشده؛ بلکه کاروان هستی به‌سوی مقصد و هدفی متعالی در حرکت است. آیات: «أَفَحَسِبْتُمْ أَنَّمَا خَلَقْنَاكُمْ عَبَثًا» (مؤمنون/۱۱۵)؛ «وَمَا خَلَقْنَا السَّمَاءَ وَالْأَرْضَ وَمَا بَيْنَهُمَا بَاطِلًا» (ص/۲۷)</td></tr>
+<tr><td>۴. ایمان و معنویت مبتنی بر راهنما</td><td>هدف از بعثت انبیا راهنمایی انسان به سعادت دنیوی و اخروی است. راهنماشناسی یعنی شناخت پیامبران و رسالت آنها و نیز امامان معصوم.</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۴ شاخصه ایمان اسلامی = دعوت به خدا + اعتقاد به غیب + هدف‌داری آفرینش + مبتنی بر راهنما. اگر سوال پرسید «کدام یک از شاخصه‌های ایمان اسلامی است؟» این چهار مورد را در نظر بگیرید.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> معنویت‌های نوظهور انسان‌محور هستند، نه خدامحور. اگر سوال پرسید «معنویت‌های نوظهور چه ویژگی دارند؟» جواب: انسان‌محور.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انسان فطرتاً خداجو</h3></div>
+<div class="fa"><b>تعریف ساده:</b> انسان فطرتاً خداجو و معنویت‌طلب است و ذائقه آدمی براساس اعتقاد به خدا و تقرب به او آفریده شده است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خداجویی = فطری. اگر سوال پرسید «انسان فطرتاً چه چیزی است؟» جواب: خداجو و معنویت‌طلب.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت معنویت اسلامی با معنویت هندی (شهید مطهری)</h3></div>
+<table class="compare">
+<thead><tr><th>معنویت هندی</th><th>روش قرآن</th></tr></thead>
+<tbody>
+<tr><td>برای منصرف کردن ذهن از بیرون و مقهور کردن جنبه جسمانی و متمرکز کردن نیروی ذهنی است.</td><td>از ابتدا با کمک خدا صورت می‌گیرد. قرآن تمرکز را فقط در حضور قلب، یعنی در یاد خدا می‌خواهد.</td></tr>
+<tr><td>سعی می‌کند فشار روی انسان بیاورد و نفس را در محاصره قرار بدهد و آن را متمرکز کند تا حقیقت برایش کشف شود.</td><td>پرهیزکاری را قبول دارد که به‌خاطر خدا باشد؛ یعنی بر مبنای توجه به خدا و کسب رضای او باشد.</td></tr>
+<tr><td>ریاضت و روش را طوری انتخاب می‌کند که درواقع به جای اینکه زندگی انسان معقول باشد، ضد زندگی تمام می‌شود.</td><td>ضامن سعادت دنیوی و اخروی انسان است.</td></tr>
+<tr><td>هیچ‌وقت این روش در دنیا توسعه پیدا نخواهد کرد.</td><td>تک‌بُعدی نیست و در برگیرنده همه شئون زندگی انسان است.</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> معنویت هندی = مقهور کردن جسم + ضد زندگی. روش قرآن = حضور قلب + یاد خدا + ضامن سعادت. اگر سوال پرسید «تفاوت معنویت اسلامی با هندی چیست؟» این دو ویژگی را مدنظر داشته باشید.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> اسلام رهبانیت و معنویت منهای دنیا را نهی کرده است. اگر سوال پرسید «معنویت منهای نیازهای دنیوی در اسلام چه حکمی دارد؟» جواب: نهی شده است (رهیابیت).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات مهم درباره ایمان و معنویت</h3></div>
+<div class="fa">- ایمان و معنویت در اسلام مراتب و درجات دارد و انسان به‌اندازه تلاش و عملکرد خود در درجه‌ای از آن قرار می‌گیرد.</div>
+<div class="fa">- ایمان و معنویت او منافاتی با زندگی دنیوی و نیازهای مادی نداشته باشد.</div>
+<div class="fa">- معنویت منهای توجه به نیازهای دنیوی و مادی، معنویت یک‌سویه است که در اسلام با عنوان «رهیابیت» نهی شده است.</div>
+<div class="fa">- توجه به شئون دنیوی و امور اجتماعی، سیاسی و... در چهارچوب اسلام مرتبه‌ای از ایمان و معنویت است.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ایمان اسلامی مراتب دارد + با دنیا منافات ندارد. اگر سوال پرسید «آیا ایمان اسلامی با دنیا منافات دارد؟» جواب: خیر.
+</div>
+</div>
+</section>
+
+<section id="crises" class="section">
+<h2 class="section-title">۰۵ · بحران‌ها و راه‌حل دین</h2>
+<p class="section-sub">سه بحران اصلی + راه‌حل دین برای هر کدام</p>
+
+<div class="card">
+<div class="card-head"><h3>نیاز انسان معاصر به دین و اخلاق</h3></div>
+<div class="fa"><b>تعریف ساده:</b> امروزه نیاز انسان به دین و اخلاق امری روشن و غیرقابل انکار است.</div>
+<div class="fa"><b>نقش دین:</b> دین درواقع زیرساخت‌های نظری، اعتقادی و عملی اخلاق را فراهم می‌کند و بر انجام اعمال و پایبندی بر احکام و مقررات فقهی در معاملات و عبادات توجه می‌دهد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دین = زیرساخت اخلاق. اگر سوال پرسید «نقش دین در اخلاق چیست؟» جواب: فراهم کردن زیرساخت‌های نظری، اعتقادی و عملی اخلاق.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مبانی‌ای که انسان معاصر را دچار چالش اخلاقی کرد</h3></div>
+<div class="fa">- تأکید بر اصالت سود و فایده در نظریه‌های اخلاقی</div>
+<div class="fa">- لیبرالیسم</div>
+<div class="fa">- اومانیسم</div>
+<div class="fa">- سکولاریسم</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۴ مبنای چالش اخلاقی = اصالت سود + لیبرالیسم + اومانیسم + سکولاریسم. اگر سوال پرسید «کدام یک از مبانی چالش اخلاقی انسان معاصر است؟» این چهار مورد را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه‌حل دین برای بحران اخلاقی</h3></div>
+<div class="fa"><b>تعریف اخلاق:</b> مقصود از اخلاق، مجموعه دستورالعمل‌ها، ارزش‌ها و باید و نبایدهای دینی و وحیانی است که از سوی صاحب دین و شریعت برای سعادت دنیوی و اخروی انسان قرار داده شده است.</div>
+<div class="fa"><b>حدیث پیامبر:</b> «إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ» — من مبعوث شدم که مکارم اخلاق را تمام کنم.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اخلاق = مجموعه باید و نبایدهای دینی. حدیث پیامبر = تتمیم مکارم اخلاق.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راهکار اول: سازندگی روح و جهاد با نفس</h3></div>
+<div class="fa"><b>تعریف ساده:</b> از نظر معارف الهی بالاترین دشمن انسان، نفس اماره اوست که همواره به بدی‌ها امر و تشویق می‌کند.</div>
+<div class="fa"><b>نام مبارزه با نفس:</b> جهاد اکبر</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نفس اماره = بالاترین دشمن / مبارزه با آن = جهاد اکبر. اگر سوال پرسید «بالاترین دشمن انسان چیست؟» جواب: نفس اماره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار مرحله تربیت نفس</h3></div>
+<table class="compare">
+<thead><tr><th>مرحله</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>۱. مشارطه</td><td>انسان با خدای خود عهد و پیمان می‌بندد که گناه نکند؛ دروغ نگوید؛ حقوق دیگران را ضایع نکند و...</td></tr>
+<tr><td>۲. مراقبه</td><td>از هنگام بیداری تا خواب باید مواظب و مراقب خود باشد تا نقض شرط و پیمان نکند.</td></tr>
+<tr><td>۳. محاسبه</td><td>معمولاً در پایان روز و پیش از خواب، درباره همه اعمال و اندیشه‌ها و کارهای آن روز مرور و تفکر کند.</td></tr>
+<tr><td>۴. معاتبه</td><td>در غیر صورت فوق، خود را سرزنش کرده و مورد عتاب و عقاب قرار داده و توبه کند.</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۴ مرحله تربیت نفس = مشارطه + مراقبه + محاسبه + معاتبه. اگر سوال پرسید «ترتیب مراحل تربیت نفس چیست؟» این ترتیب را حفظ کنید.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> ترتیب مراحل را قاطی نکنید. مشارطه اول، معاتبه آخر. اگر سوال پرسید «کدام مرحله اول است؟» جواب: مشارطه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راهکار دوم: دعا و ارتباط با معبود</h3></div>
+<div class="fa"><b>تعریف ساده:</b> در روایات اسلامی دعا را مغز عبادات توصیف کرده‌اند.</div>
+<div class="fa"><b>آیه:</b> «قُلْ مَا يَعْبَأُ بِكُمْ رَبِّي لَوْلَا دُعَاؤُكُمْ» (فرقان/۷۷)</div>
+<div class="fa"><b>نکات مهم در دعا:</b> اخلاص در دعا + مطابقت قلب و زبان + انقطاع از اسباب ظاهری + توسل به خداوند متعال</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دعا = مغز عبادات. اگر سوال پرسید «دعا در روایات چه نامیده شده؟» جواب: مغز عبادات.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه‌حل دین برای بحران معرفتی</h3></div>
+<div class="fa"><b>وضعیت انسان معاصر:</b> تأکید بر اصالت حس و تجربه و پوزیتیویسم، او را به این ورطه کشاند که تنها روش کشف حقیقت، حس و تجربه است و آنچه در دایره تجربه حسی نیست، یا وجود ندارد و یا نمی‌توان درباره آن شناخت به‌دست آورد.</div>
+<div class="fa"><b>نقش کانت:</b> تأملات کانت در محدودیت شناخت بشر به بحران معرفتی غرب شتاب جدیدی داد.</div>
+<div class="fa"><b>ثمره:</b> بریدن و محروم ماندن انسان معاصر از وحی به‌عنوان مطمئن‌ترین وسیله معرفتی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بحران معرفتی = انحصار شناخت در حس و تجربه. اگر سوال پرسید «علت بحران معرفتی انسان معاصر چیست؟» جواب: پوزیتیویسم و انحصار شناخت در حس و تجربه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه‌حل قرآن برای بحران معرفتی</h3></div>
+<div class="fa">۱. قرآن بر اصل واقعیت تأکید دارد: «واقعیتی وجود دارد».</div>
+<div class="fa">۲. قرآن ابزار و منابع شناخت را منحصر در تجربه حسی نمی‌داند: بلکه وحی و عقل را از مهم‌ترین ابزارها و منابع معرفت معرفی می‌کند.</div>
+<div class="fa">۳. قرآن کسانی را که معرفت و شناخت را منحصر در حس می‌دانستند، تخطئه می‌کند.</div>
+<div class="fa">۴. تقسیم عالم به دو عالم غیب و شهادت: عالم شهادت فرع بر عالم غیب است.</div>
+<div class="fa">۵. معرفت حسی — که متعلق به عالم شهادت است — فرع بر معرفت عقلی است که متعلق به عالم غیب است.</div>
+<div class="fa">۶. عقل گرچه برای تجرید و انتزاع مفاهیم کلی از افراد و مصادیق جزئی به کمک حس نیاز دارد، ولی در تشخیص نهایی خود مستقل از حس عمل می‌کند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> راه‌حل قرآن = تأکید بر اصل واقعیت + وحی به‌عنوان منبع معرفتی + معرفت حسی فرع بر معرفت عقلی. اگر سوال پرسید «راه‌حل قرآن برای بحران معرفتی چیست؟» این موارد را مدنظر داشته باشید.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> قرآن معرفت حسی را نفی نمی‌کند، بلکه آن را نیازمند معرفت عقلی می‌داند. اگر سوال پرسید «آیا قرآن حس را نفی می‌کند؟» جواب: خیر، آن را نیازمند عقل می‌داند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه‌حل دین برای بحران روانی</h3></div>
+<div class="fa"><b>وضعیت انسان معاصر:</b> شناخت نادرست و عطف توجه به بعد مادی انسان و غفلت و کنار گذاردن بعد روحی او، از شاخصه‌های انسان‌شناختی دنیای معاصر است.</div>
+<div class="fa"><b>مهم‌ترین نمود بحران روانی:</b> نهیلیسم یعنی احساس بی‌معنایی و پوچی در زندگی که گاهی تظاهر بیرونی آن خود را در قالب خودکشی، دیگرآزاری، ابتذال در نوع پوشش و سبک زندگی، شیطان‌پرستی، اضطراب و افسردگی نشان می‌دهد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بحران روانی = نهیلیسم (پوچی). اگر سوال پرسید «مهم‌ترین نمود بحران روانی چیست؟» جواب: نهیلیسم.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات مهم درباره بحران روانی</h3></div>
+<div class="fa">- روان‌شناسی تجربی اثبات کرده است که ایمان و اخلاق دینی در پیش‌گیری و درمان مشکلات روحی و روانی مؤثر است.</div>
+<div class="fa">- برای حل بحران‌ها باید به سراغ آموزه‌های معنوی و اخلاقی دین رفت و بیماری «غفلت از خداوند» را چاره کرد.</div>
+<div class="fa">- باید بر بازگشت انسان به فطرت اصیل خود یعنی خداجویی و خداباوری تأکید کرد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> راه‌حل بحران روانی = بازگشت به فطرت + ایمان و اخلاق دینی. اگر سوال پرسید «راه‌حل بحران روانی چیست؟» جواب: بازگشت به فطرت خداجو.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نقش آموزه‌های دینی در حل بحران روانی</h3></div>
+<div class="fa">- همه آموزه‌های دینی در راستای بندگی و «در یاد خدا بودن» قرار دارند.</div>
+<div class="fa">- انس با خداوند و یاد او روح امید و شادابی را در انسان زنده می‌کند.</div>
+<div class="fa">- انسان در زمان شکست و ناکامی سر بر آستان خدا نهاده و از او یاری می‌جوید.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> آموزه‌های دینی = یاد خدا. اگر سوال پرسید «همه آموزه‌های دینی در راستای چه چیزی هستند؟» جواب: یاد خدا.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چند امر مهم درباره رنج‌ها</h3></div>
+<div class="fa">- گرفتاری و دشواری در زندگی برای همه انسان‌ها وجود دارد.</div>
+<div class="fa">- گاهی رنج‌ها عامل رشد انسان است: «وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا سَعَى» (نجم/۳۹)</div>
+<div class="fa">- گاهی وسیله امتحان اوست: «وَلَنَبْلُوَنَّكُم بِشَيْءٍ مِّنَ الْخَوْفِ وَالْجُوعِ...» (بقره/۱۵۵)</div>
+<div class="fa">- گاهی گرفتاری انسان نتیجه عملکرد او در همین دنیاست: «وَمَا أَصَابَكُم مِّن مُّصِيبَةٍ فِيمَا كَسَبَتْ أَيْدِيكُمْ» (شوری/۳۰)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> رنج‌ها ۳ نقش دارند = رشد + امتحان + نتیجه عملکرد. اگر سوال پرسید «رنج‌ها چه نقشی در زندگی دارند؟» این سه مورد را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ذکر و یاد خدا</h3></div>
+<div class="fa"><b>تعریف ساده:</b> یاد خدا به‌معنای احساس حضور دائمی در برابر آفریدگار است.</div>
+<div class="fa"><b>نتیجه ذکر:</b> طمأنینه، آرامش، رهایی از اضطراب و دلشورگی، نجات از پوچی و نهیلیسم.</div>
+<div class="fa"><b>آیه:</b> «أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ» (رعد/۲۸)</div>
+<div class="fa"><b>منظور از ذکر:</b> ذکر به معنای عام آن یعنی ذکر زبانی، قلبی، عملی و...</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ذکر = یاد خدا = آرامش قلوب. اگر سوال پرسید «نتیجه ذکر چیست؟» جواب: طمأنینه و آرامش.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> ذکر فقط زبانی نیست، بلکه قلبی و عملی هم هست. اگر سوال پرسید «منظور از ذکر چیست؟» جواب: ذکر زبانی، قلبی و عملی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>علامه طباطبائی درباره ذکر</h3></div>
+<div class="fa"><b>نظر ساده:</b> گمراهی انسان در اعراض و روی‌گردانی از یاد خداست. دنیا و کالاهای آن برای کسی که از یاد خدا اعراض می‌کند، نه حُسنی دارد و نه گشایش و توسعه‌ای در زندگی او ایجاد می‌کند؛ هرچند به ظاهر ثروت و مقام برتری در دنیا داشته باشد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> علامه طباطبائی = گمراهی در اعراض از یاد خداست. اگر سوال پرسید «از دیدگاه علامه طباطبائی گمراهی انسان در چیست؟» جواب: اعراض از یاد خدا.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ثمرات ذکر خدا</h3></div>
+<div class="fa">- امید را در انسان زنده می‌کند.</div>
+<div class="fa">- یأس و ناامیدی را از فرد و جامعه برطرف می‌سازد.</div>
+<div class="fa">- انسان هرگز خود را تنها و رها نمی‌بیند.</div>
+<div class="fa">- انسان در سخت‌ترین شرایط هم نباید امید به خداوند را از دست دهد.</div>
+<div class="fa"><b>آیه:</b> «لَا تَيْأَسُوا مِن رَّوْحِ اللَّهِ إِنَّهُ لَا يَيْأَسُ مِن رَّوْحِ اللَّهِ إِلَّا الْقَوْمُ الْكَافِرُونَ» (یوسف/۸۷)</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ثمرات ذکر = امید + رفع یأس + احساس نبود تنهایی. اگر سوال پرسید «ثمرات ذکر چیست؟» این موارد را در نظر بگیرید.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو راهکار کلی برای درمان بحران‌های روانی</h3></div>
+<div class="fa"><b>۱. در حوزه معرفتی و شناختی:</b> انسان به فطرت خویش بازگردد.</div>
+<div class="fa"><b>۲. در حوزه رفتاری:</b> از کار و کوشش و تفریحات سالم، دعا و توسل به اولیای الهی، توکل و اعتماد بر پروردگار، نماز، روزه و... کمک گیرد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۲ راهکار کلی = بازگشت به فطرت (معرفتی) + عبادات و دعا (رفتاری). اگر سوال پرسید «دو راهکار کلی درمان بحران روانی چیست؟» این دو را انتخاب کنید.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: معنای اصطلاحی ایمان</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ایمان فقط تصدیق قلبی است، بدون اختیار.</div>
+<div class="fa"><b>جواب درست:</b> تصدیق قلبی و باطنی همراه با اختیار</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ایمان = تصدیق قلبی + اختیار
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: دیدگاه خواجه نصیر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی خواجه نصیر فقط عمل قلب را قبول دارد.</div>
+<div class="fa"><b>جواب درست:</b> تصدیق قلب + اقرار زبان</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خواجه نصیر = دیدگاه سوم
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: متعلقات ایمان</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ایمان به عالم شهادت جزو متعلقات ایمان است.</div>
+<div class="fa"><b>جواب درست:</b> ایمان به عالم غیب</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> متعلق ایمان = غیب، نه شهادت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: شاخصه‌های ایمان اسلامی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی یکی از شاخصه‌ها «انسان‌محوری» است.</div>
+<div class="fa"><b>جواب درست:</b> دعوت به خدا (نه به خود)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ایمان اسلامی = خدامحور
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: معنویت هندی vs اسلامی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی معنویت هندی هم مثل اسلامی است.</div>
+<div class="fa"><b>جواب درست:</b> هندی = مقهور کردن جسم + ضد زندگی / اسلامی = حضور قلب + ضامن سعادت</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> هندی = ضد زندگی
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: ترتیب مراحل تربیت نفس</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب مراحل را قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> مشارطه ← مراقبه ← محاسبه ← معاتبه</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> اول مشارطه، آخر معاتبه
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: بحران روانی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بحران روانی فقط افسردگی است.</div>
+<div class="fa"><b>جواب درست:</b> نهیلیسم (پوچی) مهم‌ترین نمود آن است</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بحران روانی = نهیلیسم
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: راه‌حل بحران روانی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط دارو درمانی کافی است.</div>
+<div class="fa"><b>جواب درست:</b> بازگشت به فطرت + ایمان و اخلاق دینی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بازگشت به فطرت
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: ذکر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ذکر فقط زبانی است.</div>
+<div class="fa"><b>جواب درست:</b> ذکر زبانی، قلبی و عملی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ذکر = عام (زبان + قلب + عمل)
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: علامه طباطبائی و گمراهی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی گمراهی از دیدگاه علامه به خاطر فقر است.</div>
+<div class="fa"><b>جواب درست:</b> اعراض از یاد خدا</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گمراهی = اعراض از یاد خدا
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: راه‌حل بحران معرفتی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی قرآن حس را نفی می‌کند.</div>
+<div class="fa"><b>جواب درست:</b> قرآن حس را نیازمند عقل می‌داند</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> حس فرع بر عقل
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: مبانی چالش اخلاقی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط اومانیسم عامل چالش اخلاقی است.</div>
+<div class="fa"><b>جواب درست:</b> اصالت سود + لیبرالیسم + اومانیسم + سکولاریسم</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۴ مبنا
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 09 · ایمان دینی، انسان و جهان معاصر · جزوه جامع امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const searchInput=document.getElementById('search');
+if(searchInput){
+searchInput.addEventListener('input',function(e){
+const q=e.target.value.toLowerCase().trim();
+const cards=document.querySelectorAll('#questionList .question');
+cards.forEach(c=>{
+const text=c.innerText.toLowerCase();
+const searchData=c.dataset.search||'';
+const match=text.includes(q)||searchData.includes(q);
+c.style.display=match?'block':'none';
+});
+});
+}
+
+const quizData = [
+{q:"ایمان در لغت به چه معناست؟",options:["تصدیق و اعتماد و اطمینان قلبی","فقط اقرار زبانی","فقط عمل","علم حصولی"],answer:0,explanation:"ایمان در لغت = تصدیق + اعتماد + اطمینان قلبی."},
+{q:"کدام دیدگاه به خواجه نصیرالدین طوسی نسبت داده می‌شود؟",options:["فقط عمل قلب","فقط اقرار زبانی","تصدیق قلب + اقرار زبان","هیچکدام"],answer:2,explanation:"خواجه نصیر = تصدیق قلب + اقرار زبان."},
+{q:"معنای اصطلاحی ایمان چیست؟",options:["تصدیق قلبی بدون اختیار","تصدیق قلبی و باطنی همراه با اختیار","تصدیق زبانی","عمل صالح"],answer:1,explanation:"ایمان = تصدیق قلبی + اختیار."},
+{q:"کدام یک از متعلقات ایمان است؟",options:["ایمان به عالم شهادت","ایمان به عالم غیب","ایمان به حس","ایمان به تجربه"],answer:1,explanation:"متعلق ایمان = عالم غیب."},
+{q:"معنویت چیست؟",options:["حاصل ایمان و دل‌بستگی به خدا","فقط عبادت","فقط دعا","فقط نماز"],answer:0,explanation:"معنویت = حاصل ایمان + دل‌بستگی به خدا."},
+{q:"کدام یک از شاخصه‌های ایمان اسلامی است؟",options:["انسان‌محوری","دعوت به خدا","مادی‌گرایی","علم‌محوری"],answer:1,explanation:"شاخصه ایمان اسلامی = دعوت به خدا."},
+{q:"تفاوت معنویت اسلامی با هندی چیست؟",options:["اسلامی = ضد زندگی","هندی = ضامن سعادت","اسلامی = حضور قلب و ضامن سعادت","هر دو یکی هستند"],answer:2,explanation:"اسلامی = حضور قلب / هندی = ضد زندگی."},
+{q:"بالاترین دشمن انسان چیست؟",options:["شیطان","نفس اماره","دنیا","مال"],answer:1,explanation:"نفس اماره = بالاترین دشمن."},
+{q:"مبارزه با نفس چه نام دارد؟",options:["جهاد اصغر","جهاد اکبر","جهاد تبیین","جهاد کبیر"],answer:1,explanation:"مبارزه با نفس = جهاد اکبر."},
+{q:"ترتیب مراحل تربیت نفس کدام است؟",options:["مشارطه، مراقبه، محاسبه، معاتبه","مراقبه، مشارطه، محاسبه، معاتبه","محاسبه، مراقبه، مشارطه، معاتبه","معاتبه، محاسبه، مراقبه، مشارطه"],answer:0,explanation:"ترتیب = مشارطه ← مراقبه ← محاسبه ← معاتبه."},
+{q:"دعا در روایات چه نامیده شده است؟",options:["مغز عبادات","قلب عبادات","روح عبادات","پایه عبادات"],answer:0,explanation:"دعا = مغز عبادات."},
+{q:"علت بحران معرفتی انسان معاصر چیست؟",options:["انحصار شناخت در حس و تجربه","تأکید بر وحی","تأکید بر عقل","تأکید بر دین"],answer:0,explanation:"بحران معرفتی = پوزیتیویسم."},
+{q:"راه‌حل قرآن برای بحران معرفتی چیست؟",options:["انحصار در حس","تأکید بر اصل واقعیت + وحی","نفی عقل","نفی حس"],answer:1,explanation:"راه‌حل قرآن = تأکید بر واقعیت + وحی."},
+{q:"مهم‌ترین نمود بحران روانی چیست؟",options:["اضطراب","افسردگی","نهیلیسم (پوچی)","ترس"],answer:2,explanation:"مهم‌ترین نمود = نهیلیسم."},
+{q:"راه‌حل بحران روانی چیست؟",options:["بازگشت به فطرت + ایمان و اخلاق دینی","فقط دارو","فقط روان‌درمانی","فقط تفریح"],answer:0,explanation:"راه‌حل = بازگشت به فطرت + ایمان و اخلاق."},
+{q:"نتیجه ذکر چیست؟",options:["اضطراب","طمأنینه و آرامش","پوچی","افسردگی"],answer:1,explanation:"ذکر = آرامش قلوب."},
+{q:"منظور از ذکر چیست؟",options:["فقط زبانی","فقط قلبی","زبانی، قلبی و عملی","فقط عملی"],answer:2,explanation:"ذکر = عام (زبان + قلب + عمل)."},
+{q:"از دیدگاه علامه طباطبائی گمراهی انسان در چیست؟",options:["فقر","اعراض از یاد خدا","جهل","ضعف"],answer:1,explanation:"گمراهی = اعراض از یاد خدا."},
+{q:"کدام یک از مبانی چالش اخلاقی انسان معاصر است؟",options:["اصالت سود","لیبرالیسم","اومانیسم و سکولاریسم","همه موارد"],answer:3,explanation:"۴ مبنا = اصالت سود + لیبرالیسم + اومانیسم + سکولاریسم."},
+{q:"دو راهکار کلی درمان بحران روانی چیست؟",options:["بازگشت به فطرت + عبادات و دعا","فقط دارو","فقط مشاوره","فقط تفریح"],answer:0,explanation:"۲ راهکار = فطرت (معرفتی) + عبادات و دعا (رفتاری)."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

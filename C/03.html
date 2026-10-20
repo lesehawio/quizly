@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · سنجش و اندازه‌گیری در مشاوره · سری 03 · فصل پنجم: مراحل ارزشیابی آموزشی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"03";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>سنجش و اندازه‌گیری در مشاوره · سری 03</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل پنجم: مراحل و فعالیت‌های ارزشیابی آموزشی</h2>
+  <p>سنجش و اندازه‌گیری در مشاوره — همه چیز به زبان ساده و خودمونی</p>
+  <div class="pills"><span class="pill">هسته امتحانی</span><span class="pill">مفاهیم</span><span class="pill">تفاوت‌ها</span><span class="pill">نظریه‌پردازان</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این فصل درباره‌ی <b>مراحل ارزشیابی آموزشی</b>ه. باید بفهمی سه مرحله‌ی اصلی (طراحی، فرآیندی، فرآورده‌ای) چیه، هر مرحله چه فعالیت‌هایی داره، و ۹ مرحله‌ی پین چیه.</div>
+
+<div class="stats">
+<div class="stat"><b>۳</b><span>مرحله اصلی</span></div>
+<div class="stat"><b>۷</b><span>فعالیت طراحی</span></div>
+<div class="stat"><b>۹</b><span>مرحله پین</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>سه مرحله اصلی ارزشیابی (گی، ۱۹۹۱)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> گی سه مرحله برای ارزشیابی معرفی کرده:</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px;text-align:center">
+<b>طراحی ← فرآیندی ← فرآورده‌ای</b>
+</div>
+<div class="fa"><b>هر مرحله با چه سؤالی سر و کار داره؟</b></div>
+<div class="fa">• <b>طراحی:</b> «چه کاری انجام خواهیم داد؟» (آینده)</div>
+<div class="fa">• <b>فرآیندی:</b> «چگونه آن را انجام می‌دهیم؟» (حال)</div>
+<div class="fa">• <b>فرآورده‌ای:</b> «چگونه آن را انجام دادیم؟» (گذشته)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این سه مرحله + سؤال هر کدوم رو حتماً حفظ کن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلاصه هر مرحله در یک خط</h3></div>
+<div class="fa"><b>طراحی:</b> قبل از اجرا — تصمیم درباره اینکه چه کاری و چطور انجام بشه.</div>
+<div class="fa"><b>فرآیندی:</b> ضمن اجرا — تصمیم درباره اینکه آیا مراحل درست پیش می‌ره و چه تغییراتی لازمه.</div>
+<div class="fa"><b>فرآورده‌ای:</b> بعد از اجرا — تصمیم درباره اثربخشی کلی و اقدامات آینده.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۷ فعالیت مرحله طراحی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa">۱) تحلیل موقعیت</div>
+<div class="fa">۲) تعیین و توصیف هدف‌ها</div>
+<div class="fa">۳) توصیف پیش‌نیازها</div>
+<div class="fa">۴) انتخاب یا تولید وسایل اندازه‌گیری</div>
+<div class="fa">۵) توصیف استراتژی‌ها یا راهبردها</div>
+<div class="fa">۶) انتخاب طرح پژوهشی (در صورت نیاز)</div>
+<div class="fa">۷) تدارک برنامه زمان‌بندی</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ترتیب این ۷ فعالیت رو حفظ کن. معمولاً سوال از ترتیب میاد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۹ مرحله فعالیت‌های ارزشیابی (پین، ۱۹۹۴)</h3></div>
+<div class="fa">۱) تعیین، انتخاب، پالایش یا تغییر غایت‌ها و هدف‌های ارزشیابی</div>
+<div class="fa">۲) مشخص کردن استانداردها / هدف‌ها</div>
+<div class="fa">۳) تهیه طرح ارزشیابی مناسب</div>
+<div class="fa">۴) انتخاب یا تولید روش‌های جمع‌آوری داده‌ها</div>
+<div class="fa">۵) جمع‌آوری داده‌های مناسب</div>
+<div class="fa">۶) پردازش، خلاصه‌کردن و تحلیل داده‌ها</div>
+<div class="fa">۷) مقایسه داده‌ها با استانداردها</div>
+<div class="fa">۸) گزارش و بازخورد دادن از نتایج</div>
+<div class="fa">۹) هزینه-سود / اثربخشی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> این ۹ مرحله رو با ۳ مرحله گی قاطی نکن! پین برای ارزشیابی پروژه‌ها و برنامه‌ها ۹ مرحله داره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات کلیدی که حتماً باید بلد باشی</h3></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱)</b> <b>غایت</b> = هدف کلی / <b>هدف</b> = هدف جزئی و دقیق.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲)</b> <b>هدف فرآیندی</b> = کوشش‌ها و اقدامات ضمن اجرا / <b>هدف فرآورده‌ای</b> = بازده‌ها و نتایج.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳)</b> <b>مرحله فرآورده‌ای</b> = مبنای تصمیمات آینده + ادامه/خاتمه/تغییر برنامه.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۴)</b> <b>چارت گانت</b> = روشی برای تدارک جدول زمانی.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵)</b> در ارزشیابی <b>پیشرفت تحصیلی</b>، بیشتر از هدف‌های <b>فرآورده‌ای</b> استفاده می‌شه.
+</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مرحله و فعالیت رو با توضیح ساده + مثال بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>مرحله طراحی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> قبل از اجرای هر برنامه، تصمیم می‌گیریم که <b>چه کاری انجام خواهیم داد</b>. این مرحله ۷ فعالیت داره:</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۱) تحلیل موقعیت:</b>
+</div>
+<div class="fa">• موقعیت موجود رو بررسی می‌کنیم.</div>
+<div class="fa">• جمع‌آوری سوابق اطلاعاتی + برآورد موانع.</div>
+<div class="fa">• مثال: مرور پژوهش‌های قبلی درباره‌ی برنامه + تشخیص موانع و محدودیت‌ها.</div>
+<div class="fa">• توی ارزشیابی تحصیلی: معلم باید از آموخته‌های قبلی دانش‌آموزان اطلاعات کسب کنه و امکانات موجود رو برآورد کنه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۲) تعیین و توصیف هدف‌ها:</b>
+</div>
+<div class="fa">• هدف‌ها در دو سطح: <b>کلی (غایت)</b> و <b>جزئی (هدف)</b>.</div>
+<div class="fa">• <b>غایت</b> = کلی + سهم + غیرقابل اندازه‌گیری ساده.</div>
+<div class="fa">• <b>هدف</b> = دقیق + قابل تبدیل به کمیت + اندازه‌پذیر.</div>
+<div class="fa">• <b>مثال:</b> غایت = ارتقاء سطح معلومات ریاضی / هدف = دانش‌آموز بتواند جمع، تفریق، ضرب، تقسیم انجام دهد.</div>
+<div class="fa">• هدف‌ها دو دسته‌اند: <b>فرآیندی</b> (کوشش‌ها و اقدامات) و <b>فرآورده‌ای</b> (نتایج).</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۳) توصیف پیش‌نیازها:</b>
+</div>
+<div class="fa">• آموزش نظام‌دار نیاز به سنجش <b>رفتارهای ورودی</b> داره.</div>
+<div class="fa">• مثال: برای آموزش تقسیم، باید توانایی ضرب، جمع و تفریق (پیش‌نیازها) سنجیده بشه.</div>
+<div class="fa">• سنجش رفتارهای ورودی در آغاز سال یا ابتدای درس جدید انجام می‌شه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۴) انتخاب یا تولید وسایل اندازه‌گیری:</b>
+</div>
+<div class="fa">• ابزارهایی مثل: آزمون پیشرفت تحصیلی، آزمون نگرش‌سنج، فرم‌های ثبت مشاهده.</div>
+<div class="fa">• اگه وسایل موجود باشن → انتخاب مناسب‌ترین.</div>
+<div class="fa">• اگه نباشن → باید تهیه بشن.</div>
+<div class="fa">• <b>نکته مهم:</b> تهیه وسایل تخصصی برای ارزشیابی‌های جدی باید به <b>متخصصان</b> واگذار بشه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۵) توصیف استراتژی‌ها یا راهبردها:</b>
+</div>
+<div class="fa">• استراتژی = فعالیت یا تدبیری که به تحقق هدف‌ها کمک می‌کنه.</div>
+<div class="fa">• مثال گی (۱۹۹۱): آموزش چندجمله‌ای در ریاضی — تعیین توالی ارائه موضوع‌ها.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۶) انتخاب طرح پژوهشی:</b>
+</div>
+<div class="fa">• اگه بخوایم اثربخشی دو روش رو مقایسه کنیم → نیاز به طرح پژوهشی داریم.</div>
+<div class="fa">• اساس آزمایشگری: دو گروه معادل + برخورد یکسان + کنترل متغیرها + دریافت برنامه متفاوت.</div>
+<div class="fa">• طرح‌های آزمایشی و شبه‌آزمایشی (کمپیل و استنلی، ۱۹۶۳).</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>۷) تدارک برنامه زمان‌بندی:</b>
+</div>
+<div class="fa">• فهرست فعالیت‌های اصلی + زمان شروع و خاتمه هر کدوم.</div>
+<div class="fa">• زمان‌بندی باید با فرصت کافی باشه (نه با عجله).</div>
+<div class="fa">• بهتره زمان اضافی هم برای رویدادهای غیرمنتظره در نظر گرفته بشه.</div>
+<div class="fa">• <b>روش چارت گانت:</b> فعالیت‌ها در سمت راست + زمان در بالای صفحه + نمودار ستونی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مرحله فرآیندی یا اجرایی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> ضمن اجرای برنامه، تصمیم می‌گیریم که <b>چگونه آن را انجام می‌دهیم</b>.</div>
+<div class="fa"><b>نوع تصمیم‌ها:</b></div>
+<div class="fa">۱) به چه میزان مراحل طرح‌ریزی شده به اجرا درمیاد؟</div>
+<div class="fa">۲) چه تغییراتی باید داده بشه تا پیشرفت لازم به دست بیاد؟</div>
+<div class="fa"><b>فعالیت‌های ویژه:</b></div>
+<div class="fa">۱) اجرای پیش‌آزمون</div>
+<div class="fa">۲) اجرای آزمون رفتار ورودی</div>
+<div class="fa">۳) سنجش مناسب بودن هدف‌ها</div>
+<div class="fa">۴) جمع‌آوری داده‌ها به‌طور دوره‌ای (مثل اجرای آزمون)</div>
+<div class="fa">۵) تحلیل اثربخشی استراتژی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مرحله فرآورده‌ای یا تولیدی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> بعد از اجرای برنامه، تصمیم می‌گیریم که <b>چگونه آن را انجام دادیم</b>.</div>
+<div class="fa"><b>نوع تصمیم‌ها:</b></div>
+<div class="fa">۱) اثربخشی کلی آموزش، پروژه، برنامه</div>
+<div class="fa">۲) اقدامات آتی</div>
+<div class="fa"><b>فعالیت‌های ویژه:</b></div>
+<div class="fa">۱) جمع‌آوری داده‌ها مربوط به هدف‌ها (مثل اجرای پس‌آزمون)</div>
+<div class="fa">۲) جمع‌آوری داده‌ها مربوط به بازده‌های پیش‌بینی‌شده</div>
+<div class="fa">۳) تحلیل و تفسیر داده‌ها</div>
+<div class="fa">۴) تهیه گزارش</div>
+<div class="fa"><b>نظر پونام (۱۹۷۵):</b> «نتایج این مرحله از ارزشیابی به دیگران کمک می‌کنه تا بتونن تصمیم بگیرن آیا برنامه آموزشی مورد ارزشیابی رو ادامه بدن، خاتمه بدن، تغییر بدن، یا نعمت قرار بدن.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۹ مرحله فعالیت‌های ارزشیابی (پین، ۱۹۹۴)</h3></div>
+<div class="fa"><b>به زبان ساده:</b> پین برای ارزشیابی از پروژه‌ها و برنامه‌های آموزشی ۹ مرحله معرفی کرده:</div>
+<div class="fa">۱) <b>تعیین، انتخاب، پالایش یا تغییر غایت‌ها</b> و هدف‌های ارزشیابی</div>
+<div class="fa">۲) <b>مشخص کردن استانداردها / هدف‌ها</b></div>
+<div class="fa">۳) <b>تهیه طرح ارزشیابی</b> مناسب</div>
+<div class="fa">۴) <b>انتخاب یا تولید روش‌های جمع‌آوری داده‌ها</b></div>
+<div class="fa">۵) <b>جمع‌آوری داده‌های مناسب</b></div>
+<div class="fa">۶) <b>پردازش، خلاصه‌کردن و تحلیل داده‌ها</b></div>
+<div class="fa">۷) <b>مقایسه داده‌ها با استانداردها</b></div>
+<div class="fa">۸) <b>گزارش و بازخورد دادن</b> از نتایج</div>
+<div class="fa">۹) <b>هزینه-سود / اثربخشی</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> خطوط نقطه‌چین در شکل پین نشون می‌ده که اطلاعات بین فعالیت‌ها می‌تونه مشترک باشه و تصمیم‌ها مرتباً در حال تجدیدنظرن.
+</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>جدول خلاصه سه مرحله ارزشیابی (گی، ۱۹۹۱)</h3></div>
+<table class="compare">
+<thead><tr><th>مرحله</th><th>زمان</th><th>نوع سؤال</th><th>نوع تصمیم</th></tr></thead>
+<tbody>
+<tr><td>طراحی</td><td>قبل از اجرا</td><td>چه کاری انجام خواهیم داد؟ (آینده)</td><td>نتایج مورد انتظار + اعمال لازم</td></tr>
+<tr><td>فرآیندی</td><td>ضمن اجرا</td><td>چگونه آن را انجام می‌دهیم؟ (حال)</td><td>میزان اجرا + تغییرات لازم</td></tr>
+<tr><td>فرآورده‌ای</td><td>بعد از اجرا</td><td>چگونه آن را انجام دادیم؟ (گذشته)</td><td>اثربخشی کلی + اقدامات آتی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>غایت vs هدف</h3></div>
+<table class="compare">
+<thead><tr><th>غایت</th><th>هدف</th></tr></thead>
+<tbody>
+<tr><td>هدف کلی</td><td>هدف جزئی و دقیق</td></tr>
+<tr><td>سهم و غیرقابل اندازه‌گیری</td><td>قابل تبدیل به کمیت و اندازه‌پذیر</td></tr>
+<tr><td>مثال: ارتقاء معلومات ریاضی</td><td>مثال: جمع، تفریق، ضرب، تقسیم</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هدف فرآیندی vs فرآورده‌ای</h3></div>
+<table class="compare">
+<thead><tr><th>فرآیندی</th><th>فرآورده‌ای</th></tr></thead>
+<tbody>
+<tr><td>کوشش‌ها و اقدامات ضمن اجرا</td><td>بازده‌ها و نتایج کوشش‌ها</td></tr>
+<tr><td>در ارزشیابی برنامه‌ها استفاده می‌شود</td><td>در ارزشیابی پیشرفت تحصیلی استفاده می‌شود</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳ مرحله گی vs ۹ مرحله پین</h3></div>
+<table class="compare">
+<thead><tr><th>گی (۳ مرحله)</th><th>پین (۹ مرحله)</th></tr></thead>
+<tbody>
+<tr><td>طراحی، فرآیندی، فرآورده‌ای</td><td>۹ مرحله فعالیت ارزشیابی</td></tr>
+<tr><td>کلی و برای همه انواع ارزشیابی</td><td>مخصوص ارزشیابی برنامه‌ها و پروژه‌ها</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیش‌آزمون vs پس‌آزمون</h3></div>
+<table class="compare">
+<thead><tr><th>پیش‌آزمون</th><th>پس‌آزمون</th></tr></thead>
+<tbody>
+<tr><td>در مرحله فرآیندی</td><td>در مرحله فرآورده‌ای</td></tr>
+<tr><td>قبل از آموزش</td><td>بعد از آموزش</td></tr>
+<tr><td>برای سنجش رفتار ورودی</td><td>برای سنجش اثربخشی</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان و تعریف‌هایشان</h2>
+<p class="section-sub">هر کی چی گفته + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>گی (۱۹۹۱)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نقش اصلی:</b> سه مرحله تصمیم‌گیری در ارزشیابی رو معرفی کرد.</div>
+<div class="fa"><b>سه مرحله:</b></div>
+<div class="fa">۱) <b>طراحی:</b> «چه کاری انجام خواهیم داد؟» (آینده)</div>
+<div class="fa">۲) <b>فرآیندی:</b> «چگونه آن را انجام می‌دهیم؟» (حال)</div>
+<div class="fa">۳) <b>فرآورده‌ای:</b> «چگونه آن را انجام دادیم؟» (گذشته)</div>
+<div class="fa"><b>مثال استراتژی گی:</b> آموزش چندجمله‌ای در ریاضی — تعیین توالی ارائه.</div>
+<div class="fa"><b>نقل‌قول گی درباره آزمایشگری:</b> «اگر با دو گروه معادل شروع کنید و برخورد یکسان داشته باشید و متغیرها رو کنترل کنید — بجز اینکه هر گروه برنامه متفاوتی دریافت کند — اون‌گاه اگر پس از زمان معقول عملکردهای متفاوت داشته باشند، تفاوت احتمالاً ناشی از اثربخشی متفاوت روش‌هاست.»</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> سه مرحله گی + سؤال هر کدوم رو حفظ کن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پین (۱۹۹۴)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نقش:</b> ۹ مرحله فعالیت‌های ارزشیابی برای ارزشیابی پروژه‌ها و برنامه‌های آموزشی معرفی کرد.</div>
+<div class="fa"><b>۹ مرحله:</b> ۱) تعیین غایت‌ها ۲) مشخص کردن استانداردها ۳) تهیه طرح ۴) انتخاب روش‌های جمع‌آوری داده ۵) جمع‌آوری داده ۶) پردازش و تحلیل ۷) مقایسه با استانداردها ۸) گزارش و بازخورد ۹) هزینه-سود / اثربخشی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> ۹ مرحله پین رو با ۳ مرحله گی قاطی نکن!
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پونام (۱۹۷۵)</h3></div>
+<div class="fa"><b>نظر درباره مرحله فرآورده‌ای:</b> «نتایج این مرحله از ارزشیابی به دیگران کمک می‌کنه تا بتونن تصمیم بگیرن آیا برنامه آموزشی مورد ارزشیابی رو ادامه بدن، خاتمه بدن، تغییر بدن، یا نعمت قرار بدن.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کمپیل و استنلی (۱۹۶۳)</h3></div>
+<div class="fa"><b>نقش:</b> کتاب «طرح‌های پژوهش آزمایشی و شبه‌آزمایشی» رو نوشتن.</div>
+<div class="fa"><b>کاربرد:</b> مرجع برای کسب اطلاعات درباره طرح‌های پژوهش.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چارت گانت</h3></div>
+<div class="fa"><b>نقش:</b> روشی برای تدارک جدول زمانی (برنامه زمان‌بندی).</div>
+<div class="fa"><b>نحوه کار:</b> فعالیت‌ها در سمت راست کاغذ + زمان در بالای صفحه + نمودار ستونی که تاریخ آغاز و انجام هر فعالیت رو نشون می‌ده.</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: سؤال هر مرحله</h3>
+<div class="fa"><b>دام چیه:</b> سؤال مراحل رو با هم قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> طراحی = «چه کاری انجام خواهیم داد؟» / فرآیندی = «چگونه انجام می‌دهیم؟» / فرآورده‌ای = «چگونه انجام دادیم؟»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> زمان‌ها رو دقت کن: آینده، حال، گذشته.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: غایت و هدف</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی غایت و هدف یکی هستن.</div>
+<div class="fa"><b>جواب درست:</b> غایت = کلی و غیرقابل اندازه‌گیری / هدف = جزئی و اندازه‌پذیر.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> غایت سهم‌ه، هدف دقیق.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: هدف فرآیندی و فرآورده‌ای</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی همیشه هر دو در ارزشیابی تحصیلی استفاده می‌شن.</div>
+<div class="fa"><b>جواب درست:</b> در ارزشیابی پیشرفت تحصیلی، غالباً از هدف‌های <b>فرآورده‌ای</b> استفاده می‌شه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> فرآیندی برای برنامه‌ها، فرآورده‌ای برای پیشرفت تحصیلی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: ۷ فعالیت مرحله طراحی</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب یا تعداد رو اشتباه می‌زنی.</div>
+<div class="fa"><b>جواب درست:</b> تحلیل موقعیت ← هدف‌ها ← پیش‌نیازها ← وسایل ← استراتژی ← طرح پژوهشی ← زمان‌بندی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این ۷ تا رو به ترتیب حفظ کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: مسئولیت تهیه وسایل</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی معلم‌ها همیشه می‌تونن وسایل بسازن.</div>
+<div class="fa"><b>جواب درست:</b> برای ارزشیابی‌های جدی، این کار باید به <b>متخصصان</b> واگذار بشه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> برای استفاده کلاسی معمولی، معلم می‌تونه خودش بسازه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: چارت گانت</h3>
+<div class="fa"><b>دام چیه:</b> نمی‌دونی چارت گانت برای چیه.</div>
+<div class="fa"><b>جواب درست:</b> چارت گانت = روشی برای <b>تدارک جدول زمانی</b> (برنامه زمان‌بندی).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> چارت گانت = زمان‌بندی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: ۹ مرحله پین</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۹ مرحله پین برای همه ارزشیابی‌هاست.</div>
+<div class="fa"><b>جواب درست:</b> ۹ مرحله پین مخصوص <b>ارزشیابی پروژه‌ها و برنامه‌های آموزشی</b>ه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> ۳ مرحله گی کلی‌تره، ۹ مرحله پین تخصصی‌تر.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل پنجم — مراحل ارزشیابی آموزشی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 03 · سنجش و اندازه‌گیری در مشاوره · فصل پنجم: مراحل ارزشیابی آموزشی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"سه مرحله اصلی تصمیم‌گیری در ارزشیابی (گی، ۱۹۹۱) کدامند؟",options:["اسمی، ترتیبی، فاصله‌ای","طراحی، فرآیندی، فرآورده‌ای","پیش‌آزمون، آزمون، پس‌آزمون","جمع‌آوری، تحلیل، گزارش"],answer:1,explanation:"سه مرحله گی = طراحی، فرآیندی، فرآورده‌ای."},
+{q:"مرحله طراحی با چه سؤالی سر و کار دارد؟",options:["چگونه آن را انجام می‌دهیم؟","چگونه آن را انجام دادیم؟","چه کاری انجام خواهیم داد؟","چرا این کار را کردیم؟"],answer:2,explanation:"طراحی = چه کاری انجام خواهیم داد؟ (آینده)."},
+{q:"مرحله فرآیندی با چه سؤالی سر و کار دارد؟",options:["چه کاری انجام خواهیم داد؟","چگونه آن را انجام می‌دهیم؟","چگونه آن را انجام دادیم؟","چه کسی آن را انجام می‌دهد؟"],answer:1,explanation:"فرآیندی = چگونه آن را انجام می‌دهیم؟ (حال)."},
+{q:"مرحله فرآورده‌ای با چه سؤالی سر و کار دارد؟",options:["چه کاری انجام خواهیم داد؟","چگونه آن را انجام می‌دهیم؟","چگونه آن را انجام دادیم؟","چه زمانی انجام می‌دهیم؟"],answer:2,explanation:"فرآورده‌ای = چگونه آن را انجام دادیم؟ (گذشته)."},
+{q:"مرحله طراحی شامل چند فعالیت است؟",options:["۳","۵","۷","۹"],answer:2,explanation:"مرحله طراحی ۷ فعالیت دارد."},
+{q:"اولین فعالیت مرحله طراحی چیست؟",options:["تعیین هدف‌ها","تحلیل موقعیت","تدارک زمان‌بندی","انتخاب طرح پژوهشی"],answer:1,explanation:"اولین فعالیت = تحلیل موقعیت."},
+{q:"آخرین فعالیت مرحله طراحی چیست؟",options:["تحلیل موقعیت","تعیین هدف‌ها","تدارک برنامه زمان‌بندی","انتخاب طرح پژوهشی"],answer:2,explanation:"آخرین فعالیت = تدارک برنامه زمان‌بندی."},
+{q:"غایت چه نوع هدفی است؟",options:["جزئی و دقیق","کلی و سهم","قابل اندازه‌گیری","عدد و رقم"],answer:1,explanation:"غایت = هدف کلی و سهم."},
+{q:"هدف چه نوع هدفی است؟",options:["کلی","سهم","جزئی و دقیق و اندازه‌پذیر","غیرقابل اندازه‌گیری"],answer:2,explanation:"هدف = جزئی، دقیق و اندازه‌پذیر."},
+{q:"مثال غایت کدام است؟",options:["جمع اعداد در رقمی","ارتقاء سطح معلومات ریاضی دانش‌آموزان","تفریق اعداد","ضرب اعداد"],answer:1,explanation:"ارتقاء معلومات ریاضی = غایت (کلی)."},
+{q:"مثال هدف کدام است؟",options:["ارتقاء معلومات ریاضی","جمع اعداد در رقمی","بهبود آموزش","پیشرفت دانش"],answer:1,explanation:"جمع اعداد = هدف (دقیق)."},
+{q:"هدف‌های فرآیندی به چه چیزی اشاره دارند؟",options:["نتایج و بازده‌ها","کوشش‌ها و اقدامات ضمن اجرا","فقط نمرات","فقط نگرش"],answer:1,explanation:"فرآیندی = کوشش‌ها و اقدامات ضمن اجرا."},
+{q:"هدف‌های فرآورده‌ای به چه چیزی اشاره دارند؟",options:["کوشش‌ها و اقدامات","بازده‌ها و نتایج","فقط فرآیند","فقط تلاش"],answer:1,explanation:"فرآورده‌ای = بازده‌ها و نتایج."},
+{q:"در ارزشیابی پیشرفت تحصیلی، غالباً کدام نوع هدف استفاده می‌شود؟",options:["فرآیندی","فرآورده‌ای","هر دو به یک اندازه","هیچ‌کدام"],answer:1,explanation:"در پیشرفت تحصیلی = غالباً فرآورده‌ای."},
+{q:"توصیف پیش‌نیازها برای چه منظوری انجام می‌شود؟",options:["تعیین نمره نهایی","سنجش رفتارهای ورودی","تعیین حقوق معلم","تعیین تعداد کلاس"],answer:1,explanation:"توصیف پیش‌نیازها = سنجش رفتارهای ورودی."},
+{q:"مثال پیش‌نیاز برای آموزش تقسیم کدام است؟",options:["توانایی شنا","توانایی ضرب، جمع و تفریق","توانایی نوشتن","توانایی خواندن"],answer:1,explanation:"پیش‌نیاز تقسیم = ضرب، جمع و تفریق."},
+{q:"چه کسی باید وسایل اندازه‌گیری تخصصی تهیه کند؟",options:["دانش‌آموزان","معلمان","متخصصان","مدیران"],answer:2,explanation:"وسایل تخصصی برای ارزشیابی جدی = متخصصان."},
+{q:"استراتژی یا راهبرد یعنی چه؟",options:["فعالیت یا تدبیر برای تحقق هدف‌ها","نوعی آزمون","روش نمره‌گذاری","نوعی پرسشنامه"],answer:0,explanation:"استراتژی = فعالیت یا تدبیر برای کمک به تحقق هدف‌ها."},
+{q:"چارت گانت برای چه کاری استفاده می‌شود؟",options:["تحلیل موقعیت","تدارک جدول زمانی","تعیین نمره","تحلیل داده"],answer:1,explanation:"چارت گانت = تدارک جدول زمانی."},
+{q:"در مرحله فرآیندی، کدام تصمیم‌ها گرفته می‌شود؟",options:["نتایج مورد انتظار","میزان اجرا و تغییرات لازم","اثربخشی کلی","اقدامات آتی"],answer:1,explanation:"فرآیندی = میزان اجرا و تغییرات لازم."},
+{q:"در مرحله فرآورده‌ای، کدام تصمیم‌ها گرفته می‌شود؟",options:["نتایج مورد انتظار","میزان اجرا","اثربخشی کلی و اقدامات آتی","تغییرات ضمن اجرا"],answer:2,explanation:"فرآورده‌ای = اثربخشی کلی و اقدامات آتی."},
+{q:"در مرحله فرآیندی، کدام آزمون اجرا می‌شود؟",options:["پس‌آزمون","پیش‌آزمون و آزمون رفتار ورودی","فقط آزمون نهایی","فقط آزمون شفاهی"],answer:1,explanation:"فرآیندی = پیش‌آزمون و آزمون رفتار ورودی."},
+{q:"در مرحله فرآورده‌ای، کدام آزمون اجرا می‌شود؟",options:["پیش‌آزمون","پس‌آزمون","آزمون رفتار ورودی","فقط آزمون شفاهی"],answer:1,explanation:"فرآورده‌ای = پس‌آزمون."},
+{q:"۹ مرحله فعالیت‌های ارزشیابی توسط چه کسی معرفی شد؟",options:["گی","پین","پونام","کمپیل"],answer:1,explanation:"پین (۱۹۹۴) ۹ مرحله را معرفی کرد."},
+{q:"کدام مرحله جزو ۹ مرحله پین نیست؟",options:["تعیین غایت‌ها","جمع‌آوری داده‌ها","تهیه گزارش","محاسبه معدل کلاسی"],answer:3,explanation:"محاسبه معدل کلاسی جزو ۹ مرحله پین نیست."},
+{q:"آخرین مرحله از ۹ مرحله پین کدام است؟",options:["گزارش و بازخورد","مقایسه با استانداردها","هزینه-سود / اثربخشی","جمع‌آوری داده"],answer:2,explanation:"آخرین مرحله = هزینه-سود / اثربخشی."},
+{q:"نظر پونام (۱۹۷۵) درباره مرحله فرآورده‌ای چیست؟",options:["کمک به ادامه/خاتمه/تغییر برنامه","تعیین نوع سؤال","تعیین پیش‌نیاز","تحلیل موقعیت"],answer:0,explanation:"پونام = کمک به تصمیم درباره ادامه/خاتمه/تغییر برنامه."},
+{q:"اساس آزمایشگری طبق گی چیست؟",options:["یک گروه + بدون کنترل","دو گروه معادل + برخورد یکسان + کنترل متغیرها","سه گروه + برخورد متفاوت","بدون گروه"],answer:1,explanation:"آزمایشگری = دو گروه معادل + برخورد یکسان + کنترل متغیرها."},
+{q:"کتاب «طرح‌های پژوهش آزمایشی و شبه‌آزمایشی» از کیست؟",options:["گی و پین","کمپیل و استنلی","پونام و روسی","بروگاتا و بوهرنستد"],answer:1,explanation:"کمپیل و استنلی (۱۹۶۳)."},
+{q:"نوع طرح‌هایی که در مرحله طراحی استفاده می‌شوند کدامند؟",options:["فقط آزمایشی","فقط شبه‌آزمایشی","آزمایشی و شبه‌آزمایشی","هیچ‌کدام"],answer:2,explanation:"آزمایشی و شبه‌آزمایشی."},
+{q:"توصیه گی درباره زمان‌بندی چیست؟",options:["زمان دقیق بدون اضافه","در نظر گرفتن زمان اضافی برای رویدادهای غیرمنتظره","بدون زمان‌بندی","فقط زمان شروع"],answer:1,explanation:"گی توصیه می‌کند زمان اضافی در نظر گرفته شود."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

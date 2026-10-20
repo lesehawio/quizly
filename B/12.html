@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · ورزش ۱ · سری 12 · فصل هفتم: ورزش بسکتبال</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"12";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:28px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.search{width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:15px;-webkit-appearance:none}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>ورزش ۱ · سری 12 · فصل هفتم</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل هفتم: ورزش بسکتبال</h2>
+  <p>همه چیز به زبان ساده — انگار دارم برای یه دوست توضیح می‌دم که هیچ پیش‌زمینه‌ای نداره</p>
+  <div class="pills"><span class="pill">۲ گفتار</span><span class="pill">۳ مهارت اصلی</span><span class="pill">۴ نوع پاس</span><span class="pill">آماده امتحان</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه به زبان خیلی ساده نوشته شده. هدف کلی فصل اینه که با ورزش بسکتبال و مهارت‌های اصلی‌ش (دربیبل، پاس، شوت) و مقررات بازی آشنا بشی.</div>
+
+<div class="stats">
+<div class="stat"><b>۲</b><span>گفتار</span></div>
+<div class="stat"><b>۳</b><span>مهارت اصلی</span></div>
+<div class="stat"><b>۴</b><span>نوع پاس</span></div>
+<div class="stat"><b>۷</b><span>دام امتحانی</span></div>
+</div>
+
+<nav>
+<a href="#goals">هدف کلی</a><a href="#effects">اثرهای بسکتبال</a><a href="#skills">مهارت‌ها</a><a href="#rules">مقررات</a><a href="#compare">تفاوت‌ها</a><a href="#traps">دام‌های آزمون</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="goals" class="section">
+<h2 class="section-title">۰۱ · هدف کلی و چارچوب فصل</h2>
+<p class="section-sub">اول بفهمیم این فصل اصلاً می‌خواد چی بگه</p>
+
+<div class="card">
+<div class="card-head"><h3>هدف کلی فصل</h3></div>
+<div class="fa"><b>به زبان ساده:</b> این فصل می‌خواد تو رو با ورزش بسکتبال و مهارت‌های اصلی‌ش آشنا کنه. همچنین مقررات بازی رو هم یاد بگیری.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این فصل ۲ گفتار داره: ۱) اثرهای بسکتبال بر بدن ۲) مهارت‌های بسکتبال. به‌علاوه پیوست مقررات.
+</div>
+</div>
+</section>
+
+<section id="effects" class="section">
+<h2 class="section-title">۰۲ · گفتار ۱: اثرهای بسکتبال بر بدن</h2>
+<p class="section-sub">بسکتبال چه خوبی‌هایی برای بدن داره؟</p>
+
+<div class="card">
+<div class="card-head"><h3>ورزش گروهی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> بسکتبال یه ورزش <b>گروهی</b>ه. یعنی با تیم بازی می‌کنی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تأثیرات جسمانی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> بسکتبال به خاطر مقررات و ماهیتش:</div>
+<div class="fa">• <b>استقامت عمومی بدن</b> رو زیاد می‌کنه</div>
+<div class="fa">• <b>کارایی دستگاه قلب و عروق</b> رو زیاد می‌کنه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توسعه مهارت‌ها</h3></div>
+<div class="fa"><b>به زبان ساده:</b> بسکتبال چهار تا مهارت رو توسعه می‌ده:</div>
+<div class="fa">۱) <b>سرعت حرکت</b> — تندتر حرکت کردن</div>
+<div class="fa">۲) <b>سرعت عکس‌العمل</b> — سریع‌تر واکنش نشون دادن</div>
+<div class="fa">۳) <b>دقت</b> — دقیق‌تر شدن</div>
+<div class="fa">۴) <b>هماهنگی در بدن</b> — همه‌ی اعضا با هم هماهنگ</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تأثیرات روانی و تربیتی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> بسکتبال باعث می‌شه <b>روحیه‌ی تهاجمی</b> توی بازیکنان زیاد بشه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> تأثیرات بسکتبال = استقامت عمومی + کارایی قلب و عروق + سرعت حرکت + سرعت عکس‌العمل + دقت + هماهنگی + روحیه تهاجمی.
+</div>
+</div>
+</section>
+
+<section id="skills" class="section">
+<h2 class="section-title">۰۳ · گفتار ۲: مهارت‌های بسکتبال</h2>
+<p class="section-sub">سه مهارت اصلی بسکتبال رو با هم یاد بگیریم</p>
+
+<div class="card">
+<div class="card-head"><h3>مهارت‌های اصلی بسکتبال</h3></div>
+<div class="fa"><b>به زبان ساده:</b> سه مهارت اصلی بسکتبال:</div>
+<div class="fa">۱) <b>دربیبل</b></div>
+<div class="fa">۲) <b>پاس</b></div>
+<div class="fa">۳) <b>شوت</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> ۳ مهارت اصلی بسکتبال = دربیبل + پاس + شوت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱) دربیبل</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> دربیبل یعنی <b>زدن توپ به زمین با یه دست</b> و تکرارش. هر بار که توپ به زمین می‌خوره، مسافتی رو به سمت هدف بازی طی می‌کنه.</div>
+<div class="fa"><b>دو نوع دربیبل داریم:</b></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>الف) دربیبل کوتاه:</b>
+</div>
+<div class="fa">• بازیکن زانوها رو خم می‌کنه، فاصله‌ی دست و زمین <b>کمتر از ۷۰ سانتی‌متر</b> می‌شه.</div>
+<div class="fa">• کِی استفاده می‌شه؟ وقتی بازیکن توسط حریف <b>محاصره</b> شده، برای <b>حفظ و کنترل توپ</b>.</div>
+<div class="fa">• یه نکته: دست و پای <b>مخالف</b> دستی که توپ رو هدایت می‌کنه، به‌عنوان مانع بین دربیبل‌کننده و مهاجم قرار می‌گیره.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>ب) دربیبل بلند:</b>
+</div>
+<div class="fa">• فاصله‌ی دست و زمین از نوع قبلی <b>بیشتره</b>.</div>
+<div class="fa">• کِی استفاده می‌شه؟ وقتی بازیکن بخواد <b>با سرعت</b> مسافتی رو توی زمین طی کنه.</div>
+<div class="fa">• یه نکته: وقتی حریف با <b>فاصله‌ی زیاد</b> از بازیکنه، از این دربیبل استفاده می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> دربیبل کوتاه = محاصره + حفظ توپ + کمتر از ۷۰ سانتی‌متر / دربیبل بلند = سرعت + فاصله‌ی زیاد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) پاس</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>به زبان ساده:</b> پاس یعنی <b>مبادله‌ی توپ بین دو بازیکن خودی</b>. این مهارت برای ایجاد ارتباط و تشریک مساعی بین بازیکنان انجام می‌شه و به تاکتیک‌های بازی کمک می‌کنه.</div>
+<div class="fa"><b>چهار نوع پاس داریم:</b></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>پاس زمینی:</b>
+</div>
+<div class="fa">• با <b>یک یا دو دست</b> انجام می‌شه.</div>
+<div class="fa">• پاس زمینی <b>دودستی</b> کاربرد بیشتری داره.</div>
+<div class="fa">• کِی استفاده می‌شه؟ وقتی پاس‌دهنده بخواد <b>به منطقه‌ی دفاعی حریف نفوذ کنه</b>.</div>
+<div class="fa">• نحوه: توپ به‌طور <b>مورب به زمین</b> زده می‌شه، طوری که بازتاب حرکت توپ به سمت بازیکن مورد نظر باشه.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>پاس سینه دو دست:</b>
+</div>
+<div class="fa">• <b>پرکاربردترین</b> پاس بسکتبال.</div>
+<div class="fa">• برای فاصله‌های <b>۵ تا ۶ متر</b>.</div>
+<div class="fa">• نحوه: توپ در دست قرار می‌گیره، انگشتان شست هر دو دست <b>پشت توپ</b>.</div>
+<div class="fa">• همراه با <b>تن توپ</b> (یعنی فشار دادن توپ) انجام می‌شه.</div>
+<div class="fa">• یه نکته: درست در لحظه پرتاب، <b>پای عقبی</b> رو همزمان با حرکت دست به جلو می‌بریم.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>پاس دو دستی بالای سر:</b>
+</div>
+<div class="fa">• بیشتر در <b>بازی ساکن و نشسته</b> اجرا می‌شه.</div>
+<div class="fa">• توی بازی‌های رسمی، بیشتر توسط <b>افراد قدبلند</b> استفاده می‌شه.</div>
+<div class="fa">• یه نکته: نسبت به انواع دیگه، <b>مطمئن‌ترین پاس</b>ه.</div>
+<div class="fa">• فرم گرفتن توپ مثل پاس مستقیم دودستیه، ولی دست‌ها کاملاً <b>کشیده و مستقیم بالای سر</b> قرار می‌گیرن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>پاس بیسبالی:</b>
+</div>
+<div class="fa">• برای <b>مسافت‌های زیاد</b>.</div>
+<div class="fa">• توپ با <b>یک دست</b> پرتاب می‌شه.</div>
+<div class="fa">• انگشتان دست پرتاب‌کننده کاملاً <b>باز در پشت توپ</b>.</div>
+<div class="fa">• کنترل توپ با <b>انگشتان</b> انجام می‌شه.</div>
+<div class="fa">• دست دیگه فقط برای <b>تعادل و حفاظت توپ</b>.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> پاس زمینی (نفوذ در دفاع) / پاس سینه (پرکاربردترین، ۵-۶ متر) / پاس بالای سر (ساکن، قدبلندها، مطمئن‌ترین) / پاس بیسبالی (مسافت زیاد، یک دست).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) شوت</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>به زبان ساده:</b> شوت یعنی <b>فرستادن توپ به سمت سبد</b>، که هدف اصلی بازی بسکتباله.</div>
+<div class="fa"><b>دو نوع شوت داریم:</b></div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>شوت دو دستی از سینه:</b>
+</div>
+<div class="fa">• توپ کاملاً مثل پاس دو دستی گرفته می‌شه.</div>
+<div class="fa">• تفاوت: <b>نوک انگشتان به سمت جلو</b> قرار داره.</div>
+<div class="fa">• توپ همراه با <b>حرکات چرخشی مچ دست‌ها</b> به سبد فرستاده می‌شه.</div>
+<div class="fa">• کاربردش در افراد <b>ماهر بسیار کم</b>ه و بازیکنان <b>مبتدی</b> بیشتر ازش استفاده می‌کنن.</div>
+
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>شوت هوک:</b>
+</div>
+<div class="fa">• بازیکن توپ رو با <b>دو دست در ناحیه‌ی شکم</b> می‌گیره.</div>
+<div class="fa">• با <b>چرخش روی پای چپ</b>، خودش رو بالا می‌کشه.</div>
+<div class="fa">• توپ با <b>دست راست</b> در جهت مقابل بخش بدن و دور از دسترس دفاع به بالای سر کشیده می‌شه.</div>
+<div class="fa">• با <b>حرکت مچ دست و انگشتان</b> به طرف حلقه رها می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> شوت دودستی از سینه = مبتدی‌ها / شوت هوک = چرخش روی پای چپ + رهاسازی با دست راست.
+</div>
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#ffe8f0,#fff0cc);border-color:#f94779">
+<div class="card-head"><h3>📌 جمع‌بندی مهارت‌های بسکتبال</h3></div>
+<div class="fa">۱) <b>دربیبل</b> = کوتاه (محاصره، زیر ۷۰ سانتی‌متر) + بلند (سرعت، فاصله زیاد)</div>
+<div class="fa">۲) <b>پاس</b> = زمینی (نفوذ) + سینه (۵-۶ متر) + بالای سر (ساکن، قدبلند) + بیسبالی (مسافت زیاد)</div>
+<div class="fa">۳) <b>شوت</b> = دودستی از سینه (مبتدی) + هوک (چرخش روی پای چپ)</div>
+</div>
+</section>
+
+<section id="rules" class="section">
+<h2 class="section-title">۰۴ · پیوست: مقررات بازی و زمین بسکتبال</h2>
+<p class="section-sub">قوانین اصلی بسکتبال</p>
+
+<div class="card">
+<div class="card-head"><h3>تعداد بازیکنان</h3></div>
+<div class="fa"><b>به زبان ساده:</b> دو تیم <b>پنج‌نفری</b> بازی می‌کنن.</div>
+<div class="fa"><b>ذخیره‌ها:</b> هر تیم از <b>۵ تا ۷ یار ذخیره</b> برای تعویض بازیکنان اصلی استفاده می‌کنه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بسکتبال = ۵ نفر اصلی + ۵ تا ۷ یار ذخیره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>زمان بازی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> زمان بازی <b>۴۰ دقیقه</b>ست که به <b>دو وقت ۲۰ دقیقه‌ای</b> تقسیم می‌شه.</div>
+<div class="fa"><b>استراحت:</b> بین دو وقت، <b>۱۰ دقیقه</b> استراحت.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بسکتبال = ۲ وقت ۲۰ دقیقه‌ای + ۱۰ دقیقه استراحت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روش انتخاب تیم برنده</h3></div>
+<div class="fa"><b>به زبان ساده:</b> هدف هر تیم، پرتاب توپ به داخل سبد حریف و فقط عبور توپ از سبد امتیاز محسوب می‌شه.</div>
+<div class="fa"><b>امتیازدهی:</b></div>
+<div class="fa">• پرتاب از <b>پشت خط سه امتیازی</b> = <b>۳ امتیاز</b></div>
+<div class="fa">• پرتاب از <b>داخل محوطه</b> = <b>۲ امتیاز</b></div>
+<div class="fa">• <b>پرتاب آزاد</b> = <b>۱ امتیاز</b></div>
+<div class="fa"><b>برنده:</b> تیمی که در پایان وقت بازی امتیاز بیشتری کسب کرده باشه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> امتیازدهی = ۳ (پشت خط) + ۲ (داخل محوطه) + ۱ (پرتاب آزاد).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اندازه و مشخصات زمین بازی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> زمین بسکتبال <b>۲۸ متر طول</b> و <b>۱۵ متر عرض</b> داره.</div>
+<div class="fa"><b>دایره وسط زمین:</b> به شعاع <b>۱/۸۰ متر</b>.</div>
+<div class="fa"><b>ذوزنقه زیر حلقه:</b> محوطه‌ای به شکل ذوزنقه زیر هر حلقه خط‌کشی شده. بازیکنان هنگام حمله <b>حق توقف بیش از سه ثانیه</b> در آن رو ندارن. طول ذوزنقه = <b>۵/۸۰ متر</b>.</div>
+<div class="fa"><b>خط‌کشی دور زمین:</b> باید به قطر <b>۵ سانتی‌متر</b> باشه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی (سؤال کلیدی):</b> زمین = ۲۸ × ۱۵ متر + دایره وسط ۱/۸۰ متر + ذوزنقه ۵/۸۰ متر + توقف بیش از ۳ ثانیه ممنوع.
+</div>
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#ffe8f0,#fff0cc);border-color:#f94779">
+<div class="card-head"><h3>📌 جمع‌بندی مقررات بسکتبال</h3></div>
+<div class="fa">✅ ۵ نفر اصلی + ۵ تا ۷ ذخیره</div>
+<div class="fa">✅ دو وقت ۲۰ دقیقه‌ای + ۱۰ دقیقه استراحت</div>
+<div class="fa">✅ امتیازدهی: ۳ (پشت خط) + ۲ (داخل) + ۱ (پرتاب آزاد)</div>
+<div class="fa">✅ زمین: ۲۸ × ۱۵ متر</div>
+<div class="fa">✅ دایره وسط: ۱/۸۰ متر</div>
+<div class="fa">✅ ذوزنقه: ۵/۸۰ متر + توقف بیش از ۳ ثانیه ممنوع</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۵ · تفاوت‌های حیاتی (مقایسه دو به دو)</h2>
+<p class="section-sub">جفت‌هایی که ممکنه اشتباه بگیری</p>
+
+<div class="card">
+<div class="card-head"><h3>دربیبل کوتاه vs دربیبل بلند</h3></div>
+<table class="compare">
+<thead><tr><th>دربیبل کوتاه</th><th>دربیبل بلند</th></tr></thead>
+<tbody>
+<tr><td>فاصله دست و زمین: کمتر از ۷۰ سانتی‌متر</td><td>فاصله دست و زمین: بیشتر</td></tr>
+<tr><td>برای حفظ و کنترل توپ</td><td>برای طی کردن مسافت با سرعت</td></tr>
+<tr><td>وقتی حریف محاصره کرده</td><td>وقتی حریف با فاصله زیاد است</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> کوتاه = محاصره / بلند = سرعت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پاس سینه vs پاس بالای سر</h3></div>
+<div class="fa"><b>به زبان ساده:</b> پاس سینه = پرکاربردترین، ۵-۶ متر / پاس بالای سر = مطمئن‌ترین، مناسب قدبلندها.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شوت دودستی از سینه vs شوت هوک</h3></div>
+<div class="fa"><b>به زبان ساده:</b> شوت دودستی = مبتدی‌ها / شوت هوک = چرخش روی پای چپ + رهاسازی با دست راست.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پاس زمینی vs پاس بیسبالی</h3></div>
+<div class="fa"><b>به زبان ساده:</b> پاس زمینی = توپ مورب به زمین / پاس بیسبالی = مسافت زیاد + یک دست.</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: تعداد بازیکنان بسکتبال</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۶ نفره (مثل والیبال).</div>
+<div class="fa"><b>جواب درست:</b> ۵ نفر اصلی + ۵ تا ۷ ذخیره</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بسکتبال ۵ نفره / والیبال ۶ نفره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: زمان بازی بسکتبال</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دو نیمه ۴۵ دقیقه (مثل فوتبال).</div>
+<div class="fa"><b>جواب درست:</b> دو وقت ۲۰ دقیقه‌ای (مجموعاً ۴۰ دقیقه)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بسکتبال = ۲ × ۲۰ دقیقه + ۱۰ دقیقه استراحت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: امتیاز پرتاب آزاد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۲ امتیازه.</div>
+<div class="fa"><b>جواب درست:</b> ۱ امتیاز</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پرتاب آزاد = ۱ / داخل محوطه = ۲ / پشت خط = ۳.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: اندازه زمین بسکتبال</h3>
+<div class="fa"><b>دام چیه:</b> عدد رو با فوتبال یا والیبال قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ۲۸ × ۱۵ متر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> بسکتبال = ۲۸×۱۵ / والیبال = ۱۸×۹ / فوتبال = ۱۱۰×۷۵.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: فاصله دربیبل کوتاه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۵۰ یا ۹۰ سانتی‌متره.</div>
+<div class="fa"><b>جواب درست:</b> کمتر از ۷۰ سانتی‌متر</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دربیبل کوتاه = زیر ۷۰ سانتی‌متر.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: پاس مناسب برای نفوذ در دفاع</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی پاس بیسبالی یا سینه‌ست.</div>
+<div class="fa"><b>جواب درست:</b> پاس زمینی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> نفوذ در دفاع = پاس زمینی (دودستی).
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: توقف در ذوزنقه</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی محدودیت نداره یا ۵ ثانیه‌ست.</div>
+<div class="fa"><b>جواب درست:</b> بیش از ۳ ثانیه ممنوع</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> توقف در ذوزنقه = حداکثر ۳ ثانیه.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل هفتم</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 12 · ورزش ۱ · فصل هفتم: ورزش بسکتبال · جزوه ساده و امتحانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"بسکتبال چه تأثیری بر بدن دارد؟",options:["فقط افزایش قدرت","افزایش استقامت عمومی + کارایی قلب و عروق + سرعت و دقت و هماهنگی","فقط کاهش وزن","فقط افزایش سرعت"],answer:1,explanation:"بسکتبال استقامت عمومی، قلب و عروق، سرعت، دقت و هماهنگی را بهبود می‌بخشد."},
+{q:"تأثیر روانی و تربیتی بسکتبال چیست؟",options:["کاهش روحیه","افزایش و توسعه روحیه تهاجمی","بی‌تفاوتی","افسردگی"],answer:1,explanation:"بسکتبال روحیه تهاجمی را در بازیکنان افزایش می‌دهد."},
+{q:"مهارت‌های اصلی بسکتبال کدامند؟",options:["دربیبل، پاس، شوت","سرویس، پاس، آبشار","ضربه، هد، دربیل","فقط پاس"],answer:0,explanation:"۳ مهارت اصلی = دربیبل + پاس + شوت."},
+{q:"دربیبل یعنی چه؟",options:["زدن توپ به زمین با یک دست و تکرار آن","پاس دادن","شوت کردن","دفاع کردن"],answer:0,explanation:"دربیبل = زدن توپ به زمین با یک دست و تکرار آن."},
+{q:"دربیبل کوتاه چه زمانی استفاده می‌شود؟",options:["برای سرعت","برای حفظ و کنترل توپ هنگام محاصره","برای شوت","برای پاس"],answer:1,explanation:"دربیبل کوتاه برای حفظ و کنترل توپ هنگام محاصره استفاده می‌شود."},
+{q:"فاصله دست و زمین در دربیبل کوتاه چقدر است؟",options:["کمتر از ۷۰ سانتی‌متر","بیشتر از ۱ متر","۵۰ سانتی‌متر","۹۰ سانتی‌متر"],answer:0,explanation:"دربیبل کوتاه = کمتر از ۷۰ سانتی‌متر."},
+{q:"دربیبل بلند چه زمانی استفاده می‌شود؟",options:["برای حفظ توپ","برای طی کردن مسافت با سرعت","برای شوت","برای دفاع"],answer:1,explanation:"دربیبل بلند برای طی کردن مسافت با سرعت."},
+{q:"پاس یعنی چه؟",options:["زدن توپ به زمین","مبادله توپ بین دو بازیکن خودی","شوت کردن","دفاع کردن"],answer:1,explanation:"پاس = مبادله توپ بین دو بازیکن خودی."},
+{q:"کدام پاس برای نفوذ در دفاع حریف استفاده می‌شود؟",options:["پاس سینه","پاس بالای سر","پاس زمینی","پاس بیسبالی"],answer:2,explanation:"پاس زمینی برای نفوذ در دفاع حریف استفاده می‌شود."},
+{q:"پرکاربردترین پاس بسکتبال کدام است؟",options:["پاس زمینی","پاس سینه دو دست","پاس بالای سر","پاس بیسبالی"],answer:1,explanation:"پاس سینه دو دست پرکاربردترین پاس بسکتبال است."},
+{q:"پاس سینه دو دست برای چه فاصله‌ای مناسب است؟",options:["۱ تا ۲ متر","۵ تا ۶ متر","۱۰ تا ۱۵ متر","بیش از ۲۰ متر"],answer:1,explanation:"پاس سینه دو دست برای فاصله‌های ۵ تا ۶ متر."},
+{q:"کدام پاس مطمئن‌ترین پاس بسکتبال است؟",options:["پاس زمینی","پاس سینه","پاس دو دستی بالای سر","پاس بیسبالی"],answer:2,explanation:"پاس دو دستی بالای سر مطمئن‌ترین پاس است."},
+{q:"پاس دو دستی بالای سر بیشتر توسط چه کسانی استفاده می‌شود؟",options:["افراد کوتاه","افراد قدبلند","کودکان","مبتدیان"],answer:1,explanation:"پاس بالای سر بیشتر توسط افراد قدبلند."},
+{q:"پاس بیسبالی برای چه مسافت‌هایی استفاده می‌شود؟",options:["مسافت‌های کم","مسافت‌های متوسط","مسافت‌های زیاد","فقط برای شوت"],answer:2,explanation:"پاس بیسبالی برای مسافت‌های زیاد."},
+{q:"پاس بیسبالی با چند دست پرتاب می‌شود؟",options:["یک دست","دو دست","سه دست","مهم نیست"],answer:0,explanation:"پاس بیسبالی با یک دست پرتاب می‌شود."},
+{q:"شوت یعنی چه؟",options:["زدن توپ به زمین","فرستادن توپ به سمت سبد","پاس دادن","دفاع کردن"],answer:1,explanation:"شوت = فرستادن توپ به سمت سبد."},
+{q:"شوت دو دستی از سینه بیشتر توسط چه کسانی استفاده می‌شود؟",options:["ماهرها","مبتدیان","حرفه‌ای‌ها","دروازه‌بان‌ها"],answer:1,explanation:"شوت دو دستی از سینه بیشتر توسط مبتدیان."},
+{q:"شوت هوک روی کدام پا چرخش دارد؟",options:["پای راست","پای چپ","هر دو پا","هیچ‌کدام"],answer:1,explanation:"شوت هوک روی پای چپ چرخش دارد."},
+{q:"تعداد بازیکنان هر تیم بسکتبال چند نفر است؟",options:["۵ نفر","۶ نفر","۷ نفر","۸ نفر"],answer:0,explanation:"هر تیم بسکتبال ۵ بازیکن اصلی دارد."},
+{q:"تعداد یاران ذخیره بسکتبال چند نفر است؟",options:["۲ تا ۳ نفر","۵ تا ۷ نفر","۸ تا ۱۰ نفر","۳ تا ۴ نفر"],answer:1,explanation:"هر تیم ۵ تا ۷ یار ذخیره دارد."},
+{q:"زمان بازی بسکتبال چقدر است؟",options:["دو نیمه ۴۵ دقیقه","دو وقت ۲۰ دقیقه‌ای (۴۰ دقیقه)","یک نیمه ۹۰ دقیقه","سه وقت ۱۵ دقیقه"],answer:1,explanation:"بازی بسکتبال ۴۰ دقیقه (دو وقت ۲۰ دقیقه‌ای)."},
+{q:"استراحت بین دو وقت بسکتبال چقدر است؟",options:["۵ دقیقه","۱۰ دقیقه","۱۵ دقیقه","۲۰ دقیقه"],answer:1,explanation:"استراحت بین دو وقت ۱۰ دقیقه است."},
+{q:"پرتاب از پشت خط سه امتیازی چند امتیاز دارد؟",options:["۱ امتیاز","۲ امتیاز","۳ امتیاز","۴ امتیاز"],answer:2,explanation:"پرتاب از پشت خط سه امتیازی = ۳ امتیاز."},
+{q:"پرتاب آزاد در بسکتبال چند امتیاز دارد؟",options:["۱ امتیاز","۲ امتیاز","۳ امتیاز","۴ امتیاز"],answer:0,explanation:"پرتاب آزاد = ۱ امتیاز."},
+{q:"اندازه زمین بسکتبال چقدر است؟",options:["۱۸ × ۹ متر","۲۸ × ۱۵ متر","۱۱۰ × ۷۵ متر","۲۴ × ۱۳ متر"],answer:1,explanation:"زمین بسکتبال ۲۸ × ۱۵ متر است."},
+{q:"شعاع دایره وسط زمین بسکتبال چقدر است؟",options:["۱.۵ متر","۱.۸۰ متر","۲ متر","۲.۵ متر"],answer:1,explanation:"شعاع دایره وسط = ۱/۸۰ متر."},
+{q:"طول ذوزنقه زیر حلقه بسکتبال چقدر است؟",options:["۴ متر","۵.۸۰ متر","۶ متر","۷ متر"],answer:1,explanation:"طول ذوزنقه = ۵/۸۰ متر."},
+{q:"بازیکنان هنگام حمله چند ثانیه می‌توانند در ذوزنقه توقف کنند؟",options:["۱ ثانیه","۳ ثانیه","۵ ثانیه","محدودیت ندارند"],answer:1,explanation:"توقف بیش از ۳ ثانیه در ذوزنقه ممنوع است."},
+{q:"خط‌کشی دور زمین بسکتبال به چه قطری است؟",options:["۳ سانتی‌متر","۵ سانتی‌متر","۷ سانتی‌متر","۱۰ سانتی‌متر"],answer:1,explanation:"خط‌کشی دور زمین به قطر ۵ سانتی‌متر."},
+{q:"کدام پاس بیشتر در بازی ساکن و نشسته اجرا می‌شود؟",options:["پاس زمینی","پاس سینه","پاس دو دستی بالای سر","پاس بیسبالی"],answer:2,explanation:"پاس دو دستی بالای سر بیشتر در بازی ساکن و نشسته اجرا می‌شود."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

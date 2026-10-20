@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره بهداشت روانی · سری 01 · فصل چهارم: پیشگیری</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"04";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره بهداشت روانی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل چهارم: پیشگیری</h2>
+  <p>پیشگیری اولیه، اتیولوژی، اپیدمیولوژی، مؤسسات، نیروی انسانی و آموزش همگانی</p>
+  <div class="pills"><span class="pill">پیشگیری اولیه</span><span class="pill">اتیولوژی</span><span class="pill">اپیدمیولوژی</span><span class="pill">مؤسسات</span><span class="pill">مراکز جامع</span><span class="pill">نیروی انسانی</span><span class="pill">آموزش همگانی</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>راهنمای مطالعه:</b> این جزوه بر اساس سرفصل‌های <b>فصل چهارم کتاب «بهداشت روانی» میلانی‌فر</b> تدوین شده است. عناوین دقیقاً مطابق ساختار فصل ارائه شده‌اند: <b>پیشگیری اولیه</b>، <b>بررسی‌های اتیولوژیک</b>، <b>بررسی‌های اپیدمیولوژیک</b> (توصیفی، تحلیلی، مداخله‌ای، اجرایی)، <b>ایجاد مؤسسات</b>، <b>مراکز جامع روان‌پزشکی</b>، <b>نیروهای انسانی</b> و <b>آموزش بهداشت روانی همگانی</b>.</div>
+
+<div class="stats">
+<div class="stat"><b>۴</b><span>نوع اپیدمیولوژی</span></div>
+<div class="stat"><b>۳</b><span>عامل اتیولوژیک</span></div>
+<div class="stat"><b>۵</b><span>فایده مراکز جامع</span></div>
+<div class="stat"><b>۲۰</b><span>سؤال آزمون</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#thinkers">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ========== هسته امتحانی ========== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (مرور ۱۰ دقیقه‌ای)</h2>
+<p class="section-sub">اگه فقط ۱۰ دقیقه وقت داری، این بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>پیشگیری اولیه</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>تعریف:</b> پیشگیری اولیه مجموعه اقداماتی است که <b>قبل از بروز اختلال روانی</b> انجام می‌شود تا <b>احتمال بروز آن را کاهش دهد</b>. هدف: <b>کاهش بروز</b> (Incidence) اختلالات روانی در جامعه.
+</div>
+<div class="fa"><b>ویژگی:</b> پیشگیری اولیه <b>قبل از ظهور هرگونه نشانه</b> عمل می‌کند.</div>
+<div class="fa"><b>مثال:</b> آموزش مهارت‌های زندگی به همه دانش‌آموزان، صرف‌نظر از وضعیت روانی آن‌ها.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اصول پیشگیری اولیه (۵ اصل)</h3></div>
+<div class="fa">۱) <b>کاهش عوامل خطر:</b> شناسایی و کاهش عواملی که احتمال بروز اختلال را افزایش می‌دهند.</div>
+<div class="fa">۲) <b>تقویت عوامل محافظت‌کننده:</b> افزایش عواملی که فرد را در برابر اختلال محافظت می‌کنند.</div>
+<div class="fa">۳) <b>مداخله زودهنگام:</b> هرچه زودتر، مؤثرتر.</div>
+<div class="fa">۴) <b>رویکرد جمعیتی:</b> تمرکز بر <b>کل جمعیت</b> یا <b>گروه‌های پرخطر</b>.</div>
+<div class="fa">۵) <b>مشارکت بین‌بخشی:</b> همکاری خانواده، مدرسه، جامعه و نظام سلامت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نمونه‌های پیشگیری اولیه</h3></div>
+<div class="fa">• <b>آموزش مهارت‌های زندگی</b> در مدارس</div>
+<div class="fa">• <b>آموزش والدگری مؤثر</b> به والدین</div>
+<div class="fa">• <b>برنامه‌های پیشگیری از قلدری</b></div>
+<div class="fa">• <b>کمپین‌های آگاهی‌بخشی</b> درباره سلامت روان</div>
+<div class="fa">• <b>مراقبت‌های پره‌ناتال</b> (قبل از تولد)</div>
+<div class="fa">• <b>حمایت‌های روانی-اجتماعی</b> از آسیب‌دیدگان بحران‌ها</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اتیولوژی — مطالعه علل</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>اتیولوژی (Etiology):</b> به مطالعه <b>علل و عوامل ایجادکننده</b> بیماری‌ها گفته می‌شود.</div>
+<div class="fa"><b>در بهداشت روانی:</b> بررسی اتیولوژیک به شناسایی <b>عوامل زیستی، روانی و اجتماعی</b> مؤثر در بروز اختلالات روانی می‌پردازد.</div>
+<div class="fa"><b>سه نوع عامل اتیولوژیک:</b></div>
+<div class="fa">• <b>زیستی:</b> ژنتیک، مغز، انتقال‌دهنده‌ها — مثال: استعداد ژنتیکی اسکیزوفرنی</div>
+<div class="fa">• <b>روانی:</b> شخصیت، شناخت، هیجان — مثال: خطاهای شناختی</div>
+<div class="fa">• <b>اجتماعی:</b> خانواده، فرهنگ، اقتصاد — مثال: فقر، تعارض خانوادگی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اپیدمیولوژی — توزیع و عوامل</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>اپیدمیولوژی:</b> علم مطالعه <b>توزیع</b> و <b>عوامل تعیین‌کننده</b> حالات و رویدادهای مرتبط با سلامت در <b>جمعیت‌ها</b>.
+</div>
+<div class="fa"><b>در بهداشت روانی:</b> بررسی <b>شیوع، بروز، توزیع و عوامل خطر</b> اختلالات روانی در جامعه.</div>
+<div class="fa"><b>چهار نوع اپیدمیولوژی:</b></div>
+<div class="fa">• <b>توصیفی:</b> توصیف <b>توزیع</b> بیماری</div>
+<div class="fa">• <b>تحلیلی:</b> بررسی <b>ارتباط</b> عوامل با بیماری</div>
+<div class="fa">• <b>مداخله‌ای:</b> ارزیابی <b>اثربخشی</b> مداخله</div>
+<div class="fa">• <b>اجرایی:</b> کاربرد <b>عملی</b> در خدمات</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراکز جامع روان‌پزشکی</h3><span class="badge s">مهم</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>مراکز جامع روان‌پزشکی:</b> مراکزی هستند که <b>طیف گسترده‌ای</b> از خدمات سلامت روان را <b>به‌صورت یکپارچه</b> ارائه می‌دهند. هدف: <b>ادغام خدمات</b> برای <b>افزایش کارایی</b> و <b>کاهش هزینه</b>.
+</div>
+<div class="fa"><b>پنج فایده:</b> دسترسی آسان — تداوم خدمات — کاهش انگ — کارایی — همکاری بین‌تخصصی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تیم چندتخصصی</h3></div>
+<table class="compare">
+<thead><tr><th>عضو تیم</th><th>نقش</th></tr></thead>
+<tbody>
+<tr><td>روان‌پزشک</td><td>تشخیص، دارو درمانی</td></tr>
+<tr><td>روان‌شناس</td><td>ارزیابی، روان‌درمانی</td></tr>
+<tr><td>مددکار اجتماعی</td><td>حمایت اجتماعی، ارجاع</td></tr>
+<tr><td>کاردرمانگر</td><td>توان‌بخشی، فعالیت روزمره</td></tr>
+<tr><td>پرستار روان‌پزشکی</td><td>مراقبت، آموزش</td></tr>
+<tr><td>مشاور</td><td>مشاوره، حمایت</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آموزش بهداشت روانی همگانی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف:</b> فرآیندی که <b>کل جامعه</b> را هدف قرار می‌دهد تا <b>آگاهی، نگرش و رفتار</b> مردم در زمینه سلامت روان بهبود یابد. هدف: <b>ارتقای سواد سلامت روان</b> جامعه.</div>
+<div class="fa"><b>اهداف:</b> افزایش آگاهی — کاهش انگ — ترویج کمک‌خواهی — توانمندسازی — پیشگیری.</div>
+<div class="fa"><b>روش‌ها:</b> رسانه‌های جمعی — شبکه‌های اجتماعی — کمپین‌ها — آموزش در مدارس — آموزش در محیط کار — آموزش همتا.</div>
+<div class="fa"><b>چالش‌ها:</b> کمبود بودجه — مقاومت فرهنگی — اطلاعات نادرست — دسترسی محدود — ارزیابی دشوار.</div>
+</div>
+</section>
+
+<!-- ========== مفاهیم ========== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (جز به جز، به زبان ساده)</h2>
+<p class="section-sub">هر مفهوم رو با تعریف ساده + مثال + نکته امتحانی بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) تعریف پیشگیری اولیه</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>پیشگیری اولیه</b> مجموعه اقداماتی است که <b>قبل از بروز اختلال روانی</b> انجام می‌شود تا <b>احتمال بروز آن را کاهش دهد</b>. هدف: <b>کاهش بروز</b> (Incidence) اختلالات روانی در جامعه.</div>
+<div class="fa"><b>ویژگی:</b> پیشگیری اولیه <b>قبل از ظهور هرگونه نشانه</b> عمل می‌کند.</div>
+<div class="fa"><b>مثال:</b> آموزش مهارت‌های زندگی به همه دانش‌آموزان، صرف‌نظر از وضعیت روانی آن‌ها.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) اصول پیشگیری اولیه</h3></div>
+<div class="fa">۱) <b>کاهش عوامل خطر:</b> شناسایی و کاهش عواملی که احتمال بروز اختلال را افزایش می‌دهند.</div>
+<div class="fa">۲) <b>تقویت عوامل محافظت‌کننده:</b> افزایش عواملی که فرد را در برابر اختلال محافظت می‌کنند.</div>
+<div class="fa">۳) <b>مداخله زودهنگام:</b> هرچه زودتر، مؤثرتر.</div>
+<div class="fa">۴) <b>رویکرد جمعیتی:</b> تمرکز بر <b>کل جمعیت</b> یا <b>گروه‌های پرخطر</b>.</div>
+<div class="fa">۵) <b>مشارکت بین‌بخشی:</b> همکاری خانواده، مدرسه، جامعه و نظام سلامت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) نمونه‌های پیشگیری اولیه</h3></div>
+<div class="fa">• <b>آموزش مهارت‌های زندگی</b> در مدارس</div>
+<div class="fa">• <b>آموزش والدگری مؤثر</b> به والدین</div>
+<div class="fa">• <b>برنامه‌های پیشگیری از قلدری</b></div>
+<div class="fa">• <b>کمپین‌های آگاهی‌بخشی</b> درباره سلامت روان</div>
+<div class="fa">• <b>مراقبت‌های پره‌ناتال</b> (قبل از تولد)</div>
+<div class="fa">• <b>حمایت‌های روانی-اجتماعی</b> از آسیب‌دیدگان بحران‌ها</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۴) تعریف اتیولوژی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>اتیولوژی (Etiology)</b> به مطالعه <b>علل و عوامل ایجادکننده</b> بیماری‌ها گفته می‌شود.</div>
+<div class="fa"><b>در بهداشت روانی:</b> بررسی اتیولوژیک به شناسایی <b>عوامل زیستی، روانی و اجتماعی</b> مؤثر در بروز اختلالات روانی می‌پردازد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۵) انواع عوامل اتیولوژیک</h3></div>
+<table class="compare">
+<thead><tr><th>نوع عامل</th><th>توضیح</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>زیستی</td><td>ژنتیک، مغز، انتقال‌دهنده‌ها</td><td>استعداد ژنتیکی اسکیزوفرنی</td></tr>
+<tr><td>روانی</td><td>شخصیت، شناخت، هیجان</td><td>خطاهای شناختی</td></tr>
+<tr><td>اجتماعی</td><td>خانواده، فرهنگ، اقتصاد</td><td>فقر، تعارض خانوادگی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۶) اهمیت بررسی اتیولوژیک</h3></div>
+<div class="fa">۱) <b>پیشگیری:</b> شناسایی عوامل خطر <b>قابل‌تغییر</b> برای مداخله.</div>
+<div class="fa">۲) <b>تشخیص:</b> درک <b>مکانیسم</b> بروز اختلال.</div>
+<div class="fa">۳) <b>درمان:</b> انتخاب <b>مداخله مناسب</b> بر اساس علت.</div>
+<div class="fa">۴) <b>سیاست‌گذاری:</b> طراحی <b>برنامه‌های پیشگیری</b> مبتنی بر شواهد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۷) مدل زیستی-روانی-اجتماعی (انگل)</h3></div>
+<div class="fa"><b>مفهوم:</b> اختلال روانی حاصل <b>تعامل</b> عوامل زیستی، روانی و اجتماعی است.</div>
+<div class="fa"><b>کاربرد در پیشگیری:</b> مداخلات باید <b>چندسطحی</b> باشند — نه فقط بر فرد، بلکه بر خانواده، مدرسه، محیط کار و سیاست‌های اجتماعی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۸) تعریف اپیدمیولوژی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>اپیدمیولوژی (Epidemiology)</b> علم مطالعه <b>توزیع</b> و <b>عوامل تعیین‌کننده</b> حالات و رویدادهای مرتبط با سلامت در <b>جمعیت‌ها</b> است.</div>
+<div class="fa"><b>در بهداشت روانی:</b> بررسی <b>شیوع، بروز، توزیع و عوامل خطر</b> اختلالات روانی در جامعه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۹) کاربردهای اپیدمیولوژی</h3></div>
+<div class="fa">• <b>تعیین بار بیماری:</b> سنجش <b>شیوع</b> و <b>بروز</b>.</div>
+<div class="fa">• <b>شناسایی عوامل خطر:</b> بررسی <b>ارتباط</b> عوامل با اختلال.</div>
+<div class="fa">• <b>برنامه‌ریزی خدمات:</b> تعیین <b>نیاز جامعه</b> به خدمات.</div>
+<div class="fa">• <b>ارزیابی مداخلات:</b> بررسی <b>اثربخشی</b> برنامه‌های پیشگیری.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰) انواع مطالعات اپیدمیولوژیک</h3></div>
+<table class="compare">
+<thead><tr><th>نوع مطالعه</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>توصیفی</td><td>توصیف <b>توزیع</b> بیماری</td></tr>
+<tr><td>تحلیلی</td><td>بررسی <b>ارتباط</b> عوامل با بیماری</td></tr>
+<tr><td>مداخله‌ای</td><td>ارزیابی <b>اثربخشی</b> مداخله</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۱) تعریف همه‌گیرشناسی توصیفی</h3></div>
+<div class="fa"><b>همه‌گیرشناسی توصیفی</b> به <b>توصیف</b> توزیع بیماری بر اساس <b>زمان، مکان و شخص</b> می‌پردازد.</div>
+<div class="fa"><b>هدف:</b> پاسخ به سؤالات <b>«چه کسی؟»</b>، <b>«کجا؟»</b> و <b>«چه زمانی؟»</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۲) اجزای توصیف</h3></div>
+<table class="compare">
+<thead><tr><th>بُعد</th><th>توضیح</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>زمان</td><td>تغییرات بیماری در طول زمان</td><td>افزایش افسردگی در فصل زمستان</td></tr>
+<tr><td>مکان</td><td>توزیع جغرافیایی</td><td>شیوع بالاتر در مناطق محروم</td></tr>
+<tr><td>شخص</td><td>ویژگی‌های فردی</td><td>سن، جنسیت، وضعیت اقتصادی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۳) کاربرد همه‌گیرشناسی توصیفی</h3></div>
+<div class="fa">• <b>شناسایی گروه‌های پرخطر</b></div>
+<div class="fa">• <b>تعیین اولویت‌های بهداشتی</b></div>
+<div class="fa">• <b>تولید فرضیه</b> برای مطالعات تحلیلی</div>
+<div class="fa">• <b>پایش روند</b> بیماری در طول زمان</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۴) تعریف همه‌گیرشناسی تحلیلی</h3></div>
+<div class="fa"><b>همه‌گیرشناسی تحلیلی</b> به بررسی <b>ارتباط بین عوامل خطر و بیماری</b> می‌پردازد.</div>
+<div class="fa"><b>هدف:</b> پاسخ به سؤال <b>«چرا؟»</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۵) انواع مطالعات تحلیلی</h3></div>
+<table class="compare">
+<thead><tr><th>نوع مطالعه</th><th>توضیح</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>مورد-شاهدی</td><td>مقایسه افراد بیمار با سالم</td><td>بررسی رابطه استرس و افسردگی</td></tr>
+<tr><td>همگروهی (کوهورت)</td><td>پیگیری افراد سالم در طول زمان</td><td>بررسی بروز افسردگی در افراد با استرس مزمن</td></tr>
+<tr><td>مقطعی</td><td>بررسی همزمان بیماری و عوامل</td><td>شیوع افسردگی و ارتباط با فقر</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۶) معیارهای ارتباط</h3></div>
+<div class="fa">• <b>نسبت شانس (Odds Ratio):</b> در مطالعات مورد-شاهدی.</div>
+<div class="fa">• <b>خطر نسبی (Relative Risk):</b> در مطالعات همگروهی.</div>
+<div class="fa">• <b>همبستگی:</b> در مطالعات مقطعی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> ارتباط ≠ علیت. برای اثبات علیت، نیازمند شواهد قوی‌تر هستیم.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۷) تعریف همه‌گیرشناسی مداخله‌ای</h3></div>
+<div class="fa"><b>همه‌گیرشناسی مداخله‌ای</b> به <b>ارزیابی اثربخشی</b> مداخلات پیشگیری یا درمانی در <b>جمعیت</b> می‌پردازد.</div>
+<div class="fa"><b>هدف:</b> پاسخ به سؤال <b>«آیا مداخله مؤثر است؟»</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۸) انواع مطالعات مداخله‌ای</h3></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>کارآزمایی بالینی تصادفی (RCT)</td><td>استاندارد طلایی — تصادفی‌سازی</td></tr>
+<tr><td>کارآزمایی میدانی</td><td>در محیط واقعی</td></tr>
+<tr><td>کارآزمایی اجتماعی</td><td>در سطح جامعه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۹) اجزای کارآزمایی</h3></div>
+<div class="fa">• <b>گروه مداخله:</b> دریافت‌کننده مداخله.</div>
+<div class="fa">• <b>گروه کنترل:</b> دریافت‌کننده دارونما یا مداخله معمول.</div>
+<div class="fa">• <b>تصادفی‌سازی:</b> تخصیص تصادفی به گروه‌ها.</div>
+<div class="fa">• <b>کورسازی:</b> کاهش سوگیری.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۰) کاربرد در پیشگیری</h3></div>
+<div class="fa"><b>ارزیابی برنامه‌های پیشگیری:</b> آیا برنامه <b>بروز</b> اختلال را کاهش داده است؟</div>
+<div class="fa"><b>مثال:</b> ارزیابی اثربخشی برنامه آموزش مهارت‌های زندگی در کاهش افسردگی دانش‌آموزان.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۱) تعریف همه‌گیرشناسی اجرایی</h3></div>
+<div class="fa"><b>همه‌گیرشناسی اجرایی</b> به <b>کاربرد عملی</b> اصول و روش‌های اپیدمیولوژی در <b>خدمات بهداشتی</b> اشاره دارد.</div>
+<div class="fa"><b>هدف:</b> <b>بهبود تصمیم‌گیری</b> و <b>مدیریت خدمات</b> سلامت روان.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۲) کاربردهای همه‌گیرشناسی اجرایی</h3></div>
+<div class="fa">• <b>نیازسنجی:</b> تعیین <b>نیاز جامعه</b> به خدمات.</div>
+<div class="fa">• <b>تخصیص منابع:</b> توزیع <b>منابع محدود</b> بر اساس نیاز.</div>
+<div class="fa">• <b>پایش و ارزشیابی:</b> بررسی <b>پیشرفت</b> برنامه‌ها.</div>
+<div class="fa">• <b>سیاست‌گذاری:</b> <b>تصمیم‌گیری مبتنی بر شواهد</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۳) تفاوت با سایر انواع</h3></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>تمرکز</th></tr></thead>
+<tbody>
+<tr><td>توصیفی</td><td>توصیف توزیع</td></tr>
+<tr><td>تحلیلی</td><td>بررسی ارتباط</td></tr>
+<tr><td>مداخله‌ای</td><td>ارزیابی اثربخشی</td></tr>
+<tr><td>اجرایی</td><td>کاربرد عملی در خدمات</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۴) تعریف ایجاد و توسعه مؤسسات</h3></div>
+<div class="fa"><b>ایجاد و توسعه مؤسسات</b> به <b>تأسیس، تجهیز و گسترش</b> مراکز ارائه‌دهنده خدمات سلامت روان اشاره دارد.</div>
+<div class="fa"><b>هدف:</b> <b>افزایش دسترسی</b> جامعه به خدمات پیشگیری، درمان و توان‌بخشی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۵) انواع مؤسسات</h3></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>توضیح</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>مراکز مشاوره</td><td>خدمات سرپایی</td><td>مراکز مشاوره دانشگاهی</td></tr>
+<tr><td>کلینیک‌های روان‌پزشکی</td><td>خدمات تخصصی</td><td>کلینیک‌های بیمارستانی</td></tr>
+<tr><td>بیمارستان‌های روان‌پزشکی</td><td>خدمات بستری</td><td>بیمارستان روان‌پزشکی</td></tr>
+<tr><td>مراکز توان‌بخشی</td><td>خدمات توان‌بخشی</td><td>مراکز کاردرمانی</td></tr>
+<tr><td>مراکز اجتماعی</td><td>خدمات جامعه‌محور</td><td>خانه‌های حمایتی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۶) اصول ایجاد مؤسسات</h3></div>
+<div class="fa">۱) <b>نیازسنجی:</b> تعیین <b>نیاز جامعه</b> قبل از تأسیس.</div>
+<div class="fa">۲) <b>عدالت:</b> توزیع <b>عادلانه</b> مؤسسات بین مناطق.</div>
+<div class="fa">۳) <b>کیفیت:</b> ارائه خدمات <b>مبتنی بر شواهد</b>.</div>
+<div class="fa">۴) <b>تداوم:</b> تضمین <b>پایداری</b> خدمات.</div>
+<div class="fa">۵) <b>مشارکت:</b> درگیر کردن <b>جامعه</b> در برنامه‌ریزی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۷) تعریف مراکز جامع روان‌پزشکی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>مراکز جامع روان‌پزشکی</b> مراکزی هستند که <b>طیف گسترده‌ای</b> از خدمات سلامت روان را <b>به‌صورت یکپارچه</b> ارائه می‌دهند.
+</div>
+<div class="fa"><b>هدف:</b> <b>ادغام خدمات</b> برای <b>افزایش کارایی</b> و <b>کاهش هزینه</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۸) فواید مراکز جامع</h3></div>
+<table class="compare">
+<thead><tr><th>فایده</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>دسترسی آسان</td><td>یک مرکز، چند خدمت</td></tr>
+<tr><td>تداوم خدمات</td><td>پیگیری بیمار در یک مرکز</td></tr>
+<tr><td>کاهش انگ</td><td>مراجعه به مرکز عمومی، نه تخصصی</td></tr>
+<tr><td>کارایی</td><td>استفاده بهینه از منابع</td></tr>
+<tr><td>همکاری بین‌تخصصی</td><td>تیم چندتخصصی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲۹) هدف از تشکیل</h3></div>
+<div class="fa">• <b>ارائه خدمات جامع:</b> پیشگیری، تشخیص، درمان، توان‌بخشی.</div>
+<div class="fa">• <b>کاهش هزینه:</b> ادغام خدمات، کاهش هزینه‌های جداگانه.</div>
+<div class="fa">• <b>افزایش کیفیت:</b> همکاری بین‌تخصصی.</div>
+<div class="fa">• <b>رضایت مراجع:</b> دسترسی آسان به خدمات متعدد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۰) ارزیابی فواید</h3></div>
+<div class="fa"><b>شاخص‌های ارزیابی:</b></div>
+<div class="fa">• <b>دسترسی:</b> درصد جمعیت تحت پوشش.</div>
+<div class="fa">• <b>کیفیت:</b> رضایت مراجعان.</div>
+<div class="fa">• <b>کارایی:</b> هزینه به ازای هر خدمت.</div>
+<div class="fa">• <b>اثربخشی:</b> بهبود پیامدهای سلامت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۱) تیم چندتخصصی</h3></div>
+<div class="fa"><b>تیم چندتخصصی</b> شامل متخصصان مختلف است که <b>همکاری</b> می‌کنند.</div>
+<table class="compare">
+<thead><tr><th>عضو تیم</th><th>نقش</th></tr></thead>
+<tbody>
+<tr><td>روان‌پزشک</td><td>تشخیص، دارو درمانی</td></tr>
+<tr><td>روان‌شناس</td><td>ارزیابی، روان‌درمانی</td></tr>
+<tr><td>مددکار اجتماعی</td><td>حمایت اجتماعی، ارجاع</td></tr>
+<tr><td>کاردرمانگر</td><td>توان‌بخشی، فعالیت روزمره</td></tr>
+<tr><td>پرستار روان‌پزشکی</td><td>مراقبت، آموزش</td></tr>
+<tr><td>مشاور</td><td>مشاوره، حمایت</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۲) برای اجرای روش صحیح و اصول بهداشت روانی</h3></div>
+<div class="fa"><b>اصول:</b></div>
+<div class="fa">۱) <b>آموزش مداوم:</b> به‌روزرسانی دانش و مهارت.</div>
+<div class="fa">۲) <b>همکاری بین‌تخصصی:</b> تبادل نظر، تقسیم کار.</div>
+<div class="fa">۳) <b>رعایت اخلاق:</b> کرامت، محرمانگی، رضایت.</div>
+<div class="fa">۴) <b>مبتنی بر شواهد:</b> استفاده از روش‌های مؤثر.</div>
+<div class="fa">۵) <b>توجه به فرهنگ:</b> تطبیق خدمات با فرهنگ جامعه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۳) چالش‌های نیروی انسانی</h3></div>
+<div class="fa">• <b>کمبود متخصص</b> در مناطق محروم.</div>
+<div class="fa">• <b>توزیع نامناسب</b> نیروی انسانی.</div>
+<div class="fa">• <b>کمبود آموزش مداوم</b>.</div>
+<div class="fa">• <b>فرسودگی شغلی</b>.</div>
+<div class="fa">• <b>مهاجرت متخصصان</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۴) تعریف آموزش همگانی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>آموزش بهداشت روانی همگانی</b> فرآیندی است که <b>کل جامعه</b> را هدف قرار می‌دهد تا <b>آگاهی، نگرش و رفتار</b> مردم در زمینه سلامت روان بهبود یابد.</div>
+<div class="fa"><b>هدف:</b> <b>ارتقای سواد سلامت روان</b> جامعه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۵) اهداف آموزش همگانی</h3></div>
+<div class="fa">• <b>افزایش آگاهی:</b> شناخت نشانه‌ها و اختلالات.</div>
+<div class="fa">• <b>کاهش انگ:</b> تغییر نگرش منفی.</div>
+<div class="fa">• <b>ترویج کمک‌خواهی:</b> تشویق به مراجعه به‌موقع.</div>
+<div class="fa">• <b>توانمندسازی:</b> تقویت مهارت‌های خودمراقبتی.</div>
+<div class="fa">• <b>پیشگیری:</b> کاهش بروز اختلالات.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۶) روش‌های آموزش همگانی</h3></div>
+<table class="compare">
+<thead><tr><th>روش</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>رسانه‌های جمعی</td><td>تلویزیون، رادیو، روزنامه</td></tr>
+<tr><td>شبکه‌های اجتماعی</td><td>اینستاگرام، تلگرام</td></tr>
+<tr><td>کمپین‌ها</td><td>کمپین‌های آگاهی‌بخشی</td></tr>
+<tr><td>آموزش در مدارس</td><td>آموزش مهارت‌های زندگی</td></tr>
+<tr><td>آموزش در محیط کار</td><td>مدیریت استرس</td></tr>
+<tr><td>آموزش همتا</td><td>افراد با تجربه مشابه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۷) محتوای آموزش همگانی</h3></div>
+<div class="fa">• <b>ماهیت اختلالات روانی:</b> کاهش باورهای غلط.</div>
+<div class="fa">• <b>نشانه‌های هشداردهنده:</b> تشخیص زودهنگام.</div>
+<div class="fa">• <b>مهارت‌های زندگی:</b> حل مسئله، مدیریت استرس.</div>
+<div class="fa">• <b>کمک‌خواهی:</b> زمان و مکان مراجعه.</div>
+<div class="fa">• <b>کاهش انگ:</b> تغییر نگرش جامعه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳۸) چالش‌های آموزش همگانی</h3></div>
+<div class="fa">• <b>کمبود بودجه</b> برای کمپین‌ها.</div>
+<div class="fa">• <b>مقاومت فرهنگی</b> در برابر تغییر.</div>
+<div class="fa">• <b>اطلاعات نادرست</b> در رسانه‌ها.</div>
+<div class="fa">• <b>دسترسی محدود</b> در مناطق محروم.</div>
+<div class="fa">• <b>ارزیابی دشوار</b> اثربخشی.</div>
+</div>
+</section>
+
+<!-- ========== تفاوت‌ها ========== -->
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (جدول‌های کلیدی)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>اتیولوژی vs اپیدمیولوژی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>اتیولوژی</th><th>اپیدمیولوژی</th></tr></thead>
+<tbody>
+<tr><td>مطالعه علل بیماری</td><td>مطالعه توزیع و عوامل تعیین‌کننده</td></tr>
+<tr><td>تمرکز بر «چرا»</td><td>تمرکز بر «چه کسی، کجا، چه زمانی»</td></tr>
+<tr><td>عوامل زیستی، روانی، اجتماعی</td><td>شیوع، بروز، عوامل خطر</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>دام آزمون:</b> گزینه‌ای که این دو را مترادف بگیرد، نادرست است.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توصیفی vs تحلیلی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>توصیفی</th><th>تحلیلی</th></tr></thead>
+<tbody>
+<tr><td>توصیف توزیع</td><td>بررسی ارتباط</td></tr>
+<tr><td>«چه کسی، کجا، چه زمانی»</td><td>«چرا»</td></tr>
+<tr><td>تولید فرضیه</td><td>آزمون فرضیه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تحلیلی vs مداخله‌ای vs اجرایی</h3></div>
+<table class="compare">
+<thead><tr><th>تحلیلی</th><th>مداخله‌ای</th><th>اجرایی</th></tr></thead>
+<tbody>
+<tr><td>بررسی ارتباط</td><td>ارزیابی اثربخشی</td><td>کاربرد عملی</td></tr>
+<tr><td>«چرا»</td><td>«آیا مؤثر است؟»</td><td>«چگونه در خدمات؟»</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مورد-شاهدی vs همگروهی vs مقطعی</h3></div>
+<table class="compare">
+<thead><tr><th>مورد-شاهدی</th><th>همگروهی</th><th>مقطعی</th></tr></thead>
+<tbody>
+<tr><td>مقایسه بیمار و سالم</td><td>پیگیری در زمان</td><td>بررسی همزمان</td></tr>
+<tr><td>نسبت شانس</td><td>خطر نسبی</td><td>همبستگی</td></tr>
+<tr><td>گذشته‌نگر</td><td>آینده‌نگر</td><td>حال‌نگر</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>RCT vs مطالعات مشاهده‌ای</h3></div>
+<table class="compare">
+<thead><tr><th>RCT</th><th>مطالعات مشاهده‌ای</th></tr></thead>
+<tbody>
+<tr><td>تصادفی‌سازی</td><td>بدون تصادفی‌سازی</td></tr>
+<tr><td>استاندارد طلایی</td><td>شواهد ضعیف‌تر</td></tr>
+<tr><td>مداخله‌ای</td><td>توصیفی/تحلیلی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراکز جامع vs مراکز تخصصی جدا</h3></div>
+<table class="compare">
+<thead><tr><th>مراکز جامع</th><th>مراکز تخصصی جدا</th></tr></thead>
+<tbody>
+<tr><td>ادغام خدمات</td><td>خدمات جداگانه</td></tr>
+<tr><td>دسترسی آسان</td><td>دسترسی دشوارتر</td></tr>
+<tr><td>کاهش انگ</td><td>افزایش انگ</td></tr>
+<tr><td>کارایی بالا</td><td>کارایی پایین‌تر</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آموزش همگانی vs آموزش تخصصی</h3></div>
+<table class="compare">
+<thead><tr><th>آموزش همگانی</th><th>آموزش تخصصی</th></tr></thead>
+<tbody>
+<tr><td>کل جامعه</td><td>متخصصان</td></tr>
+<tr><td>افزایش آگاهی، کاهش انگ</td><td>به‌روزرسانی دانش</td></tr>
+<tr><td>رسانه، کمپین</td><td>کنفرانس، دوره</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ========== نظریه‌پردازان ========== -->
+<section id="thinkers" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان و چارچوب‌های تخصصی</h2>
+<p class="section-sub">هر کی چی گفته + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>جورج انگل (۱۹۷۷) — مدل زیستی-روانی-اجتماعی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>نام اصلی:</b> George Engel</div>
+<div class="fa"><b>مفهوم:</b> Biopsychosocial Model</div>
+<div class="fa"><b>ایده اصلی:</b> سلامت و بیماری حاصل تعامل پیچیده عوامل <b>زیستی</b> (ژنتیک، عملکرد عصبی)، <b>روانی</b> (انگیزه، شخصیت، شناخت) و <b>اجتماعی</b> (رویدادهای استرس‌زا، حمایت اجتماعی، وضعیت اقتصادی) است.</div>
+<div class="fa"><b>ارتباط با پیشگیری:</b> توضیح می‌دهد چرا مداخلات پیشگیرانه باید <b>چندسطحی</b> باشند — نه فقط بر فرد، بلکه بر خانواده، مدرسه، محیط کار و سیاست‌های اجتماعی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> گزینه‌های انحرافی: الگوی زیست‌پزشکی (فقط زیستی) و الگوی صرفاً روان‌پویشی.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جرالد کیلن — طبقه‌بندی سه‌سطحی پیشگیری</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>مفهوم:</b> پیشگیری اولیه (قبل از بروز)، ثانویه (مراحل اولیه)، ثالث (پس از استقرار).</div>
+<div class="fa"><b>ارتباط با فصل:</b> مبنای طبقه‌بندی پیشگیری در این فصل است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> این طبقه‌بندی بر اساس <b>زمان</b> است، نه سطح خطر.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چارچوب بهداشت عمومی (Public Health Approach)</h3></div>
+<div class="fa"><b>مفهوم:</b> سلامت روان یک موضوع جمعیتی است که نیازمند پیشگیری، ارتقا و دسترسی عادلانه به خدمات است.</div>
+<div class="fa"><b>سه دلیل سرمایه‌گذاری:</b> بهبود سلامت عمومی — حمایت از حقوق بشر — توسعه اقتصادی-اجتماعی.</div>
+<div class="fa"><b>ارتباط با پیشگیری:</b> مبنای نظری برای برنامه‌های پیشگیری جمعیتی و آموزش همگانی.</div>
+</div>
+</section>
+
+<!-- ========== دام‌ها ========== -->
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های آزمون با تحلیل دقیق</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: پیشگیری اولیه vs ثانویه</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> پیشگیری اولیه = قبل از بروز / پیشگیری ثانویه = مراحل اولیه.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: اتیولوژی vs اپیدمیولوژی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> اتیولوژی = مطالعه علل / اپیدمیولوژی = مطالعه توزیع و عوامل.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: توصیفی vs تحلیلی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> توصیفی = توصیف توزیع / تحلیلی = بررسی ارتباط.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: تحلیلی vs مداخله‌ای</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> تحلیلی = بررسی ارتباط / مداخله‌ای = ارزیابی اثربخشی.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: مداخله‌ای vs اجرایی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو مترادف می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> مداخله‌ای = ارزیابی اثربخشی / اجرایی = کاربرد عملی در خدمات.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: مورد-شاهدی vs همگروهی</h3>
+<div class="fa"><b>دام چیه:</b> این دو رو جابه‌جا می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> مورد-شاهدی = مقایسه بیمار و سالم / همگروهی = پیگیری در زمان.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: RCT</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی RCT یک مطالعه توصیفی است.</div>
+<div class="fa"><b>جواب درست:</b> RCT استاندارد طلایی مطالعات مداخله‌ای است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: ارتباط vs علیت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر ارتباطی علیت است.</div>
+<div class="fa"><b>جواب درست:</b> ارتباط ≠ علیت. برای اثبات علیت نیازمند شواهد قوی‌تر هستیم.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: مراکز جامع</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی مراکز جامع فقط بستری هستند.</div>
+<div class="fa"><b>جواب درست:</b> مراکز جامع = ادغام خدمات (پیشگیری، تشخیص، درمان، توان‌بخشی).</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: تیم چندتخصصی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تیم چندتخصصی فقط روان‌پزشک است.</div>
+<div class="fa"><b>جواب درست:</b> تیم چندتخصصی شامل روان‌پزشک، روان‌شناس، مددکار، کاردرمانگر، پرستار و مشاور است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: آموزش همگانی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی آموزش همگانی فقط برای بیماران است.</div>
+<div class="fa"><b>جواب درست:</b> آموزش همگانی کل جامعه را هدف قرار می‌دهد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: اصول اجرای روش صحیح</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی آموزش مداوم جزء اصول نیست.</div>
+<div class="fa"><b>جواب درست:</b> آموزش مداوم، همکاری بین‌تخصصی، رعایت اخلاق، مبتنی بر شواهد و توجه به فرهنگ از اصول هستند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: چالش‌های نیروی انسانی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی توزیع نیروی انسانی مناسب است.</div>
+<div class="fa"><b>جواب درست:</b> توزیع نامناسب نیروی انسانی از چالش‌ها است.</div>
+</div>
+</section>
+
+<!-- ========== کوییز ========== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز هوشمند</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل چهارم — پیشگیری</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</div>
+
+<div class="footer">Quizly · سری 01 · مشاوره بهداشت روانی · فصل چهارم: پیشگیری — بر اساس کتاب بهداشت روانی میلانی‌فر</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"«پیشگیری اولیه» چه زمانی عمل می‌کند؟",options:["قبل از بروز","مراحل اولیه","پس از استقرار","پس از بهبودی"],answer:0,explanation:"پیشگیری اولیه قبل از بروز اختلال عمل می‌کند."},
+{q:"هدف «پیشگیری اولیه» چیست؟",options:["کاهش بروز","کاهش شیوع","کاهش عوارض","افزایش بروز"],answer:0,explanation:"هدف پیشگیری اولیه: کاهش بروز (Incidence)."},
+{q:"کدام گزینه یک «نمونه پیشگیری اولیه» است؟",options:["غربالگری","آموزش مهارت‌های زندگی","توان‌بخشی","پیشگیری از عود"],answer:1,explanation:"آموزش مهارت‌های زندگی از نمونه‌های پیشگیری اولیه است."},
+{q:"کدام گزینه یک «اصل پیشگیری اولیه» است؟",options:["کاهش عوامل خطر","فقط درمان","فقط بستری","فقط دارو"],answer:0,explanation:"کاهش عوامل خطر از اصول پیشگیری اولیه است."},
+{q:"«پیشگیری اولیه» بر کدام گروه تمرکز دارد؟",options:["فقط بیماران","کل جمعیت یا گروه‌های پرخطر","فقط سالمندان","فقط کودکان"],answer:1,explanation:"پیشگیری اولیه بر کل جمعیت یا گروه‌های پرخطر تمرکز دارد."},
+{q:"«اتیولوژی» به چه معناست؟",options:["مطالعه توزیع","مطالعه علل","مطالعه درمان","مطالعه پیشگیری"],answer:1,explanation:"اتیولوژی: مطالعه علل و عوامل ایجادکننده بیماری."},
+{q:"«اپیدمیولوژی توصیفی» بر چه چیزی تمرکز دارد؟",options:["بررسی ارتباط","توصیف توزیع","ارزیابی اثربخشی","کاربرد عملی"],answer:1,explanation:"اپیدمیولوژی توصیفی: توصیف توزیع بیماری."},
+{q:"«مطالعه مورد-شاهدی» چه ویژگی دارد؟",options:["پیگیری در زمان","مقایسه بیماران با سالم‌ها","تصادفی‌سازی","کاربرد عملی"],answer:1,explanation:"مورد-شاهدی: مقایسه افراد بیمار با سالم."},
+{q:"«RCT» چه نوع مطالعه‌ای است؟",options:["توصیفی","تحلیلی","مداخله‌ای","اجرایی"],answer:2,explanation:"RCT: مطالعه مداخله‌ای (استاندارد طلایی)."},
+{q:"«اپیدمیولوژی اجرایی» بر چه چیزی تمرکز دارد؟",options:["توصیف توزیع","بررسی ارتباط","کاربرد عملی در خدمات","ارزیابی اثربخشی"],answer:2,explanation:"اپیدمیولوژی اجرایی: کاربرد عملی در خدمات بهداشتی."},
+{q:"«مراکز جامع روان‌پزشکی» چه ویژگی دارند؟",options:["فقط بستری","ادغام خدمات","فقط مشاوره","فقط دارو"],answer:1,explanation:"مراکز جامع: ادغام خدمات (پیشگیری، تشخیص، درمان، توان‌بخشی)."},
+{q:"کدام گزینه یک «فایده مراکز جامع» است؟",options:["افزایش انگ","کاهش دسترسی","کاهش انگ","کاهش کیفیت"],answer:2,explanation:"کاهش انگ از فواید مراکز جامع است."},
+{q:"«تیم چندتخصصی» شامل چه اعضایی است؟",options:["فقط روان‌پزشک","روان‌پزشک، روان‌شناس، مددکار، کاردرمانگر","فقط پرستار","فقط مشاور"],answer:1,explanation:"تیم چندتخصصی: روان‌پزشک، روان‌شناس، مددکار، کاردرمانگر، پرستار، مشاور."},
+{q:"کدام گزینه یک «اصل اجرای روش صحیح» است؟",options:["آموزش مداوم","بدون همکاری","بدون اخلاق","بدون شواهد"],answer:0,explanation:"آموزش مداوم از اصول اجرای روش صحیح است."},
+{q:"کدام گزینه یک «چالش نیروی انسانی» است؟",options:["کمبود متخصص","توزیع مناسب","آموزش مداوم","همکاری بین‌تخصصی"],answer:0,explanation:"کمبود متخصص در مناطق محروم از چالش‌ها است."},
+{q:"«آموزش بهداشت روانی همگانی» بر کدام گروه تمرکز دارد؟",options:["فقط بیماران","کل جامعه","فقط متخصصان","فقط کودکان"],answer:1,explanation:"آموزش همگانی: کل جامعه را هدف قرار می‌دهد."},
+{q:"کدام گزینه یک «هدف آموزش همگانی» است؟",options:["افزایش انگ","کاهش آگاهی","کاهش انگ","کاهش دسترسی"],answer:2,explanation:"کاهش انگ از اهداف آموزش همگانی است."},
+{q:"کدام گزینه یک «روش آموزش همگانی» است؟",options:["فقط سخنرانی","رسانه‌های جمعی","فقط جزوه","فقط کارگاه"],answer:1,explanation:"رسانه‌های جمعی از روش‌های آموزش همگانی است."},
+{q:"کدام گزینه یک «محتوای آموزش همگانی» است؟",options:["فقط دارو","ماهیت اختلالات روانی","فقط بستری","فقط تشخیص"],answer:1,explanation:"ماهیت اختلالات روانی از محتوای آموزش همگانی است."},
+{q:"کدام گزینه یک «چالش آموزش همگانی» است؟",options:["کمبود بودجه","دسترسی آسان","اطلاعات صحیح","مشارکت جامعه"],answer:0,explanation:"کمبود بودجه از چالش‌های آموزش همگانی است."},
+{q:"«همگروهی (کوهورت)» چه ویژگی دارد؟",options:["مقایسه بیمار و سالم","پیگیری افراد سالم در طول زمان","بررسی همزمان","تصادفی‌سازی"],answer:1,explanation:"همگروهی: پیگیری افراد سالم در طول زمان."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'پاسخ صحیح است. ' + q.explanation : 'پاسخ نادرست است. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+quizIndex = (quizIndex + 1) % quizData.length;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

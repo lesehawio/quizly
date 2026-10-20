@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizly | داشبورد برنامه کلاسی</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+        :root {
+            --bg-color: #f7edf1;
+            --surface: #fffafd;
+            --surface-hover: #fdf3f7;
+            --ink: #251820;
+            --muted: #765b68;
+            --line: #ecd6df;
+            --pink: #f94779;
+            --pink-soft: #ffe8f0;
+            --purple: #7c4dff;
+            --green: #1f9d73;
+            --danger: #ef4444;
+            --danger-soft: #ffe3ea;
+            --shadow: 0 18px 45px rgba(115, 38, 67, 0.08);
+            --shadow-hover: 0 22px 55px rgba(115, 38, 67, 0.15);
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #140c11;
+            --surface: #21131a;
+            --surface-hover: #2a1821;
+            --ink: #f9e8ef;
+            --muted: #c7a9b7;
+            --line: #4a2938;
+            --pink-soft: #39202c;
+            --danger-soft: #3c1828;
+            --shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+            --shadow-hover: 0 22px 55px rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at top right, var(--pink-soft) 0%, transparent 35%);
+            color: var(--ink);
+            line-height: 1.8;
+            min-height: 100vh;
+            padding-bottom: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .app-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* هدر و لوگو */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container {
+            width: 55px;
+            height: 55px;
+            background: rgba(249, 71, 121, 0.1);
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(249, 71, 121, 0.2);
+            box-shadow: var(--shadow);
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 6px;
+        }
+
+        .brand-text h1 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--pink);
+            letter-spacing: -0.5px;
+            margin-bottom: 2px;
+        }
+
+        .brand-text p {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .theme-btn {
+            background: var(--surface);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            padding: 8px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-btn:hover {
+            border-color: var(--pink);
+            transform: translateY(-2px);
+        }
+
+        /* آیکون‌های SVG پایه */
+        .icon {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+        /* بخش هدر اصلی (Hero) */
+        .hero {
+            background: linear-gradient(135deg, #9f174d, #f94779 60%, #ff8bad);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            left: -20px;
+            bottom: -30px;
+            width: 160px;
+            height: 160px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* بخش کارت‌های درسی */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .schedule-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .wednesday-card {
+                grid-column: 1 / -1; /* کارت چهارشنبه تمام عرض */
+            }
+        }
+
+        .day-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed var(--line);
+            margin-bottom: 20px;
+        }
+
+        .day-title {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--ink);
+        }
+
+        .day-badge {
+            background: var(--pink-soft);
+            color: var(--pink);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .day-badge.danger {
+            background: var(--danger-soft);
+            color: var(--danger);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* استایل لیست کلاس‌ها */
+        .class-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* استایل گرید برای چهارشنبه (دوتا دوتا روبروی هم) */
+        .wednesday-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        @media (min-width: 650px) {
+            .wednesday-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .class-item {
+            background: var(--surface-hover);
+            border-radius: 16px;
+            padding: 16px;
+            border-right: 5px solid var(--pink);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .class-item:hover {
+            transform: scale(1.01);
+        }
+
+        .class-item.conflict {
+            border-right-color: var(--danger);
+            background: linear-gradient(to left, var(--surface-hover) 40%, var(--danger-soft));
+        }
+
+        .time-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .class-time {
+            font-weight: 900;
+            color: var(--pink);
+            font-size: 1rem;
+            direction: ltr;
+            background: var(--surface);
+            padding: 4px 10px;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .class-item.conflict .class-time {
+            color: var(--danger);
+            border-color: var(--danger-soft);
+        }
+
+        .class-name {
+            font-weight: 900;
+            font-size: 1.15rem;
+            color: var(--ink);
+            margin-top: 4px;
+        }
+
+        .class-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .detail-tag {
+            background: var(--surface);
+            padding: 4px 10px;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .conflict-warning {
+            color: var(--danger);
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--danger-soft);
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        /* فوتر */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: var(--pink);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- هدر Quizly -->
+        <header>
+            <div class="brand">
+                <div class="logo-container">
+                    <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo">
+                </div>
+                <div class="brand-text">
+                    <h1>Quizly</h1>
+                    <p>داشبورد هوشمند برنامه کلاسی</p>
+                </div>
+            </div>
+            <!-- دکمه تم با آیکون SVG -->
+            <button class="theme-btn" id="themeToggle">
+                <svg class="icon" id="themeIcon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <span id="themeText">تم شب</span>
+            </button>
+        </header>
+
+        <!-- بخش اصلی -->
+        <section class="hero">
+            <h2>برنامه هفتگی من</h2>
+            <p>مدیریت زمان، کلید موفقیت در تحصیل است. تمامی کلاس‌ها و ساعت‌های حضور شما در این داشبورد ثبت شده است.</p>
+        </section>
+
+        <!-- گرید برنامه‌ها -->
+        <div class="schedule-grid">
+            
+            <!-- روز شنبه -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-title">شنبه</div>
+                    <div class="day-badge">۱ کلاس</div>
+                </div>
+                <div class="class-list">
+                    <div class="class-item">
+                        <div class="time-row">
+                            <span class="class-time">
+                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                ۱۳:۱۵ - ۱۴:۴۵
+                            </span>
+                        </div>
+                        <div class="class-name">روانشناسی سالمندی</div>
+                        <div class="class-details">
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                استاد عبدالخسینی
+                            </span>
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                کلاس ۲۰۵
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- روز دوشنبه -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-title">دوشنبه</div>
+                    <div class="day-badge">۱ کلاس</div>
+                </div>
+                <div class="class-list">
+                    <div class="class-item">
+                        <div class="time-row">
+                            <span class="class-time">
+                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                ۱۵:۰۰ - ۱۶:۳۰
+                            </span>
+                        </div>
+                        <div class="class-name">اندیشه اسلامی ۱</div>
+                        <div class="class-details">
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                استاد منتی
+                            </span>
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                کلاس ۲۰۳
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- روز چهارشنبه -->
+            <div class="day-card wednesday-card">
+                <div class="day-header">
+                    <div class="day-title">چهارشنبه</div>
+                    <div class="day-badge danger">
+                        <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        ۶ کلاس (تداخل)
+                    </div>
+                </div>
+                
+                <div class="wednesday-grid">
+                    <!-- ردیف اول (صبح) -->
+                    <div class="class-item conflict">
+                        <div class="time-row">
+                            <span class="class-time">
+                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                ۰۸:۰۰ - ۰۹:۳۰
+                            </span>
+                            <span class="conflict-warning">
+                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                تداخل
+                            </span>
+                        </div>
+                        <div class="class-name">ورزش ۱</div>
+                        <div class="class-details">
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                استاد مقدسی
+                            </span>
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                سالن شهید سابوته
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-item conflict">
+                        <div class="time-row">
+                            <span class="class-time">
+                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                ۰۸:۰۰ - ۰۹:۳۰
+                            </span>
+                            <span class="conflict-warning">
+                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                تداخل
+                            </span>
+                        </div>
+                        <div class="class-name">سنجش و اندازه‌گیری</div>
+                        <div class="class-details">
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                استاد کاظم‌زاده
+                            </span>
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                کلاس ۲۰۶
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- ردیف دوم (ظهر) -->
+                    <div class="class-item conflict">
+                        <div class="time-row">
+                            <span class="class-time">
+                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                ۱۳:۱۵ - ۱۴:۱۵
+                            </span>
+                            <span class="conflict-warning">
+                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                تداخل
+                            </span>
+                        </div>
+                        <div class="class-name">مشاوره خانواده (عملی)</div>
+                        <div class="class-details">
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                استاد صبوحی
+                            </span>
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                کلاس ۲۰۵
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-item conflict">
+                        <div class="time-row">
+                            <span class="class-time">
+                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                ۱۳:۱۵ - ۱۴:۱۵
+                            </span>
+                            <span class="conflict-warning">
+                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                تداخل
+                            </span>
+                        </div>
+                        <div class="class-name">مشاوره تحصیلی (عملی)</div>
+                        <div class="class-details">
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                استاد یاری
+                            </span>
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                کلاس ۲۰۸
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- ردیف سوم (عصر) -->
+                    <div class="class-item conflict">
+                        <div class="time-row">
+                            <span class="class-time">
+                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                ۱۶:۴۵ - ۱۸:۱۵
+                            </span>
+                            <span class="conflict-warning">
+                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                تداخل
+                            </span>
+                        </div>
+                        <div class="class-name">مشاوره گروهی (عملی)</div>
+                        <div class="class-details">
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                استاد صبوحی
+                            </span>
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                کلاس ۲۰۵
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="class-item conflict">
+                        <div class="time-row">
+                            <span class="class-time">
+                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                ۱۶:۴۵ - ۱۸:۱۵
+                            </span>
+                            <span class="conflict-warning">
+                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                تداخل
+                            </span>
+                        </div>
+                        <div class="class-name">مشاوره سلامت روان</div>
+                        <div class="class-details">
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                استاد هواسی
+                            </span>
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                کلاس ۲۰۸
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- فوتر -->
+        <footer>
+            طراحی شده تحت مدیریت <strong>Quizly</strong> · تمامی حقوق محفوظ است.
+        </footer>
+    </div>
+
+    <script>
+        // اسکریپت تغییر تم (روز / شب)
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+        const themeText = document.getElementById('themeText');
+        const themeIcon = document.getElementById('themeIcon');
+
+        // آیکون‌های SVG برای تم روز و شب
+        const moonIcon = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+        const sunIcon = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'dark') {
+                htmlElement.removeAttribute('data-theme');
+                themeText.textContent = 'تم شب';
+                themeIcon.innerHTML = moonIcon;
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeText.textContent = 'تم روز';
+                themeIcon.innerHTML = sunIcon;
+            }
+        });
+    </script>
+</body>
+</html>
