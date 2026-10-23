@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره توانبخشی · سری 05 · فصل پنجم: گشتالت‌درمانی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,var(--pink) 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"05";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:8px}
+.theme-btn svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.theme-btn:hover svg{transform:rotate(15deg)}
+.theorist{background:linear-gradient(135deg,var(--surface),#fff5f9);border:1px solid var(--line);border-right:6px solid var(--purple);border-radius:20px;padding:16px;margin:12px 0}
+.theorist h3{margin:0 0 4px;color:var(--purple);font-size:18px}
+.theorist .meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+.diff{border-right-color:var(--pink)}.diff strong{color:var(--pink)}
+.def{border-right-color:var(--green)}.def strong{color:var(--green)}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره توانبخشی · سری 05</small></div></div>
+  <button id="theme" class="theme-btn" aria-label="تغییر تم">
+    <svg id="themeIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</header>
+
+<section class="hero">
+  <h2>فصل پنجم: گشتالت‌درمانی</h2>
+  <p>فریتز پرلز، «کل» بزرگ‌تر از اجزا، اینجا و اکنون، موانع تماس، پنج فن اصلی و کاربرد در توانبخشی — همه رو خودمونی می‌گم</p>
+  <div class="pills"><span class="pill">پرلز</span><span class="pill">کل‌نگری</span><span class="pill">اینجا و اکنون</span><span class="pill">موانع تماس</span><span class="pill">پنج فن</span><span class="pill">توانبخشی</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل پنجم کتاب «مشاوره و روان‌درمانی در توانبخشی معلولین (کاربرد نظریه‌ها)» نوشته دکتر آناهیتا خدابخش کوالیی نوشته شده. بخش «نظریه‌پردازان» رو جدا کردم با بیوگرافی و نظریه‌ها، بخش «مفاهیم» همه تعاریف و اصطلاحات رو داره، و بخش «تفاوت‌ها و دام‌ها» مخصوص سوالات چهارگزینه‌ای آماده شده.</div>
+
+<div class="stats">
+<div class="stat"><b>۵</b><span>مزیت اساسی (کاتون)</span></div>
+<div class="stat"><b>۷</b><span>باور اساسی (پاسونز)</span></div>
+<div class="stat"><b>۴</b><span>مانع تماس</span></div>
+<div class="stat"><b>۵+۱</b><span>فن اصلی + فعال‌سازی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#theorists">نظریه‌پردازان</a><a href="#concepts">مفاهیم و تعاریف</a><a href="#personality">نظریه شخصیت</a><a href="#contact">موانع تماس</a><a href="#techniques">فنون</a><a href="#rehab">کاربرد در توانبخشی</a><a href="#diffs">تفاوت‌ها و دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ==================== هسته امتحانی ==================== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (۱۰ دقیقه‌ای بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>پنج مزیت اساسی گشتالت‌درمانی برای توانبخشی (کاتون، ۱۹۹۲)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> دیدگاهی <b>کل‌نگر نسبت به خود</b>.</div>
+<div class="fa"><b>۲)</b> <b>آگاهی‌های فرد و محیط</b> (همانند شکل و زمینه).</div>
+<div class="fa"><b>۳)</b> تأکید بر <b>اینجا و اکنون</b>.</div>
+<div class="fa"><b>۴)</b> <b>رابطه مشاوره افقی یا هم‌سطح</b> با مراجع و مشاور.</div>
+<div class="fa"><b>۵)</b> <b>آگاهی از اینجا و اکنون که به تغییر فرد منجر می‌گردد</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هفت باور اساسی گشتالت‌درمانی (پاسونز، ۱۹۷۵)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> انسان یک <b>کل</b> است؛ بدن، هیجان‌ها، افکار، احساسات و ادراک <b>کارکرد متقابل</b> دارند.</div>
+<div class="fa"><b>۲)</b> انسان <b>بخشی از محیط‌اش</b> است و خارج از آن قابل درک نیست.</div>
+<div class="fa"><b>۳)</b> انسان موجودی <b>کنشگر است، نه واکنشی</b>؛ تعیین‌کننده پاسخ‌هایش است.</div>
+<div class="fa"><b>۴)</b> انسان قادر است از احساسات، افکار، هیجان‌ها و ادراکات خویش <b>آگاهی یابد</b>.</div>
+<div class="fa"><b>۵)</b> انسان در طی خودآگاهی، <b>توانایی اتخاذ تصمیم‌های خود</b> را دارد و <b>مسئول رفتار پنهان و آشکار خود</b> است.</div>
+<div class="fa"><b>۶)</b> انسان <b>منابع و قابلیت‌های ارزشمندی</b> دارد که می‌تواند توانایی‌هایش را ذخیره و در زمان نیاز بهره گیرد.</div>
+<div class="fa"><b>۷)</b> انسان <b>صرفاً در زمان حاضر</b> می‌تواند خویشتن خویش را تجربه کند؛ گذشته و آینده فقط در حال <b>به خاطر آوری یا پیش‌بینی</b> کاربرد دارد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار مانع تماس موفقیت‌آمیز (جیمز و گیللند، ۲۰۰۳)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>مانع</th><th>تعریف کوتاه</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td><b>درون‌فکنی (Introjection)</b></td><td>بلعیدن اخلاق و هنجارها بدون درونی‌سازی حقیقی</td></tr>
+<tr><td>۲</td><td><b>فرافکنی (Projection)</b></td><td>دیگران را مسئول اعمال خود دانستن</td></tr>
+<tr><td>۳</td><td><b>خشم معطوف به خود (Retroflection)</b></td><td>رفتار خود را نشانه گرفتن</td></tr>
+<tr><td>۴</td><td><b>هم‌آمیزی (Confluence)</b></td><td>مرزهای فرد با محیط در هم آمیخته</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پنج فن اصلی + فن ششم (فعال‌سازی)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> <b>کاربرد رؤیاها</b></div>
+<div class="fa"><b>۲)</b> <b>سؤالات تأکیدی</b></div>
+<div class="fa"><b>۳)</b> <b>صندلی خالی (Empty Chair)</b></div>
+<div class="fa"><b>۴)</b> <b>بازی اغراق (Exaggeration)</b></div>
+<div class="fa"><b>۵)</b> <b>بازی «من مسئولیت‌اش را می‌پذیرم»</b></div>
+<div class="fa"><b>۶)</b> <b>فعال‌سازی (Activation)</b> — فن ششم</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته طلایی توانبخشی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>هدف اساسی گشتالت‌درمانی در توانبخشی:</b> کمک به مراجعان برای گام برداشتن <b>از اتکای بیش از حد به محیط به سوی حمایت خود</b>.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>چالش اساسی:</b> برقراری <b>تعادل بین حمایت‌های محیطی و تشویق مراجعان به خودمختاری</b>.
+</div>
+</div>
+</section>
+
+<!-- ==================== نظریه‌پردازان ==================== -->
+<section id="theorists" class="section">
+<h2 class="section-title">۰۲ · نظریه‌پردازان (بیوگرافی + نظریه‌ها)</h2>
+<p class="section-sub">هر نظریه‌پرداز با بیوگرافی، تأثیرات و نظریه‌هایش</p>
+
+<div class="theorist">
+<h3>فریتز پرلز (Fritz Perls) — بنیان‌گذار گشتالت‌درمانی</h3>
+<div class="meta">بنیان‌گذار اصلی · روان‌پزشک · تحت تأثیر تئاتر و روان‌کاوی</div>
+<div class="fa"><b>حرفه اولیه:</b> نخست حرفه خود را به‌عنوان <b>روان‌پزشک</b> آغاز کرد.</div>
+<div class="fa"><b>تأثیر تئاتر:</b> همگام با شروع، به شدت تحت تأثیر <b>تئاتر (نمایش)</b> قرار گرفت. در <b>دهه بیست زندگی‌اش در برلین</b> به کار نمایش پرداخت. ایفای نقش‌های متعدد در نمایش، تأثیر شگرفی بر نگاهش نسبت به <b>ارتباط غیرکلامی</b> گذاشت.</div>
+<div class="fa"><b>تأثیر روان‌کاوی:</b> در آغاز کارش با آموزش و کار در حیطه <b>روان‌کاوی</b> مشغول بود، اما به شدت متأثر از <b>ورترهایمر، کهلر و کافکا</b> بود.</div>
+<div class="fa"><b>باور مشترک با تأثیرگذاران:</b> همگی باور داشتند که <b>چارچوب روان‌شناختی آدمی از یک «کل» تشکیل شده است</b>؛ تجزیه و جدا ساختن انسان را به اجزای کوچکتر <b>نمی‌پذیرفتند</b>.</div>
+<div class="fa"><b>تأسیس اولین مؤسسه:</b> در سال <b>۱۹۵۱ میلادی</b>، <b>فریتز و لورا پرلز</b> نخستین <b>مؤسسه گشتالت‌درمانی</b> را در شهر <b>نیویورک</b> تأسیس کردند.</div>
+<div class="fa"><b>گسترش:</b> سپس درمانگران آموزش‌دیده این مکتب، مراکز آموزشی دیگری در <b>سان‌فرانسیسکو، لس‌آنجلس، کلیولند و سن‌دیگو</b> تأسیس کردند.</div>
+<div class="fa"><b>نقل‌قول معروف پرلز (۱۹۶۹، ص ۳۱):</b> «هر گیاهی، هر حیوانی، تنها و تنها یک هدف قطری و ذاتی دارد و آن هم، <b>شکوفا شدن آنچه هست</b>. یک گل زک زک گل زک است... در طبیعت، سازمان‌دهی، سلامتی و رشد بالقوه، همگی در قالب یک چیز مشخص به منصه ظهور می‌رسند.»</div>
+<div class="fa"><b>نقل‌قول پرلز (۱۹۶۹) درباره حفره‌ها:</b> «آنچه ما می‌کوشیم در درمان انجام دهیم آن است که، گام به گام و مرحله به مرحله <b>بخش‌هایی از شخصیت مراجع که او تکذیب می‌کند و نمی‌پذیرد، به او بازگردانیم</b>... علائمی که در این حفره‌ها وجود دارند، دائماً یک کلمه را نشان می‌دهند: <b>«اجتناب»</b>.»</div>
+<div class="fa"><b>نقل‌قول پرلز درباره مسئولیت‌پذیری:</b> «تأکید بر مسئولیت‌پذیری به معنای آن نیست که مراجعان بکوشند تا <b>انتظارات دیگران را برآورده سازند</b>. در عوض، مسئولیت‌پذیری به <b>آگاهی و درک مراجعان از بی‌همتایی و توانایی‌های فردی‌شان</b> در دستیابی به آنچه در زندگی می‌خواهند می‌پردازد.»</div>
+</div>
+
+<div class="theorist">
+<h3>لورا پرلز (Laura Perls) — هم‌بنیان‌گذار</h3>
+<div class="meta">هم‌بنیان‌گذار مؤسسه · تعریف‌کننده مفهوم «حمایت»</div>
+<div class="fa"><b>نقش:</b> همراه فریتز پرلز، <b>اولین مؤسسه گشتالت‌درمانی</b> را در <b>۱۹۵۱ در نیویورک</b> تأسیس کرد.</div>
+<div class="fa"><b>تعریف «حمایت» (لورا پرلز، ۱۹۷۶، ص ۲۲۵):</b> «حمایت» همه آن چیزی است که فرد برای هماهنگی و انسجام‌اش به آن نیازمند است؛ همانند <b>دوستی یا جامعه</b> (محیطی که در آن زندگی کردند).</div>
+<div class="fa"><b>اجزای حمایت:</b> دربرگیرنده <b>اعمال زیست‌شناختی نخستین</b> (مانند تنفس و هضم غذا)، <b>ایستادن و هماهنگی حساسیت و حرکت، زبان، عادات و رسوم، روابط و سنت‌های اجتماعی</b> و هر چیز دیگری که ما در طی زندگی خود می‌آموزیم و تجربه می‌کنیم.</div>
+</div>
+
+<div class="theorist">
+<h3>کاتون (Katon) — ۱۹۹۲</h3>
+<div class="meta">ارائه‌دهنده پنج مزیت اساسی گشتالت‌درمانی برای توانبخشی</div>
+<div class="fa"><b>پنج مزیت (کاتون، ۱۹۹۲):</b></div>
+<div class="fa"><b>۱)</b> دیدگاه <b>کل‌نگر</b> نسبت به خود.</div>
+<div class="fa"><b>۲)</b> <b>آگاهی‌های فرد و محیط</b> (شکل و زمینه).</div>
+<div class="fa"><b>۳)</b> تأکید بر <b>اینجا و اکنون</b>.</div>
+<div class="fa"><b>۴)</b> <b>رابطه مشاوره افقی</b> یا هم‌سطح.</div>
+<div class="fa"><b>۵)</b> <b>آگاهی از اینجا و اکنون که به تغییر فرد منجر می‌گردد</b>.</div>
+<div class="fa"><b>نقل‌قول کاتون (۱۹۹۲) درباره رابطه مشاوره‌ای:</b> هیچ‌گونه تعیین [قاعده‌ای]... مراجع آغاز می‌کند که امکان <b>رشد فردی را هم برای مشاور و هم مراجع</b> در طی تعامل‌های بین‌فردی فراهم می‌سازد. گرچه مشاور در فرایند درمان <b>فعال‌تر</b> است، اما <b>تفسیر رخدادها، تجربه‌ها و حتی رؤیاها به عهده مراجع</b> است.</div>
+</div>
+
+<div class="theorist">
+<h3>پاسونز (Passons) — ۱۹۷۵</h3>
+<div class="meta">ارائه‌دهنده هفت باور اساسی گشتالت‌درمانی</div>
+<div class="fa"><b>هفت باور اساسی (پاسونز، ۱۹۷۵):</b></div>
+<div class="fa"><b>۱)</b> انسان یک <b>کل</b> است؛ بدن، هیجان‌ها، افکار، احساسات و ادراک <b>کارکرد متقابل</b> دارند.</div>
+<div class="fa"><b>۲)</b> انسان <b>بخشی از محیط‌اش</b> است و خارج از آن قابل درک نیست.</div>
+<div class="fa"><b>۳)</b> انسان موجودی <b>کنشگر است، نه واکنشی</b>.</div>
+<div class="fa"><b>۴)</b> انسان قادر است از احساسات، افکار، هیجان‌ها و ادراکات خویش <b>آگاهی یابد</b>.</div>
+<div class="fa"><b>۵)</b> انسان در طی خودآگاهی، <b>توانایی اتخاذ تصمیم‌های خود</b> را دارد و <b>مسئول رفتار پنهان و آشکار خود</b> است.</div>
+<div class="fa"><b>۶)</b> انسان <b>منابع و قابلیت‌های ارزشمندی</b> دارد.</div>
+<div class="fa"><b>۷)</b> انسان <b>صرفاً در زمان حاضر</b> می‌تواند خویشتن خویش را تجربه کند.</div>
+<div class="fa"><b>نقل‌قول پاسونز (۱۹۷۵، ص ۱۹) درباره چندپارگی:</b> «فرد نمی‌تواند احساس قدرت و کامل بودن کند، مگر آنکه به خودش امکان تجربه ضعف را به قدر کافی داده باشد، تا از این طریق بتواند تفاوت بین این دو مقوله (قدرت و ضعف) را درک کرده و بستاید.»</div>
+</div>
+
+<div class="theorist">
+<h3>جیمز و گیللند (James & Gilliland) — ۲۰۰۳</h3>
+<div class="meta">ارائه‌دهنده چهار مانع تماس موفقیت‌آمیز</div>
+<div class="fa"><b>چهار مانع اصلی (جیمز و گیللند، ۲۰۰۳):</b></div>
+<div class="fa"><b>۱) درون‌فکنی (Introjection):</b> شکست در <b>درونی‌سازی حقیقی</b> اخلاق، افکار و هنجارها؛ افراد آن‌ها را <b>بلعیده‌اند</b> و نتوانسته‌اند با سایر جنبه‌های شخصیتی‌شان هماهنگ کنند.</div>
+<div class="fa"><b>۲) فرافکنی (Projection):</b> فرد <b>دیگران و اطرافیان</b> را <b>مسئول اعمال و رفتارهای خود</b> تلقی می‌کند.</div>
+<div class="fa"><b>۳) خشم معطوف به خود (Retroflection):</b> فرد <b>رفتار خود را نشانه می‌گیرد</b>، دقیقاً همانند آنچه سایرین با او می‌کنند.</div>
+<div class="fa"><b>۴) هم‌آمیزی (Confluence):</b> مرزهای فرد با محیط و دیگران <b>به شدت در هم آمیخته</b> است و <b>قدرت تشخیص خود و دیگران</b> وجود ندارد.</div>
+</div>
+
+<div class="theorist">
+<h3>سیمکن (Simkin) — ۱۹۷۶</h3>
+<div class="meta">نظریه‌پرداز رابطه «من و تو» و رابطه افقی</div>
+<div class="fa"><b>نقل‌قول سیمکن (۱۹۷۶):</b> رابطه مشاوره‌ای «من و تو» یک <b>رابطه افقی</b> است، یعنی مشاوره یک <b>رابطه رودررویی</b> با مراجع دارد.</div>
+<div class="fa">او می‌افزاید درمانگران بسیاری را دیده است که نه تنها خودشان را به مراجع نزدیک نمی‌کنند، بلکه از ترس آنکه مراجع به حریم شخصی آن‌ها وارد نشود، با او ارتباط مشاوره‌ای نیز برقرار نمی‌کنند.</div>
+<div class="fa">در <b>رابطه مشاوره‌ای عمودی</b>، «من» محرمانه و پنهان باقی می‌ماند و خواسته یا ناخواسته مراجع را به سوی <b>وابستگی و انتقال</b> سوق می‌دهد.</div>
+</div>
+
+<div class="theorist">
+<h3>سیمنز (Simmons) — ۲۰۰۰</h3>
+<div class="meta">کاربرد صندلی خالی در توانبخشی معلولین و HIV</div>
+<div class="fa"><b>صندلی خالی در توانبخشی (سیمنز، ۲۰۰۰):</b> در اجرای تکنیک صندلی خالی، مراجع می‌تواند وارد <b>گفت‌وگوی دوسویه با بخشی از بدن خود</b> شود، بخشی که هم‌اکنون آن را از دست داده است (مثلاً <b>عضو قطع‌شده یا عضو مصنوعی</b>). از این طریق، مشاور می‌تواند <b>تعارض درونی بین جنبه‌هایی از قدرت و ناتوانی شخصیت مراجع</b> را خلق کند.</div>
+<div class="fa"><b>گشتالت و HIV (سیمنز، ۲۰۰۰):</b> افراد مبتلا به ایدز با <b>شرمندگی و احساس خجالت فوق‌العاده‌ای</b> در روبه‌رو شدن با محیط خارج زندگی می‌کنند. به مراجع کمک می‌شود تا مشکل جدی خود را <b>به گونه دیگر قاب‌گیری مجدد کند</b>؛ مثلاً به‌جای نگاه با شرم و خجالت، به آن به‌عنوان <b>بیماری مزمنی که به مرگ ختم می‌شود</b> بنگرد.</div>
+<div class="fa">گشتالت‌درمانی می‌تواند <b>فرایند واپس‌رانی</b> را که نوعی <b>خشم معطوف به خود</b> است در این افراد شناسایی کرده و آن‌ها را ترغیب کند تا <b>حس خودشان را در زمان بیشتر شناخته و از آن آگاه شوند</b>.</div>
+</div>
+
+<div class="theorist">
+<h3>آنگرمن (Angermann) — ۱۹۹۸</h3>
+<div class="meta">اهداف گشتالت‌درمانی در اختلالات خوردن</div>
+<div class="fa"><b>نقل‌قول آنگرمن (۱۹۹۸):</b> «گشتالتی‌ها آدم‌های کسل و بی‌روحی نیستند، بلکه ترجیح می‌دهند فنون درمانی‌شان را به‌مثابه <b>«قوانین و بازی‌ها»</b> در نظر بگیرند.»</div>
+<div class="fa"><b>اهداف در اختلالات خوردن (آنگرمن، ۱۹۹۸):</b></div>
+<div class="fa"><b>۱)</b> آگاهی از <b>حالات جسمانی و عاطفی (ادراک بدنی)</b>.</div>
+<div class="fa"><b>۲)</b> تشویق به دیدن <b>خود و تصویر از خود در زمان حال</b>؛ این افراد <b>تفکر دو قطبی</b> دارند.</div>
+<div class="fa"><b>۳)</b> آگاهی از <b>چرا مراجع از تماس دوری می‌جوید</b> و چگونه مرز میان آشفتگی‌های شدید با کارکردهای سازگارانه مشخص می‌شود.</div>
+<div class="fa"><b>۴)</b> <b>در هم آمیختن خود و تصویر از خود</b> در قبال واحد و کلی.</div>
+<div class="fa"><b>۵)</b> <b>کارهای ناتمام فرد</b> که موقعیت فعلی مراجع را متأثر ساخته و مانع آگاهی و انسجام او می‌شود.</div>
+</div>
+
+<div class="theorist">
+<h3>توبین (Tobin) — ۱۹۸۳</h3>
+<div class="meta">مثال کار ناتمام</div>
+<div class="fa"><b>مثال توبین (۱۹۸۳):</b> کارگری که به شدت از دست رئیس‌اش عصبانی است و می‌خواهد خشم خود را بیان کند، اما از ابراز خشم واهمه دارد، زیرا تصور می‌کند پس از ابراز خشم، رئیس‌اش او را اخراج خواهد کرد. از این رو تصمیم می‌گیرد چیزی نگوید. او از یک سو به شدت عصبانی است و از سوی دیگر نمی‌تواند خشم خود را ابراز کند، در نتیجه <b>احساس فشار و تنش جسمانی شدیدی</b> دارد و باید هیجان خشم خود را سرکوب سازد. ممکن است بکوشد موقعیت ناتمام خود را از طریق <b>روش‌های غیرمستقیم</b> (رؤیاپردازی، تصور پاسخ بدخلقی‌های رئیس، آرزوی مرگ او) تکمیل کند. <b>مهم نیست که او چه کار می‌کند، واقعیت این است که تنش‌ها و عصبانیت او از اینکه نتوانسته جواب رئیس‌اش را بدهد، همچنان همراه اوست.</b></div>
+</div>
+
+<div class="theorist">
+<h3>بولستر و بولستر (Bolster & Bolster) — ۱۹۷۳</h3>
+<div class="meta">مثال تکنیک تجسم/بازی‌سازی (آنا)</div>
+<div class="fa"><b>مثال بولستر و بولستر (۱۹۷۳) — آنا:</b> آنا، زن جوانی که خودش را در جلسه گروه‌درمانی چنین توصیف کرد: <b>«در حصاری از گره‌ها و پیچ و خم‌ها گرفتار شده است.»</b></div>
+<div class="fa">سپس از او خواستم گره‌هایی را که از آن‌ها یاد می‌کرد به‌طور نمایشی و به شیوه خودش به اجرا بگذارد. او این کار را کرد. <b>بازوها، پاها و بدنش را به هم پیچاند</b> و کوشید خودش را بسته نگه دارد.</div>
+<div class="fa">از او پرسیدم: «حال چه احساسی داری، هنگامی که این‌قدر طناب به دور خودت پیچیده‌ای؟» آنا پاسخ داد که احساس می‌کند <b>بی‌حرکت</b> است... اگر او <b>یکی از گره‌های دست و پایش را بگشاید، سایر گره‌ها نیز به آرامی شل شده و از او جدا می‌شوند</b>.</div>
+<div class="fa">همان‌طور که او گره‌های خود را می‌گشود، احساس کرد از اینکه گره‌های خود را بگشاید <b>به شدت احساس ترس و واهمه</b> دارد. مهم نیست که چقدر داشتن این گره‌ها برای او <b>زجرآور و دردناک</b> بود، دست‌کم در آخر توانست <b>علت گره‌ها را ریشه‌یابی کند</b>.</div>
+</div>
+
+<div class="theorist">
+<h3>آلن (Allen) — ۱۹۸۶</h3>
+<div class="meta">تأکید بر مسئولیت‌پذیری و واژگان شخصی‌سازی‌شده</div>
+<div class="fa"><b>نقل‌قول آلن (۱۹۸۶):</b> «از مراجعان دائماً خواسته می‌شود، هنگامی که احساسات یا تجربه‌های خود را شرح می‌دهند، از <b>واژگان شخصی‌سازی‌شده‌ای چون: من، مرا و از آن من</b> به جای <b>آن یا تو</b> بهره گیرند.»</div>
+<div class="fa">کاربرد واژه‌های <b>غیرشخصی‌سازی</b>، به مراجعان امکان می‌دهد که خود را از شرایطشان <b>جدا سازند</b>. تنها هنگامی که از مراجعان خواسته می‌شود پیرامون پرسش‌هایشان صحبت کنند، آن‌ها می‌توانند <b>مسئولیت سیستم باورهای خود را به عهده گیرند و بپذیرند</b>.</div>
+</div>
+
+<div class="theorist">
+<h3>برگر (Berger) — ۱۹۹۹</h3>
+<div class="meta">هدف گشتالت‌درمانی</div>
+<div class="fa"><b>نقل‌قول برگر (۱۹۹۹، ص ۳۳):</b> هدف گشتالت‌درمانی <b>یاری رساندن به مراجع در جهت تکمیل گشتالت‌های باقی‌مانده از گذشته</b> است. همچنین مراجع بتواند <b>خود و دیگران را در زمان حال تجربه کرده</b> و <b>دریچه پرمعنایی به سوی آینده</b> بگشاید.</div>
+</div>
+
+<div class="theorist">
+<h3>لیون و آنتوناک (Lyon & Antonak) — ۱۹۹۷</h3>
+<div class="meta">استرس‌های مراجعان توانبخشی</div>
+<div class="fa"><b>نقل‌قول لیون و آنتوناک (۱۹۹۷):</b> مراجعان خدمات توانبخشی، افرادی هستند که با <b>مجموعه‌ای از استرس‌های روان‌شناختی، هیجانی و اجتماعی</b> مواجهه‌اند.</div>
+<div class="fa"><b>منبع این استرس‌ها:</b></div>
+<div class="fa">• پیش‌بینی عملکرد فعالیت‌های روزانه</div>
+<div class="fa">• تأثیر معلولیت بر خانواده و دوستان</div>
+<div class="fa">• انجام نقش‌های زندگی</div>
+</div>
+</section>
+
+<!-- ==================== مفاهیم و تعاریف ==================== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · مفاهیم و تعاریف (مو به مو)</h2>
+<p class="section-sub">همه اصطلاحات و تعاریف دقیق برای امتحان</p>
+
+<div class="card def">
+<div class="card-head"><h3>تعریف «گشتالت»</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">واژه <b>«کل»</b> از اصطلاح آلمانی <b>«گشتالت»</b> مأخوذ شده است که به معنای <b>سازمان‌دهی معنادار «کل»</b> می‌باشد.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مفهوم اساسی گشتالت</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>ماهیت انسان کلی است که از مجموعه بخش‌های آن بزرگ‌تر است.</b>
+</div>
+<div class="fa">آدمی از <b>ارتباط متقابل و پویایی میان ذهن، روح، احساسات، افکار، هیجان‌ها و ادراک‌ها</b> ساخته و پرداخته شده است و <b>به بخش‌های جدا از هم تقسیم نمی‌شود</b>.</div>
+<div class="fa">به تشریح مفاهیم دوگانه‌ای چون <b>«روان» و «جسم»، «واقعیت» و «هیجان»، «ناخودآگاه» و «خودآگاه»</b> نمی‌پردازد.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>خودنظمی ارگانیسمی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">هنگامی که فرد تصمیمی در زندگی‌اش اتخاذ می‌کند، <b>تعادلی</b> میان نیازهای فردی‌اش و آنچه به آن دست یافته است برقرار می‌سازد.</div>
+<div class="fa">آنچه فرد را به‌طور ذاتی به سوی تعادل سوق می‌دهد، <b>خودنظمی ارگانیسمی</b> نام دارد.</div>
+<div class="fa">انسان‌ها همواره می‌کوشند تعادل را در زندگی‌شان برقرار سازند و این تعادل ممکن است از سوی <b>رخدادهای خارجی یا تعارض‌های درونی</b> مورد تهدید قرار گیرد.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>شکل (Figure) و زمینه (Ground)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">نیازهای انسان را باید در قالب <b>شکل و زمینه</b> درک کرد.</div>
+<table class="compare">
+<thead><tr><th>مفهوم</th><th>تعریف</th></tr></thead>
+<tbody>
+<tr><td><b>شکل (Figure)</b></td><td><b>نیاز فوری</b> که از سوی فرد دریافت می‌شود</td></tr>
+<tr><td><b>زمینه (Ground)</b></td><td><b>محیط‌های جسمانی و روان‌شناختی</b> که با نیاز مورد نظر (شکل) و ارضای آن مرتبط است</td></tr>
+</tbody>
+</table>
+<div class="fa"><b>فرآیند:</b> هنگامی که فرد به‌طور موفقیت‌آمیزی به <b>شکل</b> دست می‌یابد، به <b>زمینه</b> آن بازمی‌گردد و به شکل دیگر امکان می‌دهد تا پیش‌زمینه دیگری را فراخواند.</div>
+<div class="fa"><b>مشکل افراد:</b> غالباً افراد در دستیابی به تعادل‌ها دچار مشکل می‌شوند، زیرا <b>نمی‌دانند که اشکال را چگونه در محیط اطرافشان بازیابی کنند</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تماس (Contact)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">برای ارضای نیازها، افراد باید با محیط اطرافشان <b>در تماس</b> باشند.</div>
+<div class="fa">تماس داشتن زمانی قابل دستیابی است که افراد از <b>تمامی حواس</b> (نگریستن، شنیدن، لمس کردن، صحبت کردن، لبخند زدن، مزه کردن و حرکت کردن) بهره گیرند.</div>
+<div class="fa">تماس، <b>حمایت ویژگی‌های درونی</b> و مجموعه‌ای از تجربه‌ها را می‌طلبد.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>حمایت (Support) — لورا پرلز، ۱۹۷۶</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">«حمایت» همه آن چیزی است که فرد برای <b>هماهنگی و انسجام‌اش</b> به آن نیازمند است؛ همانند <b>دوستی یا جامعه</b> (محیطی که در آن زندگی کردند).</div>
+<div class="fa">حمایت دربرگیرنده <b>اعمال زیست‌شناختی نخستین</b> (مانند تنفس و هضم غذا)، <b>ایستادن و هماهنگی حساسیت و حرکت، زبان، عادات و رسوم، روابط و سنت‌های اجتماعی</b> و هر چیز دیگری که ما در طی زندگی خود می‌آموزیم و تجربه می‌کنیم.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>کار ناتمام (Unfinished Business)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">به <b>نیازهای ارضا نشده، احساسات ابراز نشده یا سایر رخدادهای مهم به انجام یا به اتمام نرسیده</b> زندگی یک فرد اشاره می‌کند.</div>
+<div class="fa">تأکید عمده کار ناتمام غالباً بر <b>دو جنبه بارز توجه و آگاهی فرد</b> می‌باشد.</div>
+<div class="fa">کار ناتمام <b>توانایی فرد را در پرداختن به سایر نیازهای زندگی ناکام و مختل می‌کند</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>چندپارگی (Fragmentation)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">به <b>انکار یا تکذیب نیازهای اساسی زندگی</b> یا به <b>قطبی کردن خود</b> (همانند افکار، صفات، رفتارها، ارزش‌ها و اعمال) اشاره می‌کند.</div>
+<div class="fa"><b>مثال:</b> ممکن است فردی صرفاً جنبه‌های مردانه یا زنانه خود را بشناسد و از شناختن ویژگی‌های مربوط به دو جنبه مردانگی و زنانگی عاجز باشد.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مسئولیت‌پذیری (پیش‌فرض کلیدی درمان)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>پیش‌فرض کلیدی:</b> <b>مراجعان باید بیاموزند که مسئولیت رفتارها و انتخاب‌های خود را در زندگی بپذیرند.</b></div>
+<div class="fa"><b>نقل‌قول پرلز:</b> «تأکید بر مسئولیت‌پذیری به معنای آن نیست که مراجعان بکوشند تا <b>انتظارات دیگران را برآورده سازند</b>. در عوض، مسئولیت‌پذیری به <b>آگاهی و درک مراجعان از بی‌همتایی و توانایی‌های فردی‌شان</b> در دستیابی به آنچه در زندگی می‌خواهند می‌پردازد.»</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>رابطه «من و تو» (I-Thou) و رابطه افقی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">ارتباط بین مشاور و مراجع بسیار <b>پویا، دوسویه</b> و رابطه <b>«من و تو»</b> است.</div>
+<div class="fa"><b>نقل‌قول سیمکن (۱۹۷۶):</b> رابطه مشاوره‌ای «من و تو» یک <b>رابطه افقی</b> است، یعنی مشاوره یک <b>رابطه رودررویی</b> با مراجع دارد.</div>
+<div class="fa">در <b>رابطه مشاوره‌ای عمودی</b>، «من» محرمانه و پنهان باقی می‌ماند و خواسته یا ناخواسته مراجع را به سوی <b>وابستگی و انتقال</b> سوق می‌دهد.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>طرح‌یابی (Figuring)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">گشتالت‌درمانگران از روش ارزیابی بهره می‌گیرند که <b>«طرح‌یابی»</b> نام دارد، به‌جای آنکه از روش‌های ارزیابی قدیمی یا سنتی چون <b>«تشخیص‌ها»</b> استفاده کنند.</div>
+<div class="fa">این فرایند از <b>گوش دادن به مراجع، مشاهده اطوارهای کلامی و غیرکلامی او</b> آغاز می‌شود.</div>
+<div class="fa">این روش ترکیبی خلاقانه از مهارت‌ها را می‌طلبد تا <b>تصویر یا طرحی را از مراجع</b> ترسیم کند.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مواجهه (Confrontation)</h3><span class="badge s">مهم</span></div>
+<div class="fa">ممکن است از <b>مواجهه</b> برای پاسخ به <b>اظهارات متضاد و ناهمخوان مراجع</b> استفاده شود. از این فن مشاوره‌ای به منظور بحث و رویارویی با <b>ناگفته‌های مراجع</b> استفاده می‌شود.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>رویکرد «اینجا و اکنون»</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">برای تأکید بر مسئولیت‌پذیری مراجع، گشتالت‌درمانی رویکرد <b>«اینجا و اکنون»</b> را اتخاذ کرده است.</div>
+<div class="fa">تأکید بر <b>رفتار حال مراجع</b> صورت می‌گیرد؛ <b>حالت، نفس، رفتارها، اطوارها، صدا و ابرازهای چهره‌ای مراجع</b> که تحت عنوان <b>«کارکردهای تماس»</b> از آن‌ها یاد می‌شود، مورد توجه قرار می‌گیرند.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>کارکردهای ارگانیسم به‌مثابه کل</h3><span class="badge s">مهم</span></div>
+<div class="fa">• اختلاف‌های زناشویی ← مشکلات در عملکرد شغلی فرد</div>
+<div class="fa">• شکست‌های تحصیلی ← تأثیر بر روابط بین‌فردی مراجع</div>
+<div class="fa">• تعامل‌های درون‌فردی (رابطه بین جنبه‌های فیزیولوژیک و روان‌شناختی)</div>
+<div class="fa">• هیجان ممکن است از طریق <b>جنبه جسمانی</b> خود را بروز دهد.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>نکته مهم برای مشاور (درک فرد)</h3><span class="badge s">مهم</span></div>
+<div class="fa">در رویکرد پرلزی، مشاور برای درک یک فرد بر <b>کلمات و افکار او چندان تأکیدی نمی‌کند</b>، بلکه می‌کوشد از <b>احساسات مراجع از طریق پیام‌های غیرکلامی بدن‌اش</b> آگاه شود.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>باور گشتالت‌درمانگران</h3><span class="badge s">مهم</span></div>
+<div class="fa">افراد <b>توانایی درک واقعیت درونی‌شان</b> را دارند و قادرند <b>تصمیم‌های زندگی‌شان را خود اتخاذ نمایند</b>.</div>
+</div>
+</section>
+
+<!-- ==================== نظریه شخصیت ==================== -->
+<section id="personality" class="section">
+<h2 class="section-title">۰۴ · نظریه شخصیت</h2>
+<p class="section-sub">خودنظمی ارگانیسمی، شکل و زمینه، تماس، حمایت</p>
+
+<div class="card">
+<div class="card-head"><h3>خودنظمی ارگانیسمی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">هنگامی که فرد تصمیمی در زندگی‌اش اتخاذ می‌کند، <b>تعادلی</b> میان نیازهای فردی‌اش و آنچه به آن دست یافته است برقرار می‌سازد.</div>
+<div class="fa">آنچه فرد را به‌طور ذاتی به سوی تعادل سوق می‌دهد، <b>خودنظمی ارگانیسمی</b> نام دارد.</div>
+<div class="fa">انسان‌ها همواره می‌کوشند تعادل را در زندگی‌شان برقرار سازند و این تعادل ممکن است از سوی <b>رخدادهای خارجی یا تعارض‌های درونی</b> مورد تهدید قرار گیرد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شکل و زمینه (Figure and Ground)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">نیازهای انسان را باید در قالب <b>شکل و زمینه</b> درک کرد.</div>
+<table class="compare">
+<thead><tr><th>مفهوم</th><th>تعریف</th></tr></thead>
+<tbody>
+<tr><td><b>شکل (Figure)</b></td><td><b>نیاز فوری</b> که از سوی فرد دریافت می‌شود</td></tr>
+<tr><td><b>زمینه (Ground)</b></td><td><b>محیط‌های جسمانی و روان‌شناختی</b> که با نیاز مورد نظر (شکل) و ارضای آن مرتبط است</td></tr>
+</tbody>
+</table>
+<div class="fa"><b>فرآیند:</b> هنگامی که فرد به‌طور موفقیت‌آمیزی به <b>شکل</b> دست می‌یابد، به <b>زمینه</b> آن بازمی‌گردد و به شکل دیگر امکان می‌دهد تا پیش‌زمینه دیگری را فراخواند.</div>
+<div class="fa"><b>مشکل افراد:</b> غالباً افراد در دستیابی به تعادل‌ها دچار مشکل می‌شوند، زیرا <b>نمی‌دانند که اشکال را چگونه در محیط اطرافشان بازیابی کنند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تماس (Contact) و حمایت (Support)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">برای ارضای نیازها، افراد باید با محیط اطرافشان <b>در تماس</b> باشند.</div>
+<div class="fa">تماس داشتن زمانی قابل دستیابی است که افراد از <b>تمامی حواس</b> (نگریستن، شنیدن، لمس کردن، صحبت کردن، لبخند زدن، مزه کردن و حرکت کردن) بهره گیرند.</div>
+<div class="fa">تماس، <b>حمایت ویژگی‌های درونی</b> و مجموعه‌ای از تجربه‌ها را می‌طلبد.</div>
+<div class="fa"><b>تعریف حمایت (لورا پرلز، ۱۹۷۶، ص ۲۲۵):</b> «حمایت» همه آن چیزی است که فرد برای هماهنگی و انسجام‌اش به آن نیازمند است؛ همانند <b>دوستی یا جامعه</b> (محیطی که در آن زندگی کردند).</div>
+<div class="fa">حمایت دربرگیرنده <b>اعمال زیست‌شناختی نخستین</b> (مانند تنفس و هضم غذا)، <b>ایستادن و هماهنگی حساسیت و حرکت، زبان، عادات و رسوم، روابط و سنت‌های اجتماعی</b> و هر چیز دیگری که ما در طی زندگی خود می‌آموزیم و تجربه می‌کنیم.</div>
+</div>
+</section>
+
+<!-- ==================== موانع تماس ==================== -->
+<section id="contact" class="section">
+<h2 class="section-title">۰۵ · موانع تماس موفقیت‌آمیز</h2>
+<p class="section-sub">چهار مانع اصلی + دو مشکل مکمل</p>
+
+<div class="card">
+<div class="card-head"><h3>مقدمه</h3><span class="badge s">مهم</span></div>
+<div class="fa">افراد ممکن است مشکلاتی را در برقراری <b>«تماس» موفقیت‌آمیز</b> تجربه کنند. این عدم موفقیت به دلیل <b>محدودیت‌های درونی و بخشگی و رشد روان‌شناختی</b> صورت می‌گیرد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار مانع اصلی (جیمز و گیللند، ۲۰۰۳)</h3><span class="badge s">کلیدی</span></div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۱) درون‌فکنی (Introjection)</h4>
+<div class="fa"><b>تعریف:</b> شکست در <b>درونی‌سازی حقیقی</b> اخلاق، افکار و هنجارهایی که در محیط پیرامون فرد وجود دارند. این افراد در عوض درونی‌سازی، آن‌ها را <b>بلعیده‌اند</b> و نتوانسته‌اند با سایر جنبه‌های شخصیتی‌شان هماهنگ و منسجم شوند.</div>
+<div class="fa"><b>ویژگی‌ها:</b> احساس می‌کنند روابط‌شان با سایرین <b>سطحی و ساختگی</b> است؛ احساس <b>جدایی از دیگران</b> دارند؛ در روشن ساختن <b>ترجیح‌ها و انتظارات خود ناتوان‌اند</b>.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۲) فرافکنی (Projection)</h4>
+<div class="fa"><b>تعریف:</b> فرد <b>دیگران و اطرافیان</b> که در زندگی‌اش هستند را <b>مسئول اعمال و رفتارهای خود</b> تلقی می‌کند.</div>
+<div class="fa"><b>ویژگی‌ها:</b> از جملات متداولی همچون <b>«آن‌ها، دیگران، او، تو»</b> استفاده می‌کند؛ تصور می‌کنند در برابر تغییرات مؤثر در زندگی‌شان <b>ناتوان و عاجزند</b>.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۳) خشم معطوف به خود (Retroflection)</h4>
+<div class="fa"><b>تعریف:</b> فرد <b>رفتار خود را نشانه می‌گیرد</b>، دقیقاً همانند آنچه سایرین با او می‌کنند. این رفتارهای تکانه‌ای ممکن است <b>نفرت یا عشق</b> باشند.</div>
+<div class="fa"><b>ویژگی‌ها:</b> تعامل خود را با محیط و اطرافشان <b>به شدت محدود</b> می‌سازند؛ از <b>روبه‌رو شدن با وقایع زندگی طفره</b> می‌روند؛ با محیط اطرافشان بر پایه <b>بخت و اقبال صحیحی</b> ارتباط برقرار نمی‌کنند؛ نمی‌توانند از طریق محیط اطرافشان نیازهایشان را ارضا کنند.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۴) هم‌آمیزی (Confluence)</h4>
+<div class="fa"><b>تعریف:</b> مرزهای فرد با محیط و دیگران <b>به شدت در هم آمیخته</b> است و <b>قدرت تشخیص خود و دیگران</b> در آن‌ها وجود ندارد.</div>
+<div class="fa"><b>ویژگی‌ها:</b> هم‌آمیزان غالباً به‌عنوان افرادی <b>بدون مرز مشخص</b> شناخته می‌شوند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو مشکل مکمل</h3><span class="badge s">کلیدی</span></div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">کار ناتمام (Unfinished Business)</h4>
+<div class="fa">به <b>نیازهای ارضا نشده، احساسات ابراز نشده یا سایر رخدادهای مهم به انجام یا به اتمام نرسیده</b> زندگی یک فرد اشاره می‌کند.</div>
+<div class="fa">تأکید عمده کار ناتمام غالباً بر <b>دو جنبه بارز توجه و آگاهی فرد</b> می‌باشد.</div>
+<div class="fa">کار ناتمام <b>توانایی فرد را در پرداختن به سایر نیازهای زندگی ناکام و مختل می‌کند</b>.</div>
+<div class="fa"><b>مثال توبین (۱۹۸۳):</b> کارگری که به شدت از دست رئیس‌اش عصبانی است و می‌خواهد خشم خود را بیان کند، اما از ابراز خشم واهمه دارد... <b>مهم نیست که او چه کار می‌کند، واقعیت این است که تنش‌ها و عصبانیت او از اینکه نتوانسته جواب رئیس‌اش را بدهد، همچنان همراه اوست.</b></div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">چندپارگی (Fragmentation)</h4>
+<div class="fa">به <b>انکار یا تکذیب نیازهای اساسی زندگی</b> یا به <b>قطبی کردن خود</b> (همانند افکار، صفات، رفتارها، ارزش‌ها و اعمال) اشاره می‌کند.</div>
+<div class="fa"><b>مثال:</b> ممکن است فردی صرفاً جنبه‌های مردانه یا زنانه خود را بشناسد و از شناختن ویژگی‌های مربوط به دو جنبه مردانگی و زنانگی عاجز باشد.</div>
+<div class="fa"><b>نقل‌قول پاسونز (۱۹۷۵، ص ۱۹):</b> «فرد نمی‌تواند احساس قدرت و کامل بودن کند، مگر آنکه به خودش امکان تجربه ضعف را به قدر کافی داده باشد، تا از این طریق بتواند تفاوت بین این دو مقوله (قدرت و ضعف) را درک کرده و بستاید.»</div>
+</div>
+</section>
+
+<!-- ==================== فنون ==================== -->
+<section id="techniques" class="section">
+<h2 class="section-title">۰۶ · راهبردها و فنون گشتالت‌درمانی</h2>
+<p class="section-sub">پنج فن اصلی + فن ششم (فعال‌سازی)</p>
+
+<div class="card">
+<div class="card-head"><h3>فلسفه فنون</h3><span class="badge s">مهم</span></div>
+<div class="fa">فریتز پرلز تصور می‌کرد واژه <b>«تکنیک یا فن»</b> دستکاری یا کنترل کردن را به ذهن متبادر می‌سازد، اما در واقع او از <b>روش‌های متعددی</b> برای درگیر ساختن و تحت تأثیر قرار دادن مراجعان استفاده می‌کرد.</div>
+<div class="fa"><b>نقل‌قول آنگرمن (۱۹۹۸):</b> «گشتالتی‌ها آدم‌های کسل و بی‌روحی نیستند، بلکه ترجیح می‌دهند فنون درمانی‌شان را به‌مثابه <b>«قوانین و بازی‌ها»</b> در نظر بگیرند.»</div>
+<div class="fa"><b>هدف فنون تجربی:</b></div>
+<div class="fa">• درگیر ساختن مراجع در <b>تکنیک‌ها یا فنون تجربی متعدد</b></div>
+<div class="fa">• مراجع بتواند در <b>محیطی امن</b> نیازهایش را برآورده سازد</div>
+<div class="fa">• کمک به مراجع برای <b>شناسایی مهارت‌ها و قابلیت‌های ناشناخته و کشف‌نشده خود</b></div>
+<div class="fa">• بهره‌گیری از آن‌ها برای <b>دستیابی به اهداف آینده</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فن ۱: کاربرد رؤیاها</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">درمانگران گشتالتی به رؤیاها به‌مثابه <b>پیام وجودی بخشی از خود به بخش دیگر خود</b> می‌نگرند.</div>
+<div class="fa">رؤیاها می‌توانند برای <b>آگاهی‌بخشی از رابطه فعلی مراجع با مشاور و سایر اعضای گروه</b> مؤثر باشند.</div>
+<div class="fa">از مراجعان خواسته می‌شود رؤیاهایشان را <b>به گونه‌ای شرح دهند که گویی در زمان حاضر اتفاق افتاده‌اند</b>؛ سپس بخش‌های گوناگون رؤیا را <b>بازی کنند و به نمایش بگذارند</b>؛ در گفت‌وگوی میان بخش‌های خود که در رؤیا دیده، درگیر شوند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فن ۲: سؤالات تأکیدی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">به‌منظور <b>سوق دادن مراجع به بیان تجربه‌هایش در زمان حال</b> طراحی شده‌اند.</div>
+<div class="fa"><b>مثال:</b> «حالا چه احساسی دارید؟» یا «الان به چی فکر می‌کنی؟»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فن ۳: صندلی خالی (Empty Chair)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">تکنیکی که در آن <b>مراجع با یک صندلی خالی صحبت می‌کند</b>.</div>
+<div class="fa">به مراجعان کمک می‌کند آنچه را که <b>انکار کرده‌اند</b> به یاد بیاورند (همانند سوءاستفاده جسمانی در دوران کودکی) و پیرامون چیزهای <b>به شدت دردناک و سخت</b> بیندیشند و از این طریق <b>آگاهی و سلامت روانی خود را بهبود بخشند</b>.</div>
+<div class="fa">یک <b>راهبرد ایفای نقش</b> است برای موقعیت‌هایی که مراجع می‌کوشد <b>بخش‌های متضاد شخص خود را انسجام بخشد</b> یا <b>کارهای ناتمام خود را حل و فصل</b> نماید.</div>
+<div class="fa"><b>مثال:</b> مراجع تصور می‌کند روی صندلی خالی نشسته و نقش والد را ایفا می‌کند.</div>
+<div class="fa"><b>وظیفه مشاور:</b> <b>«کارگردان»</b> بازی گردانی مراجع در نقش‌های متفاوت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فن ۴: بازی اغراق (Exaggeration)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">از مراجع خواسته می‌شود آنچه را دیده است <b>به‌گونه‌ای اغراق‌آمیز</b> ابراز کند.</div>
+<div class="fa"><b>قصد:</b> مراجع به <b>نادرستی احساس و محتوایی</b> که در آن اغراق کرده است بنگرد و از این طریق به <b>منبع و بخش اصلی جملات دفاعی خود</b> بازگردد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فن ۵: بازی «من مسئولیت‌اش را می‌پذیرم»</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">شبیه بازی اغراق است. از مراجع خواسته می‌شود [جملات را با افزودن] <b>«من مسئولیت... را می‌پذیرم»</b> تکرار کند.</div>
+<div class="fa">چنانچه مردد بود، در ادامه این کلمات را به کار گیرد: <b>«من مسئولیت آنچه را بهتر است گفته‌اش را تغییر دهد تا جایی که توان گفتن جمله فوق را بدانید.»</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فن ۶: فعال‌سازی (Activation)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">در تکنیک فعال‌سازی، از مراجعان خواسته می‌شود تا <b>به روشی بسیار پرشور و پرهیجان</b> [رفتار کنند].</div>
+<div class="fa">غالباً فعال‌سازی به موضوعاتی که با <b>ویژگی‌های فردی</b> هستند می‌پردازد. در فعال‌سازی هم به <b>مسائل دور و هم اخیر</b> پرداخته می‌شود.</div>
+<div class="fa">در طی انجام این تمرین، غالباً مراجعان <b>بینش‌های جدیدی</b> پیرامون <b>توانایی‌ها، رفتارها و ویژگی‌های شخصیتی‌شان</b> به دست می‌آورند که در حالت هوشیاری چندان قابل دسترس نبودند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مثال بولستر و بولستر (۱۹۷۳) — تکنیک تجسم/بازی‌سازی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>آنا</b>، زن جوانی که خودش را در جلسه گروه‌درمانی چنین توصیف کرد: <b>«در حصاری از گره‌ها و پیچ و خم‌ها گرفتار شده است.»</b></div>
+<div class="fa">سپس از او خواستم گره‌هایی را که از آن‌ها یاد می‌کرد به‌طور نمایشی و به شیوه خودش به اجرا بگذارد. او این کار را کرد. <b>بازوها، پاها و بدنش را به هم پیچاند</b> و کوشید خودش را بسته نگه دارد.</div>
+<div class="fa">از او پرسیدم: «حال چه احساسی داری، هنگامی که این‌قدر طناب به دور خودت پیچیده‌ای؟» آنا پاسخ داد که احساس می‌کند <b>بی‌حرکت</b> است... اگر او <b>یکی از گره‌های دست و پایش را بگشاید، سایر گره‌ها نیز به آرامی شل شده و از او جدا می‌شوند</b>.</div>
+<div class="fa">همان‌طور که او گره‌های خود را می‌گشود، احساس کرد از اینکه گره‌های خود را بگشاید <b>به شدت احساس ترس و واهمه</b> دارد. مهم نیست که چقدر داشتن این گره‌ها برای او <b>زجرآور و دردناک</b> بود، دست‌کم در آخر توانست <b>علت گره‌ها را ریشه‌یابی کند</b>.</div>
+</div>
+</section>
+
+<!-- ==================== کاربرد در توانبخشی ==================== -->
+<section id="rehab" class="section">
+<h2 class="section-title">۰۷ · کاربرد گشتالت‌درمانی در توانبخشی</h2>
+<p class="section-sub">هدف، چالش، کمک‌ها و حیطه‌های کاربرد</p>
+
+<div class="card">
+<div class="card-head"><h3>مقدمه</h3><span class="badge s">مهم</span></div>
+<div class="fa">در گشتالت‌درمانی به <b>معلولیت و توانبخشی به‌طور مستقیم اشاره‌ای نشده است</b>، اما <b>شواهد منسجم پژوهشی</b> دال بر کاربرد نظریه و درمان گشتالتی در کار با افراد معلول وجود دارد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تأکید نظریه گشتالت بر</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">• <b>خودآگاهی</b></div>
+<div class="fa">• <b>خودکمال‌یافتگی</b></div>
+<div class="fa">• <b>خودالتقاطی</b></div>
+<div class="fa">• <b>مسئولیت خود</b></div>
+<div class="fa">این مفاهیم به‌ویژه زمانی که برای <b>افراد معلول</b> به کار می‌روند، <b>معنا می‌یابند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکلیف مراجعان در فرایند مشاوره</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>بازبینی، مفهوم‌سازی و شناختن هویت جدیدشان</b>.</div>
+<div class="fa">کار پیگیر و مستمر بر <b>«پایان دادن به یک گشتالت»</b> می‌تواند در توانبخشی مؤثر واقع شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هدف گشتالت‌درمانی (برگر، ۱۹۹۹)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>یاری رساندن به مراجع در جهت تکمیل گشتالت‌های باقی‌مانده از گذشته</b> است. همچنین مراجع بتواند <b>خود و دیگران را در زمان حال تجربه کرده</b> و <b>دریچه پرمعنایی به سوی آینده</b> بگشاید.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>استرس‌های مراجعان توانبخشی (لیون و آنتوناک، ۱۹۹۷)</h3><span class="badge s">مهم</span></div>
+<div class="fa">مراجعان خدمات توانبخشی، افرادی هستند که با <b>مجموعه‌ای از استرس‌های روان‌شناختی، هیجانی و اجتماعی</b> مواجهه‌اند.</div>
+<div class="fa"><b>منبع این استرس‌ها:</b></div>
+<div class="fa">• پیش‌بینی عملکرد فعالیت‌های روزانه</div>
+<div class="fa">• تأثیر معلولیت بر خانواده و دوستان</div>
+<div class="fa">• انجام نقش‌های زندگی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هدف اساسی و چالش اساسی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>هدف اساسی:</b> کمک به مراجعان است تا <b>از اتکای بیش از حد به محیط به سوی حمایت خود</b> گام بردارند.
+</div>
+<div class="fa">اما نظریه گشتالت این حقیقت را انکار نمی‌کند که این قبیل مراجعان برای گذراندن زندگی‌شان <b>حمایت‌های بهداشتی و روان‌شناختی نیازمندند</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>چالش اساسی پیش روی مشاوره توانبخشی:</b> <b>برقراری تعادل بین حمایت‌های محیطی و تشویق مراجعان به خودمختاری</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کمک‌های گشتالت‌درمانی به مراجعان توانبخشی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">• کمک به <b>سازگاری با پیامدهای نقائص و مشکلاتشان</b></div>
+<div class="fa">• فراهم کردن <b>تکنیک‌ها یا فنون تجربی</b> برای مشاوران</div>
+<div class="fa">• کمک به مراجعان برای <b>ابراز خشم فروخورده خود</b> (هم درونی و هم بیرونی)</div>
+<div class="fa">• کمک به <b>مراحل خشم، انکار، افسردگی</b> و سایر جنبه‌های سازگاری</div>
+<div class="fa">• کمک به <b>شادی و کمال‌یافتگی بیشتر</b></div>
+<div class="fa">• کمک به اندیشیدن پیرامون <b>زندگی با معلولیت</b></div>
+<div class="fa">• کمک به <b>آینده</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بازی‌های تجربی مؤثر در کار با معلولین</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>بازی کار ناتمام</b></div>
+<div class="fa">• <b>اخبار</b></div>
+<div class="fa">• <b>گوگل</b> (احتمالاً «گفت‌وگو» یا «صندلی خالی»)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صندلی خالی در کار با معلولین (سیمنز، ۲۰۰۰)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">در اجرای تکنیک صندلی خالی، مراجع می‌تواند وارد <b>گفت‌وگوی دوسویه با بخشی از بدن خود</b> شود، بخشی که هم‌اکنون آن را از دست داده است (مثلاً <b>عضو قطع‌شده یا عضو مصنوعی</b>).</div>
+<div class="fa">از این طریق، مشاور می‌تواند <b>تعارض درونی بین جنبه‌هایی از قدرت و ناتوانی شخصیت مراجع</b> را خلق کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته مهم در مداخله با معلولین</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">در فرایند کمک‌رسانی به معلولین، به‌جای آنکه دائماً به مراجعان گفته شود <b>«چه توانایی‌هایی برای آن‌ها باقی مانده است»</b>، بهتر است که <b>«به عضو از دست رفته هم کمی توجه کرد»</b>.</div>
+<div class="fa">مشاوران می‌توانند پیرامون مشکلات نقص عضو یا از دست دادن بخشی از بدن با مراجع گفت‌وگو کنند و از جملاتی نظیر:</div>
+<div class="fa">• <b>«الآن چه کار نمی‌توانم انجام دهم...»</b></div>
+<div class="fa">• <b>«احساس ناکامی می‌کنم، زیرا...»</b></div>
+<div class="fa">برای بیان احساساتشان بهره گیرند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سایر حیطه‌های کاربرد گشتالت‌درمانی</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>درمان الکل</b></div>
+<div class="fa">• <b>مشاوره گروهی</b></div>
+<div class="fa">• <b>مشاوره خانوادگی</b></div>
+<div class="fa">• <b>افراد با عقب‌ماندگی ذهنی</b></div>
+<div class="fa">• <b>مشکلات و آشفتگی‌های هیجانی</b></div>
+<div class="fa">• <b>اختلال اضطراب فراگیر</b></div>
+<div class="fa">• <b>ناراحتی‌ها</b></div>
+<div class="fa">• <b>اختلالات روان‌تنی</b></div>
+<div class="fa">• <b>اقدام به خودکشی</b></div>
+<div class="fa">• <b>افراد مبتلا به ویروس اچ‌آی‌وی</b></div>
+<div class="fa">• <b>اختلالات خوردن</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گشتالت و HIV (سیمنز، ۲۰۰۰)</h3><span class="badge s">مهم</span></div>
+<div class="fa">افراد مبتلا به ایدز با <b>شرمندگی و احساس خجالت فوق‌العاده‌ای</b> در روبه‌رو شدن با محیط خارج زندگی می‌کنند. از این رو از حاضر شدن در محیط‌های اجتماعی <b>کناره‌جویی</b> می‌کنند.</div>
+<div class="fa">به مراجع کمک می‌شود تا مشکل جدی خود را <b>به گونه دیگر قاب‌گیری مجدد کند</b>؛ مثلاً به‌جای آنکه به ویروس اچ‌آی‌وی با شرم و خجالت بنگرد، به آن به‌عنوان <b>بیماری مزمنی که به مرگ ختم می‌شود</b> بنگرد. در نتیجه این قاب‌گیری مجدد، <b>تغییراتی در انتظارات او نسبت به خودش</b> ایجاد می‌شود.</div>
+<div class="fa">افراد مبتلا به ایدز از موقعیت‌های روزانه زندگی (کار و مراقبت از منزل) دوری می‌جویند.</div>
+<div class="fa">گشتالت‌درمانی می‌تواند <b>فرایند واپس‌رانی</b> را که نوعی <b>خشم معطوف به خود</b> است در این افراد شناسایی کرده و آن‌ها را ترغیب کند تا <b>حس خودشان را در زمان بیشتر شناخته و از آن آگاه شوند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهداف گشتالت‌درمانی در اختلالات خوردن (آنگرمن، ۱۹۹۸)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> گشتالت‌درمانی <b>حالات جسمانی و عاطفی (ادراک بدنی)</b> را به سطح آگاهی می‌آورد.</div>
+<div class="fa"><b>۲)</b> افراد دارای اختلال خوردن تشویق می‌شوند تا <b>خود و تصویر از خودشان را در زمان حال</b> ببینند. این افراد <b>تفکر دو قطبی</b> دارند. آن‌ها بین آنچه خودشان می‌بینند و باور دارند و آنچه دیگران تصور می‌کنند <b>تمایز می‌گذارند</b>. ممکن است خود را <b>زشت یا حتی بی‌ارزش</b> تلقی کنند و باور داشته باشند دیگران نیز همین تصویر را در مورد آن‌ها دارند.</div>
+<div class="fa"><b>۳)</b> آگاهی از <b>آنکه چرا مراجع از تماس دوری می‌جوید</b> و چگونه <b>مرز میان آشفتگی‌های شدید با کارکردهای سازگارانه</b> مشخص می‌شود.</div>
+<div class="fa"><b>۴)</b> <b>در هم آمیختن خود و تصویر از خود</b> در قبال واحد و کلی.</div>
+<div class="fa"><b>۵)</b> <b>کارهای ناتمام فرد</b> به دلیل آنکه موقعیت فعلی مراجع را متأثر از خود ساخته و مانع از آگاهی و انسجام او می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک‌های پیشنهادی برای اختلالات خوردن</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>تکنیک اغراق</b> برای آگاهی از اینکه مراجع چه مدت زمانی را صرف اندیشیدن پیرامون دنیای درونی‌اش می‌کند.</div>
+<div class="fa">• <b>تکنیک صندلی خالی</b> برای <b>خود کودکی و خود بزرگسالی</b> به کار می‌رود. مراجع از طریق این تکنیک تصور می‌کند که نقش <b>مراقب خانواده</b> را در سال‌های اولیه [زندگی‌اش] ایفا می‌کند تا به نیازها و انتظاراتشان پاسخ دهد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نتیجه‌گیری نهایی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+گشتالت‌درمانی <b>کاربردهای بسیار ارزشمندی در توانبخشی</b> دارد. با داشتن دیدگاه گشتالت، مراجعان می‌توانند <b>ناتوانی خود در وظایف شغلی و فردی را بپذیرند</b>، <b>کارهای ناتمام خود را کامل کنند</b> و به <b>احساسات عدم کفایت</b> [غلبه کنند].
+</div>
+</div>
+</section>
+
+<!-- ==================== تفاوت‌ها و دام‌ها ==================== -->
+<section id="diffs" class="section">
+<h2 class="section-title">۰۸ · تفاوت‌ها و دام‌های امتحانی</h2>
+<p class="section-sub">برای سوالات چهارگزینه‌ای آماده شو</p>
+
+<div class="card diff">
+<h3>تفاوت ۱: «گشتالت» با «روان‌کاوی»</h3>
+<div class="fa"><b>گشتالت:</b> کل‌نگر، اینجا و اکنون، انسان کنشگر، مسئولیت‌پذیر.</div>
+<div class="fa"><b>روان‌کاوی:</b> تجزیه به اجزا، گذشته‌محور، انسان واکنشی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> نگی که گشتالت هم مثل روان‌کاوی گذشته‌محوره!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۲: «شکل» با «زمینه»</h3>
+<div class="fa"><b>شکل (Figure):</b> نیاز فوری که از سوی فرد دریافت می‌شود.</div>
+<div class="fa"><b>زمینه (Ground):</b> محیط‌های جسمانی و روان‌شناختی مرتبط با نیاز.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> جابه‌جا کردن شکل و زمینه!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۳: «درون‌فکنی» با «فرافکنی»</h3>
+<div class="fa"><b>درون‌فکنی (Introjection):</b> بلعیدن هنجارها بدون درونی‌سازی؛ روابط سطحی و ساختگی.</div>
+<div class="fa"><b>فرافکنی (Projection):</b> دیگران را مسئول اعمال خود دانستن؛ استفاده از «آن‌ها، او، تو».</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> قاطی کردن این دو با هم!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۴: «خشم معطوف به خود» با «هم‌آمیزی»</h3>
+<div class="fa"><b>خشم معطوف به خود (Retroflection):</b> رفتار خود را نشانه گرفتن؛ محدود کردن تعامل با محیط.</div>
+<div class="fa"><b>هم‌آمیزی (Confluence):</b> مرزهای فرد با محیط در هم آمیخته؛ بدون مرز مشخص.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> این دو رو هم اشتباه نگیر!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۵: «کار ناتمام» با «چندپارگی»</h3>
+<div class="fa"><b>کار ناتمام:</b> نیازهای ارضا نشده، احساسات ابراز نشده.</div>
+<div class="fa"><b>چندپارگی:</b> انکار نیازهای اساسی، قطبی کردن خود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> هر دو مربوط به نیازند ولی فرق دارن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۶: «طرح‌یابی» با «تشخیص»</h3>
+<div class="fa"><b>طرح‌یابی (Figuring):</b> روش ارزیابی گشتالتی؛ گوش دادن و مشاهده؛ ترسیم تصویر از مراجع.</div>
+<div class="fa"><b>تشخیص:</b> روش سنتی که گشتالت‌درمانگران از آن استفاده نمی‌کنند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> نگی که گشتالت هم تشخیص می‌ده!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۷: «رابطه افقی» با «رابطه عمودی»</h3>
+<div class="fa"><b>رابطه افقی («من و تو»):</b> پویا، دوسویه، رودررو؛ مشاور خودش را پنهان نمی‌کند.</div>
+<div class="fa"><b>رابطه عمودی:</b> «من» محرمانه و پنهان؛ مراجع به سوی وابستگی و انتقال سوق می‌یابد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> رابطه عمودی مال گشتالت نیست!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۸: «صندلی خالی» با «بازی اغراق»</h3>
+<div class="fa"><b>صندلی خالی:</b> مراجع با صندلی خالی صحبت می‌کند؛ ایفای نقش؛ انسجام بخش‌های متضاد؛ حل کارهای ناتمام.</div>
+<div class="fa"><b>بازی اغراق:</b> ابراز اغراق‌آمیز؛ دیدن نادرستی احساس؛ بازگشت به منبع جملات دفاعی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> این دو رو قاطی نکن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۹: «فعال‌سازی» با «بازی مسئولیت‌پذیری»</h3>
+<div class="fa"><b>فعال‌سازی:</b> رفتار پرشور و پرهیجان؛ بینش جدید درباره توانایی‌ها.</div>
+<div class="fa"><b>بازی مسئولیت‌پذیری:</b> تکرار «من مسئولیت... را می‌پذیرم»؛ شبیه اغراق.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> فعال‌سازی فن ششم است، نه پنجم!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۱۰: «هدف گشتالت» با «هدف توانبخشی»</h3>
+<div class="fa"><b>هدف گشتالت (برگر، ۱۹۹۹):</b> تکمیل گشتالت‌های باقی‌مانده از گذشته؛ تجربه خود و دیگران در زمان حال؛ دریچه به سوی آینده.</div>
+<div class="fa"><b>هدف اساسی در توانبخشی:</b> از اتکای بیش از حد به محیط به سوی حمایت خود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>دام:</b> این دو هدف رو با هم قاطی نکن!</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱: سال تأسیس اولین مؤسسه</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی ۱۹۵۰ یا ۱۹۵۲ است.</div>
+<div class="fa"><b>جواب درست:</b> <b>۱۹۵۱ میلادی</b>، در <b>نیویورک</b>، توسط <b>فریتز و لورا پرلز</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۱۹۵۱ = نیویورک = فریتز و لورا.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۲: تعداد مزیت‌های اساسی</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی ۴ یا ۶ تاست.</div>
+<div class="fa"><b>جواب درست:</b> <b>۵ مزیت اساسی</b> (کاتون، ۱۹۹۲).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۵ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۳: تعداد باورهای اساسی</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی ۵ یا ۸ تاست.</div>
+<div class="fa"><b>جواب درست:</b> <b>۷ باور اساسی</b> (پاسونز، ۱۹۷۵).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۷ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۴: تعداد موانع تماس</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی ۳ یا ۵ تاست.</div>
+<div class="fa"><b>جواب درست:</b> <b>۴ مانع اصلی</b> (جیمز و گیللند، ۲۰۰۳): درون‌فکنی، فرافکنی، خشم معطوف به خود، هم‌آمیزی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۴ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۵: تعداد فنون اصلی</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی ۵ تاست و فعال‌سازی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>۵ فن اصلی</b> + <b>فن ششم: فعال‌سازی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۵+۱.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۶: محل تأسیس مؤسسه</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی سان‌فرانسیسکو یا لس‌آنجلس.</div>
+<div class="fa"><b>جواب درست:</b> اولین مؤسسه در <b>نیویورک</b>؛ سپس سان‌فرانسیسکو، لس‌آنجلس، کلیولند و سن‌دیگو.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> اولی نیویورک.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۷: معنای «گشتالت»</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی یعنی «جزء» یا «تجزیه».</div>
+<div class="fa"><b>جواب درست:</b> <b>«کل»</b> و <b>سازمان‌دهی معنادار «کل»</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> کل، نه جزء.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۸: تأثیرگذاران بر پرلز</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی فروید یا یونگ.</div>
+<div class="fa"><b>جواب درست:</b> <b>ورترهایمر، کهلر و کافکا</b> (روان‌شناسان گشتالت).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> این سه نفر.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۹: حرفه اولیه پرلز</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی روان‌شناس بود.</div>
+<div class="fa"><b>جواب درست:</b> <b>روان‌پزشک</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> روان‌پزشک.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۰: تأثیر تئاتر بر پرلز</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی تئاتر تأثیری نداشت.</div>
+<div class="fa"><b>جواب درست:</b> تأثیر شگرف بر نگاهش به <b>ارتباط غیرکلامی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> تئاتر ← ارتباط غیرکلامی.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۱: تفاوت درون‌فکنی و فرافکنی</h3>
+<div class="fa"><b>دام:</b> این دو رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> <b>درون‌فکنی</b> = بلعیدن هنجارها؛ <b>فرافکنی</b> = دیگران را مسئول دانستن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> بلعیدن vs مسئول دانستن.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۲: کار ناتمام</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی کار ناتمام فقط مربوط به گذشته است و ربطی به حال ندارد.</div>
+<div class="fa"><b>جواب درست:</b> کار ناتمام <b>توانایی فرد را در پرداختن به سایر نیازهای زندگی ناکام و مختل می‌کند</b> (اثر بر حال).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> اثر بر حال.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۳: مسئولیت‌پذیری</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی مسئولیت‌پذیری یعنی برآورده کردن انتظارات دیگران.</div>
+<div class="fa"><b>جواب درست:</b> مسئولیت‌پذیری به <b>آگاهی و درک مراجعان از بی‌همتایی و توانایی‌های فردی‌شان</b> می‌پردازد، نه برآورده کردن انتظارات دیگران.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> آگاهی از خود، نه انتظارات دیگران.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۴: واژگان شخصی‌سازی‌شده</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی «آن» و «تو» درست‌اند.</div>
+<div class="fa"><b>جواب درست:</b> استفاده از <b>«من، مرا و از آن من»</b> به جای <b>«آن یا تو»</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> من، نه آن.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۵: رابطه «من و تو»</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی رابطه عمودی درسته.</div>
+<div class="fa"><b>جواب درست:</b> <b>رابطه افقی («من و تو»)</b>؛ رابطه عمودی مراجع را به وابستگی و انتقال سوق می‌دهد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> افقی، نه عمودی.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۶: طرح‌یابی</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی گشتالت هم تشخیص می‌ده.</div>
+<div class="fa"><b>جواب درست:</b> گشتالت‌درمانگران از <b>طرح‌یابی</b> استفاده می‌کنند، نه تشخیص سنتی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> طرح‌یابی، نه تشخیص.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۷: صندلی خالی در توانبخشی</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی صندلی خالی فقط برای کودکان است.</div>
+<div class="fa"><b>جواب درست:</b> <b>سیمنز (۲۰۰۰)</b>: گفت‌وگو با <b>عضو قطع‌شده یا مصنوعی</b>؛ خلق تعارض درونی بین قدرت و ناتوانی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> صندلی خالی برای عضو از دست رفته.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۸: هدف اساسی در توانبخشی</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی هدف، وابستگی بیشتر به محیط است.</div>
+<div class="fa"><b>جواب درست:</b> از <b>اتکای بیش از حد به محیط</b> به سوی <b>حمایت خود</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> از محیط به خود.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۱۹: چالش اساسی</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی چالش، حذف حمایت محیطی است.</div>
+<div class="fa"><b>جواب درست:</b> <b>تعادل بین حمایت‌های محیطی و تشویق مراجعان به خودمختاری</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> تعادل، نه حذف.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۲۰: نکته مداخله با معلولین</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی باید فقط روی توانایی‌های باقی‌مانده تأکید کرد.</div>
+<div class="fa"><b>جواب درست:</b> به‌جای تأکید دائمی بر «چه توانایی‌هایی باقی مانده»، بهتر است <b>«به عضو از دست رفته هم کمی توجه کرد»</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> توجه به عضو از دست رفته.</div>
+</div>
+
+<div class="card diff">
+<h3>دام ۲۱: تفاوت خودنظمی ارگانیسمی با تعادل</h3>
+<div class="fa"><b>دام:</b> فکر می‌کنی خودنظمی ارگانیسمی یعنی تعادل ثابت.</div>
+<div class="fa"><b>جواب درست:</b> خودنظمی ارگانیسمی = <b>نیروی ذاتی</b> که فرد را به سوی تعادل سوق می‌دهد؛ تعادل ممکن است توسط <b>رخدادهای خارجی یا تعارض‌های درونی</b> تهدید شود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> نیروی ذاتی به سوی تعادل.</div>
+</div>
+</section>
+
+<!-- ==================== کوییز ==================== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۹ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم گشتالت‌درمانی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 05 · مشاوره توانبخشی · فصل پنجم: گشتالت‌درمانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+const themeIcon=document.getElementById('themeIcon');
+const moonPath='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+const sunPath='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z';
+theme.onclick=()=>{
+const dark=document.documentElement.dataset.theme==='dark';
+if(dark){
+document.documentElement.dataset.theme='';
+themeIcon.innerHTML='<path d="'+moonPath+'"></path>';
+}else{
+document.documentElement.dataset.theme='dark';
+themeIcon.innerHTML='<circle cx="12" cy="12" r="4"></circle><path d="'+sunPath+'"></path>';
+}
+};
+
+const quizData = [
+{q:"پنج مزیت اساسی گشتالت‌درمانی برای توانبخشی را چه کسی و در چه سالی مطرح کرد؟",options:["کاتون، ۱۹۹۲","پاسونز، ۱۹۷۵","جیمز و گیللند، ۲۰۰۳","سیمکن، ۱۹۷۶"],answer:0,explanation:"پنج مزیت اساسی گشتالت‌درمانی برای توانبخشی توسط کاتون در سال ۱۹۹۲ مطرح شد."},
+{q:"اولین مؤسسه گشتالت‌درمانی چه زمانی و در کجا تأسیس شد؟",options:["۱۹۵۱، نیویورک","۱۹۵۰، سان‌فرانسیسکو","۱۹۵۲، لس‌آنجلس","۱۹۴۵، برلین"],answer:0,explanation:"در سال ۱۹۵۱ میلادی، فریتز و لورا پرلز نخستین مؤسسه گشتالت‌درمانی را در شهر نیویورک تأسیس کردند."},
+{q:"معنای اصطلاح «گشتالت» چیست؟",options:["سازمان‌دهی معنادار «کل»","تجزیه به اجزا","روان‌کاوی","رفتارگرایی"],answer:0,explanation:"واژه «کل» از اصطلاح آلمانی «گشتالت» مأخوذ شده است که به معنای سازمان‌دهی معنادار «کل» می‌باشد."},
+{q:"مفهوم اساسی گشتالت چیست؟",options:["ماهیت انسان کلی است که از مجموعه بخش‌های آن بزرگ‌تر است","انسان از اجزای جدا تشکیل شده","انسان واکنشی است","گذشته مهم‌تر از حال است"],answer:0,explanation:"مفهوم اساسی: ماهیت انسان کلی است که از مجموعه بخش‌های آن بزرگ‌تر است."},
+{q:"هفت باور اساسی گشتالت‌درمانی توسط چه کسی مطرح شد؟",options:["پاسونز، ۱۹۷۵","کاتون، ۱۹۹۲","پرلز، ۱۹۶۹","آنگرمن، ۱۹۹۸"],answer:0,explanation:"هفت باور اساسی گشتالت‌درمانی توسط پاسونز در سال ۱۹۷۵ مطرح شد."},
+{q:"فریتز پرلز نخست حرفه خود را چگونه آغاز کرد؟",options:["روان‌پزشک","روان‌شناس","مددکار اجتماعی","معلم"],answer:0,explanation:"فریتز پرلز نخست حرفه خود را به‌عنوان روان‌پزشک آغاز کرد."},
+{q:"چه کسانی بر فریتز پرلز تأثیر گذاشتند؟",options:["ورترهایمر، کهلر و کافکا","فروید و یونگ","اسکینر و پاولوف","الیس و بک"],answer:0,explanation:"پرلز به شدت متأثر از ورترهایمر، کهلر و کافکا بود."},
+{q:"چهار مانع تماس موفقیت‌آمیز توسط چه کسی مطرح شد؟",options:["جیمز و گیللند، ۲۰۰۳","کاتون، ۱۹۹۲","پاسونز، ۱۹۷۵","پرلز، ۱۹۶۹"],answer:0,explanation:"چهار مانع اصلی تماس موفقیت‌آمیز توسط جیمز و گیللند در سال ۲۰۰۳ مطرح شد."},
+{q:"«درون‌فکنی» چیست؟",options:["شکست در درونی‌سازی حقیقی اخلاق و هنجارها؛ بلعیدن آن‌ها","دیگران را مسئول اعمال خود دانستن","رفتار خود را نشانه گرفتن","مرزهای فرد با محیط در هم آمیخته"],answer:0,explanation:"درون‌فکنی: شکست در درونی‌سازی حقیقی اخلاق، افکار و هنجارها؛ افراد آن‌ها را بلعیده‌اند."},
+{q:"«فرافکنی» چیست؟",options:["فرد دیگران را مسئول اعمال و رفتارهای خود تلقی می‌کند","بلعیدن هنجارها","رفتار خود را نشانه گرفتن","مرزهای فرد با محیط در هم آمیخته"],answer:0,explanation:"فرافکنی: فرد دیگران و اطرافیان را مسئول اعمال و رفتارهای خود تلقی می‌کند."},
+{q:"«خشم معطوف به خود» چیست؟",options:["فرد رفتار خود را نشانه می‌گیرد","دیگران را مسئول دانستن","بلعیدن هنجارها","مرزهای در هم آمیخته"],answer:0,explanation:"خشم معطوف به خود: فرد رفتار خود را نشانه می‌گیرد، دقیقاً همانند آنچه سایرین با او می‌کنند."},
+{q:"«هم‌آمیزی» چیست؟",options:["مرزهای فرد با محیط و دیگران به شدت در هم آمیخته است","بلعیدن هنجارها","دیگران را مسئول دانستن","رفتار خود را نشانه گرفتن"],answer:0,explanation:"هم‌آمیزی: مرزهای فرد با محیط و دیگران به شدت در هم آمیخته است و قدرت تشخیص خود و دیگران وجود ندارد."},
+{q:"«کار ناتمام» چیست؟",options:["نیازهای ارضا نشده، احساسات ابراز نشده یا رخدادهای به اتمام نرسیده","بلعیدن هنجارها","مرزهای در هم آمیخته","رفتار خود را نشانه گرفتن"],answer:0,explanation:"کار ناتمام به نیازهای ارضا نشده، احساسات ابراز نشده یا سایر رخدادهای مهم به انجام یا به اتمام نرسیده زندگی فرد اشاره دارد."},
+{q:"«چندپارگی» چیست؟",options:["انکار یا تکذیب نیازهای اساسی زندگی یا قطبی کردن خود","بلعیدن هنجارها","دیگران را مسئول دانستن","مرزهای در هم آمیخته"],answer:0,explanation:"چندپارگی به انکار یا تکذیب نیازهای اساسی زندگی یا به قطبی کردن خود اشاره می‌کند."},
+{q:"پیش‌فرض کلیدی درمان گشتالتی چیست؟",options:["مسئولیت‌پذیری","عدم مسئولیت","وابستگی","اندرز دادن"],answer:0,explanation:"پیش‌فرض کلیدی درمان گشتالتی: مراجعان باید بیاموزند که مسئولیت رفتارها و انتخاب‌های خود را در زندگی بپذیرند."},
+{q:"رابطه «من و تو» در گشتالت‌درمانی چگونه است؟",options:["رابطه افقی، رودررو، پویا و دوسویه","رابطه عمودی","رابطه وابستگی","رابطه انتقالی"],answer:0,explanation:"رابطه «من و تو» یک رابطه افقی است، یعنی مشاوره یک رابطه رودررویی با مراجع دارد."},
+{q:"روش ارزیابی گشتالتی چه نام دارد؟",options:["طرح‌یابی (Figuring)","تشخیص","مصاحبه بالینی","آزمون روان‌شناختی"],answer:0,explanation:"گشتالت‌درمانگران از روش ارزیابی «طرح‌یابی» استفاده می‌کنند، به‌جای روش‌های سنتی چون «تشخیص‌ها»."},
+{q:"پنج فن اصلی گشتالتی کدام‌اند؟",options:["رؤیاها، سؤالات تأکیدی، صندلی خالی، اغراق، مسئولیت‌پذیری","رؤیاها، تفسیر، تشخیص، اندرز، مواجهه","صندلی خالی، اغراق، فعال‌سازی، تفسیر، تشخیص","سؤالات تأکیدی، اغراق، مواجهه، اندرز، تشخیص"],answer:0,explanation:"پنج فن اصلی: کاربرد رؤیاها، سؤالات تأکیدی، صندلی خالی، بازی اغراق، بازی «من مسئولیت‌اش را می‌پذیرم»."},
+{q:"فن ششم گشتالتی چیست؟",options:["فعال‌سازی (Activation)","صندلی خالی","بازی اغراق","سؤالات تأکیدی"],answer:0,explanation:"فن ششم: فعال‌سازی (Activation)."},
+{q:"تکنیک صندلی خالی در کار با معلولین توسط چه کسی و در چه سالی مطرح شد؟",options:["سیمنز، ۲۰۰۰","کاتون، ۱۹۹۲","پاسونز، ۱۹۷۵","آنگرمن، ۱۹۹۸"],answer:0,explanation:"سیمنز (۲۰۰۰): در اجرای تکنیک صندلی خالی، مراجع می‌تواند وارد گفت‌وگوی دوسویه با بخشی از بدن خود شود که آن را از دست داده است."},
+{q:"هدف اساسی گشتالت‌درمانی در توانبخشی چیست؟",options:["کمک به مراجعان برای گام برداشتن از اتکای بیش از حد به محیط به سوی حمایت خود","وابستگی بیشتر به محیط","حذف کامل حمایت محیطی","اندرز دادن به مراجع"],answer:0,explanation:"هدف اساسی: کمک به مراجعان است تا از اتکای بیش از حد به محیط به سوی حمایت خود گام بردارند."},
+{q:"چالش اساسی پیش روی مشاوره توانبخشی از دیدگاه گشتالت چیست؟",options:["برقراری تعادل بین حمایت‌های محیطی و تشویق مراجعان به خودمختاری","حذف حمایت محیطی","افزایش وابستگی","اندرز دادن"],answer:0,explanation:"چالش اساسی: برقراری تعادل بین حمایت‌های محیطی و تشویق مراجعان به خودمختاری."},
+{q:"نکته مهم در مداخله با معلولین درباره توجه به عضو از دست رفته چیست؟",options:["بهتر است به عضو از دست رفته هم کمی توجه کرد","فقط روی توانایی‌های باقی‌مانده تأکید کرد","به عضو از دست رفته توجه نکرد","فقط روی معلولیت تأکید کرد"],answer:0,explanation:"در فرایند کمک‌رسانی به معلولین، به‌جای آنکه دائماً به مراجعان گفته شود «چه توانایی‌هایی برای آن‌ها باقی مانده است»، بهتر است که «به عضو از دست رفته هم کمی توجه کرد»."},
+{q:"«خودنظمی ارگانیسمی» چیست؟",options:["نیرویی ذاتی که فرد را به سوی تعادل سوق می‌دهد","بلعیدن هنجارها","مرزهای در هم آمیخته","رفتار خود را نشانه گرفتن"],answer:0,explanation:"خودنظمی ارگانیسمی: آنچه فرد را به‌طور ذاتی به سوی تعادل سوق می‌دهد."},
+{q:"«شکل» و «زمینه» در گشتالت به ترتیب چیستند؟",options:["نیاز فوری / محیط‌های جسمانی و روان‌شناختی مرتبط با نیاز","محیط / نیاز","گذشته / حال","جزء / کل"],answer:0,explanation:"شکل (Figure): نیاز فوری که از فرد دریافت می‌شود. زمینه (Ground): محیط‌های جسمانی و روان‌شناختی که با نیاز مورد نظر و ارضای آن مرتبط است."},
+{q:"تعریف «حمایت» از نظر لورا پرلز (۱۹۷۶) چیست؟",options:["همه آن چیزی که فرد برای هماهنگی و انسجام‌اش به آن نیازمند است","فقط حمایت مالی","فقط حمایت خانوادگی","فقط حمایت درمانی"],answer:0,explanation:"حمایت: همه آن چیزی که فرد برای هماهنگی و انسجام‌اش به آن نیازمند است؛ همانند دوستی یا جامعه."},
+{q:"«طرح‌یابی» چه تفاوتی با «تشخیص» دارد؟",options:["طرح‌یابی روش ارزیابی گشتالتی است که به‌جای تشخیص سنتی استفاده می‌شود","هیچ تفاوتی ندارند","تشخیص روش گشتالتی است","طرح‌یابی فقط برای کودکان است"],answer:0,explanation:"گشتالت‌درمانگران از روش ارزیابی «طرح‌یابی» استفاده می‌کنند، به‌جای روش‌های ارزیابی قدیمی یا سنتی چون «تشخیص‌ها»."},
+{q:"نقل‌قول پرلز (۱۹۶۹) درباره «حفره‌ها» چیست؟",options:["علائمی که در حفره‌ها وجود دارند، دائماً یک کلمه را نشان می‌دهند: «اجتناب»","حفره‌ها همیشه خالی‌اند","حفره‌ها فقط در کودکان وجود دارند","حفره‌ها ربطی به درمان ندارند"],answer:0,explanation:"نقل‌قول پرلز (۱۹۶۹): «... علائمی که در این حفره‌ها وجود دارند، دائماً یک کلمه را نشان می‌دهند: اجتناب.»"},
+{q:"تأکید بر مسئولیت‌پذیری (آلن، ۱۹۸۶) چگونه است؟",options:["استفاده از واژگان شخصی‌سازی‌شده چون «من، مرا، از آن من» به جای «آن یا تو»","استفاده از «آن» و «تو»","اندرز دادن","تفسیر کردن"],answer:0,explanation:"آلن (۱۹۸۶): از مراجعان خواسته می‌شود از واژگان شخصی‌سازی‌شده‌ای چون «من، مرا و از آن من» به جای «آن یا تو» بهره گیرند."},
+{q:"هدف گشتالت‌درمانی از نظر برگر (۱۹۹۹) چیست؟",options:["یاری رساندن به مراجع در جهت تکمیل گشتالت‌های باقی‌مانده از گذشته","حذف گذشته","اندرز دادن","تشخیص بیماری"],answer:0,explanation:"برگر (۱۹۹۹): هدف گشتالت‌درمانی یاری رساندن به مراجع در جهت تکمیل گشتالت‌های باقی‌مانده از گذشته است."},
+{q:"استرس‌های مراجعان توانبخشی از نظر لیون و آنتوناک (۱۹۹۷) شامل چه مواردی است؟",options:["پیش‌بینی عملکرد فعالیت‌های روزانه، تأثیر معلولیت بر خانواده و دوستان، انجام نقش‌های زندگی","فقط مشکلات مالی","فقط مشکلات جسمانی","فقط مشکلات شغلی"],answer:0,explanation:"لیون و آنتوناک (۱۹۹۷): منبع استرس‌ها شامل پیش‌بینی عملکرد فعالیت‌های روزانه، تأثیر معلولیت بر خانواده و دوستان، و انجام نقش‌های زندگی است."},
+{q:"کمک‌های گشتالت‌درمانی به مراجعان توانبخشی شامل چه مواردی است؟",options:["سازگاری با پیامدهای نقائص، ابراز خشم فروخورده، مراحل خشم و انکار و افسردگی","فقط کاهش علائم","فقط درمان دارویی","فقط اندرز دادن"],answer:0,explanation:"کمک‌ها: سازگاری با پیامدهای نقائص، فراهم کردن تکنیک‌های تجربی، ابراز خشم فروخورده، مراحل خشم/انکار/افسردگی، شادی و کمال‌یافتگی، اندیشیدن پیرامون زندگی با معلولیت، کمک به آینده."},
+{q:"اهداف گشتالت‌درمانی در اختلالات خوردن (آنگرمن، ۱۹۹۸) شامل چه مواردی است؟",options:["آگاهی از حالات جسمانی و عاطفی، دیدن خود و تصویر از خود در زمان حال، آگاهی از دوری از تماس، در هم آمیختن خود و تصویر از خود، کارهای ناتمام","فقط کاهش وزن","فقط افزایش وزن","فقط اندرز دادن"],answer:0,explanation:"اهداف: ۱) آگاهی از حالات جسمانی و عاطفی ۲) دیدن خود و تصویر از خود در زمان حال ۳) آگاهی از چرا مراجع از تماس دوری می‌جوید ۴) در هم آمیختن خود و تصویر از خود ۵) کارهای ناتمام."},
+{q:"تکنیک صندلی خالی در اختلالات خوردن برای چه چیزی به کار می‌رود؟",options:["خود کودکی و خود بزرگسالی","فقط خود کودکی","فقط خود بزرگسالی","فقط والدین"],answer:0,explanation:"تکنیک صندلی خالی برای خود کودکی و خود بزرگسالی به کار می‌رود."},
+{q:"نقل‌قول آنگرمن (۱۹۹۸) درباره گشتالتی‌ها چیست؟",options:["«گشتالتی‌ها آدم‌های کسل و بی‌روحی نیستند، بلکه ترجیح می‌دهند فنون درمانی‌شان را به‌مثابه قوانین و بازی‌ها در نظر بگیرند»","«گشتالتی‌ها فقط از تکنیک استفاده می‌کنند»","«گشتالتی‌ها اندرز می‌دهند»","«گشتالتی‌ها تشخیص می‌دهند»"],answer:0,explanation:"نقل‌قول آنگرمن (۱۹۹۸): «گشتالتی‌ها آدم‌های کسل و بی‌روحی نیستند، بلکه ترجیح می‌دهند فنون درمانی‌شان را به‌مثابه قوانین و بازی‌ها در نظر بگیرند.»"},
+{q:"مثال بولستر و بولستر (۱۹۷۳) درباره آنا چه بود؟",options:["آنا در حصاری از گره‌ها گرفتار شده بود و با بازی‌سازی گره‌ها را گشود","آنا از صندلی خالی استفاده کرد","آنا اغراق کرد","آنا رؤیا دید"],answer:0,explanation:"آنا خودش را «در حصاری از گره‌ها و پیچ و خم‌ها گرفتار شده» توصیف کرد و با بازی‌سازی گره‌ها را گشود."},
+{q:"مثال توبین (۱۹۸۳) درباره کار ناتمام چه بود؟",options:["کارگری که از رئیسش عصبانی بود ولی خشم خود را ابراز نمی‌کرد","زنی که گره‌ها را می‌گشود","کودکی که رؤیا می‌دید","معلولی که عضو خود را از دست داده بود"],answer:0,explanation:"مثال توبین (۱۹۸۳): کارگری که از دست رئیس‌اش عصبانی بود اما از ابراز خشم واهمه داشت و تنش او همچنان همراه او بود."},
+{q:"«فعال‌سازی» چه بینشی به مراجع می‌دهد؟",options:["بینش‌های جدیدی پیرامون توانایی‌ها، رفتارها و ویژگی‌های شخصیتی‌شان","فقط بینش درباره گذشته","فقط بینش درباره دیگران","هیچ بینشی"],answer:0,explanation:"در طی فعال‌سازی، مراجعان بینش‌های جدیدی پیرامون توانایی‌ها، رفتارها و ویژگی‌های شخصیتی‌شان به دست می‌آورند که در حالت هوشیاری چندان قابل دسترس نبودند."},
+{q:"«مواجهه» در گشتالت‌درمانی برای چه چیزی استفاده می‌شود؟",options:["پاسخ به اظهارات متضاد و ناهمخوان مراجع و رویارویی با ناگفته‌ها","اندرز دادن","تفسیر کردن","تشخیص دادن"],answer:0,explanation:"مواجهه برای پاسخ به اظهارات متضاد و ناهمخوان مراجع و بحث و رویارویی با ناگفته‌های مراجع استفاده می‌شود."},
+{q:"تأثیر تئاتر بر پرلز چه بود؟",options:["تأثیر شگرف بر نگاهش نسبت به ارتباط غیرکلامی","تأثیر بر تشخیص","تأثیر بر اندرز","تأثیر بر تفسیر"],answer:0,explanation:"ایفای نقش‌های متعدد در نمایش، تأثیر شگرفی بر نگاه پرلز نسبت به ارتباط غیرکلامی گذاشت."},
+{q:"باور مشترک پرلز و تأثیرگذارانش چه بود؟",options:["چارچوب روان‌شناختی آدمی از یک «کل» تشکیل شده است","انسان از اجزای جدا تشکیل شده","گذشته مهم‌تر از حال است","انسان واکنشی است"],answer:0,explanation:"همگی باور داشتند که چارچوب روان‌شناختی آدمی از یک «کل» تشکیل شده است؛ تجزیه و جدا ساختن انسان را به اجزای کوچکتر نمی‌پذیرفتند."},
+{q:"«رابطه عمودی» در مشاوره چه پیامدی دارد؟",options:["«من» محرمانه و پنهان باقی می‌ماند و مراجع به سوی وابستگی و انتقال سوق می‌یابد","رابطه پویا و دوسویه","رابطه رودررو","رابطه افقی"],answer:0,explanation:"در رابطه مشاوره‌ای عمودی، «من» محرمانه و پنهان باقی می‌ماند و خواسته یا ناخواسته مراجع را به سوی وابستگی و انتقال سوق می‌دهد."},
+{q:"بازی «من مسئولیت‌اش را می‌پذیرم» چگونه است؟",options:["از مراجع خواسته می‌شود جملات را با افزودن «من مسئولیت... را می‌پذیرم» تکرار کند","مراجع با صندلی خالی صحبت می‌کند","مراجع اغراق می‌کند","مراجع رؤیا می‌بیند"],answer:0,explanation:"بازی «من مسئولیت‌اش را می‌پذیرم»: از مراجع خواسته می‌شود جملات را با افزودن «من مسئولیت... را می‌پذیرم» تکرار کند."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مفاهیم گشتالت‌درمانی — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

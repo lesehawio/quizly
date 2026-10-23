@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · کارآفرینی · سری 01 · فصل اول: مقدمه و کلیات</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"01";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>کارآفرینی · سری 01</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل اول: مقدمه و کلیات</h2>
+  <p>کارآفرینی چیه؟ کی پدرشه؟ چه انواعی داره؟ اینا رو خودمونی برات می‌گم</p>
+  <div class="pills"><span class="pill">تعاریف</span><span class="pill">شومپیتر</span><span class="pill">انواع</span><span class="pill">نظریه‌پردازان</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل اول کتاب کارآفرینی نوشته شده. همه‌چی رو ساده و خودمونی گفتم که راحت بفهمی و تو امتحان نجات پیدا کنی. از تعاریف شروع می‌کنیم تا برسیم به نظریه‌پردازان و دام‌های امتحانی.</div>
+
+<div class="stats">
+<div class="stat"><b>۳</b><span>موج کارآفرینی</span></div>
+<div class="stat"><b>۳</b><span>نوع کارآفرینی</span></div>
+<div class="stat"><b>۴</b><span>مرحله کانتر</span></div>
+<div class="stat"><b>۱۰</b><span>ویژگی کارآفرین</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (۱۰ دقیقه‌ای بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>کارآفرینی یعنی چی؟ (تعریف اصلی)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>«کارآفرینی فرآیندیه که باعث می‌شه رضایت‌مندی یا تقاضای جدید ایجاد بشه. یعنی فرآیند ایجاد ارزش از راه تشکیل یه مجموعه منحصربه‌فرد از منابع، برای اینکه از فرصت‌ها استفاده کنی.»</b> (احمدپور، ۱۳۷۹)
+</div>
+<div class="fa"><b>خودمونی بگم:</b> یعنی با یه ترکیب جدید و خاص از منابع (پول، نیرو، ایده، تجهیزات) یه چیز باارزش بسازی و از فرصت‌هایی که بقیه نمی‌بینن استفاده کنی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه نکته که حتماً باید بلد باشی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱)</b> کلمه کارآفرینی از <b>Entreprendre</b> فرانسوی اومده که یعنی <b>«متعهد شدن»</b>.</div>
+<div class="fa"><b>۲)</b> <b>پدر علم کارآفرینی:</b> ژوزف شومپیتر (یه اقتصاددان اتریشی‌الاصل که آمریکا زندگی می‌کرد).</div>
+<div class="fa"><b>۳)</b> از نظر شومپیتر، <b>مشخصه اصلی کارآفرین «نوآوری»</b> هستش و کار کارآفرین رو <b>«تخریب خالق»</b> می‌نامن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه موج کارآفرینی (تا دهه ۱۹۸۰)</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>موج</th><th>کی بود؟</th><th>چی بود؟</th></tr></thead>
+<tbody>
+<tr><td>موج اول</td><td>اواسط دهه ۱۹۵۰</td><td>خلاصه بگم: مردم شروع کردن کتاب نوشتن درباره زندگی کارآفرین‌ها، تاریخچه شرکت‌ها و اینکه چطور پول‌دار بشیم</td></tr>
+<tr><td>موج دوم</td><td>دهه ۱۹۶۰</td><td>دانشگاه‌ها رشته کارآفرینی راه انداختن تو مهندسی و بازرگانی</td></tr>
+<tr><td>موج سوم</td><td>اواخر دهه ۱۹۷۰</td><td>دولت‌ها هول شدن طرف تحقیق و شرکت‌های کوچیک</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انواع کارآفرینی (سه تا بیشتر نیست)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) کارآفرینی آزاد و مستقل:</b> طرف یه کارآفرینه، آزاد و مستقل کارش رو راه می‌ندازه.</div>
+<div class="fa"><b>۲) کارآفرینی درون‌سازمانی:</b> طرف کارآفرینه ولی تو یه سازمان سنتی و بوروکراتیک کار می‌کنه.</div>
+<div class="fa"><b>۳) کارآفرینی سازمانی:</b> محصولات یا فرایندهای نو از طریق ایجاد فرهنگ کارآفرینی تو یه سازمانی که از قبل تأسیس شده، به وجود میان.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراحل کارآفرینی درون‌سازمانی (کانتر، ۱۹۸۳)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) مشخص کردن مشکل یا مسئله:</b> طرف باید بفهمه مشکل چیه. ممکنه ماه‌ها یا حتی سال‌ها گوش بده، مشورت کنه و از مشتری و رقیب چیز یاد بگیره.</div>
+<div class="fa"><b>۲) ائتلاف (اتحاد موقتی):</b> کارآفرین نیاز به حمایت مالی و قانونی مدیرها داره و باید ایده‌ش رو به سازمان بقبولونه.</div>
+<div class="fa"><b>۳) تجهیز و تکمیل:</b> طرف می‌ره تو دل پروژه، تیم می‌سازه و با رقیب‌ها کلنجار می‌ره.</div>
+<div class="fa"><b>۴) ترک / جانشینی:</b> محصول یا فرایند جدید عادی می‌شه تو سازمان و کارآفرین ادامه کار رو به یکی دیگه می‌سپاره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>موانع کارآفرینی تو ایران (سه دسته)</h3></div>
+<div class="fa"><b>۱) عوامل ضد انگیزشی:</b> خطرپذیری مالی زیاد، نبود منابع مالی، موانع اداری و فساد اداری.</div>
+<div class="fa"><b>۲) موانع قانونی:</b> قانون بانکی، مالیاتی، تجارت، کار، گمرک، شهرداری، صادرات و واردات، ورشکستگی، ثبت شرکت‌ها، مالکیت معنوی، زیست‌محیطی و انحصار دولتی.</div>
+<div class="fa"><b>۳) نارسایی‌های محیط تجارتی:</b> نبود زیرساخت تجاری، عدم حمایت هنجارهای اجتماعی و فرهنگی، نظام تعلیم و تربیت تأکید نمی‌کنه، سیاست‌های دولتی کمه.</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (خودمونی و ساده)</h2>
+<p class="section-sub">هر چیزی که لازم داری بدونی، با مثال</p>
+
+<div class="card">
+<div class="card-head"><h3>مقدمه: کارآفرینی چیه و چرا مهمه؟</h3><span class="badge s">مهم</span></div>
+<div class="fa">تو هزاره سوم، <b>تغییر و تحول سریع</b> یکی از مهم‌ترین جریان‌های زندگی بشره.</div>
+<div class="fa"><b>کارآفرینی و خلاقیت</b> اساس و بستر این تغییر و تحولن.</div>
+<div class="fa">جوامعی که نتونن خودشون رو با این تحولات همگام کنن، <b>دچار ایستایی</b> می‌شن و تو آینده حضور فعالی ندارن.</div>
+<div class="fa"><b>کارآفرینان</b> کسانی‌ان که با ارائه محصول یا خدمت جدید، <b>تعادل رو برقرار می‌کنن</b> و یه ارزشی از خودشون به جا می‌ذارن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعریف کارآفرینی از نگاه چند تا آدم مهم</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>کی گفته</th><th>خودمونی چی گفته</th></tr></thead>
+<tbody>
+<tr><td>پیتر دراکر (۲۰۰۵)</td><td>کارآفرین کسیه که یه فعالیت اقتصادی کوچیک و جدید رو با سرمایه خودش شروع می‌کنه، ارزش‌ها رو تغییر می‌ده و ماهیتشون رو متحول می‌کنه. از نظر دراکر، کارآفرینی یه <b>رفتاره</b>، نه یه صفت خاص شخصیتی.</td></tr>
+<tr><td>جعفری تیمز (۱۹۹۴)</td><td>کارآفرین <b>از هیچ، یه چیز باارزش</b> می‌سازه. قدرت درک بالا داره، خلأ و فرصت‌ها رو پیدا می‌کنه و با پرورش فکرش محصول جدید می‌سازه.</td></tr>
+<tr><td>رابرت هرسیچ (۱۳۸۳)</td><td>کارآفرینی یعنی <b>خلق چیز نو</b>، با صرف وقت و تلاش زیاد و پذیرش خطرات مالی، روحی و اجتماعی، برای به دست آوردن منابع مالی، رضایت شخصی و استقلال.</td></tr>
+<tr><td>مک‌کله‌لند (۱۹۶۱)</td><td>کارآفرینی فراتر از شغل و حرفه‌ست؛ <b>یه شیوه زندگیه</b>. خلاقیت، عشق به کار، پویایی، مخاطره‌پذیری، آینده‌نگری، ارزش‌آفرینی، آرمان‌گرایی، فرصت‌گرایی، نیاز به پیشرفت و مثبت‌اندیشی اساس زندگی کارآفرینانه‌ست.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کلمه کارآفرینی از کجا اومده؟</h3></div>
+<div class="fa">از کلمه فرانسوی <b>Entreprendre</b> به معنای <b>«متعهد شدن»</b>.</div>
+<div class="fa">تو واژه‌نامه <b>وبستر</b> نوشته: کارآفرین کسیه که متعهد می‌شه مخاطره یه فعالیت اقتصادی رو سازماندهی، اداره و تقبل کنه.</div>
+<div class="fa"><b>اولین کسی که مسئله کارآفرینی رو مطرح کرد:</b> یه نفر به اسم <b>کانتیلون</b>.</div>
+<div class="fa"><b>اولین کسی که اصطلاح کارآفرین رو به معنای فعلی به کار برد:</b> <b>ژوزف شومپیتر</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چرا آموزش کارآفرینی مهمه؟</h3><span class="badge s">مهم</span></div>
+<div class="fa">با گسترش فناوری، نقش کارآفرین‌ها <b>روزبه‌روز بیشتر</b> می‌شه.</div>
+<div class="fa">کارآفرینی امروز <b>از عوامل مهم رشد و توسعه اقتصادی</b>ه.</div>
+<div class="fa">تو غرب و یه سری کشورها، دو دهه اخیر رو <b>«دهه‌های طلایی کارآفرینی»</b> نامیدن.</div>
+<div class="fa">تو اکثر کشورهای پیشرفته و در حال توسعه، کارآفرینی <b>اصلی‌ترین منبع توسعه اقتصادی</b>ه.</div>
+<div class="fa">کارآفرین‌ها رو <b>«قهرمانان ملی»</b> می‌نامن.</div>
+<div class="fa"><b>کارآفرینی یه منبع تموم‌نشدنیه</b>؛ چون به خلاقیت انسان برمی‌گرده — هم ارزونه، هم باارزش و هم تموم‌شدنی نیست.</div>
+<div class="fa">جوامعی که به <b>منابع انسانی</b> تکیه می‌کنن نه منابع زیرزمینی، تو بلندمدت <b>موفق‌ترن</b>. منابع زیرزمینی تو کشورهای جهان سوم، با همه مزیت‌هاش، <b>از موانع توسعه‌یافتگی</b> حساب می‌شن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه شومپیتر (مهم‌ترین نظریه فصل)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">هنوز تعریف کامل و مورد قبول همه صاحب‌نظرها ارائه نشده، ولی <b>نظریه شومپیتر</b> مورد توافق و ارجاع اکثر محققینه.</div>
+<div class="fa">از نظر شومپیتر: <b>کارآفرین نیروی محرکه اصلی توسعه اقتصادیه و موتور توسعه‌ست.</b></div>
+<div class="fa">نقش کارآفرین: <b>نوآوری با ایجاد ترکیب‌های تازه از مواد</b>.</div>
+<div class="fa">مشخصه اصلی کارآفرین: <b>«نوآوری»</b>.</div>
+<div class="fa">کار کارآفرین: <b>«تخریب خالق»</b> (یعنی روش‌های کهنه و ناکارآمد رو از بین می‌بره و روش‌های جدید و کارآمد رو جایگزین می‌کنه).</div>
+<div class="fa">تو کتاب <b>«نظریه اقتصاد پویا»</b> می‌گه تعادل پویا از طریق نوآوری و کارآفرینی ایجاد می‌شه و این مشخصه یه اقتصاد سالمه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تاریخچه کارآفرینی تو دنیا (خلاصه)</h3></div>
+<div class="fa"><b>اوایل سده شانزدهم میلادی:</b> به کسانی که تو مأموریت‌های نظامی بودن می‌گفتن «کارآفرین».</div>
+<div class="fa"><b>از حدود ۱۷۰۰ میلادی:</b> لفظ کارآفرین برای پیمانکاران دولت که کار عمرانی می‌کردن زیاد استفاده شد.</div>
+<div class="fa"><b>کارآفرینی اولین بار مورد توجه اقتصاددان‌ها</b> قرار گرفت و همه مکاتب اقتصادی از قرن شانزدهم به بعد یه جوری کارآفرینی رو تو نظریه‌هاشون تشریح کردن.</div>
+<div class="fa"><b>شومپیتر تو سال ۱۹۳۴</b> (همزمان با رکود بزرگ اقتصادی) نظریه توسعه اقتصادی خودش رو داد و به همین دلیل <b>«پدر کارآفرینی»</b> لقب گرفت.</div>
+<div class="fa"><b>روان‌شناس‌ها و جامعه‌شناس‌ها</b> هم به کارآفرینی توجه کردن: روان‌شناس‌ها برای شناسایی ویژگی‌ها و الگوهای رفتاری، جامعه‌شناس‌ها کارآفرینی رو یه <b>پدیده اجتماعی</b> در نظر گرفتن و رابطه بین کارآفرین‌ها و بقیه گروه‌های جامعه رو بررسی کردن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وضعیت کارآفرینی تو ایران (خیلی مهم)</h3><span class="badge s">مهم</span></div>
+<div class="fa">از اواخر دهه ۱۹۷۰ تو کشورهای پیشرفته و از اواخر دهه ۱۹۸۰ تو کشورهای در حال توسعه به کارآفرینی توجه شد، ولی <b>تو ایران تا شروع برنامه سوم توسعه توجه چندانی نشده بود</b>.</div>
+<div class="fa"><b>مشکلات بیکاری و پیش‌بینی حادتر شدنش تو دهه ۱۳۸۰</b> باعث شد موقع تدوین <b>برنامه سوم توسعه</b>، موضوع کارآفرینی مورد توجه قرار بگیره.</div>
+<div class="fa"><b>برداشت غلط از کلمه کارآفرینی:</b> چون ترجمه کلمه <b>Entrepreneurship</b>ه، بعضی‌ها فکر می‌کنن یعنی «ایجاد کار و اشتغال‌زایی». در حالی که کارآفرینی <b>مفهومی وسیع‌تر و باارزش‌تر از اشتغال‌زایی</b> داره.</div>
+<div class="fa"><b>پیامدهای مثبت مهم کارآفرینی که نباید فراموش بشن:</b> خلاقیت، ترغیب به نوآوری و توسعه‌ش، افزایش اعتماد به نفس، ایجاد و توسعه تکنولوژی، افزایش رفاه عمومی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> اگه فقط به جنبه اشتغال‌زایی کارآفرینی توجه کنیم، از همه این پیامدهای مثبت بی‌بهره می‌مونیم.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انواع کارآفرینی سازمانی از نظر هانس شول هامر</h3></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>خودمونی چی‌ه</th></tr></thead>
+<tbody>
+<tr><td>اداری</td><td>نوآوری یه فرآیند چندمرحله‌ای و قابل کنترله</td></tr>
+<tr><td>فرصت‌گرایانه</td><td>نوآوری اتفاقی روی می‌ده</td></tr>
+<tr><td>تقلیدی</td><td>با نوآوری تناقض داره ولی باعث می‌شه روح کارآفرینی نهادینه بشه</td></tr>
+<tr><td>اکتسابی</td><td>شرکت‌های بزرگ دست به تنوع فعالیت‌ها می‌زنن</td></tr>
+<tr><td>پرورشگاهی</td><td>واحدهای مستقل تو دل سازمان خودش رشد و توسعه پیدا می‌کنن</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱۰ ویژگی کارآفرین‌ها از نگاه روان‌شناس‌ها</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) خطرپذیری:</b> کارآفرین‌ها خطرهای حساب‌شده و مدیریت‌پذیر قبول می‌کنن. دنبال کارهای پرخطر نمی‌رن، ولی برای شروع یه فعالیت اقتصادی معمولی به مقدار متعادل خطرپذیری می‌کنن.</div>
+<div class="fa"><b>۲) استقلال‌طلبی:</b> آدم‌های مستقل و استواری‌ان که عشق کنترل داشتن امور دارن. دوست دارن رهبر باشن نه پیرو.</div>
+<div class="fa"><b>۳) مرکز کنترل درونی:</b> معتقدن خودشون سرنوشت‌شون رو کنترل می‌کنن و موفقیت یا شکست‌شون نتیجه اقدامات خودشونه.</div>
+<div class="fa"><b>۴) نیاز به موفقیت و پیشرفت:</b> کارآفرین هدف‌گراست.</div>
+<div class="fa"><b>۵) ایده‌پردازی و خلاقیت و نوآوری:</b> خلاقیت یعنی خلق ایده‌های جدید؛ نوآوری یعنی ارائه محصول، فرآیند یا خدمات جدید به بازار.</div>
+<div class="fa"><b>۶) اعتماد به نفس:</b> کارآفرین‌ها معمولاً اعتماد به نفس بالا دارن و خودشون رو باور دارن.</div>
+<div class="fa"><b>۷) تحمل ابهام:</b> می‌تونن بدون داشتن اطلاعات کامل از محیط زندگی کنن.</div>
+<div class="fa"><b>۸) پشتکار بالا:</b> با شکست ناامید نمی‌شن و دنبال راهی برای غلبه برش می‌گردن.</div>
+<div class="fa"><b>۹) آرمان‌گرایی و داشتن دورنما:</b> برای خودشون یه هدف نهایی می‌ذارن و برای رسیدن بهش برنامه‌ریزی می‌کنن.</div>
+<div class="fa"><b>۱۰) پیش‌قدم بودن:</b> همیشه تو انجام کارها پیشتازن و منتظر نمی‌مونن کسی بهشون کار بگه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویژگی‌های شخصیتی کارآفرین‌ها (کارلند و دستیارانش)</h3></div>
+<div class="fa"><b>۱) آینده‌نگر و داشتن چشم‌انداز:</b> چشم‌انداز کارآفرین کاملاً شفاف و بدون ابهامه و می‌تونه به دیگران منتقلش کنه.</div>
+<div class="fa"><b>۲) مصمم بودن:</b> عزم راسخ کارآفرین انرژی و تعهد لازم برای موفقیت رو ایجاد می‌کنه.</div>
+<div class="fa"><b>۳) انگیزش:</b> نیاز به خودشکوفایی یکی از مهم‌ترین انگیزه‌های کارآفرینه. سود مالی به ندرت انگیزه کارآفرین می‌شه.</div>
+<div class="fa"><b>۴) استقلال، خلاقیت و نوآوری:</b> کارآفرین باید رئیس و کارفرمای خودش باشه. ذهن پویاش مرزهای از پیش تعیین‌شده رو می‌شکنه.</div>
+<div class="fa"><b>۵) ریسک‌پذیری و تحمل ابهام:</b> کارآفرین خطرپذیره و به جای انتظار برای ضمانت یه پایان موفق، به فکر و تلاش خودش تکیه می‌زنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مهارت‌هایی که یه کارآفرین باید داشته باشه</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>مهارت‌های عمومی:</b></div>
+<div class="fa">۱) تحقیق و مکتوب کردن ایده</div>
+<div class="fa">۲) برقراری ارتباط و مذاکره</div>
+<div class="fa">۳) انتخاب نوع مالکیت</div>
+<div class="fa">۴) انتخاب مکان کسب‌وکار</div>
+<div class="fa">۵) کنترل و نظارت</div>
+<div class="fa"><b>مهارت‌های مدیریتی:</b></div>
+<div class="fa">۱) مدیریت فنی — ۲) مدیریت خطرپذیری — ۳) مدیریت راهبردی — ۴) مدیریت در روابط انسانی — ۵) مدیریت زمان — ۶) مدیریت بازاریابی و شناخت بازار — ۷) مدیریت مالی و حسابداری — ۸) تأمین سرمایه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل موفقیت کارآفرین‌های سازمانی</h3></div>
+<div class="fa"><b>احساسات و انگیزه اولیه:</b> هیجان و شوق و علاقه به یه ایده، عامل کلیدی موفقیت کارآفرین‌هاست.</div>
+<div class="fa"><b>خدمت به سازمان و خود:</b> آزادی و استقلال می‌خوان، دنبال دسترسی به منابع سازمانن، هدف‌گرا و خودانگیزه‌ان.</div>
+<div class="fa"><b>روابط با دیگران:</b> برای آدم‌ها اهمیت قائلن و به حمایت‌شون احتیاج دارن.</div>
+<div class="fa"><b>رهبری:</b> با قدرت رهبری خودشون می‌تونن دیگران رو توانمند کنن و از ایده‌هاشون دفاع کنن.</div>
+<div class="fa"><b>افق زمانی بلندمدت:</b> عمدتاً افق بلندمدت دارن و پروژه‌های حدود سه سال رو بیشتر انتخاب می‌کنن.</div>
+<div class="fa"><b>سبک حل مسئله:</b> توان بالایی تو حل مسائل دارن و اغلب اهل عملن و زود دست به کار می‌شن.</div>
+<div class="fa"><b>مهارت‌های سازمانی:</b> می‌تونن منابع مالی، حمایت دیگران و اطلاعات مورد نیاز رو جذب کنن.</div>
+<div class="fa"><b>ارتباطات:</b> با افراد سازمان و خارج سازمان ارتباط خوبی برقرار می‌کنن.</div>
+<div class="fa"><b>شکست و اشتباه:</b> یادگیری از اشتباه براشون خیلی مهمه.</div>
+<div class="fa"><b>ریسک:</b> مخاطرات متوسط رو دوست دارن و اغلب از اخراج شدن هراسی ندارن.</div>
+<div class="fa"><b>تحقیقات بازار:</b> اغلب تحقیق بازار رو خودشون انجام می‌دن و بازار رو مستقیم ارزیابی می‌کنن.</div>
+<div class="fa"><b>تصمیمات:</b> تصمیم‌گیرنده‌های خیلی خوبی‌ان، حتی وقتی اطلاعات کافی نیست.</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (اینا رو قاطی نکن)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، اینجا جمع شده</p>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت کارآفرینی مستقل و سازمانی (سه اختلاف اساسی)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>محور</th><th>کارآفرینی مستقل</th><th>کارآفرینی سازمانی</th></tr></thead>
+<tbody>
+<tr><td>۱. توسعه در برابر بازیابی</td><td>اقداماتش <b>توسعه‌ای</b>ه</td><td>اغلب متوجه <b>بازیابی</b>ه (وقتی سازمان بزرگ دچار رکوده)</td></tr>
+<tr><td>۲. دشمن اصلی</td><td><b>بازار</b> دشمنه؛ باید موانع بازار رو برای بقا و رقابت برداره</td><td><b>فرهنگ شرکت</b> دشمن اولیه‌ست؛ باید بر موانع سازمانی غلبه کنه</td></tr>
+<tr><td>۳. شرکت مادر</td><td>باید از <b>ثروت شخصی</b> خودش استفاده کنه یا از منابع خارجی سرمایه بگیره</td><td><b>شرکت مادر می‌تونه دوست باشه</b>؛ از خزانه شرکت مادر سرمایه می‌گیره</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مشترک هر دو:</b> توجه به <b>نوآوری</b> (محصول، خدمت، فرایند یا سبک مدیریتی جدید) و <b>هدف هر دو، ایجاد محصولات یا خدمات با ارزش افزوده‌ست</b>.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> کارآفرینی تو سازمان‌های بزرگ <b>خیلی سخت‌تر</b> از کارآفرینی مستقله، چون تو تصمیم‌گیری، تخصیص منابع و استقلال عمل محدودیت داری.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت کارآفرینی درون‌سازمانی و کارآفرینی سازمانی</h3></div>
+<table class="compare">
+<thead><tr><th>کارآفرینی درون‌سازمانی</th><th>کارآفرینی سازمانی</th></tr></thead>
+<tbody>
+<tr><td>فرآیندیه که کارآفرین برای به ثمر رسوندن فعالیت کارآفرینانه تو سازمان طی می‌کنه</td><td>شرایط و بستریه که تو سازمان فراهم می‌شه تا هر شخص یا گروهی بتونه پروسه کارآفرینی درون‌سازمانی رو سریع، راحت و اثربخش اجرا کنه</td></tr>
+<tr><td>خودِ <b>فرآیند</b>ه</td><td><b>بستر و شرایط</b>ه</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تو ادبیات کارآفرینی، خیلی وقت‌ها این دو رو به یه معنی به کار می‌برن و مرز شفافی بینشون نیست.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سازمان کارآفرین در برابر سازمان سنتی</h3></div>
+<table class="compare">
+<thead><tr><th>سازمان کارآفرین</th><th>سازمان سنتی</th></tr></thead>
+<tbody>
+<tr><td>بر اساس شایستگی و صلاحیت خودش عمل می‌کنه</td><td>به شرح وظایف خاص محدود می‌شه</td></tr>
+<tr><td>منابع و توجهش رو متمرکز بر امور ناآشنا (مثل تحقیق و توسعه) می‌کنه</td><td>بیشتر به کنترل و حفظ اطلاعات توجه داره</td></tr>
+<tr><td>خودش رو با دورنمای آینده می‌سنجه</td><td>خودش رو با استانداردهای قبلی می‌سنجه</td></tr>
+<tr><td>بیشتر به <b>فرصت‌ها</b> توجه داره تا تهدیدها</td><td>بیشتر به تهدیدها توجه داره</td></tr>
+<tr><td>درگیر نوآوری محصول، بازار یا تکنولوژی می‌شه</td><td>ممکنه بدون ریسک، تکنولوژی یا خط تولید رو عوض کنه یا از رقیب تقلید کنه</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته طلایی:</b> تئوریسین‌ها سازمانی رو که <b>بدون هیچ ریسکی</b> تکنولوژی یا خط تولید رو عوض کنه یا راحت از رقیب تقلید کنه، <b>سازمان کارآفرین نمی‌نامن</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل درون‌سازمانی و برون‌سازمانی مؤثر بر سازمان کارآفرین</h3></div>
+<table class="compare">
+<thead><tr><th>درون‌سازمانی</th><th>برون‌سازمانی</th></tr></thead>
+<tbody>
+<tr><td><b>قوت‌ها:</b> قدرت کلان رقابت‌پذیری، قدرت مالی مناسب، برنامه‌های کاربردی، نیروی انسانی و مدیریت ماهر</td><td><b>فرصت‌ها:</b> فرصت‌های بکر تو بازارها، تنوع تو بازار، تکنولوژی‌های ارزان و مکمل نوآوری، نیاز به محصولات نوآوری‌شده</td></tr>
+<tr><td><b>ضعف‌ها:</b> راندمان پایین تولید، نبود قدرت و منابع کافی مالی، مدیریت ضعیف، نداشتن برنامه یا برنامه‌های ضعیف و ناکارآمد</td><td><b>تهدیدها:</b> رقیب‌های جدید، بالا رفتن سطح نیاز و توقع مشتری‌ها، قوانین بی‌خاصیت، موانع و چالش‌های قانونی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مدل‌های ایجاد کارآفرینی شرکتی</h3></div>
+<div class="fa"><b>الف) مدل ترغیب کارآفرینی شرکتی کوراتکو و هاجتس (چهار گام):</b></div>
+<div class="fa">۱) <b>توسعه بینش:</b> مشارکت تو دیدگاه نوآوری. کارکنان باید این چشم‌انداز رو بشناسن و درک کنن.</div>
+<div class="fa">۲) <b>تشویق و نوآوری:</b> نوآوری ابزار لازم برای کارآفرینه. شرکت‌ها باید نوآوری رو به عنوان عامل کلیدی تو استراتژی‌هاشون درک کنن.</div>
+<div class="fa">۳) <b>ایجاد جو کارآفرینانه تو سازمان:</b> سرمایه‌گذاری سنگین تو فعالیت کارآفرینانه که باعث تجلی تفکرات جدید تو یه محیط نوآور می‌شه.</div>
+<div class="fa">۴) <b>توسعه تیم‌های کارآفرینی:</b> شرکت‌هایی که نسبت به تشکیل تیم‌های کارآفرینی تعهد دارن، نشونه تغییرن.</div>
+<div class="fa"><b>ب) مدل کارآفرینی شرکتی از دیدگاه فرای (پنج مرحله):</b></div>
+<div class="fa">۱) <b>متعهد نمودن سازمان:</b> نوآوری تو سازمان لزوماً یه فرایند پایین از بالاست. تعهد به کارآفرینی تو سازمان فقط می‌تونه یه فرایند بالا به پایین باشه.</div>
+<div class="fa">۲) <b>تبیین مدل کارآفرینی شرکتی:</b> بعد از تعهد بالاترین مقام اجرایی، قدم بعدی تعیین شکل کارآفرینی تو سازمانه.</div>
+<div class="fa">۳) <b>توسعه فرهنگ کارآفرینانه:</b> کل فرهنگ شرکت باید با روش‌های کارآفرینانه سازمان هماهنگ بشه.</div>
+<div class="fa">۴) <b>شناسایی استعدادهای کارآفرینانه:</b> دو گروه باید مشخص بشن: <b>گروه نوآوران</b> (ذوق مدیریتی دارن) و <b>اعضای بالقوه گروه</b> (به نوآوران کمک می‌کنن).</div>
+<div class="fa">۵) <b>پاداش به کارآفرینان سازمانی:</b> نظام پاداش برای کارآفرین‌های سازمانی می‌تونه پولی یا غیرپولی باشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مشکلات و موانع کارآفرینی تو سازمان</h3></div>
+<div class="fa"><b>ناپیوستگی تو سازمان‌های بزرگ:</b> به خاطر مشکلات ارتباطی بین کارکنان و مدیریت و لایه‌های متعدد تصمیم‌گیری، امکان از بین رفتن ایده تو هر قسمت سازمان وجود داره.</div>
+<div class="fa">تو سازمان‌های بزرگ، <b>سود کوتاه‌مدت</b> معیار موفقیته (برای جلوگیری از کاهش ارزش سهام).</div>
+<div class="fa"><b>نبود فرهنگ کارآفرینی:</b> کارآفرین‌ها زندگی پرخطر رو ترجیح می‌دن ولی سازمان تشویقشون نمی‌کنه.</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۴ · نظریه‌پردازان و آدم‌های مهم</h2>
+<p class="section-sub">هر کی چی گفت — خودمونی</p>
+
+<div class="card">
+<div class="card-head"><h3>ژوزف شومپیتر — پدر علم کارآفرینی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>کیه:</b> یه اقتصاددان اتریشی‌الاصل ساکن آمریکا که بهش <b>پدر علم کارآفرینی</b> می‌گن.</div>
+<div class="fa"><b>نظریه‌ش:</b> رشد و توسعه اقتصادی زمانی میسر می‌شه که آدم‌هایی با خطرپذیری، دست به نوآوری بزنن و روش‌ها و راه‌حل‌های جدید جایگزین راهکارهای ناکارآمد قبلی بشه.</div>
+<div class="fa"><b>مشخصه اصلی کارآفرین:</b> <b>نوآوری</b> — کار کارآفرین: <b>تخریب خالق</b>.</div>
+<div class="fa"><b>کتابش:</b> «نظریه اقتصاد پویا» — تعادل پویا از طریق نوآوری و کارآفرینی ایجاد می‌شه.</div>
+<div class="fa"><b>سال ارائه نظریه:</b> ۱۹۳۴ (همزمان با رکود بزرگ اقتصادی).</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> شومپیتر اولین کسی بود که اصطلاح کارآفرین رو به معنای فعلی به کار برد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کانتیلون</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>کیه:</b> اولین کسی که مسئله کارآفرینی رو مطرح کرد.</div>
+<div class="fa"><b>تعریفش (۱۷۳۰):</b> کارآفرین فردیه که ابزار تولید رو به منظور ادغامشون برای تولید محصولات قابل عرضه به بازار، ارائه می‌کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیتر دراکر</h3></div>
+<div class="fa"><b>تعریفش (۲۰۰۵):</b> کارآفرین کسیه که یه فعالیت اقتصادی کوچیک و جدید رو با سرمایه خودش شروع می‌کنه، ارزش‌ها رو تغییر می‌ده و ماهیتشون رو دچار تحول می‌کنه.</div>
+<div class="fa"><b>نکته کلیدی:</b> کارآفرینی رو یه <b>رفتار</b> می‌دونه نه یه صفت خاص تو شخصیت آدم‌ها.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مک‌کله‌لند</h3></div>
+<div class="fa"><b>تعریفش (۱۹۶۱):</b> فرآیند کارآفرینی رو فراتر از شغل و حرفه، بلکه <b>یه شیوه زندگی</b> تعبیر می‌کنه.</div>
+<div class="fa"><b>ویژگی‌ها:</b> خلاقیت و نوآوری، عشق به کار و تلاش مستمر، پویایی، مخاطره‌پذیری، آینده‌نگری، ارزش‌آفرینی، آرمان‌گرایی، فرصت‌گرایی، نیاز به پیشرفت و مثبت‌اندیشی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جعفری تیمز</h3></div>
+<div class="fa"><b>تعریفش (۱۹۹۴):</b> کارآفرین رو ایجادکننده یه چیز باارزش <b>از هیچ</b> می‌دونه. کارآفرین کسیه که قدرت درک بالا داره و می‌تونه خلأ و فرصت‌ها رو پیدا کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابرت هرسیچ</h3></div>
+<div class="fa"><b>تعریفش (۱۳۸۳):</b> فرآیند کارآفرینی رو خلق چیز نو می‌دونه که با صرف وقت و تلاش زیاد و پذیرش خطرات مالی، روحی و اجتماعی برای به دست آوردن منابع مالی، رضایت شخصی و استقلال همراهه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پینکات — ابداع‌کننده واژه Intrapreneurship</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>سال:</b> ۱۹۸۵ — از ترکیب واژه‌های entrepreneurship و intra واژه <b>intrapreneurship</b> رو ابداع کرد.</div>
+<div class="fa"><b>تعریفش:</b> کارآفرینی درون‌سازمانی، فرآیندیه که کارآفرین‌های سازمانی از طریقش سبب تغییر می‌شن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> با ابداع پینکات، کارآفرینی درون‌سازمانی رسماً تعریف شد و وارد ادبیات کارآفرینی شد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کورن وال و پرلمن</h3></div>
+<div class="fa"><b>تعریفشون (۱۹۹۰):</b> کارآفرینی درون‌سازمانی، پروسه‌ایه که از اون طریق محصولات، فرایندها و ایده‌های جدید تو سازمان به اجرا گذاشته می‌شن و توسعه پیدا می‌کنن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کوارتکو و همکاران — ابزار سنجش کارآفرینی سازمانی</h3></div>
+<div class="fa"><b>سال ۱۹۹۰:</b> بعد از تحلیل عاملی، عوامل پنج‌گانه (حمایت مدیریت، سیستم پاداش و تشویق، منابع، ساختار سازمانی و ریسک‌پذیری) رو به ۲۱ عامل تحت عنوان ابزار سنجش کارآفرینی سازمانی رسیدن و تو سه گروه تقسیم‌بندی کردن:</div>
+<div class="fa"><b>۱) حمایت مدیریت:</b> تشویق فعالیت‌ها، قدرت تصمیم‌گیری، تشویق انحراف از قواعد، تجربه نوآوری مدیریت ارشد، تقبل مسئولیت، قدردانی از افراد ریسک‌پذیر، تشویق ریسک‌های حساب‌شده، حمایت از طرح‌های آزمایشی کوچیک.</div>
+<div class="fa"><b>۲) ساختار سازمانی:</b> تحمل اشتباهات و شکست کارکنان، یادگیری از اشتباهات، رواج کار گروهی، اهمیت ندادن به تظاهر به کار، نبود قلمروهای حکومتی بین افراد.</div>
+<div class="fa"><b>۳) پاداش و دسترسی به منابع:</b> قابل دسترس بودن منابع، وجود منابع، مشکلات پروسه بودجه، پاداش و تشویق‌های اضافی، تنوع حمایت‌های مالی، راه‌حل‌جویی گروهی.</div>
+<div class="fa"><b>سال ۱۹۹۳:</b> سازندگان ابزار با افزایش سایز نمونه و اضافه کردن عوامل دیگه به نتایج بهتر و سازگارتری رسیدن: حمایت مدیریت، ویژگی‌های سازمانی، ویژگی‌های فردی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هانس شول هامر — انواع کارآفرینی سازمانی</h3></div>
+<div class="fa"><b>پنج نوع:</b> اداری، فرصت‌گرایانه، تقلیدی، اکتسابی، پرورشگاهی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کانتر — مراحل کارآفرینی درون‌سازمانی</h3></div>
+<div class="fa"><b>سال ۱۹۸۳:</b> چهار مرحله: مشخص کردن مشکل یا مسئله، ائتلاف (اتحاد موقتی)، تجهیز و تکمیل، ترک / جانشینی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارلند و دستیارانش — ویژگی‌های شخصیتی کارآفرین‌ها</h3></div>
+<div class="fa"><b>پنج ویژگی:</b> آینده‌نگر بودن و داشتن چشم‌انداز، مصمم بودن، انگیزش، استقلال و خلاقیت و نوآوری، ریسک‌پذیری و تحمل ابهام.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کوراتکو و هاجتس — مدل ترغیب کارآفرینی شرکتی</h3></div>
+<div class="fa"><b>چهار گام:</b> توسعه بینش، تشویق و نوآوری، ایجاد جو کارآفرینانه تو سازمان، توسعه تیم‌های کارآفرینی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرای — مدل کارآفرینی شرکتی</h3></div>
+<div class="fa"><b>پنج مرحله:</b> متعهد نمودن سازمان، تبیین مدل کارآفرینی شرکتی، توسعه فرهنگ کارآفرینانه، شناسایی استعدادهای کارآفرینانه، پاداش به کارآفرینان سازمانی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بقیه تعاریف تاریخی (خلاصه و خودمونی)</h3></div>
+<div class="fa"><b>جان باتیست سی (۱۸۰۳):</b> کارآفرین عاملیه که همه ابزار تولید رو ترکیب می‌کنه و مسئولیت ارزش تولیدات رو به کار می‌گیره.</div>
+<div class="fa"><b>ارتو کول:</b> کارآفرینی پلیه بین جامعه به عنوان یه کل (به ویژه جنبه‌های غیراقتصادی) و موسسات انتفاعی.</div>
+<div class="fa"><b>کاسون (۱۹۸۲):</b> کارآفرین فردیه که تخصصش تصمیم گرفتن عقلانی و منطقی درباره ایجاد هماهنگی تو منابع کمیابه.</div>
+<div class="fa"><b>رابرت لمب (۱۹۰۲):</b> کارآفرینی یه نوع تصمیم‌گیری اجتماعی‌ه که توسط نوآوران اقتصادی انجام می‌شه.</div>
+<div class="fa"><b>هربرتون ایوانز (۱۹۵۷):</b> کارآفرین وظیفه تعیین نوع کسب‌وکار رو بر عهده داره یا قبولش می‌کنه.</div>
+<div class="fa"><b>ردلیچ (۱۹۵۸):</b> کارآفرین در حالی که مدیر، سرپرست و هماهنگ‌کننده فعالیت‌های تولیدیه، برنامه‌ریز، نوآور و تصمیم‌گیرنده نهایی هم هست.</div>
+<div class="fa"><b>پنروز (۱۹۶۸):</b> جنبه اصلی کارآفرینی شناسایی و بهره‌برداری از کارهای فرصت‌طلبانه برای گسترش شرکت‌های کوچیک‌تره.</div>
+<div class="fa"><b>جی سی. کارلند (۱۹۸۴):</b> کارآفرین فردیه که برای دستیابی به سود و رشد، شغلی رو به وجود می‌آره و مدیریتش می‌کنه.</div>
+<div class="fa"><b>چل و هاروث (۱۹۸۸):</b> کارآفرین‌ها آدم‌هایی‌ان که قابلیت مشاهده و ارزیابی فرصت‌های تجاری، گردآوری منابع مورد نیاز و دستیابی به ارزیابی حاصل ازش رو دارن.</div>
+<div class="fa"><b>ادی و الم (۱۹۸۵):</b> کارآفرین فردیه که مایل و قادر به مخاطره‌پذیریه و ابزار تولیدی و اعتباری رو در هم می‌آمیزه تا به سود یا اهداف دیگه‌ای مثل قدرت و احترام اجتماعی دست پیدا کنه.</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های امتحانی (اینا رو نخور!)</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: پدر کارآفرینی کیه؟</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی کانتیلون پدر کارآفرینیه.</div>
+<div class="fa"><b>جواب درست:</b> <b>ژوزف شومپیتر</b> پدر علم کارآفرینیه. کانتیلون اولین کسی بود که مسئله کارآفرینی رو مطرح کرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این دو رو با هم اشتباه نگیر.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: معنای کارآفرینی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی کارآفرینی یعنی «ایجاد کار و اشتغال‌زایی».</div>
+<div class="fa"><b>جواب درست:</b> کارآفرینی از کلمه فرانسوی <b>Entreprendre</b> به معنای <b>«متعهد شدن»</b> گرفته شده. کارآفرینی مفهومی وسیع‌تر و باارزش‌تر از اشتغال‌زایی داره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این برداشت غلط باعث شده سیاست‌های توسعه کارآفرینی فقط جنبه اشتغال‌زایی پیدا کنن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: مشخصه اصلی کارآفرین از نظر شومپیتر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی مشخصه اصلی کارآفرین «ریسک‌پذیریه».</div>
+<div class="fa"><b>جواب درست:</b> مشخصه اصلی کارآفرین از نظر شومپیتر <b>«نوآوری»</b>ه و کار کارآفرین <b>«تخریب خالق»</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ریسک‌پذیری ویژگی مهمیه، ولی مشخصه اصلی از نظر شومپیتر نوآوریه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: سه موج کارآفرینی</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب یا محتوای موج‌ها رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> موج اول (اواسط ۱۹۵۰): کتاب‌ها و تاریخچه — موج دوم (دهه ۱۹۶۰): رشته‌های آموزشی — موج سوم (اواخر ۱۹۷۰): علاقه دولت‌ها و تحقیقات.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> هر موج رو با زمان و محتواش حفظ کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: انواع کارآفرینی</h3>
+<div class="fa"><b>دام چیه:</b> کارآفرینی درون‌سازمانی و سازمانی رو یکی می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> کارآفرینی درون‌سازمانی خودِ <b>فرآیند</b>ه؛ کارآفرینی سازمانی <b>بستر و شرایط</b>ه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تو ادبیات کارآفرینی این دو گاهی به یه معنی به کار می‌رن، ولی از نظر مفهومی متفاوتن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: دشمن اصلی تو کارآفرینی مستقل و سازمانی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تو هر دو، بازار دشمنه.</div>
+<div class="fa"><b>جواب درست:</b> تو کارآفرینی مستقل، <b>بازار</b> دشمنه؛ تو کارآفرینی سازمانی، <b>فرهنگ شرکت</b> دشمن اولیه‌ست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این یکی از سه اختلاف اساسی بین این دو نوع کارآفرینیه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: مراحل کارآفرینی درون‌سازمانی کانتر</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب مراحل رو اشتباه می‌گیری یا یه مرحله رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> ۱) مشخص کردن مشکل یا مسئله — ۲) ائتلاف (اتحاد موقتی) — ۳) تجهیز و تکمیل — ۴) ترک / جانشینی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این چهار مرحله رو به ترتیب حفظ کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: پینکات و ابداع Intrapreneurship</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی شومپیتر یا کانتر واژه Intrapreneurship رو ابداع کردن.</div>
+<div class="fa"><b>جواب درست:</b> <b>پینکات</b> تو سال ۱۹۸۵ از ترکیب واژه‌های entrepreneurship و intra واژه <b>intrapreneurship</b> رو ابداع کرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> با ابداع پینکات، کارآفرینی درون‌سازمانی رسماً وارد ادبیات کارآفرینی شد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: تعریف دراکر از کارآفرینی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دراکر کارآفرینی رو یه صفت شخصیتی می‌دونه.</div>
+<div class="fa"><b>جواب درست:</b> دراکر کارآفرینی رو یه <b>رفتار</b> می‌دونه نه یه صفت خاص تو شخصیت آدم‌ها.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این نکته تو امتحان‌ها زیاد میاد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: سازمان کارآفرین</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر سازمانی که تکنولوژی یا خط تولیدش رو عوض کنه، کارآفرینه.</div>
+<div class="fa"><b>جواب درست:</b> تئوریسین‌ها سازمانی رو که <b>بدون هیچ ریسکی</b> تکنولوژی یا خط تولید رو عوض کنه یا راحت از رقیب تقلید کنه، سازمان کارآفرین نمی‌نامن. سازمان‌های کارآفرین الزاماً باید درگیر <b>نوآوری محصول، بازار، یا تکنولوژی</b> بشن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تقلید بدون ریسک، کارآفرینی نیست.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل اول — کارآفرینی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 01 · کارآفرینی · فصل اول: مقدمه و کلیات</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"کارآفرینی یعنی چی؟",options:["فقط ایجاد اشتغال","فرآیند ایجاد ارزش از راه تشکیل مجموعه منحصربه‌فردی از منابع، برای استفاده از فرصت‌ها","فقط راه‌اندازی کسب‌وکار کوچیک","مترادف با مدیریت"],answer:1,explanation:"تعریف جامع (احمدپور، ۱۳۷۹): فرآیند ایجاد ارزش از راه تشکیل مجموعه منحصربه‌فردی از منابع، برای بهره‌گیری از فرصت‌ها."},
+{q:"کلمه کارآفرینی از کجا اومده و یعنی چی؟",options:["Entreprendre — متعهد شدن","Entrepreneur — مدیر","Enterprise — شرکت","Intrapreneur — کارآفرین درون‌سازمانی"],answer:0,explanation:"از کلمه فرانسوی Entreprendre به معنای «متعهد شدن» گرفته شده."},
+{q:"پدر علم کارآفرینی کیه؟",options:["کانتیلون","پیتر دراکر","ژوزف شومپیتر","مک‌کله‌لند"],answer:2,explanation:"ژوزف شومپیتر رو پدر علم کارآفرینی می‌نامن."},
+{q:"مشخصه اصلی کارآفرین از نظر شومپیتر چیه؟",options:["ریسک‌پذیری","نوآوری","استقلال‌طلبی","اعتماد به نفس"],answer:1,explanation:"شومپیتر مشخصه اصلی کارآفرین رو «نوآوری» می‌دونست و کار کارآفرین رو «تخریب خالق» تعریف کرد."},
+{q:"کار کارآفرین از نظر شومپیتر چیه؟",options:["تخریب خالق","ایجاد اشتغال","مدیریت منابع","تقلید از رقبا"],answer:0,explanation:"شومپیتر کار کارآفرین رو «تخریب خالق» تعریف کرد."},
+{q:"اولین کسی که مسئله کارآفرینی رو مطرح کرد کی بود؟",options:["شومپیتر","کانتیلون","دراکر","پینکات"],answer:1,explanation:"اولین کسی که مسئله کارآفرینی رو مطرح کرد، فردی به اسم کانتیلون بود."},
+{q:"موج اول کارآفرینی از کی و با چه محتوایی بود؟",options:["دهه ۱۹۶۰ — رشته‌های آموزشی","اواسط دهه ۱۹۵۰ — کتاب‌ها و تاریخچه شرکت‌ها","اواخر دهه ۱۹۷۰ — علاقه دولت‌ها","دهه ۱۹۸۰ — تحقیقات دانشگاهی"],answer:1,explanation:"موج اول از اواسط دهه ۱۹۵۰: انفجار مطالعه و تحقیق در قالب کتاب‌های زندگی کارآفرین‌ها، تاریخچه شرکت‌ها و ..."},
+{q:"موج دوم کارآفرینی چی بود؟",options:["کتاب‌های زندگی کارآفرین‌ها","ارائه رشته‌های آموزش کارآفرینی تو مهندسی و بازرگانی","علاقه دولت‌ها به تحقیقات","تشویق شرکت‌های کوچیک"],answer:1,explanation:"موج دوم (از دهه ۱۹۶۰): ارائه رشته‌های آموزش کارآفرینی تو حوزه‌های مهندسی و بازرگانی."},
+{q:"موج سوم کارآفرینی از کی شروع شد؟",options:["اواسط دهه ۱۹۵۰","دهه ۱۹۶۰","اواخر دهه ۱۹۷۰","دهه ۱۹۹۰"],answer:2,explanation:"موج سوم از اواخر دهه ۱۹۷۰: افزایش علاقه دولت‌ها به تحقیقات کارآفرینی و بنگاه‌های کوچیک."},
+{q:"کدوم گزینه جزء سه نوع اصلی کارآفرینی نیست؟",options:["کارآفرینی آزاد و مستقل","کارآفرینی درون‌سازمانی","کارآفرینی سازمانی","کارآفرینی دولتی"],answer:3,explanation:"سه نوع اصلی: آزاد و مستقل، درون‌سازمانی، سازمانی."},
+{q:"تفاوت کارآفرینی درون‌سازمانی و سازمانی چیه؟",options:["مترادفن","درون‌سازمانی فرآینده؛ سازمانی بستر و شرایط","سازمانی فرآینده","هیچ تفاوتی ندارن"],answer:1,explanation:"کارآفرینی درون‌سازمانی خودِ فرآینده؛ کارآفرینی سازمانی بستر و شرایط رو فراهم می‌کنه."},
+{q:"مراحل کارآفرینی درون‌سازمانی از نظر کانتر به ترتیب کدومن؟",options:["ائتلاف، مشکل، تجهیز، ترک","مشکل، ائتلاف، تجهیز و تکمیل، ترک/جانشینی","تجهیز، مشکل، ائتلاف، ترک","ترک، مشکل، ائتلاف، تجهیز"],answer:1,explanation:"کانتر (۱۹۸۳): مشخص کردن مشکل، ائتلاف، تجهیز و تکمیل، ترک/جانشینی."},
+{q:"دشمن اصلی تو کارآفرینی مستقل چیه؟",options:["فرهنگ شرکت","بازار","شرکت مادر","دولت"],answer:1,explanation:"تو کارآفرینی مستقل، بازار دشمنه؛ تو کارآفرینی سازمانی، فرهنگ شرکت."},
+{q:"دشمن اولیه تو کارآفرینی سازمانی چیه؟",options:["بازار","فرهنگ شرکت","رقبا","مشتری‌ها"],answer:1,explanation:"تو کارآفرینی سازمانی، فرهنگ شرکت دشمن اولیه‌ست و باید بر موانع سازمانی هم غلبه کرد."},
+{q:"کی واژه Intrapreneurship رو ابداع کرد؟",options:["شومپیتر","کانتر","پینکات","کوارتکو"],answer:2,explanation:"پینکات تو سال ۱۹۸۵ از ترکیب واژه‌های entrepreneurship و intra واژه intrapreneurship رو ابداع کرد."},
+{q:"انواع کارآفرینی سازمانی از نظر هانس شول هامر کدومن؟",options:["اداری، فرصت‌گرایانه، تقلیدی، اکتسابی، پرورشگاهی","آزاد، مستقل، سازمانی","فنی، مالی، بازاریابی","مشکل، ائتلاف، تجهیز، ترک"],answer:0,explanation:"هانس شول هامر: اداری، فرصت‌گرایانه، تقلیدی، اکتسابی، پرورشگاهی."},
+{q:"کدوم ویژگی جزء ویژگی‌های مشترک کارآفرین‌ها از نگاه روان‌شناس‌ها نیست؟",options:["خطرپذیری","استقلال‌طلبی","مرکز کنترل درونی","تقلید از رقبا"],answer:3,explanation:"تقلید از رقبا ویژگی کارآفرین‌ها نیست."},
+{q:"از نظر دراکر، کارآفرینی چیه؟",options:["یه صفت شخصیتی","یه رفتار","یه شغل","یه حرفه"],answer:1,explanation:"دراکر کارآفرینی رو یه رفتار می‌دونه نه یه صفت خاص تو شخصیت آدم‌ها."},
+{q:"کدوم گزینه درباره سازمان کارآفرین درسته؟",options:["هر سازمانی که تکنولوژی رو عوض کنه کارآفرینه","سازمانی که بدون ریسک از رقیب تقلید کنه کارآفرینه","سازمان کارآفرین الزاماً باید درگیر نوآوری محصول، بازار یا تکنولوژی بشه","سازمان کارآفرین بیشتر به تهدیدها توجه داره"],answer:2,explanation:"سازمان‌های کارآفرین الزاماً باید درگیر نوآوری محصول، بازار یا تکنولوژی بشن. تقلید بدون ریسک، کارآفرینی نیست."},
+{q:"کدوم گزینه درباره وضعیت کارآفرینی تو ایران درسته؟",options:["از ابتدا توجه زیادی به کارآفرینی شده","تا شروع برنامه سوم توسعه توجه چندانی نشده بود","برنامه سوم توسعه به کارآفرینی توجه نکرد","کارآفرینی تو ایران مترادف اشتغال‌زاییه"],answer:1,explanation:"تو ایران تا شروع اجرای برنامه سوم توسعه توجه چندانی به کارآفرینی نشده بود."},
+{q:"کدوم گزینه جزء پیامدهای مثبت کارآفرینی نیست؟",options:["خلاقیت","افزایش اعتماد به نفس","ایجاد و توسعه تکنولوژی","افزایش فساد اداری"],answer:3,explanation:"پیامدهای مثبت: خلاقیت، ترغیب به نوآوری، افزایش اعتماد به نفس، ایجاد و توسعه تکنولوژی، افزایش رفاه عمومی."},
+{q:"مشکلات و موانع کارآفرینی تو سازمان کدومن؟",options:["ناپیوستگی تو سازمان‌های بزرگ، سود کوتاه‌مدت به عنوان معیار موفقیت، نبود فرهنگ کارآفرینی","فقط کمبود منابع مالی","فقط موانع قانونی","فقط عدم حمایت مدیریت"],answer:0,explanation:"موانع: ناپیوستگی تو سازمان‌های بزرگ، سود کوتاه‌مدت به عنوان معیار موفقیت، نبود فرهنگ کارآفرینی."},
+{q:"مراحل مدل کارآفرینی شرکتی از دیدگاه فرای کدومن؟",options:["توسعه بینش، تشویق، جو کارآفرینانه، تیم‌ها","متعهد نمودن سازمان، تبیین مدل، توسعه فرهنگ، شناسایی استعدادها، پاداش","مشکل، ائتلاف، تجهیز، ترک","اداری، فرصت‌گرایانه، تقلیدی، اکتسابی، پرورشگاهی"],answer:1,explanation:"مدل فرای: متعهد نمودن سازمان، تبیین مدل کارآفرینی شرکتی، توسعه فرهنگ کارآفرینانه، شناسایی استعدادهای کارآفرینانه، پاداش به کارآفرینان سازمانی."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مفاهیم فصل اول — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

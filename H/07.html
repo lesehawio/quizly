@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره توانبخشی · سری 07 · فصل هفتم: رفتاردرمانی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,var(--pink) 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"07";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#ffe8f0;color:#a71547}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:8px}
+.theme-btn svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.theme-btn:hover svg{transform:rotate(15deg)}
+.theorist{background:linear-gradient(135deg,var(--surface),#fff5f9);border:1px solid var(--line);border-right:6px solid var(--pink);border-radius:20px;padding:16px;margin:12px 0}
+.theorist h3{margin:0 0 4px;color:var(--pink);font-size:18px}
+.theorist .meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+.diff{border-right-color:var(--pink)}.diff strong{color:var(--pink)}
+.def{border-right-color:var(--green)}.def strong{color:var(--green)}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره توانبخشی · سری 07</small></div></div>
+  <button id="theme" class="theme-btn" aria-label="تغییر تم">
+    <svg id="themeIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</header>
+
+<section class="hero">
+  <h2>فصل هفتم: رفتاردرمانی</h2>
+  <p>پاولف و سگ‌هاش، شرطی‌سازی کلاسیک و کنشگر، تقویت و تنبیه، اقتصاد ژتونی و کاربرد تو توانبخشی — همه رو ساده و خودمونی</p>
+  <div class="pills"><span class="pill">پاولف</span><span class="pill">ثورندایک</span><span class="pill">اسکینر</span><span class="pill">شرطی‌سازی</span><span class="pill">تقویت</span><span class="pill">تنبیه</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل هفتم کتاب «کاربرد نظریه‌های مشاوره و روان‌درمانی در توانبخشی معلولین» نوشته شده. همه‌چی رو خیلی ساده گفتم. بخش «آدم‌ها و نظریه‌هاشون» جداست، بخش «اصطلاحا یعنی چی» همه تعاریف رو داره، و بخش «تفاوت‌ها و تله‌ها» برای تست زدن آماده‌ت می‌کنه.</div>
+
+<div class="stats">
+<div class="stat"><b>۴</b><span>اصل بنیادی</span></div>
+<div class="stat"><b>۳</b><span>رویکرد اصلی</span></div>
+<div class="stat"><b>۴</b><span>عامل فرایند مشاوره</span></div>
+<div class="stat"><b>۶</b><span>مرحله درمان</span></div>
+</div>
+
+<nav>
+<a href="#core">خلاصه گنده</a><a href="#theorists">آدم‌ها و نظریه‌هاشون</a><a href="#concepts">اصطلاحا یعنی چی</a><a href="#classic">شرطی‌سازی کلاسیک</a><a href="#operant">شرطی‌سازی کنشگر</a><a href="#process">فرایند مشاوره</a><a href="#rehab">تو توانبخشی</a><a href="#diffs">تفاوت‌ها و تله‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ==================== هسته امتحانی ==================== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · خلاصه گنده (۱۰ دقیقه بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>چهار اصل بنیادی رفتاردرمانی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) رفتارها یادگرفتنی‌ان:</b> از راه <b>شرطی‌سازی کلاسیک یا کنشگر</b>.</div>
+<div class="fa"><b>۲) رفتار جدید رو باید تو همون بافت و زمینه‌ای که شکل گرفته تغییر داد.</b></div>
+<div class="fa"><b>۳) هر مراجع یه چیز خاص خودشه:</b> برای بررسی رفتار ناسازگارش باید از <b>روش‌های ارزیابی ویژه همون فرد</b> استفاده کرد.</div>
+<div class="fa"><b>۴) درمان موفق بر پایه ارزیابی رفتار انجام می‌شه.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه رویکرد اصلی رفتاردرمانی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) شرطی‌سازی کلاسیک (ساده):</b> ایجاد ارتباط بین <b>پاسخ موجود</b> و <b>محرک‌های جدید</b>.</div>
+<div class="fa"><b>۲) شرطی‌سازی کنشگر:</b> <b>تقویت و تنبیه</b> رفتار.</div>
+<div class="fa"><b>۳) روش‌های شناختی-رفتاری:</b> تو فصل بعدی کتاب اومده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> دو رویکرد اول تو این فصل توضیح داده شدن و رویکرد سوم به فصل بعد موکول شده.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه اصطلاح اصلی شرطی‌سازی کلاسیک (پاولف)</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>اصطلاح</th><th>نماد</th><th>یعنی چی</th></tr></thead>
+<tbody>
+<tr><td><b>پاسخ غیرشرطی</b></td><td>UR</td><td>پاسخ طبیعی (مثل ترشح بزاق به گرد گوشت)</td></tr>
+<tr><td><b>محرک غیرشرطی</b></td><td>UCS</td><td>محرک طبیعی (گرد گوشت)</td></tr>
+<tr><td><b>محرک شرطی</b></td><td>CS</td><td>محرک خنثی که بعد از شرطی‌سازی پاسخ می‌ده</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار عامل مؤثر بر شرطی‌سازی کلاسیک</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱)</b> <b>محرک شرطی (CS) باید قبل از محرک غیرشرطی (US) بیاد.</b> (نه برعکس!)</div>
+<div class="fa"><b>۲)</b> <b>تأخیر بین حضور US و CS</b> مهمه.</div>
+<div class="fa"><b>۳)</b> <b>تعداد کوشش‌ها:</b> هرچی بیشتر ← پاسخ شرطی شدیدتر و پایدارتر.</div>
+<div class="fa"><b>۴)</b> <b>ویژگی خاص محرک‌ها:</b> محرک غیرشرطی قوی ← پاسخ شرطی راحت‌تر و سریع‌تر.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه فن شرطی‌سازی کلاسیک</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) حساسیت‌زدایی منظم:</b> مراجع و درمانگر <b>سلسله مراتبی از صحنه‌های اضطراب‌آور</b> طراحی می‌کنن + <b>فن آرمیدگی</b>.</div>
+<div class="fa"><b>۲) غرقه‌سازی:</b> مراجع به طور <b>ناگهانی</b> در معرض محرک رعب‌آور قرار می‌گیره؛ <b>فرار یا اجتناب ممکن نیست</b>.</div>
+<div class="fa"><b>۳) انزجار درمانی:</b> همراه کردن رفتار با محرکی که <b>پاسخ ناخوشایند طبیعی</b> تولید می‌کنه (مثل تهوع).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تقویت و تنبیه (جدول طلایی)</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>مفهوم</th><th>یعنی چی</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td><b>تقویت</b></td><td>هر چیزی که <b>فراوانی رفتار رو زیاد</b> می‌کنه</td><td>—</td></tr>
+<tr><td><b>تنبیه</b></td><td>هر چیزی که <b>فراوانی رفتار رو کم</b> می‌کنه</td><td>—</td></tr>
+<tr><td><b>تقویت مثبت</b></td><td>ارائه پاداش برای رفتار خوب</td><td>تحسین کلامی</td></tr>
+<tr><td><b>تقویت منفی</b></td><td>افزایش رفتار برای <b>برطرف شدن محرک آزارنده</b></td><td>—</td></tr>
+<tr><td><b>تنبیه مثبت</b></td><td>رفتار نامطلوب ← محرک آزارنده</td><td>—</td></tr>
+<tr><td><b>تنبیه منفی</b></td><td><b>حذف محرک مثبت</b> در پی رفتار نامطلوب</td><td>مراجع به کارکنان بی‌حرمتی می‌کنه ← امتیاز تفریح رو از دست می‌ده</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه برنامه زمان‌بندی تقویت</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>برنامه</th><th>یعنی چی</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td><b>تقویت ثابت</b></td><td>تقویت بعد از <b>یه مدت زمان مشخص و معین</b></td><td>دریافت چک حقوقی هر دو هفته یه‌بار</td></tr>
+<tr><td><b>تقویت متناوب</b></td><td>تقویت بعد از <b>یه دوره زمانی پیش‌بینی‌نشده</b></td><td>بازرسی تصادفی شش اتاق در ماه بدون اطلاع از زمان دقیق</td></tr>
+<tr><td><b>تقویت نسبی</b></td><td>تقویت بعد از <b>تعداد مشخصی از پاسخ‌های مطلوب</b></td><td><b>بالاترین میزان پاسخ</b> رو داره (رابطه پاسخ و تقویت غیرقابل پیش‌بینیه)</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> وقتی رفتار یاد گرفته شد، <b>بهترین برنامه، تقویت متناوبه</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جمله‌های طلایی (حفظ کن)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>شرطی‌سازی کلاسیک یادگیری پاسخ جدید نمی‌آموزه؛</b> فقط بین <b>پاسخ موجود</b> و <b>محرک‌های جدید</b> ارتباط ایجاد می‌کنه.
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>الگوگیری روان‌شناختی، مؤثرترین و سریع‌ترین روش برای تغییر رفتار در سوء مصرف مواده.</b>
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> رفتاردرمانی = درمان کوتاه‌مدت (۲۵ تا ۳۰ جلسه).
+</div>
+</div>
+</section>
+
+<!-- ==================== نظریه‌پردازان ==================== -->
+<section id="theorists" class="section">
+<h2 class="section-title">۰۲ · آدم‌ها و نظریه‌هاشون</h2>
+<p class="section-sub">هرکی چی گفت، کی بود</p>
+
+<div class="theorist">
+<h3>ایوان پاولف — پدر شرطی‌سازی کلاسیک</h3>
+<div class="meta">فیزیولوژیست روس · آزمایش بزاق سگ‌ها</div>
+<div class="fa"><b>آزمایشش:</b> پاولف روی <b>بزاق سگ‌ها</b> آزمایش می‌کرد. سگ‌ها وقتی <b>گرد گوشت</b> می‌گرفتن، بزاق ترشح می‌کردن. بعد از مدتی، حتی <b>محرک‌های خنثی</b> (مثل ورود به اتاق) هم همون اثر گرد گوشت رو در تولید بزاق داشتن.</div>
+<div class="fa"><b>اصطلاحات کلیدیش:</b></div>
+<div class="fa">• <b>پاسخ غیرشرطی (UR):</b> پاسخ طبیعی (ترشح بزاق به گرد گوشت).</div>
+<div class="fa">• <b>محرک غیرشرطی (UCS):</b> محرک طبیعی (گرد گوشت).</div>
+<div class="fa">• <b>محرک شرطی (CS):</b> محرک خنثی که بعد از شرطی‌سازی پاسخ می‌ده.</div>
+<div class="fa"><b>نکته کلیدی:</b> شرطی‌سازی کلاسیک <b>یادگیری پاسخ جدید نمی‌آموزه</b>؛ فقط بین <b>پاسخ موجود</b> و <b>محرک‌های جدید</b> ارتباط ایجاد می‌کنه.</div>
+</div>
+
+<div class="theorist">
+<h3>ای. ال. ثورندایک — قانون اثر</h3>
+<div class="meta">از بنیان‌گذاران شرطی‌سازی کنشگر</div>
+<div class="fa"><b>حرفش:</b> <b>قانون اثر:</b> رفتارهایی که <b>ارضاکننده‌ان</b> تقویت می‌شن و اونایی که <b>نیستن</b> تقویت نمی‌شن.</div>
+</div>
+
+<div class="theorist">
+<h3>بی. اف. اسکینر — شرطی‌سازی کنشگر</h3>
+<div class="meta">از بنیان‌گذاران شرطی‌سازی کنشگر</div>
+<div class="fa"><b>حرفش:</b> رفتارهای پیچیده در نتیجه <b>تعامل ارگانیسم با محیط</b> از طریق شیوه‌های گوناگون ایجاد می‌شن.</div>
+</div>
+
+<div class="theorist">
+<h3>کیلول و لیبرمن — ۱۹۸۶</h3>
+<div class="meta">شش مرحله فرایند درمانی</div>
+<div class="fa"><b>شش مرحله فرایند درمانی (کیلول و لیبرمن، ۱۹۸۶):</b></div>
+<div class="fa"><b>۱)</b> <b>ارزیابی رفتاری</b> ← شناسایی رفتارهای ناسازگارانه.</div>
+<div class="fa"><b>۲)</b> <b>شناسایی نقاط قوت و توانایی‌های مراجع</b> ← انتخاب رویکرد و راهبرد مؤثر.</div>
+<div class="fa"><b>۳)</b> <b>فرایند درمانی</b> ← تعریف دقیق رفتارهای هدف.</div>
+<div class="fa"><b>۴)</b> <b>ارزیابی رفتارهای ناسازگار</b> ← اندازه‌گیری فراوانی رفتار در دوره زمانی مشخص + تعیین زمان تأثیر راهبردها.</div>
+<div class="fa"><b>۵)</b> <b>شناسایی تقویت‌کننده‌ها</b> ← فعالیت‌ها، افراد یا چیزهایی که انگیزه لازم رو فراهم می‌کنن.</div>
+<div class="fa"><b>۶)</b> <b>ایجاد اهداف درمانی</b> ← به طور مشترک بین مشاور و مراجع.</div>
+</div>
+
+<div class="theorist">
+<h3>کورمریر و ناریویس — ۲۰۰۳</h3>
+<div class="meta">فرایند ایجاد اهداف درمانی</div>
+<div class="fa"><b>فرایند ایجاد اهداف درمانی (کورمریر و ناریویس، ۲۰۰۳):</b></div>
+<div class="fa"><b>۱)</b> درمانگر <b>نیت و مقصود اهداف</b> رو برای مراجع توضیح می‌ده.</div>
+<div class="fa"><b>۲)</b> مراجع <b>پیامدهای مطلوب</b> رو شناسایی می‌کنه.</div>
+<div class="fa"><b>۳)</b> مراجع و درمانگر مشترکاً بررسی می‌کنن که آیا پیامدهای مطلوب همون‌هایی هستن که مراجع باید بهشون برسه و آیا اهداف <b>حقیقی‌ان</b>؟ (از دو دیدگاه <b>سود و زیان</b>)</div>
+<div class="fa"><b>۴)</b> تعریف اهداف بر اساس <b>شناسایی رفتارها، روش‌های تغییر و میزان تغییرات مطلوب</b>.</div>
+</div>
+
+<div class="theorist">
+<h3>ویلسون — ۲۰۰۰</h3>
+<div class="meta">طول مدت درمان</div>
+<div class="fa"><b>حرفش:</b> رفتاردرمانی <b>درمان کوتاه‌مدته</b>؛ عمدتاً <b>۲۵ تا ۳۰ جلسه</b>.</div>
+<div class="fa">بعضی مراجع‌ها به بیش از <b>۳۰ جلسه</b> نیاز دارن و اونایی که به بیش از <b>۱۰۰ جلسه</b> نیاز دارن <b>خیلی نادرن</b>.</div>
+<div class="fa">طول درمان بر اساس <b>پیشرفت در رسیدن به اهداف درمانی</b> مشخص می‌شه.</div>
+<div class="fa"><b>سه فرایند اصلی:</b></div>
+<div class="fa">۱) رفتارهای ناسازگارانه ارزیابی شده و رفتارهای هدف مشخص می‌شن.</div>
+<div class="fa">۲) مداخله‌های درمانی به محض امکان اجرا می‌شن.</div>
+<div class="fa">۳) در نهایت، <b>پیشرفت درمان بر اساس اهداف درمانی قابل اندازه‌گیری و اهداف تعریف شده اجرا می‌گردد</b>.</div>
+</div>
+
+<div class="theorist">
+<h3>لویس و یتر — ۱۹۹۱</h3>
+<div class="meta">شش راهبرد تقویت مثبت در آسیب مغزی</div>
+<div class="fa"><b>شش راهبرد (لویس و یتر، ۱۹۹۱):</b></div>
+<div class="fa"><b>۱)</b> تقویت‌کننده‌ها باید <b>فوراً</b> بعد از پاسخ مطلوب داده بشن.</div>
+<div class="fa"><b>۲)</b> باید به مراجع گفت <b>کدوم رفتارها تقویت می‌شن و کدوم نمی‌شن</b>.</div>
+<div class="fa"><b>۳)</b> ارائه اطلاعات باید <b>به آهستگی و با آرامش</b> باشه.</div>
+<div class="fa"><b>۴)</b> تکالیف باید <b>جزء به جزء و با گام‌های کوچک</b> ارائه بشن.</div>
+<div class="fa"><b>۵)</b> مشاور باید <b>ترکیبی از تقویت‌کننده‌های گوناگون</b> ارائه کنه تا مراجع از یکنواختی خسته نشه.</div>
+<div class="fa"><b>۶)</b> تقویت‌کننده‌ها باید <b>طبق یه برنامه ادامه‌دار</b> ارائه بشن؛ افراد دچار ضایعه مغزی برای پیوند بین رفتار و تقویت‌کننده به <b>زمان طولانی‌تری</b> نیاز دارن. بعد از یاد گرفتن پیوند، <b>تقویت ثابت</b> می‌تونه رفتار مطلوب رو ادامه بده.</div>
+</div>
+
+<div class="theorist">
+<h3>آزرین و فاکس — ۱۹۷۱</h3>
+<div class="meta">آموزش آداب توالت در عقب‌ماندگی ذهنی</div>
+<div class="fa"><b>حرفشون:</b> نخستین کسایی بودن که اجرای روش‌های گوناگون رو همراه با آموزش آداب توالت گزارش کردن.</div>
+<div class="fa"><b>تکنیک‌هاشون:</b> الگوگیری، شکل‌دهی، تقویت مثبت و تنبیه (اخطارهای کلامی و محروم‌سازی).</div>
+</div>
+
+<div class="theorist">
+<h3>جیمز و جیللند — ۲۰۰۳</h3>
+<div class="meta">توصیف رفتاردرمانگران امروزی</div>
+<div class="fa"><b>حرفشون:</b> قبلاً فکر می‌کردن رفتاردرمانگرها <b>قالبی، خشک، مکانیکی و غیرقابل انعطاف</b>‌ان؛ ولی امروزه غالباً به عنوان <b>افراد درک‌کننده، مهربان، همراه و رازدار</b> توصیف می‌شن.</div>
+</div>
+</section>
+
+<!-- ==================== مفاهیم و تعاریف ==================== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · اصطلاحا یعنی چی (تعاریف)</h2>
+<p class="section-sub">همه اصطلاح‌ها با زبان ساده</p>
+
+<div class="card def">
+<div class="card-head"><h3>پاسخ غیرشرطی (UR)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> پاسخ طبیعی بدن به یه محرک طبیعی. مثل <b>ترشح بزاق سگ به گرد گوشت</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>محرک غیرشرطی (UCS)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> محرک طبیعی که خودش به‌طور ذاتی پاسخ رو درمی‌آره. مثل <b>گرد گوشت</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>محرک شرطی (CS)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> محرک خنثی که بعد از <b>شرطی‌سازی</b> پاسخ می‌ده. مثل <b>صدای زنگ</b> که بعد از چند بار همراه شدن با گرد گوشت، خودش به تنهایی بزاق رو درمی‌آره.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>شرطی‌سازی کلاسیک</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> ایجاد ارتباط بین <b>پاسخ موجود</b> و <b>محرک‌های جدید</b>. نه یادگیری پاسخ جدید!</div>
+<div class="fa"><b>مثال:</b> سگی که به گرد گوشت بزاق ترشح می‌کنه، بعد از چند بار شنیدن صدای زنگ همراه با گرد گوشت، با شنیدن زنگ تنها هم بزاق ترشح می‌کنه.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>حساسیت‌زدایی منظم</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> مراجع و درمانگر <b>سلسله مراتبی از صحنه‌های اضطراب‌آور</b> طراحی می‌کنن. درمان با <b>فن آرمیدگی</b> درهم می‌آمیزه. مراجع هر بار صحنه ترس‌آور رو <b>مجسم</b> می‌کنه. وقتی به بالاترین صحنه آزارنده رسید، درمانگر <b>دستور آرمیدگی</b> می‌ده.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>غرقه‌سازی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> مراجع به طور <b>ناگهانی</b> در معرض محرک رعب‌آور قرار می‌گیره. <b>فرار یا اجتناب ممکن نیست</b>.</div>
+<div class="fa"><b>فرقش با حساسیت‌زدایی:</b> تو حساسیت‌زدایی، تدریجی و با آرمیدگیه؛ تو غرقه‌سازی، ناگهانی و بدون فراره.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>انزجار درمانی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> همراه کردن یه رفتار با محرکی که <b>پاسخ ناخوشایند طبیعی</b> تولید می‌کنه.</div>
+<div class="fa"><b>مثال امتحانی:</b> تو اعتیاد تزریقی، تزریق ماده‌ای که <b>حالت تهوع</b> ایجاد می‌کنه ← فرد با هر بار تزریق مواد دچار تهوع می‌شه ← رفتار تزریق متوقف می‌شه.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>شرطی‌سازی کنشگر</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> تقویت و تنبیه رفتار. رفتارهای پیچیده در نتیجه <b>تعامل ارگانیسم با محیط</b> از طریق شیوه‌های گوناگون ایجاد می‌شن.</div>
+<div class="fa"><b>بنیان‌گذاران:</b> <b>ثورندایک</b> (قانون اثر) و <b>اسکینر</b> (تعامل ارگانیسم با محیط).</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>قانون اثر (ثورندایک)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> رفتارهایی که <b>ارضاکننده‌ان</b> تقویت می‌شن و اونایی که <b>نیستن</b> تقویت نمی‌شن.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تقویت</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> هر چیزی که <b>فراوانی رفتار رو افزایش</b> می‌ده.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تنبیه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> هر چیزی که <b>فراوانی رفتار رو کاهش</b> می‌ده.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تقویت مثبت</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> ارائه پاداش برای رفتار خوب. مثل <b>تحسین کلامی</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تقویت منفی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> افزایش رفتار برای <b>برطرف شدن محرک آزارنده</b>.</div>
+<div class="fa"><b>مثال:</b> بچه‌ای که وقتی مامانش سرش داد می‌زنه گریه می‌کنه و مامانش آروم می‌شه؛ بچه یاد می‌گیره هر وقت داد شنید گریه کنه تا داد تموم شه. (گریه = رفتار، تموم شدن داد = برطرف شدن محرک آزارنده).</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تنبیه مثبت</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> رفتار نامطلوب ← <b>ارائه محرک آزارنده</b>.</div>
+<div class="fa"><b>مثال:</b> بچه‌ای که داد می‌زنه، مامانش یه سیلی می‌زنه.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تنبیه منفی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> <b>حذف محرک مثبت</b> در پی رفتار نامطلوب.</div>
+<div class="fa"><b>مثال امتحانی:</b> مراجع معتاد به کارکنان بی‌حرمتی می‌کنه ← <b>امتیاز تفریح</b> رو از دست می‌ده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> تنبیه منفی = <b>حذف محرک مثبت</b> (نه ارائه محرک آزارنده!).
+</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>برنامه‌های زمان‌بندی تقویت</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) تقویت ثابت:</b> تقویت بعد از <b>یه مدت زمان مشخص و معین</b>. مثل دریافت چک حقوقی هر دو هفته یه‌بار.</div>
+<div class="fa"><b>۲) تقویت متناوب:</b> تقویت بعد از <b>یه دوره زمانی پیش‌بینی‌نشده</b>. مثل بازرسی تصادفی شش اتاق در ماه بدون اطلاع از زمان دقیق.</div>
+<div class="fa"><b>۳) تقویت نسبی:</b> تقویت بعد از <b>تعداد مشخصی از پاسخ‌های مطلوب</b>. <b>بالاترین میزان پاسخ</b> رو داره (رابطه پاسخ و تقویت غیرقابل پیش‌بینیه).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> وقتی رفتار یاد گرفته شد، <b>بهترین برنامه، تقویت متناوبه</b>.
+</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>خاموشی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> وقتی <b>از تقویت برای کاهش یا حذف رفتار نامطلوب</b> استفاده می‌شه. هم شرطی‌سازی کلاسیک و هم کنشگر می‌تونن دستخوش خاموشی بشن.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>شکل‌دهی (Shaping)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> <b>تقویت تقریب‌های نزدیک به رفتار هدف</b> تا رسیدن به رفتار هدف.</div>
+<div class="fa"><b>کِی مؤثره؟</b> تو موقعیت‌هایی که رفتار هدف <b>هرگز یا به ندرت</b> رخ می‌ده.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تقویت افتراقی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> تمام رفتارهای جزء رفتار هدف به گونه <b>مثبت تقویت می‌شن</b>. ترکیبی از <b>فنون تقویت مثبت و خاموشی</b>ه.</div>
+<div class="fa"><b>مثال امتحانی:</b> مراجعی که با دست غذا می‌خوره ← وقتی با قاشق و چنگال غذا می‌خوره تقویت می‌شه، وقتی با دست غذا می‌خوره نادیده گرفته می‌شه.</div>
+<div class="fa"><b>سه نوع تقویت افتراقی:</b></div>
+<div class="fa">۱) تقویت افتراقی با <b>نرخ پایین پاسخ‌دهی</b>.</div>
+<div class="fa">۲) تقویت افتراقی با <b>رفتارهای جایگزین</b>.</div>
+<div class="fa">۳) تقویت افتراقی با <b>رفتارهای دیگر</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>قراردادهای رفتاری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> <b>توافق‌های مهم بین رفتاردرمانگر و مراجع</b>. اظهاراتی که رفتارهای قابل تغییر یا تشویق‌ها و تنبیهات رو مشخص می‌کنن.</div>
+<div class="fa"><b>پنج اصل اساسی قرارداد مؤثر:</b></div>
+<div class="fa">۱) شناسایی <b>تقویت‌کننده‌ها</b>.</div>
+<div class="fa">۲) شناخت <b>رفتارهای هدف</b>.</div>
+<div class="fa">۳) فرآیند <b>اصلاح قرارداد رفتاری</b> (وقتی تلاش‌ها مثمرثمر نیستن).</div>
+<div class="fa">۴) شناسایی <b>تقویت‌های جایگزین</b>.</div>
+<div class="fa">۵) ارائه <b>بازخورد مکرر</b> پیرامون پیشرفت مراجع.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>اقتصاد ژتونی (Token Economy)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> تو محیطی <b>ساختاریافته</b>، رفتارهای مطلوب با ارائه <b>ژتون</b> تقویت می‌شن.</div>
+<div class="fa"><b>چهار ویژگی اقتصاد ژتونی مؤثر:</b></div>
+<div class="fa">۱) رفتارهای هدف به روشنی <b>شناسایی و تعریف</b> شده‌ان.</div>
+<div class="fa">۲) تقویت‌کننده‌ها <b>ارائه رفتار مطلوب بعدی</b> رو ایجاد می‌کنن.</div>
+<div class="fa">۳) ایجاد <b>سیستم نظارتی پایا و ارزیابی تأثیر</b>.</div>
+<div class="fa">۴) ارائه <b>طرح اجرایی مشخص برای تعمیم به جامعه</b> در غیاب اقتصاد ژتونی.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>آموزش مهارت‌های اجتماعی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>شامل:</b> <b>جرئت‌ورزی، ارتباط، حل تعارض</b> و مهارت‌های اجتماعی مطلوب دیگه.</div>
+<div class="fa"><b>متأثر از:</b> اصول <b>شرطی‌سازی کلاسیک، کنشگر و نظریه آموزش اجتماعی</b>.</div>
+<div class="fa"><b>فن‌ها:</b> الگوگیری، آماده‌سازی، مرور ذهنی رفتار، بازخورد، تقویت و ارائه تکلیف.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>سه فن کاهش رفتار از طریق تنبیه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) تنبیه‌های کلاسی</b></div>
+<div class="fa"><b>۲) اصلاح مکرر رفتار:</b> اصلاح مکرر رفتارهای منفی در حالی که رفتارهای مثبت تمرین می‌شن.</div>
+<div class="fa"><b>۳) جریمه کردن:</b> از دست دادن تقویت‌کننده‌ها در پی رفتار نامطلوب.</div>
+</div>
+</section>
+
+<!-- ==================== شرطی‌سازی کلاسیک ==================== -->
+<section id="classic" class="section">
+<h2 class="section-title">۰۴ · شرطی‌سازی کلاسیک</h2>
+<p class="section-sub">پاولف، اصطلاحات، عوامل مؤثر، سه فن</p>
+
+<div class="card">
+<div class="card-head"><h3>آزمایش پاولف</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">پاولف روی <b>بزاق سگ‌ها</b> آزمایش می‌کرد.</div>
+<div class="fa">سگ‌ها هنگام دریافت <b>گرد گوشت</b>، بزاق ترشح می‌کردن.</div>
+<div class="fa">بعد از مدتی، حتی <b>محرک‌های خنثی</b> (مثل ورود به اتاق) هم همون اثر گرد گوشت رو در تولید بزاق داشتن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه اصطلاح کلیدی</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>اصطلاح</th><th>نماد</th><th>یعنی چی</th></tr></thead>
+<tbody>
+<tr><td><b>پاسخ غیرشرطی</b></td><td>UR</td><td>پاسخ طبیعی (مثل ترشح بزاق به گرد گوشت)</td></tr>
+<tr><td><b>محرک غیرشرطی</b></td><td>UCS</td><td>محرک طبیعی (گرد گوشت)</td></tr>
+<tr><td><b>محرک شرطی</b></td><td>CS</td><td>محرک خنثی که بعد از شرطی‌سازی پاسخ می‌ده</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار عامل مؤثر بر اثربخشی شرطی‌سازی کلاسیک</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱)</b> <b>محرک شرطی (CS) باید قبل از محرک غیرشرطی (US) باشه.</b></div>
+<div class="fa"><b>۲)</b> <b>تأخیر بین حضور US و CS</b> مهمه.</div>
+<div class="fa"><b>۳)</b> <b>تعداد کوشش‌ها:</b> هرچی بیشتر ← پاسخ شرطی شدیدتر و پایدارتر.</div>
+<div class="fa"><b>۴)</b> <b>ویژگی خاص محرک‌ها:</b> محرک غیرشرطی قوی ← پاسخ شرطی راحت‌تر و سریع‌تر.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته امتحانی:</b> پاسخ شرطی از راه <b>توان (قدرت)، فراوانی، طول مدت بین ارائه CS و پاسخ، و تداومش</b> ارزیابی می‌شه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه فن درمانی از شرطی‌سازی کلاسیک</h3><span class="badge s">خیلی مهم</span></div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۱) حساسیت‌زدایی منظم</h4>
+<div class="fa">مراجع و درمانگر <b>سلسله مراتبی از صحنه‌های اضطراب‌آور</b> طراحی می‌کنن.</div>
+<div class="fa">درمان با <b>فن آرمیدگی</b> درهم می‌آمیزه.</div>
+<div class="fa">مراجع هر بار صحنه ترس‌آور رو <b>مجسم</b> می‌کنه.</div>
+<div class="fa">وقتی به بالاترین صحنه آزارنده رسید، درمانگر <b>دستور آرمیدگی</b> می‌ده.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۲) غرقه‌سازی</h4>
+<div class="fa">مراجع به طور <b>ناگهانی</b> در معرض محرک رعب‌آور قرار می‌گیره.</div>
+<div class="fa"><b>فرار یا اجتناب ممکن نیست.</b></div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۳) انزجار درمانی</h4>
+<div class="fa">همراه کردن رفتار با محرکی که <b>پاسخ ناخوشایند طبیعی</b> تولید می‌کنه.</div>
+<div class="fa"><b>مثال امتحانی:</b> تو اعتیاد تزریقی، تزریق ماده‌ای که <b>حالت تهوع</b> ایجاد می‌کنه ← فرد با هر بار تزریق مواد دچار تهوع می‌شه ← رفتار تزریق متوقف می‌شه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته کلیدی شرطی‌سازی کلاسیک</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+شرطی‌سازی کلاسیک <b>یادگیری پاسخ جدید نمی‌آموزه</b>؛ فقط بین <b>پاسخ موجود</b> و <b>محرک‌های جدید</b> ارتباط ایجاد می‌کنه.
+</div>
+</div>
+</section>
+
+<!-- ==================== شرطی‌سازی کنشگر ==================== -->
+<section id="operant" class="section">
+<h2 class="section-title">۰۵ · شرطی‌سازی کنشگر</h2>
+<p class="section-sub">بنیان‌گذاران، تقویت و تنبیه، برنامه‌ها، فنون تغییر رفتار</p>
+
+<div class="card">
+<div class="card-head"><h3>بنیان‌گذاران</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) ای. ال. ثورندایک:</b> <b>قانون اثر</b> — رفتارهایی که ارضاکننده‌ان تقویت می‌شن و اونایی که نیستن تقویت نمی‌شن.</div>
+<div class="fa"><b>۲) بی. اف. اسکینر:</b> رفتارهای پیچیده در نتیجه <b>تعامل ارگانیسم با محیط</b> از طریق شیوه‌های گوناگون ایجاد می‌شن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تقویت و تنبیه (جدول طلایی)</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>مفهوم</th><th>یعنی چی</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td><b>تقویت</b></td><td>هر چیزی که <b>فراوانی رفتار رو زیاد</b> می‌کنه</td><td>—</td></tr>
+<tr><td><b>تنبیه</b></td><td>هر چیزی که <b>فراوانی رفتار رو کم</b> می‌کنه</td><td>—</td></tr>
+<tr><td><b>تقویت مثبت</b></td><td>ارائه پاداش برای رفتار خوب</td><td>تحسین کلامی</td></tr>
+<tr><td><b>تقویت منفی</b></td><td>افزایش رفتار برای <b>برطرف شدن محرک آزارنده</b></td><td>—</td></tr>
+<tr><td><b>تنبیه مثبت</b></td><td>رفتار نامطلوب ← محرک آزارنده</td><td>—</td></tr>
+<tr><td><b>تنبیه منفی</b></td><td><b>حذف محرک مثبت</b> در پی رفتار نامطلوب</td><td>مراجع به کارکنان بی‌حرمتی می‌کنه ← امتیاز تفریح رو از دست می‌ده</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>برنامه‌های زمان‌بندی تقویت</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>برنامه</th><th>یعنی چی</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td><b>تقویت ثابت</b></td><td>تقویت بعد از <b>یه مدت زمان مشخص و معین</b></td><td>دریافت چک حقوقی هر دو هفته یه‌بار</td></tr>
+<tr><td><b>تقویت متناوب</b></td><td>تقویت بعد از <b>یه دوره زمانی پیش‌بینی‌نشده</b></td><td>بازرسی تصادفی شش اتاق در ماه بدون اطلاع از زمان دقیق</td></tr>
+<tr><td><b>تقویت نسبی</b></td><td>تقویت بعد از <b>تعداد مشخصی از پاسخ‌های مطلوب</b></td><td><b>بالاترین میزان پاسخ</b> رو داره</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> وقتی رفتار یاد گرفته شد، <b>بهترین برنامه، تقویت متناوبه</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خاموشی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">همون‌طور که شرطی‌سازی کلاسیک می‌تونه خاموش بشه، شرطی‌سازی کنشگر هم می‌تونه <b>دستخوش خاموشی</b> بشه.</div>
+<div class="fa">این فرآیند وقتی رخ می‌ده که <b>از تقویت برای کاهش یا حذف رفتار نامطلوب</b> استفاده بشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش فن تغییر رفتار از شرطی‌سازی کنشگر</h3><span class="badge s">خیلی مهم</span></div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۱) شکل‌دهی (Shaping)</h4>
+<div class="fa"><b>تقویت تقریب‌های نزدیک به رفتار هدف</b> تا رسیدن به رفتار هدف.</div>
+<div class="fa"><b>مؤثر در موقعیت‌هایی که رفتار هدف هرگز یا به ندرت رخ می‌ده.</b></div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۲) تقویت افتراقی</h4>
+<div class="fa">تمامی رفتارهای جزء رفتار هدف به گونه <b>مثبت تقویت می‌شن</b>. ترکیبی از <b>فنون تقویت مثبت و خاموشی</b>ه.</div>
+<div class="fa"><b>مثال امتحانی:</b> مراجعی که با دست غذا می‌خوره ← وقتی با قاشق و چنگال غذا می‌خوره تقویت می‌شه، وقتی با دست غذا می‌خوره نادیده گرفته می‌شه.</div>
+<div class="fa"><b>سه نوع:</b> ۱) نرخ پایین پاسخ‌دهی ۲) رفتارهای جایگزین ۳) رفتارهای دیگر.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۳) قراردادهای رفتاری</h4>
+<div class="fa"><b>توافق‌های مهم بین رفتاردرمانگر و مراجع</b>؛ اظهاراتی که رفتارهای قابل تغییر یا تشویق‌ها و تنبیهات رو مشخص می‌کنن.</div>
+<div class="fa"><b>پنج اصل اساسی قرارداد مؤثر:</b> ۱) شناسایی تقویت‌کننده‌ها ۲) شناخت رفتارهای هدف ۳) فرآیند اصلاح قرارداد رفتاری ۴) شناسایی تقویت‌های جایگزین ۵) ارائه بازخورد مکرر پیرامون پیشرفت مراجع.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۴) اقتصاد ژتونی (Token Economy)</h4>
+<div class="fa">تو محیطی <b>ساختاریافته</b>، رفتارهای مطلوب با ارائه <b>ژتون</b> تقویت می‌شن.</div>
+<div class="fa"><b>چهار ویژگی اقتصاد ژتونی مؤثر:</b> ۱) رفتارهای هدف به روشنی شناسایی و تعریف شده‌ان ۲) تقویت‌کننده‌ها ارائه رفتار مطلوب بعدی رو ایجاد می‌کنن ۳) ایجاد سیستم نظارتی پایا و ارزیابی تأثیر ۴) ارائه طرح اجرایی مشخص برای <b>تعمیم به جامعه</b> در غیاب اقتصاد ژتونی.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۵) آموزش مهارت‌های اجتماعی</h4>
+<div class="fa">شامل: <b>جرئت‌ورزی، ارتباط، حل تعارض</b> و مهارت‌های اجتماعی مطلوب دیگه.</div>
+<div class="fa"><b>متأثر از:</b> اصول شرطی‌سازی کلاسیک، کنشگر و نظریه آموزش اجتماعی.</div>
+<div class="fa"><b>فن‌ها:</b> الگوگیری، آماده‌سازی، مرور ذهنی رفتار، بازخورد، تقویت و ارائه تکلیف.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۶) فنون کاهش رفتار از طریق تنبیه</h4>
+<div class="fa"><b>۱) تنبیه‌های کلاسی</b></div>
+<div class="fa"><b>۲) اصلاح مکرر رفتار:</b> اصلاح مکرر رفتارهای منفی در حالی که رفتارهای مثبت تمرین می‌شن.</div>
+<div class="fa"><b>۳) جریمه کردن:</b> از دست دادن تقویت‌کننده‌ها در پی رفتار نامطلوب.</div>
+</div>
+</section>
+
+<!-- ==================== نظریه شخصیت ==================== -->
+<section id="personality" class="section">
+<h2 class="section-title">۰۶ · نظریه شخصیت تو رفتاردرمانی</h2>
+<p class="section-sub">رفتار ناسازگار چطور شکل می‌گیره</p>
+
+<div class="card">
+<div class="card-head"><h3>نظریه شخصیت</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">رفتارهای نامطلوب یا در طی <b>شرطی‌شدن کلاسیک</b> یا <b>کنشگر</b> آموخته می‌شن یا آموخته نمی‌شن.</div>
+<div class="fa"><b>حضور محرک‌های آزارنده</b> نقش عمده‌ای در <b>گسترش و تداوم رفتار ناسازگارانه</b> داره.</div>
+<div class="fa">فرد برای <b>ممانعت یا فرار از شرایط آزارنده</b>، رفتارش رو تقویت می‌کنه.</div>
+<div class="fa"><b>مثال امتحانی (پسربچه):</b> پسربچه‌ای که به طور ناعادلانه از سوی پدرش تنبیه بدنی شدید می‌شه و تو کمد زندانی می‌شه ← بعد از آزادی، گیج می‌شه که چرا تنبیه شد، عصبانی می‌شه که کنترل نداشته، می‌ترسه تنبیه تکرار بشه ← ممکنه <b>عصبانیت، افسردگی، احساس گناه و اضطراب</b> بروز بده یا به <b>دنیای خیالی</b> پناه ببره.</div>
+</div>
+</section>
+
+<!-- ==================== فرایند مشاوره ==================== -->
+<section id="process" class="section">
+<h2 class="section-title">۰۷ · فرایند مشاوره رفتارگرایی</h2>
+<p class="section-sub">چهار عامل اصلی، شش مرحله، نقش درمانگر، رابطه درمانی، طول درمان</p>
+
+<div class="card">
+<div class="card-head"><h3>چهار عامل اصلی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) فرآیند درمانی</b></div>
+<div class="fa"><b>۲) نقش درمانگر</b></div>
+<div class="fa"><b>۳) روابط درمانی</b></div>
+<div class="fa"><b>۴) طول مدت درمان</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش مرحله فرایند درمانی (کیلول و لیبرمن، ۱۹۸۶)</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>مرحله</th><th>یعنی چی</th></tr></thead>
+<tbody>
+<tr><td><b>۱</b></td><td><b>ارزیابی رفتاری</b> ← شناسایی رفتارهای ناسازگارانه</td></tr>
+<tr><td><b>۲</b></td><td><b>شناسایی نقاط قوت و توانایی‌های مراجع</b> ← انتخاب رویکرد و راهبرد مؤثر</td></tr>
+<tr><td><b>۳</b></td><td><b>فرآیند درمانی</b> ← تعریف دقیق رفتارهای هدف</td></tr>
+<tr><td><b>۴</b></td><td><b>ارزیابی رفتارهای ناسازگار</b> ← اندازه‌گیری فراوانی رفتار در دوره زمانی مشخص + تعیین زمان تأثیر راهبردها</td></tr>
+<tr><td><b>۵</b></td><td><b>شناسایی تقویت‌کننده‌ها</b> ← فعالیت‌ها، افراد یا چیزهایی که انگیزه لازم رو فراهم می‌کنن</td></tr>
+<tr><td><b>۶</b></td><td><b>ایجاد اهداف درمانی</b> ← به طور مشترک بین مشاور و مراجع</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرایند ایجاد اهداف درمانی (کورمریر و ناریویس، ۲۰۰۳)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱)</b> درمانگر <b>نیت و مقصود اهداف</b> رو برای مراجع توضیح می‌ده.</div>
+<div class="fa"><b>۲)</b> مراجع <b>پیامدهای مطلوب</b> رو شناسایی می‌کنه.</div>
+<div class="fa"><b>۳)</b> مراجع و درمانگر مشترکاً بررسی می‌کنن که آیا پیامدهای مطلوب همون‌هایی هستن که مراجع باید بهشون برسه و آیا اهداف <b>حقیقی‌ان</b>؟ (از دو دیدگاه <b>سود و زیان</b>)</div>
+<div class="fa"><b>۴)</b> تعریف اهداف بر اساس <b>شناسایی رفتارها، روش‌های تغییر و میزان تغییرات مطلوب</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نقش درمانگر</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">تمامی جنبه‌های رفتاردرمانی <b>بین درمانگر و مراجع به طور مشترک</b> مشخص می‌شه.</div>
+<div class="fa">در گذشته تصور می‌شد مراجع زمان بیشتری در تغییرات رفتاری سرمایه‌گذاری می‌کنه، <b>حال آنکه در ایجاد اهداف درمانی و اجرای طرح درمان، رفتاردرمانی بیشتر بر رفتار فعلی بیمار تأکید می‌کنه</b> (عوامل اساسی ایجاد بروز رفتار).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابطه درمانی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">رفتاردرمانگران <b>فعال‌ان</b> و با مراجعان <b>تعاملی مستقیم</b> دارن.</div>
+<div class="fa">از نقطه‌نظر تاریخی، به رفتاردرمانگران به چشم <b>کارشناسان رفتاری</b> نگاه می‌شد.</div>
+<div class="fa">اگه‌چه بیشتر دیدگاه‌های معاصر بر <b>نقش رفتاردرمانگران به عنوان رابطه مشارکت‌جویانه بین مراجع و مشاور</b> تأکید می‌کنن.</div>
+<div class="fa">قبلاً فکر می‌کردن رفتاردرمانگرها <b>قالبی، خشک، مکانیکی و غیرقابل انعطاف</b>‌ان؛ ولی امروزه غالباً به عنوان <b>افراد درک‌کننده، مهربان، همراه و رازدار</b> توصیف می‌شن (جیمز و جیللند، ۲۰۰۳).</div>
+<div class="fa">رابطه درمانی <b>خیلی مهمه</b> و جزئی از فرآیند تغییر رفتار محسوب می‌شه.</div>
+<div class="fa">مراجع تو درمانی سرمایه‌گذاری می‌کنه که باور داشته باشه <b>رابطه درمانی خوبی با مشاور خواهد داشت</b> و مشاور <b>فردی صادق و قابل اعتماده</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>طول مدت درمان (ویلسون، ۲۰۰۰)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">به رفتاردرمانی به مثابه <b>درمان کوتاه‌مدت</b> نگاه می‌شه.</div>
+<div class="fa">عمدتاً <b>۲۵ تا ۳۰ جلسه</b>.</div>
+<div class="fa">بعضی مراجع‌ها به بیش از <b>۳۰ جلسه</b> نیاز دارن و اونایی که به بیش از <b>۱۰۰ جلسه</b> نیاز دارن <b>خیلی نادرن</b>.</div>
+<div class="fa">طول درمان بر اساس <b>پیشرفت در رسیدن به اهداف درمانی</b> مشخص می‌شه.</div>
+<div class="fa"><b>سه فرایند اصلی:</b></div>
+<div class="fa">۱) رفتارهای ناسازگارانه ارزیابی شده و رفتارهای هدف مشخص می‌شن.</div>
+<div class="fa">۲) مداخله‌های درمانی به محض امکان اجرا می‌شن.</div>
+<div class="fa">۳) در نهایت، <b>پیشرفت درمان بر اساس اهداف درمانی قابل اندازه‌گیری و اهداف تعریف شده اجرا می‌گردد</b>.</div>
+</div>
+</section>
+
+<!-- ==================== کاربرد در توانبخشی ==================== -->
+<section id="rehab" class="section">
+<h2 class="section-title">۰۸ · تو توانبخشی چه کار می‌کنه</h2>
+<p class="section-sub">سوء مصرف مواد، آسیب مغزی، اختلالات رشدی</p>
+
+<div class="card">
+<div class="card-head"><h3>مقدمه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">فنون رفتارگرایی برای درمان رفتارهای ناسازگارانه <b>بیش از اونکه به عنوان نظریه به حساب بیان، تو مشاوره استفاده می‌شن</b>.</div>
+<div class="fa"><b>کاربردها:</b> سوء مصرف مواد، آسیب‌های مغزی، اختلالات رشدی، اختلالات شناختی، اسکیزوفرنیا، افسردگی و دردهای مزمن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>الف) سوء مصرف مواد</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>فن</th><th>نوع شرطی‌سازی</th><th>یعنی چی</th></tr></thead>
+<tbody>
+<tr><td><b>ظهور نشانه</b></td><td>کلاسیک</td><td>گسستن پیوند بین <b>محیط و محرک‌های انگیزشی</b> که فرد رو برای جست‌وجوی مواد برمی‌انگیزاند</td></tr>
+<tr><td><b>حساسیت پنهان</b></td><td>کلاسیک</td><td>تصور موقعیتی که هر بار جرعه نوشیدن ← <b>تهوع و استفراغ شدید</b>؛ تکرار تا شنیدن واژه الکل ← تهوع. (برخی پژوهش‌ها مؤثر دونستن، اما شواهدی هست که بعضی مراجع‌ها همچنان به نوشیدن ادامه می‌دن)</td></tr>
+<tr><td><b>تقویت اجتماع</b></td><td>کنشگر</td><td>استفاده از <b>تقویت اجتماع، دوستان و اقوام</b> برای ترک مواد؛ در صورت ترک ← تعامل اجتماعی، در غیر این صورت ← از دست دادن حمایت اطرافیان</td></tr>
+<tr><td><b>الگوگیری روان‌شناختی</b></td><td>کنشگر</td><td><b>مؤثرترین و سریع‌ترین روش</b> برای تغییر رفتاری؛ به ویژه زمانی ارزشمنده که مراجع همزمان مهارت‌های پرهیز از مواد، مهارت‌های اجتماعی و فردی (آرمیدگی، سازگاری با استرس، مدیریت خشم) رو یاد بگیره</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ب) آسیب‌های مغزی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">معمولاً بعد از آسیب مغزی، <b>رفتارهای ناسازگارانه</b> شروع می‌شه.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۱) تقویت مثبت</h4>
+<div class="fa">تهیه <b>تقویت‌کننده‌های مطلوب</b> که بعد از رفتار هدف به مراجع داده می‌شه.</div>
+<div class="fa"><b>شش راهبرد (لویس و یتر، ۱۹۹۱):</b></div>
+<div class="fa">۱) تقویت‌کننده‌ها باید <b>فوراً</b> بعد از پاسخ مطلوب داده بشن.</div>
+<div class="fa">۲) باید به مراجع گفت <b>کدوم رفتارها تقویت می‌شن و کدوم نمی‌شن</b>.</div>
+<div class="fa">۳) ارائه اطلاعات باید <b>به آهستگی و با آرامش</b> باشه.</div>
+<div class="fa">۴) تکالیف باید <b>جزء به جزء و با گام‌های کوچک</b> ارائه بشن.</div>
+<div class="fa">۵) مشاور باید <b>ترکیبی از تقویت‌کننده‌های گوناگون</b> ارائه کنه تا مراجع از یکنواختی خسته نشه.</div>
+<div class="fa">۶) تقویت‌کننده‌ها باید <b>طبق یه برنامه ادامه‌دار</b> ارائه بشن؛ افراد دچار ضایعه مغزی برای پیوند بین رفتار و تقویت‌کننده به <b>زمان طولانی‌تری</b> نیاز دارن. بعد از یاد گرفتن پیوند، <b>تقویت ثابت</b> می‌تونه رفتار مطلوب رو ادامه بده.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۲) محروم‌سازی</h4>
+<div class="fa">بعد از رفتار ناسازگارانه، <b>تمامی تقویت‌کننده‌ها لغو می‌شن</b>.</div>
+<div class="fa"><b>روش‌های مؤثر (۱۹۸۲):</b></div>
+<div class="fa">۱) باید به فرد گفت <b>چرا</b> رفتار ناسازگارش به محروم‌سازی منجر شده.</div>
+<div class="fa">۲) مدت تحریم باید <b>کوتاه</b> باشه و به <b>پنج تا ده دقیقه</b> محدود بشه (چون افراد دارای آسیب مغزی دچار <b>مشکلات حافظه</b> می‌شن و محروم‌سازی طولانی نتیجه‌ای نداره).</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۳) تمرین مثبت</h4>
+<div class="fa">مراجعان ملزم می‌شن <b>رفتار صحیح و سازگارانه رو دائماً تکرار کنن</b> تا ملکه ذهنشون بشه.</div>
+<div class="fa"><b>به ویژه مؤثر برای افرادی که توانایی تصمیم‌گیری درست و بجا رو ندارن.</b></div>
+<div class="fa">فرصتی فراهم می‌کنه تا با تکرار پیوسته و مداوم رفتارهای مطلوب، از تعداد رفتارهای ناسازگارانه کاسته بشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ج) اختلالات رشدی (عقب‌ماندگی ذهنی)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">تو طول <b>۳۰ سال گذشته</b>، رفتاردرمانی رویکرد مؤثری برای درمان رفتارهای ناسازگارانه افراد دچار اختلالات رشدی و عقب‌ماندگی ذهنی بوده.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۱) آداب توالت</h4>
+<div class="fa"><b>آزرین و فاکس (۱۹۷۱)</b> نخستین کسایی بودن که اجرای روش‌های گوناگون رو همگام با آموزش آداب توالت گزارش کردن.</div>
+<div class="fa"><b>تکنیک‌هاشون:</b> الگوگیری، شکل‌دهی، تقویت مثبت و تنبیه (اخطارهای کلامی و محروم‌سازی).</div>
+<div class="fa">تو <b>۲۵ سال گذشته</b> فنون دیگه‌ای اضافه شد: تقویت، <b>زنجیره‌سازی</b>، شکل‌دهی، هدایت کردن و تنبیه.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۲) هرزه‌خواری</h4>
+<div class="fa"><b>بلعیدن مواد غیرخوراکی.</b></div>
+<div class="fa">تو <b>بیش از ۲۵ درصد عقب‌ماندگان ذهنی</b> دیده می‌شه.</div>
+<div class="fa"><b>در برابر درمان خیلی مقاومه.</b></div>
+<div class="fa">با این حال، بسیاری از درمانگران با <b>تقویت‌کننده‌ها و تنبیه‌کننده‌های گوناگون</b> تا حدی درمانش کردن.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۳) تکانشگری و کنترل خود</h4>
+<div class="fa">برای آموزش کنترل خود باید <b>به طور تدریجی، زمان رسیدن به هدف یا تقویت‌کننده مطلوب رو زیاد کرد</b> تا فرد توانایی کنترل بر خودش رو به دست بیاره.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">۴) سایر رفتارهای هدف</h4>
+<div class="fa">۱) فعالیت‌های زندگی روزمره (غذا خوردن و لباس پوشیدن)</div>
+<div class="fa">۲) سخن گفتن، زبان و برقراری ارتباط</div>
+<div class="fa">۳) آماده‌سازی افراد برای ورود به جامعه</div>
+<div class="fa">۴) کنترل رفتارهای پرخاشگرانه و آشفته</div>
+<div class="fa">۵) اختلال‌های خواب</div>
+<div class="fa">۶) کاهش مصرف دخانیات</div>
+</div>
+</section>
+
+<!-- ==================== تفاوت‌ها و دام‌ها ==================== -->
+<section id="diffs" class="section">
+<h2 class="section-title">۰۹ · تفاوت‌ها و تله‌ها</h2>
+<p class="section-sub">برای تست چهارگزینه‌ای آماده شو</p>
+
+<div class="card diff">
+<h3>تفاوت ۱: شرطی‌سازی کلاسیک با کنشگر</h3>
+<div class="fa"><b>کلاسیک (پاولف):</b> ایجاد ارتباط بین <b>پاسخ موجود</b> و <b>محرک جدید</b>؛ یادگیری پاسخ جدید <b>نمی‌آموزه</b>.</div>
+<div class="fa"><b>کنشگر (ثورندایک و اسکینر):</b> <b>تقویت و تنبیه</b> رفتار؛ رفتارهای پیچیده در نتیجه تعامل ارگانیسم با محیط.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> نگی کلاسیک یادگیری پاسخ جدید می‌آموزه!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۲: تقویت مثبت با منفی</h3>
+<div class="fa"><b>تقویت مثبت:</b> <b>ارائه پاداش</b> برای رفتار خوب ← افزایش رفتار.</div>
+<div class="fa"><b>تقویت منفی:</b> <b>برطرف شدن محرک آزارنده</b> ← افزایش رفتار.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> تقویت منفی هم رفتار رو <b>زیاد</b> می‌کنه، نه کم!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۳: تنبیه مثبت با منفی</h3>
+<div class="fa"><b>تنبیه مثبت:</b> <b>ارائه محرک آزارنده</b> در پی رفتار نامطلوب ← کاهش رفتار.</div>
+<div class="fa"><b>تنبیه منفی:</b> <b>حذف محرک مثبت</b> در پی رفتار نامطلوب ← کاهش رفتار.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> تنبیه منفی = حذف محرک مثبت (نه ارائه محرک آزارنده!).</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۴: حساسیت‌زدایی منظم با غرقه‌سازی</h3>
+<div class="fa"><b>حساسیت‌زدایی منظم:</b> <b>تدریجی</b> + سلسله مراتب اضطراب + <b>آرمیدگی</b>.</div>
+<div class="fa"><b>غرقه‌سازی:</b> <b>ناگهانی</b> + <b>عدم امکان فرار</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این دو رو قاطی نکن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۵: تقویت ثابت با متناوب و نسبی</h3>
+<div class="fa"><b>ثابت:</b> بعد از <b>یه مدت زمان مشخص</b>.</div>
+<div class="fa"><b>متناوب:</b> بعد از <b>یه دوره پیش‌بینی‌نشده</b>.</div>
+<div class="fa"><b>نسبی:</b> بعد از <b>تعداد مشخصی از پاسخ‌های مطلوب</b> ← <b>بالاترین میزان پاسخ</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> بعد از یادگیری، بهترین = <b>متناوب</b>.</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۶: شکل‌دهی با تقویت افتراقی</h3>
+<div class="fa"><b>شکل‌دهی:</b> تقویت <b>تقریب‌های نزدیک</b> به رفتار هدف.</div>
+<div class="fa"><b>تقویت افتراقی:</b> تقویت رفتار هدف + <b>خاموشی</b> رفتار نامطلوب (ترکیب تقویت مثبت و خاموشی).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این دو رو با هم قاطی نکن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۷: محروم‌سازی در آسیب مغزی با محروم‌سازی معمولی</h3>
+<div class="fa"><b>محروم‌سازی معمولی:</b> می‌تونه طولانی‌تر باشه.</div>
+<div class="fa"><b>محروم‌سازی در آسیب مغزی:</b> <b>حداکثر ۵ تا ۱۰ دقیقه</b> (به دلیل <b>مشکلات حافظه</b>).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> تو آسیب مغزی، محروم‌سازی طولانی نتیجه نداره!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۸: آداب توالت با هرزه‌خواری</h3>
+<div class="fa"><b>آداب توالت:</b> آزرین و فاکس (۱۹۷۱)؛ با الگوگیری، شکل‌دهی، تقویت مثبت و تنبیه.</div>
+<div class="fa"><b>هرزه‌خواری:</b> بلعیدن مواد غیرخوراکی؛ تو <b>بیش از ۲۵٪</b> عقب‌ماندگان ذهنی؛ <b>مقاوم به درمان</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> هرزه‌خواری = بلعیدن مواد غیرخوراکی، مقاوم به درمان!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۹: الگوگیری روان‌شناختی با بقیه فن‌های سوء مصرف</h3>
+<div class="fa"><b>ظهور نشانه:</b> کلاسیک؛ گسستن پیوند محیط و محرک‌های انگیزشی.</div>
+<div class="fa"><b>حساسیت پنهان:</b> کلاسیک؛ تصور تهوع و استفراغ.</div>
+<div class="fa"><b>تقویت اجتماع:</b> کنشگر؛ استفاده از تقویت دوستان و اقوام.</div>
+<div class="fa"><b>الگوگیری روان‌شناختی:</b> کنشگر؛ <b>مؤثرترین و سریع‌ترین روش</b> تغییر رفتار.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> مؤثرترین = الگوگیری روان‌شناختی!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۱۰: تقویت با تنبیه</h3>
+<div class="fa"><b>تقویت:</b> فراوانی رفتار رو <b>زیاد</b> می‌کنه.</div>
+<div class="fa"><b>تنبیه:</b> فراوانی رفتار رو <b>کم</b> می‌کنه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> تقویت = افزایش، تنبیه = کاهش.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱: CS باید قبل از US باشه یا بعدش؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی US باید قبل از CS باشه.</div>
+<div class="fa"><b>جواب درست:</b> <b>CS باید مقدم بر US باشه</b> (نه برعکس!).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> اول CS، بعد US.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲: آزمایش پاولف</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی پاولف روی گربه یا موش آزمایش کرد.</div>
+<div class="fa"><b>جواب درست:</b> پاولف روی <b>بزاق سگ‌ها</b> آزمایش کرد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> سگ، نه گربه!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳: قانون اثر مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال اسکینره.</div>
+<div class="fa"><b>جواب درست:</b> <b>قانون اثر</b> مال <b>ثورندایک</b>ه؛ <b>اسکینر</b> گفت رفتارهای پیچیده در نتیجه <b>تعامل ارگانیسم با محیط</b> ایجاد می‌شن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> قانون اثر = ثورندایک.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۴: حساسیت‌زدایی منظم با چی همراهه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط با صحنه‌های اضطراب‌آوره.</div>
+<div class="fa"><b>جواب درست:</b> با <b>فن آرمیدگی</b> درهم می‌آمیزه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> سلسله مراتب + آرمیدگی.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۵: غرقه‌سازی چطوریه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی تدریجیه.</div>
+<div class="fa"><b>جواب درست:</b> <b>ناگهانی</b> + <b>عدم امکان فرار یا اجتناب</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> یهو می‌ندازنش تو موقعیت!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۶: انزجار درمانی برای چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط برای ترسه.</div>
+<div class="fa"><b>جواب درست:</b> برای <b>اعتیاد تزریقی</b> و رفتارهایی که با <b>پاسخ ناخوشایند طبیعی</b> (تهوع) همراه می‌شن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> تهوع + مواد = ترک مواد.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۷: تقویت منفی چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی تقویت منفی = تنبیه.</div>
+<div class="fa"><b>جواب درست:</b> تقویت منفی <b>فراوانی رفتار رو زیاد</b> می‌کنه (برای برطرف شدن محرک آزارنده). تنبیه <b>کم</b> می‌کنه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> تقویت منفی ≠ تنبیه!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۸: تنبیه منفی چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی تنبیه منفی = ارائه محرک آزارنده.</div>
+<div class="fa"><b>جواب درست:</b> تنبیه منفی = <b>حذف محرک مثبت</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> تنبیه منفی = حذف محرک مثبت.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۹: بهترین برنامه تقویت بعد از یادگیری</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی تقویت ثابت بهترینه.</div>
+<div class="fa"><b>جواب درست:</b> <b>تقویت متناوب</b> بهترینه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> بعد از یادگیری = متناوب.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۰: کدوم برنامه بالاترین میزان پاسخ رو داره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی تقویت ثابت.</div>
+<div class="fa"><b>جواب درست:</b> <b>تقویت نسبی</b> بالاترین میزان پاسخ رو داره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> نسبی = بالاترین پاسخ.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۱: شکل‌دهی یعنی چی؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی شکل‌دهی یعنی تنبیه.</div>
+<div class="fa"><b>جواب درست:</b> شکل‌دهی = تقویت <b>تقریب‌های نزدیک</b> به رفتار هدف.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> تقریب‌های نزدیک به هدف.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۲: تقویت افتراقی از چی ساخته شده؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط تقویت مثبته.</div>
+<div class="fa"><b>جواب درست:</b> ترکیبی از <b>تقویت مثبت و خاموشی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> تقویت مثبت + خاموشی.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۳: اقتصاد ژتونی چند ویژگی داره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی ۳ تا.</div>
+<div class="fa"><b>جواب درست:</b> <b>۴ ویژگی</b>: شناسایی رفتار هدف، تقویت‌کننده‌ها، سیستم نظارتی، تعمیم به جامعه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۴ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۴: فرایند مشاوره چند مرحله‌ست؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی ۴ یا ۵ تاست.</div>
+<div class="fa"><b>جواب درست:</b> <b>۶ مرحله</b> (کیلول و لیبرمن، ۱۹۸۶): ارزیابی → نقاط قوت → درمان → ارزیابی مجدد → تقویت‌کننده‌ها → اهداف.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۶ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۵: طول درمان چقدره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی ۱۰ تا ۲۰ جلسه.</div>
+<div class="fa"><b>جواب درست:</b> عمدتاً <b>۲۵ تا ۳۰ جلسه</b>؛ بعضی به بیش از ۳۰ جلسه نیاز دارن؛ بیش از ۱۰۰ جلسه خیلی نادره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۲۵ تا ۳۰ جلسه.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۶: محروم‌سازی تو آسیب مغزی چقدره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی می‌تونه طولانی باشه.</div>
+<div class="fa"><b>جواب درست:</b> <b>حداکثر ۵ تا ۱۰ دقیقه</b> (به دلیل مشکلات حافظه).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۵ تا ۱۰ دقیقه.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۷: هرزه‌خواری چیه و چند درصد؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی ۱۰٪ و راحته.</div>
+<div class="fa"><b>جواب درست:</b> بلعیدن مواد غیرخوراکی؛ تو <b>بیش از ۲۵٪</b> عقب‌ماندگان ذهنی؛ <b>مقاوم به درمان</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۲۵٪ + مقاوم.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۸: مؤثرترین و سریع‌ترین روش تغییر رفتار تو سوء مصرف</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی حساسیت پنهانه.</div>
+<div class="fa"><b>جواب درست:</b> <b>الگوگیری روان‌شناختی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> الگوگیری روان‌شناختی.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۹: آداب توالت مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی لویس و یتر.</div>
+<div class="fa"><b>جواب درست:</b> <b>آزرین و فاکس (۱۹۷۱)</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> آزرین و فاکس.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۰: رفتاردرمانگرهای امروزی چطور توصیف می‌شن؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی قالبی و خشک.</div>
+<div class="fa"><b>جواب درست:</b> <b>درک‌کننده، مهربان، همراه و رازدار</b> (جیمز و جیللند، ۲۰۰۳).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> مهربان و همراه.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۱: شرطی‌سازی کلاسیک یادگیری پاسخ جدید می‌آموزه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی بله.</div>
+<div class="fa"><b>جواب درست:</b> <b>نه!</b> فقط بین <b>پاسخ موجود</b> و <b>محرک جدید</b> ارتباط ایجاد می‌کنه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> پاسخ جدید نمی‌آموزه!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۲: پاسخ شرطی از چه راه‌هایی ارزیابی می‌شه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط تعداد کوشش.</div>
+<div class="fa"><b>جواب درست:</b> از راه <b>توان (قدرت)، فراوانی، طول مدت بین ارائه CS و پاسخ، و تداومش</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> توان، فراوانی، طول مدت، تداوم.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۳: اصلاح مکرر رفتار چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط تنبیهه.</div>
+<div class="fa"><b>جواب درست:</b> اصلاح مکرر رفتارهای منفی در حالی که <b>رفتارهای مثبت تمرین می‌شن</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> اصلاح منفی + تمرین مثبت.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۴: تمرین مثبت برای کی مؤثره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی برای همه.</div>
+<div class="fa"><b>جواب درست:</b> <b>به ویژه مؤثر برای افرادی که توانایی تصمیم‌گیری درست و بجا رو ندارن.</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> کسایی که نمی‌تونن درست تصمیم بگیرن.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۵: تقویت مثبت تو آسیب مغزی چند راهبرد داره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی ۴ تا.</div>
+<div class="fa"><b>جواب درست:</b> <b>۶ راهبرد</b> (لویس و یتر، ۱۹۹۱).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۶ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۶: سه فرایند اصلی طول درمان کدومن؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی ۲ یا ۴ تاست.</div>
+<div class="fa"><b>جواب درست:</b> <b>۳ فرایند</b>: ۱) ارزیابی رفتارهای ناسازگارانه و مشخص کردن رفتار هدف ۲) اجرای مداخله‌ها به محض امکان ۳) اجرای پیشرفت درمان بر اساس اهداف قابل اندازه‌گیری.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۳ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۷: سه نوع تقویت افتراقی کدومن؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی ۲ یا ۴ تاست.</div>
+<div class="fa"><b>جواب درست:</b> <b>۳ نوع</b>: ۱) نرخ پایین پاسخ‌دهی ۲) رفتارهای جایگزین ۳) رفتارهای دیگر.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۳ تا.</div>
+</div>
+</section>
+
+<!-- ==================== کوییز ==================== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۱۰ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع رفتاردرمانی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 07 · مشاوره توانبخشی · فصل هفتم: رفتاردرمانی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+const themeIcon=document.getElementById('themeIcon');
+const moonPath='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+const sunPath='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z';
+theme.onclick=()=>{
+const dark=document.documentElement.dataset.theme==='dark';
+if(dark){
+document.documentElement.dataset.theme='';
+themeIcon.innerHTML='<path d="'+moonPath+'"></path>';
+}else{
+document.documentElement.dataset.theme='dark';
+themeIcon.innerHTML='<circle cx="12" cy="12" r="4"></circle><path d="'+sunPath+'"></path>';
+}
+};
+
+const quizData = [
+{q:"چهار اصل بنیادی رفتاردرمانی کدومن؟",options:["رفتارها یادگرفتنی‌ان، تغییر تو همون بافت، هر مراجع منحصربه‌فرده، درمان بر پایه ارزیابی","رفتارها ذاتی‌ان، تغییر تو بافت جدید، هر مراجع شبیه همه، درمان بر پایه دارو","رفتارها ارثی‌ان، تغییر تو بافت قدیم، هر مراجع یه گروه، درمان بر پایه تشخیص","رفتارها غریزی‌ان، تغییر تو بافت جدید، هر مراجع خاص، درمان بر پایه مشاهده"],answer:0,explanation:"چهار اصل: ۱) رفتارها یادگرفتنی‌ان ۲) رفتار جدید رو باید تو همون بافت و زمینه‌ای که شکل گرفته تغییر داد ۳) هر مراجع منحصربه‌فرده ۴) درمان موفق بر پایه ارزیابی رفتار انجام می‌شه."},
+{q:"سه رویکرد اصلی رفتاردرمانی کدومن؟",options:["شرطی‌سازی کلاسیک، شرطی‌سازی کنشگر، روش‌های شناختی-رفتاری","روان‌کاوی، گشتالت، وجودی","رفتاری، شناختی، انسان‌گرا","فردی، گروهی، خانوادگی"],answer:0,explanation:"سه رویکرد: ۱) شرطی‌سازی کلاسیک (ساده) ۲) شرطی‌سازی کنشگر ۳) روش‌های شناختی-رفتاری (فصل بعد)."},
+{q:"پاولف روی چی آزمایش کرد؟",options:["بزاق سگ‌ها","یادگیری موش‌ها","رفتار گربه‌ها","بینایی میمون‌ها"],answer:0,explanation:"پاولف روی بزاق سگ‌ها آزمایش می‌کرد."},
+{q:"پاسخ غیرشرطی (UR) چیه؟",options:["پاسخ طبیعی (مثل ترشح بزاق به گرد گوشت)","محرک خنثی","محرک طبیعی","پاسخ شرطی"],answer:0,explanation:"پاسخ غیرشرطی (UR): پاسخ طبیعی، مثل ترشح بزاق به گرد گوشت."},
+{q:"محرک غیرشرطی (UCS) چیه؟",options:["محرک طبیعی (گرد گوشت)","محرک خنثی","پاسخ طبیعی","پاسخ شرطی"],answer:0,explanation:"محرک غیرشرطی (UCS): محرک طبیعی، مثل گرد گوشت."},
+{q:"محرک شرطی (CS) چیه؟",options:["محرک خنثی که بعد از شرطی‌سازی پاسخ می‌ده","محرک طبیعی","پاسخ طبیعی","پاسخ شرطی"],answer:0,explanation:"محرک شرطی (CS): محرک خنثی که بعد از شرطی‌سازی پاسخ می‌ده."},
+{q:"CS باید قبل از US باشه یا بعدش؟",options:["CS باید مقدم بر US باشه","US باید مقدم بر CS باشه","فرقی نمی‌کنه","همزمان باشن"],answer:0,explanation:"محرک شرطی (CS) باید مقدم بر محرک غیرشرطی (US) باشه."},
+{q:"شرطی‌سازی کلاسیک چه چیزی رو یاد می‌ده؟",options:["بین پاسخ موجود و محرک‌های جدید ارتباط ایجاد می‌کنه","یادگیری پاسخ جدید","تقویت و تنبیه","خاموشی"],answer:0,explanation:"شرطی‌سازی کلاسیک یادگیری پاسخ جدید نمی‌آموزه؛ فقط بین پاسخ موجود و محرک‌های جدید ارتباط ایجاد می‌کنه."},
+{q:"حساسیت‌زدایی منظم با چی همراهه؟",options:["فن آرمیدگی","تنبیه","تقویت منفی","خاموشی"],answer:0,explanation:"حساسیت‌زدایی منظم با فن آرمیدگی درهم می‌آمیزه."},
+{q:"غرقه‌سازی چطوریه؟",options:["مواجهه ناگهانی با محرک رعب‌آور بدون امکان فرار","مواجهه تدریجی با آرمیدگی","تقویت مثبت","تنبیه منفی"],answer:0,explanation:"غرقه‌سازی: مراجع به طور ناگهانی در معرض محرک رعب‌آور قرار می‌گیره؛ فرار یا اجتناب ممکن نیست."},
+{q:"انزجار درمانی چیه؟",options:["همراه کردن رفتار با محرکی که پاسخ ناخوشایند طبیعی تولید می‌کنه","مواجهه ناگهانی","تقویت مثبت","تنبیه منفی"],answer:0,explanation:"انزجار درمانی: همراه کردن رفتار با محرکی که پاسخ ناخوشایند طبیعی تولید می‌کنه (مثل تهوع)."},
+{q:"قانون اثر مال کیه؟",options:["ثورندایک","اسکینر","پاولف","ویلسون"],answer:0,explanation:"قانون اثر مال ثورندایکه: رفتارهایی که ارضاکننده‌ان تقویت می‌شن و اونایی که نیستن تقویت نمی‌شن."},
+{q:"اسکینر درباره شرطی‌سازی کنشگر چی گفت؟",options:["رفتارهای پیچیده در نتیجه تعامل ارگانیسم با محیط ایجاد می‌شن","قانون اثر","یادگیری پاسخ جدید","خاموشی"],answer:0,explanation:"اسکینر: رفتارهای پیچیده در نتیجه تعامل ارگانیسم با محیط از طریق شیوه‌های گوناگون ایجاد می‌شن."},
+{q:"تقویت چیه؟",options:["هر چیزی که فراوانی رفتار رو افزایش می‌ده","هر چیزی که فراوانی رفتار رو کاهش می‌ده","حذف محرک مثبت","ارائه محرک آزارنده"],answer:0,explanation:"تقویت: هر چیزی که فراوانی رفتار رو افزایش می‌ده."},
+{q:"تنبیه چیه؟",options:["هر چیزی که فراوانی رفتار رو کاهش می‌ده","هر چیزی که فراوانی رفتار رو افزایش می‌ده","ارائه پاداش","حذف محرک آزارنده"],answer:0,explanation:"تنبیه: هر چیزی که فراوانی رفتار رو کاهش می‌ده."},
+{q:"تقویت مثبت چیه؟",options:["ارائه پاداش برای رفتار خوب","حذف محرک مثبت","ارائه محرک آزارنده","برطرف شدن محرک آزارنده"],answer:0,explanation:"تقویت مثبت: ارائه پاداش برای رفتار خوب، مثل تحسین کلامی."},
+{q:"تقویت منفی چیه؟",options:["افزایش رفتار برای برطرف شدن محرک آزارنده","ارائه پاداش","حذف محرک مثبت","ارائه محرک آزارنده"],answer:0,explanation:"تقویت منفی: افزایش رفتار برای برطرف شدن محرک آزارنده."},
+{q:"تنبیه مثبت چیه؟",options:["رفتار نامطلوب ← ارائه محرک آزارنده","رفتار نامطلوب ← حذف محرک مثبت","ارائه پاداش","برطرف شدن محرک آزارنده"],answer:0,explanation:"تنبیه مثبت: رفتار نامطلوب ← ارائه محرک آزارنده."},
+{q:"تنبیه منفی چیه؟",options:["حذف محرک مثبت در پی رفتار نامطلوب","ارائه محرک آزارنده","ارائه پاداش","برطرف شدن محرک آزارنده"],answer:0,explanation:"تنبیه منفی: حذف محرک مثبت در پی رفتار نامطلوب."},
+{q:"تقویت ثابت چیه؟",options:["تقویت بعد از یه مدت زمان مشخص و معین","تقویت بعد از یه دوره پیش‌بینی‌نشده","تقویت بعد از تعداد مشخصی از پاسخ","تقویت بعد از هر رفتار"],answer:0,explanation:"تقویت ثابت: تقویت بعد از یه مدت زمان مشخص و معین، مثل دریافت چک حقوقی هر دو هفته یه‌بار."},
+{q:"تقویت متناوب چیه؟",options:["تقویت بعد از یه دوره زمانی پیش‌بینی‌نشده","تقویت بعد از یه مدت زمان مشخص","تقویت بعد از تعداد مشخصی از پاسخ","تقویت بعد از هر رفتار"],answer:0,explanation:"تقویت متناوب: تقویت بعد از یه دوره زمانی پیش‌بینی‌نشده، مثل بازرسی تصادفی شش اتاق در ماه."},
+{q:"کدوم برنامه تقویت بالاترین میزان پاسخ رو داره؟",options:["تقویت نسبی","تقویت ثابت","تقویت متناوب","تقویت مداوم"],answer:0,explanation:"تقویت نسبی بالاترین میزان پاسخ رو داره (رابطه پاسخ و تقویت غیرقابل پیش‌بینیه)."},
+{q:"بعد از یادگیری رفتار، بهترین برنامه تقویت چیه؟",options:["تقویت متناوب","تقویت ثابت","تقویت نسبی","تقویت مداوم"],answer:0,explanation:"وقتی رفتار یاد گرفته شد، بهترین برنامه، تقویت متناوبه."},
+{q:"خاموشی چیه؟",options:["استفاده از تقویت برای کاهش یا حذف رفتار نامطلوب","افزایش رفتار","ارائه محرک آزارنده","تقویت مثبت"],answer:0,explanation:"خاموشی: وقتی از تقویت برای کاهش یا حذف رفتار نامطلوب استفاده می‌شه."},
+{q:"شکل‌دهی چیه؟",options:["تقویت تقریب‌های نزدیک به رفتار هدف","تنبیه رفتار نامطلوب","حذف محرک مثبت","ارائه محرک آزارنده"],answer:0,explanation:"شکل‌دهی: تقویت تقریب‌های نزدیک به رفتار هدف تا رسیدن به رفتار هدف."},
+{q:"تقویت افتراقی از چی ساخته شده؟",options:["تقویت مثبت و خاموشی","تقویت منفی و تنبیه","تنبیه مثبت و منفی","فقط تقویت مثبت"],answer:0,explanation:"تقویت افتراقی ترکیبی از فنون تقویت مثبت و خاموشیه."},
+{q:"قراردادهای رفتاری چیه؟",options:["توافق‌های مهم بین رفتاردرمانگر و مراجع","توافق بین دو مراجع","توافق بین دو درمانگر","توافق بین خانواده و مدرسه"],answer:0,explanation:"قراردادهای رفتاری: توافق‌های مهم بین رفتاردرمانگر و مراجع؛ اظهاراتی که رفتارهای قابل تغییر یا تشویق‌ها و تنبیهات رو مشخص می‌کنن."},
+{q:"اقتصاد ژتونی چیه؟",options:["تو محیطی ساختاریافته، رفتارهای مطلوب با ارائه ژتون تقویت می‌شن","تقویت با پول","تقویت با غذا","تقویت با استراحت"],answer:0,explanation:"اقتصاد ژتونی: تو محیطی ساختاریافته، رفتارهای مطلوب با ارائه ژتون تقویت می‌شن."},
+{q:"اقتصاد ژتونی چند ویژگی مؤثر داره؟",options:["۴","۳","۵","۲"],answer:0,explanation:"چهار ویژگی: ۱) شناسایی رفتار هدف ۲) تقویت‌کننده‌ها ۳) سیستم نظارتی ۴) تعمیم به جامعه."},
+{q:"آموزش مهارت‌های اجتماعی شامل چیا می‌شه؟",options:["جرئت‌ورزی، ارتباط، حل تعارض","فقط جرئت‌ورزی","فقط ارتباط","فقط حل تعارض"],answer:0,explanation:"آموزش مهارت‌های اجتماعی شامل جرئت‌ورزی، ارتباط، حل تعارض و مهارت‌های اجتماعی مطلوب دیگه‌ست."},
+{q:"سه فن کاهش رفتار از طریق تنبیه کدومن؟",options:["تنبیه‌های کلاسی، اصلاح مکرر رفتار، جریمه کردن","تنبیه مثبت، تنبیه منفی، خاموشی","تقویت مثبت، تقویت منفی، خاموشی","شکل‌دهی، تقویت افتراقی، قرارداد"],answer:0,explanation:"سه فن: ۱) تنبیه‌های کلاسی ۲) اصلاح مکرر رفتار ۳) جریمه کردن."},
+{q:"تو نظریه شخصیت رفتاردرمانی، حضور محرک‌های آزارنده چه نقشی داره؟",options:["نقش عمده‌ای در گسترش و تداوم رفتار ناسازگارانه","هیچ نقشی","فقط تو کودکی","فقط تو بزرگسالی"],answer:0,explanation:"حضور محرک‌های آزارنده نقش عمده‌ای در گسترش و تداوم رفتار ناسازگارانه داره."},
+{q:"چهار عامل اصلی فرایند مشاوره رفتارگرایی کدومن؟",options:["فرآیند درمانی، نقش درمانگر، روابط درمانی، طول مدت درمان","تشخیص، درمان، پیگیری، پایان","مشکل، ائتلاف، تجهیز، ترک","برقراری ارتباط، بررسی، تفسیر، جهت‌دهی"],answer:0,explanation:"چهار عامل: ۱) فرآیند درمانی ۲) نقش درمانگر ۳) روابط درمانی ۴) طول مدت درمان."},
+{q:"شش مرحله فرایند درمانی (کیلول و لیبرمن، ۱۹۸۶) کدومن؟",options:["ارزیابی رفتاری، نقاط قوت، فرآیند درمانی، ارزیابی مجدد، تقویت‌کننده‌ها، اهداف","تشخیص، درمان، پیگیری، پایان، ارزیابی، ترخیص","مشکل، ائتلاف، تجهیز، ترک، پیگیری، ارزیابی","برقراری ارتباط، بررسی، تفسیر، جهت‌دهی، پیگیری، پایان"],answer:0,explanation:"شش مرحله: ۱) ارزیابی رفتاری ۲) شناسایی نقاط قوت ۳) فرآیند درمانی ۴) ارزیابی رفتارهای ناسازگار ۵) شناسایی تقویت‌کننده‌ها ۶) ایجاد اهداف درمانی."},
+{q:"فرایند ایجاد اهداف درمانی (کورمریر و ناریویس، ۲۰۰۳) چند مرحله داره؟",options:["۴","۳","۵","۲"],answer:0,explanation:"چهار مرحله: ۱) توضیح نیت اهداف ۲) شناسایی پیامدهای مطلوب ۳) بررسی حقیقی بودن اهداف از دیدگاه سود و زیان ۴) تعریف اهداف بر اساس شناسایی رفتارها، روش‌های تغییر و میزان تغییرات مطلوب."},
+{q:"نقش درمانگر تو رفتاردرمانی چطوریه؟",options:["تمامی جنبه‌های رفتاردرمانی بین درمانگر و مراجع به طور مشترک مشخص می‌شه","درمانگر همه‌چی رو تعیین می‌کنه","مراجع همه‌چی رو تعیین می‌کنه","درمانگر فقط تشخیص می‌ده"],answer:0,explanation:"تمامی جنبه‌های رفتاردرمانی بین درمانگر و مراجع به طور مشترک مشخص می‌شه."},
+{q:"رابطه درمانی تو رفتاردرمانی چطوریه؟",options:["رفتاردرمانگران فعال‌ان و با مراجعان تعاملی مستقیم دارن","رفتاردرمانگران غیرفعال‌ان","رابطه درمانی مهم نیست","رابطه درمانی فقط تو پایان درمان مهمه"],answer:0,explanation:"رفتاردرمانگران فعال‌ان و با مراجعان تعاملی مستقیم دارن. رابطه درمانی خیلی مهمه و جزئی از فرآیند تغییر رفتار محسوب می‌شه."},
+{q:"رفتاردرمانگرهای امروزی چطور توصیف می‌شن؟",options:["درک‌کننده، مهربان، همراه و رازدار","قالبی، خشک، مکانیکی و غیرقابل انعطاف","بی‌احساس و سرد","فقط کارشناس رفتاری"],answer:0,explanation:"رفتاردرمانگرهای امروزی غالباً به عنوان افراد درک‌کننده، مهربان، همراه و رازدار توصیف می‌شن (جیمز و جیللند، ۲۰۰۳)."},
+{q:"طول مدت درمان تو رفتاردرمانی چقدره؟",options:["عمدتاً ۲۵ تا ۳۰ جلسه","عمدتاً ۱۰ تا ۲۰ جلسه","عمدتاً ۵۰ تا ۶۰ جلسه","عمدتاً ۱۰۰ جلسه"],answer:0,explanation:"به رفتاردرمانی به مثابه درمان کوتاه‌مدت نگاه می‌شه؛ عمدتاً ۲۵ تا ۳۰ جلسه."},
+{q:"سه فرایند اصلی طول درمان کدومن؟",options:["ارزیابی رفتارهای ناسازگارانه، اجرای مداخله‌ها به محض امکان، اجرای پیشرفت درمان بر اساس اهداف قابل اندازه‌گیری","تشخیص، درمان، پیگیری","مشکل، ائتلاف، تجهیز","برقراری ارتباط، بررسی، تفسیر"],answer:0,explanation:"سه فرایند: ۱) ارزیابی رفتارهای ناسازگارانه و مشخص کردن رفتار هدف ۲) اجرای مداخله‌ها به محض امکان ۳) اجرای پیشرفت درمان بر اساس اهداف قابل اندازه‌گیری."},
+{q:"رفتاردرمانی تو توانبخشی برای چه کاربردهایی استفاده می‌شه؟",options:["سوء مصرف مواد، آسیب‌های مغزی، اختلالات رشدی، اختلالات شناختی، اسکیزوفرنیا، افسردگی و دردهای مزمن","فقط سوء مصرف مواد","فقط آسیب‌های مغزی","فقط اختلالات رشدی"],answer:0,explanation:"کاربردها: سوء مصرف مواد، آسیب‌های مغزی، اختلالات رشدی، اختلالات شناختی، اسکیزوفرنیا، افسردگی و دردهای مزمن."},
+{q:"ظهور نشانه تو سوء مصرف مواد از کدوم نوع شرطی‌سازیه؟",options:["کلاسیک","کنشگر","شناختی","اجتماعی"],answer:0,explanation:"ظهور نشانه: کلاسیک؛ گسستن پیوند بین محیط و محرک‌های انگیزشی که فرد رو برای جست‌وجوی مواد برمی‌انگیزاند."},
+{q:"حساسیت پنهان تو سوء مصرف مواد از کدوم نوع شرطی‌سازیه؟",options:["کلاسیک","کنشگر","شناختی","اجتماعی"],answer:0,explanation:"حساسیت پنهان: کلاسیک؛ تصور موقعیتی که هر بار جرعه نوشیدن ← تهوع و استفراغ شدید."},
+{q:"تقویت اجتماع تو سوء مصرف مواد از کدوم نوع شرطی‌سازیه؟",options:["کنشگر","کلاسیک","شناختی","اجتماعی"],answer:0,explanation:"تقویت اجتماع: کنشگر؛ استفاده از تقویت اجتماع، دوستان و اقوام برای ترک مواد."},
+{q:"مؤثرترین و سریع‌ترین روش تغییر رفتار تو سوء مصرف مواد چیه؟",options:["الگوگیری روان‌شناختی","ظهور نشانه","حساسیت پنهان","تقویت اجتماع"],answer:0,explanation:"الگوگیری روان‌شناختی: مؤثرترین و سریع‌ترین روش برای تغییر رفتاری؛ به ویژه زمانی ارزشمنده که مراجع همزمان مهارت‌های پرهیز از مواد، مهارت‌های اجتماعی و فردی رو یاد بگیره."},
+{q:"شش راهبرد تقویت مثبت تو آسیب مغزی (لویس و یتر، ۱۹۹۱) کدومن؟",options:["فوراً بعد از پاسخ، گفتن کدوم رفتار تقویت می‌شه، آهستگی و آرامش، گام‌های کوچک، ترکیب تقویت‌کننده‌ها، برنامه ادامه‌دار","فقط فوراً بعد از پاسخ","فقط گفتن کدوم رفتار تقویت می‌شه","فقط ترکیب تقویت‌کننده‌ها"],answer:0,explanation:"شش راهبرد: ۱) فوراً بعد از پاسخ ۲) گفتن کدوم رفتار تقویت می‌شه ۳) آهستگی و آرامش ۴) گام‌های کوچک ۵) ترکیب تقویت‌کننده‌ها ۶) برنامه ادامه‌دار."},
+{q:"محروم‌سازی تو آسیب مغزی چقدر باید باشه؟",options:["۵ تا ۱۰ دقیقه","۳۰ دقیقه","۱ ساعت","۲ ساعت"],answer:0,explanation:"مدت تحریم باید کوتاه باشه و به پنج تا ده دقیقه محدود بشه (چون افراد دارای آسیب مغزی دچار مشکلات حافظه می‌شن و محروم‌سازی طولانی نتیجه‌ای نداره)."},
+{q:"تمرین مثبت برای کی مؤثره؟",options:["به ویژه برای افرادی که توانایی تصمیم‌گیری درست و بجا رو ندارن","برای همه","فقط برای کودکان","فقط برای سالمندان"],answer:0,explanation:"تمرین مثبت به ویژه مؤثر برای افرادی که توانایی تصمیم‌گیری درست و بجا رو ندارن."},
+{q:"آداب توالت تو عقب‌ماندگی ذهنی مال کیه؟",options:["آزرین و فاکس (۱۹۷۱)","لویس و یتر (۱۹۹۱)","کیلول و لیبرمن (۱۹۸۶)","ویلسون (۲۰۰۰)"],answer:0,explanation:"آزرین و فاکس (۱۹۷۱) نخستین کسایی بودن که اجرای روش‌های گوناگون رو همگام با آموزش آداب توالت گزارش کردن."},
+{q:"هرزه‌خواری چیه؟",options:["بلعیدن مواد غیرخوراکی","بلعیدن غذا","بلعیدن دارو","بلعیدن آب"],answer:0,explanation:"هرزه‌خواری: بلعیدن مواد غیرخوراکی؛ تو بیش از ۲۵ درصد عقب‌ماندگان ذهنی دیده می‌شه و در برابر درمان خیلی مقاومه."},
+{q:"هرزه‌خواری تو چند درصد عقب‌ماندگان ذهنی دیده می‌شه؟",options:["بیش از ۲۵ درصد","بیش از ۱۰ درصد","بیش از ۵۰ درصد","بیش از ۵ درصد"],answer:0,explanation:"هرزه‌خواری تو بیش از ۲۵ درصد عقب‌ماندگان ذهنی دیده می‌شه."},
+{q:"برای آموزش کنترل خود تو تکانشگری چیکار باید کرد؟",options:["به طور تدریجی، زمان رسیدن به هدف یا تقویت‌کننده مطلوب رو زیاد کرد","فوراً تقویت رو قطع کرد","تنبیه شدید کرد","نادیده گرفت"],answer:0,explanation:"برای آموزش کنترل خود باید به طور تدریجی، زمان رسیدن به هدف یا تقویت‌کننده مطلوب رو زیاد کرد تا فرد توانایی کنترل بر خودش رو به دست بیاره."},
+{q:"سایر رفتارهای هدف تو اختلالات رشدی کدومن؟",options:["فعالیت‌های زندگی روزمره، سخن گفتن و ارتباط، آماده‌سازی برای جامعه، کنترل پرخاشگری، اختلال‌های خواب، کاهش دخانیات","فقط فعالیت‌های زندگی روزمره","فقط سخن گفتن","فقط کنترل پرخاشگری"],answer:0,explanation:"سایر رفتارهای هدف: ۱) فعالیت‌های زندگی روزمره ۲) سخن گفتن، زبان و برقراری ارتباط ۳) آماده‌سازی برای ورود به جامعه ۴) کنترل رفتارهای پرخاشگرانه و آشفته ۵) اختلال‌های خواب ۶) کاهش مصرف دخانیات."},
+{q:"نقل‌قول فرانکل (۱۹۸۴) درباره رنج چیه؟",options:["«رنج کشیدن تو زندگی به آدم چنان اقبالی می‌ده تا معنای زندگی خودش رو از رنجی که می‌بره پیدا کنه»","«رنج بی‌معناه»","«رنج باید انکار بشه»","«رنج فقط برای معلول‌هاست»"],answer:0,explanation:"این سوال مال فصل ششه و تو این فصل نیست؛ ولی یادت باشه فرانکل مال معنادرمانیه."},
+{q:"سه ویژگی اقتصاد ژتونی مؤثر کدومن؟",options:["شناسایی رفتار هدف، تقویت‌کننده‌ها، سیستم نظارتی و تعمیم به جامعه","فقط شناسایی رفتار هدف","فقط تقویت‌کننده‌ها","فقط سیستم نظارتی"],answer:0,explanation:"چهار ویژگی: ۱) شناسایی رفتار هدف ۲) تقویت‌کننده‌ها ۳) سیستم نظارتی و ارزیابی تأثیر ۴) تعمیم به جامعه."},
+{q:"اصلاح مکرر رفتار چیه؟",options:["اصلاح مکرر رفتارهای منفی در حالی که رفتارهای مثبت تمرین می‌شن","فقط تنبیه رفتار منفی","فقط تقویت رفتار مثبت","حذف محرک مثبت"],answer:0,explanation:"اصلاح مکرر رفتار: اصلاح مکرر رفتارهای منفی در حالی که رفتارهای مثبت تمرین می‌شن."},
+{q:"جریمه کردن چیه؟",options:["از دست دادن تقویت‌کننده‌ها در پی رفتار نامطلوب","ارائه محرک آزارنده","حذف محرک مثبت","تقویت مثبت"],answer:0,explanation:"جریمه کردن: از دست دادن تقویت‌کننده‌ها در پی رفتار نامطلوب."},
+{q:"تنبیه‌های کلاسی چیه؟",options:["یکی از سه فن کاهش رفتار از طریق تنبیه","یکی از فنون شرطی‌سازی کلاسیک","یکی از فنون اقتصاد ژتونی","یکی از فنون آموزش مهارت‌های اجتماعی"],answer:0,explanation:"تنبیه‌های کلاسی یکی از سه فن کاهش رفتار از طریق تنبیهه."},
+{q:"پاسخ شرطی از چه راه‌هایی ارزیابی می‌شه؟",options:["توان (قدرت)، فراوانی، طول مدت بین ارائه CS و پاسخ، تداوم","فقط فراوانی","فقط توان","فقط تداوم"],answer:0,explanation:"پاسخ شرطی از طریق توان (قدرت)، فراوانی، طول مدت بین ارائه CS و پاسخ، و تداوم آن ارزیابی می‌شه."},
+{q:"چهار عامل مؤثر بر اثربخشی شرطی‌سازی کلاسیک کدومن؟",options:["CS مقدم بر US، تأخیر بین US و CS، تعداد کوشش‌ها، ویژگی خاص محرک‌ها","US مقدم بر CS، تأخیر، تعداد کوشش‌ها، ویژگی محرک‌ها","CS مقدم بر US، حذف تأخیر، تعداد کم کوشش، ویژگی محرک‌ها","US مقدم بر CS، حذف تأخیر، تعداد کم کوشش، ویژگی محرک‌ها"],answer:0,explanation:"چهار عامل: ۱) CS مقدم بر US ۲) تأخیر بین US و CS ۳) تعداد کوشش‌ها ۴) ویژگی خاص محرک‌ها."},
+{q:"تو نظریه شخصیت رفتاردرمانی، چرا فرد رفتارش رو تقویت می‌کنه؟",options:["برای ممانعت یا فرار از شرایط آزارنده","برای لذت بردن","برای قدرت","برای توجه"],answer:0,explanation:"فرد برای ممانعت یا فرار از شرایط آزارنده، رفتارش رو تقویت می‌کنه."},
+{q:"مثال پسربچه تو نظریه شخصیت رفتاردرمانی چه پیامدهایی داره؟",options:["عصبانیت، افسردگی، احساس گناه و اضطراب یا پناه بردن به دنیای خیالی","فقط عصبانیت","فقط افسردگی","هیچ پیامدی"],answer:0,explanation:"ممکنه عصبانیت، افسردگی، احساس گناه و اضطراب بروز بده یا به دنیای خیالی پناه ببره."},
+{q:"خلاصه فرایند مشاوره رفتارگرایی چیه؟",options:["ارزیابی رفتار ناسازگار و تعریف رفتار هدف، انتخاب راهبرد، اجرا و ارزیابی مستمر","فقط تشخیص","فقط درمان","فقط پیگیری"],answer:0,explanation:"فرایند مشاوره رفتارگرایی: ارزیابی رفتار ناسازگار و تعریف رفتار هدف، انتخاب راهبرد، اجرا و ارزیابی مستمر."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع رفتاردرمانی — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

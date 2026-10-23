@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>Quizly · کارآفرینی و اشتغال‌پذیری · کلید واژه‌های طلایی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;
+--green:#1f9d73;--yellow:#c98112;--red:#c83b58;
+--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme="dark"]{
+--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;
+--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+margin:0;font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;color:var(--ink);
+background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);
+transition:.25s
+}
+[data-theme="dark"] body{
+background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)
+}
+.app{max-width:1180px;margin:auto;padding:16px}
+
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px}
+.logo-icon{
+width:54px;height:54px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+background:rgba(255,255,255,.3);border:1px solid rgba(249,71,121,.25);
+box-shadow:0 10px 30px rgba(249,71,121,.15);overflow:hidden
+}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.brand h1{margin:0;font-size:20px}
+.brand small{display:block;color:var(--muted);font-size:11px}
+button{
+border:1px solid var(--line);background:var(--surface);color:var(--ink);
+padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;min-height:44px;transition:.15s
+}
+button:hover{border-color:var(--pink);transform:translateY(-1px)}
+
+.hero{
+position:relative;overflow:hidden;
+background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);
+padding:32px 22px;border-radius:28px;color:white;box-shadow:var(--shadow)
+}
+.hero:after{
+content:"ENTRE";position:absolute;left:-15px;bottom:-42px;
+font-size:130px;font-weight:900;opacity:.08;line-height:1
+}
+.hero h2{margin:0;font-size:29px;position:relative;z-index:1}
+.hero p{margin:7px 0 16px;max-width:700px;opacity:.95;position:relative;z-index:1}
+.pills{display:flex;flex-wrap:wrap;gap:7px;position:relative;z-index:1}
+.pill{
+background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+padding:5px 11px;border-radius:99px;font-size:12px
+}
+
+.notice{
+margin:16px 0;background:var(--surface);border:1px solid var(--line);
+border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;
+color:var(--muted);font-size:14px
+}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}
+.stat span{font-size:12px;color:var(--muted)}
+
+nav{
+position:sticky;top:6px;z-index:10;display:flex;gap:6px;overflow-x:auto;
+background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;
+border:1px solid var(--line);border-radius:18px;margin:14px 0;scrollbar-width:none
+}
+nav::-webkit-scrollbar{display:none}
+[data-theme="dark"] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px}
+nav a:hover{background:var(--soft);color:var(--pink)}
+
+.section{margin-top:32px;scroll-margin-top:80px}
+.section-title{font-size:22px;margin-bottom:3px}
+.section-sub{color:var(--muted);margin-top:0;font-size:13px}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card h3{margin-top:0}
+
+.table-wrap{overflow-x:auto;border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:500px}
+th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:right;font-size:13px}
+th{color:var(--pink);background:var(--surface2)}
+tr:hover td{background:var(--soft)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:13px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+
+.search{
+width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);
+background:var(--surface);color:var(--ink);font:inherit;font-size:15px;margin:10px 0
+}
+
+.footer{padding:25px 0;color:var(--muted);text-align:center;font-size:12px}
+
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:520px){
+.grid2{grid-template-columns:1fr}
+.hero h2{font-size:24px}
+.hero{padding:25px 17px}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo-icon{width:44px;height:44px}
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+<header>
+  <div class="brand">
+    <div class="logo-icon">
+      <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly">
+    </div>
+    <div>
+      <h1>Quizly</h1>
+      <small>کارآفرینی و اشتغال‌پذیری · کلید واژه‌های طلایی</small>
+    </div>
+  </div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>کارآفرینی و اشتغال‌پذیری</h2>
+  <p>تمام کلید واژه‌های ۶ فصل — بدون تکرار، آماده امتحان ۴ گزینه‌ای، به زبان ساده</p>
+  <div class="pills">
+    <span class="pill">۶ فصل</span>
+    <span class="pill">۳۰۰+ کلید واژه</span>
+    <span class="pill">۱۰۰+ دام امتحانی</span>
+    <span class="pill">۱۵+ نظریه‌پرداز</span>
+    <span class="pill">قواعد طلایی</span>
+  </div>
+</section>
+
+<div class="notice">
+  <b>راهنمای مطالعه:</b> اول از نوار پایین فصل رو انتخاب کن، بعد جدول کلید واژه‌ها رو بخون. آخرش «قواعد طلایی» رو مرور کن. برای جستجوی سریع سر امتحان، از باکس جستجو استفاده کن.
+</div>
+
+<div class="stats">
+  <div class="stat"><b>۶</b><span>فصل</span></div>
+  <div class="stat"><b>۳۰۰+</b><span>کلید واژه</span></div>
+  <div class="stat"><b>۱۰۰+</b><span>دام امتحانی</span></div>
+  <div class="stat"><b>۱۵+</b><span>نظریه‌پرداز</span></div>
+</div>
+
+<nav>
+  <a href="#ch1">فصل ۱</a>
+  <a href="#ch2">فصل ۲</a>
+  <a href="#ch3">فصل ۳</a>
+  <a href="#ch4">فصل ۴</a>
+  <a href="#ch5">فصل ۵</a>
+  <a href="#ch6">فصل ۶</a>
+  <a href="#golden">قواعد طلایی</a>
+</nav>
+
+<div class="card">
+  <input id="search" class="search" placeholder="🔍 جستجو در کلید واژه‌ها...">
+</div>
+
+<!-- فصل ۱ -->
+<section id="ch1" class="section">
+  <h2 class="section-title">فصل ۱ · مقدمه و کلیات کارآفرینی</h2>
+  <p class="section-sub">تعاریف، شومپیتر، انواع، مراحل کانتر، ویژگی‌ها، موانع ایران</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>تعریف کارآفرینی (احمدپور ۱۳۷۹)</td><td>فرآیند ایجاد ارزش از راه تشکیل مجموعه <b>منحصربه‌فردی از منابع</b> برای بهره‌گیری از فرصت‌ها</td></tr>
+          <tr><td>ریشه کلمه کارآفرینی</td><td><b>Entreprendre</b> فرانسوی = <b>متعهد شدن</b></td></tr>
+          <tr><td>پدر علم کارآفرینی</td><td><b>ژوزف شومپیتر</b></td></tr>
+          <tr><td>مشخصه اصلی کارآفرین (شومپیتر)</td><td><b>نوآوری</b></td></tr>
+          <tr><td>کار کارآفرین (شومپیتر)</td><td><b>تخریب خالق</b></td></tr>
+          <tr><td>سال نظریه شومپیتر</td><td><b>۱۹۳۴</b> (همزمان با رکود بزرگ)</td></tr>
+          <tr><td>کتاب شومپیتر</td><td><b>نظریه اقتصاد پویا</b> — تعادل پویا از طریق نوآوری</td></tr>
+          <tr><td>اولین مطرح‌کننده کارآفرینی</td><td><b>کانتیلون</b></td></tr>
+          <tr><td>اولین کاربر اصطلاح کارآفرین به معنای فعلی</td><td><b>ژوزف شومپیتر</b></td></tr>
+          <tr><td>موج اول کارآفرینی</td><td><b>اواسط دهه ۱۹۵۰</b> — کتاب‌ها و تاریخچه شرکت‌ها</td></tr>
+          <tr><td>موج دوم کارآفرینی</td><td><b>دهه ۱۹۶۰</b> — رشته‌های آموزشی مهندسی و بازرگانی</td></tr>
+          <tr><td>موج سوم کارآفرینی</td><td><b>اواخر دهه ۱۹۷۰</b> — علاقه دولت‌ها و تحقیقات</td></tr>
+          <tr><td>۳ نوع کارآفرینی</td><td><b>آزاد و مستقل + درون‌سازمانی + سازمانی</b></td></tr>
+          <tr><td>کارآفرینی درون‌سازمانی</td><td>خودِ <b>فرآیند</b> کارآفرینانه در سازمان</td></tr>
+          <tr><td>کارآفرینی سازمانی</td><td><b>بستر و شرایط</b> برای اجرای فرآیند</td></tr>
+          <tr><td>مراحل درون‌سازمانی (کانتر ۱۹۸۳)</td><td><b>مشکل ← ائتلاف ← تجهیز و تکمیل ← ترک/جانشینی</b></td></tr>
+          <tr><td>ابداع Intrapreneurship</td><td><b>پینکات ۱۹۸۵</b></td></tr>
+          <tr><td>انواع کارآفرینی سازمانی (هانس شول هامر)</td><td><b>اداری + فرصت‌گرایانه + تقلیدی + اکتسابی + پرورشگاهی</b></td></tr>
+          <tr><td>دشمن کارآفرینی مستقل</td><td><b>بازار</b></td></tr>
+          <tr><td>دشمن کارآفرینی سازمانی</td><td><b>فرهنگ شرکت</b></td></tr>
+          <tr><td>تعریف دراکر (۲۰۰۵)</td><td>کارآفرینی یک <b>رفتار</b> است، نه صفت شخصیتی</td></tr>
+          <tr><td>تعریف مک‌کله‌لند (۱۹۶۱)</td><td>کارآفرینی <b>یک شیوه زندگی</b></td></tr>
+          <tr><td>تعریف جعفری تیمز (۱۹۹۴)</td><td>کارآفرین <b>از هیچ، چیز باارزش</b> می‌سازد</td></tr>
+          <tr><td>۱۰ ویژگی کارآفرین (روان‌شناسان)</td><td>خطرپذیری + استقلال‌طلبی + مرکز کنترل درونی + نیاز به موفقیت + خلاقیت + اعتماد به نفس + تحمل ابهام + پشتکار + آرمان‌گرایی + پیش‌قدم بودن</td></tr>
+          <tr><td>۵ ویژگی کارآفرین (کارلند)</td><td>آینده‌نگر + مصمم + انگیزش + استقلال و خلاقیت + ریسک‌پذیری و تحمل ابهام</td></tr>
+          <tr><td>موانع کارآفرینی ایران (۳ دسته)</td><td><b>عوامل ضد انگیزشی + موانع قانونی + نارسایی‌های محیط تجارتی</b></td></tr>
+          <tr><td>وضعیت ایران تا برنامه سوم</td><td>توجه چندانی به کارآفرینی <b>نشده بود</b></td></tr>
+          <tr><td>برداشت غلط از کارآفرینی</td><td>مترادف با <b>اشتغال‌زایی</b> — در حالی که مفهومی وسیع‌تر دارد</td></tr>
+          <tr><td>پیامدهای مثبت کارآفرینی</td><td>خلاقیت + نوآوری + اعتماد به نفس + توسعه تکنولوژی + رفاه عمومی</td></tr>
+          <tr><td>ابزار سنجش سازمانی (کوارتکو ۱۹۹۰)</td><td>۵ عامل ← <b>۲۱ عامل</b> در ۳ گروه: <b>حمایت مدیریت + ساختار سازمانی + پاداش و دسترسی به منابع</b></td></tr>
+          <tr><td>مدل ترغیب شرکتی (کوراتکو و هاجتس)</td><td>توسعه بینش + تشویق نوآوری + جو کارآفرینانه + توسعه تیم‌ها</td></tr>
+          <tr><td>مدل کارآفرینی شرکتی (فرای)</td><td>متعهد نمودن سازمان + تبیین مدل + توسعه فرهنگ + شناسایی استعدادها + پاداش</td></tr>
+          <tr><td>مشکلات کارآفرینی سازمانی</td><td>ناپیوستگی + سود کوتاه‌مدت به عنوان معیار + نبود فرهنگ کارآفرینی</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۲ -->
+<section id="ch2" class="section">
+  <h2 class="section-title">فصل ۲ · خلاقیت</h2>
+  <p class="section-sub">تعریف، تفاوت‌ها، ۶ عامل، ۶ کلاه، ۱۲ تکنیک، موانع</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>تعریف خلاقیت (کریمی ۱۳۸۶)</td><td>به‌کارگیری توانایی‌های ذهنی برای ایجاد <b>فکر یا مفهوم جدید</b></td></tr>
+          <tr><td>خلاقیت (احمدپور ۱۳۷۹)</td><td><b>قابل آموزش</b> است</td></tr>
+          <tr><td>نوآوری</td><td><b>شکل عالی‌تر خلاقیت</b> + فرآیند پایانی آن</td></tr>
+          <tr><td>ابتکار</td><td>ایجاد هر چیزی که <b>قبلاً وجود نداشته</b></td></tr>
+          <tr><td>خلاقیت (تفکیک)</td><td>ایجاد هر چیز <b>جدید و باارزش</b></td></tr>
+          <tr><td>نوآوری (تفکیک)</td><td>ایجاد چیز جدید با <b>ارزش مهم</b> برای فرد/گروه/سازمان/صنعت/اجتماع</td></tr>
+          <tr><td>اختراع</td><td>تبدیل ایده از ذهن به <b>طرح یا نمونه</b> — تا تو ذهن است، اختراع نیست</td></tr>
+          <tr><td>تازگی</td><td>خلق چیز جدید نیست — بیشتر <b>بُعد زمان</b></td></tr>
+          <tr><td>۶ عامل خلاقیت (استرنبرگ و اوهارا)</td><td><b>دانش + توانایی عقلانی + سبک فکری + انگیزش + شخصیت + محیط</b></td></tr>
+          <tr><td>۳ ویژگی خلاقیت</td><td><b>بنیانی انگیزشی + مبتنی بر اراده + برنامه‌پذیر</b></td></tr>
+          <tr><td>۴ مرحله خلاقیت (آموزش‌پذیری)</td><td><b>ادراک ← پرورش ← الهام ← نوآوری</b></td></tr>
+          <tr><td>کلاه سفید</td><td>واقعیت‌ها، بدون قضاوت</td></tr>
+          <tr><td>کلاه سیاه</td><td>جنبه‌های منفی و بدبینانه</td></tr>
+          <tr><td>کلاه سرخ</td><td>هیجانی و احساسی، بدون دلیل</td></tr>
+          <tr><td>کلاه سبز</td><td>تفکر جانبی، خلاق</td></tr>
+          <tr><td>کلاه زرد</td><td>مثبت و خوشبینانه اما واقعی</td></tr>
+          <tr><td>کلاه آبی</td><td><b>کلاه نظارت</b> — تنظیم فرآیند تفکر</td></tr>
+          <tr><td>طوفان ذهنی (ابداع)</td><td><b>الکس اس اسپورن، ۱۹۳۸</b></td></tr>
+          <tr><td>۴ قاعده طوفان ذهنی</td><td>هیچ قضاوتی + استقبال از همه ایده‌ها + کمیت هدف + ترکیب بیشتر بهتر</td></tr>
+          <tr><td>تکنیک دلفی (معرفی)</td><td><b>داکلی و هلمر، ۱۹۶۴</b></td></tr>
+          <tr><td>ویژگی دلفی</td><td>کتبی + بی‌نام + <b>بدون رویارویی</b> + چندنوبتی تا اتفاق آرا</td></tr>
+          <tr><td>تکنیک PMI</td><td>مثبت ← منفی ← جالب</td></tr>
+          <tr><td>حروف DOIT</td><td><b>Define + Open + Identify + Transform</b></td></tr>
+          <tr><td>حروف SCAMPER</td><td>Substitution + Combine + Adapt + Magnify + Put to other uses + Elimination + Reverse</td></tr>
+          <tr><td>شکوفه نیلوفر آبی (طراح)</td><td><b>یاسوآ ماتسومورا</b></td></tr>
+          <tr><td>تکنیک واژه تصادفی (مثال)</td><td>تلویزیون + <b>پنیر</b> ← تلویزیون سوراخ‌دار چندکاناله</td></tr>
+          <tr><td>آمار فراموشی</td><td><b>۲۵٪ در ۲۴ ساعت اول — ۸۵٪ در هفته اول</b></td></tr>
+          <tr><td>آمار خلاقیت کودکان</td><td><b>۹۵٪ در ۴ سالگی — ۴٪ در ۷ سالگی</b></td></tr>
+          <tr><td>تفاوت خلاق/مخترع/نوآور/کارآفرین</td><td>خلاق=ایده‌سازی — مخترع=ایده به عملی — نوآور=عملی به کالا — کارآفرین=<b>تبدیل به ارزش</b></td></tr>
+          <tr><td>کارآفرینی از نظر شومپیتر</td><td><b>تخریب خلاق</b></td></tr>
+          <tr><td>تکنیک‌های گروهی خلاقیت</td><td>طوفان فکری + دلفی</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۳ -->
+<section id="ch3" class="section">
+  <h2 class="section-title">فصل ۳ · تأسیس و راه‌اندازی کسب‌وکار</h2>
+  <p class="section-sub">۷ نوع شرکت، قرارداد کار، بیمه بیکاری، مالیات، بیمه</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>۷ نوع شرکت تجاری</td><td>سهامی (عام/خاص) + با مسئولیت محدود + تضامنی + مختلط غیرسهامی + مختلط سهامی + نسبی + تعاونی تولید و مصرف</td></tr>
+          <tr><td>شرکت سهامی</td><td>سرمایه به <b>سهام</b> تقسیم — مسئولیت محدود به مبلغ اسمی سهام</td></tr>
+          <tr><td>حداقل شرکای سهامی</td><td><b>۳ نفر</b></td></tr>
+          <tr><td>سهامی عام</td><td>حداقل <b>۵۱٪</b> سهام از طریق <b>بورس</b> — تنها شرکت پذیرفته‌شده در بورس</td></tr>
+          <tr><td>سهامی خاص</td><td>تمام سرمایه توسط <b>موسسین</b></td></tr>
+          <tr><td>حداقل سرمایه سهامی عام</td><td><b>۵ میلیون ریال</b></td></tr>
+          <tr><td>حداقل سرمایه سهامی خاص</td><td><b>۱ میلیون ریال</b></td></tr>
+          <tr><td>شرکت با مسئولیت محدود</td><td>هر شریک فقط تا <b>میزان سرمایه خود</b> مسئول</td></tr>
+          <tr><td>نکته اسم شرکت با مسئولیت محدود</td><td>نباید متضمن اسم هیچ شریکی باشد — وگرنه <b>حکم شریک ضامن</b> در تضامنی</td></tr>
+          <tr><td>شرکت تضامنی</td><td>هر شریک مسئول <b>تمام قروض</b> شرکت</td></tr>
+          <tr><td>شرکت نسبی</td><td>هر شریک به <b>نسبت سرمایه</b> مسئول</td></tr>
+          <tr><td>شرکت نسبی</td><td><b>نزدیک‌ترین شرکت تجاری به شرکت مدنی</b></td></tr>
+          <tr><td>شرکت مختلط سهامی</td><td>مدیریت مخصوص <b>شریک یا شرکای ضامن</b></td></tr>
+          <tr><td>شرکت تعاونی تولید</td><td>بین <b>ارباب حرف</b> برای تولید و فروش اشیا</td></tr>
+          <tr><td>قرارداد کار (ماده ۷)</td><td><b>کتبی یا شفاهی</b> — موقت یا غیرموقت</td></tr>
+          <tr><td>۳ شرط صحت قرارداد کار (ماده ۹)</td><td><b>مشروعیت + معین بودن موضوع + عدم ممنوعیت قانونی و شرعی</b></td></tr>
+          <tr><td>قرارداد کار کتبی</td><td><b>۴ نسخه</b>: اداره کار + کارگر + کارفرما + شورای اسلامی/نماینده کارگر</td></tr>
+          <tr><td>ماده ۳۵ قانون کار</td><td>سه دسته مزد: <b>مزد ساعتی + کارمزد + کارمزد ساعتی</b></td></tr>
+          <tr><td>ساعت کار عادی</td><td><b>۸ ساعت در روز — ۴۴ ساعت در هفته</b></td></tr>
+          <tr><td>ساعت کار سخت و زیان‌آور</td><td><b>۶ ساعت در روز — ۳۶ ساعت در هفته</b></td></tr>
+          <tr><td>حق بیمه بیکاری</td><td><b>۳٪ مزد بیمه‌شده</b> — کلاً توسط <b>کارفرما</b></td></tr>
+          <tr><td>گروه‌های مستثنی از بیمه بیکاری</td><td>بازنشستگان و ازکارافتادگان کلی + صاحبان مشاغل آزاد و بیمه‌شدگان اختیاری + اتباع خارجی</td></tr>
+          <tr><td>حداقل سابقه بیمه بیکاری</td><td><b>۶ ماه</b></td></tr>
+          <tr><td>مهلت اعلام بیکاری</td><td><b>۳۰ روز</b> (با عذر موجه تا ۳ ماه)</td></tr>
+          <tr><td>میزان مقرری بیمه بیکاری</td><td><b>۵۵٪ متوسط مزد روزانه</b></td></tr>
+          <tr><td>حداکثر مدت مقرری</td><td>مجردین <b>۳۶ ماه</b> — متأهلین <b>۵۰ ماه</b></td></tr>
+          <tr><td>معافیت مالیاتی واحدهای تولیدی</td><td>خارج از <b>۱۲۰ کیلومتری تهران</b> و <b>۵۰ کیلومتری اصفهان</b> — به ترتیب <b>۴، ۶، ۴ سال</b></td></tr>
+          <tr><td>معافیت مراکز فرهنگی</td><td><b>۵ سال</b> — مناطق محروم <b>۸ سال</b></td></tr>
+          <tr><td>آمار آسیب مشاغل کوچک</td><td><b>از هر ۵ شغل، یکی</b></td></tr>
+          <tr><td>مورد ۷ پیشگیری از خطر</td><td>پشتیبان اطلاعات <b>خارج از اداره/شرکت</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۴ -->
+<section id="ch4" class="section">
+  <h2 class="section-title">فصل ۴ · نحوه ثبت و تأسیس شرکت</h2>
+  <p class="section-sub">تعریف، شرایط، مراحل، فواید، شرکت خدماتی</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>تعریف شرکت</td><td>اجتماع <b>دو یا چند شریک/سهام‌دار/مؤسس</b> با هدف مشترک</td></tr>
+          <tr><td>ملاک تشکیل شرکت</td><td><b>قصد و نیت</b> دو یا چند نفر</td></tr>
+          <tr><td>ثبت شرکت</td><td><b>اقدام نهایی</b> تأسیس — ماده ۹۵ قانون تجارت</td></tr>
+          <tr><td>مرجع ثبت در تهران</td><td><b>اداره کل ثبت شرکت‌ها و مؤسسات غیرتجاری</b></td></tr>
+          <tr><td>۴ شرط عمومی صحت قرارداد</td><td>قصد و رضایت + اهلیت + معین بودن موضوع + قانونی بودن موضوع</td></tr>
+          <tr><td>۵ شرط اختصاصی تشکیل شرکت</td><td>وجود شرکا + همکاری + تودیع سرمایه + اشتغال به فعالیت تجاری + تقسیم سود و زیان</td></tr>
+          <tr><td>حداقل شرکا</td><td><b>۲ نفر</b> — سقف ندارد</td></tr>
+          <tr><td>ثبت شرکت شرط تشکیل است؟</td><td><b>خیر</b> — الزام قانونی است، نه شرط تشکیل</td></tr>
+          <tr><td>حداقل سرمایه (قانون تجارت)</td><td><b>۱,۰۰۰,۰۰۰ ریال</b> — حداکثر ندارد</td></tr>
+          <tr><td>ماده ۵۷۳ قانون مدنی</td><td>شرکت اختیاری از <b>عقد، امتزاج اختیاری یا قبول مال مشاعاً</b></td></tr>
+          <tr><td>مثال شرکت قهری</td><td><b>مالکیت ناشی از توارث</b></td></tr>
+          <tr><td>ماده ۲۰ قانون تجارت</td><td>قالب‌های قابل ثبت: سهامی + مسئولیت محدود + تضامنی + نسبی + مختلط</td></tr>
+          <tr><td>ماده ۱۹۵ قانون تجارت</td><td>ثبت کلیه شرکت‌ها <b>الزامی</b></td></tr>
+          <tr><td>۶ گام اصلی ثبت</td><td>موضوع + نوع + سرمایه + مدت + مرکز اصلی + مدارک</td></tr>
+          <tr><td>موضوع شرکت</td><td>باید <b>مشروع</b> و <b>متضمن منافع عقلانی</b> باشد</td></tr>
+          <tr><td>تجاوز مدیران از موضوع</td><td>اثر قانونی ندارد + مسئولیت <b>متضامن</b> خسارت</td></tr>
+          <tr><td>مرکز اصلی شرکت</td><td>فقط مرکز اصلی برای اشخاص ثالث مهم است</td></tr>
+          <tr><td>تغییر مدت شرکت</td><td>در صلاحیت <b>مجمع عمومی فوق‌العاده</b> (ماده ۸۳)</td></tr>
+          <tr><td>انقضای مدت شرکت</td><td><b>انحلال خودکار</b></td></tr>
+          <tr><td>۳ فایده ثبت</td><td><b>رسمی شدن قراردادها + شفافیت + نظارت دولتی</b></td></tr>
+          <tr><td>۱۱ گام شرکت خدماتی</td><td>صورت‌جلسه + درخواست + اساسنامه + نام + ممیزی + حسابداری + حق‌الثبت + رسید + کارشناس + امضا + آگهی</td></tr>
+          <tr><td>ویژگی شرکت خدماتی</td><td>سرمایه کم + تحصیلات عالی لازم نیست + بازدهی زود</td></tr>
+          <tr><td>نام شرکت خدماتی</td><td>مطابق فرهنگ انقلاب اسلامی + بدون سابقه + غیرخارجی</td></tr>
+          <tr><td>حق‌الثبت</td><td>به <b>بانک ملی ایران</b></td></tr>
+          <tr><td>آگهی تأسیس</td><td>در <b>روزنامه کثیرالانتشار</b></td></tr>
+          <tr><td>مراجعه به دفاتر ثبت</td><td>برای عموم آزاد — هر ذی‌نفع می‌تواند سواد مصدق بگیرد</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۵ -->
+<section id="ch5" class="section">
+  <h2 class="section-title">فصل ۵ · نحوه نوشتن طرح کسب‌وکار</h2>
+  <p class="section-sub">ایده‌یابی، طرح، چیدمان، قیمت، بازاریابی، حسابداری، جریان نقد، سر به سر</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>رویکرد موفق</td><td><b>بازارمحور</b></td></tr>
+          <tr><td>تعریف ایده‌یابی (نظری ۱۳۹۴)</td><td><b>پژوهش و تحقیق سیستماتیک</b> برای یافتن ایده‌های جدید</td></tr>
+          <tr><td>۶ راه ایده‌یابی</td><td>سفر + رسانه‌ها + نمایشگاه + اینترنت + تجربه شغلی + اخبار</td></tr>
+          <tr><td>غربال کردن ایده‌ها</td><td>ابزار: <b>غربال مرحله‌ای</b> — هدف: جدا کردن خوب از ضعیف</td></tr>
+          <tr><td>طرح کسب‌وکار</td><td>مهم‌ترین <b>سند نوشته‌شده</b> — نقشه راه کارآفرین</td></tr>
+          <tr><td>هدف تهیه طرح</td><td><b>جذب سرمایه اولیه + جذب تیم مدیریت</b></td></tr>
+          <tr><td>مهم‌ترین بخش طرح</td><td><b>خلاصه مدیریتی</b></td></tr>
+          <tr><td>ذی‌نفعان طرح</td><td>جامعه + دولت + مشتریان + تأمین‌کنندگان + سرمایه‌گذاران + کارکنان</td></tr>
+          <tr><td>۱۲ بخش طرح</td><td>معرفی + خلاصه مدیریتی + تحلیل صنعت + دورنما + مدیریت محصول + بازاریابی + ساختار + زمان‌بندی + ریسک + حسابداری + توسعه + ارزیابی</td></tr>
+          <tr><td>تعریف چیدمان (نظری ۱۳۹۴)</td><td>نحوه <b>تعیین محل استقرار ماشین‌آلات، انبارها و میزهای کار</b></td></tr>
+          <tr><td>۳ نوع چیدمان</td><td><b>بر اساس فرآیند + بر اساس نوع کالا/خدمات + در حالت ثابت</b></td></tr>
+          <tr><td>تنها عنصر درآمدزا</td><td><b>قیمت</b></td></tr>
+          <tr><td>تفاوت بازاریابی و فروش</td><td>بازاریابی <b>قبل از تولید</b> — فروش <b>بعد از تولید</b></td></tr>
+          <tr><td>۵ مفهوم بازاریابی</td><td>نیاز + خواسته + تقاضا + کالا + مبادله</td></tr>
+          <tr><td>واحد اندازه‌گیری بازاریابی</td><td><b>معامله</b></td></tr>
+          <tr><td>۵ شرط مبادله</td><td>دو طرف + کالای ارزشمند + علاقه‌مندی + اختیار + توانایی ارتباط</td></tr>
+          <tr><td>۳ شرط معامله</td><td>دو کالا با ارزش + شرایط توافق + زمان و مکان توافق</td></tr>
+          <tr><td>آمار بازاریابی</td><td>جذب مشتری جدید <b>۵ تا ۱۰ برابر</b> — شرکت متوسط <b>۱۰ تا ۳۰٪</b> مشتریان را از دست می‌دهد — <b>۵٪ کاهش دفع</b> = <b>۲۵ تا ۸۵٪ افزایش سود</b></td></tr>
+          <tr><td>۳ نوع تبلیغات</td><td><b>اطلاعی</b> (ورود) + <b>ترغیب‌کننده</b> (رقابت) + <b>یادآوری‌کننده</b> (بلوغ)</td></tr>
+          <tr><td>علامت تجاری (احمدپور ۱۳۹۳)</td><td>شناسایی <b>سریع کالا</b> بدون خواندن اسم شرکت</td></tr>
+          <tr><td>حسابداری</td><td><b>فن است نه علم</b></td></tr>
+          <tr><td>+۸۰٪ تصمیمات شرکت</td><td>بر اساس <b>عملکرد مالی</b></td></tr>
+          <tr><td>۳ صورت‌حساب</td><td><b>سود و زیان + ترازنامه + جریان وجوه نقد</b></td></tr>
+          <tr><td>۴ نوع حسابداری</td><td>عمومی + بازرگانی + دولتی + صنعتی (بهای تمام‌شده)</td></tr>
+          <tr><td>جریان وجوه نقد</td><td>تفاوت <b>فروش ماهانه و هزینه ماهانه</b> — معیار: <b>مانده نقدینگی دفتر</b></td></tr>
+          <tr><td>۳ راه جلوگیری از فقدان نقدینگی (شیخان ۱۳۸۴)</td><td>وصول مطالبات + پرداخت به‌موقع + کنترل روزانه نقدینگی</td></tr>
+          <tr><td>سفارشات دریافت نقدی محسوب می‌شوند؟</td><td><b>خیر</b> — چون تضمین تبدیل به نقد نیست</td></tr>
+          <tr><td>نقطه سر به سر</td><td>سطحی که <b>بهای تمام‌شده کل = درآمد کل</b> (نه سود، نه ضرر)</td></tr>
+          <tr><td>۳ ارزیابی کسب‌وکار</td><td><b>فنی + اقتصادی بازار + مالی</b></td></tr>
+          <tr><td>۴ راه محافظت از طرح</td><td>محرمیت + ارائه مرحله‌ای + مراحل قانونی + ثبت مکتوب</td></tr>
+          <tr><td>منابع تهیه طرح</td><td>وزارت صنایع + بانک‌ها + دانشگاه‌ها + نهادهای مستقل + وزارت بازرگانی + وزارت کار + وزارت کشاورزی + مراکز دولتی + کتابخانه‌ها و اینترنت</td></tr>
+          <tr><td>۴ ستون بازار</td><td>مشتری + رقیب + شرکت + تجزیه و تحلیل فنی</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۶ -->
+<section id="ch6" class="section">
+  <h2 class="section-title">فصل ۶ · قانون کار جمهوری اسلامی ایران</h2>
+  <p class="section-sub">تعاریف، قرارداد، تعلیق و خاتمه، مزد، ساعات، مرخصی، زنان، نوجوانان، حفاظت، اتباع بیگانه</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>تعریف کارگر (ماده ۲)</td><td>دریافت <b>حق‌السعی</b> به درخواست کارفرما</td></tr>
+          <tr><td>تعریف کارفرما</td><td>شخص حقیقی/حقوقی که کارگر به حساب او کار می‌کند</td></tr>
+          <tr><td>نماینده کارفرما</td><td>مدیران و مسئولان — کارفرما مسئول تعهدات آن‌هاست</td></tr>
+          <tr><td>ماده ۶</td><td><b>اصل عدم تبعیض</b></td></tr>
+          <tr><td>قرارداد کار (ماده ۷)</td><td><b>کتبی یا شفاهی</b> — موقت یا غیرموقت</td></tr>
+          <tr><td>۳ شرط صحت (ماده ۹)</td><td>مشروعیت + معین بودن موضوع + عدم ممنوعیت قانونی و شرعی</td></tr>
+          <tr><td>قرارداد کتبی (ماده ۱۰)</td><td><b>۴ نسخه</b>: اداره کار + کارگر + کارفرما + شورا/نماینده</td></tr>
+          <tr><td>دوره آزمایشی (ماده ۱۱)</td><td>ساده و نیمه‌ماهر <b>۱ ماه</b> — ماهر <b>۳ ماه</b></td></tr>
+          <tr><td>تعلیق قرارداد</td><td>موقتاً متوقف — بعد با <b>احتساب سابقه</b> برمی‌گردد</td></tr>
+          <tr><td>مرخصی تحصیلی (ماده ۱۶)</td><td><b>۲ سال</b> (قابل تمدید ۲ سال دیگر)</td></tr>
+          <tr><td>توقیف به شکایت کارفرما (ماده ۱۸)</td><td>سابقه محاسبه + پرداخت مزد + حداقل <b>۵۰٪ حقوق</b> به خانواده</td></tr>
+          <tr><td>بازگشت پس از خدمت سربازی (ماده ۱۹)</td><td>حداکثر <b>۲ ماه</b></td></tr>
+          <tr><td>اخراج غیرقانونی (ماده ۲۰)</td><td>مراجعه ظرف <b>۳۰ روز</b> به هیئت تشخیص — <b>۴۵ روز آخرین مزد</b> برای هر سال</td></tr>
+          <tr><td>۶ طرق خاتمه (ماده ۲۱)</td><td>فوت + بازنشستگی + ازکارافتادگی + انقضای مدت + پایان کار معین + استعفا</td></tr>
+          <tr><td>استعفا</td><td><b>۱ ماه</b> ادامه کار + <b>۱۵ روز</b> مهلت انصراف</td></tr>
+          <tr><td>مزایای پایان کار (ماده ۲۴)</td><td>هر سال = <b>۱ ماه حقوق</b></td></tr>
+          <tr><td>بازنشستگی/ازکارافتادگی کلی (ماده ۳۱)</td><td><b>۳۰ روز مزد</b> برای هر سال</td></tr>
+          <tr><td>کاهش توانایی (ماده ۳۲)</td><td><b>۲ ماه آخرین حقوق</b> برای هر سال</td></tr>
+          <tr><td>ماده ۳۵ — انواع مزد</td><td>مزد ساعتی + کارمزد + کارمزد ساعتی</td></tr>
+          <tr><td>ماده ۳۸</td><td>مزد مساوی زن و مرد برای کار مساوی</td></tr>
+          <tr><td>ماده ۴۱</td><td>حداقل مزد سالانه توسط شورای عالی کار</td></tr>
+          <tr><td>ماده ۴۲</td><td>حداقل مزد <b>منحصراً نقدی</b></td></tr>
+          <tr><td>ماده ۴۴</td><td>برداشت از مزد حداکثر <b>۱/۴ کل مزد</b></td></tr>
+          <tr><td>مأموریت (ماده ۴۶)</td><td>حداقل <b>۵۰ کیلومتر</b> + حداقل <b>یک شب</b> توقف</td></tr>
+          <tr><td>جریمه طبقه‌بندی مشاغل (ماده ۵۰)</td><td><b>۱۵۰٪ هزینه مشاور</b></td></tr>
+          <tr><td>ساعت کار (ماده ۵۱)</td><td><b>۸ ساعت در روز / ۴۴ ساعت در هفته</b></td></tr>
+          <tr><td>سخت و زیان‌آور (ماده ۵۲)</td><td><b>۶ ساعت در روز / ۳۶ ساعت در هفته</b></td></tr>
+          <tr><td>کار روز (ماده ۵۳)</td><td><b>۶ بامداد تا ۲۲</b></td></tr>
+          <tr><td>کار شب</td><td><b>۲۲ تا ۶ بامداد</b></td></tr>
+          <tr><td>فوق‌العاده نوبت‌کاری (ماده ۵۶)</td><td>صبح+عصر <b>۱۰٪</b> — صبح+عصر+شب <b>۱۵٪</b> — صبح+شب یا عصر+شب <b>۲۲٪</b></td></tr>
+          <tr><td>فوق‌العاده کار شب (ماده ۵۸)</td><td><b>۳۵٪</b> — فقط غیرنوبتی‌ها</td></tr>
+          <tr><td>کار اضافی عادی (ماده ۵۹)</td><td><b>۴۰٪</b> — سقف <b>۴ ساعت در روز</b></td></tr>
+          <tr><td>کار اضافی با تشخیص کارفرما (ماده ۶۰)</td><td>سقف <b>۸ ساعت در روز</b> — اطلاع ظرف <b>۴۸ ساعت</b></td></tr>
+          <tr><td>ماده ۶۱</td><td>ممنوعیت کار اضافی برای کارگران شبانه و سخت</td></tr>
+          <tr><td>تعطیل هفتگی (ماده ۶۲)</td><td><b>جمعه</b> با مزد — کار در جمعه <b>۴۰٪</b> اضافه</td></tr>
+          <tr><td>روز کارگر (ماده ۶۳)</td><td><b>۱۱ اردیبهشت</b></td></tr>
+          <tr><td>مرخصی سالانه (ماده ۶۴)</td><td><b>۱ ماه</b> با احتساب <b>۴ جمعه</b></td></tr>
+          <tr><td>مرخصی کارهای سخت (ماده ۶۵)</td><td><b>۵ هفته</b></td></tr>
+          <tr><td>ذخیره مرخصی (ماده ۶۶)</td><td>حداکثر <b>۹ روز</b></td></tr>
+          <tr><td>مرخصی حج (ماده ۶۷)</td><td><b>یک ماه</b> یک‌بار در طول کار</td></tr>
+          <tr><td>مرخصی‌های خاص (ماده ۷۳)</td><td><b>۳ روز با مزد</b> — ازدواج دائم و فوت همسر/پدر/مادر/فرزند</td></tr>
+          <tr><td>مرخصی استعلاجی (ماده ۷۴)</td><td>جزء <b>سوابق کار و بازنشستگی</b></td></tr>
+          <tr><td>مرخصی زایمان (ماده ۷۶)</td><td><b>۹۰ روز</b> — حداقل <b>۴۵ روز</b> پس از زایمان — توأمان <b>+۱۴ روز</b></td></tr>
+          <tr><td>شیردهی (ماده ۷۸)</td><td>تا <b>۲ سالگی</b> کودک — هر ۳ ساعت <b>نیم ساعت</b></td></tr>
+          <tr><td>حداقل سن کار (ماده ۷۹)</td><td><b>۱۵ سال تمام</b></td></tr>
+          <tr><td>کارگر نوجوان (ماده ۸۰)</td><td><b>۱۵ تا ۱۸ سال</b> — آزمایش پزشکی</td></tr>
+          <tr><td>ساعات کار نوجوان (ماده ۸۲)</td><td><b>نیم ساعت کمتر</b> از معمول</td></tr>
+          <tr><td>تعریف کارآموز بند ب (ماده ۱۱۲)</td><td><b>۱۵ تا ۱۸ سال</b> — حداکثر <b>۳ سال</b></td></tr>
+          <tr><td>تعهد کارآموز (ماده ۱۱۴)</td><td><b>۲ برابر مدت کارآموزی</b> در همان کارگاه</td></tr>
+          <tr><td>مسئولیت حفاظت (ماده ۹۵)</td><td><b>کارفرما یا مسئولین واحدها</b></td></tr>
+          <tr><td>ورود بازرس به کارگاه خانوادگی (ماده ۹۸)</td><td><b>اجازه کتبی دادستان محل</b></td></tr>
+          <tr><td>گزارش بازرس (ماده ۱۰۱)</td><td>در حکم گزارش <b>ضابطان دادگستری</b></td></tr>
+          <tr><td>پروانه کار اتباع بیگانه (ماده ۱۲۴)</td><td>حداکثر <b>۱ سال</b></td></tr>
+          <tr><td>پروانه کار موقت (ماده ۱۲۶)</td><td>حداکثر <b>۳ ماه</b></td></tr>
+          <tr><td>مهلت اعلام قطع رابطه (ماده ۱۲۵)</td><td><b>۱۵ روز</b></td></tr>
+          <tr><td>تشکل‌های کارگری</td><td>شورای اسلامی کار <b>یا</b> انجمن صنفی <b>یا</b> نماینده کارگر (فقط یکی)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- قواعد طلایی -->
+<section id="golden" class="section">
+  <h2 class="section-title">🎯 قواعد طلایی پاسخ‌گویی سریع</h2>
+  <p class="section-sub">هر جا این کلمه رو دیدی، بلافاصله جواب رو بزن</p>
+  <div class="card">
+    <div class="grid2">
+      <div class="box"><h4>«پدر کارآفرینی»</h4>شومپیتر</div>
+      <div class="box"><h4>«مشخصه اصلی کارآفرین»</h4>نوآوری</div>
+      <div class="box"><h4>«کار کارآفرین»</h4>تخریب خالق</div>
+      <div class="box"><h4>«ریشه کارآفرینی»</h4>Entreprendre = متعهد شدن</div>
+      <div class="box"><h4>«اولین مطرح‌کننده»</h4>کانتیلون</div>
+      <div class="box"><h4>«Intrapreneurship»</h4>پینکات ۱۹۸۵</div>
+      <div class="box"><h4>«مراحل کانتر»</h4>مشکل ← ائتلاف ← تجهیز ← ترک</div>
+      <div class="box"><h4>«دشمن مستقل»</h4>بازار</div>
+      <div class="box"><h4>«دشمن سازمانی»</h4>فرهنگ شرکت</div>
+      <div class="box"><h4>«خلاقیت»</h4>جدید و باارزش</div>
+      <div class="box"><h4>«نوآوری»</h4>شکل عالی‌تر خلاقیت</div>
+      <div class="box"><h4>«اختراع»</h4>ایده به طرح/نمونه</div>
+      <div class="box"><h4>«تازگی»</h4>بُعد زمان</div>
+      <div class="box"><h4>«۶ عامل خلاقیت»</h4>استرنبرگ و اوهارا</div>
+      <div class="box"><h4>«طوفان ذهنی»</h4>اسپورن ۱۹۳۸</div>
+      <div class="box"><h4>«دلفی»</h4>داکلی و هلمر ۱۹۶۴</div>
+      <div class="box"><h4>«کلاه آبی»</h4>نظارت</div>
+      <div class="box"><h4>«کلاه سبز»</h4>خلاق/جانبی</div>
+      <div class="box"><h4>«کلاه سرخ»</h4>احساسی</div>
+      <div class="box"><h4>«PMI»</h4>مثبت ← منفی ← جالب</div>
+      <div class="box"><h4>«SCAMPER»</h4>۷ حرف (جانشین/ترکیب/سازگاری/بزرگ/سایر/حذف/معکوس)</div>
+      <div class="box"><h4>«DOIT»</h4>تعریف ← باز ← شناسایی ← تبدیل</div>
+      <div class="box"><h4>«آمار فراموشی»</h4>۲۵٪ / ۲۴ ساعت — ۸۵٪ / هفته</div>
+      <div class="box"><h4>«خلاق/مخترع/نوآور/کارآفرین»</h4>ایده/عملی/کالا/ارزش</div>
+      <div class="box"><h4>«شومپیتر در کارآفرینی»</h4>تخریب خلاق</div>
+      <div class="box"><h4>«۷ نوع شرکت»</h4>سهامی/محدود/تضامنی/مختلط غیرسهامی/مختلط سهامی/نسبی/تعاونی</div>
+      <div class="box"><h4>«حداقل شرکای سهامی»</h4>۳ نفر</div>
+      <div class="box"><h4>«سرمایه سهامی عام/خاص»</h4>۵ / ۱ میلیون ریال</div>
+      <div class="box"><h4>«بورس»</h4>فقط سهامی عام</div>
+      <div class="box"><h4>«مسئولیت تضامنی»</h4>تمام قروض</div>
+      <div class="box"><h4>«مسئولیت نسبی»</h4>به نسبت سرمایه</div>
+      <div class="box"><h4>«نزدیک‌ترین به مدنی»</h4>شرکت نسبی</div>
+      <div class="box"><h4>«مدیریت مختلط سهامی»</h4>شریک ضامن</div>
+      <div class="box"><h4>«قرارداد کار»</h4>کتبی یا شفاهی</div>
+      <div class="box"><h4>«۳ شرط صحت قرارداد کار»</h4>مشروعیت + معین + عدم ممنوعیت</div>
+      <div class="box"><h4>«نسخه‌های قرارداد کتبی»</h4>۴ نسخه</div>
+      <div class="box"><h4>«حق بیمه بیکاری»</h4>۳٪ — کارفرما</div>
+      <div class="box"><h4>«سابقه بیمه بیکاری»</h4>۶ ماه</div>
+      <div class="box"><h4>«مهلت اعلام بیکاری»</h4>۳۰ روز</div>
+      <div class="box"><h4>«مقرری بیمه بیکاری»</h4>۵۵٪</div>
+      <div class="box"><h4>«حداکثر مقرری»</h4>۳۶ ماه مجرد / ۵۰ ماه متأهل</div>
+      <div class="box"><h4>«ساعت کار»</h4>۸/۴۴ عادی — ۶/۳۶ سخت</div>
+      <div class="box"><h4>«معافیت تولیدی»</h4>۱۲۰ کیلومتر تهران / ۵۰ کیلومتر اصفهان</div>
+      <div class="box"><h4>«معافیت فرهنگی»</h4>۵ سال — محروم ۸ سال</div>
+      <div class="box"><h4>«آمار آسیب مشاغل»</h4>۱ از ۵</div>
+      <div class="box"><h4>«ملاک تشکیل شرکت»</h4>قصد و نیت</div>
+      <div class="box"><h4>«ثبت شرکت شرط تشکیل؟»</h4>خیر — الزام قانونی</div>
+      <div class="box"><h4>«حداقل سرمایه شرکت»</h4>۱ میلیون ریال</div>
+      <div class="box"><h4>«۴ شرط عمومی»</h4>قصد/اهلیت/معین/قانونی</div>
+      <div class="box"><h4>«۵ شرط اختصاصی»</h4>وجود/همکاری/تودیع/اشتغال/تقسیم</div>
+      <div class="box"><h4>«ماده ۲۰ تجارت»</h4>قالب‌های شرکت</div>
+      <div class="box"><h4>«ماده ۱۹۵ تجارت»</h4>الزام ثبت</div>
+      <div class="box"><h4>«۳ فایده ثبت»</h4>رسمی/شفاف/نظارت</div>
+      <div class="box"><h4>«حق‌الثبت»</h4>بانک ملی</div>
+      <div class="box"><h4>«آگهی تأسیس»</h4>روزنامه کثیرالانتشار</div>
+      <div class="box"><h4>«رویکرد موفق»</h4>بازارمحور</div>
+      <div class="box"><h4>«ایده‌یابی»</h4>پژوهش سیستماتیک</div>
+      <div class="box"><h4>«مهم‌ترین بخش طرح»</h4>خلاصه مدیریتی</div>
+      <div class="box"><h4>«هدف طرح»</h4>سرمایه + تیم مدیریت</div>
+      <div class="box"><h4>«تنها عنصر درآمدزا»</h4>قیمت</div>
+      <div class="box"><h4>«بازاریابی vs فروش»</h4>قبل / بعد از تولید</div>
+      <div class="box"><h4>«واحد اندازه‌گیری بازاریابی»</h4>معامله</div>
+      <div class="box"><h4>«۳ تبلیغات»</h4>اطلاعی/ترغیب/یادآوری</div>
+      <div class="box"><h4>«حسابداری»</h4>فن نه علم</div>
+      <div class="box"><h4>«+۸۰٪ تصمیمات»</h4>عملکرد مالی</div>
+      <div class="box"><h4>«۳ صورت‌حساب»</h4>سود/زیان + ترازنامه + جریان نقد</div>
+      <div class="box"><h4>«جریان نقد»</h4>فروش ماهانه − هزینه ماهانه</div>
+      <div class="box"><h4>«سفارشات»</h4>دریافت نقدی نیست</div>
+      <div class="box"><h4>«نقطه سر به سر»</h4>درآمد = هزینه</div>
+      <div class="box"><h4>«۳ ارزیابی»</h4>فنی + اقتصادی بازار + مالی</div>
+      <div class="box"><h4>«تعریف کارگر»</h4>حق‌السعی به درخواست کارفرما</div>
+      <div class="box"><h4>«ماده ۶ قانون کار»</h4>عدم تبعیض</div>
+      <div class="box"><h4>«دوره آزمایشی»</h4>۱ ماه ساده / ۳ ماه ماهر</div>
+      <div class="box"><h4>«مرخصی تحصیلی»</h4>۲ سال</div>
+      <div class="box"><h4>«اخراج غیرقانونی»</h4>۴۵ روز مزد برای هر سال</div>
+      <div class="box"><h4>«استعفا»</h4>۱ ماه ادامه + ۱۵ روز انصراف</div>
+      <div class="box"><h4>«مزایای پایان کار»</h4>هر سال = ۱ ماه حقوق</div>
+      <div class="box"><h4>«بازنشستگی»</h4>۳۰ روز مزد برای هر سال</div>
+      <div class="box"><h4>«کاهش توانایی»</h4>۲ ماه آخرین حقوق برای هر سال</div>
+      <div class="box"><h4>«حداقل مزد»</h4>منحصراً نقدی</div>
+      <div class="box"><h4>«برداشت از مزد»</h4>۱/۴ کل مزد</div>
+      <div class="box"><h4>«مأموریت»</h4>۵۰ کیلومتر + یک شب</div>
+      <div class="box"><h4>«جریمه طبقه‌بندی»</h4>۱۵۰٪ هزینه مشاور</div>
+      <div class="box"><h4>«کار روز»</h4>۶ تا ۲۲</div>
+      <div class="box"><h4>«کار شب»</h4>۲۲ تا ۶</div>
+      <div class="box"><h4>«نوبت‌کاری ۱۰٪»</h4>صبح + عصر</div>
+      <div class="box"><h4>«نوبت‌کاری ۱۵٪»</h4>صبح + عصر + شب</div>
+      <div class="box"><h4>«نوبت‌کاری ۲۲٪»</h4>صبح+شب یا عصر+شب</div>
+      <div class="box"><h4>«فوق‌العاده شب»</h4>۳۵٪ — فقط غیرنوبتی</div>
+      <div class="box"><h4>«کار اضافی عادی»</h4>۴۰٪ — سقف ۴ ساعت</div>
+      <div class="box"><h4>«کار اضافی کارفرما»</h4>سقف ۸ ساعت — اطلاع ۴۸ ساعت</div>
+      <div class="box"><h4>«تعطیل هفتگی»</h4>جمعه با مزد + ۴۰٪ برای کار</div>
+      <div class="box"><h4>«روز کارگر»</h4>۱۱ اردیبهشت</div>
+      <div class="box"><h4>«مرخصی سالانه»</h4>۱ ماه با ۴ جمعه</div>
+      <div class="box"><h4>«مرخصی سخت»</h4>۵ هفته</div>
+      <div class="box"><h4>«ذخیره مرخصی»</h4>۹ روز</div>
+      <div class="box"><h4>«مرخصی حج»</h4>۱ ماه یک‌بار</div>
+      <div class="box"><h4>«مرخصی خاص»</h4>۳ روز با مزد</div>
+      <div class="box"><h4>«مرخصی زایمان»</h4>۹۰ روز + ۱۴ روز توأمان</div>
+      <div class="box"><h4>«شیردهی»</h4>تا ۲ سالگی — نیم ساعت هر ۳ ساعت</div>
+      <div class="box"><h4>«حداقل سن کار»</h4>۱۵ سال</div>
+      <div class="box"><h4>«نوجوان»</h4>۱۵ تا ۱۸ سال</div>
+      <div class="box"><h4>«ساعات نوجوان»</h4>نیم ساعت کمتر</div>
+      <div class="box"><h4>«کارآموز بند ب»</h4>۱۵ تا ۱۸ — حداکثر ۳ سال</div>
+      <div class="box"><h4>«تعهد کارآموز»</h4>۲ برابر مدت کارآموزی</div>
+      <div class="box"><h4>«مسئولیت حفاظت»</h4>کارفرما یا مسئولین</div>
+      <div class="box"><h4>«کارگاه خانوادگی»</h4>اجازه کتبی دادستان</div>
+      <div class="box"><h4>«گزارش بازرس»</h4>حکم ضابطان دادگستری</div>
+      <div class="box"><h4>«پروانه کار بیگانه»</h4>۱ سال — موقت ۳ ماه</div>
+      <div class="box"><h4>«مهلت اعلام قطع»</h4>۱۵ روز</div>
+      <div class="box"><h4>«تشکل کارگری»</h4>فقط یکی: شورا/انجمن/نماینده</div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  Quizly · کارآفرینی و اشتغال‌پذیری · کلید واژه‌های طلایی · ۶ فصل کامل
+</div>
+
+</div>
+
+<script>
+const themeBtn = document.getElementById("theme");
+themeBtn.onclick = () => {
+  const dark = document.documentElement.dataset.theme === "dark";
+  document.documentElement.dataset.theme = dark ? "" : "dark";
+  themeBtn.textContent = dark ? "تم شب" : "تم روز";
+};
+
+const searchInput = document.getElementById("search");
+searchInput.addEventListener("input", (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll("tbody tr").forEach(tr => {
+    const text = tr.innerText.toLowerCase();
+    tr.style.display = (!q || text.includes(q)) ? "" : "none";
+  });
+});
+</script>
+
+</body>
+</html>

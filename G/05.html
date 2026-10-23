@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · کارآفرینی · سری 05 · فصل پنجم: نحوه نوشتن طرح کسب‌وکار</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"05";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>کارآفرینی · سری 05</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل پنجم: نحوه نوشتن طرح کسب‌وکار</h2>
+  <p>ایده‌یابی، طرح کسب‌وکار، بازاریابی، تبلیغات، حسابداری، جریان نقد و نقطه سر به سر — همه رو خودمونی می‌گم</p>
+  <div class="pills"><span class="pill">ایده‌یابی</span><span class="pill">طرح کسب‌وکار</span><span class="pill">بازاریابی</span><span class="pill">حسابداری</span><span class="pill">نقطه سر به سر</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل پنجم کتاب کارآفرینی (نحوه نوشتن طرح کسب‌وکار) نوشته شده. همه‌چی رو ساده و خودمونی گفتم. از ایده‌یابی شروع می‌کنیم تا برسیم به طرح کسب‌وکار، بازاریابی، تبلیغات، حسابداری، جریان نقد، نقطه سر به سر و ارزیابی.</div>
+
+<div class="stats">
+<div class="stat"><b>۶</b><span>راه ایده‌یابی</span></div>
+<div class="stat"><b>۱۲</b><span>بخش طرح کسب‌وکار</span></div>
+<div class="stat"><b>۳</b><span>نوع چیدمان</span></div>
+<div class="stat"><b>۳</b><span>صورت مالی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#idea">ایده‌یابی</a><a href="#plan">طرح کسب‌وکار</a><a href="#marketing">بازاریابی</a><a href="#finance">حسابداری و نقد</a><a href="#theorists">نظریه‌پردازان</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (۱۰ دقیقه‌ای بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>دو رویکرد اصلی در عرضه محصول/خدمت</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) رویکرد محصول‌محور:</b> ابتدا محصول رو تولید/خدمت رو آماده می‌کنی، سپس به دنبال بازار می‌ری.</div>
+<div class="fa"><b>۲) رویکرد بازارمحور:</b> ابتدا نیاز و کمبود بازار رو می‌شناسی، سپس به دنبال تولید/ارائه می‌ری.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> کسب‌وکاری که <b>بازارمحور</b> باشه، موفقیت‌آمیز خواهد بود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ایده‌یابی چیه؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>ایده‌یابی (نظری، ۱۳۹۴): پژوهش و تحقیق سیستماتیک برای پیدا کردن ایده‌های جدید.</b>
+</div>
+<div class="fa"><b>خودمونی:</b> یعنی با یه تحقیق و بررسی منظم، دنبال ایده‌های جدید برای کسب‌وکار بگردی. کارآفرین باید ایده‌های زیادی جمع کنه و جستجوش <b>سیستماتیک</b> باشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش راه یافتن ایده کسب‌وکار</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱)</b> سفر به شهرها/محله‌های دیگر و بررسی دقیق محصولات/خدمات آن مناطق و آزمودن امکان راه‌اندازی در منطقه خود.</div>
+<div class="fa"><b>۲)</b> رسانه‌ها (رادیو، تلویزیون، روزنامه، مجله، اینترنت).</div>
+<div class="fa"><b>۳)</b> نمایشگاه‌های مختلف و آشنایی با محصولات/خدمات جدید.</div>
+<div class="fa"><b>۴)</b> اینترنت: اطلاع از محصولات/خدمات سراسر دنیا و بررسی امکان در منطقه خود.</div>
+<div class="fa"><b>۵)</b> تجربه شغلی: مثلاً کار در یک قنادی و دریافتن اینکه می‌تونی محصولی با کیفیت بهتر تولید کنی و کسب‌وکار خودت رو راه بیندازی.</div>
+<div class="fa"><b>۶)</b> اخبار (به‌ویژه اقتصادی): تغییر سیاست‌ها، خط‌مشی‌های دولت و قوانین می‌تونه منشأ ایده باشه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>مثال مهم:</b> خصوصی‌سازی بخش‌های دولتی و واگذاری به بخش خصوصی (مانند اجازه فعالیت‌های بانکی و بیمه‌ای به بخش خصوصی در سال‌های اخیر).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>غربال کردن ایده‌ها</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>هدف:</b> به حداقل رساندن تعداد ایده‌های جمع‌آوری شده و جدا کردن ایده‌های خوب از ضعیف.</div>
+<div class="fa"><b>ابزار:</b> استفاده از <b>غربال مرحله‌ای</b>.</div>
+<div class="fa"><b>روش کار:</b> ابتدا شرایط و عوامل اصلی و مهمی که فقدان آن‌ها باعث عدم موفقیت ایده می‌شه کنترل می‌گردد. این عوامل به ترتیب اهمیت بررسی می‌شه و با هر بررسی، تعدادی ایده حذف می‌شه.</div>
+<div class="fa"><b>تحلیل امکان‌سنجی محدود:</b> یکی از کاربردهایش در غربال کردن ایده‌هاست. ایده‌های غیرممکن حذف می‌شن و برای سایر ایده‌ها، جنبه‌های کلی زیر بررسی می‌شه:</div>
+<div class="fa">۱) وجود مشتری — ۲) دسترسی به منابع — ۳) دسترسی به فناوری — ۴) محدودیت‌های قانونی — ۵) نیاز سرمایه‌ای و غیره</div>
+<div class="fa"><b>نتیجه:</b> ایده‌های ضعیف‌تر حذف و ایده‌های بهتر اولویت‌بندی می‌شن. بهترین ایده، ایده‌ایه که <b>به نظر کارآفرین جذاب‌تر</b>ه و برای تدوین طرح کسب‌وکار انتخاب می‌شه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>طرح کسب‌وکار (طرح شغلی) چیه؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف ۱:</b> مهم‌ترین سند نوشته‌شده‌ایه که <b>تمام جنبه‌های کسب‌وکار رو پیش از راه‌اندازی آن بررسی می‌کنه</b>.</div>
+<div class="fa"><b>تعریف ۲:</b> حاوی برنامه‌های کاربردی (برنامه مالی، عملیاتی، تولیدی، بازاریابی و ساختار سازمانی)ه که همچون <b>نقشه‌ای</b> کارآفرین رو در طول مسیر راهنمایی می‌کنن.</div>
+<div class="fa"><b>تعریف ۳ (طرح شغلی):</b> طرحی که <b>آینده و توسعه یک کسب‌وکار رو معین می‌کنه</b> و اغلب <b>یک دوره چند ساله</b> رو در بر می‌گیره.</div>
+<div class="fa"><b>هدف از تهیه طرح کسب‌وکار:</b> ۱) جذب سرمایه اولیه — ۲) جذب تیم مدیریت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دوازده بخش اصلی طرح کسب‌وکار</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱)</b> معرفی زمینه کسب‌وکار — <b>۲)</b> خلاصه مدیریتی — <b>۳)</b> تجزیه و تحلیل صنعت — <b>۴)</b> دورنمای شرکت — <b>۵)</b> مدیریت محصول و خدمات — <b>۶)</b> برنامه بازاریابی و تبلیغات — <b>۷)</b> ساختار سازمانی — <b>۸)</b> برنامه زمان‌بندی و عملیات — <b>۹)</b> ارزیابی و مدیریت ریسک — <b>۱۰)</b> حسابداری و مدیریت مالی — <b>۱۱)</b> برنامه طرح و توسعه — <b>۱۲)</b> ارزیابی کسب‌وکار</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> <b>خلاصه مدیریتی</b> مهم‌ترین بخش طرح تجاریه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه صورت‌حساب اصلی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) صورت سود و زیان</b></div>
+<div class="fa"><b>۲) ترازنامه</b></div>
+<div class="fa"><b>۳) صورت جریان وجوه نقد</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نقطه سر به سر (Break-Even Point)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف:</b> سطحی از فعالیت (تولید)ه که در آن نقطه، <b>بهای تمام‌شده کل مساوی درآمد کل</b> باشه. به عبارت دیگر، هرگاه <b>درآمد کل = هزینه کل</b>، سود عاید نشده و زیانی هم نداشته است.</div>
+<div class="fa"><b>خودمونی:</b> نقطه‌ایه که نه سود می‌کنی نه ضرر؛ یعنی فروشت دقیقاً اندازه هزینه‌هات شده.</div>
+</div>
+</section>
+
+<section id="idea" class="section">
+<h2 class="section-title">۰۲ · ایده‌یابی و غربالگری (مو به مو)</h2>
+<p class="section-sub">شش راه ایده‌یابی + غربال مرحله‌ای</p>
+
+<div class="card">
+<div class="card-head"><h3>مقدمه و مهارت‌های کارآفرین</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>اولین قدم:</b> توافق با خود بر اینکه از عهده کار برمی‌آیی.</div>
+<div class="fa">کارآفرین علاوه بر ویژگی‌های عمومی، نیازمند <b>مهارت‌های ارتباطی سطح بالا</b> (برای ارائه طرح‌ها، گزارش‌ها، نامه‌های روزمره)، <b>توانایی گفت‌و شنود فردی/گروهی</b>، و توانایی <b>رهبری، مذاکره و تشکیل تیم</b>ه.</div>
+<div class="fa"><b>اولین مسئله در راه‌اندازی:</b> تصمیم‌گیری در زمینه نوع کسب‌وکار (تولید، صنعت، کشاورزی، مشاوره، خدمات).</div>
+<div class="fa"><b>سؤالات کلیدی قبل از شروع:</b> دوست داری چه کاری بکنی؟ محصول/خدمت مشابه دیگران عرضه می‌کنی یا متفاوت؟ آیا سرگرمی‌ها و علایقت قابل تبدیل به بازارن؟</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو رویکرد اصلی در عرضه محصول/خدمت</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) رویکرد محصول‌محور:</b> ابتدا محصول رو تولید/خدمت رو آماده می‌کنی، سپس به دنبال بازار می‌ری.</div>
+<div class="fa"><b>۲) رویکرد بازارمحور:</b> ابتدا نیاز و کمبود بازار رو می‌شناسی، سپس به دنبال تولید/ارائه می‌ری.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> کسب‌وکاری که <b>بازارمحور</b> باشه، موفقیت‌آمیز خواهد بود.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ایده‌یابی (Idea Generation)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف (نظری، ۱۳۹۴):</b> ایده‌یابی عبارت است از <b>پژوهش و تحقیق سیستماتیک برای پیدا کردن ایده‌های جدید</b>.</div>
+<div class="fa">کارآفرین باید ایده‌های بسیاری رو جمع‌آوری کنه. جستجو برای ایده باید <b>سیستماتیک</b> باشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش راه یافتن ایده کسب‌وکار</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) سفر به شهرها/محله‌های دیگر:</b> بررسی دقیق محصولات/خدمات آن مناطق و آزمودن امکان راه‌اندازی در منطقه خود.</div>
+<div class="fa"><b>۲) رسانه‌ها:</b> رادیو، تلویزیون، روزنامه، مجله، اینترنت.</div>
+<div class="fa"><b>۳) نمایشگاه‌های مختلف:</b> آشنایی با محصولات/خدمات جدید.</div>
+<div class="fa"><b>۴) اینترنت:</b> اطلاع از محصولات/خدمات سراسر دنیا و بررسی امکان در منطقه خود.</div>
+<div class="fa"><b>۵) تجربه شغلی:</b> مثلاً کار در یک قنادی و دریافتن اینکه می‌تونی محصولی با کیفیت بهتر تولید کنی و کسب‌وکار خودت رو راه بیندازی.</div>
+<div class="fa"><b>۶) اخبار (به‌ویژه اقتصادی):</b> تغییر سیاست‌ها، خط‌مشی‌های دولت و قوانین می‌تونه منشأ ایده باشه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>مثال مهم:</b> خصوصی‌سازی بخش‌های دولتی و واگذاری به بخش خصوصی (مانند اجازه فعالیت‌های بانکی و بیمه‌ای به بخش خصوصی در سال‌های اخیر).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>غربال کردن ایده‌ها</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>هدف:</b> به حداقل رساندن تعداد ایده‌های جمع‌آوری شده و جدا کردن ایده‌های خوب از ضعیف.</div>
+<div class="fa"><b>ابزار:</b> استفاده از <b>غربال مرحله‌ای</b>.</div>
+<div class="fa"><b>روش کار:</b> ابتدا شرایط و عوامل اصلی و مهمی که فقدان آن‌ها باعث عدم موفقیت ایده می‌شه کنترل می‌گردد. این عوامل به ترتیب اهمیت بررسی می‌شه و با هر بررسی، تعدادی ایده حذف می‌شه.</div>
+<div class="fa"><b>تحلیل امکان‌سنجی محدود:</b> یکی از کاربردهایش در غربال کردن ایده‌هاست. ایده‌های غیرممکن حذف می‌شن و برای سایر ایده‌ها، جنبه‌های کلی زیر بررسی می‌شه:</div>
+<div class="fa">۱) وجود مشتری — ۲) دسترسی به منابع — ۳) دسترسی به فناوری — ۴) محدودیت‌های قانونی — ۵) نیاز سرمایه‌ای و غیره</div>
+<div class="fa"><b>نتیجه:</b> ایده‌های ضعیف‌تر حذف و ایده‌های بهتر اولویت‌بندی می‌شن. بهترین ایده، ایده‌ایه که <b>به نظر کارآفرین جذاب‌تر</b>ه و برای تدوین طرح کسب‌وکار انتخاب می‌شه.</div>
+</div>
+</section>
+
+<section id="plan" class="section">
+<h2 class="section-title">۰۳ · طرح کسب‌وکار (مو به مو)</h2>
+<p class="section-sub">تعاریف، اهداف، ذی‌نفعان و دوازده بخش</p>
+
+<div class="card">
+<div class="card-head"><h3>طرح کسب‌وکار (طرح شغلی) چیه؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف ۱:</b> مهم‌ترین سند نوشته‌شده‌ایه که <b>تمام جنبه‌های کسب‌وکار رو پیش از راه‌اندازی آن بررسی می‌کنه</b>.</div>
+<div class="fa"><b>تعریف ۲:</b> حاوی برنامه‌های کاربردی (برنامه مالی، عملیاتی، تولیدی، بازاریابی و ساختار سازمانی)ه که همچون <b>نقشه‌ای</b> کارآفرین رو در طول مسیر راهنمایی می‌کنن.</div>
+<div class="fa"><b>تعریف ۳ (طرح شغلی):</b> طرحی که <b>آینده و توسعه یک کسب‌وکار رو معین می‌کنه</b> و اغلب <b>یک دوره چند ساله</b> رو در بر می‌گیره.</div>
+<div class="fa"><b>جزئیات طرح شغلی شامل:</b> نوع شغل، نحوه تولید، بازاریابی، رقابت، عملیات راهبردی، پرسنل، امور مالی، سرمایه‌گذاری و...</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هدف از تهیه طرح کسب‌وکار</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱)</b> جذب سرمایه اولیه</div>
+<div class="fa"><b>۲)</b> جذب تیم مدیریت</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ذی‌نفعان طرح کسب‌وکار</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa">کسانی که از طرح سود می‌برن:</div>
+<div class="fa">• جامعه — • دولت — • مشتریان — • تأمین‌کنندگان — • سرمایه‌گذاران و سهام‌داران — • کارکنان</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دوازده بخش اصلی طرح کسب‌وکار</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> معرفی زمینه کسب‌وکار</div>
+<div class="fa"><b>۲)</b> خلاصه مدیریتی</div>
+<div class="fa"><b>۳)</b> تجزیه و تحلیل صنعت</div>
+<div class="fa"><b>۴)</b> دورنمای شرکت</div>
+<div class="fa"><b>۵)</b> مدیریت محصول و خدمات</div>
+<div class="fa"><b>۶)</b> برنامه بازاریابی و تبلیغات</div>
+<div class="fa"><b>۷)</b> ساختار سازمانی</div>
+<div class="fa"><b>۸)</b> برنامه زمان‌بندی و عملیات</div>
+<div class="fa"><b>۹)</b> ارزیابی و مدیریت ریسک</div>
+<div class="fa"><b>۱۰)</b> حسابداری و مدیریت مالی</div>
+<div class="fa"><b>۱۱)</b> برنامه طرح و توسعه</div>
+<div class="fa"><b>۱۲)</b> ارزیابی کسب‌وکار</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توضیح تفصیلی برخی بخش‌های طرح</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>الف) معرفی زمینه کسب‌وکار:</b> تشریح وضعیت موجود و بیان روند آینده آن در ابعاد <b>جهانی و ملی</b>. ارائه <b>شاخص‌های ملی/بین‌المللی</b> که وضعیت کسب‌وکار رو در شرایط فعلی و آینده مشخص می‌کنه (از آمار و ارقام، جداول و نمودارها برای تشریح وضعیت استفاده می‌شه).</div>
+<div class="fa"><b>ب) خلاصه مدیریتی (مهم‌ترین بخش طرح تجاری):</b> خواننده طرح رو متقاعد می‌کنه کسب‌وکار مورد نظر موفق می‌شه و در نهایت به سود می‌رسه. <b>نکات قوت کلیدی</b> باید به روشنی ساخته و پرداخته بشن تا سرمایه‌گذار به موضوع علاقه‌مند بشه.</div>
+<div class="fa"><b>موارد مطرح‌شده در خلاصه مدیریتی:</b></div>
+<div class="fa">۱) توصیف زمینه کسب‌وکار و اصل موضوع — ۲) فرصت و استراتژی — ۳) بروزها و بازار هدف — ۴) مزیت‌های رقابتی — ۵) سوددهی و پتانسیل جمع‌آوری آن — ۶) ارتباطات بانکی و اطلاعات مورد نیاز — ۷) سرمایه‌گذاران فعلی — ۸) خلاصه‌ای از رشد کسب‌وکار — ۹) خلاصه‌ای از برنامه‌های آتی مدیریت — ۱۰) تیم کاری، افراد کلیدی و سهام‌داران</div>
+<div class="fa"><b>ج) تجزیه و تحلیل صنعت — سه بخش اصلی:</b></div>
+<div class="fa">۱) تجزیه و تحلیل محیطی — ۲) تجزیه و تحلیل بازار — ۳) تجزیه و تحلیل فنی</div>
+<div class="fa"><b>تجزیه و تحلیل محیطی:</b> باید به محیط کسب‌وکار، فرهنگ، اقتصاد و تغییرات جمعیتی توجه کرد.</div>
+</div>
+</section>
+
+<section id="marketing" class="section">
+<h2 class="section-title">۰۴ · مدیریت محصول، چیدمان، قیمت‌گذاری و بازاریابی</h2>
+<p class="section-sub">مو به مو با تعاریف و نکات عددی</p>
+
+<div class="card">
+<div class="card-head"><h3>مدیریت محصول و خدمات</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>مدیریت محصول:</b> اطلاعاتی در ارتباط با <b>نیروی انسانی، علم مدیریت، مواد و الزامات</b> همچون: آشنایی با انواع خطوط تولید و خدمات، چیدمان ماشین‌آلات، بهره‌وری، زمان‌سنجی و کارسنجی، کنترل کیفیت، بازاریابی.</div>
+<div class="fa"><b>مدیریت تولید کالا و خدمات:</b> وظیفه مدیر تولید <b>اداره سیستم تولید محصولات شرکت</b>ه. کارکرد: <b>تبدیل ورودی‌ها به خروجی‌ها</b> (خدمات و کالاها). نظام تولید مانند یک سیستم عمل می‌کنه.</div>
+<div class="fa"><b>ورودی‌ها:</b> مواد اولیه، نیروی انسانی، ماشین‌آلات، ساختمان، فناوری، پول.</div>
+<div class="fa"><b>خروجی‌ها:</b> کالا و خدمات (محصولات).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چیدمان (Layout)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف (نظری، ۱۳۹۴):</b> چیدمان به معنی <b>نحوه تعیین محل استقرار ماشین‌آلات، انبارها، میزهای کار و رابط آن‌ها با یکدیگر</b> در محیط کارگاه یا اداراته.</div>
+<div class="fa"><b>نکته:</b> یک چیدمان مناسب می‌تونه هزینه‌ها رو به طور مطلوبی <b>کاهش بده</b>.</div>
+<div class="fa"><b>اهمیت چیدمان (چهار جنبه اصلی):</b></div>
+<div class="fa"><b>۱) برای صاحبان کسب‌وکار یا فروشندگان:</b> ابزار و وسایل کاری ارتباط مستقیمی با کالا و خدمات تولیدشده دارن و می‌تونن در کسب درآمد و هزینه اثر مهمی داشته باشن. یک چیدمان مناسب، <b>دست‌به‌دست شدن و نقل‌وانتقالات محصول</b> رو بین ایستگاه‌های مختلف تولید به حداقل می‌رسونه و <b>رفت‌وآمد کارمندان/کارگران</b> رو کم می‌کنه.</div>
+<div class="fa"><b>۲) برای مشتریان:</b> چیدمان مناسب هنگام ورود مشتری، او رو وادار به <b>ایستادن و انتخاب مناسب کالا</b> می‌کنه. مشتری با آرامش خاطر و بدون عجله کالای مورد نظر رو پیدا می‌کنه (مثل چیدمان فروشگاه‌های زنجیره‌ای).</div>
+<div class="fa"><b>۳) برای کارمندان یا کارگران:</b> چیدمان مناسب <b>انگیزاننده خوبی برای شروع کار و انجام فعالیت بهتر</b>ه. افراد می‌دونن وسایل و ابزار کاری خودشون رو کجا قرار بدن.</div>
+<div class="fa"><b>۴) برای ماشین‌آلات:</b> با توجه به <b>نوع محصول، نوع تکنولوژی، فرآیند تولید و ظرفیت تولیدی</b>، چیدمان متفاوتی انتخاب می‌شه.</div>
+<div class="fa"><b>انواع چیدمان بر اساس نحوه تولید (سه نوع اصلی):</b></div>
+<div class="fa"><b>۱) چیدمان بر اساس فرآیند تولید:</b> زمانی که <b>کالاهای متفاوت</b> یا تنوع خاصی از کالا با اشکال مختلف تولید می‌شه. اجزای فرآیند تولید بر اساس <b>نوع وظیفه‌ای</b> که انجام می‌دن در کنار هم قرار می‌گیرن.</div>
+<div class="fa"><b>۲) چیدمان بر اساس نوع کالا یا خدمات:</b> زمانی که <b>کالاها/خدمات مشابه و به میزان بسیار زیاد</b> تولید می‌شه و هر واحد تولیدی به یک سری عملیات مشابه نیاز داره. هر کارگاه/کارگر قسمت خاصی از عملیات رو انجام داده و کالا رو به قسمت بعدی منتقل می‌کنه.</div>
+<div class="fa"><b>۳) چیدمان در حالت ثابت:</b> زمانی که به علت <b>اندازه، حجم، شکل یا خصوصیات دیگر</b>، امکان حرکت دادن تولید وجود نداره. محصول در جای خود ثابت است و <b>افراد و تجهیزات</b> برای تکمیل به پای کار می‌آن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته کلی:</b> هر سازمان ترکیبی از انواع روش‌های چیدمان رو مطابق نیازهای خودش به کار می‌گیره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>قیمت‌گذاری</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف قیمت:</b> میزان ارزشی که مشتریان جهت استفاده از محصولات و خدمات برای آن قائل هستن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته طلایی:</b> قیمت، <b>تنها عنصر کسب‌وکار</b>ه که برای فرد <b>ایجاد درآمد</b> می‌کنه؛ چراکه سایر عناصر کسب‌وکار <b>هزینه</b> به همراه دارن.
+</div>
+<div class="fa"><b>ویژگی‌های قیمت:</b> انعطاف‌پذیری، سرعت تغییر، مزیت رقابتی.</div>
+<div class="fa"><b>تعریف قیمت‌گذاری:</b> کلیه فعالیت‌ها و برنامه‌هایی که برای تعیین ارزش محصولات و خدمات انجام می‌شه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعاریف بازاریابی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف ۱:</b> فرایند <b>برنامه‌ریزی و تحقق یک ایده، قیمت‌گذاری، تبلیغات و توزیع</b> کالا، خدمات، عقاید و اندیشه‌ها، به نحوی که مبادله‌ای ایجاد کنه که اهداف فردی و سازمانی توسط این مبادله ارضا بشه.</div>
+<div class="fa"><b>تعریف ۲:</b> <b>خلق ارزش و رضایت برای مشتریان</b>.</div>
+<div class="fa"><b>تعریف ۳:</b> فرایندی <b>مدیریتی-اجتماعی</b>ه که به وسیله آن افراد و گروه‌ها از طریق تولید و مبادله محصول و ارزش با یکدیگر، به تأمین نیازها و خواسته‌های خودشون اقدام می‌کنن.</div>
+<div class="fa"><b>تعریف ساده:</b> بازاریابی عبارت است از <b>تأمین رضایت مشتری به نحو سودآور</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اجزای بازاریابی (پنج مفهوم اصلی)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) نیاز:</b> کمبودی که توسط فرد احساس می‌شه؛ حالت <b>محرومیت احساس‌شده</b> که آرامش و تعادل آدمی رو بر هم زده و انگیزه‌ای برای ارضا پدید می‌آره. بعضی <b>ذاتی</b> و بعضی <b>اکتسابی</b> هستن.</div>
+<div class="fa"><b>۲) خواسته:</b> بیانگر <b>کیفیت ارضا، نیازها و مطلوبیت‌های دلخواه</b> انسان هستن؛ <b>شکل برآورده شدن نیاز</b>. تنوع‌طلبی و انتظار دستیابی به امکانات رفاهی ناشی از خواسته‌هاست.</div>
+<div class="fa"><b>۳) تقاضا:</b> <b>تصمیم و اراده فرد به برآوردن نیاز</b>، با توجه به خواسته‌هاش.</div>
+<div class="fa"><b>۴) کالا:</b> هر شیئی که توسط شخص معین یا مؤسسه‌ای تولید شده و قادر باشه <b>نیازهای فردی یا جمعی</b> مصرف‌کنندگان رو برآورده سازه.</div>
+<div class="fa"><b>۵) مبادله:</b> هنگامی که مردم برای ارضای نیازهای خودشون در مورد <b>خرید و فروش کالا</b> تصمیم می‌گیرن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روش‌های مبادله (سه روش)</h3></div>
+<div class="fa"><b>۱) خودتولیدی:</b> انسان نیاز به ارتباط با دیگران نداره و نیازی به بازار و بازاریابی نیست.</div>
+<div class="fa"><b>۲) تکدی‌گری:</b> کمک خواستن عاجزانه از دیگران.</div>
+<div class="fa"><b>۳) مبادله در ازای پول:</b> بازاریابی رکن اساسی جهت دستیابی به محصوله.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شرایط مبادله (پنج شرط)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱)</b> وجود حداقل <b>دو طرف</b> برای انجام مبادله.</div>
+<div class="fa"><b>۲)</b> هر یک از طرفین باید <b>کالا یا خدمات ارزشمندی</b> داشته باشه که مورد نیاز دیگری باشه.</div>
+<div class="fa"><b>۳)</b> <b>علاقه‌مندی</b> به انجام مبادله.</div>
+<div class="fa"><b>۴)</b> هر یک باید در <b>قبول یا رد پیشنهاد</b> طرف دیگر <b>مختار</b> باشه.</div>
+<div class="fa"><b>۵)</b> هر یک از طرفین باید دارای <b>توانایی لازم برای برقراری ارتباط و تحویل به موقع کالا</b> باشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>معامله</h3><span class="badge s">مهم</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته کلیدی:</b> هرچند <b>هسته مرکزی بازاریابی، معامله</b>ست، ولی <b>معامله، واحد اندازه‌گیری بازاریابی</b> به شمار می‌ره. معامله شامل <b>داد و ستد فایده</b> بین طرفینه.
+</div>
+<div class="fa"><b>شرایط معامله (سه شرط):</b></div>
+<div class="fa">۱) وجود حداقل دو کالا یا خدمت با ارزش.</div>
+<div class="fa">۲) شرایط مورد توافق برای مبادله.</div>
+<div class="fa">۳) زمان و مکان مورد توافق برای مبادله.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مدیریت بازاریابی</h3></div>
+<div class="fa"><b>تعریف:</b> تجزیه و تحلیل، طرح‌ریزی، اجرا و کنترل برنامه‌های تعیین‌شده برای <b>برطرف کردن نیاز مشتری و کسب سود</b> و دستیابی به هدف‌های سازمان.</div>
+<div class="fa"><b>تأکید مدیریت بازاریابی:</b> تعیین محصولات سازمان بر مبنای <b>نیازها و خواسته‌های بازار مورد نظر</b> و استفاده از <b>قیمت‌گذاری، ارتباطات و توزیع مؤثر</b> جهت آگاهی‌دادن، ایجاد محرک و ارائه خدمت به بازار (نظری، ۱۳۹۴).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت بازاریابی و فروش (خیلی مهم)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">بازاریابی اغلب با فروش اشتباه گرفته می‌شه، در حالی که <b>تقریباً برعکس هم هستند</b>.</div>
+<div class="fa"><b>بازاریابی:</b> هنر پیدا کردن راه‌های هوشمندانه برای خلاص شدن از محصولات تولیدی نیست؛ <b>هنر خلق ارزش خالص برای مشتری</b> و <b>کمک به مشتریان برای بهتر شدن</b>ه.</div>
+<div class="fa"><b>شعار بازاریابان:</b> کیفیت، خدمت و ارزش.</div>
+<div class="fa"><b>زمان شروع:</b></div>
+<div class="fa">• <b>فروش</b> فقط زمانی شروع می‌شه که محصولی رو در اختیار داشته باشی.</div>
+<div class="fa">• <b>بازاریابی قبل از تولید محصول آغاز می‌گردد.</b></div>
+<div class="fa"><b>وظایف بازاریابی:</b> تعیین نحوه عرضه، قیمت‌گذاری، توزیع و تشویق و ترغیب محصولات و خدمات به محیط بازار؛ کنترل نتایج در طول زمان؛ بهبود پیشنهادات؛ تصمیم‌گیری در مورد <b>ضرورت و زمان خاتمه یک پیشنهاد</b> (بلوربان، ۱۳۷۶).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وظایف مدیریت بازاریابی (هفت وظیفه)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف:</b> تلاش نظام‌مند برای <b>شناخت نظام بازار</b> و <b>اقدام مناسب نسبت به انواع تقاضاها</b> با توجه به <b>نظام ارزشی جامعه</b> و هدف‌های سازمان.</div>
+<div class="fa"><b>نکته:</b> نظام ارزشی ما هر نوع محصول، قیمت‌گذاری، تبلیغ و توزیعی که برخلاف معیارهای اسلامی باشه رو نادرست می‌دونه (مثل تقاضا برای محصولات حرام و مضر برای سلامت).</div>
+<div class="fa"><b>هفت وظیفه:</b></div>
+<div class="fa">۱) بررسی تقاضاهای بازار — ۲) مطالعه و بررسی جهت تغییرات — ۳) آنالیز عوامل مؤثر و برآورد سطح تقاضا — ۴) هماهنگ‌سازی نوع و مقدار تقاضا با امکانات و اهداف مؤسسه — ۵) هماهنگ‌سازی کمیت و کیفیت تقاضا با مصالح اجتماعی و اهداف اقتصادی و اجتماعی — ۶) نزدیک کردن طرفین معامله به یکدیگر — ۷) سیاست‌گذاری تولید (سیاست‌های بازاریابی) با توجه به حالت‌های مختلف تقاضا</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل مؤثر بر بازاریابی (چهار دسته)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) عوامل اجتماعی و فرهنگی:</b> جمعیت، زبان (کلامی و غیرکلامی)، دین و مذهب، الگوهای نهادی، نظام ارزشی، تأثیرات طبقه اجتماعی، گروه‌های مرجع (هنرمندان، ورزشکاران، سیاست‌مداران، دانشمندان و حتی چشم‌وهم‌چشمی‌ها)، زیبایی‌شناختی، آداب و رسوم، مراسم، موسیقی و هنر، سبک زندگی، نقش زنان و مردان، اهمیت دادن به بچه‌ها.</div>
+<div class="fa"><b>۲) عوامل سیاسی، قانونی و اقتصادی:</b> سیاست‌ها و تصمیم‌گیری‌های دولت؛ <b>تورم</b> (اثر بسیار زیاد بر نوع و شیوه خرید و فروش)؛ <b>تغییر قیمت ارز</b>؛ قطع یا ادامه رابطه سیاسی با کشورها (تأثیر بر عرضه و تقاضا)؛ <b>تغییر نرخ تعرفه‌های گمرکی</b> (قابل‌رقابت کردن محصولات غیرقابل رقابت یا برعکس).</div>
+<div class="fa"><b>۳) عوامل تکنولوژیک:</b> پیشرفت تکنولوژی یک واقعیت پذیرفته‌شده‌ست. تکنولوژی مانند <b>اسب سرکشی</b>ه که باید شناخت و با آن درست برخورد کرد؛ نه می‌شه با آن جنگید و نه مهارشدنیه. بازاریابان باید روند و گرایش‌های تکنولوژی رو پیگیری و بهره‌برداری کنن. تکنولوژی برای بعضی <b>سهم بازار بیشتر</b> و برای گروهی <b>مانع و تهدید</b>ه.</div>
+<div class="fa"><b>۴) عوامل رقابتی:</b> بازاریاب حرفه‌ای دائماً رقبا و حرکات آنان رو زیر نظر داره و بررسی همه‌جانبه می‌کنه. شناخت <b>قوت‌ها، ضعف‌ها، استراتژی‌ها و بازاریابی رقیب</b> باعث حضور آگاهانه در صحنه می‌شه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار واقعیت حاصل از تحقیقات بازاریابی (نکات عددی خیلی مهم)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> جذب مشتریان جدید <b>۵ تا ۱۰ برابر</b> بیش از ایجاد رضایت و حفظ مشتریان موجود هزینه داره.</div>
+<div class="fa"><b>۲)</b> یک شرکت متوسط بین <b>۱۰ تا ۳۰ درصد</b> مشتریان خودش رو هر ساله از دست می‌ده.</div>
+<div class="fa"><b>۳)</b> <b>پنج درصد کاهش</b> در نرخ دفع مشتریان، با توجه به نوع صنعت، می‌تونه بین <b>۲۵ تا ۸۵ درصد سود</b> رو افزایش بده.</div>
+<div class="fa"><b>۴)</b> نرخ سود هر مشتری با افزایش تعداد سال‌هایی که مشتریان جذب شرکت شده‌اند، <b>افزایش می‌یابد</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهمیت مشتری (پنج نکته کلیدی)</h3><span class="badge s">مهم</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>بقا و دوام هر مؤسسه به مشتریان آن بستگی داره.</b>
+</div>
+<div class="fa"><b>۱)</b> مشتری <b>مهم‌ترین ناظر</b> بر فعالیت‌هاست.</div>
+<div class="fa"><b>۲)</b> مشتری به ما وابسته نیست، <b>ما به او وابسته‌ایم</b>.</div>
+<div class="fa"><b>۳)</b> او مزاحم کار ما نیست، <b>او هدف کار ماست</b>.</div>
+<div class="fa"><b>۴)</b> او یک بیگانه در کار ما نیست، <b>او بخشی از کار ماست</b>.</div>
+<div class="fa"><b>۵)</b> ما با انجام کاری برای او لطفی نمی‌کنیم، <b>اوست که با فراهم کردن این فرصت به ما لطف می‌کند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تبلیغات</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>هدف اصلی هر مؤسسه:</b> جذب مشتری و فروش کالا/خدمات.</div>
+<div class="fa"><b>هدف اصلی تبلیغات:</b> معرفی مزیت‌ها و ویژگی‌های کالا/خدمت به منظور <b>جذب مشتری و افزایش فروش</b>.</div>
+<div class="fa"><b>دو روش برای جذب مشتری و افزایش فروش:</b></div>
+<div class="fa">۱) <b>آگاهی تبلیغاتی</b> (پولی)</div>
+<div class="fa">۲) <b>اطلاع‌رسانی عمومی</b> (رایگان)</div>
+<div class="fa"><b>تعریف تبلیغ:</b> استفاده از آگاهی تبلیغاتی و اطلاع‌رسانی عمومی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>مثال مهم:</b> اگه روزنامه‌ای در مورد کسب‌وکار مقاله‌ای بنویسه = <b>اطلاع‌رسانی عمومی</b>. اما اگه در روزنامه سفارش تبلیغات داده بشه = <b>آگاهی تبلیغاتی</b> (بلوریان، ۱۳۷۶).
+</div>
+<div class="fa"><b>انواع تبلیغات بر حسب هدف (سه نوع):</b></div>
+<div class="fa">۱) <b>تبلیغات اطلاعی:</b> کاربرد در <b>مراحل اولیه ورود کالا به بازار</b>.</div>
+<div class="fa">۲) <b>تبلیغات ترغیب‌کننده:</b> کاربرد در <b>مرحله رقابت</b> (مثل تبلیغات مقایسه‌ای).</div>
+<div class="fa">۳) <b>تبلیغات یادآوری‌کننده:</b> کاربرد در <b>مرحله بلوغ کالا</b> (زنده نگه داشتن محصول در ذهن مصرف‌کننده).</div>
+<div class="fa"><b>هدف اصلی تبلیغات:</b> فروش کالای مناسب، با قیمت مناسب، در مکان مناسب و با توافق مشتری بر سر سود.</div>
+<div class="fa"><b>اهداف جزئی‌تر (نه مورد):</b> ۱) ازدیاد نوع مصرف — ۲) ازدیاد مقدار خرید — ۳) ازدیاد مدت مصرف — ۴) ازدیاد تکرار مصرف — ۵) جلب نسل جدید — ۶) نام موسسه یا نام کالا — ۷) مبارزه با عقاید مخالف — ۸) مبارزه با کالاهای جانشین — ۹) فعالیت خاص</div>
+<div class="fa"><b>علامت تجاری (نکته مهم):</b> علت اصلی استفاده از علامت تجاری اینه که مردم <b>سریعاً و بدون نیاز به خواندن اسم شرکت یا حتی فکر کردن درباره آن</b>، بتونن کالا یا خدمت رو شناسایی کنن (احمدپور دارابی، ۱۳۹۳).</div>
+</div>
+</section>
+
+<section id="finance" class="section">
+<h2 class="section-title">۰۵ · حسابداری، جریان نقد، نقطه سر به سر و ارزیابی</h2>
+<p class="section-sub">مو به مو با اعداد و نکات</p>
+
+<div class="card">
+<div class="card-head"><h3>حسابداری و مدیریت مالی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>قلب کسب‌وکار، امور مالی است.</b> اگه کارآفرین از وضعیت مالی و حساب‌های خودش کنترل نداشته باشه، اطلاع کامل نخواهد داشت و تصمیمات درستی نمی‌گیره.
+</div>
+<div class="fa"><b>مشکل مهم دنیای کسب‌وکار:</b> عدم اطلاعات مالی مدیران → محل ورود معضلات → <b>ورشکستگی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته عددی مهم:</b> <b>بیش از ۸۰ درصد تصمیمات یک شرکت</b> براساس نتایج و عملکرد مالی آن است.
+</div>
+<div class="fa"><b>مهم‌ترین عادت کارآفرین:</b> <b>نگهداری و ثبت دقیق روزانه حساب‌های مالی</b>.</div>
+<div class="fa"><b>دلایل اهمیت ثبت حساب‌های مالی روزانه:</b></div>
+<div class="fa">۱) نشان می‌ده برای دستیابی به سود بیشتر چه کاری باید انجام داد (مثلاً کاهش هزینه‌ها یا افزایش فروش).</div>
+<div class="fa">۲) نشان می‌ده که کسب‌وکار <b>سودآور است</b>.</div>
+<div class="fa">۳) برای جذب سرمایه‌گذار، <b>ارائه سوابق مالی</b> لازمه.</div>
+<div class="fa">۴) <b>پرداختی‌ها</b> رو نشان می‌ده و از مباحث و جدل جلوگیری می‌کنه (اثبات پرداخت هزینه یا طلب).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>صورت‌حساب‌های اصلی (سه مورد)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) صورت سود و زیان</b></div>
+<div class="fa"><b>۲) ترازنامه</b></div>
+<div class="fa"><b>۳) صورت جریان وجوه نقد</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفاهیم حسابداری</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>حسابداری:</b> فنی است که به کمک آن می‌شه <b>وضعیت مالی یک مؤسسه رو تشخیص داد</b>. به عبارت دیگر: فن <b>ثبت، طبقه‌بندی و تلخیص</b> فعالیت‌های مالی در قالب اعداد قابل سنجش به پول و <b>تفسیر نتایج</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> حسابداری <b>فن است نه علم</b>؛ زیرا علم، دانستنی قابل اثبات به روش عینی و قابل اعتماد مبتنی بر مشاهده و آزمایشه که حسابداری دارای چنین خصوصیتی نیست. اصول و ضوابط حسابداری، <b>نظرهایی</b> است که توسط کارشناسان و انجمن‌های حرفه‌ای اظهار می‌شه.
+</div>
+<div class="fa"><b>حسابدار:</b> کسی است که به کمک فن و دانش خودش، حساب‌های مؤسسه و امور مالی رو ثبت و ضبط می‌کنه.</div>
+<div class="fa"><b>دفترداری:</b> ثبت و انعکاس معاملات تجاری در دفاتر حسابداری بر طبق ضوابط خاص.</div>
+<div class="fa"><b>واحد اندازه‌گیری:</b> اساس نگهداری حساب‌ها، داشتن یک معیار یا واحد یکسان برای سنجشه. معمولاً <b>پول رایج کشور</b>؛ در ایران <b>ریال</b>.</div>
+<div class="fa"><b>دوره مالی:</b> زمانی است که در ابتدای آن حساب‌ها افتتاح و در پایان آن حساب‌ها و صورت‌های مالی بسته می‌شه و خلاصه صورت وضعیت مالی تهیه می‌شه. ممکنه <b>هفتگی، ماهانه، شش‌ماهه یا یک‌ساله</b> باشه. معمولاً <b>یک‌ساله و مطابق با سال تقویمی</b>ه. بعضی شرکت‌ها (با مراوده با کشورهای دیگر یا مؤسسات آموزشی) دوره مالی خاص خودشون رو دارن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انواع حسابداری (چهار نوع)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) حسابداری عمومی:</b> امور مالی مؤسسات رو به طور کلی بر عهده داره.</div>
+<div class="fa"><b>۲) حسابداری بازرگانی:</b> ثبت و ضبط معاملات تجاری مؤسسات بازرگانی.</div>
+<div class="fa"><b>۳) حسابداری دولتی:</b> اداره امور مالی و عمومی مؤسسات دولتی؛ توجه به قوانین، آیین‌نامه‌ها و مقررات موضوعه ضرورت داره.</div>
+<div class="fa"><b>۴) حسابداری صنعتی (بهای تمام شده):</b> <b>قیمت تمام‌شده تولید یا خدمت</b> رو تعیین می‌کنه؛ بهای تمام‌شده کل تولیدات و خدمات، مراحل مختلف تولید و در نهایت <b>قیمت تمام‌شده هر واحد تولید</b> رو مشخص می‌کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جریان وجوه نقد (Cash Flow)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">کارآفرینان از <b>سه نوع صورت مالی</b> برای کنترل جریان کسب‌وکار استفاده می‌کنن: ترازنامه، صورت سود و زیان، صورت جریان وجوه نقد.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> کارآفرین <b>نمی‌تونه فقط از صورت سود و زیان استفاده کنه</b>؛ چون ممکنه مؤسسه سود کرده باشه اما <b>پول در اختیار نداشته باشه</b>. دلیل: <b>فاصله بین فروش و پرداخت واقعی پول</b> از طرف مشتری (مثال: فروش یک‌هفته‌ای با وعده پرداخت).
+</div>
+<div class="fa"><b>نقدینگی = شریان حیاتی کسب‌وکار.</b> فقدان نقدینگی باعث تعطیلی زودهنگام کسب‌وکار می‌شه؛ حتی اگه صورت سود و زیان سود نشون بده، ممکنه مؤسسه قادر به پرداخت قبض نباشه.</div>
+<div class="fa"><b>تعریف جریان وجوه نقد:</b> <b>تفاوت میان فروش ماهانه و هزینه‌های ماهانه</b>.</div>
+<div class="fa"><b>معیار جریان وجوه نقد:</b> <b>مانده نقدینگی موجود در دفتر</b>.</div>
+<div class="fa"><b>راه‌های جلوگیری از فقدان نقدینگی (سه راهکار اصلی):</b></div>
+<div class="fa"><b>۱) وصول مطالبات هر چه زودتر:</b> وقتی کالایی فروخته می‌شه، سعی بشه <b>نقداً</b> فروخته بشه.</div>
+<div class="fa"><b>۲) پرداخت به‌موقع صورت‌حساب‌ها:</b> یا آخرین مهلت رو در نظر گرفت. اکثر صورت‌حساب‌ها <b>زمان سررسید</b> دارن و اجباری نیست همون روز دریافت، پرداخت بشن. اما <b>هرگز بعد از موعد سررسید پرداخت نشن</b>، مگر با اجازه تأمین‌کننده مواد اولیه.</div>
+<div class="fa"><b>۳) کنترل روزانه باقی‌مانده نقدینگی:</b> همیشه از مقدار پول نقد موجود اطلاع داشته باش (شیخان، ۱۳۸۴).</div>
+<div class="fa"><b>ماهیت دوره‌ای جریان وجوه نقد:</b> صورت جریان وجوه نقد، <b>ورود و خروج نقدینگی رو در زمان وقوع</b> نشون می‌ده.</div>
+<div class="fa"><b>مثال:</b> اگه در خرداد کالایی فروخته بشه اما مشتری تا مرداد پول رو نپردازه: <b>صورت سود و زیان</b> زمان خرید (خرداد) رو نشون می‌ده؛ <b>صورت جریان وجوه نقد</b> این فروش رو تا <b>مرداد</b> (زمان وصول پول نقد) نشون نمی‌ده.</div>
+<div class="fa"><b>دوره‌ای بودن:</b> میزان ورود نقدینگی ممکنه به دوره خاصی در سال بستگی داشته باشه.</div>
+<div class="fa"><b>مثال ۱ (گل‌فروشی):</b> در روز مادر و اعیاد، ورود نقدینگی بسیار بالا؛ در روزهای عزاداری، بسیار پایین.</div>
+<div class="fa"><b>مثال ۲ (کتاب‌فروشی دانشکده):</b> قبل از شروع نیم‌سال تحصیلی، پرداخت زیاد برای خرید کتاب؛ در طول یک یا دو ماه خرید دانشجویان، جریان نقدینگی بسیار بالا.</div>
+<div class="fa"><b>نکته:</b> برای شرکت مخابرات یا بانک اهمیتی نداره که آیا مؤسسه در سه ماه آینده ورود نقدینگی بالایی خواهد داشت یا خیر؛ آن‌ها فقط می‌خوان <b>قبض تلفن یا قسط وام</b> پرداخت بشه.</div>
+<div class="fa"><b>نکته مهم در طرح کسب‌وکار:</b> باید یک <b>گزارش دوره‌ای یا فصلی</b> که بیانگر <b>احتمالات تغییرات جریان وجوه نقد در فصول یا دوره‌هایی از سال</b>ه، در طرح گنجانده بشه (نظری، ۱۳۹۴).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیش‌بینی جریان وجوه نقد</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف پیش‌بینی:</b> <b>یک حدس حساب‌شده درباره آینده</b> (نظری، ۱۳۹۴).</div>
+<div class="fa"><b>لزوم:</b> هنگام راه‌اندازی کسب‌وکار، جریان وجوه نقد باید <b>به طور ماهانه</b> پیش‌بینی بشه تا مطمئن بشیم برای پرداخت صورت‌حساب‌ها نقدینگی کافی وارد حساب شده.</div>
+<div class="fa"><b>دو مرحله پیش‌بینی ورودی نقدینگی:</b></div>
+<div class="fa"><b>مرحله اول:</b> پیش‌بینی میزان دریافتی از <b>تمام منابع ممکن</b>.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته بسیار مهم:</b> <b>سفارشات، دریافت نقدی محسوب نمی‌شن</b>؛ چون نمی‌شه تضمین کرد هر سفارشی تبدیل به پول نقد بشه (بعضی لغو می‌شن، بعضی مشتری‌ها پرداخت نمی‌کنن). <b>دریافت‌های نقدی:</b> چک‌هایی که مطمئناً وصول خواهند شد یا سفارشاتی که مطمئناً هزینه آن‌ها از طریق کارت اعتباری یا نقد پرداخت خواهد شد.
+</div>
+<div class="fa"><b>مرحله دوم:</b> <b>کسر هزینه‌های نقدی</b> طی این مدت از دریافت‌های نقدی. هزینه‌های نقدی، هزینه‌هایی هستن که واقعاً در طول مدت مورد پیش‌بینی باید پرداخت بشن.</div>
+<div class="fa"><b>نکته:</b> هیچ‌کس نمی‌تونه کاملاً مطمئن باشه، اما بهتره پیش‌بینی‌ها رو <b>بهینه و هر روز مرور</b> کرد (نظری، ۱۳۹۴).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تجزیه و تحلیل نقطه سر به سر (Break-Even Point)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف:</b> تکنیکی که از طریق <b>روابط بین هزینه‌های ثابت، هزینه‌های متغیر و سود</b> مورد مطالعه قرار می‌گیره.</div>
+<div class="fa"><b>نکته:</b> روشی شناخته‌شده برای <b>برنامه‌ریزی سود شرکت</b>ه؛ اساس آن بر روابط مشخص بین <b>هزینه‌ها و درآمدها</b> استواره.</div>
+<div class="fa"><b>تعریف نقطه سر به سر:</b> سطحی از فعالیت (تولید)ه که در آن نقطه، <b>بهای تمام‌شده کل مساوی درآمد کل</b> باشه. به عبارت دیگر، هرگاه <b>درآمد کل = هزینه کل</b>، سود عاید نشده و زیانی هم نداشته است. مؤسسه به میزان تولید در نقطه سر به سر رسیده.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هدف از نوشتن برنامه مالی در کارآفرینی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱)</b> مشخص نمودن <b>منابع مالی مورد نیاز و نحوه تأمین آن‌ها</b>.</div>
+<div class="fa"><b>۲)</b> مشخص نمودن <b>میزان سودآوری قابل انتظار</b>.</div>
+<div class="fa"><b>۳)</b> مشخص نمودن <b>خطرهای احتمالی مالی</b>.</div>
+<div class="fa"><b>برنامه مالی دربرگیرنده موارد زیره (یازده مورد):</b></div>
+<div class="fa">۱) برآورد سرمایه ثابت — ۲) برآورد هزینه‌های قبل از بهره‌برداری — ۳) برآورد سرمایه در گردش — ۴) برآورد نحوه سرمایه‌گذاری — ۵) برآورد هزینه استهلاک — ۶) برآورد هزینه تولید سالانه — ۷) برآورد قیمت تمام‌شده و قیمت فروش محصول — ۸) صورت‌های مالی و ترازنامه واقعی — ۹) ترازنامه‌های سال آتی — ۱۰) تحلیل محاسبات و نقطه سر به سر — ۱۱) کنترل هزینه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ارزیابی کسب‌وکار (سه عامل اصلی)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) ارزیابی فنی</b></div>
+<div class="fa"><b>۲) ارزیابی اقتصادی بازار</b></div>
+<div class="fa"><b>۳) ارزیابی مالی</b></div>
+<div class="fa"><b>ارزیابی فنی — پنج مورد:</b></div>
+<div class="fa">۱) شرکت و سابقه آن — ۲) محل اجرای طرح — ۳) مدیریت شرکت — ۴) جنبه‌های فنی — ۵) ویژگی‌های اساسی طرح</div>
+<div class="fa"><b>ارزیابی اقتصادی بازار — چهار مورد:</b></div>
+<div class="fa">۱) برآورد میزان تولید توسط سایر تولیدکنندگان (<b>پیش‌بینی عرضه</b>) — ۲) برآورد نیاز و کشش بازار در خصوص کالای مورد نیاز (<b>پیش‌بینی تقاضا</b>) — ۳) تخمین <b>صرفه‌جویی ارزی</b> به سبب کاهش یا عدم واردات — ۴) تخمین <b>درآمد ارزی</b> به سبب واردات</div>
+<div class="fa"><b>ارزیابی مالی — شش مورد:</b></div>
+<div class="fa">۱) محاسبه جریان نقدینگی — ۲) زمان‌بندی جریان نقدینگی — ۳) تهیه طرح احتمالی برای هزینه‌های غیرقابل پیش‌بینی — ۴) استانداردسازی و نظم صورت‌های مالی — ۵) نحوه تأمین مالی و سایر اطلاعات کمکی — ۶) (در متن PDF بخشی ناخواناست)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چگونه از طرح‌تان محافظت کنید؟ (چهار راهکار)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱)</b> در ابتدای طرح و در قسمت معرفی، بیان کنید که این گزارش <b>محرمانه</b>ست و هیچ‌کس حق برداشت از مطالب رو نداره مگر با <b>اجازه کتبی</b> صاحب طرح.</div>
+<div class="fa"><b>۲)</b> طرح رو <b>کامل ارائه نکنید</b>؛ مرحله به مرحله و در فاصله زمانی متناسب با پیشرفت مذاکرات و تصمیمات طرفین معرفی کنید و از ارائه مطالب کلیدی و مهم پرهیز کنید.</div>
+<div class="fa"><b>۳)</b> قبل از هرگونه اقدامی در جهت معرفی طرح، <b>مراحل قانونی</b> (ثبت و...) رو انجام دهید.</div>
+<div class="fa"><b>۴)</b> کلیه فعالیت‌های مربوط به ارائه طرح رو <b>مکتوب</b> کنید. مثلاً هنگام ارائه طرح به مراکز برای جلب همکاری، طی <b>نامه رسمی و از طریق ثبت در دبیرخانه</b> رسید دریافت کنید.</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۶ · نظریه‌پردازان و منابع (اینا خیلی مهمن)</h2>
+<p class="section-sub">هر کی چی گفت + منابع تهیه طرح</p>
+
+<div class="card">
+<div class="card-head"><h3>نظریه‌پردازان و نویسندگان فصل پنجم</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>نفر</th><th>مفهوم مرتبط</th></tr></thead>
+<tbody>
+<tr><td><b>نظری (۱۳۹۴)</b></td><td>تعریف <b>ایده‌یابی</b> (پژوهش و تحقیق سیستماتیک برای پیدا کردن ایده‌های جدید)؛ تعریف <b>چیدمان</b>؛ تعریف <b>پیش‌بینی</b> (حدس حساب‌شده درباره آینده)؛ تأکید بر <b>گزارش دوره‌ای/فصلی جریان وجوه نقد</b>؛ تأکید مدیریت بازاریابی</td></tr>
+<tr><td><b>بلوربان (۱۳۷۶)</b></td><td>وظایف <b>بازاریابی</b> (تعیین نحوه عرضه، قیمت‌گذاری، توزیع، تشویق و ترغیب، کنترل نتایج، تصمیم‌گیری در مورد ضرورت و زمان خاتمه پیشنهاد)</td></tr>
+<tr><td><b>بلوریان (۱۳۷۶)</b></td><td>مثال تفاوت <b>آگاهی تبلیغاتی</b> (پولی) و <b>اطلاع‌رسانی عمومی</b> (رایگان)</td></tr>
+<tr><td><b>شیخان (۱۳۸۴)</b></td><td>سه راهکار <b>جلوگیری از فقدان نقدینگی</b> (وصول مطالبات، پرداخت به‌موقع، کنترل روزانه)</td></tr>
+<tr><td><b>احمدپور دارابی (۱۳۹۳)</b></td><td>علت اصلی استفاده از <b>علامت تجاری</b> (شناسایی سریع کالا بدون خواندن اسم شرکت)</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>منابع تهیه و تنظیم طرح کسب‌وکار (نه منبع اصلی)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱)</b> وزارت صنایع و سازمان‌های وابسته (سازمان صنایع کوچک، سازمان گسترش و نوسازی صنایع، شهرک‌های صنعتی)</div>
+<div class="fa"><b>۲)</b> بانک‌ها</div>
+<div class="fa"><b>۳)</b> دانشگاه‌ها و مؤسسات آموزش عالی</div>
+<div class="fa"><b>۴)</b> نهادها و سازمان‌های مستقل (جهاد دانشگاهی، سازمان همیاری اشتغال)</div>
+<div class="fa"><b>۵)</b> وزارت بازرگانی و سازمان‌های وابسته (اتاق بازرگانی، ادارات کل بازرگانی استان‌ها و...)</div>
+<div class="fa"><b>۶)</b> وزارت کار و امور اجتماعی</div>
+<div class="fa"><b>۷)</b> وزارت کشاورزی</div>
+<div class="fa"><b>۸)</b> مراکز دولتی شهری و استانی</div>
+<div class="fa"><b>۹)</b> کتابخانه‌ها و نشریه‌های تخصصی و اینترنت</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرهنگ کسب‌وکار در ایران</h3><span class="badge s">مهم</span></div>
+<div class="fa">برای شناخت موانع فرهنگی توسعه کارآفرینی در ایران باید:</div>
+<div class="fa"><b>۱)</b> ویژگی‌های فرهنگی عمومی ایران طبقه‌بندی و تحلیل بشه.</div>
+<div class="fa"><b>۲)</b> معیارهای کارآفرینی و ویژگی‌های کارآفرینان بازبینی و با فرهنگ عمومی تطبیق داده بشه.</div>
+<div class="fa"><b>حاصل:</b> کشف میزان تطابق آموزه‌ها و الگوهای فرهنگی و اجتماعی جامعه ایرانی با الگوهای رفتاری و شخصیت کارآفرینانه.</div>
+<div class="fa"><b>نکته:</b> برای تحقق تمایز، سه اقدام لازمه:</div>
+<div class="fa">۱) تعریف و توصیف دقیق ویژگی‌های فرهنگی و اجتماعی.</div>
+<div class="fa">۲) اثبات وجود یا فقدان خصائص با استناد به یافته‌های پژوهشی مستند.</div>
+<div class="fa">۳) اثبات نقش و تأثیر این ویژگی‌ها در توسعه یا تهدید اندیشه و اقدام کارآفرینانه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تجزیه و تحلیل بازار</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف بازار:</b> مشتمل بر تمام <b>مشتریان بالقوه‌ای</b>ه که دارای <b>نیاز و خواسته مشترک</b> باشن و برای تأمین نیاز خودشون، به انجام <b>مبادله</b> تمایل داشته و <b>توانایی این کار</b> رو هم داشته باشن.</div>
+<div class="fa"><b>ستون‌های اصلی بازار (چهار مورد):</b></div>
+<div class="fa"><b>۱) مشتری:</b> مشتری کیه و چرا خرید می‌کنه؟ نیاز مشتری چیه؟</div>
+<div class="fa"><b>۲) رقیب:</b> رقبا چه کسانی هستن؟ توانایی‌ها و قابلیت‌های آن‌ها چیه؟</div>
+<div class="fa"><b>۳) شرکت:</b> چه توانمندی‌ها و قوت‌هایی داره؟ چه فرصت‌ها و تهدیدهایی در برابر شرکت است؟</div>
+<div class="fa"><b>۴) تجزیه و تحلیل فنی:</b> اشاره به رویه‌های تولید کالا و تکنولوژی موجود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل محیطی تأثیرگذار بر کارآفرینی (نمونه‌ها)</h3></div>
+<div class="fa">سیاست دولت، شرایط اجتماعی-اقتصادی، حمایت‌های مالی و غیرمالی، محدودیت‌های واردات و صادرات، گرایش عمومی به کارآفرینی، نزدیکی صنایع به دانشگاه‌ها، مقررات و قوانین، حضور کارآفرینان مجرب، سرمایه‌گذاری در فعالیت‌های کوچک و مخاطره‌آمیز، موانع ورود، وجود الگوهای موفق، منابع تأمین مالی، تشریفات اداری، وام‌های کم‌بهره، نسبت شرکت‌های کوچک به جمعیت، برنامه تضمین اعتبار، قوانین حمایت از مالکیت، تنوع فعالیت‌ها، رقابت مؤسسات مالی، رشد اقتصادی، مشاوره و خدمات حمایتی، قدرت چانه‌زنی خریداران، شبکه‌های کارآفرینانه، فشار محصولات جانشین، تسهیلات حمایتی، رقابت رقبای موجود، برنامه‌های دولت، زمینه غنی صنعتی، حمایت از تحقیق و توسعه، دسترسی به عرضه‌کنندگان، مشوق‌ها و معافیت‌های مالیاتی، شرایط زندگی، نیروی کار ماهر، مهیا بودن زمین و عوامل تولید.</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۷ · دام‌های امتحانی (اینا رو نخور!)</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: رویکرد محصول‌محور یا بازارمحور</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی محصول‌محور موفق‌تره.</div>
+<div class="fa"><b>جواب درست:</b> کسب‌وکاری که <b>بازارمحور</b> باشه، موفقیت‌آمیز خواهد بود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> اول بازار رو بشناس، بعد تولید کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: تعریف ایده‌یابی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ایده‌یابی یعنی نشستن و فکر کردن.</div>
+<div class="fa"><b>جواب درست:</b> ایده‌یابی <b>پژوهش و تحقیق سیستماتیک</b> برای پیدا کردن ایده‌های جدید است (نظری، ۱۳۹۴).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> سیستماتیک باشه، نه دیمی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: مهم‌ترین بخش طرح تجاری</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی برنامه مالی یا بازاریابی مهم‌ترین بخشه.</div>
+<div class="fa"><b>جواب درست:</b> <b>خلاصه مدیریتی</b> مهم‌ترین بخش طرح تجاریه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> خلاصه مدیریتی = مهم‌ترین بخش.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: ذی‌نفعان طرح کسب‌وکار</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط سرمایه‌گذار ذی‌نفع است.</div>
+<div class="fa"><b>جواب درست:</b> ذی‌نفعان: <b>جامعه، دولت، مشتریان، تأمین‌کنندگان، سرمایه‌گذاران و سهام‌داران، کارکنان</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> شش گروه ذی‌نفع.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: انواع چیدمان</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط یه نوع چیدمان داریم.</div>
+<div class="fa"><b>جواب درست:</b> سه نوع: <b>بر اساس فرآیند تولید، بر اساس نوع کالا/خدمات، در حالت ثابت</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> فرآیند، کالا/خدمت، ثابت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: تنها عنصر درآمدزا</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بازاریابی یا تبلیغات درآمدزاست.</div>
+<div class="fa"><b>جواب درست:</b> <b>قیمت</b> تنها عنصر کسب‌وکاره که برای فرد <b>ایجاد درآمد</b> می‌کنه؛ سایر عناصر <b>هزینه</b> به همراه دارن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> فقط قیمت درآمدزاست.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: تفاوت بازاریابی و فروش</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بازاریابی و فروش یکین.</div>
+<div class="fa"><b>جواب درست:</b> <b>فروش</b> فقط زمانی شروع می‌شه که محصولی رو در اختیار داشته باشی؛ <b>بازاریابی قبل از تولید محصول</b> آغاز می‌گردد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> بازاریابی قبل از تولید، فروش بعد از تولید.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: چهار واقعیت بازاریابی</h3>
+<div class="fa"><b>دام چیه:</b> اعداد رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> جذب مشتری جدید <b>۵ تا ۱۰ برابر</b> هزینه داره؛ شرکت متوسط <b>۱۰ تا ۳۰ درصد</b> مشتریانش رو از دست می‌ده؛ <b>۵٪ کاهش دفع</b> = <b>۲۵ تا ۸۵ درصد افزایش سود</b>؛ سود هر مشتری با افزایش سال‌ها <b>افزایش</b> می‌یابد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ۵-۱۰ / ۱۰-۳۰ / ۵٪ → ۲۵-۸۵٪.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: انواع تبلیغات بر حسب هدف</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب یا کاربردشون رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> <b>اطلاعی</b> = مراحل اولیه ورود کالا به بازار؛ <b>ترغیب‌کننده</b> = مرحله رقابت؛ <b>یادآوری‌کننده</b> = مرحله بلوغ کالا.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> اطلاعی → ترغیبی → یادآوری.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: حسابداری فن است یا علم؟</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی حسابداری علمه.</div>
+<div class="fa"><b>جواب درست:</b> حسابداری <b>فن است نه علم</b>؛ چون علم، دانستنی قابل اثبات به روش عینی و قابل اعتماده که حسابداری چنین خصوصیتی نداره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> حسابداری = فن، نه علم.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: درصد تصمیمات بر اساس عملکرد مالی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۵۰٪ یا ۷۰٪ه.</div>
+<div class="fa"><b>جواب درست:</b> <b>بیش از ۸۰ درصد</b> تصمیمات یک شرکت براساس نتایج و عملکرد مالی آن است.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> +۸۰٪.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: سه صورت‌حساب اصلی</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>صورت سود و زیان، ترازنامه، صورت جریان وجوه نقد</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> سود و زیان + ترازنامه + جریان نقد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: تعریف جریان وجوه نقد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جریان نقد یعنی سود.</div>
+<div class="fa"><b>جواب درست:</b> جریان وجوه نقد = <b>تفاوت میان فروش ماهانه و هزینه‌های ماهانه</b>. معیارش <b>مانده نقدینگی موجود در دفتر</b>ه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> فروش ماهانه منهای هزینه ماهانه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: سفارشات و دریافت نقدی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی سفارشات دریافت نقدی محسوب می‌شن.</div>
+<div class="fa"><b>جواب درست:</b> <b>سفارشات، دریافت نقدی محسوب نمی‌شن</b>؛ چون نمی‌شه تضمین کرد هر سفارشی تبدیل به پول نقد بشه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> سفارش ≠ پول نقد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: نقطه سر به سر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی نقطه سر به سر یعنی سود.</div>
+<div class="fa"><b>جواب درست:</b> نقطه سر به سر سطحی از فعالیته که <b>بهای تمام‌شده کل = درآمد کل</b>؛ یعنی نه سود، نه ضرر.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> درآمد = هزینه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۶: سه نوع ارزیابی کسب‌وکار</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>ارزیابی فنی، ارزیابی اقتصادی بازار، ارزیابی مالی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> فنی + اقتصادی بازار + مالی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۷: معامله و بازاریابی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی معامله و بازاریابی یکین.</div>
+<div class="fa"><b>جواب درست:</b> <b>هسته مرکزی بازاریابی، معامله</b>ست، ولی <b>معامله، واحد اندازه‌گیری بازاریابی</b> به شمار می‌ره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> معامله = واحد اندازه‌گیری بازاریابی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۸: محافظت از طرح</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی طرح رو باید کامل ارائه کنی.</div>
+<div class="fa"><b>جواب درست:</b> طرح رو <b>کامل ارائه نکن</b>؛ مرحله به مرحله و در فاصله زمانی متناسب با پیشرفت مذاکرات معرفی کن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> مرحله‌ای ارائه بده، نه یک‌جا.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۸ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل پنجم — نحوه نوشتن طرح کسب‌وکار</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 05 · کارآفرینی · فصل پنجم: نحوه نوشتن طرح کسب‌وکار</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"کدوم رویکرد در عرضه محصول/خدمت موفق‌تره؟",options:["محصول‌محور","بازارمحور","هر دو یکسان","هیچ‌کدوم"],answer:1,explanation:"کسب‌وکاری که بازارمحور باشه، موفقیت‌آمیز خواهد بود."},
+{q:"تعریف ایده‌یابی (نظری، ۱۳۹۴) چیه؟",options:["فکر کردن به ایده","پژوهش و تحقیق سیستماتیک برای پیدا کردن ایده‌های جدید","نوشتن طرح","بازاریابی"],answer:1,explanation:"ایده‌یابی عبارت است از پژوهش و تحقیق سیستماتیک برای پیدا کردن ایده‌های جدید."},
+{q:"هدف از غربال کردن ایده‌ها چیه؟",options:["افزایش تعداد ایده‌ها","به حداقل رساندن تعداد ایده‌ها و جدا کردن خوب از ضعیف","انتخاب اولین ایده","حذف همه ایده‌ها"],answer:1,explanation:"هدف: به حداقل رساندن تعداد ایده‌های جمع‌آوری شده و جدا کردن ایده‌های خوب از ضعیف."},
+{q:"مهم‌ترین بخش طرح تجاری کدومه؟",options:["برنامه مالی","خلاصه مدیریتی","برنامه بازاریابی","ساختار سازمانی"],answer:1,explanation:"خلاصه مدیریتی مهم‌ترین بخش طرح تجاریه."},
+{q:"هدف از تهیه طرح کسب‌وکار چیه؟",options:["جذب سرمایه اولیه و جذب تیم مدیریت","فقط جذب سرمایه","فقط جذب تیم","هیچ‌کدوم"],answer:0,explanation:"دو هدف: جذب سرمایه اولیه و جذب تیم مدیریت."},
+{q:"ذی‌نفعان طرح کسب‌وکار کدومن؟",options:["جامعه، دولت، مشتریان، تأمین‌کنندگان، سرمایه‌گذاران، کارکنان","فقط سرمایه‌گذاران","فقط مشتریان","فقط دولت"],answer:0,explanation:"شش گروه: جامعه، دولت، مشتریان، تأمین‌کنندگان، سرمایه‌گذاران و سهام‌داران، کارکنان."},
+{q:"سه نوع چیدمان بر اساس نحوه تولید کدومن؟",options:["فرآیند تولید، نوع کالا/خدمات، حالت ثابت","خطی، شبكه‌ای، ترکیبی","افقی، عمودی، مورب","داخلی، خارجی، ترکیبی"],answer:0,explanation:"سه نوع: چیدمان بر اساس فرآیند تولید، بر اساس نوع کالا/خدمات، در حالت ثابت."},
+{q:"تنها عنصر درآمدزای کسب‌وکار چیه؟",options:["بازاریابی","تبلیغات","قیمت","محصول"],answer:2,explanation:"قیمت تنها عنصر کسب‌وکاره که برای فرد ایجاد درآمد می‌کنه؛ سایر عناصر هزینه به همراه دارن."},
+{q:"تفاوت بازاریابی و فروش چیه؟",options:["یکین","فروش قبل از تولید، بازاریابی بعد از تولید","بازاریابی قبل از تولید، فروش بعد از تولید","هیچ تفاوتی ندارن"],answer:2,explanation:"بازاریابی قبل از تولید محصول آغاز می‌گردد؛ فروش فقط زمانی شروع می‌شه که محصولی در اختیار داشته باشی."},
+{q:"چهار واقعیت بازاریابی — جذب مشتری جدید چند برابر هزینه داره؟",options:["۲ تا ۳ برابر","۵ تا ۱۰ برابر","۱۰ تا ۲۰ برابر","۲۰ تا ۳۰ برابر"],answer:1,explanation:"جذب مشتریان جدید ۵ تا ۱۰ برابر بیش از ایجاد رضایت و حفظ مشتریان موجود هزینه داره."},
+{q:"پنج درصد کاهش در نرخ دفع مشتریان چقدر سود رو افزایش می‌ده؟",options:["۵ تا ۱۰ درصد","۱۰ تا ۲۵ درصد","۲۵ تا ۸۵ درصد","۵۰ تا ۱۰۰ درصد"],answer:2,explanation:"۵٪ کاهش در نرخ دفع مشتریان، با توجه به نوع صنعت، می‌تونه بین ۲۵ تا ۸۵ درصد سود رو افزایش بده."},
+{q:"انواع تبلیغات بر حسب هدف کدومن؟",options:["اطلاعی، ترغیب‌کننده، یادآوری‌کننده","پولی، رایگان، ترکیبی","داخلی، خارجی، بین‌المللی","مستقیم، غیرمستقیم، ترکیبی"],answer:0,explanation:"سه نوع: تبلیغات اطلاعی (مراحل اولیه)، ترغیب‌کننده (مرحله رقابت)، یادآوری‌کننده (مرحله بلوغ)."},
+{q:"حسابداری فن است یا علم؟",options:["علم","فن","هر دو","هیچ‌کدوم"],answer:1,explanation:"حسابداری فن است نه علم؛ چون علم، دانستنی قابل اثبات به روش عینی و قابل اعتماده که حسابداری چنین خصوصیتی نداره."},
+{q:"چند درصد تصمیمات یک شرکت براساس عملکرد مالی آن است؟",options:["۵۰٪","۶۰٪","۷۰٪","بیش از ۸۰٪"],answer:3,explanation:"بیش از ۸۰ درصد تصمیمات یک شرکت براساس نتایج و عملکرد مالی آن است."},
+{q:"سه صورت‌حساب اصلی کدومن؟",options:["صورت سود و زیان، ترازنامه، صورت جریان وجوه نقد","صورت سود و زیان، ترازنامه، دفتر روزنامه","ترازنامه، دفتر کل، دفتر روزنامه","صورت جریان نقد، دفتر کل، ترازنامه"],answer:0,explanation:"سه صورت‌حساب اصلی: صورت سود و زیان، ترازنامه، صورت جریان وجوه نقد."},
+{q:"تعریف جریان وجوه نقد چیه؟",options:["سود ماهانه","تفاوت میان فروش ماهانه و هزینه‌های ماهانه","کل درآمد سالانه","کل هزینه سالانه"],answer:1,explanation:"جریان وجوه نقد = تفاوت میان فروش ماهانه و هزینه‌های ماهانه؛ معیارش مانده نقدینگی موجود در دفتره."},
+{q:"سفارشات دریافت نقدی محسوب می‌شن؟",options:["بله","نه، چون نمی‌شه تضمین کرد هر سفارشی تبدیل به پول نقد بشه","فقط سفارشات بزرگ","فقط سفارشات کوچک"],answer:1,explanation:"سفارشات دریافت نقدی محسوب نمی‌شن؛ چون نمی‌شه تضمین کرد هر سفارشی تبدیل به پول نقد بشه."},
+{q:"سه راهکار جلوگیری از فقدان نقدینگی کدومن؟",options:["وصول مطالبات، پرداخت به‌موقع صورت‌حساب‌ها، کنترل روزانه باقی‌مانده نقدینگی","فقط وصول مطالبات","فقط پرداخت به‌موقع","فقط کنترل روزانه"],answer:0,explanation:"سه راهکار: وصول مطالبات هر چه زودتر، پرداخت به‌موقع صورت‌حساب‌ها، کنترل روزانه باقی‌مانده نقدینگی."},
+{q:"نقطه سر به سر چیه؟",options:["نقطه‌ای که سود حداکثره","سطحی از فعالیت که بهای تمام‌شده کل مساوی درآمد کل باشه","نقطه‌ای که ضرر حداکثره","نقطه شروع تولید"],answer:1,explanation:"نقطه سر به سر: سطحی از فعالیت که در آن نقطه، بهای تمام‌شده کل مساوی درآمد کل باشه (نه سود، نه ضرر)."},
+{q:"سه نوع ارزیابی کسب‌وکار کدومن؟",options:["فنی، اقتصادی بازار، مالی","فنی، حقوقی، مالی","اقتصادی، اجتماعی، فرهنگی","مالی، بازاریابی، تولیدی"],answer:0,explanation:"سه نوع: ارزیابی فنی، ارزیابی اقتصادی بازار، ارزیابی مالی."},
+{q:"برای محافظت از طرح، ارائه طرح چطور باید باشه؟",options:["کامل و یک‌جا","مرحله به مرحله و در فاصله زمانی متناسب با پیشرفت مذاکرات","فقط شفاهی","فقط با ایمیل"],answer:1,explanation:"طرح رو کامل ارائه نکن؛ مرحله به مرحله و در فاصله زمانی متناسب با پیشرفت مذاکرات و تصمیمات طرفین معرفی کن."},
+{q:"منابع تهیه و تنظیم طرح کسب‌وکار شامل کدومن؟",options:["وزارت صنایع، بانک‌ها، دانشگاه‌ها، نهادهای مستقل، وزارت بازرگانی، وزارت کار، وزارت کشاورزی، مراکز دولتی، کتابخانه‌ها و اینترنت","فقط بانک‌ها","فقط دانشگاه‌ها","فقط وزارت صنایع"],answer:0,explanation:"نه منبع: وزارت صنایع، بانک‌ها، دانشگاه‌ها، نهادهای مستقل، وزارت بازرگانی، وزارت کار، وزارت کشاورزی، مراکز دولتی، کتابخانه‌ها و نشریه‌های تخصصی و اینترنت."},
+{q:"ستون‌های اصلی بازار کدومن؟",options:["مشتری، رقیب، شرکت، تجزیه و تحلیل فنی","مشتری، رقیب، دولت، مالی","مشتری، تأمین‌کننده، دولت، مالی","فقط مشتری و رقیب"],answer:0,explanation:"چهار ستون اصلی بازار: مشتری، رقیب، شرکت، تجزیه و تحلیل فنی."},
+{q:"هدف اصلی تبلیغات چیه؟",options:["فقط افزایش تولید","معرفی مزیت‌ها و ویژگی‌های کالا/خدمت به منظور جذب مشتری و افزایش فروش","فقط کاهش هزینه","فقط افزایش قیمت"],answer:1,explanation:"هدف اصلی تبلیغات: معرفی مزیت‌ها و ویژگی‌های کالا/خدمت به منظور جذب مشتری و افزایش فروش."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مفاهیم فصل پنجم — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

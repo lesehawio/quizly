@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · کارآفرینی · سری 04 · فصل چهارم: نحوه ثبت و تأسیس شرکت</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"04";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>کارآفرینی · سری 04</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل چهارم: نحوه ثبت و تأسیس شرکت</h2>
+  <p>شرکت چیه؟ چطور ثبت می‌شه؟ چه مدارکی لازمه؟ فواید ثبت چیه؟ همه رو خودمونی می‌گم</p>
+  <div class="pills"><span class="pill">تعریف شرکت</span><span class="pill">شرایط تشکیل</span><span class="pill">مراحل ثبت</span><span class="pill">فواید ثبت</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل چهارم کتاب کارآفرینی (نحوه ثبت و تأسیس شرکت) نوشته شده. همه‌چی رو ساده و خودمونی گفتم. از تعریف شرکت شروع می‌کنیم تا برسیم به مراحل ثبت، فواید ثبت و ثبت شرکت خدماتی.</div>
+
+<div class="stats">
+<div class="stat"><b>۴</b><span>شرط عمومی صحت</span></div>
+<div class="stat"><b>۵</b><span>شرط اختصاصی</span></div>
+<div class="stat"><b>۶</b><span>گام ثبت</span></div>
+<div class="stat"><b>۳</b><span>فایده ثبت</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#steps">مراحل ثبت</a><a href="#benefits">فواید ثبت</a><a href="#service">شرکت خدماتی</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (۱۰ دقیقه‌ای بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف شرکت و ملاک تشکیل</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>شرکت از اجتماع دو یا چند شریک یا سهام‌دار یا مؤسس که دارای هدف مشترک بوده و برای رسیدن به یک هدف واحد تلاش می‌کنند، گفته می‌شه.</b>
+</div>
+<div class="fa"><b>ملاک تشکیل:</b> <b>قصد و نیت</b> دو یا چند نفر برای تشکیل شرکت، ملاک تشکیل است.</div>
+<div class="fa"><b>خودمونی:</b> شرکت یعنی چند نفر با هم یه هدف مشترک داشته باشن و برای رسیدن بهش تلاش کنن. همین که قصد و نیتشون برای تشکیل شرکت باشه، کافیه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ثبت شرکت یعنی چی؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>ثبت شرکت</b> = <b>اقدام نهایی</b> در تأسیس شرکت.</div>
+<div class="fa"><b>مستند:</b> ماده ۹۵ قانون تجارت → ثبت کلیه شرکت‌های تجاری <b>الزامی</b> است؛ ثبت شرکت <b>کامل‌کننده همه شرایط تشکیل</b> و از جمله <b>شرایط شکلی</b> است.</div>
+<div class="fa"><b>مرجع ثبت:</b></div>
+<div class="fa">• تو تهران: <b>«اداره کل ثبت شرکت‌ها و مؤسسات غیرتجاری»</b></div>
+<div class="fa">• تو شهرستان‌ها: <b>«ادارات ثبت شرکت‌ها و مؤسسات غیرتجاری»</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار شرط عمومی صحت قرارداد</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱)</b> قصد و رضایت طرفین قرارداد.</div>
+<div class="fa"><b>۲)</b> اهلیت و صلاحیت طرفین قرارداد.</div>
+<div class="fa"><b>۳)</b> معین بودن موضوع قرارداد.</div>
+<div class="fa"><b>۴)</b> قانونی بودن موضوع و هدف قرارداد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پنج شرط اختصاصی تشکیل شرکت</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) وجود شرکا:</b> حداقل <b>دو شریک</b> الزامیه؛ قانون محدودیتی برای سقف تعداد شرکا تعیین نکرده.</div>
+<div class="fa"><b>۲) همکاری شرکا:</b> تمایل به همکاری از طریق <b>تودیع سرمایه (خرید سهام)</b> و <b>حضور در مجامع و جلسات</b> تجلی پیدا می‌کنه.</div>
+<div class="fa"><b>۳) تودیع سرمایه:</b> تأمین سرمایه در قالب <b>آورده نقدی و غیرنقدی</b> شرکا.</div>
+<div class="fa"><b>۴) اشتغال به فعالیت تجاری:</b> اشتغال شرکا یا کارگزارانشون به <b>معاملات تجارتی</b> (ماده ۲ قانون تجارت).</div>
+<div class="fa"><b>۵) تقسیم سود و زیان:</b> نحوه تقسیم قبل از آغاز فعالیت باید برای شرکا روشن باشه؛ معمولاً <b>مساوی</b>ه؛ تعیینش بر عهده <b>اساسنامه</b>ست.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته حقوقی مهم: ثبت شرط تشکیل نیست!</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">تشکیل شرکت مبتنی بر <b>اراده آزاد شرکا</b>ست و <b>نیازی به اخذ اجازه قبلی از مقامات اداری نداره</b>.</div>
+<div class="fa"><b>مثال مهم:</b> تأسیس شرکت برای تولید و پخش دارو نیاز به <b>اخذ مجوز از وزارت بهداشت</b> داره، اما انجام دادن این فعالیت‌ها از طریق تأسیس شرکت، نیاز به چنین اجازه‌ای نداره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نتیجه:</b> ثبت شرکت در مرجع ثبت شرکت‌ها، <b>از شرایط تشکیل هیچ‌کدام از شرکت‌ها نیست</b>؛ شرکت‌ها با رعایت شرایط مقرر در قانون، <b>تشکیل‌شده محسوب می‌شن و شخصیت حقوقی دارن</b>. اما به عنوان یک <b>الزام قانونی</b> باید به ثبت برسن که این ثبت آثاری داره.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه فایده اصلی ثبت شرکت</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) رسمی شدن قراردادهای بین شرکا:</b> بعد از ثبت، هیچ‌کس نمی‌تونه از وجود شرکت‌نامه، اساسنامه و تصمیمات ثبت‌شده اظهار بی‌اطلاعی کنه.</div>
+<div class="fa"><b>۲) شفافیت برای معامله‌کنندگان با شرکت:</b> طرف معامله می‌تونه از سرمایه شرکت، اختیارات مدیران و توانایی شخصیت حقوقی مطلع بشه. مواد مهم هر شرکت در <b>جراید کثیرالانتشار آگهی</b> می‌شه.</div>
+<div class="fa"><b>۳) نظارت و رسیدگی دولتی:</b> ثبت نوعی رسیدگیه تا معلوم بشه آیا مقررات رعایت شده یا نه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>حداقل سرمایه در قانون تجارت</h3></div>
+<div class="fa"><b>حداقل سرمایه:</b> <b>۱,۰۰۰,۰۰۰ ریال</b> (یک میلیون ریال).</div>
+<div class="fa"><b>حداکثر سرمایه:</b> تعیین نشده؛ شرکا به هر مقدار که بتونن می‌تونن سرمایه رو افزایش بدن.</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (خودمونی و ساده)</h2>
+<p class="section-sub">هر چیزی که لازم داری بدونی، با مثال</p>
+
+<div class="card">
+<div class="card-head"><h3>مراحل تشکیل شرکت (از نظر شکل‌گیری شراکت)</h3><span class="badge s">مهم</span></div>
+<div class="fa">شکل‌گیری شراکت دو یا چند نفر به یکی از صور <b>اختیاری</b> و <b>قهری (اجباری)</b> امکان‌پذیره.</div>
+<div class="fa"><b>الف) شرکت اختیاری — در قالب یکی از اشکال زیر:</b></div>
+<div class="fa">۱) <b>انعقاد قرارداد</b> بین دو یا چند نفر در خصوص شراکت با میل، اراده و رغبت شرکا.</div>
+<div class="fa">۲) <b>ترکیب و امتزاج اموال</b> شرکا.</div>
+<div class="fa">۳) <b>پذیرش ارادی یک شیء (مال)</b> به عنوان اجرت یا حقوق مالکانه مشترک شرکا.</div>
+<div class="fa"><b>مستند:</b> ماده ۵۷۳ قانون مدنی: «شرکت اختیاری در نتیجه عقدی از عقود حاصل می‌شه یا در نتیجه عمل شرکا از قبیل امتزاج اختیاری یا قبول مالی، مشاعاً در ازاء عمل چند نفر و نحو این‌ها.»</div>
+<div class="fa"><b>ب) شرکت قهری یا اجباری:</b></div>
+<div class="fa">الزاماً تمامی شرکت‌ها به صورت ارادی و اختیاری تشکیل نمی‌شن؛ در مواردی شرکت <b>برخلاف میل، اراده و خواست شرکا</b> تشکیل می‌شه.</div>
+<div class="fa"><b>مثال:</b> <b>مالکیت ناشی از توارث</b> که در آن شراکت افراد در ارث، خارج از درخواست و اراده شرکاست.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار شرط عمومی صحت قرارداد</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa">صحت و صلاحیت قراردادها منوط به انعقاد درست و صحیح اون‌هاست. رعایت موارد زیر ضروریه:</div>
+<div class="fa"><b>۱) قصد و رضایت طرفین قرارداد</b></div>
+<div class="fa"><b>۲) اهلیت و صلاحیت طرفین قرارداد</b></div>
+<div class="fa"><b>۳) معین بودن موضوع قرارداد</b></div>
+<div class="fa"><b>۴) قانونی بودن موضوع و هدف قرارداد</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پنج شرط اختصاصی تشکیل شرکت</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">برای تشکیل شرکت که معمولاً مبتنی بر تهیه و تدوین <b>شرکت‌نامه</b>ه، علاوه بر شرایط عمومی عقد قرارداد، موارد ویژه‌ای تحت عنوان <b>شرایط اختصاصی</b> باید مورد توجه قرار بگیره:</div>
+<div class="fa"><b>۱) وجود شرکا:</b> برای تشکیل شرکت، <b>حداقل وجود دو شریک الزامی</b>ه. یه شخص نمی‌تونه به تنهایی شرکت تشکیل بده؛ تأسیس شرکت مستلزم شراکت <b>دو یا چند شریک</b>ه. قانون <b>محدودیتی برای سقف تعداد شرکا</b> تعیین نکرده.</div>
+<div class="fa"><b>۲) همکاری شرکا:</b> تمایل به همکاری شرکا لازمه شکل‌گیری شرکت است. این همکاری معمولاً از طریق <b>تودیع سرمایه (خرید سهام)</b> و <b>حضور در مجامع و جلسات</b> تجلی پیدا می‌کنه.</div>
+<div class="fa"><b>۳) تودیع سرمایه:</b> تأمین سرمایه مورد نیاز شرکت که در قالب <b>آورده نقدی و غیرنقدی</b> شرکا (سهام‌داران) محقق می‌شه، از جمله شروط لازم برای ایجاد شرکت است.</div>
+<div class="fa"><b>۴) اشتغال به فعالیت تجاری:</b> اشتغال شرکا یا کارگزارانشون به <b>معاملات تجارتی</b> که مصادیقش در <b>ماده ۲ قانون تجارت</b> منعکسه، از ضروریات تشکیل شرکته.</div>
+<div class="fa"><b>۵) تقسیم سود و زیان:</b> نحوه تقسیم سود و زیان <b>قبل از آغاز فعالیت شرکت</b> باید برای شرکا روشن باشه. به طور معمول، نسبت تقسیم سود و زیان بین شرکا <b>مساوی</b>ه؛ یعنی یه شریک به همون میزان که سود می‌بره در زیان هم سهیمه. <b>تعیین این مهم بر عهده اساسنامه شرکت است.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ماده ۲۰ قانون تجارت — قالب‌های قابل ثبت</h3><span class="badge s">مهم</span></div>
+<div class="fa">شرکت‌های تجاری مطابق <b>ماده ۲۰ قانون تجارت</b> می‌تونن در یکی از قالب‌های زیر به ثبت برسن:</div>
+<div class="fa">۱) <b>سهامی</b> (خاص و عام)</div>
+<div class="fa">۲) <b>با مسئولیت محدود</b></div>
+<div class="fa">۳) <b>تضامنی</b></div>
+<div class="fa">۴) <b>نسبی</b></div>
+<div class="fa">۵) <b>مختلط</b> (سهامی و غیرسهامی)</div>
+<div class="fa"><b>نکته:</b> انتخاب نوع و قالب شرکت به موارد زیر بستگی داره:</div>
+<div class="fa">• اهداف اعضا در آینده</div>
+<div class="fa">• نوع فعالیت افراد</div>
+<div class="fa">• میزان مسئولیت هر یک از شرکا</div>
+<div class="fa">• تعداد افراد عضو</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سیر تاریخی قوانین ثبت شرکت</h3></div>
+<div class="fa"><b>قانون تجارت مصوب ۱۳۰۳-۱۳۰۴:</b> مقرراتی راجع به ثبت شرکت‌ها وضع شده بود که مربوط به <b>شرکت‌های داخلی</b> بود و <b>نامی از شرکت‌های خارجی برده نشده بود</b>.</div>
+<div class="fa"><b>شرکت‌های خارجی:</b> شرکت‌هایی هستن که <b>در ممالک خارج تشکیل</b> و به وسیله <b>تأسیس شعبه در ایران</b> به امر تجارت اشتغال دارن.</div>
+<div class="fa"><b>قانون ثبت شرکت‌ها — ۱۸ خرداد ۱۳۱۰:</b> تصویب شد و شرکت‌های خارجی به موجب آن <b>ملزم به ثبت</b> گردیدن و برای ثبت شرکت‌های داخلی هم مقرراتی اضافه گردید.</div>
+<div class="fa"><b>قانون تجارت مصوب ۱۳۱۱</b> و مخصوصاً <b>مواد الحاقی به قانون تجارت مصوب ۱۳۴۷:</b> موادی راجع به ثبت شرکت‌ها وضع شد که <b>عدم رعایت آن، موجب بطلان شرکت یا عملیات آن</b> خواهد بود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انواع شرکت‌های تجاری قابل ثبت</h3></div>
+<div class="fa"><b>۱)</b> شرکت‌های داخلی</div>
+<div class="fa"><b>۲)</b> شرکت‌های خارجی</div>
+<div class="fa"><b>۳)</b> شرکت‌های بیمه</div>
+<div class="fa"><b>مستند:</b> ماده ۱۹۵ قانون تجارت: «ثبت کلیه شرکت‌های مذکور در این قانون الزامی و تابع مقررات قانونی ثبت شرکت‌ها است.»</div>
+<div class="fa"><b>ترتیب اجرا:</b> به عهده <b>وزارت دادگستری</b> محول شده.</div>
+<div class="fa"><b>مستندات آیین‌نامه‌ای:</b> آیین‌نامه مصوبه ۲ خرداد ۱۳۱۰ در اجرای قانون ثبت شرکت‌ها؛ آیین‌نامه مصوب اردیبهشت ۱۳۱۱ در اجرای قانون تجارت؛ و سایر موادی که بعداً اضافه شده.</div>
+</div>
+</section>
+
+<section id="steps" class="section">
+<h2 class="section-title">۰۳ · مراحل ثبت شرکت (گام‌به‌گام)</h2>
+<p class="section-sub">شش گام اصلی + یازده گام شرکت خدماتی</p>
+
+<div class="card">
+<div class="card-head"><h3>شش گام اصلی ثبت شرکت</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>گام ۱: انتخاب موضوع شرکت</b></div>
+<div class="fa">موضوع شرکت چیزی است که شرکت برای آن تأسیس شده باشه. موضوع شرکت باید <b>مشروع</b> و <b>متضمن منافع عقلانی</b> باشه؛ وگرنه از موارد <b>ابطال شرکت</b> خواهد بود.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> مدیران نمی‌تونن در عمل از حد موضوع شرکت تجاوز کنن؛ در صورت تجاوز، <b>عمل آن‌ها اثر قانونی نداره</b> و در صورت <b>تفریط یا تعدی</b>، کلیه مدیران <b>متضامناً مسئول خسارت صاحبان سهام</b> هستن.
+</div>
+<div class="fa"><b>گام ۲: تعیین نوع شرکت</b></div>
+<div class="fa">شرکت‌های تجاری مطابق <b>ماده ۲۰ قانون تجارت</b> می‌تونن در یکی از قالب‌های زیر به ثبت برسن: سهامی (خاص و عام)، با مسئولیت محدود، تضامنی، نسبی، مختلط (سهامی و غیرسهامی).</div>
+<div class="fa"><b>گام ۳: تعیین سرمایه شرکت</b></div>
+<div class="fa">سرمایه از <b>مهم‌ترین عوامل تجارت</b> و <b>بزرگ‌ترین وسیله جلب منفعت</b>ه. هر شرکت باید دارای سرمایه باشه تا بتونه از عملیات خودش (تجارت) نتیجه ببره و منتفع بشه. اهمیت شرکت‌های تجاری رو از <b>سرمایه اون‌ها</b> می‌شه درک کرد.</div>
+<div class="fa"><b>حداکثر سرمایه:</b> تعیین نشده؛ شرکا به هر مقدار که بتونن می‌تونن سرمایه رو افزایش بدن.</div>
+<div class="fa"><b>حداقل سرمایه در قانون تجارت:</b> <b>۱,۰۰۰,۰۰۰ ریال</b> (یک میلیون ریال).</div>
+<div class="fa"><b>گام ۴: تعیین مدت فعالیت شرکت</b></div>
+<div class="fa">شرکت ممکنه برای <b>مدت محدود</b> (مثلاً ۱۲ سال) یا <b>مدت نامحدود</b> تشکیل بشه. اگه برای مدت معین باشه، باید آن مدت معلوم بشه.</div>
+<div class="fa"><b>اثر:</b> با رسیدن تاریخ و انقضای مدت، شرکت <b>به خودی خود منحل و برچیده</b> می‌شه.</div>
+<div class="fa"><b>مستند:</b> ماده ۸۳ اصلاحی → هرگونه تغییر در مواد اساسنامه در صلاحیت <b>مجمع عمومی فوق‌العاده</b>ه؛ مدت شرکت هم یکی از موارد مذکور در اساسنامه‌ست. از این جهت مجمع عمومی می‌تونه مدت رو <b>تمدید</b> یا به ملاحظاتی <b>تقلیل</b> بده.</div>
+<div class="fa"><b>گام ۵: تعیین مرکز اصلی شرکت و نشانه صحیح آن</b></div>
+<div class="fa"><b>مرکز اصلی شرکت</b> = همون <b>مرکز اداره آن</b> که معمولاً مجامع عمومی در آنجا تشکیل و مدیران و بازرسان در آنجا انجام وظیفه می‌کنن.</div>
+<div class="fa">مرکز اصلی، در واقع <b>اقامتگاه شرکت</b>ه و از حیث <b>ابلاغ اخطاریه‌ها، دادخواست‌ها و اوراق رسمی</b> اهمیت داره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> اگه شرکت غیر از مرکز اصلی، چند مرکز دیگه برای عملیات فنی داشته باشه، از نظر مقامات قانونی و اشخاص ثالث <b>فقط مرکز اصلی مورد توجه</b>ه و سایر مراکز مربوط به <b>مناسبات داخلی شرکت</b>ه.
+</div>
+<div class="fa">اگه شرکت <b>شعبه یا شعباتی</b> داشته باشه و در اساسنامه قید بشه، باید <b>محل آن‌ها</b> تعیین بشه.</div>
+<div class="fa"><b>گام ۶: فراهم کردن مدارک لازم</b></div>
+<div class="fa">مدارک لازم برای ثبت هر نوع شرکت باید <b>به صورت دقیق تکمیل</b> بشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته حقوقی مهم: ثبت شرط تشکیل نیست!</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">شرکت به عنوان یه <b>عمل حقوقی</b>، مستلزم همکاری دو یا چند شخصه؛ این همکاری صرفاً راییده قراردادی نیست که طرفین منعقد کرده‌اند، بلکه تابع <b>مکانیسمی</b>ه که قانون‌گذار در اختیار شرکا قرار داده تا سرمایه‌های فردی خودشون رو برای رسیدن به هدفی خاص (بردن سود) به <b>سرمایه جمعی</b> تبدیل کنن.</div>
+<div class="fa"><b>تشکیل شرکت مبتنی بر اراده آزاد شرکاست و نیازی به اخذ اجازه قبلی از مقامات اداری نداره.</b></div>
+<div class="fa"><b>مثال مهم:</b> تأسیس یه شرکت برای تولید و پخش دارو مسلماً نیاز به <b>اخذ مجوز از وزارت بهداشت</b> داره، اما انجام دادن این فعالیت‌ها (تولید و پخش) از طریق تأسیس شرکت، نیاز به چنین اجازه‌ای نداره.</div>
+<div class="fa">اگه فعالیت شرکت به موجب قانون <b>ممنوع نباشه</b>، شرکت با رعایت شرایط دیگه قانون تشکیل می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نتیجه:</b> ثبت شرکت در مرجع ثبت شرکت‌ها، <b>از شرایط تشکیل هیچ‌کدام از شرکت‌ها نیست</b>؛ شرکت‌ها با رعایت شرایط مقرر در قانون، <b>تشکیل‌شده محسوب می‌شن و شخصیت حقوقی دارن</b>. اما به عنوان یه <b>الزام قانونی</b> باید به ثبت برسن که این ثبت دارای آثاریه.
+</div>
+<div class="fa"><b>نکته:</b> دولت باید حتی‌المقدور در تشکیل شرکت‌ها <b>نظارت</b> کنه تا وسیله‌ای برای سوءاستفاده نباشه.</div>
+</div>
+</section>
+
+<section id="benefits" class="section">
+<h2 class="section-title">۰۴ · فواید و آثار ثبت شرکت</h2>
+<p class="section-sub">سه فایده اصلی + مزایای جانبی</p>
+
+<div class="card">
+<div class="card-head"><h3>سه فایده اصلی ثبت شرکت</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">ثبت شرکت نه تنها وسیله‌ایه که دولت مقررات شرکت‌های تجارتی رو کنترل می‌کنه، بلکه فواید مهم دیگه‌ای هم داره:</div>
+<div class="fa"><b>فایده ۱: رسمی شدن قراردادهای بین شرکا</b></div>
+<div class="fa">هرگاه شرکت به ثبت برسه، قراردادهای منعقدشده بین شرکا <b>رسمی</b> بوده و بعدها هیچ‌یک نمی‌تونن مانند اسناد غیررسمی از وجود <b>شرکت‌نامه، اساسنامه و سایر تصمیمات ثبت‌شده</b> اظهار بی‌اطلاعی کنن یا به ایراداتی که درباره اسناد غیررسمی ممکنه وارد نمود، استناد کنن.</div>
+<div class="fa"><b>فایده ۲: شفافیت برای معامله‌کنندگان با شرکت</b></div>
+<div class="fa">ثبت شرکت از لحاظ معامله‌کنندگان با شرکت در درجه‌ای از اهمیت است که بدون مراجعه به آن، اغلب نمی‌تونن معامله کنن.</div>
+<div class="fa">کسی که قرارداد مهمی با شرکت منعقد می‌کنه یا معامله مهمی انجام می‌ده، باید بدونه:</div>
+<div class="fa">• <b>سرمایه شرکت</b> تا چه اندازه است</div>
+<div class="fa">• <b>اختیار مدیران شرکت</b> تا چه حدوده</div>
+<div class="fa">• <b>قدرت و توانایی این شخصیت حقوقی</b> به چه میزانه</div>
+<div class="fa">مواد مهم و لازم هر شرکت در <b>جراید کثیرالانتشار آگهی</b> می‌شه تا همه از آن مستحضر باشن.</div>
+<div class="fa">در اغلب ممالک، هر شخص خارجی — ولو ظاهراً ذی‌نفع نباشه — می‌تونه به <b>پرونده ثبت شرکت</b> مراجعه و از محتویات آن اطلاع حاصل کنه.</div>
+<div class="fa"><b>در کشور ما:</b> ضمن آیین‌نامه مصوبه <b>خرداد ۱۳۱۰</b> و مقررات <b>۱۰ اسفند ۱۳۲۷ وزارت دادگستری</b> مقرر گردیده: <b>«مراجعه به دفاتر ثبت شرکت‌ها اعم از ایرانی و خارجی برای عموم آزاد و هر ذی‌نفع می‌تونه از مندرجات آن سواد مصدق تحصیل کنه.»</b></div>
+<div class="fa"><b>فایده ۳: نظارت و رسیدگی دولتی</b></div>
+<div class="fa">ثبت کردن شرکت هم نوعی <b>رسیدگی</b>ه که متصدیان امر انجام می‌دن تا معلوم بشه آیا برای به‌وجود آوردن این شخصیت حقوقی <b>دقت لازمه</b> رو داشته و <b>مقررات رعایت گردیده یا خیر</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مزایای جانبی ثبت شرکت</h3></div>
+<div class="fa">با فعالیت به صورت شرکت، کلیه امور تجاری و غیرتجاری شرکت <b>به صورت رسمی و قانونی</b> صورت گرفته و <b>اعتبار بیشتری</b> خواهد یافت.</div>
+<div class="fa">فعالیت تحت عنوان شرکت به علت امتیازاتی که قانون برای شرکت‌ها در نظر گرفته — نظیر <b>اعطای وام</b> و <b>حمایت‌هایی که از اشخاص حقوقی</b> به عمل میاره — موجب <b>اطمینان خاطر</b> شرکت‌ها جهت فعالیت با <b>امنیت شغلی بیشتر</b> نسبت به فعالیت شخصی می‌شه.</div>
+<div class="fa">ثبت شرکت به شرکت‌ها امکان <b>حضور در مناقصات و مزایادات</b> رو می‌ده که سود قابل توجهی رو برای طرفین معامله به همراه داره.</div>
+</div>
+</section>
+
+<section id="service" class="section">
+<h2 class="section-title">۰۵ · ثبت شرکت خدماتی</h2>
+<p class="section-sub">ویژگی‌ها + یازده گام ثبت</p>
+
+<div class="card">
+<div class="card-head"><h3>ویژگی‌های شرکت خدماتی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>لازم به سرمایه‌گذاری زیادی نیست</b>؛ اگه سرمایه کمی داری، تأسیس شرکت خدماتی گزینه بسیار عالیه.</div>
+<div class="fa"><b>نیاز به تحصیلات عالی نداره</b> و شرایط خاصی هم لازم نداره.</div>
+<div class="fa"><b>بازدهی آن زوده.</b></div>
+<div class="fa">شرکت‌های خدماتی با <b>هدف ارائه خدمات</b> تشکیل می‌شن.</div>
+<div class="fa">می‌تونی <b>شرکت خدماتی</b> یا <b>شرکت خدماتی سهامی خاص</b> رو به ثبت برسونی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعریف شرکت خدماتی</h3></div>
+<div class="fa">شرکت‌های خدماتی نظافتی، متشکل از <b>ادارات و شرکت‌هایی</b> هستن که برای انجام <b>امور نظافت منازل</b> تشکیل شده‌اند.</div>
+<div class="fa">این شرکت‌ها با داشتن <b>پرسنل ماهر و سریع</b> در امر نظافت، می‌تونن به <b>بهداشت سازمان‌ها و منازل</b> کمک به‌سزایی کنن.</div>
+<div class="fa"><b>سؤالات ذهنی متقاضی قبل از تأسیس:</b></div>
+<div class="fa">• رقابت در این کار چطوره؟</div>
+<div class="fa">• سرمایه اولیه چقدر مورد نیازه؟</div>
+<div class="fa">• بازدهی خوبی داره یا خیر؟</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>یازده گام ثبت شرکت خدماتی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> تکمیل فرم صورت‌جلسه مؤسسین و امضا توسط شرکا.</div>
+<div class="fa"><b>۲)</b> تکمیل فرم درخواست ثبت شرکت و امضا توسط شرکا.</div>
+<div class="fa"><b>۳)</b> تهیه، تنظیم و امضای تمامی صفحات اساسنامه توسط شرکا.</div>
+<div class="fa"><b>۴)</b> انتخاب چند نام برای شرکت و تحویل آن‌ها همراه با مدارک به اداره ثبت شرکت‌ها:</div>
+<div class="fa">• نام‌های انتخابی باید با <b>فرهنگ انقلاب اسلامی مطابقت</b> داشته باشه.</div>
+<div class="fa">• نام‌های پیشنهادی <b>نباید سابقه ثبت</b> داشته باشن.</div>
+<div class="fa">• <b>نباید از نام‌های خارجی</b> باشن.</div>
+<div class="fa">• مسئول مربوطه پس از بررسی، <b>گواهی لازم</b> رو با انتخاب یکی از اسامی صادر می‌کنه.</div>
+<div class="fa"><b>۵)</b> ارجاع متقاضی به قسمت ممیزی: بررسی‌های اولیه صورت می‌گیره و با توجه به موضوع شرکت، در صورتی که نیاز به <b>اخذ مجوز از مراجع ذی‌صلاح</b> داشته باشه، در صورت لزوم به مرجع مربوطه جهت اخذ مجوز معرفی می‌شه.</div>
+<div class="fa"><b>۶)</b> راهنمایی به حسابداری: پس از اخذ مدارک فوق‌الذکر، ممیزی ثبت شرکت‌ها با شرط <b>عدم وجود نقص مدارک</b>، متقاضی رو به منظور پرداختن هزینه‌های ثبت به حسابداری راهنمایی می‌کنه.</div>
+<div class="fa"><b>۷)</b> پرداخت حق‌الثبت: مسئول حسابداری با توجه به <b>سرمایه مؤسسه</b> و تعیین مبلغ حق‌الثبت، متقاضی رو به منظور پرداخت حق‌الثبت به <b>بانک ملی ایران</b> هدایت می‌کنه.</div>
+<div class="fa"><b>۸)</b> ارائه رسید بانکی: متقاضی پس از پرداخت هزینه‌های حق‌الثبت، رسید بانکی رو به قسمت حسابداری ارائه می‌ده که ممیزی مربوطه نیز <b>دستور ثبت</b> رو صادر می‌کنه.</div>
+<div class="fa"><b>۹)</b> بررسی کارشناس تأسیس: کارشناس تأسیس مدارک متقاضی رو با توجه به نوع آن مورد بررسی قرار می‌ده تا <b>موارد منع قانونی</b> نداشته باشه. علاوه بر این، تمامی محتویات پرونده رو در داخل سیستم چک می‌کنه تا در فعالیت شرکت و محتویات، <b>اشتباهات تایپی</b> وجود نداشته باشه و در صورت مشاهده، ایرادات به متقاضی اعلام می‌شه تا در اسرع وقت رفع کنه.</div>
+<div class="fa"><b>۱۰)</b> تأیید و امضای رئیس اداره ثبت: مدارک از طریق سیستم برای کارشناس ارسال می‌شه که وی نیز:</div>
+<div class="fa">• <b>یک نسخه</b> از مدارک رو با <b>مهر اداره</b> برای درج در <b>آگهی شرکت در روزنامه کثیرالانتشار</b> به متقاضی تحویل می‌ده.</div>
+<div class="fa">• <b>نسخه دیگر</b> مدارک رو در <b>پرونده متقاضی</b> قرار می‌ده.</div>
+<div class="fa"><b>۱۱)</b> مهر و شماره آگهی تأسیس در دبیرخانه: و در آخر آگهی تأسیس در دبیرخانه مهر و شماره می‌شه که پس از طی شدن این مراحل، <b>شرکت ثبت‌شده به شمار میاد</b>.</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۶ · دام‌های امتحانی (اینا رو نخور!)</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: ملاک تشکیل شرکت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ملاک تشکیل، ثبت شرکته.</div>
+<div class="fa"><b>جواب درست:</b> ملاک تشکیل، <b>قصد و نیت</b> دو یا چند نفر برای تشکیل شرکته. ثبت، <b>اقدام نهایی</b> تأسیسه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> نیت و قصد = ملاک تشکیل؛ ثبت = اقدام نهایی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: ثبت شرط تشکیل است یا نه؟</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بدون ثبت، شرکت تشکیل نمی‌شه.</div>
+<div class="fa"><b>جواب درست:</b> ثبت شرکت <b>از شرایط تشکیل هیچ‌کدام از شرکت‌ها نیست</b>؛ شرکت‌ها با رعایت شرایط قانونی، <b>تشکیل‌شده محسوب می‌شن و شخصیت حقوقی دارن</b>. ثبت یه <b>الزام قانونی</b>ه که آثاری داره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ثبت شرط تشکیل نیست، ولی الزام قانونیه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: حداقل تعداد شرکا</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی یه نفر هم می‌تونه شرکت تشکیل بده.</div>
+<div class="fa"><b>جواب درست:</b> حداقل <b>دو شریک</b> الزامیه. قانون <b>محدودیتی برای سقف تعداد شرکا</b> تعیین نکرده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> حداقل ۲ نفر، سقف نداره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: حداقل سرمایه در قانون تجارت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی ۵ میلیون ریاله.</div>
+<div class="fa"><b>جواب درست:</b> حداقل سرمایه <b>۱,۰۰۰,۰۰۰ ریال</b> (یک میلیون ریال)ه. حداکثر سرمایه تعیین نشده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> حداقل ۱ میلیون ریال، حداکثر نداره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: چهار شرط عمومی صحت قرارداد</h3>
+<div class="fa"><b>دام چیه:</b> شرط‌ها رو جا می‌ندازی یا اشتباه می‌گی.</div>
+<div class="fa"><b>جواب درست:</b> ۱) قصد و رضایت طرفین — ۲) اهلیت و صلاحیت طرفین — ۳) معین بودن موضوع — ۴) قانونی بودن موضوع و هدف.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> قصد و رضایت + اهلیت + معین بودن + قانونی بودن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: پنج شرط اختصاصی تشکیل شرکت</h3>
+<div class="fa"><b>دام چیه:</b> شرط‌ها رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> ۱) وجود شرکا — ۲) همکاری شرکا — ۳) تودیع سرمایه — ۴) اشتغال به فعالیت تجاری — ۵) تقسیم سود و زیان.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> وجود + همکاری + تودیع + اشتغال + تقسیم.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: شرکت اختیاری و قهری</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی همه شرکت‌ها اختیاری‌ان.</div>
+<div class="fa"><b>جواب درست:</b> شرکت اختیاری از <b>عقدی از عقود / امتزاج اختیاری / قبول مال مشاعاً</b> حاصل می‌شه (ماده ۵۷۳ قانون مدنی). شرکت قهری مثل <b>مالکیت ناشی از توارث</b>ه که خارج از اراده شرکاست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> توارث = شرکت قهری.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: موضوع شرکت و مسئولیت مدیران</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی مدیران می‌تونن از موضوع شرکت تجاوز کنن.</div>
+<div class="fa"><b>جواب درست:</b> مدیران <b>نمی‌تونن</b> از حد موضوع شرکت تجاوز کنن؛ در صورت تجاوز، <b>عمل آن‌ها اثر قانونی نداره</b> و در صورت <b>تفریط یا تعدی</b>، کلیه مدیران <b>متضامناً مسئول خسارت صاحبان سهام</b> هستن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تجاوز از موضوع = اثر قانونی نداره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: مرکز اصلی شرکت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی همه مراکز شرکت برای اشخاص ثالث مهمن.</div>
+<div class="fa"><b>جواب درست:</b> از نظر مقامات قانونی و اشخاص ثالث <b>فقط مرکز اصلی مورد توجه</b>ه؛ سایر مراکز مربوط به <b>مناسبات داخلی شرکت</b>ه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> برای بیرونی‌ها فقط مرکز اصلی مهمه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: مدت شرکت و انحلال</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی بعد از انقضای مدت، شرکت همچنان ادامه می‌ده.</div>
+<div class="fa"><b>جواب درست:</b> با رسیدن تاریخ و انقضای مدت، شرکت <b>به خودی خود منحل و برچیده</b> می‌شه. تغییر مدت در صلاحیت <b>مجمع عمومی فوق‌العاده</b>ه (ماده ۸۳ اصلاحی).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> انقضا = انحلال خودکار.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: سه فایده اصلی ثبت شرکت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط یه فایده داره.</div>
+<div class="fa"><b>جواب درست:</b> ۱) رسمی شدن قراردادهای بین شرکا — ۲) شفافیت برای معامله‌کنندگان — ۳) نظارت و رسیدگی دولتی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> رسمی شدن + شفافیت + نظارت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: نام‌های شرکت خدماتی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اسم خارجی هم می‌شه انتخاب کرد.</div>
+<div class="fa"><b>جواب درست:</b> نام‌های انتخابی باید با <b>فرهنگ انقلاب اسلامی مطابقت</b> داشته باشن، <b>سابقه ثبت</b> نداشته باشن و <b>خارجی</b> نباشن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> مطابق فرهنگ انقلاب اسلامی + بدون سابقه + غیرخارجی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: حق‌الثبت به کدام بانک؟</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر بانکی.</div>
+<div class="fa"><b>جواب درست:</b> حق‌الثبت به <b>بانک ملی ایران</b> پرداخت می‌شه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> بانک ملی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: ماده ۲۰ و ۱۹۵ قانون تجارت</h3>
+<div class="fa"><b>دام چیه:</b> این دو ماده رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> <b>ماده ۲۰:</b> قالب‌های قابل ثبت (سهامی، با مسئولیت محدود، تضامنی، نسبی، مختلط). <b>ماده ۱۹۵:</b> ثبت کلیه شرکت‌ها الزامی و تابع مقررات قانونی ثبت شرکت‌هاست.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ۲۰ = قالب‌ها، ۱۹۵ = الزام ثبت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: مرجع ثبت شرکت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی مرجع ثبت، وزارت دادگستریه.</div>
+<div class="fa"><b>جواب درست:</b> تو تهران: <b>اداره کل ثبت شرکت‌ها و مؤسسات غیرتجاری</b> — تو شهرستان‌ها: <b>ادارات ثبت شرکت‌ها و مؤسسات غیرتجاری</b>. ترتیب اجرا به عهده <b>وزارت دادگستری</b>ه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> مرجع ثبت = اداره ثبت شرکت‌ها، نه وزارت دادگستری.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۷ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل چهارم — نحوه ثبت و تأسیس شرکت</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 04 · کارآفرینی · فصل چهارم: نحوه ثبت و تأسیس شرکت</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"ملاک تشکیل شرکت چیه؟",options:["ثبت شرکت","قصد و نیت دو یا چند نفر","سرمایه","موضوع شرکت"],answer:1,explanation:"ملاک تشکیل، قصد و نیت دو یا چند نفر برای تشکیل شرکته."},
+{q:"ثبت شرکت طبق ماده ۹۵ قانون تجارت چه حکمی داره؟",options:["اختیاریه","الزامیه","فقط برای شرکت‌های سهامی","فقط برای شرکت‌های خارجی"],answer:1,explanation:"طبق ماده ۹۵ قانون تجارت، ثبت کلیه شرکت‌های تجاری الزامیه."},
+{q:"مرجع ثبت شرکت تو تهران کدومه؟",options:["وزارت دادگستری","اداره کل ثبت شرکت‌ها و مؤسسات غیرتجاری","بانک ملی ایران","اداره کار"],answer:1,explanation:"تو تهران: اداره کل ثبت شرکت‌ها و مؤسسات غیرتجاری."},
+{q:"چهار شرط عمومی صحت قرارداد کدومن؟",options:["قصد و رضایت، اهلیت، معین بودن موضوع، قانونی بودن موضوع و هدف","فقط قصد و رضایت","فقط اهلیت","فقط قانونی بودن"],answer:0,explanation:"چهار شرط: قصد و رضایت طرفین، اهلیت و صلاحیت طرفین، معین بودن موضوع، قانونی بودن موضوع و هدف."},
+{q:"حداقل تعداد شرکا برای تشکیل شرکت چقدره؟",options:["۱ نفر","۲ نفر","۳ نفر","۵ نفر"],answer:1,explanation:"حداقل دو شریک الزامیه؛ قانون محدودیتی برای سقف تعداد شرکا تعیین نکرده."},
+{q:"پنج شرط اختصاصی تشکیل شرکت کدومن؟",options:["وجود شرکا، همکاری، تودیع سرمایه، اشتغال به فعالیت تجاری، تقسیم سود و زیان","فقط وجود شرکا و سرمایه","فقط همکاری و تقسیم سود","فقط اشتغال به فعالیت تجاری"],answer:0,explanation:"پنج شرط: وجود شرکا، همکاری شرکا، تودیع سرمایه، اشتغال به فعالیت تجاری، تقسیم سود و زیان."},
+{q:"تقسیم سود و زیان تو شرکت معمولاً چطوریه؟",options:["بر اساس سرمایه","مساوی","بر اساس تعداد شرکا","بر اساس سابقه"],answer:1,explanation:"به طور معمول، نسبت تقسیم سود و زیان بین شرکا مساویه؛ تعیینش بر عهده اساسنامه‌ست."},
+{q:"ثبت شرکت شرط تشکیل است یا نه؟",options:["بله، شرط تشکیل است","نه، ثبت شرط تشکیل نیست ولی الزام قانونیه","فقط برای شرکت‌های سهامی شرط تشکیله","فقط برای شرکت‌های خارجی شرط تشکیله"],answer:1,explanation:"ثبت شرکت از شرایط تشکیل هیچ‌کدام از شرکت‌ها نیست؛ شرکت‌ها با رعایت شرایط قانونی تشکیل‌شده محسوب می‌شن. ثبت یه الزام قانونیه."},
+{q:"حداقل سرمایه در قانون تجارت چقدره؟",options:["۵۰۰,۰۰۰ ریال","۱,۰۰۰,۰۰۰ ریال","۵,۰۰۰,۰۰۰ ریال","۱۰,۰۰۰,۰۰۰ ریال"],answer:1,explanation:"حداقل سرمایه در قانون تجارت ۱,۰۰۰,۰۰۰ ریال (یک میلیون ریال)ه."},
+{q:"حداکثر سرمایه در قانون تجارت چقدره؟",options:["۵ میلیون ریال","۱۰ میلیون ریال","۵۰ میلیون ریال","تعیین نشده"],answer:3,explanation:"حداکثر سرمایه تعیین نشده؛ شرکا به هر مقدار که بتونن می‌تونن سرمایه رو افزایش بدن."},
+{q:"مدت شرکت اگه محدود باشه، با انقضا چه اتفاقی می‌افته؟",options:["شرکت ادامه می‌ده","شرکت به خودی خود منحل و برچیده می‌شه","فقط با تصمیم مدیران منحل می‌شه","فقط با تصمیم شرکا منحل می‌شه"],answer:1,explanation:"با رسیدن تاریخ و انقضای مدت، شرکت به خودی خود منحل و برچیده می‌شه."},
+{q:"تغییر مدت شرکت در صلاحیت کدوم مجمعe؟",options:["مجمع عمومی عادی","مجمع عمومی فوق‌العاده","هیئت مدیره","بازرس"],answer:1,explanation:"طبق ماده ۸۳ اصلاحی، هرگونه تغییر در مواد اساسنامه (از جمله مدت) در صلاحیت مجمع عمومی فوق‌العاده‌ست."},
+{q:"مرکز اصلی شرکت از نظر اشخاص ثالث چه اهمیتی داره؟",options:["همه مراکز مهمن","فقط مرکز اصلی مورد توجهه","فقط شعبات مهمن","هیچ‌کدوم مهم نیستن"],answer:1,explanation:"از نظر مقامات قانونی و اشخاص ثالث فقط مرکز اصلی مورد توجهه؛ سایر مراکز مربوط به مناسبات داخلی شرکت است."},
+{q:"سه فایده اصلی ثبت شرکت کدومن؟",options:["رسمی شدن قراردادها، شفافیت برای معامله‌کنندگان، نظارت دولتی","فقط رسمی شدن قراردادها","فقط شفافیت","فقط نظارت دولتی"],answer:0,explanation:"سه فایده: رسمی شدن قراردادهای بین شرکا، شفافیت برای معامله‌کنندگان، نظارت و رسیدگی دولتی."},
+{q:"ماده ۲۰ قانون تجارت راجع به چیه؟",options:["الزام ثبت شرکت‌ها","قالب‌های قابل ثبت شرکت‌ها","شرایط صحت قرارداد","مرجع ثبت"],answer:1,explanation:"ماده ۲۰ قانون تجارت، قالب‌های قابل ثبت شرکت‌ها رو معرفی می‌کنه: سهامی، با مسئولیت محدود، تضامنی، نسبی، مختلط."},
+{q:"ماده ۱۹۵ قانون تجارت راجع به چیه؟",options:["قالب‌های شرکت","الزام ثبت کلیه شرکت‌ها و تبعیت از مقررات قانونی ثبت","مرجع ثبت","شرایط صحت قرارداد"],answer:1,explanation:"ماده ۱۹۵: ثبت کلیه شرکت‌های مذکور در این قانون الزامی و تابع مقررات قانونی ثبت شرکت‌هاست."},
+{q:"شرکت اختیاری طبق ماده ۵۷۳ قانون مدنی از چه راه‌هایی حاصل می‌شه؟",options:["عقدی از عقود، امتزاج اختیاری، قبول مال مشاعاً","فقط عقدی از عقود","فقط امتزاج اختیاری","فقط قبول مال مشاعاً"],answer:0,explanation:"شرکت اختیاری در نتیجه عقدی از عقود حاصل می‌شه یا در نتیجه عمل شرکا از قبیل امتزاج اختیاری یا قبول مالی مشاعاً."},
+{q:"مثال شرکت قهری چیه؟",options:["شرکت سهامی","مالکیت ناشی از توارث","شرکت تضامنی","شرکت با مسئولیت محدود"],answer:1,explanation:"مالکیت ناشی از توارث، مثالی از شرکت قهریه که شراکت افراد در ارث خارج از درخواست و اراده شرکاست."},
+{q:"ویژگی‌های شرکت خدماتی کدومن؟",options:["سرمایه‌گذاری کم، نیاز به تحصیلات عالی ندارد، بازدهی زود","سرمایه‌گذاری زیاد","نیاز به تحصیلات عالی","بازدهی دیر"],answer:0,explanation:"شرکت خدماتی: لازم به سرمایه‌گذاری زیادی نیست، نیاز به تحصیلات عالی نداره، بازدهی زوده."},
+{q:"نام‌های انتخابی شرکت خدماتی باید چه ویژگی‌هایی داشته باشن؟",options:["مطابق فرهنگ انقلاب اسلامی، بدون سابقه ثبت، غیرخارجی","هر نامی","فقط خارجی","فقط با سابقه ثبت"],answer:0,explanation:"نام‌ها باید با فرهنگ انقلاب اسلامی مطابقت داشته باشن، سابقه ثبت نداشته باشن و خارجی نباشن."},
+{q:"حق‌الثبت شرکت خدماتی به کدوم بانک پرداخت می‌شه؟",options:["بانک ملی ایران","بانک صادرات","بانک ملت","بانک تجارت"],answer:0,explanation:"حق‌الثبت به بانک ملی ایران پرداخت می‌شه."},
+{q:"کارشناس تأسیس در بررسی مدارک چه چیزی رو چک می‌کنه؟",options:["موارد منع قانونی و اشتباهات تایپی","فقط موارد منع قانونی","فقط اشتباهات تایپی","هیچ‌کدوم"],answer:0,explanation:"کارشناس تأسیس مدارک رو برای موارد منع قانونی و اشتباهات تایپی بررسی می‌کنه."},
+{q:"آگهی تأسیس شرکت در کدوم روزنامه منتشر می‌شه؟",options:["روزنامه کثیرالانتشار","روزنامه رسمی","روزنامه محلی","هیچ روزنامه‌ای"],answer:0,explanation:"آگهی شرکت در روزنامه کثیرالانتشار منتشر می‌شه."},
+{q:"مراجعه به دفاتر ثبت شرکت‌ها طبق مقررات ۱۰ اسفند ۱۳۲۷ چطوریه؟",options:["فقط برای ذی‌نفعان","برای عموم آزاده و هر ذی‌نفع می‌تونه سواد مصدق تحصیل کنه","فقط با اجازه دادگاه","ممنوعه"],answer:1,explanation:"طبق مقررات ۱۰ اسفند ۱۳۲۷ وزارت دادگستری، مراجعه به دفاتر ثبت شرکت‌ها اعم از ایرانی و خارجی برای عموم آزاده و هر ذی‌نفع می‌تونه از مندرجات آن سواد مصدق تحصیل کنه."},
+{q:"اگه مدیران از موضوع شرکت تجاوز کنن، چه اتفاقی می‌افته؟",options:["عملشون معتبره","عملشون اثر قانونی نداره و در صورت تفریط یا تعدی متضامناً مسئول خسارت صاحبان سهام هستن","فقط اخطار می‌گیرن","هیچ مسئولیتی ندارن"],answer:1,explanation:"مدیران نمی‌تونن از حد موضوع شرکت تجاوز کنن؛ در صورت تجاوز، عملشون اثر قانونی نداره و در صورت تفریط یا تعدی، کلیه مدیران متضامناً مسئول خسارت صاحبان سهام هستن."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مفاهیم فصل چهارم — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره توانبخشی · سری 14 · فصل چهاردهم: مداخله‌های مشاوره‌ای و آموزش مهارت‌ها</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,var(--pink) 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"14";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#ffe8f0;color:#a71547}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:8px}
+.theme-btn svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.theme-btn:hover svg{transform:rotate(15deg)}
+.theorist{background:linear-gradient(135deg,var(--surface),#fff5f9);border:1px solid var(--line);border-right:6px solid var(--pink);border-radius:20px;padding:16px;margin:12px 0}
+.theorist h3{margin:0 0 4px;color:var(--pink);font-size:18px}
+.theorist .meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+.diff{border-right-color:var(--pink)}.diff strong{color:var(--pink)}
+.def{border-right-color:var(--green)}.def strong{color:var(--green)}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره توانبخشی · سری 14</small></div></div>
+  <button id="theme" class="theme-btn" aria-label="تغییر تم">
+    <svg id="themeIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</header>
+
+<section class="hero">
+  <h2>فصل چهاردهم: مداخله‌های مشاوره‌ای و آموزش مهارت‌ها</h2>
+  <p>توانبخشی روان‌پزشکی، هشت اصل آنتونی، پنج هدف کوری‌گان، مشاوره شغلی، انواع مهارت‌ها و هشت فعالیت یادگیری — همه رو ساده و خودمونی</p>
+  <div class="pills"><span class="pill">توانبخشی روان‌پزشکی</span><span class="pill">آنتونی</span><span class="pill">کوری‌گان</span><span class="pill">مشاوره شغلی</span><span class="pill">انواع مهارت</span><span class="pill">هشت فعالیت</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل چهاردهم کتاب «مشاوره و روان‌درمانی در توانبخشی معلولین» نوشته دکتر آناهیتا خدابخش کوالیی نوشته شده. همه‌چی رو خیلی ساده گفتم. بخش «آدم‌ها و نظریه‌هاشون» جداست، بخش «اصطلاحا یعنی چی» همه تعاریف رو داره، و بخش «تفاوت‌ها و تله‌ها» برای تست زدن آماده‌ت می‌کنه.</div>
+
+<div class="stats">
+<div class="stat"><b>۸</b><span>اصل توانبخشی</span></div>
+<div class="stat"><b>۵</b><span>هدف برنامه</span></div>
+<div class="stat"><b>۷</b><span>حوزه مشکل</span></div>
+<div class="stat"><b>۸</b><span>فعالیت یادگیری</span></div>
+</div>
+
+<nav>
+<a href="#core">خلاصه گنده</a><a href="#theorists">آدم‌ها و نظریه‌هاشون</a><a href="#concepts">اصطلاحا یعنی چی</a><a href="#principles">اصول توانبخشی</a><a href="#problems">مشکلات بیماران</a><a href="#goals">اهداف برنامه</a><a href="#practical">ملاحظات عملی</a><a href="#job">مشاوره شغلی</a><a href="#skills">آموزش مهارت‌ها</a><a href="#learning">هشت فعالیت یادگیری</a><a href="#diffs">تفاوت‌ها و تله‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ==================== هسته امتحانی ==================== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · خلاصه گنده (۱۰ دقیقه بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>هشت اصل توانبخشی روان‌پزشکی (آنتونی، ۱۹۹۶)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) تجهیز یا آماده‌سازی مراجعان از طریق آموزش مهارت‌ها</b></div>
+<div class="fa"><b>۲) خودتعیینی مراجع</b></div>
+<div class="fa"><b>۳) کاربرد منابع محیطی</b></div>
+<div class="fa"><b>۴) تغییرات اجتماعی</b></div>
+<div class="fa"><b>۵) ارزیابی و مراقبت گوناگون</b></div>
+<div class="fa"><b>۶) تأکید بر اشتغال</b></div>
+<div class="fa"><b>۷) تأکید بر «حالا و اکنون»</b></div>
+<div class="fa"><b>۸) مداخله‌های اولیه</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پنج هدف برنامه توانبخشی روان‌پزشکی (کوری‌گان، راو و لم، ۱۹۹۹)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) مشمولیت (شامل شدن):</b> بیماران می‌خوان در فعالیت‌ها و تجربه‌های زندگی روزانه وارد بشن و مشارکت جویند.</div>
+<div class="fa"><b>۲) فرصت‌ها:</b> به فرصت‌های جدید برای دستیابی به دامنه گسترده‌ای از فعالیت‌های زندگی و تجربه‌های نوین در اجتماعشون نیازمندن.</div>
+<div class="fa"><b>۳) استقلال فردی:</b> خواستار دستیابی به اهداف و فرصت‌ها بدون وابستگی به برنامه‌های توانبخشی یا کارکنان.</div>
+<div class="fa"><b>۴) بهبودی:</b> کمک به بیماران برای دستیابی به توانایی کنترل علائم و چیره شدن بر مشکلات ناشی از بیماری.</div>
+<div class="fa"><b>۵) کیفیت:</b> خواستار کیفیت زندگی خوب و مطلوب.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هفت حوزه مشکل بیماران روانی مزمن</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) شناخت</b></div>
+<div class="fa"><b>۲) مهارت‌های اجتماعی</b></div>
+<div class="fa"><b>۳) بهداشت و مدیریت رفتارهای فردی</b></div>
+<div class="fa"><b>۴) مهارت‌های سازگاری</b></div>
+<div class="fa"><b>۵) حمایت بین‌فردی</b></div>
+<div class="fa"><b>۶) مدیریت علائم</b></div>
+<div class="fa"><b>۷) انگیزه</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار نوع مهارت</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>نوع مهارت</th><th>یعنی چی</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td><b>پایه یا اساسی</b></td><td>برای افزایش اثربخشی مهارت‌های بین‌فردی و کارکردی ضرورت دارن</td><td>—</td></tr>
+<tr><td><b>اجتماعی</b></td><td>—</td><td>گفت‌وگو، جرئت‌ورزی، قرار ملاقات</td></tr>
+<tr><td><b>ابزاری</b></td><td>فرد رو قادر می‌سازه مستقلانه به کارهاش رسیدگی کنه و سود مادی رو در نظر بگیره</td><td>برنامه‌ریزی غذا، خرید، تمیز کردن خانه، حمل‌ونقل عمومی</td></tr>
+<tr><td><b>سازگاری (کنار آمدن)</b></td><td>کمک می‌کنه علائم روان‌پزشکی و استرس‌های روزانه رو مدیریت و کنترل کنن</td><td>مدیریت دارو، خواب منظم، زنگ به دوست، باشگاه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو دسته مهارت‌های سازگاری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) مهارت‌های کاهش استرس:</b> مثل مدیریت صحیح مصرف داروها، خوابیدن در زمان مشخص، زنگ زدن به دوست هنگام افسردگی، رفتن مرتب به باشگاه.</div>
+<div class="fa"><b>۲) مهارت‌های تحمل یا شکایبایی در برابر استرس:</b> مثل گذاشتن گوشی یا واکمن بر گوش و گوش دادن به موسیقی برای تحمل توهم‌های شنوایی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هشت فعالیت یادگیری در آموزش مهارت‌ها</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) مقدمه</b></div>
+<div class="fa"><b>۲) الگوگیری</b></div>
+<div class="fa"><b>۳) ایفای نقش</b></div>
+<div class="fa"><b>۴) مدیریت منابع</b></div>
+<div class="fa"><b>۵) پیامد مشکلات</b></div>
+<div class="fa"><b>۶) تمرین‌های زنده</b></div>
+<div class="fa"><b>۷) تکالیف خانگی</b></div>
+<div class="fa"><b>۸) ارزیابی و بازخورد</b> (در جدول اصلی ذکر نشده، اما احتمالاً)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جمله‌های طلایی (حفظ کن)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>مؤلفه اساسی بهبودی، آموزش مهارت‌های اجتماعی است.</b>
+</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>میلر و رولینک (۲۰۰۲):</b> برای موفقیت آموزش مهارت‌ها، مراجع باید بداند <b>چگونه باید تغییر کند و چرا باید تغییر کند</b>.
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> آموزش مهارت = کلید بهبودی بیمار روانی.
+</div>
+</div>
+</section>
+
+<!-- ==================== نظریه‌پردازان ==================== -->
+<section id="theorists" class="section">
+<h2 class="section-title">۰۲ · آدم‌ها و نظریه‌هاشون</h2>
+<p class="section-sub">هرکی چی گفت، کی بود</p>
+
+<div class="theorist">
+<h3>آنتونی — ۱۹۹۶</h3>
+<div class="meta">هشت اصل توانبخشی روان‌پزشکی</div>
+<div class="fa"><b>هشت اصل (آنتونی، ۱۹۹۶):</b></div>
+<div class="fa">۱) تجهیز یا آماده‌سازی مراجعان از طریق آموزش مهارت‌ها.</div>
+<div class="fa">۲) خودتعیینی مراجع.</div>
+<div class="fa">۳) کاربرد منابع محیطی.</div>
+<div class="fa">۴) تغییرات اجتماعی.</div>
+<div class="fa">۵) ارزیابی و مراقبت گوناگون.</div>
+<div class="fa">۶) تأکید بر اشتغال.</div>
+<div class="fa">۷) تأکید بر «حالا و اکنون».</div>
+<div class="fa">۸) مداخله‌های اولیه.</div>
+<div class="fa"><b>نکته:</b> با اجرای تمام و کمال چنین اصولی می‌شه به <b>ارزش‌های مشاوره روان‌پزشکی</b> دست یافت. از طرفی، باید در <b>تمامی مراحل توانبخشی به ارزش و اعتبار انسان‌ها حرمت گذاشت</b>.</div>
+</div>
+
+<div class="theorist">
+<h3>کوری‌گان، راو و لم — ۱۹۹۹</h3>
+<div class="meta">اهداف برنامه توانبخشی روان‌پزشکی</div>
+<div class="fa"><b>پنج هدف (کوری‌گان، راو و لم، ۱۹۹۹):</b></div>
+<div class="fa"><b>۱) مشمولیت:</b> بیماران می‌خوان در فعالیت‌ها و تجربه‌های زندگی روزانه وارد بشن و مشارکت جویند.</div>
+<div class="fa"><b>۲) فرصت‌ها:</b> به فرصت‌های جدید برای دستیابی به دامنه گسترده‌ای از فعالیت‌های زندگی و تجربه‌های نوین در اجتماعشون نیازمندن.</div>
+<div class="fa"><b>۳) استقلال فردی:</b> خواستار دستیابی به اهداف و فرصت‌ها بدون وابستگی به برنامه‌های توانبخشی یا کارکنان.</div>
+<div class="fa"><b>۴) بهبودی:</b> کمک به بیماران برای دستیابی به توانایی کنترل علائم و چیره شدن بر مشکلات ناشی از بیماری.</div>
+<div class="fa"><b>۵) کیفیت:</b> خواستار کیفیت زندگی خوب و مطلوب.</div>
+</div>
+
+<div class="theorist">
+<h3>کیاوارال و همکاران — ۲۰۰۴</h3>
+<div class="meta">درهم‌آمیختن توانبخشی روان‌پزشکی با اصول فلسفی و توانبخشی شغلی</div>
+<div class="fa"><b>حرفشون:</b> توانبخشی روان‌پزشکی با <b>اصول فلسفی و توانبخشی شغلی</b> در هم آمیخت و به <b>فنون درمان‌بخش متعددی</b> منجر شد.</div>
+</div>
+
+<div class="theorist">
+<h3>میلر و رولینک — ۲۰۰۲</h3>
+<div class="meta">شرایط موفقیت آموزش مهارت‌ها</div>
+<div class="fa"><b>نقل‌قول (میلر و رولینک، ۲۰۰۲):</b> برای آنکه آموزش مهارت‌ها موفق باشه، مراجع باید بدونه <b>چگونه باید تغییر کند و چرا باید تغییر کند</b>.</div>
+</div>
+</section>
+
+<!-- ==================== مفاهیم و تعاریف ==================== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · اصطلاحا یعنی چی (تعاریف)</h2>
+<p class="section-sub">همه اصطلاح‌ها با زبان ساده</p>
+
+<div class="card def">
+<div class="card-head"><h3>توانبخشی روان‌پزشکی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> یه رویکرد جامع برای کمک به بیماران روانی مزمن که با <b>اصول فلسفی و توانبخشی شغلی</b> در هم آمیخته و به <b>فنون درمان‌بخش متعددی</b> منجر شده (کیاوارال و همکاران، ۲۰۰۴).</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>برنامه حمایتی جامعه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> بخش خدمات سلامت روان، <b>منابع و رهنمودهایی</b> رو منتشر کرد که از <b>نتایج زیان‌بار مؤسسه‌زدایی</b> بکاهه.</div>
+<div class="fa"><b>دامنه خدمات:</b></div>
+<div class="fa">۱) <b>مدیریت مورد</b></div>
+<div class="fa">۲) <b>توانبخشی</b></div>
+<div class="fa">۳) <b>حمایت خانواده و دوستان</b></div>
+<div class="fa">۴) <b>اسکان</b></div>
+<div class="fa">۵) <b>پاسخ به بحران</b></div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مؤلفه اساسی بهبودی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> مشاوران توانبخشی مجرب دائماً تأکید می‌کنن که <b>مؤلفه اساسی بهبودی، آموزش مهارت‌های اجتماعی</b>ه.</div>
+<div class="fa">در حالی که <b>داروهای روان‌پزشکی علائم شدید و حاد بیماران رو کاهش می‌دن</b>، <b>آموزش مهارت‌ها به افراد کمک می‌کنه تا مهارت‌های جدید رو کسب کرده و کاربردشون در زندگی‌شون بهتر از عهده وظایفشون برآین</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>چرخه معیوب استرس و مهارت</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> وقتی مراجع <b>مهارت‌های اندکی</b> داشته باشه، تأثیر استرس‌های زندگی بر او <b>بسیار زیاد</b>ه.</div>
+<div class="fa">وقتی استرس‌های زندگی به توانایی فرد برای سازگاری چیره می‌شه، ممکنه <b>بیماری و اختلال بدتر و وخیم‌تر</b> بشن.</div>
+<div class="fa">وقتی علائم بیماری بدتر شدن، <b>توانایی فراگیری مهارت‌ها</b> هم در فرد <b>کاهش</b> پیدا می‌کنه.</div>
+<div class="fa">بنابراین، به تبع کاهش فراگیری، به فرد <b>استرس بیشتری</b> وارد می‌شه و نتیجه نهایی <b>عود علائم بیماری</b>ه.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مهارت‌های پایه یا اساسی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> برای <b>افزایش اثربخشی مهارت‌های بین‌فردی و کارکردی</b> ضرورت دارن.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مهارت‌های اجتماعی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> مهارت‌هایی مثل <b>گفت‌وگو، جرئت‌ورزی و قرار ملاقات</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مهارت‌های ابزاری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> فرد رو قادر می‌سازه تا <b>به‌طور مستقلانه به کارهاش رسیدگی کنه</b> و <b>سود مادی رو هم در نظر بگیره</b>.</div>
+<div class="fa"><b>مثال‌ها:</b> برنامه‌ریزی برای صرف غذا و خرید کردن، تمیز کردن خانه و استفاده از وسایل حمل‌ونقل عمومی (شهری).</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مهارت‌های سازگاری (کنار آمدن)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> به افراد کمک می‌کنه تا <b>علائم روان‌پزشکی بیماری و استرس‌های زندگی روزانه خودشون رو مدیریت و کنترل کنن</b>.</div>
+<div class="fa"><b>دو دسته:</b></div>
+<div class="fa">۱) <b>مهارت‌های کاهش استرس:</b> مدیریت صحیح مصرف داروها، خوابیدن در زمان مشخص، زنگ زدن به دوست هنگام افسردگی، رفتن مرتب به باشگاه.</div>
+<div class="fa">۲) <b>مهارت‌های تحمل یا شکایبایی در برابر استرس:</b> گذاشتن گوشی یا واکمن بر گوش و گوش دادن به موسیقی برای تحمل توهم‌های شنوایی؛ مدارا با علائم باقی‌مانده از اختلال.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مصاحبه انگیزشی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> اگه مراجعان <b>انگیزه چندانی برای متعهد ماندن به هدف مشخصی</b> نداشته باشن، می‌شه از <b>مصاحبه انگیزشی</b> استفاده کرد.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>ارزیابی‌های ساختاریافته (عملکردی)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> مشاوران می‌تونن از مراجعان بخوان که در <b>ارزیابی‌های ساختاریافته‌ای که به توانایی‌ها و محدودیت‌های عملکردی جاری اون‌ها می‌پردازه</b> شرکت کنن.</div>
+<div class="fa"><b>ابعاد زندگی:</b> مدیریت علائم، حل تعارض، مدیریت پول، بهداشت و مراقبت از خود، قرار ملاقات گذاشتن، تعطیلات.</div>
+<div class="fa"><b>نمونه سؤالات:</b> «آیا می‌تونی اجاره‌بهای خانه خودت رو بپردازی؟» «آیا خودت بر مصرف داروهات نظارت می‌کنی؟» «آیا دست‌کم یک بار در هفته با دوستان به بیرون می‌ری؟» «چگونه با علائم بیماری کنار می‌آیی؟»</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تمایز آموزش مهارت‌ها و فعالیت‌های یادگیری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>آموزش مهارت‌ها:</b> جنبه‌هایی از مهارت <b>بسیار خاص</b>‌ان و عموماً به این منظور آموخته می‌شن که مراجع به <b>هدف مطلوب و دلخواه خودش</b> دست یابد.</div>
+<div class="fa"><b>فعالیت‌های یادگیری:</b> <b>هشت فعالیت مجزا</b> (مقدمه، الگوگیری، ایفای نقش، ...) که برای آموزش مهارت‌ها به کار می‌رن.</div>
+<div class="fa"><b>مثال:</b> در آموزش <b>آغاز کردن گفت‌وگو</b>، مراجع ممکنه <b>پنج مهارت مجزا</b> رو بیاموزه: از روی <b>ژست بدنی، تُن صدا، محتوای مناسب، هم‌زمانی پاسخ‌ها و پایان دادن به گفت‌وگو</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مقدمه (در آموزش مهارت‌ها)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> نخستین فعالیت یادگیری؛ در این مرحله، به مراجع <b>گفته می‌شه که مهارت‌ها چه هستن و چه موقع به کار می‌رن</b>.</div>
+<div class="fa"><b>مثال:</b> در مقدمه آموزش <b>مهارت‌های مدیریت علائم</b>، به مراجعان پیرامون این مهارت‌ها اطلاعات داده می‌شه: علائم خطر (اگه علائم حاد شده باید با چه کسی تماس بگیره)، منطق آموزش این مهارت‌ها (چرا این مهارت‌ها مفید و ارزشمندن؟)، موارد کاربرد.</div>
+<div class="fa"><b>نکته:</b> ارائه دلیل و چرایی روشن و آشکار برای یادگیری مهارتی خاص، به مراجع کمک می‌کنه تا <b>انگیزه لازم رو برای فراگیری مهارت به دست بیاره</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>الگوگیری (در آموزش مهارت‌ها)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> فعالیت دوم یادگیری؛ <b>الگوها</b> می‌تونن از طریق <b>بازیگرانی که در فیلم هستن</b> معرفی بشن یا <b>به‌طور زنده از سوی مشاور و مراجعان</b> ارائه بشن.</div>
+<div class="fa">الگوها به مراجعان امکان می‌دن تا <b>انجام مهارت رو مشاهده کرده و به شیوه صحیحی اون‌ها رو در زندگی روزمره‌شون به کار گیرن</b>.</div>
+<div class="fa"><b>نمایش ویدئویی</b> هم ممکنه به موضوعات متنوعی بپردازه که برای مراجعان مفیدن.</div>
+<div class="fa"><b>روزنامه‌ها یا مجلات</b> هم می‌تونن کمک کنن؛ مثلاً چگونه بیماری با مراجعه [به روزنامه] می‌تونه خانه‌ای رو برای اجاره پیدا کنه.</div>
+<div class="fa"><b>نکته:</b> الگوگیری نوعی <b>یادگیری مشاهده‌ای</b>ه که ممکنه <b>برای تمامی بیماران روانی مزمن کاربرد نداشته باشه</b>. باید در آموزش برخی از بیماران <b>بسیار رهنمودی و مستقیم</b> عمل کرد، یعنی باید از اون‌ها خواسته بشه که <b>اطلاعات رو تکرار کنن و دائماً مهارت‌های آموخته‌شده رو به نمایش بذارن</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>ایفای نقش (در آموزش مهارت‌ها)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> مشاور می‌تونه <b>کارکردهای مراجع رو از طریق ایفای نقشی که از سوی خود مشاور طراحی شده</b> بررسی کنه.</div>
+<div class="fa"><b>نمونه‌ها:</b> رد درخواست مصرف مواد یا الکل، کسب اطلاعات برای شرکت در برنامه تفریحی یا سرگرمی، زنگ زدن به پزشک یا پرستار وقتی یکی از دوستانش علائم بیماری‌اش عود می‌کنه.</div>
+<div class="fa">این‌گونه ایفای نقش‌ها باید به‌گونه‌ای طراحی بشن که <b>به مراجع امکان بدن تا به‌طور واقعی مهارتی رو انجام بده</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مشاهده (در جمع‌آوری اطلاعات)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> مشاوران می‌تونن از طریق <b>مشاهده تعامل‌های مراجع، اطلاعاتی رو به دست بیارن</b>.</div>
+<div class="fa">از طریق این نوع مشاهده، مراجع می‌تونه <b>آزادانه و بدون دخالت متخصصان توانبخشی، اطلاعاتی رو در اختیار مشاور بذاره</b>.</div>
+<div class="fa">در نتیجه، مراجعان <b>تحت شرایطی که آرام و آسوده‌ان</b>، قادرن <b>تصویر دقیق‌تری از کارکردهاشون ارائه بدن</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>بسته‌های آموزش مهارت‌ها</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> بسته‌های آموزشی بسیاری وجود دارن که محتواشون بر <b>آموزش برخی از مهارت‌ها</b> تأکید می‌کنن؛ مثل <b>بازآفرینی، مدیریت دارو، مدیریت تعارض، مدیریت خواب، شغل‌یابی، قرار ملاقات گذاشتن</b>.</div>
+<div class="fa"><b>نکته:</b> بسته‌های آموزشی که <b>بسیار ساختاریافته‌ان</b>، آموزش مهارت‌ها رو برای مشاوران <b>آسان‌تر</b> می‌کنن.</div>
+</div>
+</section>
+
+<!-- ==================== اصول توانبخشی ==================== -->
+<section id="principles" class="section">
+<h2 class="section-title">۰۴ · اصول توانبخشی روان‌پزشکی (آنتونی، ۱۹۹۶)</h2>
+<p class="section-sub">هشت اصل</p>
+
+<div class="card">
+<div class="card-head"><h3>هشت اصل (آنتونی، ۱۹۹۶)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) تجهیز یا آماده‌سازی مراجعان از طریق آموزش مهارت‌ها</b></div>
+<div class="fa"><b>۲) خودتعیینی مراجع</b></div>
+<div class="fa"><b>۳) کاربرد منابع محیطی</b></div>
+<div class="fa"><b>۴) تغییرات اجتماعی</b></div>
+<div class="fa"><b>۵) ارزیابی و مراقبت گوناگون</b></div>
+<div class="fa"><b>۶) تأکید بر اشتغال</b></div>
+<div class="fa"><b>۷) تأکید بر «حالا و اکنون»</b></div>
+<div class="fa"><b>۸) مداخله‌های اولیه</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> با اجرای تمام و کمال چنین اصولی می‌شه به <b>ارزش‌های مشاوره روان‌پزشکی</b> دست یافت. از طرفی، باید در <b>تمامی مراحل توانبخشی به ارزش و اعتبار انسان‌ها حرمت گذاشت</b>.
+</div>
+</div>
+</section>
+
+<!-- ==================== مشکلات بیماران ==================== -->
+<section id="problems" class="section">
+<h2 class="section-title">۰۵ · مشکلات بیماران روانی مزمن</h2>
+<p class="section-sub">هفت حوزه مشکل</p>
+
+<div class="card">
+<div class="card-head"><h3>هفت حوزه مشکل</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">بیماران روانی مزمن با <b>معلولیت‌های گوناگونی</b> دست به گریبانن. اون‌ها ممکنه مشکلاتی در موارد زیر داشته باشن:</div>
+<div class="fa"><b>۱) شناخت</b></div>
+<div class="fa"><b>۲) مهارت‌های اجتماعی</b></div>
+<div class="fa"><b>۳) بهداشت و مدیریت رفتارهای فردی</b></div>
+<div class="fa"><b>۴) مهارت‌های سازگاری</b></div>
+<div class="fa"><b>۵) حمایت بین‌فردی</b></div>
+<div class="fa"><b>۶) مدیریت علائم</b></div>
+<div class="fa"><b>۷) انگیزه</b></div>
+<div class="fa"><b>نکته:</b> <b>برنامه‌های جامع و توانبخشی روان‌پزشکی</b> که با <b>مدیریت مناسب دارودرمانی</b> در هم ادغام شده‌ان، می‌تونن به خوبی به <b>نیازها و چالش‌های بیماران روانی مزمن</b> پاسخ بدن.</div>
+</div>
+</section>
+
+<!-- ==================== اهداف برنامه ==================== -->
+<section id="goals" class="section">
+<h2 class="section-title">۰۶ · اهداف برنامه توانبخشی روان‌پزشکی</h2>
+<p class="section-sub">کوری‌گان، راو و لم، ۱۹۹۹</p>
+
+<div class="card">
+<div class="card-head"><h3>پنج هدف (کوری‌گان، راو و لم، ۱۹۹۹)</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>هدف</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td><b>مشمولیت (شامل شدن)</b></td><td>بیماران روانی مزمن می‌خوان در فعالیت‌ها و تجربه‌های زندگی روزانه وارد بشن و مشارکت جویند.</td></tr>
+<tr><td>۲</td><td><b>فرصت‌ها</b></td><td>به فرصت‌های جدید برای دستیابی به دامنه گسترده‌ای از فعالیت‌های زندگی و تجربه‌های نوین در اجتماعشون نیازمندن.</td></tr>
+<tr><td>۳</td><td><b>استقلال فردی</b></td><td>خواستار دستیابی به اهداف و فرصت‌ها یا امکانات جدیدن، بدون اینکه به برنامه‌های توانبخشی یا کارکنان بخش‌های روان‌پزشکی وابسته باشن.</td></tr>
+<tr><td>۴</td><td><b>بهبودی</b></td><td>بهبودی به معنای آن است که به بیماران کمک کرد تا توانایی کنترل علائمشون رو به دست بیارن و بر مشکلاتی که در نتیجه بیماری روانی به وجود اومده چیره بشن.</td></tr>
+<tr><td>۵</td><td><b>کیفیت</b></td><td>بیماران روانی مزمن خواستار کیفیت زندگی خوب و مطلوبن.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>برای یاری رساندن به بیماران روانی مزمن</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">برنامه‌های توانبخشی باید به‌گونه‌ای طراحی بشن که:</div>
+<div class="fa">• <b>علائم روان‌پزشکی این افراد رو کاهش بدن</b></div>
+<div class="fa">• <b>مهارت‌های بین‌فردی رو به اون‌ها بیاموزن</b></div>
+<div class="fa">• به اون‌ها کمک کنن تا <b>این مهارت‌ها رو در زندگی روزانه به کار بگیرن</b></div>
+<div class="fa">• <b>مهارت‌های سازگاری رو بیاموزن</b></div>
+<div class="fa">• بتونن از <b>منابع جامعه‌شون و حمایت‌های موجود در آن بهره‌مند بشن</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> <b>مشاوره و مداخله‌های مبتنی بر اجتماع</b> برای بیماران روانی مزمن <b>ضروری‌ه</b> و باید <b>تا هنگامی که افراد بتونن به اهدافشون دست یابن، ادامه یابن</b>.
+</div>
+</div>
+</section>
+
+<!-- ==================== ملاحظات عملی ==================== -->
+<section id="practical" class="section">
+<h2 class="section-title">۰۷ · ملاحظات عملی و نظری در مشاوره با بیماران روانی</h2>
+<p class="section-sub">رابطه، اعتماد، جلسات، تغییر مشاور</p>
+
+<div class="card">
+<div class="card-head"><h3>مشکلات در برقراری رابطه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">بیماران روانی مزمن در <b>برقراری روابط با دیگران</b> [مشکل دارن].</div>
+<div class="fa">بعد از <b>چندین بار پذیرش در بیمارستان</b>، بسیاری از متخصصان <b>زمان کوتاهی</b> رو برای صحبت کردن با اون‌ها صرف می‌کنن.</div>
+<div class="fa">بیماران روانی مزمن که بارها در مراکز روان‌پزشکی بستری شده‌ان، <b>تمایل کمتری به برقراری رابطه با مشاور، مددکار، پرسنل و افرادی که تازه وارد زندگی اون‌ها شده‌ان</b> دارن.</div>
+<div class="fa">اون‌ها <b>مشکلات و مسائل جدی‌تری</b> مثل <b>غذا، اسکان و مشکلات بهداشتی</b> دارن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>توصیه‌های عملی برای نخستین ملاقات</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>نخستین ملاقات بهتره چندان طولانی نباشه.</b></div>
+<div class="fa">مشاور به مراجع کمک می‌کنه تا <b>اولویت‌های فوری خودش رو در زندگی</b> (از جمله نیاز فوری به جا یا اسکان، غذا، پوشاک و دارو) <b>شناسایی کنه</b>.</div>
+<div class="fa"><b>بهترین روشی که به برقراری رابطه خوب با بیمار روانی می‌تونه کمک کنه، اینه که برای او کاری انجام بدید.</b></div>
+<div class="fa">بیماران روانی مزمن غالباً باید برای <b>برآورده ساختن نیازهای هرچند ابتدایی‌شون</b> با سیستم مراکز روان‌پزشکی درگیر بشن و بحث کنن. از طرفی، <b>سیستم بیمارستان هم چندان به اون‌ها پاسخ درستی نمی‌ده</b>.</div>
+<div class="fa">لذا، <b>یاری رساندن به فرد برای اینکه بتونه صحبت کنه و مذاکره نماید تا به خواسته‌هاش دست بیابه</b>، در فرایند توانبخشی بیماران روانی مزمن <b>بسیار ارزشمنده</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دشواری برقراری اعتماد</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>برقراری اعتماد بسیار دشواره</b>، چون بیماران روانی ممکنه:</div>
+<div class="fa">• در <b>دوره‌های زمانی کوتاهی بستری بشن</b> و به سرعت مرخص گردن</div>
+<div class="fa">• یا <b>دائماً با متخصصان متفاوتی در ارتباط باشن</b></div>
+<div class="fa">گرچه برقراری روابط مشاوره‌ای بسیار دشواره، اما <b>کاربرد مهارت‌های مشاوره‌ای</b> مثل <b>مهارت گوش دادن، تشویق کردن، بازگو کردن و خلاصه کردن</b> در کار با بیماران روانی <b>بسیار مهم و ضروری‌ان</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شرایط ضروری و کافی برای مشاوره</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">هرچند مراجع در برقراری رابطه دارای محدودیت‌هایی هست، اما ایجاد شرایط ضروری و کافی برای مشاوره مثل:</div>
+<div class="fa">• <b>درک همدلانه</b></div>
+<div class="fa">• <b>احترام و توجه مثبت نامشروط</b></div>
+<div class="fa">• <b>خلوص مشاور</b></div>
+<div class="fa">• <b>تمرکز بر مشکل مراجع</b></div>
+<div class="fa"><b>بسیار ارزشمندان.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نتیجه رعایت شرایط</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">اگه شرایط فوق رعایت بشه، فرد (مراجع) تصور می‌کنه که <b>می‌تونه به مشاور اعتماد کنه</b> و مشاور می‌تونه او رو برای <b>دستیابی به اهدافش یاری کنه</b>.</div>
+<div class="fa"><b>مبدل شدن به «فردی مهم و با ارزش» در زندگی بیمار روانی</b> به او امکان می‌ده تا <b>آزادانه و صادقانه‌تر با مشاورش ارتباط برقرار کنه</b>.</div>
+<div class="fa">هرچند زمان ماندن مراجع در مراکز روان‌پزشکی کوتاهه، اما <b>برقراری روابط مشاوره‌ای مناسب و به دست آوردن اعتماد مراجع</b> به مشاور کمک می‌کنه تا مراجع او رو <b>عنصر اساسی و سازنده‌ای در سلامت روانی و زندگی‌اش</b> تصور کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات مهم برای مشاوران</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>ایجاد اعتماد بین مشاور و مراجع</b> یکی از <b>عوامل اساسی ایجاد استقلال در بیمار</b>ه.</div>
+<div class="fa">ضرورت داره که مشاوران <b>وقت‌شناس، آغازگر و پذیرای مراجع</b> باشن و <b>توجه خودشون رو تمام و کمال معطوف بیمارشون کنن</b>.</div>
+<div class="fa">بهتره که <b>جلسات ابتدایی مشاوره کوتاه باشه</b>، چون <b>تحمل و شکایبایی مراجع محدود</b>ه و توانایی موندن در یه جلسه مشاوره طولانی رو نداره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تغییر مشاوران در مراکز روان‌پزشکی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">گرچه بهتره مراجع صرفاً با مشاورش ارتباط برقرار سازه، اما در بسیاری از مواقع <b>شرایط در مراکز روان‌پزشکی به‌گونه‌ایه که مشاوران هر بار عوض می‌شن</b> و مراجع در هر مرحله از پذیرش با <b>مشاور جدیدی</b> روبرو می‌شه.</div>
+<div class="fa">مراجعان به این تغییرات <b>به شیوه‌های گوناگونی پاسخ می‌دن</b>، اما باید به اون‌ها <b>زمان کافی برای پذیرش مشاور جدید و شرایط تازه</b> داد.</div>
+<div class="fa">باید به مراجع <b>اطمینان داد که جدایی از مشاور قبلی‌اش تأثیر منفی بر روند بهبودی او نمی‌ذاره</b>.</div>
+<div class="fa">اگه انتقال به بخش مشابهی صورت گرفت، باید به مراجعان این امکان رو داد که <b>مشاور جدیدشون رو خودشون انتخاب کنن</b>.</div>
+<div class="fa">حتی بهتره برای اینکه این جابه‌جایی آسان‌تر صورت گیره، مراجع <b>جلساتی رو با مشاور جدید و قدیم خودش داشته باشه</b> و موضوعاتی که بین اون‌ها رد و بدل شده رو به اطلاع مراجع برسونن.</div>
+<div class="fa">پیش از اینکه مراجع به مشاور جدید معرفی بشه، باید به او گفت که <b>«کسی نمی‌تونه جای مشاور قبلی شما رو بگیره، اما مشاور جدید هم حرف‌های تازه‌ای برای گفتن داره و اگرچه متفاوت از قبلیه، اما می‌تونید رابطه مشاوره‌ای جدید و پرباری رو با او آغاز کنید.»</b></div>
+</div>
+</section>
+
+<!-- ==================== مشاوره شغلی ==================== -->
+<section id="job" class="section">
+<h2 class="section-title">۰۸ · مشاوره شغلی برای بیماران روانی مزمن</h2>
+<p class="section-sub">اهمیت شغل، بررسی رغبت‌ها، مسائل رشد شغلی</p>
+
+<div class="card">
+<div class="card-head"><h3>اهمیت شغل</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>درخواست شغل یکی از متداول‌ترین دلایلیه که بیماران روانی مزمن با مشاور توانبخشی ارتباط برقرار می‌کنن.</b></div>
+<div class="fa">چون <b>هر روز از خواب برخاستن و رفتن بر سر کار</b>، فرد رو به‌عنوان <b>بخشی از دنیای «طبیعی یا نرمالی» که در زندگی می‌کنه</b> مبدل می‌سازه.</div>
+<div class="fa">از سوی دیگه، <b>بیکار بودن و نداشتن شغل</b>، <b>شرم یا ننگ بیماری روانی</b> رو در فرد <b>تشدید</b> می‌کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته مهم</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">گرچه بسیاری از مراجعان خواستار شغل‌اند و می‌تونن اون رو انجام بدن، اما باید برای اون‌ها <b>فرصتی فراهم ساخت که زندگی‌شون بدون کار هم لذت‌بخش و ارضاکننده باشه</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خدمت ارزنده مشاوران توانبخشی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یاری رساندن به مراجعان تا مشاغلی رو که توانایی انجام اون‌ها رو دارن، بیابن.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عامل نرخ پایین اشتغال در بیماران روانی مزمن</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یکی از عوامل نرخ پایین اشتغال در بیماران روانی مزمن اینه که به اون‌ها شغلی پیشنهاد می‌شه که برایشون اصلاً رضایت‌بخش نیست.</b></div>
+<div class="fa">جالب اینکه <b>حتی بیمارانی که تحصیل‌کرده‌اند هم در هنگام طبقه‌بندی مشاغل در طبقه شغلی غیرماهر قرار می‌گیرن</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته مهم درباره اسکیزوفرنیا</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">باید به خاطر داشت که <b>بیماری چون اسکیزوفرنیا معمولاً در اوایل دوره نوجوانی در فرد به وجود میاد</b> و <b>دوره نوجوانی هم نقش عمده‌ای رو در تصمیم‌گیری یا انتخاب شغل آینده فرد ایفا می‌کنه</b>.</div>
+<div class="fa">آنچه مسلمه اینه که <b>مشاور باید تلاش کنه برای فرد شغلی رو بیابه که تا حد امکان برای او رضایت‌بخش باشه</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بررسی رغبت‌ها و علائق شغلی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">برای پی بردن به رغبت‌ها و علائق شغلی فرد، باید <b>تاریخچه شغلی او رو دقیقاً بررسی کرد</b>.</div>
+<div class="fa">گرچه برخی از این بیماران عمدتاً <b>تجربه کاری ندارن یا تجارب اندکی دارن</b>، اما با <b>گذراندن اون‌ها در مشاغل پاره‌وقت و داوطلبانه</b> یا <b>مشغول ساختن اون‌ها به فعالیت‌های دیگر</b> می‌شه <b>نشونه‌هایی از ترجیح‌های شغلی رو در اون‌ها کشف کرد</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روش‌های بررسی ترجیح‌های مراجع</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">• صحبت پیرامون <b>تجارب کاری و فعالیت‌هایی که برای فرد لذت‌بخشن</b>.</div>
+<div class="fa">• پرسش‌هایی مثل:</div>
+<div class="fa">  - <b>آیا مراجع تا به حال شغلی یا کاری انجام داده است؟</b></div>
+<div class="fa">  - <b>برداشت او از «شغل رؤیایش» چیه؟</b></div>
+<div class="fa">  - <b>مراجع علاقه‌منده در چه محیط کاری مشغول به کار بشه؟</b> (اداره، کارخانه، مغازه، بیرون از شهر، درون شهر، تنها، در گروه، روزها، شب‌ها؟)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته مهم درباره آزمون‌های سنجش رغبت</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>کاربرد آزمون‌های سنجش رغبت‌های شغلی چندان برای بیماران روانی مزمن کاربردی نداره</b> و نتیجه‌ای جز <b>نیم‌رخ‌های یکنواخت</b> که نشونگر <b>نه رغبت و نه بی‌رغبتی به کار</b>ه، دربرنداره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رویکرد متفاوت: پرسش‌نامه «راهنمای کامل برای کنکاش شغل»</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">رویکرد متفاوتی که ممکنه در کار با بیماران روانی مزمن به کار بیاد اینه که از <b>پرسش‌نامه سنجش شغلی که «راهنمای کامل برای کنکاش شغل» نام داره</b> استفاده بشه.</div>
+<div class="fa">براساس این راهنما، <b>انتخاب شغل برپایه ارزش‌های شغلی تقسیم‌بندی می‌شه</b>، به‌عنوان مثال:</div>
+<div class="fa">• موضوعاتی که به <b>مدرسه</b> مرتبطن</div>
+<div class="fa">• <b>فعالیت‌های اوقات فراغت</b></div>
+<div class="fa">• <b>محیط‌های کاری مراجع</b></div>
+<div class="fa">در پایان، این علائق با <b>گروه‌ها و خرده‌گروه‌های شغلی</b> مقایسه شده و مورد بررسی قرار می‌گیرن.</div>
+<div class="fa">این رویکرد <b>روش مستقیم و ساده‌ای</b> رو برای انتخاب شغل ارائه می‌ده.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پس از انتخاب مسیر شغلی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">وقتی مسیر شغلی انتخاب شد، <b>راه‌های متعددی</b> وجود داره که از طریق اون‌ها مراجع به سوی شغل هدایت می‌شه. البته این فرایند به <b>دسترسی مراجع به منابع جامعه</b> بستگی داره.</div>
+<div class="fa"><b>پرسش‌های کلیدی:</b></div>
+<div class="fa">• <b>آیا مراجع به آموزش یا مهارتی برای دستیابی به هدف شغلی‌اش نیازمنده؟</b></div>
+<div class="fa">• <b>برنامه آموزشی حمایت‌شده برای دستیابی به شغل مورد نظر چیه؟</b></div>
+<div class="fa">• <b>آیا در اجتماعی یا برنامه استخدام حمایت‌شده یا باشگاه شغلی برای اشتغال مراجع وجود داره؟</b></div>
+<div class="fa">• <b>آیا در مرکز بهداشت روانی محلی یا مکانی برای خوداشتغالی مراجعان وجود داره؟</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته مهم</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>موضوع مهم اینه که مشاور و مراجع وقت و تلاش کافی رو باید برای برقراری رابطه مشاوره‌ای [صرف] بدن.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مسائل مهم در فرایند رشد شغلی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) درک مزایای اشتغال:</b> مراجعان باید از <b>مزایای اشتغال و تأثیر مثبتی که بر اون‌ها می‌ذاره</b> درک واقع‌بینانه‌ای داشته باشن. مسائلی مثل <b>دوره‌های کاری آزمایشی، استخدام روزمزد</b> رو شاید به سختی بشه درک و تشریح کرد، اما مهم اینه که <b>پرداخت نقدی</b> [به اون‌ها] کمک می‌کنه تا بدونن که از طریق اشتغال می‌تونن <b>پول داروها و سایر احتیاجات</b> رو برآورده کنن.</div>
+<div class="fa"><b>۲) تأثیر داروها:</b> ضرورت داره که مشاور از <b>تأثیر داروها بر اشتغالات و نیازهای [مراجع]</b> آگاهی داشته باشه. بهتره از پزشک پرسیده بشه که <b>آیا مراجع دارویی مصرف می‌کنه که مکمل است، در طی روز او رو دچار خواب‌آلودگی کنه؟</b> اگه دهان بیمار دائم بر اثر مصرف دارو خشک می‌شه، از پزشک بپرسید که <b>مصرف چقدر آب جلوی خشکی دهان او رو می‌گیره؟</b></div>
+<div class="fa"><b>۳) حساسیت به گرما و نور:</b> برخی از داروها ممکنه <b>توانایی فرد رو در برابر گرما کاهش داده یا حساسیت اولیه‌تر [نسبت] به نور خورشید افزایش بده</b>. اگه مراجعتون در جست‌وجوی شغلی خارج از شهر یا محیط کلینیکه یا باید در شرایط بسیار گرم کار کنه، <b>قبل از پرداختن به این‌گونه مشاغل باید پیرامون این مسائل با پزشکش مشورت کنید</b>.</div>
+<div class="fa"><b>۴) نزدیکی به کارکنان:</b> برخی از مراجعان نیازمندن <b>شغلی رو برگزینن که در نزدیکی کارکنان یا پرسنل مرکز باشه</b>، برخی دیگر <b>علاقه به نزدیکی به کارکنان ندارن</b>، بنابراین باید در انتخاب شغل مراجعان به این نکته هم توجه کرد.</div>
+</div>
+</section>
+
+<!-- ==================== آموزش مهارت‌ها ==================== -->
+<section id="skills" class="section">
+<h2 class="section-title">۰۹ · نیاز به آموزش مهارت‌ها به بیماران روانی مزمن</h2>
+<p class="section-sub">اهمیت، انواع مهارت‌ها، ارزیابی</p>
+
+<div class="card">
+<div class="card-head"><h3>اهمیت آموزش مهارت‌ها</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">مشاوران توانبخشی مجرب دائماً تأکید می‌کنن که <b>مؤلفه اساسی بهبودی، آموزش مهارت‌های اجتماعی</b>ه.</div>
+<div class="fa">در حالی که <b>داروهای روان‌پزشکی علائم شدید و حاد بیماران رو کاهش می‌دن</b>، <b>آموزش مهارت‌ها به افراد کمک می‌کنه تا مهارت‌های جدید رو کسب کرده و کاربردشون در زندگی‌شون بهتر از عهده وظایفشون برآین</b>.</div>
+<div class="fa">آموزش مهارت‌ها به بیماران روانی مزمن کمک می‌کنه تا <b>نقش اجتماعی، شغلی و ارتباطی خودشون رو بهبود بخشیده</b> و با [زندگی سازگار بشن].</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابطه مهارت‌ها و بهبودی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>آموزش مهارت‌ها برای روند بهبودی مراجع بسیار مهم و اساسی‌ه.</b></div>
+<div class="fa">فراگیری مهارت‌ها به مراجعان کمک می‌کنه تا <b>کارکرد معقولانه‌تری داشته باشن</b> و از این طریق بتونن <b>به نیازهاشون [پاسخ بدن]</b>.</div>
+<div class="fa"><b>هرچه افراد بهتر با مهارت‌های زندگی در جامعه سازگار بشن، بهتر هم قادرن که اثرات بیماریشون رو بهبود بدن.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته مهم درباره استرس</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>فراگیری مهارت، هنگامی ارزشمندتر و مفیدتره که فرد بتونه بر استرسش غلبه کنه.</b></div>
+<div class="fa">وقتی مراجعی <b>مهارت‌های اندکی</b> داشته باشه، تأثیر استرس‌های زندگی بر او <b>بسیار زیاد</b>ه.</div>
+<div class="fa">وقتی استرس‌های زندگی به توانایی فرد برای سازگاری چیره می‌شه، ممکنه <b>بیماری و اختلال بدتر و وخیم‌تر</b> بشن.</div>
+<div class="fa">وقتی علائم بیماری بدتر شدن، <b>توانایی فراگیری مهارت‌ها</b> هم در فرد <b>کاهش</b> پیدا می‌کنه.</div>
+<div class="fa">بنابراین، به تبع کاهش فراگیری، به فرد <b>استرس بیشتری</b> وارد می‌شه و نتیجه نهایی <b>عود علائم بیماری</b>ه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انواع مهارت‌ها</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>نوع مهارت</th><th>تعریف</th><th>مثال‌ها</th></tr></thead>
+<tbody>
+<tr><td><b>پایه یا اساسی</b></td><td>برای افزایش اثربخشی مهارت‌های بین‌فردی و کارکردی ضرورت دارن</td><td>—</td></tr>
+<tr><td><b>اجتماعی</b></td><td>—</td><td>گفت‌وگو، جرئت‌ورزی، قرار ملاقات</td></tr>
+<tr><td><b>ابزاری</b></td><td>فرد رو قادر می‌سازه مستقلانه به کارهاش رسیدگی کنه و سود مادی رو در نظر بگیره</td><td>برنامه‌ریزی غذا، خرید، تمیز کردن خانه، حمل‌ونقل عمومی</td></tr>
+<tr><td><b>سازگاری (کنار آمدن)</b></td><td>کمک می‌کنه علائم روان‌پزشکی و استرس‌های روزانه رو مدیریت و کنترل کنن</td><td>مدیریت دارو، خواب منظم، زنگ به دوست، باشگاه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دو دسته مهارت‌های سازگاری</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>دسته</th><th>تعریف</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td><b>مهارت‌های کاهش استرس</b></td><td>—</td><td>مدیریت صحیح مصرف داروها؛ خوابیدن در زمان مشخص؛ زنگ زدن به دوست هنگام افسردگی؛ رفتن مرتب به باشگاه</td></tr>
+<tr><td>۲</td><td><b>مهارت‌های تحمل یا شکایبایی در برابر استرس</b></td><td>—</td><td>گذاشتن گوشی یا واکمن بر گوش و گوش دادن به موسیقی برای تحمل توهم‌های شنوایی؛ مدارا با علائم باقی‌مانده از اختلال</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ارزیابی اهداف و مهارت‌ها</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>نکته کلیدی:</b> در هنگام آموزش مهارت‌ها باید دقت کرد که <b>چه مهارت‌هایی رو باید به افراد آموزش داد؟ و چه موقع آموزش داد؟</b></div>
+<div class="fa">مراجعان می‌خوان <b>مهارت‌هایی رو بیاموزن که به اون‌ها نیازمندن</b> و می‌خوان از طریق اون‌ها <b>به اهداف کوتاه‌مدت و بلندمدت دست یابن</b>.</div>
+<div class="fa"><b>نتیجه:</b> بهتره از مراجعان پیرامون اهدافشون سؤال کنید. <b>سؤال کردن بهترین روش برای آگاهی از اینه که مراجعان باید چه مهارت‌هایی رو بیاموزن.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>غلبه بر موانع شناختی بر سر راه هدف‌گذاری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>مشکل:</b> بعضی از مراجعان <b>مشکلات شناختی عمده‌ای</b> دارن و ممکنه نتونن به‌طور مستقیم به سؤالات مرتبط با <b>اهداف بلندمدت و کوتاه‌مدت</b> پاسخ بدن.</div>
+<div class="fa"><b>راه‌حل:</b> یکی از راه‌هایی که مشاوران می‌تونن برای پی بردن به اهداف مراجعان به کار برن اینه که <b>پیرامون موفقیت‌های زندگی روزانه اون‌ها سؤالاتی بپرسن</b>؛ مثلاً <b>اسکان، نیازهای مادی و روابط</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مثال جین (گفت‌وگو)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>مشاور:</b> جین، الان دوست داشتی چه کار کنی؟</div>
+<div class="fa"><b>جین:</b> دوست داشتم می‌تونستم برم بیرون و چیزی بخورم.</div>
+<div class="fa"><b>مشاور:</b> اوهم، خوب، چه طوری می‌تونی بری بیرون و چیزی بخوری؟</div>
+<div class="fa"><b>جین:</b> اگه پولم رو هدر نمی‌دادم و برای هر کسی سیگار نمی‌خریدم، الان می‌تونستم برم بیرون و چیزی بخورم.</div>
+<div class="fa"><b>مشاور:</b> خوب، پس برای تو خیلی سخته که به افرادی که از تو تقاضای سیگار می‌کنن، «نه» بگی؟</div>
+<div class="fa"><b>جین:</b> آره یه کوچولو سخته. بیشتر سیگارم رو به ایتو و اون می‌دم.</div>
+<div class="fa"><b>مشاور:</b> خوب به نظر می‌رسه دوست داری، یاد بگیری که، چه طور پولت رو بهتر خرج کنی و به راحتی بگی نه به سیگار؟</div>
+<div class="fa"><b>جین:</b> بله، درسته.</div>
+<div class="fa"><b>نتیجه:</b> مشاور توانبخشی از مهارت‌هایی که مراجعش به اون‌ها نیازمنده، به خوبی آگاهی داره. بهتره که برای آموزش مهارت‌های <b>جرئت‌ورزی و مدیریت پول</b>، جلسات آموزشی گروهی برگزار گرده.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مصاحبه انگیزشی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">اگه مراجعان <b>انگیزه چندانی برای متعهد موندن به هدف مشخصی</b> رو ندارن، می‌شه از <b>مصاحبه انگیزشی</b> استفاده کرد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روش‌های جمع‌آوری اطلاعات برای آموزش مهارت‌ها</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">پرسیدن پیرامون مهارت‌هایی که افراد می‌خوان بیاموزن، روش مناسبی برای کسب اطلاعاته، اما <b>روش‌های دیگه‌ای هم برای جمع‌آوری اطلاعات وجود داره</b>، مثل:</div>
+<div class="fa">• <b>مشاهده</b></div>
+<div class="fa">• <b>ایفای نقش</b></div>
+<div class="fa">• <b>مصاحبه ساختاریافته</b></div>
+<div class="fa">• <b>دستیابی به اطلاعات از طریق ایفای نقش و مصاحبه‌های ساختاریافته</b></div>
+</div>
+</section>
+
+<!-- ==================== هشت فعالیت یادگیری ==================== -->
+<section id="learning" class="section">
+<h2 class="section-title">۱۰ · گام‌های آموزش مهارت‌ها (هشت فعالیت یادگیری)</h2>
+<p class="section-sub">مقدمه، الگوگیری، ایفای نقش و...</p>
+
+<div class="card">
+<div class="card-head"><h3>تمایز آموزش مهارت‌ها و فعالیت‌های یادگیری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>آموزش مهارت‌ها:</b> جنبه‌هایی از مهارت <b>بسیار خاص</b>‌ان و عموماً به این منظور آموخته می‌شن که مراجع به <b>هدف مطلوب و دلخواه خودش</b> دست یابه.</div>
+<div class="fa"><b>فعالیت‌های یادگیری:</b> <b>هشت فعالیت مجزا</b> که برای آموزش مهارت‌ها به کار می‌رن.</div>
+<div class="fa"><b>مثال:</b> در آموزش <b>آغاز کردن گفت‌وگو</b>، مراجع ممکنه <b>پنج مهارت مجزا</b> رو بیاموزه: از روی <b>ژست بدنی، تُن صدا، محتوای مناسب، هم‌زمانی پاسخ‌ها و پایان دادن به گفت‌وگو</b>.</div>
+<div class="fa">علاوه بر این، <b>مهارت‌های یادشده، خود به مهارت‌های کوچک‌تری هم تقسیم می‌شن</b>؛ مثلاً <b>ژست بدنی ممکنه خود به مهارت‌های جزئی‌تر تقسیم بشه</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هشت فعالیت یادگیری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) مقدمه</b></div>
+<div class="fa"><b>۲) الگوگیری</b></div>
+<div class="fa"><b>۳) ایفای نقش</b></div>
+<div class="fa"><b>۴) مدیریت منابع</b></div>
+<div class="fa"><b>۵) پیامد مشکلات</b></div>
+<div class="fa"><b>۶) تمرین‌های زنده</b></div>
+<div class="fa"><b>۷) تکالیف خانگی</b></div>
+<div class="fa"><b>۸) ارزیابی و بازخورد</b> (در جدول اصلی ذکر نشده، اما احتمالاً)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱) مقدمه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">نخستین فعالیت یادگیری، <b>مقدمه‌ای بر مهارت‌هاست</b>. در این مرحله، به مراجع <b>گفته می‌شه که مهارت‌ها چه هستن و چه موقع به کار می‌رن</b>.</div>
+<div class="fa"><b>مثال:</b> در مقدمه آموزش <b>مهارت‌های مدیریت علائم</b>، به مراجعان پیرامون این مهارت‌ها اطلاعات داده می‌شه:</div>
+<div class="fa">• <b>علائم خطر</b> (اگه علائم حاد شده باید با چه کسی تماس بگیره)</div>
+<div class="fa">• <b>منطق آموزش [این] مهارت‌ها</b> (چرا این مهارت‌ها مفید و ارزشمندن؟)</div>
+<div class="fa">• <b>موارد کاربرد</b> (از طریق این‌گونه مهارت‌ها، مثلاً بیماریشون رو مدیریت کرده و به بیمارستان مراجعه کنن)</div>
+<div class="fa"><b>نکته:</b> ارائه دلیل و چرایی روشن و آشکار برای یادگیری مهارتی خاص، به مراجع کمک می‌کنه تا <b>انگیزه لازم رو برای فراگیری مهارت به دست بیاره</b>.</div>
+<div class="fa">برای اینکه آموزش مهارت‌ها موفق باشه، مراجع باید بدونه که <b>چگونه باید تغییر کند و چرا باید تغییر کند</b> (میلر و رولینک، ۲۰۰۲).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) الگوگیری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">فعالیت بعدی یادگیری، <b>الگوگیری</b>ه.</div>
+<div class="fa"><b>الگوها</b> می‌تونن از طریق <b>بازیگرانی که در فیلم هستن</b> معرفی بشن یا <b>به‌طور زنده از سوی مشاور و مراجعان</b> ارائه بشن.</div>
+<div class="fa">الگوها به مراجعان امکان می‌دن تا <b>انجام مهارت رو مشاهده کرده و به شیوه صحیحی اون‌ها رو در زندگی روزمره‌شون به کار گیرن</b>.</div>
+<div class="fa"><b>مثال:</b> مراجعانی که نقش بازیگر رو ایفا می‌کنن، ممکنه پیرامون <b>راهبردهای سازگاری</b> صحبت کنن. به‌عنوان مثال، چگونه از مهارت‌های سازگاری برای کنترل علائم سایکوتیک، افسردگی، مانیا یا اضطراب استفاده کنن؟</div>
+<div class="fa"><b>نمایش ویدئویی</b> هم ممکنه به موضوعات متنوعی بپردازه که برای مراجعان مفیدن.</div>
+<div class="fa">همچنین، می‌شه از <b>روزنامه‌ها یا مجلات</b> هم کمک گرفت؛ مثلاً چگونه بیماری با مراجعه [به روزنامه] می‌تونه خانه‌ای رو برای اجاره پیدا کنه.</div>
+<div class="fa"><b>نکته:</b> الگوگیری نوعی <b>یادگیری مشاهده‌ای</b>ه که ممکنه <b>برای تمامی بیماران روانی مزمن کاربرد نداشته باشه</b>.</div>
+<div class="fa">باید در آموزش برخی از بیماران <b>بسیار رهنمودی و مستقیم</b> عمل کرد، یعنی باید از اون‌ها خواسته بشه که <b>اطلاعات رو تکرار کنن و دائماً مهارت‌های آموخته‌شده رو به نمایش بذارن</b>.</div>
+</div>
+</section>
+
+<!-- ==================== تفاوت‌ها و دام‌ها ==================== -->
+<section id="diffs" class="section">
+<h2 class="section-title">۱۱ · تفاوت‌ها و تله‌ها</h2>
+<p class="section-sub">برای تست چهارگزینه‌ای آماده شو</p>
+
+<div class="card diff">
+<h3>تفاوت ۱: اصول توانبخشی با اهداف برنامه</h3>
+<div class="fa"><b>اصول (آنتونی، ۱۹۹۶):</b> ۸ اصل — آموزش مهارت، خودتعیینی، منابع محیطی، تغییرات اجتماعی، ارزیابی، اشتغال، حالا و اکنون، مداخله اولیه.</div>
+<div class="fa"><b>اهداف (کوری‌گان و همکاران، ۱۹۹۹):</b> ۵ هدف — مشمولیت، فرصت‌ها، استقلال فردی، بهبودی، کیفیت.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این دو رو با هم قاطی نکن! ۸ اصل vs ۵ هدف.</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۲: مهارت‌های ابزاری با سازگاری</h3>
+<div class="fa"><b>ابزاری:</b> رسیدگی مستقلانه به کارها + سود مادی (برنامه غذا، خرید، نظافت، حمل‌ونقل).</div>
+<div class="fa"><b>سازگاری:</b> مدیریت علائم روان‌پزشکی و استرس‌های روزانه (مدیریت دارو، خواب منظم، زنگ به دوست، باشگاه).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> ابزاری = کارهای روزمره؛ سازگاری = مدیریت علائم!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۳: مهارت‌های کاهش استرس با تحمل/شکایبایی</h3>
+<div class="fa"><b>کاهش استرس:</b> مدیریت دارو، خواب منظم، زنگ به دوست، باشگاه.</div>
+<div class="fa"><b>تحمل/شکایبایی:</b> گذاشتن گوشی و گوش دادن به موسیقی برای تحمل توهم؛ مدارا با علائم باقی‌مانده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> کاهش = پیشگیری؛ تحمل = مدارا!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۴: آموزش مهارت‌ها با فعالیت‌های یادگیری</h3>
+<div class="fa"><b>آموزش مهارت‌ها:</b> جنبه‌های بسیار خاص مهارت؛ هدف: رسیدن به هدف مطلوب مراجع.</div>
+<div class="fa"><b>فعالیت‌های یادگیری:</b> ۸ فعالیت مجزا (مقدمه، الگوگیری، ایفای نقش، ...).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> آموزش = محتوا؛ فعالیت = روش!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۵: مقدمه با الگوگیری</h3>
+<div class="fa"><b>مقدمه:</b> چه مهارت‌هایی، چه موقع؛ دلیل و چرایی (انگیزه).</div>
+<div class="fa"><b>الگوگیری:</b> یادگیری مشاهده‌ای؛ فیلم، بازیگر، مشاور؛ ممکن است برای همه کاربرد نداشته باشد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> مقدمه اول، الگوگیری دوم!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۶: مشاهده با ایفای نقش</h3>
+<div class="fa"><b>مشاهده:</b> مشاور تعامل‌های مراجع رو تماشا می‌کنه؛ مراجع آزادانه اطلاعات می‌ده.</div>
+<div class="fa"><b>ایفای نقش:</b> مشاور نقش طراحی می‌کنه؛ مراجع نقش رو بازی می‌کنه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> مشاهده = تماشا؛ ایفای نقش = بازی!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۷: آزمون رغبت با راهنمای کامل کنکاش شغل</h3>
+<div class="fa"><b>آزمون رغبت:</b> برای بیماران روانی مزمن کاربردی نداره؛ نیم‌رخ یکنواخت.</div>
+<div class="fa"><b>راهنمای کامل کنکاش شغل:</b> تقسیم‌بندی بر اساس ارزش‌های شغلی؛ روش مستقیم و ساده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> آزمون رغبت کم‌کاربردی؛ راهنما خوب!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۸: بهترین روش رابطه با بیمار روانی</h3>
+<div class="fa"><b>بهترین روش:</b> انجام دادن کاری برای مراجع.</div>
+<div class="fa"><b>روش‌های دیگه:</b> گوش دادن، تشویق کردن، بازگو کردن، خلاصه کردن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> بهترین = انجام کار برای مراجع!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۹: نرخ پایین اشتغال با اسکیزوفرنیا</h3>
+<div class="fa"><b>نرخ پایین اشتغال:</b> شغل پیشنهادی غیررضایت‌بخش؛ طبقه‌بندی غیرماهر حتی برای تحصیل‌کرده‌ها.</div>
+<div class="fa"><b>اسکیزوفرنیا:</b> شروع در اوایل نوجوانی؛ تأثیر بر انتخاب شغل آینده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این دو تا با هم فرق دارن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۱۰: چرخه معیوب استرس و مهارت</h3>
+<div class="fa"><b>چرخه:</b> مهارت کم ← تأثیر زیاد استرس ← وخامت بیماری ← کاهش فراگیری ← عود علائم.</div>
+<div class="fa"><b>نکته:</b> این چرخه نشون می‌ده چرا آموزش مهارت‌ها <b>مؤلفه اساسی بهبودی</b>ه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> مهارت کم = استرس زیاد!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱: اصول توانبخشی روان‌پزشکی مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال کوری‌گانه.</div>
+<div class="fa"><b>جواب درست:</b> <b>آنتونی (۱۹۹۶)</b> — ۸ اصل.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> آنتونی = اصول؛ کوری‌گان = اهداف.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲: اهداف برنامه توانبخشی مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال آنتونی.</div>
+<div class="fa"><b>جواب درست:</b> <b>کوری‌گان، راو و لم (۱۹۹۹)</b> — ۵ هدف.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> کوری‌گان = اهداف.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳: چند اصل توانبخشی روان‌پزشکی داریم؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی ۵ تا.</div>
+<div class="fa"><b>جواب درست:</b> <b>۸ اصل</b> (آنتونی، ۱۹۹۶).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۸ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۴: چند هدف برنامه توانبخشی داریم؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی ۸ تا.</div>
+<div class="fa"><b>جواب درست:</b> <b>۵ هدف</b> (کوری‌گان و همکاران، ۱۹۹۹).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۵ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۵: هفت حوزه مشکل بیماران روانی مزمن کدومن؟</h3>
+<div class="fa"><b>تله:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>شناخت، مهارت اجتماعی، بهداشت، سازگاری، حمایت بین‌فردی، مدیریت علائم، انگیزه</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۷ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۶: بهترین روش برقراری رابطه با بیمار روانی چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی گوش دادنه.</div>
+<div class="fa"><b>جواب درست:</b> <b>انجام دادن کاری برای مراجع</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> یه کاری براش بکن!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۷: نخستین ملاقات چطور باید باشه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی باید طولانی باشه.</div>
+<div class="fa"><b>جواب درست:</b> <b>چندان طولانی نباشه</b>؛ اولویت‌های فوری شناسایی بشن (اسکان، غذا، پوشاک، دارو).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> کوتاه + اولویت‌ها.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۸: چرا برقراری اعتماد با بیمار روانی دشواره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی چون بیمار بدجنسه.</div>
+<div class="fa"><b>جواب درست:</b> <b>بستری کوتاه</b> و <b>تغییر مکرر متخصصان</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> بستری کوتاه + متخصص عوض می‌شه.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۹: شرایط ضروری و کافی برای مشاوره با بیمار روانی کدومن؟</h3>
+<div class="fa"><b>تله:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>درک همدلانه، احترام و توجه مثبت نامشروط، خلوص مشاور، تمرکز بر مشکل مراجع</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۴ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۰: نقش «فرد مهم و با ارزش» چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی هیچ نقشی نداره.</div>
+<div class="fa"><b>جواب درست:</b> به بیمار امکان می‌ده <b>آزادانه و صادقانه‌تر با مشاورش ارتباط برقرار کنه</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ارتباط آزاد و صادقانه.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۱: جلسات ابتدایی چطور باید باشن؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی طولانی.</div>
+<div class="fa"><b>جواب درست:</b> <b>کوتاه</b>؛ چون تحمل و شکایبایی مراجع محدوده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> کوتاه!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۲: تغییر مشاور چطور مدیریت بشه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی نباید هیچ کاری کرد.</div>
+<div class="fa"><b>جواب درست:</b> زمان کافی، اطمینان‌بخشی، انتخاب مشاور جدید توسط مراجع، جلسه مشترک مشاور قدیم و جدید، گفتن جمله «کسی نمی‌تونه جای مشاور قبلی رو بگیره...».</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> زمان + اطمینان + انتخاب + جلسه مشترک.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۳: چرا درخواست شغل متداول‌ترین دلیل مراجعه‌ست؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط برای پوله.</div>
+<div class="fa"><b>جواب درست:</b> چون فرد رو <b>بخشی از دنیای نرمال</b> می‌کنه و <b>شرم یا ننگ بیماری</b> رو کاهش می‌ده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> بخشی از دنیای نرمال + کاهش شرم.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۴: عامل نرخ پایین اشتغال چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی بیمارها تنبلن.</div>
+<div class="fa"><b>جواب درست:</b> <b>شغل پیشنهادی غیررضایت‌بخش</b>؛ حتی تحصیل‌کرده‌ها تو <b>طبقه شغلی غیرماهر</b> قرار می‌گیرن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> شغل غیررضایت‌بخش.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۵: اسکیزوفرنیا کِی شروع می‌شه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی تو بزرگسالی.</div>
+<div class="fa"><b>جواب درست:</b> <b>اوایل دوره نوجوانی</b>؛ و نوجوانی نقش عمده‌ای در انتخاب شغل آینده داره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> اوایل نوجوانی.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۶: آزمون‌های سنجش رغبت برای بیماران روانی مزمن چطورن؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی خیلی خوبن.</div>
+<div class="fa"><b>جواب درست:</b> <b>کاربردی ندارن</b>؛ نتیجه: <b>نیم‌رخ‌های یکنواخت</b> (نه رغبت، نه بی‌رغبتی).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> کم‌کاربردی!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۷: «راهنمای کامل برای کنکاش شغل» چطور عمل می‌کنه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مثل آزمون رغبته.</div>
+<div class="fa"><b>جواب درست:</b> انتخاب شغل رو <b>برپایه ارزش‌های شغلی</b> تقسیم‌بندی می‌کنه (مدرسه، اوقات فراغت، محیط‌های کاری)؛ روش <b>مستقیم و ساده</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ارزش‌های شغلی + ساده.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۸: چهار مسئله مهم در فرایند رشد شغلی کدومن؟</h3>
+<div class="fa"><b>تله:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>درک مزایای اشتغال، تأثیر داروها (خواب‌آلودگی، خشکی دهان)، حساسیت به گرما/نور، نزدیکی به کارکنان</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۴ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۹: مؤلفه اساسی بهبودی چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی دارو.</div>
+<div class="fa"><b>جواب درست:</b> <b>آموزش مهارت‌های اجتماعی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> آموزش مهارت‌های اجتماعی.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۰: چرخه معیوب استرس و مهارت چطوریه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی استرس همیشه بده.</div>
+<div class="fa"><b>جواب درست:</b> مهارت کم ← استرس زیاد ← وخامت بیماری ← کاهش فراگیری ← عود علائم.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> این چرخه رو حفظ کن!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۱: چهار نوع مهارت کدومن؟</h3>
+<div class="fa"><b>تله:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>پایه/اساسی، اجتماعی، ابزاری، سازگاری</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۴ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۲: دو دسته مهارت سازگاری کدومن؟</h3>
+<div class="fa"><b>تله:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>کاهش استرس</b> + <b>تحمل/شکایبایی در برابر استرس</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۲ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۳: بهترین روش آگاهی از مهارت‌های مورد نیاز مراجع چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی آزمون.</div>
+<div class="fa"><b>جواب درست:</b> <b>سؤال کردن از مراجعان پیرامون اهدافشون</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> سؤال کردن!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۴: غلبه بر موانع شناختی چطوریه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی باید سؤال مستقیم پرسید.</div>
+<div class="fa"><b>جواب درست:</b> سؤال پیرامون <b>موفقیت‌های زندگی روزانه</b> (اسکان، نیاز مادی، روابط).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> موفقیت‌های روزانه!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۵: مصاحبه انگیزشی کِی به کار می‌ره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی همیشه.</div>
+<div class="fa"><b>جواب درست:</b> وقتی مراجعان <b>انگیزه چندانی برای متعهد ماندن به هدف مشخصی</b> ندارن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> عدم انگیزه!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۶: روش‌های جمع‌آوری اطلاعات برای آموزش مهارت‌ها کدومن؟</h3>
+<div class="fa"><b>تله:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>مصاحبه غیررسمی، مشاهده، ایفای نقش، مصاحبه ساختاریافته، دستیابی از طریق ایفای نقش و مصاحبه</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۵ روش.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۷: مشاهده چه مزیتی داره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مزیتی نداره.</div>
+<div class="fa"><b>جواب درست:</b> مراجع <b>آزادانه و بدون دخالت متخصصان</b> اطلاعات می‌ده؛ در شرایط <b>آرام و آسوده</b> تصویر <b>دقیق‌تری</b> از کارکردهاش ارائه می‌ده.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> آزادانه + دقیق‌تر.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۸: ارزیابی‌های عملکردی چه ابعادی رو می‌سنجن؟</h3>
+<div class="fa"><b>تله:</b> فقط مدیریت پول.</div>
+<div class="fa"><b>جواب درست:</b> <b>مدیریت علائم، حل تعارض، مدیریت پول، بهداشت، قرار ملاقات، تعطیلات</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۶ بعد.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۹: بسته‌های آموزش مهارت‌ها شامل چیا هستن؟</h3>
+<div class="fa"><b>تله:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>بازآفرینی، مدیریت دارو، مدیریت تعارض، مدیریت خواب، شغل‌یابی، قرار ملاقات</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۶ موضوع.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳۰: تمایز آموزش مهارت‌ها و فعالیت‌های یادگیری چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی یکسانن.</div>
+<div class="fa"><b>جواب درست:</b> <b>آموزش</b> = جنبه‌های خاص مهارت؛ <b>فعالیت یادگیری</b> = ۸ فعالیت (مقدمه، الگوگیری، ...).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> آموزش = محتوا؛ فعالیت = روش.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳۱: هشت فعالیت یادگیری کدومن؟</h3>
+<div class="fa"><b>تله:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>مقدمه، الگوگیری، ایفای نقش، مدیریت منابع، پیامد مشکلات، تمرین‌های زنده، تکالیف خانگی</b> (+ ارزیابی و بازخورد).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۷+۱ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳۲: مقدمه چه نقشی داره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط معرفیه.</div>
+<div class="fa"><b>جواب درست:</b> <b>گفتن اینکه مهارت‌ها چی هستن و چه موقع به کار می‌رن</b> + <b>دلیل و چرایی</b> (انگیزه).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> چی + کی + چرا!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳۳: الگوگیری چه منابعی می‌تونه داشته باشه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط مشاور.</div>
+<div class="fa"><b>جواب درست:</b> <b>فیلم، بازیگر، مشاور، مراجعان، روزنامه و مجلات</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> فیلم + مشاور + روزنامه!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳۴: الگوگیری برای همه بیماران روانی مزمن کاربرد داره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی برای همه.</div>
+<div class="fa"><b>جواب درست:</b> <b>نه!</b> ممکنه برای تمامی بیماران کاربرد نداشته باشه؛ باید برای برخی <b>رهنمودی و مستقیم</b> عمل کرد (تکرار + نمایش).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> نه برای همه!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳۵: نقل‌قول میلر و رولینک (۲۰۰۲) درباره آموزش مهارت‌ها چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط باید چرایی رو گفت.</div>
+<div class="fa"><b>جواب درست:</b> مراجع باید بدونه <b>چگونه باید تغییر کند و چرا باید تغییر کند</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> چگونه + چرا.</div>
+</div>
+</section>
+
+<!-- ==================== کوییز ==================== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۱۲ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مداخله‌های مشاوره‌ای و آموزش مهارت‌ها</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 14 · مشاوره توانبخشی · فصل چهاردهم: مداخله‌های مشاوره‌ای و آموزش مهارت‌ها</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+const themeIcon=document.getElementById('themeIcon');
+const moonPath='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+const sunPath='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z';
+theme.onclick=()=>{
+const dark=document.documentElement.dataset.theme==='dark';
+if(dark){
+document.documentElement.dataset.theme='';
+themeIcon.innerHTML='<path d="'+moonPath+'"></path>';
+}else{
+document.documentElement.dataset.theme='dark';
+themeIcon.innerHTML='<circle cx="12" cy="12" r="4"></circle><path d="'+sunPath+'"></path>';
+}
+};
+
+const quizData = [
+{q:"اصول توانبخشی روان‌پزشکی (آنتونی، ۱۹۹۶) چند اصل هستن؟",options:["۸","۵","۶","۷"],answer:0,explanation:"آنتونی (۱۹۹۶) هشت اصل توانبخشی روان‌پزشکی رو برمی‌شماره."},
+{q:"کدام یک از اصول توانبخشی روان‌پزشکی (آنتونی، ۱۹۹۶) نیست؟",options:["تأکید بر گذشته","خودتعیینی مراجع","کاربرد منابع محیطی","تأکید بر اشتغال"],answer:0,explanation:"آنتونی بر تأکید بر «حالا و اکنون» تأکید داره، نه گذشته."},
+{q:"اهداف برنامه توانبخشی روان‌پزشکی (کوری‌گان، راو و لم، ۱۹۹۹) چند هدف هستن؟",options:["۵","۸","۶","۴"],answer:0,explanation:"کوری‌گان، راو و لم (۱۹۹۹) پنج هدف رو برمی‌شمارن: مشمولیت، فرصت‌ها، استقلال فردی، بهبودی، کیفیت."},
+{q:"کدام یک از اهداف برنامه توانبخشی روان‌پزشکی نیست؟",options:["وابستگی به کارکنان","مشمولیت","استقلال فردی","بهبودی"],answer:0,explanation:"استقلال فردی یعنی دستیابی به اهداف بدون وابستگی به برنامه‌های توانبخشی یا کارکنان."},
+{q:"هفت حوزه مشکل بیماران روانی مزمن کدومن؟",options:["شناخت، مهارت اجتماعی، بهداشت، سازگاری، حمایت بین‌فردی، مدیریت علائم، انگیزه","فقط شناخت","فقط مهارت اجتماعی","فقط انگیزه"],answer:0,explanation:"هفت حوزه: شناخت، مهارت اجتماعی، بهداشت و مدیریت رفتارهای فردی، سازگاری، حمایت بین‌فردی، مدیریت علائم، انگیزه."},
+{q:"بهترین روش برقراری رابطه با بیمار روانی چیه؟",options:["انجام دادن کاری برای او","گوش دادن","سؤال کردن","سکوت کردن"],answer:0,explanation:"بهترین روشی که به برقراری رابطه خوب با بیمار روانی می‌تونه کمک کنه، اینه که برای او کاری انجام بدید."},
+{q:"نخستین ملاقات با بیمار روانی چطور باید باشه؟",options:["چندان طولانی نباشه","خیلی طولانی باشه","حداقل ۲ ساعت باشه","بدون وقفه باشه"],answer:0,explanation:"نخستین ملاقات بهتره چندان طولانی نباشه و مشاور به مراجع کمک کنه اولویت‌های فوری خودش رو شناسایی کنه."},
+{q:"چرا برقراری اعتماد با بیماران روانی دشواره؟",options:["بستری کوتاه و تغییر مکرر متخصصان","چون بیماران بدجنسن","چون مشاوران بدجنسن","چون بیمارستان دوره"],answer:0,explanation:"برقراری اعتماد دشواره چون بیماران ممکنه در دوره‌های کوتاهی بستری بشن و به سرعت مرخص گردن یا دائماً با متخصصان متفاوتی در ارتباط باشن."},
+{q:"شرایط ضروری و کافی برای مشاوره با بیماران روانی کدومن؟",options:["درک همدلانه، احترام و توجه مثبت نامشروط، خلوص مشاور، تمرکز بر مشکل مراجع","فقط درک همدلانه","فقط خلوص مشاور","فقط تمرکز بر مشکل"],answer:0,explanation:"چهار شرط: درک همدلانه، احترام و توجه مثبت نامشروط، خلوص مشاور، تمرکز بر مشکل مراجع."},
+{q:"جلسات ابتدایی مشاوره با بیمار روانی چطور باید باشن؟",options:["کوتاه باشند","طولانی باشند","بدون وقفه باشند","حداقل ۲ ساعت باشند"],answer:0,explanation:"بهتره جلسات ابتدایی مشاوره کوتاه باشه، چون تحمل و شکایبایی مراجع محدوده."},
+{q:"تغییر مشاور در مراکز روان‌پزشکی چطور مدیریت بشه؟",options:["زمان کافی، اطمینان‌بخشی، انتخاب مشاور جدید، جلسه مشترک","بدون هیچ توضیحی","با تنبیه","با اندرز"],answer:0,explanation:"باید زمان کافی داد، اطمینان داد، امکان انتخاب مشاور جدید داد و جلسه مشترک مشاور قدیم و جدید برگزار کرد."},
+{q:"چرا درخواست شغل یکی از متداول‌ترین دلایل مراجعه بیماران روانی مزمنه؟",options:["فرد رو بخشی از دنیای نرمال می‌کنه و شرم بیماری رو کاهش می‌ده","فقط برای پول","فقط برای تفریح","فقط برای قدرت"],answer:0,explanation:"چون هر روز از خواب برخاستن و رفتن بر سر کار، فرد رو بخشی از دنیای طبیعی یا نرمال می‌کنه و بیکاری شرم یا ننگ بیماری روانی رو تشدید می‌کنه."},
+{q:"عامل نرخ پایین اشتغال در بیماران روانی مزمن چیه؟",options:["شغل پیشنهادی غیررضایت‌بخش و طبقه‌بندی غیرماهر","تنبلی بیماران","کمبود شغل","نبود تحصیلات"],answer:0,explanation:"یکی از عوامل نرخ پایین اشتغال اینه که به بیماران شغلی پیشنهاد می‌شه که برایشون اصلاً رضایت‌بخش نیست؛ حتی تحصیل‌کرده‌ها هم در طبقه شغلی غیرماهر قرار می‌گیرن."},
+{q:"اسکیزوفرنیا معمولاً کِی شروع می‌شه؟",options:["اوایل دوره نوجوانی","اواخر بزرگسالی","کودکی","کهنسالی"],answer:0,explanation:"بیماری چون اسکیزوفرنیا معمولاً در اوایل دوره نوجوانی در فرد به وجود میاد و دوره نوجوانی نقش عمده‌ای در انتخاب شغل آینده داره."},
+{q:"کاربرد آزمون‌های سنجش رغبت برای بیماران روانی مزمن چطوره؟",options:["چندان کاربردی ندارد؛ نیم‌رخ یکنواخت","خیلی خوبه","بهترین روشه","تنها روشه"],answer:0,explanation:"کاربرد آزمون‌های سنجش رغبت‌های شغلی چندان برای بیماران روانی مزمن کاربردی نداره و نتیجه‌ای جز نیم‌رخ‌های یکنواخت که نشونگر نه رغبت و نه بی‌رغبتی به کاره، دربرنداره."},
+{q:"«راهنمای کامل برای کنکاش شغل» چطور عمل می‌کنه؟",options:["تقسیم‌بندی بر اساس ارزش‌های شغلی","تقسیم‌بندی بر اساس سن","تقسیم‌بندی بر اساس جنسیت","تقسیم‌بندی بر اساس هوش"],answer:0,explanation:"براساس این راهنما، انتخاب شغل برپایه ارزش‌های شغلی تقسیم‌بندی می‌شه: موضوعات مدرسه، فعالیت‌های اوقات فراغت، محیط‌های کاری."},
+{q:"چهار مسئله مهم در فرایند رشد شغلی کدومن؟",options:["درک مزایای اشتغال، تأثیر داروها، حساسیت به گرما/نور، نزدیکی به کارکنان","فقط درک مزایای اشتغال","فقط تأثیر داروها","فقط نزدیکی به کارکنان"],answer:0,explanation:"چهار مسئله: ۱) درک مزایای اشتغال ۲) تأثیر داروها (خواب‌آلودگی، خشکی دهان) ۳) حساسیت به گرما/نور ۴) نزدیکی به کارکنان."},
+{q:"مؤلفه اساسی بهبودی از نظر مشاوران توانبخشی مجرب چیه؟",options:["آموزش مهارت‌های اجتماعی","دارو","بستری","تنبیه"],answer:0,explanation:"مشاوران توانبخشی مجرب دائماً تأکید می‌کنن که مؤلفه اساسی بهبودی، آموزش مهارت‌های اجتماعی است."},
+{q:"چرخه معیوب استرس و مهارت چطوریه؟",options:["مهارت کم ← استرس زیاد ← وخامت بیماری ← کاهش فراگیری ← عود علائم","مهارت زیاد ← استرس کم ← بهبودی","مهارت کم ← استرس کم ← بهبودی","مهارت زیاد ← استرس زیاد ← عود"],answer:0,explanation:"وقتی مهارت‌های اندک باشد، تأثیر استرس زیاد می‌شه؛ استرس چیره می‌شه؛ بیماری وخیم می‌شه؛ فراگیری کم می‌شه؛ عود علائم رخ می‌ده."},
+{q:"چهار نوع مهارت کدومن؟",options:["پایه/اساسی، اجتماعی، ابزاری، سازگاری","فقط اجتماعی","فقط ابزاری","فقط سازگاری"],answer:0,explanation:"چهار نوع: ۱) پایه یا اساسی ۲) اجتماعی ۳) ابزاری ۴) سازگاری."},
+{q:"مهارت‌های ابزاری چه ویژگی‌ای دارن؟",options:["فرد رو قادر می‌سازه مستقلانه به کارهاش رسیدگی کنه و سود مادی رو در نظر بگیره","فقط برای تفریح","فقط برای سلامتی","فقط برای روابط"],answer:0,explanation:"مهارت‌های ابزاری فرد رو قادر می‌سازه تا به‌طور مستقلانه به کارهاش رسیدگی کنه و سود مادی رو هم در نظر بگیره."},
+{q:"دو دسته مهارت‌های سازگاری کدومن؟",options:["کاهش استرس، تحمل/شکایبایی در برابر استرس","فقط کاهش استرس","فقط تحمل استرس","هیچ دسته‌ای"],answer:0,explanation:"دو دسته: ۱) مهارت‌های کاهش استرس ۲) مهارت‌های تحمل یا شکایبایی در برابر استرس."},
+{q:"مثال مهارت تحمل یا شکایبایی در برابر استرس چیه؟",options:["گوش دادن به موسیقی برای تحمل توهم‌های شنوایی","مدیریت دارو","خواب منظم","زنگ زدن به دوست"],answer:0,explanation:"مثال: گذاشتن گوشی یا واکمن بر گوش و گوش دادن به موسیقی برای تحمل توهم‌های شنوایی؛ مراجع از مهارت تحمل برای مدارا با علائم باقی‌مانده استفاده می‌کنه."},
+{q:"بهترین روش آگاهی از مهارت‌های مورد نیاز مراجع چیه؟",options:["سؤال کردن از مراجعان پیرامون اهدافشان","آزمون","مشاهده","تفسیر"],answer:0,explanation:"بهتره از مراجعان پیرامون اهدافشان سؤال کنید. سؤال کردن بهترین روش برای آگاهی از اینه که مراجعان باید چه مهارت‌هایی رو بیاموزن."},
+{q:"غلبه بر موانع شناختی در هدف‌گذاری چطوریه؟",options:["سؤال پیرامون موفقیت‌های زندگی روزانه (اسکان، نیاز مادی، روابط)","سؤال مستقیم پیرامون اهداف بلندمدت","سؤال پیرامون گذشته","سؤال پیرامون خانواده"],answer:0,explanation:"یکی از راه‌ها اینه که پیرامون موفقیت‌های زندگی روزانه اون‌ها سؤالاتی بپرسیم؛ مثلاً اسکان، نیازهای مادی و روابط."},
+{q:"مصاحبه انگیزشی کِی به کار می‌ره؟",options:["وقتی مراجعان انگیزه چندانی برای متعهد ماندن به هدف مشخصی ندارن","همیشه","هرگز","وقتی مراجع عصبانیه"],answer:0,explanation:"اگه مراجعان انگیزه چندانی برای متعهد ماندن به هدف مشخصی نداشته باشن، می‌شه از مصاحبه انگیزشی استفاده کرد."},
+{q:"روش‌های جمع‌آوری اطلاعات برای آموزش مهارت‌ها کدومن؟",options:["مصاحبه غیررسمی، مشاهده، ایفای نقش، مصاحبه ساختاریافته، دستیابی از طریق ایفای نقش و مصاحبه","فقط مصاحبه","فقط مشاهده","فقط ایفای نقش"],answer:0,explanation:"پنج روش: ۱) مصاحبه غیررسمی ۲) مشاهده ۳) ایفای نقش ۴) مصاحبه ساختاریافته ۵) دستیابی از طریق ایفای نقش و مصاحبه‌های ساختاریافته."},
+{q:"مشاهده چه مزیتی داره؟",options:["مراجع آزادانه و بدون دخالت متخصصان اطلاعات می‌ده؛ در شرایط آرام تصویر دقیق‌تری ارائه می‌ده","مراجع رو محدود می‌کنه","فقط برای کودکان","فقط برای بزرگسالان"],answer:0,explanation:"از طریق مشاهده، مراجع می‌تونه آزادانه و بدون دخالت متخصصان اطلاعاتی در اختیار مشاور بذاره؛ در شرایط آرام و آسوده، تصویر دقیق‌تری از کارکردهاش ارائه می‌ده."},
+{q:"ارزیابی‌های عملکردی چه ابعادی رو می‌سنجن؟",options:["مدیریت علائم، حل تعارض، مدیریت پول، بهداشت، قرار ملاقات، تعطیلات","فقط مدیریت پول","فقط مدیریت علائم","فقط بهداشت"],answer:0,explanation:"ارزیابی‌های عملکردی برای مشخص ساختن توانایی عملکرد مراجع در ابعاد گوناگون زندگی: مدیریت علائم، حل تعارض، مدیریت پول، بهداشت، قرار ملاقات، تعطیلات."},
+{q:"بسته‌های آموزش مهارت‌ها شامل چیا هستن؟",options:["بازآفرینی، مدیریت دارو، تعارض، خواب، شغل‌یابی، قرار ملاقات","فقط مدیریت دارو","فقط شغل‌یابی","فقط مدیریت خواب"],answer:0,explanation:"بسته‌های آموزشی بسیاری وجود دارن: بازآفرینی، مدیریت دارو، مدیریت تعارض، مدیریت خواب، شغل‌یابی، قرار ملاقات گذاشتن."},
+{q:"تمایز آموزش مهارت‌ها و فعالیت‌های یادگیری چیه؟",options:["آموزش = جنبه‌های خاص مهارت؛ فعالیت یادگیری = ۸ فعالیت","یکسانن","آموزش = فعالیت","فعالیت = آموزش"],answer:0,explanation:"آموزش مهارت‌ها جنبه‌هایی از مهارت بسیار خاص‌ان و عموماً به این منظور آموخته می‌شن که مراجع به هدف مطلوب خودش دست یابد؛ فعالیت‌های یادگیری ۸ فعالیت مجزا هستن."},
+{q:"در آموزش آغاز کردن گفت‌وگو، مراجع ممکنه چند مهارت مجزا رو بیاموزه؟",options:["۵","۳","۷","۲"],answer:0,explanation:"در آموزش آغاز کردن گفت‌وگو، مراجع ممکنه پنج مهارت مجزا رو بیاموزه: از روی ژست بدنی، تُن صدا، محتوای مناسب، هم‌زمانی پاسخ‌ها و پایان دادن به گفت‌وگو."},
+{q:"هشت فعالیت یادگیری کدومن؟",options:["مقدمه، الگوگیری، ایفای نقش، مدیریت منابع، پیامد مشکلات، تمرین‌های زنده، تکالیف خانگی (+ ارزیابی و بازخورد)","فقط مقدمه","فقط الگوگیری","فقط ایفای نقش"],answer:0,explanation:"هشت فعالیت: مقدمه، الگوگیری، ایفای نقش، مدیریت منابع، پیامد مشکلات، تمرین‌های زنده، تکالیف خانگی (و ارزیابی و بازخورد)."},
+{q:"مقدمه در آموزش مهارت‌ها چه نقشی داره؟",options:["گفتن اینکه مهارت‌ها چی هستن و چه موقع به کار می‌رن + دلیل و چرایی","فقط معرفی","فقط تمرین","فقط ارزیابی"],answer:0,explanation:"در مقدمه، به مراجع گفته می‌شه که مهارت‌ها چه هستن و چه موقع به کار می‌رن؛ همچنین دلیل و چرایی روشن برای یادگیری مهارت خاص ارائه می‌شه."},
+{q:"الگوگیری چه منابعی می‌تونه داشته باشه؟",options:["فیلم، بازیگر، مشاور، مراجعان، روزنامه و مجلات","فقط فیلم","فقط مشاور","فقط روزنامه"],answer:0,explanation:"الگوها می‌تونن از طریق بازیگرانی که در فیلم هستن معرفی بشن یا به‌طور زنده از سوی مشاور و مراجعان ارائه بشن؛ همچنین روزنامه‌ها یا مجلات هم می‌تونن کمک کنن."},
+{q:"الگوگیری برای همه بیماران روانی مزمن کاربرد داره؟",options:["نه؛ ممکنه برای برخی کاربرد نداشته باشه","بله؛ برای همه","فقط برای کودکان","فقط برای بزرگسالان"],answer:0,explanation:"الگوگیری نوعی یادگیری مشاهده‌ایه که ممکنه برای تمامی بیماران روانی مزمن کاربرد نداشته باشه. باید در آموزش برخی از بیماران بسیار رهنمودی و مستقیم عمل کرد."},
+{q:"نقل‌قول میلر و رولینک (۲۰۰۲) درباره آموزش مهارت‌ها چیه؟",options:["مراجع باید بدونه چگونه باید تغییر کند و چرا باید تغییر کند","فقط باید چرایی رو بدونه","فقط باید چگونگی رو بدونه","هیچ‌کدام"],answer:0,explanation:"برای اینکه آموزش مهارت‌ها موفق باشه، مراجع باید بدونه که چگونه باید تغییر کند و چرا باید تغییر کند (میلر و رولینک، ۲۰۰۲)."},
+{q:"ایفای نقش در آموزش مهارت‌ها چطور طراحی می‌شه؟",options:["به‌گونه‌ای که به مراجع امکان بده به‌طور واقعی مهارتی رو انجام بده","فقط برای سرگرمی","فقط برای ارزیابی","فقط برای تشخیص"],answer:0,explanation:"این‌گونه ایفای نقش‌ها باید به‌گونه‌ای طراحی بشن که به مراجع امکان بدن تا به‌طور واقعی مهارتی رو انجام بده."},
+{q:"نمونه‌های ایفای نقش کدومن؟",options:["رد درخواست مصرف مواد یا الکل، کسب اطلاعات برای برنامه تفریحی، زنگ زدن به پزشک","فقط رد مواد","فقط کسب اطلاعات","فقط زنگ زدن"],answer:0,explanation:"نمونه‌ها: رد درخواست مصرف مواد یا الکل، کسب اطلاعات برای شرکت در برنامه تفریحی یا سرگرمی، زنگ زدن به پزشک یا پرستار هنگامی که یکی از دوستانش علائم بیماری‌اش عود می‌کنه."},
+{q:"ابزارهای سنجش رغبت برای بیماران روانی مزمن چطورن؟",options:["کاربردی ندارن؛ نیم‌رخ یکنواخت","بهترین ابزارن","تنها ابزارن","خیلی دقیقن"],answer:0,explanation:"کاربرد آزمون‌های سنجش رغبت‌های شغلی چندان برای بیماران روانی مزمن کاربردی نداره و نتیجه‌ای جز نیم‌رخ‌های یکنواخت که نشونگر نه رغبت و نه بی‌رغبتی به کاره، دربرنداره."},
+{q:"راهنمای کامل برای کنکاش شغل بر چه اساسی تقسیم‌بندی می‌کنه؟",options:["ارزش‌های شغلی","سن","جنسیت","هوش"],answer:0,explanation:"براساس این راهنما، انتخاب شغل برپایه ارزش‌های شغلی تقسیم‌بندی می‌شه؛ موضوعاتی که به مدرسه مرتبطن، فعالیت‌های اوقات فراغت، محیط‌های کاری."},
+{q:"در فرایند رشد شغلی، تأثیر داروها بر چه چیزی مهمه؟",options:["خواب‌آلودگی، خشکی دهان، حساسیت به گرما/نور","فقط خواب‌آلودگی","فقط خشکی دهان","فقط حساسیت به نور"],answer:0,explanation:"مشاور باید از تأثیر داروها آگاه باشه: آیا دارو مراجع رو دچار خواب‌آلودگی می‌کنه؟ خشکی دهان چقدره؟ آیا حساسیت به گرما یا نور خورشید افزایش می‌ده؟"},
+{q:"نیاز به نزدیکی به کارکنان در انتخاب شغل چطوریه؟",options:["برخی نیازمندن، برخی علاقه ندارن","همه نیازمندن","هیچ‌کس نیاز نداره","فقط کودکان"],answer:0,explanation:"برخی از مراجعان نیازمندن شغلی رو برگزینن که در نزدیکی کارکنان یا پرسنل مرکز باشه، برخی دیگر علاقه به نزدیکی به کارکنان ندارن؛ باید در انتخاب شغل به این نکته توجه کرد."},
+{q:"مهارت‌های کاهش استرس چه مثال‌هایی دارن؟",options:["مدیریت دارو، خواب منظم، زنگ به دوست، باشگاه","گوش دادن به موسیقی برای تحمل توهم","فقط مدیریت دارو","فقط خواب منظم"],answer:0,explanation:"مثال‌ها: مدیریت صحیح مصرف داروها، خوابیدن در زمان مشخص، زنگ زدن به دوست هنگام افسردگی، رفتن مرتب به باشگاه."},
+{q:"مهارت‌های تحمل یا شکایبایی در برابر استرس چه مثال‌هایی دارن؟",options:["گوش دادن به موسیقی برای تحمل توهم‌های شنوایی","مدیریت دارو","خواب منظم","باشگاه"],answer:0,explanation:"مثال: گذاشتن گوشی یا واکمن بر گوش و گوش دادن به موسیقی برای تحمل توهم‌های شنوایی؛ مراجع از مهارت تحمل برای مدارا با علائم باقی‌مانده از اختلال استفاده می‌کنه."},
+{q:"مشکلات بیماران روانی مزمن در چند حوزه است؟",options:["۷","۵","۸","۶"],answer:0,explanation:"هفت حوزه: شناخت، مهارت‌های اجتماعی، بهداشت و مدیریت رفتارهای فردی، مهارت‌های سازگاری، حمایت بین‌فردی، مدیریت علائم، انگیزه."},
+{q:"طبق اصول آنتونی (۱۹۹۶)، کدام یک از اصول توانبخشی روان‌پزشکی است؟",options:["تأکید بر حالا و اکنون","تأکید بر گذشته","تأکید بر آینده","تأکید بر خانواده"],answer:0,explanation:"آنتونی بر تأکید بر «حالا و اکنون» تأکید داره."},
+{q:"طبق اهداف کوری‌گان و همکاران (۱۹۹۹)، کدام یک هدف برنامه توانبخشی روان‌پزشکیه؟",options:["استقلال فردی","وابستگی به کارکنان","انزوا","سکوت"],answer:0,explanation:"استقلال فردی: بیماران خواستار دستیابی به اهداف و فرصت‌ها بدون وابستگی به برنامه‌های توانبخشی یا کارکنان هستن."},
+{q:"در فرایند تغییر مشاور، چه جمله‌ای باید به مراجع گفته بشه؟",options:["«کسی نمی‌تونه جای مشاور قبلی شما رو بگیره، اما مشاور جدید هم حرف‌های تازه‌ای برای گفتن داره»","«مشاور قبلی بد بود»","«مشاور جدید بهتره»","«هیچ فرقی نمی‌کنه»"],answer:0,explanation:"پیش از معرفی مراجع به مشاور جدید، باید به او گفت: «کسی نمی‌تونه جای مشاور قبلی شما رو بگیره، اما مشاور جدید هم حرف‌های تازه‌ای برای گفتن داره و اگرچه متفاوت از قبلیه، اما می‌تونید رابطه مشاوره‌ای جدید و پرباری رو با او آغاز کنید.»"},
+{q:"کدام یک از خدمات برنامه حمایتی جامعه به بیماران روانی مزمن نیست؟",options:["جراحی مغز","مدیریت مورد","توانبخشی","اسکان"],answer:0,explanation:"خدمات برنامه حمایتی جامعه: مدیریت مورد، توانبخشی، حمایت خانواده و دوستان، اسکان، پاسخ به بحران."},
+{q:"نخستین برنامه دانشگاهی در رشته مشاوره با گرایش توانبخشی روانی چه بود؟",options:["مدرک کارشناسی ارشد","مدرک کارشناسی","مدرک دکتری","مدرک فوق تخصص"],answer:0,explanation:"نخستین برنامه دانشگاهی برای ارائه مدرک کارشناسی ارشد در رشته مشاوره با گرایش توانبخشی روانی ایجاد گردید."},
+{q:"سیستم حمایتی جامعه در اواخر دهه ۱۹۷۰ چه پژوهشی را منتشر کرد؟",options:["نتایج مصیبت‌بار عجولانه مؤسسه‌زدایی بیماران روانی مزمن","نتایج مثبت مؤسسه‌زدایی","نتایج بی‌طرف","هیچ پژوهشی"],answer:0,explanation:"سیستم حمایتی جامعه، پژوهشی را منتشر کرد که به نتایج مصیبت‌بار عجولانه مؤسسه‌زدایی بیماران روانی مزمن می‌پرداخت."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مداخله‌های مشاوره‌ای و آموزش مهارت‌ها — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

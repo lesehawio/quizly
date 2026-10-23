@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره توانبخشی · سری 15 · عقب‌ماندگی ذهنی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--green:#1f9d73;--yellow:#c98112;
+--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,var(--pink) 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"15";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}
+.fa{text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.trap{border-right:5px solid #e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:8px}
+.theme-btn svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.theme-btn:hover svg{transform:rotate(15deg)}
+.bio{background:linear-gradient(135deg,#fff0f5,#ffe0ec);border-right:5px solid var(--pink);padding:12px 14px;border-radius:14px;margin:10px 0;font-size:14px}
+[data-theme=dark] .bio{background:linear-gradient(135deg,#2a1821,#39202c)}
+@media(min-width:520px){
+.app{padding:20px}.hero{padding:38px 28px}.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}.hero{padding:22px 14px}.hero h2{font-size:20px}
+.card{padding:12px}.fa{font-size:14px;padding:8px 12px}.section-title{font-size:20px}
+.stat b{font-size:20px}.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره توانبخشی · سری 15</small></div></div>
+  <button id="theme" class="theme-btn" aria-label="تغییر تم">
+    <svg id="themeIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</header>
+
+<section class="hero">
+  <h2>فصل پانزدهم: مشاوره توانبخشی در عقب‌ماندگی ذهنی</h2>
+  <p>چالش‌های رفتاری، محدودیت‌های مشاوره کلاسیک، اصول هیورلی، مشاوره توان‌دهی سلامت‌نگر، فرموله‌سازی مورد و تفاوت توانبخشی با توان‌دهی</p>
+  <div class="pills"><span class="pill">چالش‌ها</span><span class="pill">فلچر</span><span class="pill">هیورلی</span><span class="pill">توان‌دهی</span><span class="pill">فرموله‌سازی</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل پانزدهم کتاب «مشاوره و روان‌درمانی در توانبخشی معلولین» نوشته دکتر آناهیتا خدابخش کوالیی نوشته شده. ساختارش دقیقاً همون چیزیه که خواستی: نظریه‌پردازان با بیوگرافی جدا، مفاهیم کامل، تفاوت‌ها برای امتحان تستی، دام‌های چهارگزینه‌ای و کوییز.</div>
+
+<div class="stats">
+<div class="stat"><b>۸</b><span>رفتار مشکل‌آفرین</span></div>
+<div class="stat"><b>۶</b><span>اصل هیورلی</span></div>
+<div class="stat"><b>۸</b><span>راهبرد درمانی</span></div>
+<div class="stat"><b>۳</b><span>تحلیل ارزیابی</span></div>
+</div>
+
+<nav>
+<a href="#theorists">نظریه‌پردازان</a><a href="#concepts">مفاهیم</a><a href="#limits">محدودیت‌ها</a><a href="#empowerment">توان‌دهی</a><a href="#assessment">فرموله‌سازی</a><a href="#compare">تفاوت‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ============================================ -->
+<!-- بخش ۱: نظریه‌پردازان با بیوگرافی -->
+<!-- ============================================ -->
+<section id="theorists" class="section">
+<h2 class="section-title">۰۱ · نظریه‌پردازان و بیوگرافی</h2>
+<p class="section-sub">هر کی کیه، چی گفت و چه نقشی داشت</p>
+
+<div class="card">
+<div class="card-head"><h3>فلچر (Fletcher, ۱۹۹۳) — منتقد مشاوره کلاسیک</h3><span class="badge s">کلیدی</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> فلچر، نظریه‌پردازی که نقد اساسی به مشاوره کلاسیک برای عقب‌ماندگان ذهنی وارد کرد و پیشنهادهایی برای نخستین ملاقات ارائه داد.
+</div>
+<div class="fa"><b>نقد اصلی:</b> غالباً مشاوره بر <b>ویژگی‌های فردی</b> (احساس حقارت، طرد اجتماعی، نگرش مراجع نسبت به معلولیتش، دغدغه‌های عاطفی یا شناختی) می‌پردازد. <b>پرداختن به این قبیل موضوعات، مانع جدی بر سر راه توجه مشاوران به مشکلات و مسائل افراد دارای عقب‌ماندگی ذهنی شده است</b> (گاردنر و همکاران، ۲۰۰۴).</div>
+<div class="fa"><b>نقل‌قول:</b> «مشاوره از آنچه به‌طور دائمی انجام می‌دهد، یعنی برقراری روابط مشاوره‌ای، باید کمی فراتر رود. مشاوره با عقب‌ماندگان ذهنی بسیار ویژه‌تر و خاص‌تر است.»</div>
+<div class="fa"><b>پیشنهاد برای نخستین ملاقات:</b> «خوب؛ اول اینکه، همدیگر را ملاقات خواهیم کرد و درباره مشکلات کاری صحبت می‌کنیم؛ سپس، من هر چهارشنبه یک‌بار تو را ملاقات می‌کنم. ما هر هفته یک‌بار پیرامون مسائل کاری و به مدت ۳۰ دقیقه با هم صحبت می‌کنیم. به تو کمک خواهم کرد که کارهایت را بهتر انجام دهی. با تو صحبت خواهم کرد و تلاش می‌کنم تا به تو کمک کنم که مشکلات را حل کنی.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هیورلی (Hewerly, ۱۹۹۹) — اصول مشاوره‌ای</h3><span class="badge s">کلیدی</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> هیورلی، نظریه‌پردازی که شش اصل مشاوره‌ای برای عقب‌ماندگان ذهنی را تدوین کرد.
+</div>
+<div class="fa"><b>شش اصل:</b> ۱) ارتباط کلامی بسیار ساده و روشن — ۲) کاربرد فنون یا تکنیک‌های مشاوره‌ای ساده — ۳) کاربرد روش رهنمودی — ۴) فرایند مشاوره باید ساختاریافته و قابل پیش‌بینی باشد — ۵) توضیح شفاف درباره ماهیت رازداری — ۶) تعریف دقیق نقش خود (انتقال).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>باتز و همکاران (Batz et al., ۲۰۰۰)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> باتز و همکاران، پژوهشگران فعال در حیطه مداخله‌های رفتاری برای عقب‌ماندگان ذهنی.
+</div>
+<div class="fa"><b>نقش:</b> از پژوهشگران فعال در حیطه مداخله‌های رفتاری برای عقب‌ماندگان ذهنی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پرکینز (Perkins, ۱۹۹۹)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> پرکینز، از پژوهشگران فعال در حیطه مداخله‌های رفتاری برای عقب‌ماندگان ذهنی.
+</div>
+<div class="fa"><b>نقش:</b> از پژوهشگران فعال در حیطه مداخله‌های رفتاری برای عقب‌ماندگان ذهنی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پروات و سترومر (Provat & Stromer, ۱۹۹۸)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> پروات و سترومر، از پژوهشگران فعال در حیطه مداخله‌های رفتاری برای عقب‌ماندگان ذهنی.
+</div>
+<div class="fa"><b>نقش:</b> از پژوهشگران فعال در حیطه مداخله‌های رفتاری برای عقب‌ماندگان ذهنی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گاردنر و همکاران (Gardner et al., ۲۰۰۴)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> گاردنر و همکاران، پژوهشگرانی که نقد فلچر را نقل کرده‌اند.
+</div>
+<div class="fa"><b>نقل‌قول:</b> پرداختن به ویژگی‌های فردی، مانع جدی بر سر راه توجه مشاوران به مشکلات و مسائل افراد دارای عقب‌ماندگی ذهنی شده است.</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۲: مفاهیم — چالش‌ها و مشکلات -->
+<!-- ============================================ -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم — چالش‌ها و مشکلات</h2>
+<p class="section-sub">چالش‌های اساسی، دامنه مشکلات، رفتارهای مشکل‌آفرین</p>
+
+<div class="card">
+<div class="card-head"><h3>چالش‌های اساسی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">چالش‌های <b>رفتاری و عاطفی</b> عقب‌ماندگان ذهنی، از <b>موانع اساسی بر سر راه سازگاری شغلی و زندگی آن‌ها در جامعه</b> محسوب می‌شود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شیوع مشکلات روانی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>مشکلات سلامت روانی در افراد دارای عقب‌ماندگی ذهنی بسیار بیشتر از جمعیت عادی یا نرمال است.</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دامنه مشکلات افراد دارای عقب‌ماندگی ذهنی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>حوزه مشکل</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>روابط بین‌فردی با اعضای خانواده و دوستان</td></tr>
+<tr><td>۲</td><td>روابط جنسی</td></tr>
+<tr><td>۳</td><td>مشکلات رفتاری</td></tr>
+<tr><td>۴</td><td>عزت نفس</td></tr>
+<tr><td>۵</td><td>شغل</td></tr>
+<tr><td>۶</td><td>مراکز اقامتی یا شبانه‌روزی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عمده‌ترین مشکلات روان‌شناختی</h3><span class="badge s">مهم</span></div>
+<div class="fa">عمده‌ترین مشکلات روان‌شناختی آن‌ها به‌صورت <b>مشکلات رفتاری</b> آشکار می‌شود.</div>
+<div class="fa"><b>ماهیت آشفته و مغشوش این مشکلات</b> به‌گونه‌ای است که <b>نه تنها برای خودشان، بلکه برای روابط اجتماعی‌شان با دیگران، کار و اجتماع نیز مشکل‌آفرینی می‌کند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هشت رفتار مشکل‌آفرین بارز</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>رفتار</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>پرخاشگری کلامی و جسمانی</td></tr>
+<tr><td>۲</td><td>سطوح پایین فعالیت</td></tr>
+<tr><td>۳</td><td>انجام رفتارهای جنسی نامتناسب</td></tr>
+<tr><td>۴</td><td>برانگیختگی تکانه‌ای یا بروز رفتارهای آشفته</td></tr>
+<tr><td>۵</td><td>رفتارهای تکراری یا کلیشه‌ای</td></tr>
+<tr><td>۶</td><td>تخریب یا نابود کردن وسایل منزل یا متعلقات شخصی</td></tr>
+<tr><td>۷</td><td>منفی‌کاری شدید</td></tr>
+<tr><td>۸</td><td>خودزنی یا آسیب رساندن به خود</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مطالعه موردی: آقای سام</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>جوانی با سطح هوشی پایین</b> و مشکلاتی در <b>رفتارهای سازشی</b>.</div>
+<div class="fa">• دائماً <b>پرخاشگر</b> بوده و دیگران را <b>تهدید به آسیب و مرگ</b> می‌کند.</div>
+<div class="fa">• <b>دلیل پرخاشگری:</b> قبلاً برای مدت کوتاهی در یکی از <b>مراکز روان‌پزشکی بستری</b> بوده.</div>
+<div class="fa">• پس از اینکه به دلیل پرخاشگری‌هایش <b>از کارگاه شغلی اخراج</b> کردند، <b>عصبانیت و تهدیدهایش نسبت به پرسنل و دوستانش بالا گرفت</b>.</div>
+<div class="fa">• هم‌اکنون در <b>مرکز شغل حمایت‌شده و زیر نظر ناظر</b> کار می‌کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مطالعه موردی: آقای ژرژ</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>پرخاشگری و منفی‌کاری شدید</b>.</div>
+<div class="fa">• هر موقع که در <b>رفتارهای کلیشه‌ای و تکراری ژرژ خللی وارد</b> می‌شود، به شدت <b>عصبانی و پرخاشگر</b> می‌شود.</div>
+<div class="fa">• وقتی پرسنل یا دوستانش از او می‌خواهند <b>رفتاری غیر از رفتارهای تکراری‌اش</b> انجام دهد، به شدت عصبانی شده و <b>رفتارهای آشفته‌ای</b> نشان می‌دهد.</div>
+<div class="fa">• آن‌قدر این رفتارها را بروز می‌دهد که <b>مجبور می‌شوند او را از محل آموزش برای مدتی دور نگه دارند</b>.</div>
+<div class="fa">• <b>نکته مهم:</b> در مواقعی که <b>عصبانی یا برانگیخته نیست، بسیار خوشحال و همکاری‌کننده</b> است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نتیجه‌گیری از موارد</h3></div>
+<div class="fa">تأکید بر <b>مشاوره سلامت‌نگر</b> و مشکلاتی که این افراد داشتند، توجه به <b>تحلیل‌ها و مداخله‌های رفتاری</b> را می‌طلبد.</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۳: محدودیت‌های مشاوره کلاسیک -->
+<!-- ============================================ -->
+<section id="limits" class="section">
+<h2 class="section-title">۰۳ · محدودیت‌های مشاوره کلاسیک برای عقب‌ماندگان ذهنی</h2>
+<p class="section-sub">نقد فلچر، اصول هیورلی، نقد فنون و راه‌حل</p>
+
+<div class="card">
+<div class="card-head"><h3>نقد فلچر (۱۹۹۳)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">غالباً <b>مشاوره بر ویژگی‌های فردی</b> (همانند احساس حقارت، طرد اجتماعی، نگرش مراجع نسبت به معلولیت‌اش یا دغدغه‌های معطوف به مشکلات عاطفی یا شناختی) می‌پردازد.</div>
+<div class="fa"><b>پرداختن به این قبیل موضوعات، مانع جدی بر سر راه توجه مشاوران به مشکلات و مسائل افراد دارای عقب‌ماندگی ذهنی شده است</b> (گاردنر و همکاران، ۲۰۰۴).</div>
+<div class="fa"><b>نقل‌قول فلچر:</b> <b>«مشاوره از آنچه به‌طور دائمی انجام می‌دهد، یعنی برقراری روابط مشاوره‌ای، باید کمی فراتر رود. مشاوره با عقب‌ماندگان ذهنی بسیار ویژه‌تر و خاص‌تر است.»</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیشنهاد فلچر برای نخستین ملاقات</h3><span class="badge s">مهم</span></div>
+<div class="fa">هنگامی که نخستین ملاقات با مراجع صورت می‌گیرد، مشاور باید <b>فرایند مشاوره را به‌طور مختصر برای او شرح دهد</b>:</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>«خوب؛ اول اینکه، همدیگر را ملاقات خواهیم کرد و درباره مشکلات کاری صحبت می‌کنیم؛ سپس، من هر چهارشنبه یک‌بار تو را ملاقات می‌کنم. ما هر هفته یک‌بار پیرامون مسائل کاری و به مدت ۳۰ دقیقه با هم صحبت می‌کنیم. به تو کمک خواهم کرد که کارهایت را بهتر انجام دهی. با تو صحبت خواهم کرد و تلاش می‌کنم تا به تو کمک کنم که مشکلات را حل کنی.»</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش اصل مشاوره‌ای هیورلی (۱۹۹۹)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>اصل</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td><b>ارتباط کلامی بسیار ساده و روشن</b></td></tr>
+<tr><td>۲</td><td><b>کاربرد فنون یا تکنیک‌های مشاوره‌ای ساده</b>؛ یعنی اهداف و تکالیف با <b>زبانی ساده</b> برای مراجع توضیح داده شوند</td></tr>
+<tr><td>۳</td><td><b>کاربرد روش رهنمودی</b>؛ یعنی <b>شیوه روشن، ساده‌شده و مستقیم</b></td></tr>
+<tr><td>۴</td><td><b>فرایند مشاوره باید ساختاریافته و قابل پیش‌بینی باشد</b>؛ یعنی <b>زمان و هدف مشاوره مشخص و روشن</b> باشد و <b>نتایج محتمل و قابل دسترسی</b> بوده</td></tr>
+<tr><td>۵</td><td>به‌طور خیلی روشن و با <b>زبان ساده درباره ماهیت رازداری</b> در روابط مشاوره‌ای توضیح داده شود</td></tr>
+<tr><td>۶</td><td>مشاور از طریق <b>تعریف دقیق نقش خود در فرایند مشاوره</b>، باید با <b>مسائل مربوط به انتقال</b> دست و پنجه نرم کند</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نقد اساسی به فنون مشاوره</h3><span class="badge s">مهم</span></div>
+<div class="fa">حتی هنگامی که سعی می‌شود مسائل مرتبط با مراجعان دارای عقب‌ماندگی ذهنی اصلاح گردد، <b>باز هم فنون اساسی که در فرایند مشاوره به کار می‌روند</b> به‌گونه‌ای ایجاد شده‌اند که <b>گویی تنها برای افرادی کاربرد دارند که از نظر توانایی‌های کلامی و شناختی نرمال محسوب می‌شوند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه‌حل پیشنهادی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">یکی از عمده‌ترین روش‌هایی که می‌تواند <b>مشاوره را برای افراد دارای عقب‌ماندگی ذهنی امکان‌پذیر سازد</b>، آن است که <b>محتوا و فعالیت‌های شناختی را که قصد تغییر آن‌ها را داریم، اصلاح کرده و تغییر دهیم</b>.</div>
+<div class="fa">به آن معنا که <b>فعالیت‌هایی که به تغییر در زندگی اجتماعی، رفتارهای کلامی و هیجان‌های فرد منجر خواهد شد را به‌گونه‌ای متفاوت ارائه دهیم</b>.</div>
+<div class="fa"><b>مثال:</b> «با محبت کردن با تو، به تو کمک خواهم کرد که در شغلت بهتر از قبل عمل کنی.»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فرضیه بنیادین این روش</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">این روش بر پایه <b>فرضیه بنیادینی</b> بنا نهاده شده است که بر این باور است که <b>مراجع دارای عقب‌ماندگی ذهنی موقعیتی را درک خواهد کرد یا از شرایط خود آگاهی خواهد یافت</b>.</div>
+<div class="fa"><b>به مشکلاتش بینش یا بصیرت به دست خواهد آورد.</b></div>
+<div class="fa">هنگامی که مراجع از مشکلات خود آگاه شد، <b>نه تنها می‌کوشد که آن‌ها را تغییر دهد، بلکه می‌کوشد اطلاعات به‌دست‌آمده را به موقعیت‌های مشابه هدایت کند</b>. همچنین می‌کوشد <b>تعمیم دهد</b>.</div>
+<div class="fa"><b>آخرین پیش‌فرض مهم:</b> آیا فردی که اطلاعات را کسب کرده است، <b>می‌تواند در شرایط دیگری در آینده از آن‌ها استفاده کند؟</b></div>
+<div class="fa">به‌طور کلی، پیش‌فرض‌هایی چون <b>آگاهی شناختی، تعمیم‌دهی و حمایت‌های عاطفی-انگیزشی</b> باید به‌گونه‌ای در هم آمیخته شوند که فرد بتواند <b>دانش شناختی خود را برای رفتار کردن، فکر کردن و احساس کردن متناسب با شرایط خاص</b> به کار گیرد.</div>
+<div class="fa"><b>شرایط خاص یا ویژه:</b> برانگیختگی هیجانی شدید همانند <b>خشم، اضطراب، تندخویی، افسرده‌خویی یا هیومانی</b>.</div>
+<div class="fa"><b>نتیجه‌گیری:</b> <b>مشاوره زمانی می‌تواند مفید و کاربردی باشد که بتواند فرد را به‌قدر کافی از نظر کلامی و شناختی مجرب و ماهر کرده باشد</b> که او در مواجهه با شرایط خاص، بتواند <b>موفق عمل کند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار پیامد مطلوب مشاوره سلامت‌نگر</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>پیامد</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>برخی از افراد از وضعیت شناختی و هیجانی خود به خوبی آگاهند (مثلاً پرخاشگری کلامی، پرخاشگری جنسی، اضطراب، طغیان خشم، دوره‌هایی از افسردگی و خشم).</td></tr>
+<tr><td>۲</td><td>افرادی که مهارت لازم و کافی را از نظر شناختی و کلامی دارند، از تاریخچه موفقیت‌آمیزی از کاربرد اطلاعات شناختی برخوردارند که به آن‌ها در پاسخ به موقعیت‌های مشکل‌آفرین کمک کرده و می‌تواند مشکل را حل و فصل کند.</td></tr>
+<tr><td>۳</td><td>مشاوره به فرد کمک می‌کند تا در برخورد با موقعیت‌های جدید از راهبردهای شناختی خودهدایتی و خودانتخابی استفاده کند و آن‌ها را خارج از اتاق مشاوره نیز به کار بگیرد.</td></tr>
+<tr><td>۴</td><td>مشاوره موقعیت‌های جدیدی که ممکن است مراجع با آن‌ها برخورد کند را به او معرفی می‌کند؛ مثلاً برانگیختگی‌های درونی (خشم، برانگیختگی جنسی و اضطراب) یا محرک‌های خارجی (زخم زبان دوستان، نفرت از نمادهای قدرت همانند والدین، همشیرها و پرسنل).</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۴: مشاوره توان‌دهی سلامت‌نگر -->
+<!-- ============================================ -->
+<section id="empowerment" class="section">
+<h2 class="section-title">۰۴ · مشاوره توان‌دهی سلامت‌نگر به‌مثابه راه‌حل جایگزین</h2>
+<p class="section-sub">تفاوت با رویکردهای پیشین، شایستگی‌ها، اهداف، راهبردها</p>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت با رویکردهای پیشین</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">مشاور <b>از جست‌وجوی حذف رفتارهای نابهنجار</b> (همانند پرخاشگری، عواطف یا هیجان‌هایی چون اضطراب شدید یا احساسات حقارت‌آلود یا شناخت‌هایی مثل باورهای منفی نسبت به خود) <b>نمی‌باشد</b>.</div>
+<div class="fa">بلکه در عوض، مشاور می‌کوشد تا <b>راه‌حل‌های مناسبی بیابد و آن‌ها را جایگزین مشکلات و نابهنجاری‌های رفتاری، عاطفی و شناختی کند</b>.</div>
+<div class="fa">همچنین مشاور بر آن است تا <b>ملاک‌ها و شایستگی‌های جدیدی در مراجع ایجاد کند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه شایستگی جدید</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>شایستگی</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>آموزش راهبردهای سازگاری مناسب برای کاهش اضطراب</td></tr>
+<tr><td>۲</td><td>آموزش مهارت‌های اجتماعی برای مواجه شدن با پرخاشگری</td></tr>
+<tr><td>۳</td><td>آموزش احساسات مثبت خودانگیخته</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هدف و تأکید رویکرد</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>هدف رویکرد:</b> رویکرد مشاوره توان‌دهی سلامت‌نگر به‌گونه‌ای طراحی شده است که <b>تغییر در رفتار، عواطف و شناخت فرد را تسهیل سازد</b>.</div>
+<div class="fa"><b>تأکید رویکرد:</b> این رویکرد بر <b>توانایی‌های کلامی بسیار بالا تأکید نمی‌کند</b>، بلکه می‌کوشد تا <b>مهارت‌ها را از طریق عمل و کلام به فرد آموزش دهد</b>.</div>
+<div class="fa">برای دستیابی به اهداف درمان، <b>«گفت‌وگو درمانی»</b> یا <b>دامنه وسیعی از آموزش مهارت‌ها و رفتارها و تمرین آن‌ها</b> همراه است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فنون و روش‌های درمان‌بخش</h3><span class="badge s">مهم</span></div>
+<div class="fa">فنون و روش‌های درمان‌بخش خاصی در این رویکرد مطرح می‌شوند تا به مراجع کمک کند تا او بتواند از <b>مثلث شناختی، عاطفی و رفتاری</b> به خوبی استفاده کند.</div>
+<div class="fa"><b>طیف راهبردهای مورد استفاده:</b> فنون درمانی و مداخله‌های مشاوره‌ای از <b>طیف عظیمی از راهبردهای یادگیری اجتماعی، ایجاد ارتباط، افزایش احساسات، راهبردهای شناختی و فنون شناختی-رفتاری</b> در کار با افراد دارای عقب‌ماندگی ذهنی استفاده می‌کنند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هشت راهبرد دیگر</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>راهبرد</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>مدیریت خشم و آموزش مجدد کنترل هیجان‌ها</td></tr>
+<tr><td>۲</td><td>آموزش مهارت‌های حل تعارض بین‌فردی</td></tr>
+<tr><td>۳</td><td>آموزش همدلی</td></tr>
+<tr><td>۴</td><td>راهبردهای حل مسئله اجتماعی</td></tr>
+<tr><td>۵</td><td>آموزش مجدد شناختی</td></tr>
+<tr><td>۶</td><td>مدیریت اقتضایی</td></tr>
+<tr><td>۷</td><td>حساسیت‌زدایی عاطفی</td></tr>
+<tr><td>۸</td><td>بازخورد زیستی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیش‌فرض اساسی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>مشکلات شناختی، رفتاری و هیجانی فعلی مراجع، انعکاسی از شکست‌های او در یادگیری تجربه‌های زندگی است.</b>
+</div>
+<div class="fa"><b>هدف مداخله‌ها:</b> مداخله‌های مشاوره‌ای باید به <b>تغییر در وضعیت جسمانی، اجتماعی و شغلی آن‌ها منجر گردد</b>.</div>
+<div class="fa"><b>هدف نهایی:</b> <b>افزایش کفایت و شایستگی‌های رفتاری، شناختی و هیجانی مراجعان</b> است تا از این طریق بتوانند <b>مشکلات‌شان را حل کنند</b>.</div>
+<div class="fa"><b>دستیابی به اهداف در نتیجه:</b> ۱) <b>کاهش یا حذف علائم رفتاری، شناختی و هیجانی فعلی</b> — ۲) <b>کاهش خطر تکرار یا وقوع مجدد آن‌ها</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نقش مشاور توان‌دهی سلامت‌نگر</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>مثال ۱:</b> مراجع مشکلات عمده‌ای با دوستانش در محیط شغلی دارد و مشکلاتش در نتیجه <b>خجالت و رفتار منفعلانه‌اش</b> است ← مشاور به او کمک می‌کند تا از طریق <b>انجام فعالیت‌های مشارکتی، اعتماد به نفس بیشتری</b> پیدا کرده و <b>رفتار فعالانه‌تری</b> در محیط کارش داشته باشد.</div>
+<div class="fa"><b>مثال ۲:</b> مراجع تعارض‌های عمده‌ای با والدین یا مراقبانش در محل زندگی دارد ← <b>تشویق می‌شود تا رفتارهای اجتماعی مناسبی را در برخورد با دیگران بیاموزد</b>.</div>
+<div class="fa"><b>نحوه ارتباط:</b> مشاوره توان‌دهی سلامت‌نگر <b>به‌طور مستقیم یا رهنمودی</b> با <b>یکایک مراجعان یا با گروهی از آن‌ها</b> ارتباط برقرار می‌سازد. <b>رابطه مشاور در محیطی ساختاریافته و به‌صورت روزانه</b> خواهد بود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نُه فن مشاوره‌ای مورد استفاده</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>فن</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>آموزش مهارت‌های اجتماعی</td></tr>
+<tr><td>۲</td><td>مدیریت خشم</td></tr>
+<tr><td>۳</td><td>فنون شناختی</td></tr>
+<tr><td>۴</td><td>حل تعارض</td></tr>
+<tr><td>۵</td><td>مدیریت حل مسئله</td></tr>
+<tr><td>۶</td><td>آرام‌بخشی</td></tr>
+<tr><td>۷</td><td>خودمدیریتی</td></tr>
+<tr><td>۸</td><td>تصویرسازی دیداری</td></tr>
+<tr><td>۹</td><td>آموزش مهارت‌های ارتباطی</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۵: تفاوت توانبخشی و توان‌دهی -->
+<!-- ============================================ -->
+<section id="compare" class="section">
+<h2 class="section-title">۰۵ · تفاوت‌ها — برای امتحان چهارگزینه‌ای</h2>
+<p class="section-sub">توانبخشی vs توان‌دهی و سایر تفاوت‌ها</p>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت توانبخشی و توان‌دهی (کلیدی)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>توانبخشی (Rehabilitation)</th><th>توان‌دهی (Empowerment)</th></tr></thead>
+<tbody>
+<tr><td>بازگرداندن توانایی فرد به دوره پیش از آسیب یا بیماری</td><td>ارتقای سطح توانایی‌های فرد (الگوهای رفتاری، هیجانی و شناختی هسته)</td></tr>
+<tr><td>هدف: رساندن مراجع به سطح سازگاری قبل از بیماری</td><td>هدف: رساندن مراجع به سطوح مطلوب توانایی‌های فردی، اجتماعی و هیجانی</td></tr>
+<tr><td>برای افرادی که توانایی‌هایی داشته‌اند و از دست داده‌اند</td><td>برای افرادی که مهارت‌ها را نیاموخته‌اند (عقب‌ماندگان ذهنی)</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> عقب‌ماندگان ذهنی توانایی‌هایی را نداشته‌اند که بخواهیم از طریق توانبخشی آن‌ها را بازستانیم، بلکه <b>باید این قبیل مراجعان را توانمند ساخت</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت مشاوره کلاسیک و توان‌دهی سلامت‌نگر</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>مشاوره کلاسیک</th><th>توان‌دهی سلامت‌نگر</th></tr></thead>
+<tbody>
+<tr><td>متکی بر تعامل‌های کلامی</td><td>آموزش از طریق عمل و کلام</td></tr>
+<tr><td>فنون ساخته‌شده برای افراد نرمال</td><td>فنون ساده‌شده و ساختاریافته</td></tr>
+<tr><td>جست‌وجوی حذف رفتار نابهنجار</td><td>ایجاد شایستگی‌های جدید و جایگزینی</td></tr>
+<tr><td>تأکید بر توانایی کلامی بالا</td><td>عدم تأکید بر توانایی کلامی بالا</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت سه تحلیل ارزیابی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>تحلیل</th><th>کلیدواژه</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>محرک‌های آشکارساز (Triggering Stimuli)</td><td>شرایط قبل از بروز مشکل</td></tr>
+<tr><td>۲</td><td>اثرات آسیب‌پذیری (Vulnerability Effects)</td><td>نشانه‌های فردی، محیطی و اجتماعی</td></tr>
+<tr><td>۳</td><td>اثرات پایدار (Maintaining Effects)</td><td>رفتارهای دائمی و بااهمیت</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت انواع نشانه‌های آسیب‌پذیری</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>توضیح</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td>روان‌شناختی</td><td>مشکلاتی در مدیریت خشم، برقراری ارتباط با مهارت‌های سازگاری</td><td>—</td></tr>
+<tr><td>زیست‌شناختی</td><td>ناکارآمدی حسی، عصب‌شناختی یا بیوشیمیایی</td><td>سردردهای میگرنی، رفتارهای پارانوییدی، روماتیسم مزمن، اختلال خلقی دوقطبی</td></tr>
+<tr><td>محیط فیزیکی و اجتماعی</td><td>محدود شدن فرصت برای برقراری روابط اجتماعی و موانعی در انجام وظایف</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت مثلث شناختی، عاطفی و رفتاری</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>مؤلفه</th><th>نقش در مشکل</th></tr></thead>
+<tbody>
+<tr><td>شناختی</td><td>فراوانی وقوع عمل پرخاشگرانه را تحت تأثیر قرار می‌دهد</td></tr>
+<tr><td>هیجانی (خشم)</td><td>شدت عمل پرخاشگرانه را تحت تأثیر قرار می‌دهد</td></tr>
+<tr><td>رفتاری</td><td>پاسخ پرخاشگرانه آشکار</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نتیجه:</b> درمان بدون توجه به هریک از این سه مؤلفه، به نتایج رضایت‌بخشی منجر نخواهد شد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت هشت رفتار مشکل‌آفرین</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>رفتار</th><th>خودمونی</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>پرخاشگری کلامی و جسمانی</td><td>حمله به دیگران</td></tr>
+<tr><td>۲</td><td>سطوح پایین فعالیت</td><td>کم‌کاری</td></tr>
+<tr><td>۳</td><td>رفتارهای جنسی نامتناسب</td><td>رفتار جنسی نامناسب</td></tr>
+<tr><td>۴</td><td>برانگیختگی تکانه‌ای</td><td>رفتارهای آشفته</td></tr>
+<tr><td>۵</td><td>رفتارهای تکراری یا کلیشه‌ای</td><td>تکرار بی‌هدف</td></tr>
+<tr><td>۶</td><td>تخریب وسایل</td><td>خرابکاری</td></tr>
+<tr><td>۷</td><td>منفی‌کاری شدید</td><td>لجبازی</td></tr>
+<tr><td>۸</td><td>خودزنی</td><td>آسیب به خود</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت شش اصل هیورلی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>اصل</th><th>خودمونی</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>ارتباط کلامی ساده</td><td>ساده حرف بزن</td></tr>
+<tr><td>۲</td><td>فنون ساده</td><td>ساده توضیح بده</td></tr>
+<tr><td>۳</td><td>روش رهنمودی</td><td>مستقیم و روشن</td></tr>
+<tr><td>۴</td><td>ساختاریافته و قابل پیش‌بینی</td><td>زمان و هدف مشخص</td></tr>
+<tr><td>۵</td><td>رازداری ساده</td><td>رازداری را توضیح بده</td></tr>
+<tr><td>۶</td><td>تعریف نقش (انتقال)</td><td>نقش خود را تعریف کن</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت هشت راهبرد درمانی</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>راهبرد</th><th>خودمونی</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>مدیریت خشم</td><td>کنترل عصبانیت</td></tr>
+<tr><td>۲</td><td>حل تعارض بین‌فردی</td><td>حل دعوا</td></tr>
+<tr><td>۳</td><td>آموزش همدلی</td><td>درک دیگران</td></tr>
+<tr><td>۴</td><td>حل مسئله اجتماعی</td><td>حل مشکل در جامعه</td></tr>
+<tr><td>۵</td><td>آموزش مجدد شناختی</td><td>تغییر افکار</td></tr>
+<tr><td>۶</td><td>مدیریت اقتضایی</td><td>مدیریت شرایط</td></tr>
+<tr><td>۷</td><td>حساسیت‌زدایی عاطفی</td><td>کاهش حساسیت</td></tr>
+<tr><td>۸</td><td>بازخورد زیستی</td><td>کنترل بدن</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۶: فرایند فرموله‌سازی مورد -->
+<!-- ============================================ -->
+<section id="assessment" class="section">
+<h2 class="section-title">۰۶ · فرایند فرموله‌سازی مورد</h2>
+<p class="section-sub">سه مرحله ارزیابی: محرک‌های آشکارساز، اثرات آسیب‌پذیری، اثرات پایدار</p>
+
+<div class="card">
+<div class="card-head"><h3>مقدمه</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">از آنجایی که <b>هیچ نشانه یا تبیین ساده‌ای برای مشکلات هیجانی، شناختی یا رفتاری فرد دارای عقب‌ماندگی ذهنی ارائه نشده است</b>، از این رو <b>ارزیابی تشخیصی در مشاوره با این گروه از مراجعان به شدت مورد نیاز است</b>.</div>
+<div class="fa">این ارزیابی به <b>علائمی که افراد در زمینه‌های فردی و محیطی که در آن رفتار رخ می‌دهد، بستگی دارد</b>.</div>
+<div class="fa"><b>مثال‌های توجه:</b> گفته‌های دوستان و ناظر مراجع در محیط کار؛ انتقادهای دوستان؛ ظاهر و دقت به رفتارهای انزواطلبانه؛ سرباز زدن از انجام فعالیت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه مرحله ارزیابی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>مرحله</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td><b>تحلیل زمینه‌ای ۱: محرک‌های آشکارساز</b></td><td>شرایطی که قبل از بروز مشکل وجود داشته‌اند. <b>مثال:</b> در مورد آقای سام، پس از ملاقات با دوستش، جواب رد شنید و به شدت عصبانی و نگران شد.</td></tr>
+<tr><td>۲</td><td><b>تحلیل زمینه‌ای ۲: اثرات آسیب‌پذیری</b></td><td>اثراتی که به نشانه‌های فردی، محیطی و اجتماعی مراجع مرتبط می‌شوند، فرد را در جایگاهی قرار می‌دهد که احتمال وقوع خطر یا شدت گرفتن علائم رفتاری، هیجانی و شناختی او را در مواجهه با تحریک‌پذیری افزایش می‌دهد.</td></tr>
+<tr><td>۳</td><td><b>تحلیل ارزیابی ۳: اثرات پایدار</b></td><td>آخرین تأثیری که به ارزیابی عوامل روانی، اجتماعی و زیست‌شناختی در فرد می‌پردازد. این‌گونه نشانه‌ها ممکن است به‌عنوان بخشی از رفتارهای دائمی فرد تلقی شده و از سوی او بااهمیت تصور شوند.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انواع نشانه‌های آسیب‌پذیری</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>توضیح</th><th>مثال</th></tr></thead>
+<tbody>
+<tr><td><b>روان‌شناختی</b></td><td>مشکلاتی در مدیریت خشم، برقراری ارتباط با مهارت‌های سازگاری</td><td>—</td></tr>
+<tr><td><b>زیست‌شناختی</b></td><td>ناکارآمدی حسی، عصب‌شناختی یا بیوشیمیایی</td><td>سردردهای میگرنی، رفتارهای پارانوییدی، روماتیسم مزمن، اختلال خلقی دوقطبی</td></tr>
+<tr><td><b>محیط فیزیکی و اجتماعی</b></td><td>محدود شدن فرصت برای برقراری روابط اجتماعی و موانعی در انجام وظایف</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مثال آسیب‌پذیری زیست‌شناختی</h3><span class="badge s">مهم</span></div>
+<div class="fa">درد همراه با <b>روماتیسم مزمن</b> در بیشتر مواقع با <b>دارو قابل کنترل</b> است. هنگامی که دارو اثربخشی خود را از دست می‌دهد یا فرد دستور مصرف دارو را متوجه نمی‌شود، ممکن است <b>درد شدید به آشفتگی روانی او منجر شود</b>. همین آشفتگی روانی ممکن است فرد را در برابر برخی رفتارها یا موقعیت‌ها مانند <b>توبیخ ناظر محل کار، تحریک‌پذیر</b> کند.</div>
+<div class="fa">از طرفی، فردی که دچار <b>اختلال خلقی دوقطبی</b> است، ممکن است <b>دلایل دیگری برای تبیین رفتارهایش</b> وجود داشته باشد. هنگامی که <b>اختلال فعال است و خلق آشفتگی‌کننده‌ای وجود داشته باشد</b>، همین آشفتگی می‌تواند به‌نوبه خود فرد را در برابر <b>هر تحریک برانگیخته</b> کند و او <b>پرخاشگری کلامی و افکار منفی‌اش</b> را آغاز کند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سایر نشانه‌های آسیب‌پذیری</h3><span class="badge s">مهم</span></div>
+<div class="fa">از <b>فقدان یا توان اندک فرد برای مقابله با تحریک‌پذیری</b> ناشی می‌شود.</div>
+<div class="fa"><b>مثال:</b> ممکن است فردی از <b>رفتارهای پرخاشگرانه خود به‌عنوان نوعی سازگاری در برابر برافروختگی خشم‌اش</b> استفاده کند.</div>
+<div class="fa">همچنین، فرد ممکن است رفتار پرخاشگرانه‌اش را به دلیل <b>عدم مهارت‌های مدیریت خشم</b> انجام دهد.</div>
+<div class="fa"><b>سایر فقدان‌های مهارتی:</b> این فرد در <b>مهارت‌های حل مسئله، مهارت‌های مدیریت اضطراب، مهارت‌های جرئت‌ورزی، مهارت‌های ارتباطی و مهارت‌های اجتماعی</b> دچار <b>محدودیت‌های شدیدی</b> است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اثرات پایدار — مثال‌ها</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>مثال ۱:</b> اگر مراجعی بیاموزد که برای <b>جلب توجه پرسنل به شدت فریاد زده و عصبانی شود</b>، این رفتارها را <b>در خود تداوم می‌بخشد</b>.</div>
+<div class="fa"><b>مثال ۲:</b> اگر فردی به این نتیجه برسد که <b>پاسخ پرخاشگرانه و اثرات آن باعث واهمه اطرافیانش می‌شود</b>، این رفتار را به احتمال بیشتری <b>ادامه خواهد داد</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مثال آقای سام — تأثیر تعاملی عوامل</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">سام به دلیل آنکه <b>پس از ملاقات با دوستش، جواب رد شنید</b>، به شدت <b>عصبانی و نگران</b> شد، <b>او به سختی بر کارش تمرکز داشت</b>. سام در خط <b>تولید اتومبیل</b> مشغول به کار بود. کارفرما، از وی خواست که کار تولید [قطعات] را به درستی به اتمام برساند. سپس، <b>آشفتگی هیجانی او با کارش در هم آمیخته شد</b> و کارفرما، به او <b>توصیه داد که کارش را در مدت زمان معینی انجام دهد</b>. پس از <b>سومین اخطار، سام عصبانی شد و جمله‌ای توهین‌آمیز به کارفرمایش گفت</b>. کارفرما به او <b>توصیه کرد که قدری استراحت کند و آرامش خود را تا حد امکان حفظ کند</b>.</div>
+<div class="fa"><b>عوامل دخیل در ارزیابی «علت» عمل پرخاشگرانه سام:</b></div>
+<div class="fa">۱) <b>خشم عصبانیت شدید</b> (حالت هیجانی شدید) + <b>اصرار کارفرما</b> (انفجار)</div>
+<div class="fa">۲) <b>محدودیت در مهارت‌های خودتنظیمی در کنترل هیجان</b></div>
+<div class="fa">۳) <b>محدودیت در مهارت‌های ارتباطی</b> (آسیب‌پذیری شناختی و هیجانی)</div>
+<div class="fa">۴) <b>سرباز زدن از انجام خواسته‌های کارفرما و فرار از انجام درخواست‌های شغلی</b> (پیامدهای تقویت‌شده در رفتار فرد)</div>
+<div class="fa">۵) <b>پاسخ پرخاشگرانه</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نتیجه:</b> گرچه <b>فراوانی وقوع عمل پرخاشگرانه</b> ممکن است تحت تأثیر <b>مؤلفه شناختی</b> قرار گیرد، اما <b>شدت آن</b> ممکن است متأثر از <b>هیجان خشم‌آلود</b> باشد. <b>درمان بدون توجه به هریک از این سه مؤلفه، به نتایج رضایت‌بخشی منجر نخواهد شد.</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تشخیص و فرموله‌سازی درمان</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تشخیص:</b> باید <b>براساس موقعیت‌های تحریک‌پذیری، اثرات آسیب‌پذیری و پایدار، صورت گیرد</b>.</div>
+<div class="fa"><b>طرح‌ریزی درمان:</b> برای طرح‌ریزی درمان، <b>مداخله‌های درمانی</b> باید <b>تشخیص‌محور بوده و برای برطرف کردن علل ایجاد نشانه‌ها در فرد استوار باشد</b>.</div>
+<div class="fa"><b>عمده‌ترین تلاش‌های درمان‌بخش:</b> به‌منظور <b>نشان دادن مسائل آسیب‌پذیری، طراحی شده‌اند</b>.</div>
+<div class="fa"><b>هدف اساسی این درمان‌ها:</b> <b>افزایش توانمندی‌های فردی و ایجاد امنیت روان‌شناختی برای مراجع</b> است.</div>
+<div class="fa"><b>رویکردهای درمان‌بخش:</b> رویکردهای درمان‌بخش که برای <b>آموزش رفتارهای سازگارانه اجتماعی</b> انتخاب می‌شوند، باید <b>انگیزه لازم را به فرد برای دستیابی به توانایی‌های رفتاری، هیجانی و عاطفی جهت سازگاری با رفتارهای مشکل‌آفرین، بدهد</b>.</div>
+<div class="fa"><b>آموزش مهارت‌ها:</b> آموزش مهارت‌ها عمدتاً بر <b>ارتقای رفتارهای سازگارانه در فرد</b> تأکید می‌کنند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> در ارائه مداخله‌های مشاوره‌ای به افراد دارای عقب‌ماندگی ذهنی، باید به <b>مشکلات رفتاری، هیجانی و شناختی آن‌ها به‌طور توأمان نگریسته شود</b>. اگر جنبه‌هایی از مشکل کوچک شمرده شده یا نادیده گرفته شود، باید در طرح‌ریزی <b>به تمامی جنبه‌های آن به‌طور برابر بها داده شود</b> تا مراجع بتواند <b>مهارت‌های لازم را برای سازگاری با شرایط زندگی فراگیرد</b>.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نتیجه‌گیری نهایی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>رویکرد مشاوره توان‌دهی سلامت‌نگر برای مراجعان دارای عقب‌ماندگی ذهنی بسیار مناسب است. فرد مهارت‌های شناختی و رفتاری را می‌آموزد و به همراه حمایت‌های هیجانی و انگیزشی مرتبط با مهارت‌های فراگرفته‌شده، با شرایط زندگی روزمره‌اش سازگار می‌شود.</b>
+</div>
+<div class="fa"><b>کاربرد دیگر:</b> از رویکرد مشاوره توان‌دهی سلامت‌نگر می‌توان برای کار با <b>افرادی که دچار مشکلات شناختی‌اند</b> بهره جست.</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۷: دام‌ها -->
+<!-- ============================================ -->
+<section id="traps" class="section">
+<h2 class="section-title">۰۷ · دام‌های امتحانی (چهارگزینه‌ای)</h2>
+<p class="section-sub">هر دام با گزینه‌های درست و نادرست</p>
+
+<div class="card trap">
+<h3>دام ۱: چالش‌های اساسی عقب‌ماندگان ذهنی</h3>
+<div class="fa"><b>سوال:</b> چالش‌های اساسی عقب‌ماندگان ذهنی چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) فقط جسمانی ❌ — ب) رفتاری و عاطفی ✅ — ج) فقط شناختی ❌ — د) فقط اجتماعی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) رفتاری و عاطفی</b> — که مانع سازگاری شغلی و زندگی آن‌ها در جامعه است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: شیوع مشکلات روانی</h3>
+<div class="fa"><b>سوال:</b> مشکلات سلامت روانی در عقب‌ماندگان ذهنی در مقایسه با جمعیت عادی چگونه است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) کمتر ❌ — ب) برابر ❌ — ج) بسیار بیشتر ✅ — د) هیچ تفاوتی ندارد ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ج) بسیار بیشتر</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: عمده‌ترین مشکلات روان‌شناختی</h3>
+<div class="fa"><b>سوال:</b> عمده‌ترین مشکلات روان‌شناختی عقب‌ماندگان ذهنی به چه صورت آشکار می‌شود؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) مشکلات جسمانی ❌ — ب) مشکلات رفتاری ✅ — ج) مشکلات اقتصادی ❌ — د) مشکلات تحصیلی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) مشکلات رفتاری</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: نقد فلچر</h3>
+<div class="fa"><b>سوال:</b> نقد فلچر (۱۹۹۳) به مشاوره کلاسیک چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) مشاوره بر ویژگی‌های فردی متمرکز است و مانع توجه به مشکلات عقب‌ماندگان می‌شود ✅ — ب) مشاوره خیلی ساده است ❌ — ج) مشاوره خیلی پیچیده است ❌ — د) مشاوره بی‌فایده است ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) مشاوره بر ویژگی‌های فردی متمرکز است و مانع توجه به مشکلات عقب‌ماندگان می‌شود</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: نقل‌قول فلچر</h3>
+<div class="fa"><b>سوال:</b> طبق فلچر، مشاوره با عقب‌ماندگان ذهنی چگونه است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) ساده است ❌ — ب) ویژه‌تر و خاص‌تر است ✅ — ج) بی‌فایده است ❌ — د) یکسان با سایر گروه‌هاست ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) ویژه‌تر و خاص‌تر است</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: اصول هیورلی</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء شش اصل مشاوره‌ای هیورلی نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) ارتباط کلامی ساده ✅ — ب) فنون ساده ✅ — ج) روش رهنمودی ✅ — د) استفاده از آزمون‌های فرافکنی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) استفاده از آزمون‌های فرافکنی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: نقد اساسی فنون مشاوره</h3>
+<div class="fa"><b>سوال:</b> نقد اساسی به فنون مشاوره برای عقب‌ماندگان ذهنی چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) برای افراد نرمال ساخته شده‌اند ✅ — ب) خیلی ساده‌اند ❌ — ج) خیلی کوتاه‌اند ❌ — د) خیلی طولانی‌اند ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) فنون برای افرادی ساخته شده‌اند که از نظر کلامی و شناختی نرمال‌اند</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: راه‌حل پیشنهادی</h3>
+<div class="fa"><b>سوال:</b> راه‌حل پیشنهادی برای امکان‌پذیر ساختن مشاوره برای عقب‌ماندگان ذهنی چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) اصلاح محتوا و فعالیت‌های شناختی ✅ — ب) حذف مشاوره ❌ — ج) افزایش مدت مشاوره ❌ — د) استفاده از دارو ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) اصلاح محتوا و فعالیت‌های شناختی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: فرضیه بنیادین</h3>
+<div class="fa"><b>سوال:</b> فرضیه بنیادین راه‌حل پیشنهادی چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) مراجع درک، آگاهی، بینش، تغییر و تعمیم می‌دهد ✅ — ب) مراجع نمی‌تواند یاد بگیرد ❌ — ج) مراجع فقط با دارو درمان می‌شود ❌ — د) مراجع نیازی به مشاوره ندارد ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) مراجع درک، آگاهی، بینش، تغییر و تعمیم می‌دهد</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: شرایط خاص</h3>
+<div class="fa"><b>سوال:</b> شرایط خاص یا ویژه در مشاوره عقب‌ماندگان ذهنی کدام‌اند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) برانگیختگی هیجانی شدید (خشم، اضطراب، تندخویی، افسرده‌خویی) ✅ — ب) فقط شادی ❌ — ج) فقط آرامش ❌ — د) فقط خواب ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) برانگیختگی هیجانی شدید (خشم، اضطراب، تندخویی، افسرده‌خویی)</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: تفاوت توان‌دهی با رویکردهای پیشین</h3>
+<div class="fa"><b>سوال:</b> تفاوت مشاوره توان‌دهی سلامت‌نگر با رویکردهای پیشین چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) حذف رفتار نابهنجار ❌ — ب) ایجاد شایستگی‌های جدید و جایگزینی ✅ — ج) فقط دارو ❌ — د) فقط استراحت ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) ایجاد شایستگی‌های جدید و جایگزینی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: سه شایستگی جدید</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء سه شایستگی جدید در توان‌دهی سلامت‌نگر نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) راهبردهای سازگاری برای کاهش اضطراب ✅ — ب) مهارت‌های اجتماعی برای مواجهه با پرخاشگری ✅ — ج) احساسات مثبت خودانگیخته ✅ — د) تجویز دارو ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) تجویز دارو</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: تأکید رویکرد توان‌دهی</h3>
+<div class="fa"><b>سوال:</b> تأکید رویکرد توان‌دهی سلامت‌نگر بر چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) توانایی کلامی بالا ❌ — ب) آموزش از طریق عمل و کلام ✅ — ج) فقط دارو ❌ — د) فقط استراحت ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) آموزش از طریق عمل و کلام</b> — نه تأکید بر توانایی کلامی بالا.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: مثلث شناختی، عاطفی و رفتاری</h3>
+<div class="fa"><b>سوال:</b> مثلث مورد استفاده در توان‌دهی سلامت‌نگر شامل چه مؤلفه‌هایی است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) شناختی، عاطفی، رفتاری ✅ — ب) جسمی، روانی، اجتماعی ❌ — ج) ژنتیک، محیط، تربیت ❌ — د) گذشته، حال، آینده ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) شناختی، عاطفی، رفتاری</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: هشت راهبرد درمانی</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء هشت راهبرد درمانی در توان‌دهی سلامت‌نگر نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) مدیریت خشم ✅ — ب) حل تعارض ✅ — ج) آموزش همدلی ✅ — د) جراحی مغز ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) جراحی مغز</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۶: پیش‌فرض اساسی توان‌دهی</h3>
+<div class="fa"><b>سوال:</b> پیش‌فرض اساسی مشاوره توان‌دهی سلامت‌نگر چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) مشکلات فعلی = انعکاس شکست‌های یادگیری تجربه‌های زندگی ✅ — ب) مشکلات فعلی = ژنتیک ❌ — ج) مشکلات فعلی = ناخودآگاه ❌ — د) مشکلات فعلی = تصادف ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) مشکلات فعلی = انعکاس شکست‌های یادگیری تجربه‌های زندگی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۷: هدف نهایی مداخله‌ها</h3>
+<div class="fa"><b>سوال:</b> هدف نهایی مداخله‌های مشاوره‌ای در توان‌دهی چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) کاهش علائم ❌ — ب) افزایش کفایت و شایستگی‌های رفتاری، شناختی و هیجانی ✅ — ج) تجویز دارو ❌ — د) بستری کردن ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) افزایش کفایت و شایستگی‌های رفتاری، شناختی و هیجانی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۸: نحوه ارتباط مشاور</h3>
+<div class="fa"><b>سوال:</b> نحوه ارتباط مشاور توان‌دهی سلامت‌نگر چگونه است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) غیرمستقیم و غیرساختاریافته ❌ — ب) مستقیم/رهنمودی، فردی/گروهی، ساختاریافته و روزانه ✅ — ج) فقط گروهی ❌ — د) فقط هفتگی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) مستقیم/رهنمودی، فردی/گروهی، ساختاریافته و روزانه</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۹: تفاوت توانبخشی و توان‌دهی</h3>
+<div class="fa"><b>سوال:</b> تفاوت اساسی توانبخشی و توان‌دهی چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) توانبخشی = بازگرداندن توانایی به دوره پیش از آسیب؛ توان‌دهی = ارتقای سطح توانایی‌ها ✅ — ب) هر دو یکسانند ❌ — ج) توانبخشی = ارتقای توانایی‌ها ❌ — د) توان‌دهی = بازگرداندن توانایی‌ها ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) توانبخشی = بازگرداندن توانایی به دوره پیش از آسیب؛ توان‌دهی = ارتقای سطح توانایی‌ها</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۰: چرا توان‌دهی برای عقب‌ماندگان ذهنی؟</h3>
+<div class="fa"><b>سوال:</b> چرا رویکرد توان‌دهی برای عقب‌ماندگان ذهنی کاربرد دارد؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) آن‌ها توانایی‌هایی را نداشته‌اند که بخواهیم بازستانیم ✅ — ب) آن‌ها توانایی‌هایی داشته‌اند و از دست داده‌اند ❌ — ج) نیازی به درمان ندارند ❌ — د) قابل درمان نیستند ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) آن‌ها توانایی‌هایی را نداشته‌اند که بخواهیم بازستانیم؛ باید توانمندشان ساخت</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۱: سه مرحله ارزیابی</h3>
+<div class="fa"><b>سوال:</b> سه مرحله ارزیابی در فرموله‌سازی مورد کدام‌اند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) محرک‌های آشکارساز، اثرات آسیب‌پذیری، اثرات پایدار ✅ — ب) شوک، انکار، افسردگی ❌ — ج) تحلیل، ترکیب، تشخیص ❌ — د) فردی، گروهی، خانوادگی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) محرک‌های آشکارساز، اثرات آسیب‌پذیری، اثرات پایدار</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۲: محرک‌های آشکارساز</h3>
+<div class="fa"><b>سوال:</b> محرک‌های آشکارساز (Triggering Stimuli) چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) شرایطی که قبل از بروز مشکل وجود داشته‌اند ✅ — ب) نشانه‌های دائمی ❌ — ج) اثرات بلندمدت ❌ — د) نشانه‌های زیستی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) شرایطی که قبل از بروز مشکل وجود داشته‌اند</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۳: اثرات آسیب‌پذیری</h3>
+<div class="fa"><b>سوال:</b> اثرات آسیب‌پذیری (Vulnerability Effects) چه چیزی را افزایش می‌دهد؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) احتمال وقوع خطر یا شدت گرفتن علائم ✅ — ب) فقط شادی ❌ — ج) فقط آرامش ❌ — د) فقط خواب ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) احتمال وقوع خطر یا شدت گرفتن علائم رفتاری، هیجانی و شناختی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۴: انواع نشانه‌های آسیب‌پذیری</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء انواع نشانه‌های آسیب‌پذیری نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) روان‌شناختی ✅ — ب) زیست‌شناختی ✅ — ج) محیط فیزیکی و اجتماعی ✅ — د) اقتصادی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) اقتصادی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۵: مثال آسیب‌پذیری زیست‌شناختی</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء مثال‌های آسیب‌پذیری زیست‌شناختی نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) سردردهای میگرنی ✅ — ب) رفتارهای پارانوییدی ✅ — ج) روماتیسم مزمن ✅ — د) مشکلات مالی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) مشکلات مالی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۶: اثرات پایدار</h3>
+<div class="fa"><b>سوال:</b> اثرات پایدار (Maintaining Effects) چه چیزی را ارزیابی می‌کند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) عوامل روانی، اجتماعی و زیست‌شناختی در فرد ✅ — ب) فقط شرایط قبل از مشکل ❌ — ج) فقط آسیب‌پذیری ❌ — د) فقط گذشته ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) عوامل روانی، اجتماعی و زیست‌شناختی در فرد</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۷: مثال اثرات پایدار</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه مثال اثرات پایدار است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) جلب توجه پرسنل با فریاد و عصبانیت ✅ — ب) سردرد میگرنی ❌ — ج) جواب رد شنیدن از دوست ❌ — د) دارو ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) جلب توجه پرسنل با فریاد و عصبانیت</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۸: مثال آقای سام</h3>
+<div class="fa"><b>سوال:</b> در مثال آقای سام، کدام عوامل در عمل پرخاشگرانه دخیل بودند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) خشم شدید + اصرار کارفرما + محدودیت مهارت‌ها + پاسخ پرخاشگرانه ✅ — ب) فقط خشم ❌ — ج) فقط اصرار کارفرما ❌ — د) فقط دارو ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) خشم شدید + اصرار کارفرما + محدودیت مهارت‌ها + پاسخ پرخاشگرانه</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۹: نتیجه تأثیر تعاملی</h3>
+<div class="fa"><b>سوال:</b> نتیجه تأثیر تعاملی سه مؤلفه شناختی، هیجانی و رفتاری چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) درمان بدون توجه به هر سه مؤلفه به نتیجه رضایت‌بخش نمی‌رسد ✅ — ب) فقط شناخت مهم است ❌ — ج) فقط هیجان مهم است ❌ — د) فقط رفتار مهم است ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) درمان بدون توجه به هر سه مؤلفه به نتیجه رضایت‌بخش نمی‌رسد</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۰: هدف اساسی درمان‌ها</h3>
+<div class="fa"><b>سوال:</b> هدف اساسی درمان‌ها در توان‌دهی سلامت‌نگر چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) افزایش توانمندی‌های فردی و ایجاد امنیت روان‌شناختی ✅ — ب) تجویز دارو ❌ — ج) بستری کردن ❌ — د) جراحی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) افزایش توانمندی‌های فردی و ایجاد امنیت روان‌شناختی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۱: نکته مهم در مداخله</h3>
+<div class="fa"><b>سوال:</b> نکته مهم در ارائه مداخله‌های مشاوره‌ای به عقب‌ماندگان ذهنی چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) فقط به یک جنبه توجه شود ❌ — ب) نگاه توأمان به مشکلات رفتاری، هیجانی و شناختی ✅ — ج) فقط دارو ❌ — د) فقط استراحت ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) نگاه توأمان به مشکلات رفتاری، هیجانی و شناختی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۲: نتیجه‌گیری نهایی</h3>
+<div class="fa"><b>سوال:</b> نتیجه‌گیری نهایی درباره رویکرد مشاوره توان‌دهی سلامت‌نگر چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) برای عقب‌ماندگان ذهنی بسیار مناسب است ✅ — ب) برای عقب‌ماندگان ذهنی مناسب نیست ❌ — ج) فقط برای کودکان است ❌ — د) فقط برای سالمندان است ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) برای عقب‌ماندگان ذهنی بسیار مناسب است</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۳: هشت رفتار مشکل‌آفرین</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء هشت رفتار مشکل‌آفرین بارز نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) پرخاشگری کلامی و جسمانی ✅ — ب) سطوح پایین فعالیت ✅ — ج) رفتارهای تکراری ✅ — د) مطالعه کتاب ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) مطالعه کتاب</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۴: دامنه مشکلات</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء دامنه مشکلات عقب‌ماندگان ذهنی نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) روابط بین‌فردی ✅ — ب) روابط جنسی ✅ — ج) عزت نفس ✅ — د) سفرهای فضایی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) سفرهای فضایی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۵: مطالعه موردی آقای ژرژ</h3>
+<div class="fa"><b>سوال:</b> محرک اصلی پرخاشگری آقای ژرژ چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) اختلال در رفتارهای کلیشه‌ای و تکراری ✅ — ب) گرسنگی ❌ — ج) خستگی ❌ — د) سردرد ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) اختلال در رفتارهای کلیشه‌ای و تکراری</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۶: مطالعه موردی آقای سام</h3>
+<div class="fa"><b>سوال:</b> آقای سام هم‌اکنون کجا کار می‌کند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) مرکز شغل حمایت‌شده و زیر نظر ناظر ✅ — ب) بیمارستان ❌ — ج) دانشگاه ❌ — د) خانه ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) مرکز شغل حمایت‌شده و زیر نظر ناظر</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۷: آقای ژرژ در حالت آرام</h3>
+<div class="fa"><b>سوال:</b> آقای ژرژ در مواقعی که عصبانی نیست چگونه است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) بسیار خوشحال و همکاری‌کننده ✅ — ب) پرخاشگر ❌ — ج) منفی‌کار ❌ — د) خواب‌آلود ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) بسیار خوشحال و همکاری‌کننده</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۸: سه پژوهشگر فعال</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء سه پژوهشگر فعال در حیطه مداخله‌های رفتاری برای عقب‌ماندگان ذهنی نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) باتز و همکاران ✅ — ب) پرکینز ✅ — ج) پروات و سترومر ✅ — د) فروید ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) فروید</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۹: اصول شش‌گانه هیورلی — اصل چهارم</h3>
+<div class="fa"><b>سوال:</b> اصل چهارم اصول هیورلی چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) ارتباط کلامی ساده ❌ — ب) فنون ساده ❌ — ج) روش رهنمودی ❌ — د) ساختاریافته و قابل پیش‌بینی ✅</div>
+<div class="fa"><b>جواب درست:</b> <b>د) فرایند مشاوره باید ساختاریافته و قابل پیش‌بینی باشد</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴۰: نقش مشاور در مثال ۱</h3>
+<div class="fa"><b>سوال:</b> در مثال ۱ (مشکلات با دوستان در محیط شغلی)، نقش مشاور چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) کمک به اعتماد به نفس و رفتار فعالانه ✅ — ب) تجویز دارو ❌ — ج) بستری کردن ❌ — د) جراحی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) کمک به اعتماد به نفس و رفتار فعالانه</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴۱: نقش مشاور در مثال ۲</h3>
+<div class="fa"><b>سوال:</b> در مثال ۲ (تعارض با والدین)، نقش مشاور چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) تشویق به یادگیری رفتارهای اجتماعی مناسب ✅ — ب) تجویز دارو ❌ — ج) بستری کردن ❌ — د) جراحی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) تشویق به یادگیری رفتارهای اجتماعی مناسب</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴۲: نُه فن مشاوره‌ای</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء نُه فن مشاوره‌ای در توان‌دهی سلامت‌نگر نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) آموزش مهارت‌های اجتماعی ✅ — ب) مدیریت خشم ✅ — ج) آرام‌بخشی ✅ — د) جراحی مغز ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) جراحی مغز</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴۳: پیامدهای مطلوب مشاوره</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء چهار پیامد مطلوب مشاوره سلامت‌نگر نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) آگاهی از وضعیت شناختی و هیجانی ✅ — ب) تاریخچه موفق کاربرد اطلاعات شناختی ✅ — ج) استفاده از راهبردهای خودهدایتی ✅ — د) انکار مشکل ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) انکار مشکل</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴۴: شرایط خاص یا ویژه</h3>
+<div class="fa"><b>سوال:</b> شرایط خاص یا ویژه در مشاوره عقب‌ماندگان ذهنی کدام‌اند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) خشم، اضطراب، تندخویی، افسرده‌خویی ✅ — ب) شادی، آرامش، خواب ❌ — ج) ورزش، تغذیه ❌ — د) مطالعه، نوشتن ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) خشم، اضطراب، تندخویی، افسرده‌خویی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴۵: سه شایستگی</h3>
+<div class="fa"><b>سوال:</b> سه شایستگی جدید در توان‌دهی سلامت‌نگر کدام‌اند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) راهبردهای سازگاری، مهارت‌های اجتماعی، احساسات مثبت خودانگیخته ✅ — ب) فقط دارو ❌ — ج) فقط استراحت ❌ — د) فقط ورزش ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) راهبردهای سازگاری برای کاهش اضطراب، مهارت‌های اجتماعی برای مواجهه با پرخاشگری، احساسات مثبت خودانگیخته</b></div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۸: کوییز -->
+<!-- ============================================ -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۸ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم مشاوره توانبخشی در عقب‌ماندگی ذهنی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 15 · مشاوره توانبخشی · فصل پانزدهم: مشاوره توانبخشی در عقب‌ماندگی ذهنی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+const themeIcon=document.getElementById('themeIcon');
+const moonPath='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+const sunPath='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z';
+theme.onclick=()=>{
+const dark=document.documentElement.dataset.theme==='dark';
+if(dark){
+document.documentElement.dataset.theme='';
+themeIcon.innerHTML='<path d="'+moonPath+'"></path>';
+}else{
+document.documentElement.dataset.theme='dark';
+themeIcon.innerHTML='<circle cx="12" cy="12" r="4"></circle><path d="'+sunPath+'"></path>';
+}
+};
+
+const quizData = [
+{q:"چالش‌های اساسی عقب‌ماندگان ذهنی چیست؟",options:["فقط جسمانی","رفتاری و عاطفی","فقط شناختی","فقط اجتماعی"],answer:1,explanation:"چالش‌های رفتاری و عاطفی عقب‌ماندگان ذهنی، از موانع اساسی بر سر راه سازگاری شغلی و زندگی آن‌ها در جامعه محسوب می‌شود."},
+{q:"مشکلات سلامت روانی در عقب‌ماندگان ذهنی در مقایسه با جمعیت عادی چگونه است؟",options:["کمتر","برابر","بسیار بیشتر","هیچ تفاوتی ندارد"],answer:2,explanation:"مشکلات سلامت روانی در افراد دارای عقب‌ماندگی ذهنی بسیار بیشتر از جمعیت عادی است."},
+{q:"عمده‌ترین مشکلات روان‌شناختی عقب‌ماندگان ذهنی به چه صورت آشکار می‌شود؟",options:["مشکلات جسمانی","مشکلات رفتاری","مشکلات اقتصادی","مشکلات تحصیلی"],answer:1,explanation:"عمده‌ترین مشکلات روان‌شناختی آن‌ها به‌صورت مشکلات رفتاری آشکار می‌شود."},
+{q:"نقد فلچر (۱۹۹۳) به مشاوره کلاسیک چیست؟",options:["مشاوره خیلی ساده است","مشاوره بر ویژگی‌های فردی متمرکز است و مانع توجه به مشکلات عقب‌ماندگان می‌شود","مشاوره خیلی پیچیده است","مشاوره بی‌فایده است"],answer:1,explanation:"فلچر: پرداختن به ویژگی‌های فردی، مانع جدی بر سر راه توجه مشاوران به مشکلات و مسائل افراد دارای عقب‌ماندگی ذهنی شده است."},
+{q:"طبق فلچر، مشاوره با عقب‌ماندگان ذهنی چگونه است؟",options:["ساده است","ویژه‌تر و خاص‌تر است","بی‌فایده است","یکسان با سایر گروه‌هاست"],answer:1,explanation:"فلچر: مشاوره با عقب‌ماندگان ذهنی بسیار ویژه‌تر و خاص‌تر است."},
+{q:"کدام گزینه جزء شش اصل مشاوره‌ای هیورلی نیست؟",options:["ارتباط کلامی ساده","فنون ساده","روش رهنمودی","استفاده از آزمون‌های فرافکنی"],answer:3,explanation:"شش اصل هیورلی: ارتباط کلامی ساده، فنون ساده، روش رهنمودی، ساختاریافته و قابل پیش‌بینی، رازداری ساده، تعریف نقش (انتقال)."},
+{q:"نقد اساسی به فنون مشاوره برای عقب‌ماندگان ذهنی چیست؟",options:["برای افراد نرمال ساخته شده‌اند","خیلی ساده‌اند","خیلی کوتاه‌اند","خیلی طولانی‌اند"],answer:0,explanation:"فنون اساسی مشاوره به‌گونه‌ای ایجاد شده‌اند که گویی تنها برای افرادی کاربرد دارند که از نظر توانایی‌های کلامی و شناختی نرمال محسوب می‌شوند."},
+{q:"راه‌حل پیشنهادی برای امکان‌پذیر ساختن مشاوره برای عقب‌ماندگان ذهنی چیست؟",options:["حذف مشاوره","اصلاح محتوا و فعالیت‌های شناختی","افزایش مدت مشاوره","استفاده از دارو"],answer:1,explanation:"راه‌حل: اصلاح محتوا و فعالیت‌های شناختی که قصد تغییر آن‌ها را داریم."},
+{q:"فرضیه بنیادین راه‌حل پیشنهادی چیست؟",options:["مراجع نمی‌تواند یاد بگیرد","مراجع درک، آگاهی، بینش، تغییر و تعمیم می‌دهد","مراجع فقط با دارو درمان می‌شود","مراجع نیازی به مشاوره ندارد"],answer:1,explanation:"فرضیه بنیادین: مراجع دارای عقب‌ماندگی ذهنی موقعیتی را درک خواهد کرد، از شرایط خود آگاهی خواهد یافت، به مشکلاتش بینش به دست خواهد آورد، تغییر می‌دهد و تعمیم می‌دهد."},
+{q:"شرایط خاص یا ویژه در مشاوره عقب‌ماندگان ذهنی کدام‌اند؟",options:["فقط شادی","برانگیختگی هیجانی شدید (خشم، اضطراب، تندخویی، افسرده‌خویی)","فقط آرامش","فقط خواب"],answer:1,explanation:"شرایط خاص: برانگیختگی هیجانی شدید همانند خشم، اضطراب، تندخویی، افسرده‌خویی."},
+{q:"تفاوت مشاوره توان‌دهی سلامت‌نگر با رویکردهای پیشین چیست؟",options:["حذف رفتار نابهنجار","ایجاد شایستگی‌های جدید و جایگزینی","فقط دارو","فقط استراحت"],answer:1,explanation:"توان‌دهی سلامت‌نگر به‌جای حذف رفتار نابهنجار، شایستگی‌های جدید ایجاد می‌کند و راه‌حل‌های مناسب را جایگزین می‌کند."},
+{q:"کدام گزینه جزء سه شایستگی جدید در توان‌دهی سلامت‌نگر نیست؟",options:["راهبردهای سازگاری برای کاهش اضطراب","مهارت‌های اجتماعی برای مواجهه با پرخاشگری","احساسات مثبت خودانگیخته","تجویز دارو"],answer:3,explanation:"سه شایستگی: راهبردهای سازگاری، مهارت‌های اجتماعی، احساسات مثبت خودانگیخته."},
+{q:"تأکید رویکرد توان‌دهی سلامت‌نگر بر چیست؟",options:["توانایی کلامی بالا","آموزش از طریق عمل و کلام","فقط دارو","فقط استراحت"],answer:1,explanation:"این رویکرد بر توانایی‌های کلامی بسیار بالا تأکید نمی‌کند، بلکه می‌کوشد مهارت‌ها را از طریق عمل و کلام به فرد آموزش دهد."},
+{q:"مثلث مورد استفاده در توان‌دهی سلامت‌نگر شامل چه مؤلفه‌هایی است؟",options:["شناختی، عاطفی، رفتاری","جسمی، روانی، اجتماعی","ژنتیک، محیط، تربیت","گذشته، حال، آینده"],answer:0,explanation:"مثلث شناختی، عاطفی و رفتاری."},
+{q:"کدام گزینه جزء هشت راهبرد درمانی در توان‌دهی سلامت‌نگر نیست؟",options:["مدیریت خشم","حل تعارض","آموزش همدلی","جراحی مغز"],answer:3,explanation:"هشت راهبرد: مدیریت خشم، حل تعارض، آموزش همدلی، حل مسئله اجتماعی، آموزش مجدد شناختی، مدیریت اقتضایی، حساسیت‌زدایی عاطفی، بازخورد زیستی."},
+{q:"پیش‌فرض اساسی مشاوره توان‌دهی سلامت‌نگر چیست؟",options:["مشکلات فعلی = ژنتیک","مشکلات فعلی = انعکاس شکست‌های یادگیری تجربه‌های زندگی","مشکلات فعلی = ناخودآگاه","مشکلات فعلی = تصادف"],answer:1,explanation:"پیش‌فرض اساسی: مشکلات شناختی، رفتاری و هیجانی فعلی مراجع، انعکاسی از شکست‌های او در یادگیری تجربه‌های زندگی است."},
+{q:"هدف نهایی مداخله‌های مشاوره‌ای در توان‌دهی چیست؟",options:["کاهش علائم","افزایش کفایت و شایستگی‌های رفتاری، شناختی و هیجانی","تجویز دارو","بستری کردن"],answer:1,explanation:"هدف نهایی: افزایش کفایت و شایستگی‌های رفتاری، شناختی و هیجانی مراجعان."},
+{q:"نحوه ارتباط مشاور توان‌دهی سلامت‌نگر چگونه است؟",options:["غیرمستقیم و غیرساختاریافته","مستقیم/رهنمودی، فردی/گروهی، ساختاریافته و روزانه","فقط گروهی","فقط هفتگی"],answer:1,explanation:"مشاوره توان‌دهی سلامت‌نگر به‌طور مستقیم یا رهنمودی با یکایک مراجعان یا با گروهی از آن‌ها ارتباط برقرار می‌سازد؛ رابطه مشاور در محیطی ساختاریافته و به‌صورت روزانه خواهد بود."},
+{q:"تفاوت اساسی توانبخشی و توان‌دهی چیست؟",options:["هر دو یکسانند","توانبخشی = بازگرداندن توانایی به دوره پیش از آسیب؛ توان‌دهی = ارتقای سطح توانایی‌ها","توانبخشی = ارتقای توانایی‌ها","توان‌دهی = بازگرداندن توانایی‌ها"],answer:1,explanation:"توانبخشی یعنی بازگرداندن توانایی فرد به دوره پیش از آسیب؛ توان‌دهی یعنی ارتقای سطح توانایی‌های فرد."},
+{q:"چرا رویکرد توان‌دهی برای عقب‌ماندگان ذهنی کاربرد دارد؟",options:["آن‌ها توانایی‌هایی را نداشته‌اند که بخواهیم بازستانیم","آن‌ها توانایی‌هایی داشته‌اند و از دست داده‌اند","نیازی به درمان ندارند","قابل درمان نیستند"],answer:0,explanation:"عقب‌ماندگان ذهنی توانایی‌هایی را نداشته‌اند که بخواهیم از طریق توانبخشی بازستانیم، بلکه باید توانمندشان ساخت."},
+{q:"سه مرحله ارزیابی در فرموله‌سازی مورد کدام‌اند؟",options:["شوک، انکار، افسردگی","محرک‌های آشکارساز، اثرات آسیب‌پذیری، اثرات پایدار","تحلیل، ترکیب، تشخیص","فردی، گروهی، خانوادگی"],answer:1,explanation:"سه مرحله: محرک‌های آشکارساز (Triggering Stimuli)، اثرات آسیب‌پذیری (Vulnerability Effects)، اثرات پایدار (Maintaining Effects)."},
+{q:"محرک‌های آشکارساز (Triggering Stimuli) چیست؟",options:["نشانه‌های دائمی","شرایطی که قبل از بروز مشکل وجود داشته‌اند","اثرات بلندمدت","نشانه‌های زیستی"],answer:1,explanation:"محرک‌های آشکارساز: شرایطی که قبل از بروز مشکل وجود داشته‌اند."},
+{q:"اثرات آسیب‌پذیری (Vulnerability Effects) چه چیزی را افزایش می‌دهد؟",options:["فقط شادی","احتمال وقوع خطر یا شدت گرفتن علائم","فقط آرامش","فقط خواب"],answer:1,explanation:"اثرات آسیب‌پذیری، احتمال وقوع خطر یا شدت گرفتن علائم رفتاری، هیجانی و شناختی را در مواجهه با تحریک‌پذیری افزایش می‌دهد."},
+{q:"کدام گزینه جزء انواع نشانه‌های آسیب‌پذیری نیست؟",options:["روان‌شناختی","زیست‌شناختی","محیط فیزیکی و اجتماعی","اقتصادی"],answer:3,explanation:"انواع نشانه‌های آسیب‌پذیری: روان‌شناختی، زیست‌شناختی، محیط فیزیکی و اجتماعی."},
+{q:"کدام گزینه جزء مثال‌های آسیب‌پذیری زیست‌شناختی نیست؟",options:["سردردهای میگرنی","رفتارهای پارانوییدی","روماتیسم مزمن","مشکلات مالی"],answer:3,explanation:"مثال‌های آسیب‌پذیری زیست‌شناختی: سردردهای میگرنی، رفتارهای پارانوییدی، روماتیسم مزمن، اختلال خلقی دوقطبی."},
+{q:"اثرات پایدار (Maintaining Effects) چه چیزی را ارزیابی می‌کند؟",options:["فقط شرایط قبل از مشکل","عوامل روانی، اجتماعی و زیست‌شناختی در فرد","فقط آسیب‌پذیری","فقط گذشته"],answer:1,explanation:"اثرات پایدار: آخرین تأثیری که به ارزیابی عوامل روانی، اجتماعی و زیست‌شناختی در فرد می‌پردازد."},
+{q:"کدام گزینه مثال اثرات پایدار است؟",options:["سردرد میگرنی","جلب توجه پرسنل با فریاد و عصبانیت","جواب رد شنیدن از دوست","دارو"],answer:1,explanation:"مثال اثرات پایدار: اگر مراجعی بیاموزد که برای جلب توجه پرسنل به شدت فریاد زده و عصبانی شود، این رفتارها را در خود تداوم می‌بخشد."},
+{q:"در مثال آقای سام، کدام عوامل در عمل پرخاشگرانه دخیل بودند؟",options:["فقط خشم","خشم شدید + اصرار کارفرما + محدودیت مهارت‌ها + پاسخ پرخاشگرانه","فقط اصرار کارفرما","فقط دارو"],answer:1,explanation:"عوامل: خشم شدید + اصرار کارفرما + محدودیت مهارت‌های خودتنظیمی + محدودیت مهارت‌های ارتباطی + سرباز زدن + پاسخ پرخاشگرانه."},
+{q:"نتیجه تأثیر تعاملی سه مؤلفه شناختی، هیجانی و رفتاری چیست؟",options:["فقط شناخت مهم است","درمان بدون توجه به هر سه مؤلفه به نتیجه رضایت‌بخش نمی‌رسد","فقط هیجان مهم است","فقط رفتار مهم است"],answer:1,explanation:"درمان بدون توجه به هریک از این سه مؤلفه، به نتایج رضایت‌بخشی منجر نخواهد شد."},
+{q:"هدف اساسی درمان‌ها در توان‌دهی سلامت‌نگر چیست؟",options:["تجویز دارو","افزایش توانمندی‌های فردی و ایجاد امنیت روان‌شناختی","بستری کردن","جراحی"],answer:1,explanation:"هدف اساسی: افزایش توانمندی‌های فردی و ایجاد امنیت روان‌شناختی برای مراجع."},
+{q:"نکته مهم در ارائه مداخله‌های مشاوره‌ای به عقب‌ماندگان ذهنی چیست؟",options:["فقط به یک جنبه توجه شود","نگاه توأمان به مشکلات رفتاری، هیجانی و شناختی","فقط دارو","فقط استراحت"],answer:1,explanation:"باید به مشکلات رفتاری، هیجانی و شناختی آن‌ها به‌طور توأمان نگریسته شود."},
+{q:"نتیجه‌گیری نهایی درباره رویکرد مشاوره توان‌دهی سلامت‌نگر چیست؟",options:["برای عقب‌ماندگان ذهنی مناسب نیست","برای عقب‌ماندگان ذهنی بسیار مناسب است","فقط برای کودکان است","فقط برای سالمندان است"],answer:1,explanation:"رویکرد مشاوره توان‌دهی سلامت‌نگر برای مراجعان دارای عقب‌ماندگی ذهنی بسیار مناسب است."},
+{q:"کدام گزینه جزء هشت رفتار مشکل‌آفرین بارز نیست؟",options:["پرخاشگری کلامی و جسمانی","سطوح پایین فعالیت","رفتارهای تکراری","مطالعه کتاب"],answer:3,explanation:"هشت رفتار: پرخاشگری کلامی/جسمانی، سطوح پایین فعالیت، رفتار جنسی نامتناسب، برانگیختگی تکانه‌ای، رفتارهای تکراری، تخریب، منفی‌کاری، خودزنی."},
+{q:"کدام گزینه جزء دامنه مشکلات عقب‌ماندگان ذهنی نیست؟",options:["روابط بین‌فردی","روابط جنسی","عزت نفس","سفرهای فضایی"],answer:3,explanation:"دامنه مشکلات: روابط بین‌فردی، روابط جنسی، مشکلات رفتاری، عزت نفس، شغل، مراکز اقامتی."},
+{q:"محرک اصلی پرخاشگری آقای ژرژ چیست؟",options:["اختلال در رفتارهای کلیشه‌ای و تکراری","گرسنگی","خستگی","سردرد"],answer:0,explanation:"هر موقع که در رفتارهای کلیشه‌ای و تکراری ژرژ خللی وارد می‌شود، به شدت عصبانی و پرخاشگر می‌شود."},
+{q:"آقای سام هم‌اکنون کجا کار می‌کند؟",options:["مرکز شغل حمایت‌شده و زیر نظر ناظر","بیمارستان","دانشگاه","خانه"],answer:0,explanation:"آقای سام هم‌اکنون در مرکز شغل حمایت‌شده و زیر نظر ناظر کار می‌کند."},
+{q:"آقای ژرژ در مواقعی که عصبانی نیست چگونه است؟",options:["بسیار خوشحال و همکاری‌کننده","پرخاشگر","منفی‌کار","خواب‌آلود"],answer:0,explanation:"در مواقعی که عصبانی یا برانگیخته نیست، بسیار خوشحال و همکاری‌کننده است."},
+{q:"کدام گزینه جزء سه پژوهشگر فعال در حیطه مداخله‌های رفتاری برای عقب‌ماندگان ذهنی نیست؟",options:["باتز و همکاران","پرکینز","پروات و سترومر","فروید"],answer:3,explanation:"سه پژوهشگر: باتز و همکاران (۲۰۰۰)، پرکینز (۱۹۹۹)، پروات و سترومر (۱۹۹۸)."},
+{q:"اصل چهارم اصول هیورلی چیست؟",options:["ارتباط کلامی ساده","فنون ساده","روش رهنمودی","ساختاریافته و قابل پیش‌بینی"],answer:3,explanation:"اصل چهارم: فرایند مشاوره باید ساختاریافته و قابل پیش‌بینی باشد."},
+{q:"در مثال ۱ (مشکلات با دوستان در محیط شغلی)، نقش مشاور چیست؟",options:["تجویز دارو","کمک به اعتماد به نفس و رفتار فعالانه","بستری کردن","جراحی"],answer:1,explanation:"مشاور به مراجع کمک می‌کند تا از طریق انجام فعالیت‌های مشارکتی، اعتماد به نفس بیشتری پیدا کرده و رفتار فعالانه‌تری در محیط کارش داشته باشد."},
+{q:"در مثال ۲ (تعارض با والدین)، نقش مشاور چیست؟",options:["تجویز دارو","تشویق به یادگیری رفتارهای اجتماعی مناسب","بستری کردن","جراحی"],answer:1,explanation:"مراجع تشویق می‌شود تا رفتارهای اجتماعی مناسبی را در برخورد با دیگران بیاموزد."},
+{q:"کدام گزینه جزء نُه فن مشاوره‌ای در توان‌دهی سلامت‌نگر نیست؟",options:["آموزش مهارت‌های اجتماعی","مدیریت خشم","آرام‌بخشی","جراحی مغز"],answer:3,explanation:"نُه فن: آموزش مهارت‌های اجتماعی، مدیریت خشم، فنون شناختی، حل تعارض، مدیریت حل مسئله، آرام‌بخشی، خودمدیریتی، تصویرسازی دیداری، آموزش مهارت‌های ارتباطی."},
+{q:"کدام گزینه جزء چهار پیامد مطلوب مشاوره سلامت‌نگر نیست؟",options:["آگاهی از وضعیت شناختی و هیجانی","تاریخچه موفق کاربرد اطلاعات شناختی","استفاده از راهبردهای خودهدایتی","انکار مشکل"],answer:3,explanation:"چهار پیامد: آگاهی از وضعیت، تاریخچه موفق، استفاده از راهبردهای خودهدایتی، معرفی موقعیت‌های جدید."},
+{q:"شرایط خاص یا ویژه در مشاوره عقب‌ماندگان ذهنی کدام‌اند؟",options:["شادی، آرامش، خواب","خشم، اضطراب، تندخویی، افسرده‌خویی","ورزش، تغذیه","مطالعه، نوشتن"],answer:1,explanation:"شرایط خاص: برانگیختگی هیجانی شدید همانند خشم، اضطراب، تندخویی، افسرده‌خویی."},
+{q:"سه شایستگی جدید در توان‌دهی سلامت‌نگر کدام‌اند؟",options:["فقط دارو","راهبردهای سازگاری، مهارت‌های اجتماعی، احساسات مثبت خودانگیخته","فقط استراحت","فقط ورزش"],answer:1,explanation:"سه شایستگی: آموزش راهبردهای سازگاری برای کاهش اضطراب، آموزش مهارت‌های اجتماعی برای مواجهه با پرخاشگری، آموزش احساسات مثبت خودانگیخته."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مفاهیم مشاوره توانبخشی در عقب‌ماندگی ذهنی — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

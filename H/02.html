@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره توانبخشی · سری 02 · فصل دوم: درمان روان‌پویایی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,var(--pink) 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"02";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره توانبخشی · سری 02</small></div></div>
+  <button id="theme" aria-label="تغییر تم">🌙</button>
+</header>
+
+<section class="hero">
+  <h2>فصل دوم: درمان روان‌پویایی</h2>
+  <p>نظریه سائق، روان‌شناسی خود، روابط شیء، تجربه خود، مکانیسم‌های دفاعی و کاربرد در توانبخشی — همه رو خودمونی می‌گم</p>
+  <div class="pills"><span class="pill">نظریه سائق</span><span class="pill">روان‌شناسی خود</span><span class="pill">روابط شیء</span><span class="pill">مکانیسم دفاعی</span><span class="pill">تصویر بدنی</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل دوم کتاب «مشاوره و روان‌درمانی در توانبخشی معلولین (کاربرد نظریه‌ها)» نوشته دکتر آناهیتا خدابخش کوالیی نوشته شده. همه‌چی رو ساده و خودمونی گفتم. نظریه‌پردازها و مکانیسم‌های دفاعی رو جدا مشخص کردم که راحت حفظ کنی.</div>
+
+<div class="stats">
+<div class="stat"><b>۴</b><span>مفهوم پین</span></div>
+<div class="stat"><b>۳</b><span>نوع اضطراب</span></div>
+<div class="stat"><b>۷</b><span>مکانیسم دفاعی</span></div>
+<div class="stat"><b>۶</b><span>مفهوم گرین‌سون</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#theorists">نظریه‌پردازان</a><a href="#process">فرآیند درمان</a><a href="#defense">مکانیسم دفاعی</a><a href="#body">تصویر بدنی</a><a href="#reactions">واکنش‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (۱۰ دقیقه‌ای بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>چهار مفهوم عمده رویکرد روان‌تحلیلی (پین، ۱۹۸۸)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>مفهوم</th><th>خودمونی</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>روان‌شناسی سائق</td><td>مبتنی بر نظریه سائق فروید</td></tr>
+<tr><td>۲</td><td>من (خود)</td><td>روان‌شناسی خود</td></tr>
+<tr><td>۳</td><td>روابط شیء</td><td>نظریه روابط شیء</td></tr>
+<tr><td>۴</td><td>خود</td><td>تجربه خود (پین)</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> این چهار دیدگاه <b>همپوشانی</b> دارن و در رویکردهای روان‌پویایی و <b>غیر روان‌پویایی</b> هم یافت می‌شن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه نوع اضطراب فروید</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) واقعی</b> — <b>۲) نوروتیک</b> — <b>۳) اخلاقی (وجدانی)</b></div>
+<div class="fa"><b>نکته:</b> فروید اضطراب رو <b>تنش‌های سرکوب‌شده جسمانی (لیبیدو)</b> تلقی می‌کرد و <b>تنها اساسی خود (من)</b> نامید.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش مفهوم اساسی گرین‌سون (۱۹۶۷)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) توپوگرافی</b> — <b>۲) ژنتیک (زیست‌شناختی)</b> — <b>۳) پویایی</b> — <b>۴) اقتصادی</b> — <b>۵) ساختاری</b> — <b>۶) سازمان‌ارائه (سازگارانه)</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این شش تا رو حتماً حفظ کن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت انتقال روان‌رنجور و خودشیفتگی روان‌رنجور (فروید، ۱۹۲۰)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>نوع نوروز</th><th>ویژگی</th><th>کاربرد در درمان</th></tr></thead>
+<tbody>
+<tr><td>انتقال روان‌رنجور</td><td>فرد <b>توانایی برقراری انتقال</b> دارد</td><td>✅ <b>شاخص درمانی</b> محسوب می‌شه</td></tr>
+<tr><td>خودشیفتگی روان‌رنجور</td><td>فرد به <b>دوران پیش از ایجاد روابط شیء</b> بازمی‌گردد؛ تمایل به <b>کناره‌گیری و انزوا</b></td><td>❌ <b>در درمان کاربردی ندارد</b></td></tr>
+</tbody>
+</table>
+<div class="fa"><b>دلیل:</b> تفسیر انتقال، عمده‌ترین ابزار درمانی روان‌کاویه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هفت مکانیسم دفاعی مشهور</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) سرکوبی (واپس‌رانی)</b> — <b>۲) فرافکنی</b> — <b>۳) عقلانی‌سازی</b> — <b>۴) والایش</b> — <b>۵) واکنش وارونه (تشکیل واکنش)</b> — <b>۶) بازگشت</b> — <b>۷) جبران</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار روش «تحلیل کردن» پدیده روانی (گرین‌سون، ۱۹۶۷)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) مواجهه</b> — <b>۲) روش‌سازی (روشن‌سازی)</b> — <b>۳) تفسیر</b> — <b>۴) کسب بینش</b></div>
+<div class="fa"><b>نکته:</b> <b>تفسیر</b> روشیه که روان‌تحلیلگران رو از سایر درمانگران <b>جدا</b> می‌سازه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار طبقه کاربرد روان‌کاوی در توانبخشی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> کاربرد مکانیسم‌های دفاعی در سازگاری روانی-اجتماعی با معلولیت</div>
+<div class="fa"><b>۲)</b> تأثیر معلولیت بر تصویر بدنی و ادراک خویشتن</div>
+<div class="fa"><b>۳)</b> مطالعه واکنش به فقدان، تروماه و معلولیت‌ها (سوگواری، افسردگی، انکار، خشم)</div>
+<div class="fa"><b>۴)</b> معنا و ساختار نگرش‌ها نسبت به افراد دارای معلولیت</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (مو به مو)</h2>
+<p class="section-sub">مقدمه، نظریه سائق، روان‌شناسی خود، روابط شیء، تجربه خود و نظریه شخصیت</p>
+
+<div class="card">
+<div class="card-head"><h3>مقدمه و مفاهیم پایه</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>ویژگی‌های رویکردهای روان‌تحلیلی و روان‌پویایی:</b></div>
+<div class="fa">• تأکید بر <b>اهمیت تجربه‌های اولیه دوران کودکی</b></div>
+<div class="fa">• تأکید بر <b>نقش ناخودآگاه</b> در کارکردهای روانی</div>
+<div class="fa">• هدف درمان: <b>خودآگاهی</b> یا دست یافتن به <b>بینش و آگاهی پیرامون خویشتن</b></div>
+<div class="fa">• سایر رویکردها به خانواده، اجتماع، شغل و جنبه‌های دیگر زندگی توجه دارن</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> رویکرد روان‌تحلیلی <b>سنتی</b>، درمان‌های چندان مناسبی برای توانبخشی عرضه نمی‌کنه، <b>اما</b> برخی روش‌های روان‌تحلیلی آموزه‌ها و روش‌های <b>ارزشمندی</b> رو برای معلولین ارائه می‌کنن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تاریخچه: چهار مفهوم عمده روان‌تحلیلی (پین، ۱۹۸۸)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">پین اظهار داشت رویکرد روان‌تحلیلی بر <b>چهار مفهوم عمده</b> استواره که هر کدام به دیدگاه‌های مجزایی تعلق دارن:</div>
+<div class="fa"><b>۱) روان‌شناسی سائق:</b> مبتنی بر نظریه سائق فروید</div>
+<div class="fa"><b>۲) من (خود):</b> روان‌شناسی خود</div>
+<div class="fa"><b>۳) روابط شیء:</b> نظریه روابط شیء</div>
+<div class="fa"><b>۴) خود:</b> تجربه خود (پین)</div>
+<div class="fa"><b>نکته:</b> این چهار دیدگاه <b>همپوشانی</b> داشته و در رویکردهای روان‌پویایی و <b>غیر روان‌پویایی</b> نیز یافت می‌شن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه سائق فروید</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>مفاهیم اساسی:</b></div>
+<div class="fa">• زندگی روانی انسان از <b>آرزوها و امیال نیرومند</b> نشئت گرفته است</div>
+<div class="fa">• از طریق <b>تجربه‌های بدنی (جسمانی) و خانوادگی</b> و قدرت خودآگاه و تخیل‌ها و رفتارهای ناخودآگاه ایجاد شده‌اند</div>
+<div class="fa">• <b>تجربه‌های اولیه بدنی و خانوادگی = تعیین‌کننده‌های اساسی شخصیت</b></div>
+<div class="fa"><b>اشاره سیلر (۱۹۷۶):</b> تجربه‌های بدنی اولیه می‌تونن در رشد شخصیتی افرادی که <b>معلولیت‌های جسمانی</b> دارن، تأثیر بگذارن.</div>
+<div class="fa"><b>پیش‌فرض‌های اساسی نظریه سائق:</b></div>
+<div class="fa">۱) بهنجاری یا ناهنجاری</div>
+<div class="fa">۲) <b>جبرگرایی روانی</b></div>
+<div class="fa">۳) ارگانیسم انسان به مثابه <b>نظام یا انرژی</b></div>
+<div class="fa">۴) <b>ساختار شخصیت:</b> نهاد، خود (من)، فراخود</div>
+<div class="fa">۵) ناخودآگاه فعال با <b>فرایند تفکر اولیه و ثانویه</b></div>
+<div class="fa">۶) <b>سرکوبی، مقاومت و انتقال</b></div>
+<div class="fa"><b>جمله معروف فروید:</b> <b>«جایی که نهاد است، خود نیز هست.»</b> (نشان‌دهنده تلاش‌هایی در جهت تغییر و تحول نیروهای ناخودآگاه)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه اضطراب فروید</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>اضطراب = پدیده اساسی و مشکل اصلی نوروز</b></div>
+<div class="fa">• فروید اضطراب رو <b>تنش‌های سرکوب‌شده جسمانی (لیبیدو)</b> تلقی می‌کرد</div>
+<div class="fa">• اضطراب رو <b>تنها اساسی خود (من)</b> نامید</div>
+<div class="fa"><b>سه نوع اضطراب:</b></div>
+<div class="fa"><b>۱) واقعی</b> — <b>۲) نوروتیک</b> — <b>۳) اخلاقی (وجدانی)</b></div>
+<div class="fa"><b>هدف درمان از نظر فروید:</b></div>
+<div class="fa">• <b>فراخواندن نیروهای نهاد به سوی خودآگاه</b></div>
+<div class="fa">• تکمیل اهداف درمانی با <b>تحلیل کارکردهای خود (من)</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌شناسی خود</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>پیدایش:</b> <b>دهه ۱۹۳۰ میلادی</b></div>
+<div class="fa"><b>تعریف نهاد و خود:</b></div>
+<div class="fa">• <b>نهاد:</b> منبع و مخزن <b>انرژی غریزی و فطری</b></div>
+<div class="fa">• <b>خود (من):</b> از نهاد نشئت گرفته تا با همکاری محیط، امیال و خواسته‌های نهاد رو ارضا و تنش‌های آن رو برطرف نماید</div>
+<div class="fa"><b>تأکید روان‌شناسی خود بر:</b></div>
+<div class="fa">• کارکردهای خود (من)</div>
+<div class="fa">• <b>قابلیت‌های سازگاری</b></div>
+<div class="fa">• <b>واقعیت‌گرایی</b></div>
+<div class="fa">• <b>دفاع</b></div>
+<div class="fa"><b>شهرت روان‌شناسی خود:</b> با انتشار کتاب <b>آنا فروید</b> که به رابطه بین <b>خود و مکانیسم‌های دفاعی</b> می‌پرداخت، به اوج رسید.</div>
+<div class="fa"><b>رهبران روان‌شناسی خود:</b> <b>هانیز هارتمن، ملانی کلاین، ارنست کریس، رودولف لونشتاین</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هارتمن (۱۹۶۴) — تفاوت با فروید</h3><span class="badge s">مهم</span></div>
+<div class="fa">• تأثیر محیط رو بر سازگاری افراد تا حدی پذیرفت</div>
+<div class="fa">• کوشید محدودیت‌های نظری روان‌تحلیلی رو مرتفع سازه</div>
+<div class="fa"><b>تفاوت با فروید:</b> پیشنهاد کرد زندگی در طی <b>مرحله نامتمایز از خود و نهاد</b> آغاز می‌شه (نه اینکه خود از نهاد نشئت گیرد)</div>
+<div class="fa"><b>خود و نهاد همزمان</b> تمامی ساختار روان‌شناختی انسان رو شکل می‌دهن</div>
+<div class="fa">رشد خود = <b>کارکرد تعاملی زیست‌شناختی و محیطی</b> (وراثت + بالندگی + تعامل با نیروهای محیطی)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اریک اریکسون (۱۹۵۰، ۱۹۶۸)</h3><span class="badge s">مهم</span></div>
+<div class="fa">• نقش بسیار ارزنده در رشد مفهوم خود (من) و <b>مراحل رشدی روانی-اجتماعی</b></div>
+<div class="fa">• به عنوان <b>روان‌شناس خود</b> شناخته می‌شه</div>
+<div class="fa">• سهم عمده: بررسی <b>رشد روانی-اجتماعی شخصیت از نوزادی تا سالمندی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دستاورد روان‌شناسی خود</h3></div>
+<div class="fa">• نظریه روان‌تحلیلی رو از <b>پدیده‌های نابهنجار</b> به <b>پدیده‌های بهنجار زندگی</b> گسترش داد</div>
+<div class="fa">• نظریه روان‌تحلیلی بیش از قبل به <b>تفکر نیروهای محیطی</b> به‌عنوان عنصر کلیدی رشد روان‌شناختی پرداخت</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه روابط شیء</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>پیدایش:</b> در ادامه جنبش تفکر روان‌تحلیلی و با تأکید بر <b>نظریه سائق و غریزه</b> ایجاد شد.</div>
+<div class="fa">نخستین اندیشه‌ها در نوشته‌های <b>فروید، سندلر، فرزنی و ملانی کلاین</b> یافت می‌شه.</div>
+<div class="fa"><b>تأثیرپذیری کلاین:</b> تحت تأثیر تحلیلگران بریتانیایی <b>دی.دبلیو. وینی‌کات، دبلیو.آر.دی. فیربرن، هانری گانتریپ</b> (۱۹۴۰-۱۹۶۰)</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>تفاوت با نظریه‌های پیشین (سالیوان، هورنای، فرام):</b> نظریه روابط شیء بر <b>ماهیت رابطه اجتماعی و تعاملی روابط آدمی</b> تأکید می‌ورزه و برای <b>وقایع روانی و فرایندهای درون‌روانی، اهمیت اندکی</b> قائله.
+</div>
+<div class="fa"><b>مفاهیم کلیدی:</b></div>
+<div class="fa">• <b>بازنمایی و نمادی کردن دیگری</b></div>
+<div class="fa">• خاطرات خودآگاه و ناخودآگاه از اوایل زندگی</div>
+<div class="fa">• تجربه‌های جدید تحت عنوان <b>تصورات درونی</b> (نه کاملاً جدید)</div>
+<div class="fa">• بازنمایی «واقعی یا حقیقی» روابط، از طریق <b>تجربه نخستین کودک با شیء</b> شکل می‌گیره</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روان‌شناسی تجربه خود (پین)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">چهارمین و یکی از آخرین رویکردهای جدید روان‌شناسی، از سوی <b>پین (۱۹۸۸)</b> تحت عنوان <b>«تجربه خود»</b> معرفی شد.</div>
+<div class="fa"><b>نقل‌قول پین (۱۹۸۸، ص ۵۷۴):</b> «در چه قلمروی از روان‌شناسی تجربه خود می‌خواهم کار کنم، در حالی که تجربه خود، تجربه کاملاً ذهنی است که با احساس تعریف دقیق از خویشتن در ارتباط با ابژه، همراه است.»</div>
+<div class="fa"><b>موضوعات مورد توجه:</b></div>
+<div class="fa">• <b>مرزهای خود</b></div>
+<div class="fa">• <b>پیوستگی</b></div>
+<div class="fa">• <b>حرمت خود</b></div>
+<div class="fa">• واکنش‌ها در حالت عدم تعادل</div>
+<div class="fa">• <b>میزان تمایز یافتگی خود از دیگران</b></div>
+<div class="fa">• <b>جدایی مرزهای خود</b> و فقدان یا محو شدن مرزها</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هاینز کوهات (۱۹۷۱، ۱۹۷۷، ۱۹۸۴)</h3><span class="badge s">مهم</span></div>
+<div class="fa">• روان‌شناسی خود رو با <b>رشد خودشیفتگی</b> نزدیک ساخت</div>
+<div class="fa">• پدیداری «خود» از مفاهیم <b>بزرگ‌منشی و آرمان‌گرایی</b> نشئت گرفته است</div>
+<div class="fa">• <b>مرحله متناسب‌سازی با «شکست‌های کوچک»</b> در همدلی با <b>«والدین به قدر کافی خوب»</b> ← رشد شخصیت سالم</div>
+<div class="fa">• <b>آشفتگی در خود</b> زمانی ایجاد می‌شه که نیازهای کودک در فرایند <b>انعکاس‌سازی از بزرگ‌منشی و الگوهای ارزشمند آرمان‌گرایی</b> دچار ناکامی شدید بشن</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفاهیم عمده نظریه روان‌تحلیلی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>سه ویژگی نظریه (کوک، ۱۹۹۸):</b></div>
+<div class="fa">۱) نظام روان‌شناسی و فلسفی (فراشناخت)</div>
+<div class="fa">۲) ایجاد شده توسط فروید و پیروانش برای توصیف و تحلیل <b>فرایندهای عاطفی، شناختی و رفتاری</b> انسان</div>
+<div class="fa">۳) ارائه <b>رویکردهای درمانی ارزنده</b> برای درمان احساسات، افکار و رفتارهای ناسازگار</div>
+<div class="fa"><b>مفاهیم اساسی پیشگامان روان‌تحلیلی:</b></div>
+<div class="fa">• اقتباس از <b>نظریه لذت‌جویی</b> (تلاش برای دستیابی به لذت و دوری جویی از درد)</div>
+<div class="fa">• <b>شهوت (لیبیدو):</b> سائق زندگی، مبتنی بر انرژی زیست‌شناختی</div>
+<div class="fa">• لیبیدو از طریق <b>اصل لذت</b> و ابراز عشق نسبت به خود و سایرین هدایت می‌شه</div>
+<div class="fa">• این سائق در <b>ناخودآگاه</b> جای داره و از طریق <b>نهاد</b> بازنمایی می‌شه</div>
+<div class="fa">• <b>هسته شخصیت:</b> رسیدن به حد تعالی بین <b>اصل لذت</b> و <b>اصل واقعیت</b></div>
+<div class="fa"><b>اصل واقعیت:</b> نمایانگر خواسته‌های والدین و اجتماع و محدودیت‌ها و تعهداتی است که فرد در هنگام دنبال کردن ارضای نیازهایش در نظر می‌گیره.</div>
+<div class="fa"><b>سائق مرگ (تاناتوس):</b> دومین سائق عمده که از سوی فروید معرفی شد — <b>هیچ‌گاه مورد پذیرش و اقبال عموم قرار نگرفت</b>.</div>
+<div class="fa"><b>سایر مفاهیم پایه‌ای:</b> پویایی‌های ناخودآگاه، اهمیت اساسی <b>تاریخچه اولیه رشدی</b> و تجربه فرد، ماهیت <b>سرکوبی یا واپس‌رانی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> اندیشه معاصر روان‌کاوی، <b>انرژی سائق و نظریه لیبیدو</b> (شامل مراحل رشد روانی-جنسی) رو <b>نمی‌پذیره</b>. بنابراین امروزه نظریه لیبیدو و مراحل رشدی روانی-جنسی به‌عنوان <b>مفاهیم بنیادی</b> روان‌کاوی محسوب نمی‌شن. <b>اما</b> مفاهیم روانی-جنسی و نقش نوروز در زندگی آدمی بسیار بااهمیت‌اند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه دیدگاه نخستین در روان‌کاوی</h3></div>
+<div class="fa"><b>۱) دیدگاه روان‌شناختی:</b> تأکید بر رشد زیست‌شناختی فرد</div>
+<div class="fa"><b>۲) دیدگاه روان‌شناختی:</b> متأثر از حالات درونی روانی ناخودآگاه و خودآگاه</div>
+<div class="fa"><b>۳) دیدگاه اجتماعی-فرهنگی:</b> شامل تجربه‌های اولیه کودکی و خانوادگی (تأثیر بر باورهای اجتماعی، فرهنگی، ارزش‌ها، خواسته‌ها، انتظارات خانواده‌ها و روش‌های فرزندپروری) – مدی ۲۰۰۰</div>
+<div class="fa"><b>روان‌کاوان جدیدتر:</b></div>
+<div class="fa">• مفاهیم اولیه رو تا حدی به عاریه گرفتند، اما در دامنه <b>خواسته‌های فردی و بین‌فردی</b> محدود ساختند</div>
+<div class="fa">• <b>تمایلات جدایی/فردیت در مقابل درهم‌آمیزی/استقلال</b> (آنجیال و باکان)</div>
+<div class="fa">• <b>تبادل درون‌فردی</b> (کسلر)</div>
+<div class="fa">• <b>حوزه معلولیت‌ها</b> (سیلر): ساختار نگرش‌ها و سازگاری معلولین</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه شخصیت</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف دوالد (۱۹۷۸):</b> عناصر شخصیت فرد از <b>تعارض‌های حل نشده دوران طفولیت و کودکی</b> او و در تعامل با افراد مهم زندگی‌اش تشکیل شده‌اند. این تعارض‌ها در کارکردهای درون‌روانی و فرآیندهای روانی فرد اشاعه می‌یابند. این تعیین‌کننده‌های اساسی، <b>«هسته» کارکرد روانی و شخصیت</b> فرد رو تحت تأثیر قرار می‌دهن.</div>
+<div class="fa"><b>راپوپورت (۱۹۶۰):</b> <b>«ساختارهای روانی»</b> صرفاً توصیف‌کننده و تعریف‌کننده کارکردهای روان‌شناختی خاص فرد هستن. این ساختارها به صورت <b>قالب‌های فکری، افکار خودآیند و ناخودآگاه</b> درمیان و <b>میل اندکی به تغییر</b> دارن. ساختارهای هسته‌ای شخصیت در <b>سال‌های اولیه کودکی</b> پایه‌ریزی شده و در مراحل دیگر رشد <b>نسبتاً بدون تغییر</b> باقی می‌مونن.</div>
+<div class="fa"><b>شش مفهوم اساسی گرین‌سون (۱۹۶۷) برای درک شخصیت از دیدگاه روان‌کاوی:</b></div>
+<table class="compare">
+<thead><tr><th>#</th><th>مفهوم</th><th>خودمونی</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>توپوگرافی</td><td>خودآگاهی انسان شامل سلسله مراتب پیچیده: <b>ناخودآگاه</b> (لایه نخست، مهم‌ترین و تعیین‌کننده رفتار)، <b>نیمه‌آگاه</b>، <b>خودآگاه</b>. فعالیت‌های ناخودآگاه توسط <b>فرایندهای تفکر نخستین</b> کنترل می‌شه؛ دو ساختار دیگر تحت تأثیر <b>تفکر ثانویه</b> هستن.</td></tr>
+<tr><td>۲</td><td>ژنتیک (زیست‌شناختی)</td><td>رفتار آدمی از طریق <b>تجربه‌های نخستین زندگی</b> شکل گرفته. رفتار فعلی شامل صفات شخصیتی و علائم نوروتیکی است که از طریق <b>مراحل رشد روانی-جنسی</b> در سال‌های اولیه کودکی تعیین شده‌اند. شرایط زیست‌شناختی نیز به همون اندازه عوامل تجربه آغازین مورد توجه‌اند.</td></tr>
+<tr><td>۳</td><td>پویایی</td><td>رفتار انسان از طریق <b>تأثیر متقابل پویایی‌های تکانه‌ها یا سائق‌ها</b> مشخص می‌شه. امیال آدمی ترکیبی از <b>سائق‌های جنسی و پرخاشگری</b>ه. پویایی‌ها بر سائق‌های غریزی، مکانیسم‌های دفاعی، علایق خود (من) و تعارض‌ها متمرکزن. نمونه‌ها: <b>دوسوگرایی، چندگرایی شدید، شکل‌گیری علائم</b>.</td></tr>
+<tr><td>۴</td><td>اقتصادی</td><td>رفتار آدمی <b>انرژی می‌طلبد</b>. رفتار انسانی از طریق <b>انرژی روان‌شناختی</b> تنظیم و کنترل می‌شه. این انرژی ساختارها و فرآیندهای روانی رو تغذیه می‌کنه. <b>انرژی روانی از بین نمی‌ره، بلکه از شکلی به شکل دیگه‌ای تغییر می‌کنه.</b></td></tr>
+<tr><td>۵</td><td>ساختاری</td><td>رفتار انسان متأثر از تعامل میان سه ساختار بنیادین شخصیتی: <b>نهاد، خود (من)، فراخود</b>. نهاد = گنجینه تمامی سائق‌ها و غرایز. خود = ترکیب گروهی از کارکردهای گوناگون که رفتار رو هماهنگ و سازماندهی می‌کنن. فراخود = از طریق مکانیسم‌های دفاعی، میانجیگری میان امیال تعارض‌برانگیز نهاد، فراخود و واقعیت بیرونی.</td></tr>
+<tr><td>۶</td><td>سازمان‌ارائه (سازگارانه)</td><td>رفتار آدمی می‌بایست با امیال یا خواسته‌های <b>واقعیت بیرونی، به‌ویژه واقعیت اجتماعی</b> مطابقت یابد.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سایر نقطه‌نظرات دیدگاه روان‌کاوی</h3></div>
+<div class="fa"><b>روان‌شناختی:</b> رفتار انسان متأثر از عوامل اجتماعی به‌ویژه تجربه‌ها و زمینه خانواده</div>
+<div class="fa"><b>گشتالت (کل):</b> رفتار انسان <b>چندبعدی و چندعاملی</b>ه؛ جنبه‌های ادراکی، حرکتی، شناختی و عاطفی به‌گونه‌ای <b>منسجم و غیرقابل اشتقاق</b> بررسی می‌شن</div>
+<div class="fa"><b>لذت‌جویانه:</b> رفتار آدمی انعکاس یا ترکیبی از <b>تمامی شخصیت</b> اوست؛ انسان در جست‌وجوی <b>لذت‌طلبی و اجتناب از درد</b>ه</div>
+<div class="fa"><b>رویکردهای روان‌کاوی به ابعاد مهم روان‌شناختی می‌پردازن:</b> رشد، تجربه، خانواده، جامعه، خود، روابط، پدیده درون‌روانی، نمادسازی، ذهن‌گرایی، معنویت، نیاز، شخصیت، دفاع‌ها و رفتار.</div>
+<div class="fa"><b>نکته:</b> در رویکردهای روان‌کاوی <b>کل فرد</b> مورد توجه قرار می‌گیره و تشخیص بر جنبه‌هایی نظیر <b>نقاط قوت خود، سبک شخصیتی و بینش (بصیرت)</b> استواره.</div>
+</div>
+</section>
+
+<section id="theorists" class="section">
+<h2 class="section-title">۰۳ · نظریه‌پردازان (اینا خیلی مهمن)</h2>
+<p class="section-sub">هر کی چی گفت — خودمونی</p>
+
+<div class="card">
+<div class="card-head"><h3>پین (۱۹۸۸) — چهار مفهوم عمده</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>مفهوم:</b> رویکرد روان‌تحلیلی بر چهار مفهوم عمده استواره: <b>روان‌شناسی سائق، من (خود)، روابط شیء، خود (تجربه خود)</b>.</div>
+<div class="fa"><b>نکته:</b> این چهار دیدگاه همپوشانی دارن و در رویکردهای روان‌پویایی و غیر روان‌پویایی هم یافت می‌شن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>زیگموند فروید — نظریه سائق</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>مفهوم:</b> بنیان‌گذار روان‌کاوی؛ نظریه سائق، ساختار شخصیت (نهاد، خود، فراخود)، اضطراب (سه نوع)، سائق مرگ (تاناتوس).</div>
+<div class="fa"><b>جمله معروف:</b> <b>«جایی که نهاد است، خود نیز هست.»</b></div>
+<div class="fa"><b>سه نوع اضطراب:</b> واقعی، نوروتیک، اخلاقی (وجدانی).</div>
+<div class="fa"><b>هدف درمان:</b> فراخواندن نیروهای نهاد به سوی خودآگاه + تحلیل کارکردهای خود (من).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سیلر (۱۹۷۶، ۱۹۸۸، ۲۰۰۴)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱۹۷۶:</b> تجربه‌های بدنی اولیه می‌تونن در رشد شخصیتی افرادی که معلولیت‌های جسمانی دارن، تأثیر بگذارن.</div>
+<div class="fa"><b>۱۹۸۸:</b> بدن (یا بخشی از بدن) نخستین شیء است که از سوی خود (من) نیرو گذاری روانی می‌شه و سپس تصویر بدنی معنای کهن و نمادین رو کسب می‌کنه.</div>
+<div class="fa"><b>۲۰۰۴:</b> هدف توانبخشی، کمک به فرد است تا به سوی بازسازی مجدد خویشتن گام بردارد و علی‌رغم گسستگی که در هویت گذشته‌اش ایجاد شده، باز هم خودش رو پذیرفته و به زندگی‌اش ادامه بده.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آنا فروید</h3></div>
+<div class="fa">با انتشار کتابش که به رابطه بین <b>خود و مکانیسم‌های دفاعی</b> می‌پرداخت، شهرت روان‌شناسی خود به اوج رسید.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هانیز هارتمن (۱۹۶۴)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تفاوت با فروید:</b> پیشنهاد کرد زندگی در طی <b>مرحله نامتمایز از خود و نهاد</b> آغاز می‌شه (نه اینکه خود از نهاد نشئت گیرد).</div>
+<div class="fa"><b>خود و نهاد همزمان</b> تمامی ساختار روان‌شناختی انسان رو شکل می‌دهن.</div>
+<div class="fa">رشد خود = <b>کارکرد تعاملی زیست‌شناختی و محیطی</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اریک اریکسون (۱۹۵۰، ۱۹۶۸)</h3><span class="badge s">مهم</span></div>
+<div class="fa">نقش ارزنده در رشد مفهوم خود (من) و <b>مراحل رشدی روانی-اجتماعی</b>.</div>
+<div class="fa">به عنوان <b>روان‌شناس خود</b> شناخته می‌شه.</div>
+<div class="fa">سهم عمده: بررسی <b>رشد روانی-اجتماعی شخصیت از نوزادی تا سالمندی</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ملانی کلاین</h3><span class="badge s">مهم</span></div>
+<div class="fa">از رهبران روان‌شناسی خود و از نخستین اندیشه‌سازان نظریه روابط شیء.</div>
+<div class="fa">تحت تأثیر تحلیلگران بریتانیایی: <b>وینی‌کات، فیربرن، گانتریپ</b> (۱۹۴۰-۱۹۶۰).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هاینز کوهات (۱۹۷۱، ۱۹۷۷، ۱۹۸۴)</h3><span class="badge s">مهم</span></div>
+<div class="fa">روان‌شناسی خود رو با <b>رشد خودشیفتگی</b> نزدیک ساخت.</div>
+<div class="fa">پدیداری «خود» از مفاهیم <b>بزرگ‌منشی و آرمان‌گرایی</b> نشئت گرفته.</div>
+<div class="fa"><b>مرحله متناسب‌سازی با «شکست‌های کوچک»</b> در همدلی با <b>«والدین به قدر کافی خوب»</b> ← رشد شخصیت سالم.</div>
+<div class="fa"><b>آشفتگی در خود</b> زمانی ایجاد می‌شه که نیازهای کودک در فرایند <b>انعکاس‌سازی از بزرگ‌منشی و الگوهای ارزشمند آرمان‌گرایی</b> دچار ناکامی شدید بشن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>گرین‌سون (۱۹۶۷) — شش مفهوم اساسی + چهار روش تحلیل</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>شش مفهوم:</b> توپوگرافی، ژنتیک، پویایی، اقتصادی، ساختاری، سازمان‌ارائه (سازگارانه).</div>
+<div class="fa"><b>چهار روش تحلیل:</b> مواجهه، روش‌سازی (روشن‌سازی)، تفسیر، کسب بینش.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کوک (۱۹۹۸) — سه ویژگی نظریه روان‌تحلیلی</h3></div>
+<div class="fa">۱) نظام روان‌شناسی و فلسفی (فراشناخت)</div>
+<div class="fa">۲) ایجاد شده توسط فروید و پیروانش برای توصیف و تحلیل فرایندهای عاطفی، شناختی و رفتاری انسان</div>
+<div class="fa">۳) ارائه رویکردهای درمانی ارزنده برای درمان احساسات، افکار و رفتارهای ناسازگار</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دوالد (۱۹۷۸) و راپوپورت (۱۹۶۰) — نظریه شخصیت</h3></div>
+<div class="fa"><b>دوالد (۱۹۷۸):</b> عناصر شخصیت فرد از تعارض‌های حل نشده دوران طفولیت و کودکی و در تعامل با افراد مهم زندگی‌اش تشکیل شده‌اند.</div>
+<div class="fa"><b>راپوپورت (۱۹۶۰):</b> ساختارهای روانی صرفاً توصیف‌کننده کارکردهای روان‌شناختی خاص فرد هستن؛ ساختارهای هسته‌ای شخصیت در سال‌های اولیه کودکی پایه‌ریزی شده و نسبتاً بدون تغییر باقی می‌مونن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فینچل (۱۹۴۵) — روش‌های درمانی جدید برای گروه‌های خاص</h3><span class="badge s">مهم</span></div>
+<div class="fa">گروه‌های خاص: سالمندان، افرادی که از هوش کافی برخوردار نیستن، موقعیت‌های غیرمطلوب زندگی، مشکلات روان‌رنجوری کوچک، علائم روان‌رنجوری حاد، مشکلات حاد گفتار، فقدان خود (من) همکاری‌کننده، افرادی که در جست‌وجوی بهره ثانوی بیماری هستن، شخصیت‌های روان‌پریش.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لویه و سیلر (۲۰۱۴)</h3></div>
+<div class="fa">نگرش‌های افراد جامعه نسبت به معلولین اساساً <b>انعکاس‌دهنده مؤلفه‌هایی</b> نظیر: دوری‌جویی از صمیمیت، طرد کلی، پیامدهای عاطفی-روانی معلولیت، هویت آشفته، محدودیت‌های کارکردی افراد معلول.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>لیبرت و لیبرت (۱۹۹۸) و مدی (۲۰۰۰)</h3></div>
+<div class="fa">آزمون‌های روان‌شناختی بیشتر متأثر از شرایط و رفتار درمانگر هستن تا آزمودنی؛ از استانداردسازی، نمره‌دهی و تفسیر آن‌ها مشکلاتی وجود داره.</div>
+</div>
+</section>
+
+<section id="process" class="section">
+<h2 class="section-title">۰۴ · فرآیند مشاوره روان‌تحلیلی</h2>
+<p class="section-sub">انواع نوروز، روش‌های فینچل، مفاهیم بنیادین و چهار روش تحلیل</p>
+
+<div class="card">
+<div class="card-head"><h3>تقسیم‌بندی نوروز توسط فروید (۱۹۲۰)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>نوع نوروز</th><th>ویژگی</th><th>کاربرد در درمان</th></tr></thead>
+<tbody>
+<tr><td>انتقال روان‌رنجور</td><td>فرد <b>توانایی برقراری انتقال</b> دارد</td><td>✅ <b>شاخص درمانی</b> محسوب می‌شه</td></tr>
+<tr><td>خودشیفتگی روان‌رنجور</td><td>فرد به <b>دوران پیش از ایجاد روابط شیء</b> بازمی‌گردد؛ تمایل به <b>کناره‌گیری و انزوا</b></td><td>❌ <b>در درمان کاربردی ندارد</b></td></tr>
+</tbody>
+</table>
+<div class="fa"><b>دلیل:</b> تفسیر انتقال، عمده‌ترین ابزار درمانی روان‌کاویه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>روش‌های درمانی جدید فینچل (۱۹۴۵) برای گروه‌های خاص</h3><span class="badge s">مهم</span></div>
+<div class="fa">• سالمندان</div>
+<div class="fa">• افرادی که از <b>هوش کافی</b> برخوردار نیستن</div>
+<div class="fa">• موقعیت‌های غیرمطلوب زندگی</div>
+<div class="fa">• مشکلات روان‌رنجوری کوچک</div>
+<div class="fa">• علائم روان‌رنجوری حاد</div>
+<div class="fa">• مشکلات حاد گفتار</div>
+<div class="fa">• <b>فقدان خود (من) همکاری‌کننده</b></div>
+<div class="fa">• افرادی که در جست‌وجوی <b>بهره ثانوی بیماری</b> هستن</div>
+<div class="fa">• <b>شخصیت‌های روان‌پریش</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفاهیم بنیادین درمان روان‌کاوی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) تداعی آزاد</b> — <b>۲) تخلیه هیجانی</b> — <b>۳) انتقال</b> — <b>۴) مقاومت</b> — <b>۵) تفسیر</b> (علامت رؤیاها، تخیل‌ها، دفاع‌ها و سبک‌های شخصیتی)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مؤلفه‌های اساسی روان‌کاوی سنتی (گرین‌سون، ۱۹۶۷)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) تداعی آزاد:</b> <b>اولین و قدیمی‌ترین فن درمان روان‌کاوی</b>؛ اساسی‌ترین روشی که از بطن آن فنون دیگر اشتقاق یافتند؛ <b>تنها در روان‌درمانی‌های روان‌تحلیلگرانه</b> مورد استفاده قرار می‌گیره.</div>
+<div class="fa"><b>۲) انتقال:</b> تعریف گرین‌سون: «تجربه احساسات، سائق‌ها، نگرش‌ها، تخیل‌ها و دفاع‌های فرد نسبت به فرد دیگر (درمانگر) است که برای مراجع یادآور افراد تأثیرگذار او در زندگی کودک‌اش بوده‌اند.»</div>
+<div class="fa">• تکرار انتقال، برای تحلیلگر اطلاعاتی فراهم می‌سازه که در دسترس‌اش نبوده‌اند</div>
+<div class="fa">• <b>«انتقال روان‌رنجور»:</b> واکنش‌های انتقالی مراجع به تحلیلگر به‌مثابه <b>هسته زندگی عاطفی بیمار</b> که تعارض‌های روان‌رنجور او رو در شرایط درمان آشکار می‌سازه</div>
+<div class="fa"><b>۳) مقاومت:</b> تمامی نیروهای درون بیمار که علیه روش‌ها و فرآیندهای درمان روان‌تحلیلی به کار می‌ره.</div>
+<div class="fa">• بدون توجه به منبع آن، از طریق <b>خود (من)</b> تصور می‌گیره</div>
+<div class="fa">• به‌طور <b>خودآگاه یا ناخودآگاه</b> عمل می‌کنه</div>
+<div class="fa">• <b>مقاومت = تکرار تمامی مکانیسم‌های دفاعی</b> که فرد تا به حال برای دفاع از خود به کار برده</div>
+<div class="fa">• سؤالات کلیدی: چگونه مقاومت می‌کنه؟ در برابر چه مقاومت می‌کنه؟ چرا مقاومت می‌کنه؟</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار روش «تحلیل کردن» پدیده روانی (گرین‌سون، ۱۹۶۷)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>روش</th><th>خودمونی</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>مواجهه</td><td>نخستین گام در تحلیل؛ <b>آگاه ساختن بیمار</b> از مسائلش</td></tr>
+<tr><td>۲</td><td>روش‌سازی (روشن‌سازی)</td><td>فعالیت‌هایی با هدف <b>تحلیل دقیق و جزء به جزء</b> پدیده روانی؛ جزئیات بااهمیت تعریف شده و سؤالات از موضوعات اضافی و گمراه‌کننده بررسی می‌شن</td></tr>
+<tr><td>۳</td><td>تفسیر</td><td>روشی که <b>روان‌تحلیلگران رو از سایر درمانگران جدا می‌سازه</b>؛ ابزاری اساسی و بنیادی در درمان روان‌تحلیلی؛ از طریق تفسیر، <b>پدیده ناخودآگاه مبدل به خودآگاه</b> می‌شه</td></tr>
+<tr><td>۴</td><td>کسب بینش</td><td><b>مرحله نهایی</b> فرآیند تحلیل کردن؛ مجموعه‌ای پیچیده از روش‌ها و فرآیندهایی که پس از ایجاد بینش رخ می‌ده؛ بینش رو به <b>تغییر در فرد</b> مبدل می‌سازه</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خاتمه درمان و اتحاد کاری (درمانی)</h3></div>
+<div class="fa"><b>خاتمه درمان:</b> روان‌درمانی زمانی خاتمه می‌یابد که بیمار به <b>اهداف عمده مورد نظر خود</b> در درمان دست یافته باشه و تحلیلگر بتونه <b>تمامی انتقال‌ها</b> رو حل نماید.</div>
+<div class="fa"><b>اتحاد کاری (درمانی):</b> مفاهیم و فرآیندهای مورد نیاز تحلیلگر رو تکمیل می‌سازه. نسبتاً <b>غیرروان‌رنجور</b>ه و رابطه منطقی میان بیمار و تحلیلگر برقرار می‌سازه تا به بیمار کمک کنه که به اهداف درمانی‌اش دست یابد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تأکید نظریه روان‌کاوی بر</h3></div>
+<div class="fa">• <b>ناخودآگاه</b></div>
+<div class="fa">• <b>نقش انتقال</b></div>
+<div class="fa">• تمایز از سایر رویکردهای روان‌درمانی دیگر</div>
+<div class="fa"><b>مشکلات قابل پرداخت با دیدگاه روان‌کاوی:</b></div>
+<div class="fa">• <b>تصور بدنی</b> — • <b>احساس شرمساری</b> — • <b>خشم و افسردگی</b> — • <b>فقدان‌ها</b></div>
+</div>
+</section>
+
+<section id="defense" class="section">
+<h2 class="section-title">۰۵ · مکانیسم‌های دفاعی در سازگاری افراد دارای معلولیت</h2>
+<p class="section-sub">هفت مکانیسم با مثال توانبخشی</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف مکانیسم‌های دفاعی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>فرآیندهای ناهشیاری که هنگامی که خود (من) قادر به خنثی‌سازی اضطراب و سایر آشفتگی عاطفی یا تکانه‌های غیرقابل پذیرش نیست، فعال شده و وارد عمل می‌شن.</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هفت مکانیسم دفاعی مشهور (با مثال توانبخشی)</h3><span class="badge s">حفظ کن</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>مکانیسم</th><th>خودمونی</th><th>مثال در معلولیت</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>سرکوبی (واپس‌رانی)</td><td>راندن تعارض‌های درون‌روانی و تجربه‌های دردناک از حیطه هشیاری به ناهشیاری</td><td>فردی با معلولیت قابل رؤیت، احساسات شرم خودش رو که از دوران کودکی داشته، سرکوب می‌کنه</td></tr>
+<tr><td>۲</td><td>فرافکنی</td><td>برونی‌سازی افکار ممنوعه، نیازها و نکته‌های ناخودآگاه و انتساب آن‌ها به دیگران</td><td>فردی که اخیراً دچار معلولیت شده، عدم پیشرفت خودش رو در توانبخشی به ناتوانی یا عدم کفایت کارکنان مرکز درمانی یا پزشکان نسبت می‌ده</td></tr>
+<tr><td>۳</td><td>عقلانی‌سازی</td><td>پس از یک رخداد واقعی اتفاق می‌افته؛ فرد برای رفتارهای ناصواب یا غیرقابل پذیرش خود، <b>دلایل اشتباه و غیرمنطقی</b> می‌تراشه</td><td>فردی که شنوایی خودش رو از دست داده، عدم حضور خودش در بحث‌ها رو به دلیل <b>خسته‌کننده یا بی‌خودی بودن مباحث</b> توجیه می‌سازه</td></tr>
+<tr><td>۴</td><td>والایش</td><td>انجام رفتارهای مفید و جامعه‌پسند و قابل قبول، به جای بیان آرزوها و تکانه‌های ممنوع و غیرقابل قبول از نظر اجتماع</td><td>تبدیل خشم و نفرت به <b>اثرهای جانوران هنری</b></td></tr>
+<tr><td>۵</td><td>واکنش وارونه (تشکیل واکنش)</td><td>ابراز احساسات و پاسخ به عواطفی که فرد از آشکار شدن <b>متضاد</b> آن‌ها به شدت هراسانه</td><td>والدینی که بیش از حد رفتارهای <b>دوستانه و حمایت‌گرانه</b> از خود بروز می‌دهند، در واقع می‌کوشن احساسات <b>طرد و خشم</b> خودشون رو نسبت به کودکی که ناتوانی به دنیا آمده است، پنهان سازن</td></tr>
+<tr><td>۶</td><td>بازگشت</td><td>بازگشت به رفتارهای کودکانه‌ای که فرد در مراحل رشد کودک‌اش داشته</td><td>فردی که اخیراً دچار معلولیت شده، هنگامی که نیازهایش فوراً ارضا نمی‌شن، <b>گریه و زاری</b> رو از سر می‌گیره</td></tr>
+<tr><td>۷</td><td>جبران</td><td>جست‌وجوی فعالیت‌هایی که فرد در آن‌ها بتونه از دیگران پیشی بگیره یا سرآمد بشه</td><td><b>جبران مستقیم/اولیه:</b> جست‌وجوی فعالیت‌هایی که فرد به‌طور <b>غیرمستقیم</b> سرآمد بشه. <b>جبران غیرمستقیم/ثانویه:</b> فرد معلول رفتارهایی انجام می‌ده که معلولیت او رو بپوشانه؛ مثلاً فردی که در اوایل کودکی بینایی خودش رو از دست می‌ده، بعدها به <b>موسیقی‌دان موفقی</b> مبدل می‌شه</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>هدف غالب فعالیت‌های جبرانی معلولین:</b> رسیدن به یک هدف واقعی، یعنی <b>بی‌عیب بودن و انگیزه‌زدایی از معلولیت‌شان</b>.
+</div>
+</div>
+</section>
+
+<section id="body" class="section">
+<h2 class="section-title">۰۶ · تأثیر معلولیت بر تصویر بدنی</h2>
+<p class="section-sub">تعریف، شیلدر، سیلر، جراحت خودشیفتگی و پیوند اعضا</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف تصویر بدنی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>بازنمایی ناخودآگاه فرد از بدن‌اش است.</b>
+</div>
+<div class="fa"><b>شیلدر:</b> تصویر بدنی به‌مثابه <b>اساسی‌ترین تصور خود، خودپنداره و حتی هویت فردی</b> است و انعکاسی از تصور سه‌بُعدی نمادین و هیجان‌های بااهمیت فرده که شامل <b>ابعاد فردی، بین‌فردی، محیطی و موقتی/گذرا</b> است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تأثیر معلولیت بر تصویر بدنی</h3><span class="badge s">مهم</span></div>
+<div class="fa">• بیماران مزمن و معلولین، تصویر بدنی خودشون رو <b>تغییر داده یا حتی تحریف می‌کنن</b></div>
+<div class="fa">• در نتیجه، <b>خودپنداره</b> آن‌ها نیز دچار تحول و تغییر می‌شه</div>
+<div class="fa">• سایر مشکلات ناشی از معلولیت‌ها: <b>درد، بدشکلی بدنی، محدودیت‌های حسی و حرکتی، تحریف‌های شناختی</b></div>
+<div class="fa">• همه این موارد علیه <b>ثبات تصویر بدنی</b> وارد عمل می‌شن و ضرورت <b>تغییر در ساختار و پویایی تصویر بدنی</b> رو می‌طلبند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سازگاری روانی-اجتماعی موفق</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">فرد معلول باید تصویر بدنی خودش رو بر اساس تغییرات جسمانی اخیر <b>بازسازی کنه</b> و بنابراین <b>هویت فردی جدیدی</b> رو برای خودش تعریف کنه.</div>
+<div class="fa"><b>سازگاری ناموفق:</b></div>
+<div class="fa">• مشکلات جسمانی و علائم روان‌پزشکی</div>
+<div class="fa">• <b>درد روان‌زاد، خستگی مفرط، کاهش انرژی</b></div>
+<div class="fa">• <b>احساس اضطراب، افسردگی، خشم</b></div>
+<div class="fa">• <b>انزوای اجتماعی</b></div>
+<div class="fa">• تلاش برای <b>انکار</b> فقدان یا کارکرد مختل بخشی از بدن</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظریه‌پردازی روان‌تحلیلگرانه درباره معلولیت جسمانی غیرمنتظره</h3><span class="badge s">مهم</span></div>
+<div class="fa">در ابتدا به منزله <b>جراحت خودشیفتگی ژرف یا بسیار عمیق</b> محسوب می‌شه.</div>
+<div class="fa"><b>دلیل:</b> خودشیفتگی و تصویر بدنی با هم و به‌طور موازی در طی یک دوره رشد طبیعی آدمی پیش رفته و متحول می‌شن.</div>
+<div class="fa"><b>سیلر (۱۹۸۸):</b> بدن (یا بخشی از بدن) نخستین شیء است که از سوی خود (من) نیرو گذاری روانی می‌شه و سپس تصویر بدنی معنای کهن و نمادین رو کسب می‌کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیامدهای آسیب به بدن (به‌ویژه در مراحل اولیه رشد)</h3></div>
+<div class="fa">• <b>سردرگمی در هویت‌یابی</b></div>
+<div class="fa">• <b>تضعیف حرمت خود</b></div>
+<div class="fa">• <b>آشفتگی‌های عاطفی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نقص‌های بدنی اولیه ← جراحت خودشیفتگی</h3><span class="badge s">مهم</span></div>
+<div class="fa">در زمانی که خود (من) باید رشد یابد، بخشی از آن دچار اختلال می‌شه؛ بنابراین تعارض‌های حل نشده به دلیل اختلال در رشد خود (من) به‌گونه‌ای <b>متمرکز، پایدار و همراه با انواع اضطراب‌های دیگر</b> در فرد معلول بروز می‌کنه، از جمله:</div>
+<div class="fa">• <b>اضطراب از هم‌پاشیدگی</b></div>
+<div class="fa">• <b>اضطراب اختگی</b></div>
+<div class="fa"><b>چرخه تأثیرات:</b> <b>جراحت خودشیفتگی حل نشده</b> ← <b>آشفتگی در تصویر بدنی</b> ← <b>خودپنداره غیرواقعی</b> در فرد</div>
+<div class="fa"><b>نکته مهم:</b> گرچه این تعریف ممکنه به <b>شکوفایی توانایی‌های هوشی و خلاقیت‌های هنری</b> نیز منجر بشن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وقتی خودشیفتگی دچار جراحت می‌شه</h3></div>
+<div class="fa">ممکنه خودش رو به‌طور کاملاً <b>جبرانی</b> عرض کنه که این امر به موارد زیر منجر می‌شه:</div>
+<div class="fa">• <b>افزایش پرخاشگری</b></div>
+<div class="fa">• <b>خشم غیرقابل کنترل</b></div>
+<div class="fa">• <b>روابط شیء مختل</b></div>
+<div class="fa">• <b>خود بزرگ‌بینی</b></div>
+<div class="fa">• <b>حتی باورهای هذیانی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آسیب‌های وارد بر خودشیفتگی در دوره‌های رشدی</h3></div>
+<div class="fa">• <b>جدایی/فردیت</b></div>
+<div class="fa">• <b>ادیبی</b></div>
+<div class="fa">• <b>مراحل نوجوانی</b></div>
+<div class="fa">← فرد رو <b>آسیب‌پذیرتر</b> و به <b>تحریف تصویر بدنی</b> و <b>بازنمایی‌های ناپایدار از خود</b> و <b>خودپنداره ضربه‌پذیر</b> منتج می‌شه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پیوند اعضا (نکته مهم)</h3><span class="badge s">مهم</span></div>
+<div class="fa">افزودن یک ارگان جدید از طریق پیوند اعضا، نیز به همون اندازه می‌تونه <b>آشفته‌کننده</b> باشه.</div>
+<div class="fa">فرد پیوندی در حالت <b>اضطراب شدید بین مرگ و زندگی</b> قرار می‌گیره، زیرا غالباً عضو پیوندی از فرد اهداکننده‌ای است که زندگی خودش رو به خاطر اهدای عضو به مخاطره انداخته.</div>
+<div class="fa">فرد گیرنده دائماً احساس می‌کنه <b>یک ارگان یا عضو حیاتی رو از فرد اهداکننده دزدیده یا به یغما برده است</b> و <b>احساس گناه، سرزنش خود و ترس از تنبیه</b> سراسر وجود او رو فرا می‌گیره.</div>
+</div>
+</section>
+
+<section id="reactions" class="section">
+<h2 class="section-title">۰۷ · واکنش‌های روانی-اجتماعی به فقدان و معلولیت</h2>
+<p class="section-sub">هفت مرحله سازگاری + شش دسته واکنش + هفت نگرش</p>
+
+<div class="card">
+<div class="card-head"><h3>فرایندهای سازگاری روانی-اجتماعی افراد معلول</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱)</b> <b>انعکاس انتقال</b> یا گذر نمادین از حالت «نرمال (طبیعی)» یا «جسم کامل و بدون نقص» (خود)</div>
+<div class="fa"><b>۲)</b> <b>پذیرش فقدان</b> یا نقص جسمانی (خود فعلی)</div>
+<div class="fa"><b>۳)</b> فرد معلول برای پذیرش معلولیت، <b>روان‌شناسی و اجتماعی خویشتن</b> خودش یا کارکرد آن رو داره</div>
+<div class="fa"><b>۴)</b> با <b>معنادهی نمادین</b> به معلولیت یا بخشی از بدن که دچار معلولیت شده، فرد فعالانه وارد جامعه می‌شه</div>
+<div class="fa"><b>۵)</b> فرد دچار معلولیت <b>مجموعه‌ای پیچیده از فعالیت‌های روانی</b> رو دنبال می‌کنه</div>
+<div class="fa"><b>۶)</b> نخستین واکنش فرد معلول <b>دوری جویی از خود و سپس دنیای خارج</b>ه و پس از <b>دوره انکار</b>، می‌کوشه معلولیت و پیامدهای آن رو <b>بی‌اهمیت و کوچک</b> جلوه بده</div>
+<div class="fa"><b>۷)</b> سپس انرژی‌ها به تدریج در یک <b>بدن و تصویر بدنی جدید</b> مجدداً مطرح می‌شن و در نهایت، فرد <b>تماس جدیدی</b> رو با <b>واقعیت ادراک‌شده بیرونی</b> برقرار می‌سازه</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش دسته واکنش سازگاری از نقطه نظر روان‌کاوی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>واکنش</th><th>خودمونی</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>شوک، ناباوری و آشفتگی روانی</td><td>واکنش اولیه</td></tr>
+<tr><td>۲</td><td>اضطراب</td><td>جراحت، فقدان و معلولیت (همانند نابینایی و قطع عضو) از نظر روان‌کاوی <b>اضطراب اختگی</b> رو بیدار می‌سازه</td></tr>
+<tr><td>۳</td><td>احساس گناه، سوگواری و افسردگی</td><td>نسبت به فقدان ابژه‌های واقعی و تغییرات اساسی در خودشفقتی، تخلیه‌های هیجانی و تصور خویشتن</td></tr>
+<tr><td>۴</td><td>انکار بیماری یا معلولیت</td><td>انکار تأثیر معلولیت بر کارکرد فرد و کم‌اهمیت جلوه دادن شرایط موجود</td></tr>
+<tr><td>۵</td><td>خشم و پرخاشگری</td><td>خشم نسبت به درون (نتیجه: احساس گناه و شرمساری) یا خشم متوجه دیگران (سرزنش دیگران و احساس نیاز به انتقام)</td></tr>
+<tr><td>۶</td><td>سازگاری و بازگشت به زندگی متداول</td><td>حل موفق افسردگی و نگرانی‌ها و شکل‌دهی مجدد تصویر خویشتن</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هفت باور/نگرش رایج نسبت به افراد معلول (از نقطه نظر روان‌کاوی)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱)</b> <b>باور به اینکه معلولیت مکافاتی است</b> که فرد برای انجام اعمال گناه‌آلود خودش به آن دچار شده.</div>
+<div class="fa"><b>۲)</b> <b>فرافکنی تکانه‌ها و امیال غیرقابل پذیرش</b> افراد جامعه به معلولیت‌ها (معلولین کسانی هستن که عادلانه مجازات شده‌اند) و ممکنه بعدها از سایرین انتقام بگیرن.</div>
+<div class="fa"><b>۳)</b> تصور برخی افراد: اگه معلولیت <b>مکافات قبل از ارتکاب گناه</b> است، پس فرد معلول برانگیخته می‌شه تا <b>عمل شیطانی یا خبیثانه‌ای</b> در مقابله با بی‌عدالتی که علیه او روا داشته شده، انجام بده.</div>
+<div class="fa"><b>۴)</b> برخی مردم اگه با افراد معلول در تماس باشن، دائماً به دلیل <b>محروم ساختن معلولین از حقوق اساسی‌شان</b>، احساس گناه شدیدی می‌کنن.</div>
+<div class="fa"><b>۵)</b> هنگامی که فردی بخشی از مهم‌ترین عضو بدن یا کارکرد آن رو برای همیشه از دست بده، افرادی که به او نزدیک‌اند، دائماً <b>احساس گناه</b> می‌کنن.</div>
+<div class="fa"><b>۶)</b> <b>معلولیت به‌مثابه یادآوری مرگ</b> است؛ فقدان یا معلولیت همیشه به‌عنوان <b>مرگ و نابودی</b> در نظر گرفته شده.</div>
+<div class="fa"><b>۷)</b> <b>معلولیت به‌مثابه تهدیدی علیه تصویر بدنی</b> فرد اطلاق می‌شه که <b>اضطراب اختگی</b> وارد دوران اولیه کودک‌اش بیدار ساخته و فرد دائماً از فقدان اندام و عدم هماهنگی جسمانی در هراسه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نتیجه‌گیری (لویه و سیلر، ۲۰۱۴):</b> نگرش‌های افراد جامعه نسبت به معلولین اساساً <b>انعکاس‌دهنده مؤلفه‌هایی</b> نظیر: <b>دوری‌جویی از صمیمیت، طرد کلی، پیامدهای عاطفی-روانی معلولیت، هویت آشفته، محدودیت‌های کارکردی افراد معلول</b>.
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۸ · نقاط قوت و محدودیت‌ها + دام‌های امتحانی</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card">
+<div class="card-head"><h3>نقاط قوت نظریه روان‌کاوی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>کاربردها:</b> تفسیر رؤیا و شوخی‌ها، فرزندپروری، تجربه‌های آموزش و یادگیری، رشد و انتخاب شغل، تاریخچه، مذهب و اسطوره‌شناسی، هنر و موسیقی و ادبیات، سازمان‌های سیاسی و اجتماعی، مردم‌شناسی، آزمون‌های روان‌شناختی (فنون فرافکنی)، تجربه‌های زندگی روزمره (لغزش‌های کلامی و اطوارها).</div>
+<div class="fa"><b>جنبه‌های قوت برای توانبخشی:</b></div>
+<div class="fa"><b>۱)</b> روان‌تحلیلی نشئت گرفته از مفاهیم روان‌پویاییه که در کاربرد مشاوره توانبخشی <b>بسیار مؤثرن</b>، همانند: <b>مکانیسم‌های دفاعی، بهره ثانوی بیماری، تصویر بدنی</b>.</div>
+<div class="fa"><b>۲)</b> دیدگاه روان‌پویایی، متخصصان توانبخشی رو قادر می‌سازه تا بر <b>معنای ذهنی و بی‌همتای فقدان، احساس گناه و معلولیت</b> که زندگی افراد رو متأثر ساخته، <b>ژرف‌اندیشی</b> بیفکنن و به <b>تأثیر معلولیت بر اعضای خانواده</b> فرد نیز بنگرن.</div>
+<div class="fa"><b>۳)</b> رویکرد روان‌پویایی، به متخصصان توانبخشی <b>دیدگاهی پویا و رشدی</b> اهدا می‌کنه تا فرایند سازگاری فرد با معلولیت رو در <b>طی گستره زندگی</b> بنگرن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>محدودیت‌های نظریه روان‌کاوی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱)</b> ارزیابی عناصر تشکیل‌دهنده نظریه بر اساس پژوهش‌های کنترل‌شده <b>بسیار دشواره</b>؛ بخش اندکی از مفاهیم مورد پژوهش قرار گرفته‌اند؛ مفاهیم کلی همچنان <b>دقیق تعریف نشده یا مورد آزمون قرار نگرفته‌اند</b>؛ مفاهیمی نظیر <b>هیجانی، نهاد و لیبیدو بدون تعریف</b> باقی مونده‌اند.</div>
+<div class="fa"><b>۲)</b> مشاهدات بالینی از موردهای پژوهشی، بیشتر <b>شبیه به داستان‌اند</b> و در بررسی آن‌ها <b>سوگیری کنترل‌نشده‌ای</b> وجود داره؛ موارد پژوهشی هیچ‌گاه <b>نماینده واقعی جمعیت مراجعان</b> نبوده‌اند.</div>
+<div class="fa"><b>۳)</b> برخی مفاهیم سنتی روان‌تحلیلی همانند <b>اضطراب اختگی، رشک آلت، لیبیدو و رشد و تحول فراخود زنان</b> به دلیل <b>سوگیری علنی و آشکار جنسیتی</b> به شدت مورد انتقادن.</div>
+<div class="fa"><b>۴)</b> <b>تأکید عمده بر مسائل درون‌روانی</b>ه و به تعارض‌ها و مشکلات اجتماعی همچون <b>کژکارکردی خانواده</b> و مشکلات اجتماعی کم‌تر می‌پردازه؛ بیشتر فرایند درمان پیرامون <b>گذشته فرد</b> صورت می‌گیره.</div>
+<div class="fa"><b>۵)</b> <b>آزمون‌های روان‌شناختی</b> بیشتر متأثر از <b>شرایط و رفتار درمانگر</b> هستن تا آزمودنی؛ از <b>استانداردسازی، نمره‌دهی و تفسیر</b> آن‌ها مشکلاتی وجود داره (لیبرت و لیبرت، ۱۹۹۸؛ مدی، ۲۰۰۰).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>محدودیت‌های نظریه روان‌کاوی در توانبخشی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> <b>الگوی روان‌پویایی ارائه‌شده برای توانبخشی از نوع کوتاه‌مدته</b>؛ محدودیت‌های زمانی، کمبود پرسنل یا درمانگران آموزش‌دیده، محدودیت‌های کلامی برخی مراجعان، کاهش بصیرت فردی، محدودیت‌های خاص مرتبط با <b>مشکلات شناختی و هوشی</b> (مثل مراجعان دارای <b>عقب‌ماندگی ذهنی، ضربه مغزی شدید، بیماری روانی حاد</b>) ← <b>گزینه مناسبی نیستند</b>؛ کار توانبخشی تمرکز بر <b>«اینجا و اکنون»</b> زندگی مراجع است.</div>
+<div class="fa"><b>۲)</b> درمان اقتباس‌شده از روان‌تحلیلی بر <b>فرایندهای مختصر، انعکاسی و بینش‌مدار</b> تأکید می‌ورزه، در حالی که تأکید توانبخشی بر <b>اهداف عینی و عملکردی</b>ه و بیشتر در پی <b>یافتن شغل متناسب و زندگی مستقلانه</b> برای مراجعانه.</div>
+<div class="fa"><b>۳)</b> هدف درمان روان‌تحلیلی برای کار در توانبخشی ظاهراً <b>تسکین نشانه‌ها و کاهش اضطراب</b>ه، در عوض آنکه به <b>بازسازی مجدد شخصیت، آماده‌سازی احساسات فرد برای کنار آمدن با مشکلات آینده</b> استوار باشه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نقل‌قول مهم سیلر (۲۰۰۴):</b> «هدف از توانبخشی، <b>کمک به فرد است تا به سوی بازسازی مجدد خویشتن گام بردارد</b> و علی‌رغم گسستگی که در هویت گذشته او ایجاد شده است، باز هم خود را پذیرفته و به زندگی‌اش ادامه دهد... توانبخشی <b>تلاش مضاعف و فراگیری</b> را می‌طلبد که در آن متخصصان همانند <b>یک تیم</b> عمل کنند و مراجع را برای <b>فراگیری مهارت‌ها، آموزش و سازگاری با معلولیت</b> آماده سازند. در حالی که، نظریه روان‌کاوی بیشتر بر <b>مسائل ناخودآگاهی چون سوگواری برای از دست دادن شیء مورد علاقه (بخشی از بدن)</b> تأکید می‌کند که برای فردی که دچار معلولیت شده است، <b>ارزش چندانی ندارد</b>.»
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱: چهار مفهوم پین</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>روان‌شناسی سائق، من (خود)، روابط شیء، خود (تجربه خود)</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> سائق + من + روابط شیء + خود.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: جمله معروف فروید</h3>
+<div class="fa"><b>دام چیه:</b> جمله رو اشتباه نقل می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> <b>«جایی که نهاد است، خود نیز هست.»</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> نهاد و خود.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: سه نوع اضطراب فروید</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>واقعی، نوروتیک، اخلاقی (وجدانی)</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> سه نوع اضطراب.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: تفاوت هارتمن با فروید</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هارتمن هم می‌گه خود از نهاد نشئت می‌گیره.</div>
+<div class="fa"><b>جواب درست:</b> هارتمن پیشنهاد کرد زندگی در طی <b>مرحله نامتمایز از خود و نهاد</b> آغاز می‌شه و <b>خود و نهاد همزمان</b> ساختار روان‌شناختی رو شکل می‌دهن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> همزمان، نه از نهاد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: روان‌شناسی خود در چه دهه‌ای پیدایش یافت؟</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی دهه ۱۹۵۰ یا ۱۹۶۰.</div>
+<div class="fa"><b>جواب درست:</b> <b>دهه ۱۹۳۰ میلادی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> دهه ۱۹۳۰.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: رهبران روان‌شناسی خود</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی یا اشتباه می‌گی.</div>
+<div class="fa"><b>جواب درست:</b> <b>هانیز هارتمن، ملانی کلاین، ارنست کریس، رودولف لونشتاین</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> چهار نفرن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: اریکسون</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اریکسون روان‌کاو کلاسیکه.</div>
+<div class="fa"><b>جواب درست:</b> اریکسون به عنوان <b>روان‌شناس خود</b> شناخته می‌شه و سهمش بررسی <b>رشد روانی-اجتماعی شخصیت از نوزادی تا سالمندی</b>ه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> اریکسون روان‌شناس خود.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: تفاوت روابط شیء با نظریه‌های پیشین</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی روابط شیء هم مثل سالیوان و هورنای بر درون‌روانی تأکید داره.</div>
+<div class="fa"><b>جواب درست:</b> روابط شیء بر <b>ماهیت رابطه اجتماعی و تعاملی روابط آدمی</b> تأکید می‌ورزه و برای <b>وقایع روانی و فرایندهای درون‌روانی، اهمیت اندکی</b> قائله.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> روابط شیء = اجتماعی، نه درون‌روانی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: شش مفهوم گرین‌سون</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>توپوگرافی، ژنتیک، پویایی، اقتصادی، ساختاری، سازمان‌ارائه</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> شش تا.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: انتقال روان‌رنجور و خودشیفتگی روان‌رنجور</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر دو در درمان کاربرد دارن.</div>
+<div class="fa"><b>جواب درست:</b> <b>انتقال روان‌رنجور</b> شاخص درمانیه (کاربرد داره)؛ <b>خودشیفتگی روان‌رنجور</b> در درمان کاربردی نداره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> انتقال ✅، خودشیفتگی ❌.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: چهار روش تحلیل گرین‌سون</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب یا تعدادشون رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> <b>مواجهه، روش‌سازی (روشن‌سازی)، تفسیر، کسب بینش</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> مواجهه → روش‌سازی → تفسیر → بینش.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: کدام روش روان‌تحلیلگران رو جدا می‌کنه؟</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی مواجهه یا روش‌سازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>تفسیر</b> روشیه که روان‌تحلیلگران رو از سایر درمانگران جدا می‌سازه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تفسیر.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: هفت مکانیسم دفاعی</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>سرکوبی، فرافکنی، عقلانی‌سازی، والایش، واکنش وارونه، بازگشت، جبران</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> هفت تا.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: چهار طبقه کاربرد روان‌کاوی در توانبخشی</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>مکانیسم‌های دفاعی، تصویر بدنی، واکنش به فقدان/تروماه/معلولیت، معنا و ساختار نگرش‌ها</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> چهار حوزه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: تعریف تصویر بدنی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تصویر بدنی خودآگاهه.</div>
+<div class="fa"><b>جواب درست:</b> <b>بازنمایی ناخودآگاه فرد از بدن‌اش است.</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ناخودآگاه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۶: جراحت خودشیفتگی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی معلولیت فقط جسمانیه.</div>
+<div class="fa"><b>جواب درست:</b> معلولیت جسمانی غیرمنتظره در ابتدا به منزله <b>جراحت خودشیفتگی ژرف یا بسیار عمیق</b> محسوب می‌شه؛ چون خودشیفتگی و تصویر بدنی با هم و موازی رشد می‌کنن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> جراحت خودشیفتگی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۷: شش دسته واکنش سازگاری</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب یا تعدادشون رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> <b>شوک، اضطراب، احساس گناه/سوگواری/افسردگی، انکار، خشم، سازگاری</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> شش دسته.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۸: هفت باور نسبت به معلولین</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> مکافات گناه، فرافکنی تکانه‌ها، عمل شیطانی در مقابله با بی‌عدالتی، احساس گناه از محروم ساختن، احساس گناه نزدیکان، یادآوری مرگ، تهدید تصویر بدنی و اضطراب اختگی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> هفت تا.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۹: محدودیت اصلی روان‌کاوی در توانبخشی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی روان‌کاوی برای همه معلولین مناسبه.</div>
+<div class="fa"><b>جواب درست:</b> روان‌کاوی برای مراجعان دارای <b>مشکلات شناختی و هوشی شدید</b> (عقب‌ماندگی ذهنی، ضربه مغزی شدید، بیماری روانی حاد) <b>گزینه مناسبی نیست</b>؛ چون توانبخشی بر <b>«اینجا و اکنون»</b> تمرکز داره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> برای مشکلات شناختی شدید مناسب نیست.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۰: نقل‌قول سیلر (۲۰۰۴)</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی سیلر روان‌کاوی رو برای توانبخشی کافی می‌دونه.</div>
+<div class="fa"><b>جواب درست:</b> سیلر می‌گه هدف توانبخشی <b>بازسازی مجدد خویشتن</b>ه و <b>تلاش مضاعف و تیمی</b> می‌طلبه؛ در حالی که روان‌کاوی بیشتر بر <b>مسائل ناخودآگاهی چون سوگواری برای از دست دادن شیء مورد علاقه (بخشی از بدن)</b> تأکید می‌کنه که برای فرد معلول <b>ارزش چندانی نداره</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> روان‌کاوی به‌تنهایی کافی نیست.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۱: اتحاد کاری (درمانی)</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی اتحاد کاری روان‌رنجوره.</div>
+<div class="fa"><b>جواب درست:</b> اتحاد کاری (درمانی) نسبتاً <b>غیرروان‌رنجور</b>ه و رابطه منطقی میان بیمار و تحلیلگر برقرار می‌سازه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> غیرروان‌رنجور.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۲: کتاب آنا فروید</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی کتاب آنا فروید درباره سائق بود.</div>
+<div class="fa"><b>جواب درست:</b> کتاب آنا فروید به رابطه بین <b>خود و مکانیسم‌های دفاعی</b> می‌پرداخت و با انتشار آن، شهرت روان‌شناسی خود به اوج رسید.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> خود و مکانیسم‌های دفاعی.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۹ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم درمان روان‌پویایی</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 02 · مشاوره توانبخشی · فصل دوم: درمان روان‌پویایی</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'☀️':'🌙'};
+
+const quizData = [
+{q:"چهار مفهوم عمده رویکرد روان‌تحلیلی از نظر پین (۱۹۸۸) کدومن؟",options:["روان‌شناسی سائق، من (خود)، روابط شیء، خود","فقط روان‌شناسی سائق","فقط روابط شیء","فقط خود"],answer:0,explanation:"پین (۱۹۸۸): روان‌شناسی سائق، من (خود)، روابط شیء، خود (تجربه خود)."},
+{q:"جمله معروف فروید چیه؟",options:["«جایی که نهاد است، خود نیز هست»","«جایی که خود است، نهاد نیز هست»","«نهاد و فراخود یکی هستند»","«خود از نهاد نشئت می‌گیرد»"],answer:0,explanation:"جمله معروف فروید: «جایی که نهاد است، خود نیز هست.»"},
+{q:"سه نوع اضطراب از نظر فروید کدومن؟",options:["واقعی، نوروتیک، اخلاقی (وجدانی)","واقعی، خیالی، اخلاقی","نوروتیک، روانی، اجتماعی","فقط واقعی و نوروتیک"],answer:0,explanation:"سه نوع اضطراب: واقعی، نوروتیک، اخلاقی (وجدانی)."},
+{q:"روان‌شناسی خود در چه دهه‌ای پیدایش یافت؟",options:["دهه ۱۹۲۰","دهه ۱۹۳۰","دهه ۱۹۵۰","دهه ۱۹۶۰"],answer:1,explanation:"روان‌شناسی خود در دهه ۱۹۳۰ میلادی پیدایش یافت."},
+{q:"تفاوت هارتمن با فروید درباره رشد خود و نهاد چیه؟",options:["هارتمن: مرحله نامتمایز از خود و نهاد؛ خود و نهاد همزمان","هارتمن: خود از نهاد نشئت می‌گیرد","فروید: خود و نهاد همزمان","هیچ تفاوتی ندارند"],answer:0,explanation:"هارتمن پیشنهاد کرد زندگی در طی مرحله نامتمایز از خود و نهاد آغاز می‌شه و خود و نهاد همزمان ساختار روان‌شناختی رو شکل می‌دهن."},
+{q:"اریک اریکسون به عنوان چه کسی شناخته می‌شه؟",options:["روان‌شناس خود","بنیان‌گذار روان‌کاوی","مخترع رفتاردرمانی","بنیان‌گذار گشتالت"],answer:0,explanation:"اریکسون به عنوان روان‌شناس خود شناخته می‌شه و سهمش بررسی رشد روانی-اجتماعی شخصیت از نوزادی تا سالمندی است."},
+{q:"رهبران روان‌شناسی خود کدومن؟",options:["هانیز هارتمن، ملانی کلاین، ارنست کریس، رودولف لونشتاین","فروید، آدلر، یونگ، هورنای","راجرز، ولپی، بندورا","بروئر، فروید، آدلر"],answer:0,explanation:"رهبران روان‌شناسی خود: هانیز هارتمن، ملانی کلاین، ارنست کریس، رودولف لونشتاین."},
+{q:"تفاوت نظریه روابط شیء با نظریه‌های سالیوان، هورنای و فرام چیه؟",options:["تأکید بر ماهیت رابطه اجتماعی و تعاملی؛ اهمیت اندک به درون‌روانی","تأکید بر درون‌روانی","مترادف با نظریه سائق","فقط بر ناخودآگاه تأکید داره"],answer:0,explanation:"نظریه روابط شیء بر ماهیت رابطه اجتماعی و تعاملی روابط آدمی تأکید می‌ورزه و برای وقایع روانی و فرایندهای درون‌روانی، اهمیت اندکی قائله."},
+{q:"شش مفهوم اساسی گرین‌سون (۱۹۶۷) کدومن؟",options:["توپوگرافی، ژنتیک، پویایی، اقتصادی، ساختاری، سازمان‌ارائه","توپوگرافی، ژنتیک، رفتاری، شناختی، هیجانی، اجتماعی","نهاد، خود، فراخود، لیبیدو، تاناتوس، اضطراب","فقط توپوگرافی و ژنتیک"],answer:0,explanation:"شش مفهوم: توپوگرافی، ژنتیک (زیست‌شناختی)، پویایی، اقتصادی، ساختاری، سازمان‌ارائه (سازگارانه)."},
+{q:"تفاوت انتقال روان‌رنجور و خودشیفتگی روان‌رنجور چیه؟",options:["انتقال روان‌رنجور شاخص درمانی؛ خودشیفتگی روان‌رنجور در درمان کاربردی ندارد","هر دو شاخص درمانی","هر دو بی‌کاربرد","خودشیفتگی شاخص درمانی"],answer:0,explanation:"انتقال روان‌رنجور شاخص درمانی محسوب می‌شه؛ خودشیفتگی روان‌رنجور در درمان کاربردی ندارد."},
+{q:"چهار روش «تحلیل کردن» پدیده روانی از نظر گرین‌سون کدومن؟",options:["مواجهه، روش‌سازی (روشن‌سازی)، تفسیر، کسب بینش","مواجهه، انتقال، مقاومت، تفسیر","تداعی آزاد، تخلیه هیجانی، انتقال، مقاومت","فقط مواجهه و تفسیر"],answer:0,explanation:"چهار روش: مواجهه، روش‌سازی (روشن‌سازی)، تفسیر، کسب بینش."},
+{q:"کدام روش روان‌تحلیلگران رو از سایر درمانگران جدا می‌سازه؟",options:["مواجهه","روش‌سازی","تفسیر","کسب بینش"],answer:2,explanation:"تفسیر روشیه که روان‌تحلیلگران را از سایر درمانگران جدا می‌سازه."},
+{q:"هفت مکانیسم دفاعی مشهور کدومن؟",options:["سرکوبی، فرافکنی، عقلانی‌سازی، والایش، واکنش وارونه، بازگشت، جبران","سرکوبی، فرافکنی، انتقال، مقاومت، تفسیر، بینش، مواجهه","نهاد، خود، فراخود، لیبیدو، تاناتوس، اضطراب، دفاع","فقط سرکوبی و فرافکنی"],answer:0,explanation:"هفت مکانیسم: سرکوبی، فرافکنی، عقلانی‌سازی، والایش، واکنش وارونه، بازگشت، جبران."},
+{q:"تعریف مکانیسم‌های دفاعی چیه؟",options:["فرآیندهای ناهشیار که وقتی خود قادر به خنثی‌سازی اضطراب نیست فعال می‌شن","فرآیندهای خودآگاه","فقط رفتارهای کودکانه","فقط واکنش‌های جسمانی"],answer:0,explanation:"مکانیسم‌های دفاعی: فرآیندهای ناهشیار که هنگامی که خود (من) قادر به خنثی‌سازی اضطراب و سایر آشفتگی عاطفی یا تکانه‌های غیرقابل پذیرش نیست، فعال شده و وارد عمل می‌شن."},
+{q:"چهار طبقه کاربرد روان‌کاوی در توانبخشی کدومن؟",options:["مکانیسم‌های دفاعی، تصویر بدنی، واکنش به فقدان/تروماه/معلولیت، معنا و ساختار نگرش‌ها","فقط مکانیسم‌های دفاعی","فقط تصویر بدنی","فقط نگرش‌ها"],answer:0,explanation:"چهار طبقه: مکانیسم‌های دفاعی، تأثیر معلولیت بر تصویر بدنی، مطالعه واکنش به فقدان/تروماه/معلولیت، معنا و ساختار نگرش‌ها."},
+{q:"تعریف تصویر بدنی چیه؟",options:["بازنمایی ناخودآگاه فرد از بدن‌اش","بازنمایی خودآگاه","فقط تصور ذهنی","فقط تصویر آینه"],answer:0,explanation:"تصویر بدنی: بازنمایی ناخودآگاه فرد از بدن‌اش است."},
+{q:"چرا معلولیت جسمانی غیرمنتظره «جراحت خودشیفتگی» محسوب می‌شه؟",options:["چون خودشیفتگی و تصویر بدنی با هم و موازی رشد می‌کنن","چون فقط جسمانی است","چون فقط روانی است","چون مربوط به دوران بزرگسالی است"],answer:0,explanation:"معلولیت جسمانی غیرمنتظره در ابتدا به منزله جراحت خودشیفتگی ژرف محسوب می‌شه؛ چون خودشیفتگی و تصویر بدنی با هم و به‌طور موازی در طی یک دوره رشد طبیعی آدمی پیش رفته و متحول می‌شن."},
+{q:"شش دسته واکنش سازگاری از دیدگاه روان‌کاوی کدومن؟",options:["شوک، اضطراب، احساس گناه/سوگواری/افسردگی، انکار، خشم، سازگاری","شوک، انکار، خشم، سازگاری","اضطراب، افسردگی، خشم، انکار، سازگاری، شادی","فقط شوک و انکار"],answer:0,explanation:"شش دسته: شوک و ناباوری، اضطراب، احساس گناه/سوگواری/افسردگی، انکار، خشم و پرخاشگری، سازگاری و بازگشت به زندگی متداول."},
+{q:"هفت باور/نگرش رایج نسبت به افراد معلول از دیدگاه روان‌کاوی کدومن؟",options:["مکافات گناه، فرافکنی تکانه‌ها، عمل شیطانی، احساس گناه از محروم ساختن، احساس گناه نزدیکان، یادآوری مرگ، تهدید تصویر بدنی","فقط مکافات گناه","فقط یادآوری مرگ","فقط تهدید تصویر بدنی"],answer:0,explanation:"هفت نگرش: مکافات گناه، فرافکنی تکانه‌ها، عمل شیطانی در مقابله با بی‌عدالتی، احساس گناه از محروم ساختن، احساس گناه نزدیکان، یادآوری مرگ، تهدید تصویر بدنی و اضطراب اختگی."},
+{q:"نتیجه‌گیری لویه و سیلر (۲۰۱۴) درباره نگرش‌ها چیه؟",options:["نگرش‌ها انعکاس‌دهنده دوری‌جویی از صمیمیت، طرد کلی، پیامدهای عاطفی-روانی، هویت آشفته، محدودیت‌های کارکردی","نگرش‌ها فقط مثبت هستند","نگرش‌ها فقط منفی هستند","نگرش‌ها بی‌اهمیت هستند"],answer:0,explanation:"لویه و سیلر (۲۰۱۴): نگرش‌های افراد جامعه نسبت به معلولین اساساً انعکاس‌دهنده مؤلفه‌هایی نظیر دوری‌جویی از صمیمیت، طرد کلی، پیامدهای عاطفی-روانی معلولیت، هویت آشفته، محدودیت‌های کارکردی افراد معلول است."},
+{q:"محدودیت اصلی نظریه روان‌کاوی در توانبخشی چیه؟",options:["الگوی کوتاه‌مدت؛ عدم تناسب با مشکلات شناختی شدید؛ تأکید بر گذشته نه اینجا و اکنون","فقط کمبود پرسنل","فقط محدودیت زمانی","فقط محدودیت کلامی"],answer:0,explanation:"محدودیت‌ها: الگوی کوتاه‌مدت، محدودیت زمانی، کمبود پرسنل، محدودیت کلامی، کاهش بصیرت، عدم تناسب با مشکلات شناختی شدید (عقب‌ماندگی ذهنی، ضربه مغزی شدید، بیماری روانی حاد)، تمرکز توانبخشی بر اینجا و اکنون."},
+{q:"نقل‌قول سیلر (۲۰۰۴) درباره هدف توانبخشی و محدودیت روان‌کاوی چیه؟",options:["هدف توانبخشی بازسازی مجدد خویشتن است؛ روان‌کاوی بر سوگواری برای از دست دادن شیء تأکید دارد که برای فرد معلول ارزش چندانی ندارد","روان‌کاوی تنها راه توانبخشی است","توانبخشی نیازی به بازسازی خویشتن ندارد","روان‌کاوی برای همه معلولین مناسب است"],answer:0,explanation:"سیلر (۲۰۰۴): هدف توانبخشی بازسازی مجدد خویشتن است و تلاش مضاعف و تیمی می‌طلبد؛ در حالی که روان‌کاوی بیشتر بر مسائل ناخودآگاهی چون سوگواری برای از دست دادن شیء مورد علاقه (بخشی از بدن) تأکید می‌کند که برای فرد معلول ارزش چندانی ندارد."},
+{q:"اتحاد کاری (درمانی) چیه؟",options:["نسبتاً غیرروان‌رنجور؛ رابطه منطقی میان بیمار و تحلیلگر برای دستیابی به اهداف درمانی","روان‌رنجور","مترادف با انتقال","مترادف با مقاومت"],answer:0,explanation:"اتحاد کاری (درمانی): نسبتاً غیرروان‌رنجور است و رابطه منطقی میان بیمار و تحلیلگر برقرار می‌سازد تا به بیمار کمک کند که به اهداف درمانی‌اش دست یابد."},
+{q:"سه ویژگی نظریه روان‌تحلیلی از نظر کوک (۱۹۹۸) کدومن؟",options:["نظام روان‌شناسی و فلسفی؛ توصیف و تحلیل فرایندهای عاطفی، شناختی و رفتاری؛ ارائه رویکردهای درمانی ارزنده","فقط نظام فلسفی","فقط توصیف رفتاری","فقط درمان"],answer:0,explanation:"سه ویژگی (کوک، ۱۹۹۸): ۱) نظام روان‌شناسی و فلسفی (فراشناخت)؛ ۲) ایجاد شده توسط فروید و پیروانش برای توصیف و تحلیل فرایندهای عاطفی، شناختی و رفتاری انسان؛ ۳) ارائه رویکردهای درمانی ارزنده."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مفاهیم درمان روان‌پویایی — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

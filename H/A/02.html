@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آزمون مرور سریع | مشاوره و روان‌درمانی در توانبخشی (نسخه ۲)</title>
+    <style>
+        :root {
+            --pink: #fa4779;
+            --pink2: #ff7aa6;
+            --pink-soft: rgba(250, 71, 121, 0.12);
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --border: #e5e7eb;
+            --correct: #7fd1b9;
+            --shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+            --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.1);
+            --radius: 16px;
+            --radius-lg: 24px;
+        }
+        body.dark {
+            --bg: #0b1020;
+            --card: #131a33;
+            --text: #e5e7eb;
+            --text-muted: #94a3b8;
+            --border: #263056;
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 24px 16px;
+            transition: background .3s, color .3s;
+        }
+        .icon { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; display: inline-block; vertical-align: middle; }
+        .icon-lg { width: 22px; height: 22px; }
+
+        /* Theme Toggle - #f94779 */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: #f94779;
+            border: none;
+            cursor: pointer;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(249, 71, 121, 0.35);
+            transition: transform .2s, box-shadow .2s, background .3s;
+        }
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(249, 71, 121, 0.5);
+            background: #ff5c88;
+        }
+        .theme-toggle .icon-sun { display: none; }
+        body.dark .theme-toggle .icon-moon { display: none; }
+        body.dark .theme-toggle .icon-sun { display: inline-block; }
+
+        .quizly-logo { position: fixed; top: 20px; right: 20px; z-index: 100; }
+        .quizly-logo img {
+            width: 56px; cursor: pointer;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 8px 20px rgba(249, 71, 121, .4));
+            transition: transform .35s ease, filter .35s ease;
+        }
+        .quizly-logo img:hover {
+            transform: scale(1.08) rotate(3deg);
+            filter: drop-shadow(0 12px 30px rgba(249, 71, 121, .7));
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        .wrapper {
+            max-width: 1200px; margin: 80px auto 0;
+            display: grid; grid-template-columns: 1fr 400px; gap: 24px;
+        }
+        .card, .sheet, .json-card {
+            background: var(--card);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+        .json-card { grid-column: 1 / -1; margin-top: 8px; }
+
+        .progress-wrap {
+            height: 8px; background: var(--border);
+            border-radius: 999px; overflow: hidden; margin-bottom: 32px;
+        }
+        .progress {
+            height: 100%; width: 0%;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            transition: width .4s ease; border-radius: 999px;
+        }
+
+        .question {
+            font-size: 19px; font-weight: 700; margin-bottom: 24px;
+            line-height: 1.8; letter-spacing: -0.2px;
+        }
+        .options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .option {
+            padding: 16px 20px; border-radius: var(--radius);
+            border: 1.5px solid var(--border); cursor: pointer;
+            text-align: center; font-weight: 500; font-size: 14.5px;
+            transition: all .2s ease; background: transparent; color: var(--text);
+        }
+        .option:hover {
+            background: var(--pink-soft); border-color: var(--pink);
+            transform: translateY(-1px);
+        }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 8px; padding: 14px 24px; border: none;
+            border-radius: var(--radius); font-family: inherit;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all .2s ease;
+        }
+        .btn-primary {
+            width: 100%; margin-top: 32px;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff; display: none;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(250, 71, 121, 0.3);
+        }
+        .btn-dark {
+            background: #111; color: #fff; border-radius: 999px;
+            padding: 14px 32px; margin-top: 32px;
+        }
+        .btn-dark:hover { background: #333; transform: translateY(-1px); }
+
+        .sheet { max-height: 620px; overflow: auto; }
+        .sheet-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .sheet-cell {
+            border: 1px solid var(--border); border-radius: 14px;
+            padding: 10px 12px; display: grid;
+            grid-template-columns: 28px 1fr; gap: 8px;
+            align-items: center; transition: all .2s;
+        }
+        .sheet-cell.active {
+            border-color: var(--pink);
+            box-shadow: 0 0 0 3px var(--pink-soft);
+        }
+        .sheet-cell b { font-size: 13px; color: var(--text-muted); }
+        .answers { display: flex; justify-content: space-between; }
+        .bubble {
+            width: 26px; height: 26px; border-radius: 999px;
+            border: 1.5px solid var(--border); display: flex;
+            align-items: center; justify-content: center;
+            font-weight: 700; font-size: 11px; color: var(--text-muted);
+        }
+        .bubble.correct { background: var(--correct); color: #fff; border: none; }
+        .bubble.wrong { background: var(--pink); color: #fff; border: none; }
+
+        .result { text-align: center; margin-top: 40px; }
+        .score {
+            font-size: 56px; font-weight: 900; color: var(--pink);
+            letter-spacing: -2px; line-height: 1.2;
+        }
+        .desc { margin-top: 12px; font-size: 20px; font-weight: 600; }
+        .stats {
+            margin-top: 16px; display: flex; justify-content: center;
+            gap: 24px; color: var(--text-muted); font-size: 14px; flex-wrap: wrap;
+        }
+        .stat { display: inline-flex; align-items: center; gap: 6px; }
+        .stat .icon { width: 16px; height: 16px; }
+        .stat-correct { color: var(--correct); }
+        .stat-wrong { color: var(--pink); }
+
+        .json-header {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 16px;
+            flex-wrap: wrap; gap: 12px;
+        }
+        .json-header h3 {
+            font-size: 16px; font-weight: 700;
+            display: inline-flex; align-items: center;
+            gap: 8px; color: var(--text);
+        }
+        .json-actions { display: flex; align-items: center; gap: 12px; }
+        .copy-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 20px; border-radius: 999px; border: none;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff; cursor: pointer; font-family: inherit;
+            font-size: 13px; font-weight: 600;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .copy-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(250, 71, 121, 0.35);
+        }
+        .copy-feedback {
+            display: none; align-items: center; gap: 4px;
+            font-size: 13px; color: var(--correct); font-weight: 600;
+        }
+        .copy-feedback .icon { width: 14px; height: 14px; }
+        .json-card textarea {
+            width: 100%; min-height: 160px;
+            border-radius: var(--radius); border: 1px solid var(--border);
+            padding: 16px; font-family: 'Courier New', monospace;
+            font-size: 12px; background: var(--bg); color: var(--text);
+            resize: vertical; direction: ltr; text-align: left; line-height: 1.6;
+        }
+
+        .sheet::-webkit-scrollbar { width: 6px; }
+        .sheet::-webkit-scrollbar-track { background: transparent; }
+        .sheet::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+        .sheet::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        @media (max-width: 860px) {
+            .wrapper { grid-template-columns: 1fr; margin-top: 70px; }
+            .options { grid-template-columns: 1fr; }
+            .sheet-grid { grid-template-columns: 1fr 1fr; }
+            .card, .sheet, .json-card { padding: 24px; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 16px 12px; }
+            .theme-toggle { top: 12px; left: 12px; width: 38px; height: 38px; }
+            .quizly-logo { top: 12px; right: 12px; }
+            .quizly-logo img { width: 44px; }
+            .card, .sheet, .json-card { padding: 20px; border-radius: 18px; }
+            .question { font-size: 16px; }
+            .option { padding: 13px 16px; font-size: 13.5px; }
+            .score { font-size: 44px; }
+            .desc { font-size: 17px; }
+        }
+
+        @media print {
+            .theme-toggle, .next, .json-card, .quizly-logo, .copy-btn, .copy-feedback { display: none !important; }
+            body { background: #fff; padding: 0; }
+            .wrapper { display: block; margin: 0; }
+            .card, .sheet { box-shadow: none; border: none; padding: 0; }
+            .sheet { max-height: none; overflow: visible; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="تغییر تم">
+    <svg class="icon icon-lg icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon icon-lg icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+
+<div class="quizly-logo">
+    <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly">
+</div>
+
+<div class="wrapper">
+    <div class="card">
+        <div class="progress-wrap">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="quiz"></div>
+        <button class="btn btn-primary" id="nextBtn" onclick="next()">
+            <span>بعدی</span>
+            <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        </button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <div class="sheet">
+        <div class="sheet-grid" id="sheet"></div>
+    </div>
+
+    <div class="json-card" id="jsonCard">
+        <div class="json-header">
+            <h3>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                خروجی JSON
+            </h3>
+            <div class="json-actions">
+                <button class="copy-btn" onclick="copyJSON()">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    کپی
+                </button>
+                <span class="copy-feedback" id="copyFeedback">
+                    <svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    کپی شد
+                </span>
+            </div>
+        </div>
+        <textarea id="jsonOutput" readonly placeholder="نتایج به‌صورت JSON اینجا نمایش داده می‌شود..."></textarea>
+    </div>
+</div>
+
+<script>
+
+const questions = [
+    {
+        q: "واژه .................. از سوی مشاوران، مشاوران توانبخشی و برنامه های مبتنی بر توانبخشی اجتماع بکار برده می شود.",
+        options: ["مدد جو", "مراجع", "بیمار", "امدادگر"],
+        answer: 1
+    },
+    {
+        q: "اصطلاحاتی مانند پک کردن دودکش و گشنیگا شاخوش مربوط به کدام فرد است؟",
+        options: ["برتا", "برونر", "راجرز", "ویلیام"],
+        answer: 2
+    },
+    {
+        q: "رويکرد محوری مراجع محوری یا شخص محور مربوط به چه کسی است؟",
+        options: ["کارل راجرز", "برتا", "آلفرد آدلر", "کارل یونگ"],
+        answer: 0
+    },
+    {
+        q: "انواع اضطراب از نظر فروید کدام مورد می باشد؟",
+        options: ["اخلاقی", "نوروتیک", "واقعی", "هر سه مورد"],
+        answer: 3
+    },
+    {
+        q: "دیدگاهی کل نگر نسبت به خود، آگاهی های فرد و محیط، تاکید بر اینجا و اکنون، رابطه مشاوره افقی یا هم سطح با مراجع و مشاور و تاکید او از واکنش از تکنیک های مشترک میان نظریه های کدام است؟",
+        options: ["گشتالت درمانی", "معنادرمانی", "رفتاردرمانی", "واقعیت درمانی"],
+        answer: 0
+    },
+    {
+        q: "در نظریه گشتالت درمانی، نیازهای ارضا نشده، احساسات ابراز نشده یا سایر رخدادهای مهم به انجام نرسیده زندگی فرد چه نام دارد؟",
+        options: ["درون فکنی", "فرافکنی", "هم آمیزی", "کار ناتمام"],
+        answer: 3
+    },
+    {
+        q: "مفاهیم اساسی مطرح شده برای درک بهتر شخصیت از دیدگاه روانکاوی گرین سون کدام است؟",
+        options: ["سازگارانه و تیپوگرافی", "زینگی و ساختاری", "پویایی و اقتصادی", "همه موارد"],
+        answer: 3
+    },
+    {
+        q: "در کدام فن گشتالت درمانی، مراجع می تواند وارد گفت و گوی دوسویه با بخشی از بدن خود شود، بخشی که هم اکنون آن را از دست داده است، مثلا با عضو قطع شده یا عضو مصنوعی؟",
+        options: ["کاربرد رویاها", "سوالات ناکارآمد", "صندلی خالی", "بازی اغراق"],
+        answer: 2
+    },
+    {
+        q: "در مورد نظریه معنادرمانی کدام گزینه نادرست است؟",
+        options: [
+            "ما از طریق معنادار بودن برانگیخته می شویم.",
+            "ما آزادیم تا معنا را در زندگی مان بسازیم.",
+            "ابعاد خود، در برگیرنده ذهن، جسم و روح اند.",
+            "زندگی معنا ندارد."
+        ],
+        answer: 3
+    },
+    {
+        q: "اولین و قدیمی ترین فن درمان روانکاوی چیست؟",
+        options: ["روشن سازی", "مواجهه", "انتقال", "تداعی آزاد"],
+        answer: 3
+    },
+    {
+        q: "در معنادرمانی، تکنیک ای فزایندگى که از طریق آن مراجعان توجه خود را از معلولیت برداشته و به توانمندیهای درونی شان، متمرکز می سازند چه نام دارد؟",
+        options: ["دیگر بازتابی", "تغییر ارزش", "بیش بازتابی", "قصد متعاقض"],
+        answer: 0
+    },
+    {
+        q: "................ تجربه احساسات نگرش‌ها، تخیل‌ها و دفاع‌های فرد نسبت به فرد دیگر است که برای مراجع یادآور افراد تاثیر گذار او در زندگی کودکی اش بودند.",
+        options: ["روشن سازی", "مواجهه", "مقاومت", "انتقال"],
+        answer: 3
+    },
+    {
+        q: "................ مجموعه ای از رویکردها و فنونی است که برای کاهش رفتار ناسازگارانه و افزایش رفتارهای سازگارانه به کار می رود.",
+        options: ["گشتالت درمانی", "معنادرمانی", "رفتاردرمانی", "واقعیت درمانی"],
+        answer: 2
+    },
+    {
+        q: "مرحله نهایی فرایند تحلیل کردن در درمان روان کاوی چیست؟",
+        options: ["مواجهه", "روشن سازی", "تفسیر", "کسب بینش"],
+        answer: 3
+    },
+    {
+        q: "در کدام فن رفتاردرمانی، مراجع به طور ناگهانی در معرض محرک رعب آور، قرار می دهند، به گونه ای که فرد با اجتناب از آن محرک، امکانپذیر نیست؟",
+        options: ["حساسیت زدایی منظم", "تقویت افراقی", "شکل دهی", "غرفه سازی"],
+        answer: 3
+    },
+    {
+        q: "................ بازنمایی ناخودآگاه فرد از بدنت است.",
+        options: ["اعتماد به نفس", "عزت نفس", "خود پنداره", "تصویر بدنی"],
+        answer: 3
+    },
+    {
+        q: "مسئولیت پذیری فردی و عدم توانایی تغییر دیگران از مفاهیم کدام یک از رویکردهای درمانی زیر است؟",
+        options: ["شناختی رفتاری", "واقعیت درمانی", "رفتاردرمانی", "صفت عامل"],
+        answer: 1
+    },
+    {
+        q: "نظریه ................ بر اجتماع، پدیدارشناسی، کلی گرایی و ماهیت هدف مدار رفتار آدمی تاکید می‌ورزد",
+        options: ["رویکرد گشتالت", "نظریه سائق فروید", "روانشناسی فردی آدلر", "نظریه روانی اجتماعی اریکسون"],
+        answer: 2
+    },
+    {
+        q: "آگاهی از چارچوب مرجع درونی فرد و دستیابی به حس مراجع و تجربه لحظه به لحظه بودن با او« تعریف کدام یک از پیش شرط های اساسی مشاوره است؟",
+        options: ["گرمی", "همدلی", "پذیرش", "خلوص"],
+        answer: 1
+    },
+    {
+        q: "آدلر رویکرد خود را ...................... نامید.",
+        options: ["روانشناسی اجتماعی", "روانشناسی کلی نگر", "روانشناسی تحلیلی", "روانشناسی فردی"],
+        answer: 3
+    },
+    {
+        q: "کدام یک از گزینه های زیر از مهمترین فعالیت در فراگیری مهارت‌هاست و به افراد این امکان را می دهد تا آنچه را آموخته اند، به طور واقعی تمرین کنند؟",
+        options: ["الگوگیری", "مدیریت منابع", "ایفای نقش", "تمرین های زنده"],
+        answer: 2
+    },
+    {
+        q: "...................... فرضیه اساسی نظریه آدلر را با دیدگاه توان بخشی هماهنگ و متناسب می‌سازد.",
+        options: ["هیچکدام", "باور به اجتماع محور بودن انسان", "باور به فردگرایی", "باور به کلیت فرد"],
+        answer: 1
+    },
+    {
+        q: "آدلر باور داشت که نتیچه‌گیری‌های اولیه حدوداً پس از ...... اتخاذ می‌گردند و الگوی اهداف تا حدودی برای فرد مشخص می‌شوند",
+        options: ["سن بلوغ", "دو سالگی", "شش ماهگی", "شش یا هفت سالگی"],
+        answer: 3
+    },
+    {
+        q: "ساختار سازماندهی کننده مفاهیم بنیادین آدلر و نظریه شخصیت او مفهوم ...................... است اصطلاحی که او خلق اش کرد",
+        options: ["هیچکدام", "نظریه روان اجتماعی", "مشاوره درمانی", "سبک زندگی"],
+        answer: 3
+    },
+    {
+        q: "به گفته دینک مایر ......... یکی از ویژگی‌های اساسی مشاور است که از طریق شیوه‌های کلامی و غیر کلامی مراجع را قادر می‌سازد تا احساس ارزش را در خود تجربه کرده و با آن دست یابد",
+        options: ["درمان", "تصمیم گیری", "برقرار کردن ارتباط", "تشویق"],
+        answer: 2
+    },
+    {
+        q: "...................... مفهومی کلی و مجموعه‌ای از تمامی افکار احساسات و ارزش‌هایی است که فرد دارد",
+        options: ["اعتماد به نفس", "عزت نفس", "تصور بدنی", "خود پنداره"],
+        answer: 3
+    },
+    {
+        q: "هنگامی که فرد تصمیمی را در زندگیش اتخاذ می‌کند تعادلی میان نیازهای فردی‌اش و آنچه به آن دست یافته است برقرار می‌سازد آنچه فرد را به طور ذاتی به سوی تعادل سوق می‌دهد ...................... نام دارد",
+        options: ["هیچکدام", "حرکت به سوی تعادل", "تعادل روحی روانی", "خود نظمی ارگانیسمی"],
+        answer: 3
+    },
+    {
+        q: "این رویکرد بر جستجوی معنا در زندگی افراد تاکید می کند.",
+        options: ["هیچکدام", "نظریه پردازی", "توانبخشی", "معنا درمانی"],
+        answer: 3
+    },
+    {
+        q: "رویکردهای رفتار درمانی را نام ببرید.",
+        options: ["شرطی سازی کلاسیک یا ساده", "هر سه مورد", "شرطی سازی کنشگر", "روش‌های شناختی رفتاری"],
+        answer: 1
+    },
+    {
+        q: "کدام مورد از فنون نشات گرفته از اصول شرطی سازی کنشگر نیست؟",
+        options: ["شکل دهی", "شکل دهی افراقی", "اقتصاد ژتونی", "قانون اثر"],
+        answer: 3
+    }
+];
+
+const index = { value: 0 };
+let correctCount = 0;
+const userAnswers = Array(questions.length).fill(null);
+const letters = ["الف", "ب", "ج", "د"];
+
+const quiz = document.getElementById("quiz");
+const sheet = document.getElementById("sheet");
+const nextBtn = document.getElementById("nextBtn");
+const progress = document.getElementById("progress");
+const jsonOutput = document.getElementById("jsonOutput");
+const copyFeedback = document.getElementById("copyFeedback");
+
+function render() {
+    const q = questions[index.value];
+    quiz.innerHTML = `
+        <div class="question">${index.value + 1}. ${q.q}</div>
+        <div class="options">
+            ${q.options.map((o, i) => `<div class="option" onclick="select(${i})">${letters[i]}) ${o}</div>`).join("")}
+        </div>`;
+    nextBtn.style.display = "none";
+    updateProgress();
+    renderSheet();
+    updateJSON();
+}
+
+function updateProgress() {
+    progress.style.width = `${(index.value / questions.length) * 100}%`;
+}
+
+function renderSheet() {
+    sheet.innerHTML = questions.map((q, i) => {
+        const ua = userAnswers[i];
+        return `
+            <div class="sheet-cell ${i === index.value ? "active" : ""}">
+                <b>${i + 1}</b>
+                <div class="answers">
+                    ${[0, 1, 2, 3].map((j) => {
+                        let c = "";
+                        if (ua !== null) {
+                            c = j === q.answer ? "correct" : (j === ua ? "wrong" : "");
+                        }
+                        return `<div class="bubble ${c}">${letters[j]}</div>`;
+                    }).join("")}
+                </div>
+            </div>`;
+    }).join("");
+}
+
+function select(i) {
+    if (userAnswers[index.value] !== null) return;
+    userAnswers[index.value] = i;
+    if (i === questions[index.value].answer) correctCount++;
+    nextBtn.style.display = "flex";
+    renderSheet();
+    updateJSON();
+}
+
+function next() {
+    index.value++;
+    if (index.value < questions.length) {
+        render();
+    } else {
+        finish();
+    }
+}
+
+function finish() {
+    progress.style.width = "100%";
+    const total = questions.length;
+    const answered = userAnswers.filter(a => a !== null).length;
+    const grade = ((correctCount / total) * 20).toFixed(2);
+    const percentage = ((correctCount / total) * 100).toFixed(2);
+    let desc = "";
+    if (grade >= 18) desc = "عالی و مسلط";
+    else if (grade >= 15) desc = "خوب";
+    else if (grade >= 12) desc = "قابل قبول";
+    else desc = "نیازمند تمرین جدی";
+
+    quiz.innerHTML = `
+        <div class="result">
+            <div class="score">${grade} / ۲۰</div>
+            <div class="desc">${desc}</div>
+            <div class="stats">
+                <span class="stat">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    ${answered} از ${total} پاسخ داده شده (${percentage}%)
+                </span>
+                <span class="stat stat-correct">
+                    <svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    ${correctCount} صحیح
+                </span>
+                <span class="stat stat-wrong">
+                    <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    ${answered - correctCount} غلط
+                </span>
+            </div>
+            <button class="btn btn-dark" onclick="openPrintWindow()">
+                <svg class="icon" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                چاپ نتیجه
+            </button>
+        </div>
+    `;
+    updateJSON();
+}
+
+function openPrintWindow() {
+    const w = window.open('', '_blank');
+    w.document.write(`
+        <html lang="fa" dir="rtl">
+        <head>
+            <meta charset="UTF-8">
+            <title>نتیجه آزمون</title>
+            <style>
+                body { font-family: 'Vazirmatn', Tahoma, sans-serif; direction: rtl; padding: 24px; }
+                h1 { text-align: center; }
+                .score { text-align: center; font-size: 48px; font-weight: 900; color: #fa4779; margin: 12px 0; }
+                .summary { text-align: center; color: #555; margin-bottom: 20px; }
+                table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
+                th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+                th { background: #fa4779; color: #fff; }
+                td.correct { background: #7fd1b9; color: #fff; }
+                td.wrong { background: #fa4779; color: #fff; }
+            </style>
+        </head>
+        <body>
+            <h1>نتیجه آزمون</h1>
+            <div class="score">${(correctCount / questions.length * 20).toFixed(2)} / ۲۰</div>
+            <div class="summary">${userAnswers.filter(a => a !== null).length} از ${questions.length} سوال پاسخ داده شده</div>
+            <table>
+                <thead><tr><th>سوال</th><th>پاسخ شما</th><th>پاسخ صحیح</th></tr></thead>
+                <tbody>
+                    ${questions.map((q, i) => `
+                        <tr>
+                            <td>${q.q}</td>
+                            <td class="${userAnswers[i] === q.answer ? 'correct' : 'wrong'}">${userAnswers[i] !== null ? letters[userAnswers[i]] : 'پاسخ داده نشده'}</td>
+                            <td>${letters[q.answer]}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </body>
+        </html>
+    `);
+    w.document.close();
+    w.focus();
+    w.print();
+    w.close();
+}
+
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+
+function generateJSON() {
+    const total = questions.length;
+    const answered = userAnswers.filter(a => a !== null).length;
+    const correct = correctCount;
+    const wrong = answered - correct;
+    const grade = (correct / total) * 20;
+    const percentage = (correct / total) * 100;
+
+    return {
+        total_questions: total,
+        answered_questions: answered,
+        correct_answers: correct,
+        wrong_answers: wrong,
+        grade: parseFloat(grade.toFixed(2)),
+        percentage: parseFloat(percentage.toFixed(2)),
+        results: questions.map((q, i) => ({
+            question_number: i + 1,
+            question: q.q,
+            options: q.options,
+            correct_answer: letters[q.answer],
+            user_answer: userAnswers[i] !== null ? letters[userAnswers[i]] : "پاسخ داده نشده",
+            is_correct: userAnswers[i] !== null ? (userAnswers[i] === q.answer) : false
+        }))
+    };
+}
+
+function updateJSON() {
+    jsonOutput.value = JSON.stringify(generateJSON(), null, 2);
+}
+
+function copyJSON() {
+    jsonOutput.select();
+    const showFeedback = () => {
+        copyFeedback.style.display = "inline-flex";
+        setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+    };
+    navigator.clipboard.writeText(jsonOutput.value).then(showFeedback).catch(() => {
+        document.execCommand("copy");
+        showFeedback();
+    });
+}
+
+render();
+</script>
+</body>
+</html>

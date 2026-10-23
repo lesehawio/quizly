@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آزمون مرور سریع | کارآفرینی (نسخه ۴)</title>
+    <style>
+        :root {
+            --pink: #fa4779;
+            --pink2: #ff7aa6;
+            --pink-soft: rgba(250, 71, 121, 0.12);
+            --bg: #f6f7fb;
+            --card: #ffffff;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --border: #e5e7eb;
+            --correct: #7fd1b9;
+            --correct-soft: rgba(127, 209, 185, 0.15);
+            --shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+            --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.1);
+            --radius: 16px;
+            --radius-lg: 24px;
+        }
+        body.dark {
+            --bg: #0b1020;
+            --card: #131a33;
+            --text: #e5e7eb;
+            --text-muted: #94a3b8;
+            --border: #263056;
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 24px 16px;
+            transition: background .3s, color .3s;
+        }
+        .icon { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; display: inline-block; vertical-align: middle; }
+        .icon-lg { width: 22px; height: 22px; }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            transition: transform .2s, background .3s;
+        }
+        .theme-toggle:hover { transform: translateY(-2px); }
+        .theme-toggle .icon-sun { display: none; }
+        body.dark .theme-toggle .icon-moon { display: none; }
+        body.dark .theme-toggle .icon-sun { display: inline-block; }
+
+        /* Logo */
+        .quizly-logo {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .quizly-logo img {
+            width: 56px;
+            cursor: pointer;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 8px 20px rgba(250, 71, 121, .4));
+            transition: transform .35s ease, filter .35s ease;
+        }
+        .quizly-logo img:hover {
+            transform: scale(1.08) rotate(3deg);
+            filter: drop-shadow(0 12px 30px rgba(250, 71, 121, .7));
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* Layout */
+        .wrapper {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 24px;
+        }
+        .card, .sheet, .json-card {
+            background: var(--card);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+        .json-card { grid-column: 1 / -1; margin-top: 8px; }
+
+        /* Progress */
+        .progress-wrap {
+            height: 8px;
+            background: var(--border);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            transition: width .4s ease;
+            border-radius: 999px;
+        }
+
+        /* Question */
+        .question {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.8;
+            letter-spacing: -0.2px;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .option {
+            padding: 16px 20px;
+            border-radius: var(--radius);
+            border: 1.5px solid var(--border);
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14.5px;
+            transition: all .2s ease;
+            background: transparent;
+            color: var(--text);
+        }
+        .option:hover {
+            background: var(--pink-soft);
+            border-color: var(--pink);
+            transform: translateY(-1px);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 24px;
+            border: none;
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s ease;
+        }
+        .btn-primary {
+            width: 100%;
+            margin-top: 32px;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            display: none;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(250, 71, 121, 0.3);
+        }
+        .btn-dark {
+            background: #111;
+            color: #fff;
+            border-radius: 999px;
+            padding: 14px 32px;
+            margin-top: 32px;
+        }
+        .btn-dark:hover { background: #333; transform: translateY(-1px); }
+
+        /* Sheet */
+        .sheet { max-height: 620px; overflow: auto; }
+        .sheet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .sheet-cell {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 10px 12px;
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            gap: 8px;
+            align-items: center;
+            transition: all .2s;
+        }
+        .sheet-cell.active {
+            border-color: var(--pink);
+            box-shadow: 0 0 0 3px var(--pink-soft);
+        }
+        .sheet-cell b { font-size: 13px; color: var(--text-muted); }
+        .answers { display: flex; justify-content: space-between; }
+        .bubble {
+            width: 26px;
+            height: 26px;
+            border-radius: 999px;
+            border: 1.5px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        .bubble.correct { background: var(--correct); color: #fff; border: none; }
+        .bubble.wrong { background: var(--pink); color: #fff; border: none; }
+
+        /* Result */
+        .result { text-align: center; margin-top: 40px; }
+        .score {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--pink);
+            letter-spacing: -2px;
+            line-height: 1.2;
+        }
+        .desc {
+            margin-top: 12px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .stats {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            color: var(--text-muted);
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+        .stat { display: inline-flex; align-items: center; gap: 6px; }
+        .stat .icon { width: 16px; height: 16px; }
+        .stat-correct { color: var(--correct); }
+        .stat-wrong { color: var(--pink); }
+
+        /* JSON Card */
+        .json-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .json-header h3 {
+            font-size: 16px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text);
+        }
+        .json-actions { display: flex; align-items: center; gap: 12px; }
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 999px;
+            border: none;
+            background: linear-gradient(135deg, var(--pink), var(--pink2));
+            color: #fff;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .copy-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(250, 71, 121, 0.35);
+        }
+        .copy-feedback {
+            display: none;
+            align-items: center;
+            gap: 4px;
+            font-size: 13px;
+            color: var(--correct);
+            font-weight: 600;
+        }
+        .copy-feedback .icon { width: 14px; height: 14px; }
+        .json-card textarea {
+            width: 100%;
+            min-height: 160px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding: 16px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            background: var(--bg);
+            color: var(--text);
+            resize: vertical;
+            direction: ltr;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        /* Scrollbar */
+        .sheet::-webkit-scrollbar { width: 6px; }
+        .sheet::-webkit-scrollbar-track { background: transparent; }
+        .sheet::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+        .sheet::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* Responsive */
+        @media (max-width: 860px) {
+            .wrapper { grid-template-columns: 1fr; margin-top: 70px; }
+            .options { grid-template-columns: 1fr; }
+            .sheet-grid { grid-template-columns: 1fr 1fr; }
+            .card, .sheet, .json-card { padding: 24px; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 16px 12px; }
+            .theme-toggle { top: 12px; left: 12px; width: 38px; height: 38px; }
+            .quizly-logo { top: 12px; right: 12px; }
+            .quizly-logo img { width: 44px; }
+            .card, .sheet, .json-card { padding: 20px; border-radius: 18px; }
+            .question { font-size: 16px; }
+            .option { padding: 13px 16px; font-size: 13.5px; }
+            .score { font-size: 44px; }
+            .desc { font-size: 17px; }
+        }
+
+        @media print {
+            .theme-toggle, .next, .json-card, .quizly-logo, .copy-btn, .copy-feedback { display: none !important; }
+            body { background: #fff; padding: 0; }
+            .wrapper { display: block; margin: 0; }
+            .card, .sheet { box-shadow: none; border: none; padding: 0; }
+            .sheet { max-height: none; overflow: visible; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="تغییر تم">
+    <svg class="icon icon-lg icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon icon-lg icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+
+<!-- Logo -->
+<div class="quizly-logo">
+    <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly">
+</div>
+
+<!-- Main -->
+<div class="wrapper">
+    <div class="card">
+        <div class="progress-wrap">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="quiz"></div>
+        <button class="btn btn-primary" id="nextBtn" onclick="next()">
+            <span>بعدی</span>
+            <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        </button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <div class="sheet">
+        <div class="sheet-grid" id="sheet"></div>
+    </div>
+
+    <div class="json-card" id="jsonCard">
+        <div class="json-header">
+            <h3>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                خروجی JSON
+            </h3>
+            <div class="json-actions">
+                <button class="copy-btn" onclick="copyJSON()">
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    کپی
+                </button>
+                <span class="copy-feedback" id="copyFeedback">
+                    <svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    کپی شد
+                </span>
+            </div>
+        </div>
+        <textarea id="jsonOutput" readonly placeholder="نتایج به‌صورت JSON اینجا نمایش داده می‌شود..."></textarea>
+    </div>
+</div>
+
+<script>
+
+const questions = [
+    {
+        q: "پدر علم کارآفرینی چه کسی بود؟",
+        options: ["پیتر دراکر", "جفری تیمونز", "ژوزف شومپیتر", "مک کله لند"],
+        answer: 2
+    },
+    {
+        q: "کارآفرین کسی است که فعالیت اقتصادی کوچک و جدیدی را با سرمایه خود شروع می نماید ارزش ها را تغییر می دهد و ماهیت آنها را دچار تحول می نماید. این تعریف کارآفرینی از کیست؟",
+        options: ["رابرت لمب", "پیتر دراکر", "رابرت هریچ", "شومپیتر"],
+        answer: 1
+    },
+    {
+        q: "مطابق تعریف واژه وبستر کار آفرین به چه کسی گفته می شود؟",
+        options: [
+            "کسی که در ایجاد ثروت یا مودک ارزش اقتصادی شناخته می شود.",
+            "کارآفرین با ایده های نو و خلاق و پذیرش مخاطرات مالی به بهبود رضایت مندی شخصی مبادرت می ورزد.",
+            "کارآفرین یک مدیر صاحب فکر و ابتکار است که همراه با خلاقیت ریسک پذیری و هوش و اندیشه فرصت های طلایی می آفریند.",
+            "کارآفرین کسی است که متعهد می شود مخاطره یک فعالیت اقتصادی را سازماندهی اداره و تقبل نماید."
+        ],
+        answer: 3
+    },
+    {
+        q: "کتاب نظریه اقتصاد پویا متعلق به چه کسی است؟",
+        options: ["پنروز", "رلینج", "جل و هاروت", "شومپیتر"],
+        answer: 3
+    },
+    {
+        q: "مهمترین اشکال در برداشت از مفهوم کارآفرینی در ایران کدام یک از موارد زیر می باشد؟",
+        options: [
+            "فقط به جنبه اشتغالزایی آن توجه می شود.",
+            "افزایش رفاه عمومی مد نظر است.",
+            "توسعه تکنولوژی مورد توجه قرار دارد.",
+            "فقط به نوآوری در مزرعه توجه است."
+        ],
+        answer: 0
+    },
+    {
+        q: "فرایندی که در آن محصولات یا فرایندهای نوآوری شده از طریق القاء و ایجاد فرهنگ کارآفرینانه، در یک سازمان از قبل تاسیس شده و یا در حال ظهور می رسند، کدام یک از موارد زیر می باشد؟",
+        options: ["کارآفرینی سازمانی", "کارآفرینی آزاد و مستقل", "کارآفرینی درون سازمانی", "کارآفرینی برون‌سازمانی"],
+        answer: 0
+    },
+    {
+        q: "کدام یک از موارد زیر جزء انواع کارآفرینی سازمانی مورد نظر هانس شول هامر نیست؟",
+        options: ["کارآفرینی اداری", "کارآفرینی تقلیدی", "کارآفرینی مستقل", "کارآفرینی اکتسابی"],
+        answer: 2
+    },
+    {
+        q: "کارآفرینی درون سازمانی، فرایندی است که کارآفرینان سازمانی، از طریق آن سبب تغییر می شوند. این جمله از کیست؟",
+        options: ["هانس شول هامر", "جونز و باتلر", "رلینج", "پینکات"],
+        answer: 0
+    },
+    {
+        q: "اولین مرحله کارآفرینی درون سازمانی، کدام یک از موارد زیر می باشد؟",
+        options: ["ائتلاف و ایجاد موقتی", "مشخص کردن مشکل یا مسأله", "تجهیز و تکمیل", "ترک / جانشینی"],
+        answer: 1
+    },
+    {
+        q: "این نکته که کارآفرینان سازمانی، مخاطرات را دوست دارند و اغلب از اخراج شدن، هراسی نداشته لذا خطر چندانی حس نمی کنند. به کدام عامل موفقیت آنها مربوط است؟",
+        options: ["ریسک", "ارتباطات", "مهارت های سازمانی", "رهبری"],
+        answer: 0
+    },
+    {
+        q: "تحمل اشتباهات و شکست کارکنان مرتبط با کدام یک از ابعاد سنجش کارآفرینی سازمانی در مطالعه کوراتکو و همکارانش می باشد؟",
+        options: ["حمایت مدیریت", "ریسک پذیری", "پاداش و دسترسی به منابع", "ساختار سازمانی"],
+        answer: 3
+    },
+    {
+        q: "تمایل به آزادی عمل و استقلال جزء کدام یک از ویژگی های ابزار سنجش کارآفرینی سازمانی است؟",
+        options: ["ویژگی های سازمانی", "ویژگی های فردی", "ویژگی های مدیریتی", "ویژگی های جامعه"],
+        answer: 0
+    },
+    {
+        q: "در مدل ترغیب کارآفرینی شرکتی از نگاه کوراتکو و هاجنس، ابزار لازم برای کارآفرین کدام است؟",
+        options: ["توسعه بینش", "ایجاد انگیزه", "توسعه تیم های کارآفرینی", "نوآوری"],
+        answer: 3
+    },
+    {
+        q: "راندم پایین تولیدی به کدام یک از موارد زیر مرتبط می باشد؟",
+        options: ["تهدید ها در عوامل برون سازمانی", "فرصت ها در عوامل برون سازمانی", "ضعف ها در عوامل درون سازمانی", "قوت ها در عوامل درون سازمانی"],
+        answer: 2
+    },
+    {
+        q: "هر آنچه که توانایی و مهارت مقابله با پیشامدهای احتمالی و بازگشت به حالت تعادل در کسب و کار است، چه نامیده می شود؟",
+        options: ["مدیریت فنی", "مدیریت خطر پذیری", "مدیریت راهبردی", "مدیریت بازاریابی"],
+        answer: 1
+    },
+    {
+        q: "فرایند ایجاد هر چیز جدید و با ارزش است؟",
+        options: ["ابتکار", "خلاقیت", "اختراع", "تازگی"],
+        answer: 1
+    },
+    {
+        q: "در کدام تکنیک هر چه نسبت به موضوعی بیشتر بدانید یا خوش بین باشیم، استفاده از این تکنیک کارگشاتر و اثربخش تر خواهد بود؟",
+        options: ["تکنیک بی ام آی", "تکنیک دلفی", "تکنیک اسکمپر", "تکنیک شوکف به نیلوفر آبی"],
+        answer: 0
+    },
+    {
+        q: "کدام تکنیک است که کاربرد اصلی آن برای ایده یابی فردی، طراحی شده است و می تواند به نحو بسیار اثربخشی برای گروه ها مفید باشد؟",
+        options: ["تکنیک دلفی", "تکنیک واژه تصادفی", "تکنیک نگاره تازه", "تکنیک اسکمپر"],
+        answer: 3
+    },
+    {
+        q: "روبرت جی استرنبرگ و لیندا اوهارا در بحث از عوامل خلاقیت اشاره کرده اند که: افراد خلاق عموماً برای به فعل در آوردن ایده های خود برانگیخته می شوند. در واقع به کدام عامل توجه کرده اند؟",
+        options: ["دانش", "توانایی عقلی", "سبک فکری", "انگیزش"],
+        answer: 3
+    },
+    {
+        q: "کارآفرینان خلاق، خود تصمیم گیرنده هستند و کمتر تحت تاثیر القائات دیگرانند. به کدام ویژگی کارآفرینان اشاره دارد؟",
+        options: ["رشد تهدیدگی", "استقلال و کنترل درونی", "خلاقیت", "بهره وری"],
+        answer: 1
+    },
+    {
+        q: "کدام یک از عوامل زیر اساساً به عنوان جوهره کارآفرینی شناخته می شود؟",
+        options: ["خلاقیت", "دانش", "انگیزش", "شخصیت"],
+        answer: 0
+    },
+    {
+        q: "شرکتی است که تحت اسم مخصوصی، بین یک عده شرکا، سهامی و یک یا چند نفر شریک ضامن، تشکیل می شود؟",
+        options: ["شرکت سهامی خاص", "شرکت نسبی", "شرکت تعاونی", "شرکت مختلط سهامی"],
+        answer: 3
+    },
+    {
+        q: "مقری بیمه بیکاری از چه زمانی قابل پرداخت است؟",
+        options: ["از ماه سوم بیکاری", "از روز اول بیکاری", "از ماه دوم بیکاری", "از ماه دوم بیکاری"],
+        answer: 1
+    },
+    {
+        q: "اولین گام جهت ثبت یک شرکت کدام مورد است؟",
+        options: ["انتخاب شرکا", "انتخاب موضوع شرکت", "انتخاب نوع شرکت", "انتخاب سهام شرکت"],
+        answer: 1
+    },
+    {
+        q: "کارآفرین در مرحله ایده یابی برای تولید محصول جدید نیازمند جستجو است. این جستجو باید به چه صورت انجام گیرد؟",
+        options: ["خبری", "سیستماتیک", "میدانی", "مشاهده ای"],
+        answer: 1
+    },
+    {
+        q: "در غربال کردن ایده ها معمولاً از چه روشی استفاده می شود؟",
+        options: ["روش مرحله ای", "روش طبقه ای", "روش گسسته", "روش تصادفی"],
+        answer: 0
+    },
+    {
+        q: "تصمیم و اراده فرد به برآوردن نیاز، با توجه به خواسته هایش به کدام یک از اجزاء بازاریابی مرتبط است؟",
+        options: ["نیاز", "خواسته", "تقاضا", "مبادله"],
+        answer: 2
+    },
+    {
+        q: "فروش کالای مناسب، با قیمت مناسب، در مکانی مناسب و با توافق مشتری بر سر سود، هدف اصلی کدام یک از موارد زیر است؟",
+        options: ["بازاریابی", "بیع", "فروش", "معامله"],
+        answer: 1
+    },
+    {
+        q: "کاربرد در مراحل اولیه ورود کالا به بازار، جزء کدام نوع تبلیغات برحسب هدف، می باشد؟",
+        options: ["تبلیغات یادآوری کننده", "تبلیغات ترغیب کننده", "تبلیغات اطلاعاتی", "تبلیغات عمومی"],
+        answer: 2
+    },
+    {
+        q: "در صورتی که پاداش دریافتی بر اساس میزان انجام کار و یا محصول تولید شده باشد، نام آن چیست؟",
+        options: ["مزد", "حق السعی", "کارمزد", "کارمزد ساعتی"],
+        answer: 2
+    }
+];
+
+const index = { value: 0 };
+let correctCount = 0;
+const userAnswers = Array(questions.length).fill(null);
+const letters = ["الف", "ب", "ج", "د"];
+
+const quiz = document.getElementById("quiz");
+const sheet = document.getElementById("sheet");
+const nextBtn = document.getElementById("nextBtn");
+const progress = document.getElementById("progress");
+const jsonOutput = document.getElementById("jsonOutput");
+const copyFeedback = document.getElementById("copyFeedback");
+
+function render() {
+    const q = questions[index.value];
+    quiz.innerHTML = `
+        <div class="question">${index.value + 1}. ${q.q}</div>
+        <div class="options">
+            ${q.options.map((o, i) => `<div class="option" onclick="select(${i})">${letters[i]}) ${o}</div>`).join("")}
+        </div>`;
+    nextBtn.style.display = "none";
+    updateProgress();
+    renderSheet();
+    updateJSON();
+}
+
+function updateProgress() {
+    progress.style.width = `${(index.value / questions.length) * 100}%`;
+}
+
+function renderSheet() {
+    sheet.innerHTML = questions.map((q, i) => {
+        const ua = userAnswers[i];
+        return `
+            <div class="sheet-cell ${i === index.value ? "active" : ""}">
+                <b>${i + 1}</b>
+                <div class="answers">
+                    ${[0, 1, 2, 3].map((j) => {
+                        let c = "";
+                        if (ua !== null) {
+                            c = j === q.answer ? "correct" : (j === ua ? "wrong" : "");
+                        }
+                        return `<div class="bubble ${c}">${letters[j]}</div>`;
+                    }).join("")}
+                </div>
+            </div>`;
+    }).join("");
+}
+
+function select(i) {
+    if (userAnswers[index.value] !== null) return;
+    userAnswers[index.value] = i;
+    if (i === questions[index.value].answer) correctCount++;
+    nextBtn.style.display = "flex";
+    renderSheet();
+    updateJSON();
+}
+
+function next() {
+    index.value++;
+    if (index.value < questions.length) {
+        render();
+    } else {
+        finish();
+    }
+}
+
+function finish() {
+    progress.style.width = "100%";
+    const total = questions.length;
+    const answered = userAnswers.filter(a => a !== null).length;
+    const grade = ((correctCount / total) * 20).toFixed(2);
+    const percentage = ((correctCount / total) * 100).toFixed(2);
+    let desc = "";
+    if (grade >= 18) desc = "عالی و مسلط";
+    else if (grade >= 15) desc = "خوب";
+    else if (grade >= 12) desc = "قابل قبول";
+    else desc = "نیازمند تمرین جدی";
+
+    quiz.innerHTML = `
+        <div class="result">
+            <div class="score">${grade} / ۲۰</div>
+            <div class="desc">${desc}</div>
+            <div class="stats">
+                <span class="stat">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    ${answered} از ${total} پاسخ داده شده (${percentage}%)
+                </span>
+                <span class="stat stat-correct">
+                    <svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    ${correctCount} صحیح
+                </span>
+                <span class="stat stat-wrong">
+                    <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    ${answered - correctCount} غلط
+                </span>
+            </div>
+            <button class="btn btn-dark" onclick="openPrintWindow()">
+                <svg class="icon" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                چاپ نتیجه
+            </button>
+        </div>
+    `;
+    updateJSON();
+}
+
+function openPrintWindow() {
+    const w = window.open('', '_blank');
+    w.document.write(`
+        <html lang="fa" dir="rtl">
+        <head>
+            <meta charset="UTF-8">
+            <title>نتیجه آزمون</title>
+            <style>
+                body { font-family: 'Vazirmatn', Tahoma, sans-serif; direction: rtl; padding: 24px; }
+                h1 { text-align: center; }
+                .score { text-align: center; font-size: 48px; font-weight: 900; color: #fa4779; margin: 12px 0; }
+                .summary { text-align: center; color: #555; margin-bottom: 20px; }
+                table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
+                th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+                th { background: #fa4779; color: #fff; }
+                td.correct { background: #7fd1b9; color: #fff; }
+                td.wrong { background: #fa4779; color: #fff; }
+            </style>
+        </head>
+        <body>
+            <h1>نتیجه آزمون</h1>
+            <div class="score">${(correctCount / questions.length * 20).toFixed(2)} / ۲۰</div>
+            <div class="summary">${userAnswers.filter(a => a !== null).length} از ${questions.length} سوال پاسخ داده شده</div>
+            <table>
+                <thead><tr><th>سوال</th><th>پاسخ شما</th><th>پاسخ صحیح</th></tr></thead>
+                <tbody>
+                    ${questions.map((q, i) => `
+                        <tr>
+                            <td>${q.q}</td>
+                            <td class="${userAnswers[i] === q.answer ? 'correct' : 'wrong'}">${userAnswers[i] !== null ? letters[userAnswers[i]] : 'پاسخ داده نشده'}</td>
+                            <td>${letters[q.answer]}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </body>
+        </html>
+    `);
+    w.document.close();
+    w.focus();
+    w.print();
+    w.close();
+}
+
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+
+function generateJSON() {
+    const total = questions.length;
+    const answered = userAnswers.filter(a => a !== null).length;
+    const correct = correctCount;
+    const wrong = answered - correct;
+    const grade = (correct / total) * 20;
+    const percentage = (correct / total) * 100;
+
+    return {
+        total_questions: total,
+        answered_questions: answered,
+        correct_answers: correct,
+        wrong_answers: wrong,
+        grade: parseFloat(grade.toFixed(2)),
+        percentage: parseFloat(percentage.toFixed(2)),
+        results: questions.map((q, i) => ({
+            question_number: i + 1,
+            question: q.q,
+            options: q.options,
+            correct_answer: letters[q.answer],
+            user_answer: userAnswers[i] !== null ? letters[userAnswers[i]] : "پاسخ داده نشده",
+            is_correct: userAnswers[i] !== null ? (userAnswers[i] === q.answer) : false
+        }))
+    };
+}
+
+function updateJSON() {
+    jsonOutput.value = JSON.stringify(generateJSON(), null, 2);
+}
+
+function copyJSON() {
+    jsonOutput.select();
+    const showFeedback = () => {
+        copyFeedback.style.display = "inline-flex";
+        setTimeout(() => { copyFeedback.style.display = "none"; }, 2000);
+    };
+    navigator.clipboard.writeText(jsonOutput.value).then(showFeedback).catch(() => {
+        document.execCommand("copy");
+        showFeedback();
+    });
+}
+
+render();
+</script>
+</body>
+</html>

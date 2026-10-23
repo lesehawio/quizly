@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · کارآفرینی · سری 02 · فصل دوم: خلاقیت</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"02";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>کارآفرینی · سری 02</small></div></div>
+  <button id="theme">تم شب</button>
+</header>
+
+<section class="hero">
+  <h2>فصل دوم: خلاقیت</h2>
+  <p>خلاقیت چیه؟ با نوآوری و اختراع چه فرقی داره؟ تکنیک‌هاش کدومن؟ همه رو خودمونی می‌گم</p>
+  <div class="pills"><span class="pill">تعریف خلاقیت</span><span class="pill">تفاوت‌ها</span><span class="pill">تکنیک‌ها</span><span class="pill">موانع</span><span class="pill">دام‌ها</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل دوم کتاب کارآفرینی (خلاقیت) نوشته شده. همه‌چی رو ساده و خودمونی گفتم. از تعریف خلاقیت شروع می‌کنیم تا برسیم به تکنیک‌های خلاقیت و دام‌های امتحانی.</div>
+
+<div class="stats">
+<div class="stat"><b>۵</b><span>مفهوم مهم</span></div>
+<div class="stat"><b>۶</b><span>عامل خلاقیت</span></div>
+<div class="stat"><b>۶</b><span>کلاه فکری</span></div>
+<div class="stat"><b>۱۲</b><span>تکنیک خلاقیت</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#compare">تفاوت‌ها</a><a href="#techniques">تکنیک‌ها</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (۱۰ دقیقه‌ای بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>خلاقیت یعنی چی؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>خلاقیت یعنی به کارگیری توانایی‌های ذهنی برای ایجاد یه فکر یا مفهوم جدید. یعنی خلق کردن — کم یا زیاد کردن یه پدیده، تغییر شکل دادن یا ترکیب کردنش با سایر پدیده‌ها.</b> (کریمی، ۱۳۸۶)
+</div>
+<div class="fa"><b>خودمونی بگم:</b> خلاقیت یعنی یه چیز جدید و باارزش خلق کنی. یعنی بتونی با فکرت یه چیزی رو تغییر بدی یا با چیزهای دیگه ترکیبش کنی و یه چیز تازه بسازی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه نکته که حتماً باید بلد باشی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱)</b> خلاقیت <b>قابل آموزشه</b>؛ آدم‌ها بالفطره خلاقن و می‌تونن موانع خلاقیتشون رو بشناسن و بردارن (احمدپور، ۱۳۷۹).</div>
+<div class="fa"><b>۲)</b> <b>نوآوری شکل عالی‌تر خلاقیته</b> و فرآیند پایانی اونه که به صورت محصول یا تولید بدیع آشکار می‌شه.</div>
+<div class="fa"><b>۳)</b> <b>خلاقیت جوهره کارآفرینیه</b> و شومپیتر کارآفرینی رو <b>«تخریب خلاق»</b> تعریف می‌کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت مفاهیم (اینا رو قاطی نکن!)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>مفهوم</th><th>خودمونی چی‌ه</th></tr></thead>
+<tbody>
+<tr><td>ابتکار</td><td>ایجاد هر چیزی که قبلاً وجود نداشته</td></tr>
+<tr><td>خلاقیت</td><td>ایجاد هر چیز <b>جدید و باارزش</b></td></tr>
+<tr><td>نوآوری</td><td>ایجاد هر چیز جدیدی که برای فرد، گروه، سازمان، صنعت یا اجتماعی <b>ارزش مهمی</b> داشته باشه</td></tr>
+<tr><td>اختراع</td><td>وقتی ایده جدید از ذهن مخترع به طرح یا نمونه تبدیل بشه؛ تا وقتی تو ذهنه و عینیت بیرونی نیافته، اختراع حساب نمی‌شه</td></tr>
+<tr><td>تازگی</td><td>به معنی خلق چیز جدید نیست؛ بیشتر <b>بُعد زمان</b> توش مستتره</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش عامل خلاقیت (استرنبرگ و اوهارا)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱) دانش:</b> داشتن دانش پایه‌ای تو یه زمینه محدود و کسب تجربه و تخصص تو سالیان متمادی.</div>
+<div class="fa"><b>۲) توانایی عقلانی:</b> توانایی ارائه ایده خلاق از طریق تعریف مجدد و برقراری ارتباطات جدید تو مسائل.</div>
+<div class="fa"><b>۳) سبک فکری:</b> افراد خلاق معمولاً <b>سبک فکری ابداعی</b> رو انتخاب می‌کنن.</div>
+<div class="fa"><b>۴) انگیزش:</b> افراد خلاق عموماً برای به فعل درآوردن ایده‌هاشون برانگیخته می‌شن.</div>
+<div class="fa"><b>۵) شخصیت:</b> ویژگی‌هایی مثل <b>مصر بودن</b>، مقاوم بودن در مقابل فشارهای بیرونی و داخلی و مقاوم بودن در مقابل وسوسه <b>«همرنگ جماعت شدن»</b>.</div>
+<div class="fa"><b>۶) محیط:</b> افراد خلاق معمولاً تو <b>محیط‌های حمایتی</b> بیشتر امکان ظهور پیدا می‌کنن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه ویژگی خلاقیت</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱) بنیانی انگیزشی داره:</b> حفظ خلاقیت در گرو حفظ انگیزه افرادست؛ فرد خلاق وقتی دست به خلق افکار ابتکاری می‌زنه که محرک کافی داشته باشه (تحریک درونی = جوشش از سر میل، شوق و رغبت).</div>
+<div class="fa"><b>۲) مبتنی بر اراده آدمیه:</b> انتخاب و قدرت تصمیم‌گیری برای انتخاب؛ آدم می‌تونه رفتارهایی فارغ از تکرار انجام بده و خودش رو از قید الگوهای تحمیلی طبیعت و محیط اجتماعی آزاد کنه.</div>
+<div class="fa"><b>۳) برنامه‌پذیره:</b> افراد خلاق هنگام کار روی اندیشه، <b>نظم و تعهد</b> (کار متمرکز و هدف‌دار) رو دنبال می‌کنن؛ ذهن ترکیبی‌شون عناصر مفقوده و بی‌ارتباط رو به هم پیوند می‌زنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش کلاه فکری (اینو حتماً حفظ کن)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>کلاه</th><th>خودمونی چی‌ه</th></tr></thead>
+<tbody>
+<tr><td>سفید</td><td>موضوعات و شکل‌های واقعی؛ بدون قضاوت، فقط جستجوی واقعیت‌ها</td></tr>
+<tr><td>سیاه</td><td>بیان و جستجوی جنبه‌های منفی، بدبینانه و واقعی</td></tr>
+<tr><td>سرخ</td><td>جنبه‌های هیجانی، احساسی و غیراستدلالی؛ برای اظهار نظر با این کلاه دلیلی خواسته نمی‌شه</td></tr>
+<tr><td>سبز</td><td>تفکر جانبی؛ برای تحریک ذهن خلاق دیگران (عمدتاً فکرهای غیرمنطقی)</td></tr>
+<tr><td>زرد</td><td>جنبه‌های مثبت، خوشبینانه اما واقعی</td></tr>
+<tr><td>آبی</td><td>تنظیم و ساماندهی فرآیند برنامه‌ریزی برای تفکر و استفاده از کلاه‌های دیگه (<b>کلاه نظارت</b>)</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (خودمونی و ساده)</h2>
+<p class="section-sub">هر چیزی که لازم داری بدونی، با مثال</p>
+
+<div class="card">
+<div class="card-head"><h3>مقدمه: خلاقیت چرا مهمه؟</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>ضرورت خلاقیت تو عصر حاضر:</b> رشد اقتصادی، افزایش بهره‌وری، ایجاد تکنولوژی‌های جدید، رقابت، بقا، ایجاد کالا و خدمات، افزایش درآمد، رفاه اجتماعی.</div>
+<div class="fa"><b>کارآفرینی:</b> فرآیندیه که تو اون ایده‌های بدیع و مناسب برای بهره‌برداری از فرصت‌ها و منابع موجود شناسایی و پیاده‌سازی می‌شن.</div>
+<div class="fa"><b>سازمان کارآفرین:</b> تلاش‌های نوآورانه رو برای ارائه محصولات/خدمات جدید، رشد، بهبود و حمایت می‌کنه.</div>
+<div class="fa"><b>ویژگی عصر حاضر:</b> عدم اطمینان، پیچیدگی، جهانی‌سازی، تغییرات فزاینده تکنولوژیکی.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نقل قول مهم (کاراکاس):</b> «جنگ واقعی کشورها در دهه‌های آینده نه بر سر انرژی و نه بازارها، بلکه بر سر <b>سرمایه‌های انسانی</b> است.»
+</div>
+<div class="fa">تو سازمان‌های پژوهشی و صنعتی، <b>حفظ مزیت رقابتی منوط به نوآوری</b>ه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعریف خلاقیت</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>خلاقیت به معنای خلق کردنه</b>؛ کم یا زیاد کردن یه پدیده، تغییر شکل دادن یا ترکیب کردنش با سایر پدیده‌ها.</div>
+<div class="fa"><b>تعریف کریمی (۱۳۸۶):</b> خلاقیت، به کارگیری توانایی‌های ذهنی برای ایجاد یه فکر یا مفهوم جدید.</div>
+<div class="fa"><b>تعریف احمدپور (۱۳۷۹):</b> خلاقیت قابل آموزشه؛ افراد بالفطره خلاقن و می‌تونن موانع خلاقیت خودشون رو بشناسن و بردارن.</div>
+<div class="fa"><b>تعاریف متعدد خلاقیت:</b></div>
+<div class="fa">• رهایی از عادت‌های ذهنی</div>
+<div class="fa">• توانایی تفکر و کشتن ویروس‌های ذهنی</div>
+<div class="fa">• نگاهی متفاوت به پدیده‌ها</div>
+<div class="fa">• برآیند حساس شدن به مسائل، نواقص، شکاف‌های دانش، عناصر مفقوده، ناهماهنگی‌ها، شناسایی دشواری‌ها، جست‌وجوی راه‌حل‌ها، حدس زدن، منظم کردن فرضیه‌ها، آزمودن و دوباره آزمودن</div>
+<div class="fa"><b>تورنس:</b> بعد از ۵۰ سال تحقیق معتقده نمی‌شه تعریف صریح و جامعی از خلاقیت داد.</div>
+<div class="fa"><b>ازویل:</b> خلاقیت یکی از مبهم‌ترین و مغشوش‌ترین اصطلاحات روان‌شناسی و تعلیم و تربیه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> ابهام در مفهوم ≠ پیچیدگی جریان خلاقیت؛ خلاقیت تو زندگی روزمره قابل حسه. بیش از <b>۱۰۰ها تعریف</b> برای خلاقیت ارائه شده.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلاقیت و تفاوتش با نوآوری</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>خلاقیت:</b> خلق چیزی تازه و منحصربه‌فرد که مناسب و مفید باشه و موجب حل مسئله/سؤال/نیاز علمی، صنعتی یا اجتماعی بشه.</div>
+<div class="fa"><b>نوآوری:</b> پدید آوردن چیزی نو و یگانه <b>از هیچ</b>؛ نوآوری <b>شکل عالی‌تر خلاقیته</b>.</div>
+<div class="fa"><b>انسان بیشتر موجودی خالقه تا مبدع</b>؛ چون خلاقیت انسان عمدتاً برگرفته از یه الگو یا طرح تغییر یافته از چیزهای قبلیه.</div>
+<div class="fa">متخصصان <b>نوآوری رو مترادف با ابداع</b> می‌دونن؛ نوآوری <b>فرآیند پایانی خلاقیت</b> و جلوه و نمود بیرونی اونه که به صورت محصول یا تولید بدیع آشکار می‌شه.</div>
+<div class="fa">چیزی که موجب نوآوری می‌شه، <b>توان خلاقیت فرده</b> که اون رو به سوی نوآوری تو کارآفرینی و تولید می‌کشونه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نوآوری (تعاریف)</h3></div>
+<div class="fa"><b>تعریف کلی:</b> توانایی مدیریت خلاق و دانش به نحوی که پاسخگوی تقاضای بازار و سایر نیازهای اجتماعی باشه.</div>
+<div class="fa"><b>فعالیت‌های نوآوری:</b> تمام گام‌های تجاری، مالی، سازمانی، فناوری و علمی که به صورت عملی تمایل به اجرای نوآوری دارن؛ شامل تحقیق و توسعه (که به طور مستقیم مرتبط با نوآوری خاص نیست).</div>
+<div class="fa"><b>تعریف اقتصادی (رضوی، ۱۳۹۰):</b> فرآیندیه که از راه اون منابع کارآمد و توسعه‌یافته استفاده می‌شن تا محصولاتی با کیفیت بالاتر و هزینه پایین‌تر نسبت به گذشته تولید کنن؛ نیازمند قابل مشاهده کردن بخشی از قابلیت‌هایی هست که قبلاً پنهان بوده‌اند.</div>
+<div class="fa">به طور معمول، این واژه تو معنای عام به هر محصول یا پدیده جدیدی که توسط انسان ایجاد شده باشه، اطلاق می‌شه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلاقیت از دیدگاه روان‌شناسی</h3></div>
+<div class="fa">خلاقیت یکی از جنبه‌های اصلی <b>تفکر</b>ه.</div>
+<div class="fa"><b>تفکر:</b> فرآیند بازآرایی یا تغییر اطلاعات و نمادهای کسب‌شده موجود تو حافظه درازمدت.</div>
+<div class="fa">خلاقیت = راه‌های جدید برای انجام بهتر کارها؛ توانایی ارائه راه‌حل؛ ارائه فکرها و طرح‌های نوین برای تولیدات و خدمات جدید و استمرار آن پس از غیبت آن پدیده‌ها.</div>
+<div class="fa"><b>دو دیدگاه درباره خلاقیت:</b></div>
+<div class="fa">۱) <b>ذاتیه</b> (برخی افراد).</div>
+<div class="fa">۲) <b>با آموزش، هر فردی می‌تونه خلاق بشه</b> (دیدگاه دوم).</div>
+<div class="fa">تو دیدگاه دوم، خلاقیت <b>فرآیندی چهار مرحله‌ایه</b>: <b>ادراک → پرورش → الهام → نوآوری</b>.</div>
+<div class="fa">خلاقیت نیاز به <b>تلاش نوآور</b> داره. نوآوری یعنی گرفتن الهام و تبدیلش به تولیدی مفید و خدمات یا روش انجام چیزی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فنون خلاقیت (فردی)</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱) یادداشت‌برداری:</b> فکرهای نو زودگذرن؛ بهترین زمان به تله انداختن فکر نو، <b>هنگام بروز آن</b>ه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>آمار مهم:</b> حدود <b>۲۵٪</b> اطلاعاتی که فرد کسب می‌کنه و ارزش متوسطی داره، تو <b>۲۴ ساعت اول</b> و حدود <b>۸۵٪</b> تو <b>هفته اول</b> به فراموشی سپرده می‌شه.
+</div>
+<div class="fa"><b>۲) انتخاب زمان مناسب:</b> ساعات خاص شبانه‌روز برای هر فرد افکار رو بارورتر می‌کنه (برخی صبح، برخی آخر شب، برخی در طول روز).</div>
+<div class="fa"><b>۳) انتخاب مکان مناسب:</b> فضای آرام، سرسبز و شاداب برای اندیشیدن مناسبه.</div>
+<div class="fa"><b>۴) تقویت حس کنجکاوی و توان پرسش:</b> انگیزه کنجکاوی تو قسمت خاکستری مغز همه انسان‌ها وجود داره (فرد لوتاز، ۱۹۸۹)؛ ترس از انتقاد و شکست و نگرانی از تمسخر موجب تضعیف این انگیزه می‌شه.</div>
+<div class="fa"><b>الکس اسپورن</b> برای تقویت حس کنجکاوی از فن <b>«سؤال‌های ایده‌برانگیز»</b> استفاده کرد: جانشین ساختن یا ساده کردن، ترکیب کردن، کاهش دادن، افزایش دادن، تطبیق دادن، تغییر و تعدیل وضع موجود، معکوس کردن.</div>
+<div class="fa"><b>۵) استفاده از روابط بین افکار و تداعی معانی (ارسطو):</b> کاروان اندیشه رو با فکرهای نزدیک، مشابه یا هر فکر دیگه‌ای به حرکت دربیار.</div>
+<div class="fa"><b>۶) تحلیل شبکه یا ارتباط اجباری:</b> ایجاد ارتباط اجباری بین دو شیء که قبلاً قرابت و مشابهتی ندارن و تحلیل روابط ایجادشده و نتیجه‌گیری (در ارتباط با علوم طبیعی).</div>
+<div class="fa"><b>۷) هم‌اندیشی قیاسی مستقیم یا طوفان مغزی:</b> اندیشه‌ها کنترل‌نشده، سازمان‌نیافته و بکر؛ <b>کمیت</b> اندیشه‌ها مهمه؛ افراد حق ارزیابی نظرات رو ندارن؛ هرچه فکرها بکرتر و بدیع‌تر بهتر؛ در پایان جلسه افراد با فکر مطلوب تشویق می‌شن.</div>
+<div class="fa"><b>۸) هم‌اندیشی غیرمستقیم یا گردش تخیلی:</b> مسئله واقعی و معنی مطرح نمی‌شه؛ با استفاده از <b>تمثیل و استعاره‌ها</b> ایده‌های جدید ایجاد می‌شه؛ <b>رهبر گروه نقش حیاتی داره</b> و ماهیت واقعی مسئله رو می‌دونه.</div>
+<div class="fa"><b>۹) هم‌اندیشی رقابتی مستقیم یا گروه اسمی:</b> برخلاف طوفان مغزی، افراد جدا از هم ولی در کنار هم قرار می‌گیرن؛ هر فرد به صورت <b>غیرمشخص و بی‌نام</b> نظرات خودش رو می‌نویسه؛ سپس نظرات بین اعضا مبادله، تعدیل و تکمیل می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>جزئیات گروه اسمی:</b> <b>۶ نفر</b> عضو؛ هر کدوم <b>۳ نظر جدید</b> روی کارت می‌نویسن؛ کارت بین اعضا <b>۵ بار</b> مبادله می‌شه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عوامل بازدارنده خلاقیت</h3><span class="badge s">مهم</span></div>
+<div class="fa">• تلاش‌های قبل از بلوغ برای خلاف خیال‌بافی</div>
+<div class="fa">• محدودیت‌های بازدارنده از قوه تدبیر و کنجکاوی کودکان</div>
+<div class="fa">• تکیه بیش از حد به نقش جنسیت</div>
+<div class="fa">• تأکید زیاد بر پیشگیری</div>
+<div class="fa">• القای ترس و کمرویی</div>
+<div class="fa">• تأکید بر مهارت‌های کلامی</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> خطری که استعداد خلاق فرد رو تهدید می‌کنه، قضاوت یا ارزیابی تجربه فرد نیست، بلکه <b>پیش‌داوی</b>ه که تو اون تجارب بسیاری وجود نداره.
+</div>
+<div class="fa"><b>خطر آموزش‌های معمول (خانه و مراکز آموزشی):</b> نظرات نو و احتمال وقوع اعمال جدید <b>خیلی زود و بیش از اندازه مورد انتقاد</b> قرار می‌گیرن.</div>
+<div class="fa">والدین/معلمین به علت عدم دانش کافی و آشنا نبودن با علم پرورش فکر، قادر به پاسخگویی دقیق، روشن و علمی به سؤالات کودکان نیستن و طفره می‌رن یا برخورد غیرمنطقی و خشن می‌کنن → ترس و تردید تو فرد رخنه می‌کنه → خلاقیت همچون غنچه‌ای نسکفته به بردگی و بی‌ستی هدایت می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>آمار مهم:</b> تو بررسی، <b>۹۵٪ کودکان ۴ ساله</b> از خلاقیت قابل‌توجهی برخوردار بودن؛ تو بررسی مجدد تو <b>۷ سالگی</b>، فقط <b>۴٪</b> اون‌ها قادر بودن خلاقیت چشمگیر خودشون رو حفظ کنن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلاقیت کارآفرینانه (شومپیتر، ۱۹۳۶)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>خلاقیت کارآفرینانه:</b> ایجاد و پیاده‌سازی ایده‌های بدیع و مناسب برای <b>تأسیس کسب‌وکار جدید</b> (کسب‌وکار جدید با برنامه‌ریزی برای ارائه محصولات یا خدمات).</div>
+<div class="fa">ایده‌های بدیع و مفید اولیه ممکنه به عوامل زیر مربوط باشه:</div>
+<div class="fa">۱) محصولات یا خدمات</div>
+<div class="fa">۲) شناسایی بازاری برای محصولات و خدمات</div>
+<div class="fa">۳) راه‌های تولید یا عرضه محصولات یا خدمات</div>
+<div class="fa">۴) راه‌های فراهم ساختن منابع برای تولید یا عرضه محصولات یا خدمات</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلاقیت از دیدگاه سازمانی</h3></div>
+<div class="fa"><b>خلاقیت:</b> ارائه فکر و طرح نو برای بهبود و ارتقاء کمیت یا کیفیت فعالیت‌های سازمان.</div>
+<div class="fa">مثال: افزایش بهره‌وری، افزایش تولیدات/خدمات، کاهش هزینه‌ها، تولیدات/خدمات از روش بهتر، تولیدات/خدمات جدید و غیره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارآفرینی (تعاریف و طبقه‌بندی)</h3></div>
+<div class="fa"><b>تعریف اولیه (صمد آقایی، ۱۳۷۸):</b> کارآفرینی صفت کسیه که اهل ایجاد کار و اشتغال‌زاییه؛ برای دیگران موقعیت و فرصت‌های شغلی به وجود می‌آره.</div>
+<div class="fa"><b>مثال:</b> مدیر رستوران که فرصت‌های شغلی متعددی در اختیار جامعه قرار می‌ده و ضمن حصول سود و درآمد، به اشتغال مشتاقان کار می‌پردازه.</div>
+<div class="fa">هر کس که توان ایجاد چنین موقعیت‌هایی رو برای دیگران داشته باشه و به اشتغال‌زایی اون‌ها کمک کنه، باید <b>«کارآفرین»</b> نامید.</div>
+<div class="fa"><b>طبقه‌بندی کلی کارآفرینان (۲ دسته):</b></div>
+<div class="fa"><b>۱) اهل نوآوری و ابداع:</b> دنبال ایجاد تحولات نو و تغییرات جدیدن؛ تو محدودیت‌ها و مشکلات در جا نمی‌زنن بلکه بر اون چیره می‌شن و راه‌های تازه‌تری برای کار و تولید ارائه می‌دن؛ فرصت‌های شغلی بیشتری قابل حصوله.</div>
+<div class="fa"><b>۲) اهل تقلید:</b> دنباله‌رو و تابع گروه اولن؛ برنامه و طرح ایجادشده توسط گروه اول رو توسعه و بسط می‌دن؛ تو این گروه هم فرصت‌های شغلی وجود داره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>مثال:</b> اگه کارآفرینان نوآور طرحی تحت عنوان «طلق یا حاشیه» برای جلد گرفتن به تولید رسونده باشن، سایر کارآفرینان به توسعه و بسطش می‌پردازن.
+</div>
+<div class="fa"><b>تعریف جامع:</b> کارآفرین فردیه که توانایی سازماندهی رو به نحو شایسته داره، از فرصت‌ها و موقعیت‌ها به خوبی استفاده می‌کنه و با اعمال طرح‌های ابتکاری و نوآورانه به رشد افراد و ایجاد تغییرات جدید یاری می‌رسونه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویژگی کارآفرینان خلاق</h3></div>
+<div class="fa"><b>۱) استقلال و کنترل درونی:</b> کارآفرینان خلاق خود تصمیم‌گیرنده هستن و کمتر تحت تأثیر القائات دیگرانن؛ متکی به نفس و دارای روحیه کاملاً مستقل؛ اراده قوی باعث مقاومت در برابر ناملایمات می‌شه؛ آغاز تصمیمات همراه با ریسک و پذیرش طرح‌های نو و بکر نیازمند استقلال در اندیشه و عمله.</div>
+<div class="fa"><b>۲) رشددهندگی و علاقه‌مندی و بهره‌وری:</b> کارآفرینان خلاق به شکوفاسازی استعدادها توجه می‌کنن؛ مناسب‌سازی نوع کار با علایق و تخصص کارکنان، فراهم آوردن فرصت برای تلاش و انجام کار مورد علاقه، تشویق به ارائه طرح‌های نو و قدردانی به‌جا و کافی از زحماتشون به افزایش بازده کاری کمک می‌کنه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> روحیه کارآفرینان خلاق یه‌باره به وجود نیومده؛ مجموع ویژگی‌های فوق از زمره خصایص شخصیت‌های خلاقه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تأثیر خلاقیت بر کارآفرینی</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>۱) خلاقیت تو کودکی:</b> به سادگی قابل مشاهده‌ست (شیرین‌کاری‌ها، خراب‌کاری، نقاشی‌ها). با بزرگ‌تر شدن، سرگرمی‌ها به علاقه‌مندی‌های خاص بزرگسالی تبدیل می‌شه و چه‌بسا همیشه تو طول زندگی باقی بمونه. بسیاری از اشتغالات هنری، تولیدی، صنعتی و حتی علمی فرد تو علاقه‌مندی‌های دوران کودکی و نوجوانی ریشه داره (مثال: نوجوان علاقه‌مند به موسیقی → مشاغل حرفه‌ای موسیقی).</div>
+<div class="fa"><b>۲) حل خلاق مسائل:</b> خلاقیت رو <b>«قدرت حل خلاقانه مسئله»</b> هم نامیدن؛ فرد به فکر راه‌حل‌های مفید برای کار و اشتغال خودش خواهد بود و با یه بار شکست یا روبرو شدن با مانع ناامید نمی‌شه؛ خلاقیت قدرت جست‌وجو و پیگیری <b>راه‌حل‌های جانشین</b> رو می‌ده؛ برنامه‌ریزی و هدف‌گذاری نقش مهمی ایفا می‌کنه.</div>
+<div class="fa"><b>۳) خلاقیت و کیفیت:</b> فرد خلاق به کیفیت و بهبود محصول خودش اهمیت می‌ده؛ تلاش می‌کنه هر روز کارش بهتر از دیروز باشه؛ تعالی و پیشرفت کار هدف اصلی اونه. پرورش روحیه خلاقیت و نوآوری تو کودک و نوجوان، از اون تو آینده فردی سازنده فرصت‌های بهتر و متعالی‌تر برای خودش و جامعه خواهد ساخت.</div>
+</div>
+</section>
+
+<section id="compare" class="section">
+<h2 class="section-title">۰۳ · تفاوت‌ها (اینا رو قاطی نکن)</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، اینجا جمع شده</p>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت مفاهیم (ابتکار، خلاقیت، نوآوری، اختراع، تازگی)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>مفهوم</th><th>خودمونی چی‌ه</th></tr></thead>
+<tbody>
+<tr><td>ابتکار</td><td>فرایند ایجاد هر چیزی که قبلاً وجود نداشته</td></tr>
+<tr><td>خلاقیت</td><td>فرایند ایجاد هر چیز <b>جدید و باارزش</b></td></tr>
+<tr><td>نوآوری</td><td>فرایند ایجاد هر چیز جدیدی که برای فرد، گروه، سازمان، صنعت یا اجتماعی خاص <b>ارزش مهمی</b> داشته باشه</td></tr>
+<tr><td>اختراع</td><td>وقتی ایده جدید از ذهن مخترع به طرح یا نمونه تبدیل بشه؛ تا زمانی که تو ذهن باشه و عینیت بیرونی نیافته، اختراع محسوب نمی‌شه</td></tr>
+<tr><td>تازگی</td><td>به معنی خلق چیز جدید نیست؛ بیشتر <b>بُعد زمان</b> توش مستتره</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته کلیدی:</b> بین عموم مردم این واژه‌ها هم‌معنا به کار می‌رن، اما تو کتب تخصصی هر یک مفهوم، تعریف و کاربرد جداگانه دارن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت افراد خلاق، نوآور و کارآفرین (جدول کلیدی امتحانی)</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>نوع فرد</th><th>توانایی</th></tr></thead>
+<tbody>
+<tr><td>خلاق (ایده‌پرداز)</td><td>توانایی بالا تو <b>ایده‌سازی</b>؛ می‌تونه پدیده‌های جدید کشف یا خلق کنه اما نمی‌تونه یا علاقه نداره اکتشافات/اختراعات خودش رو به محصول یا خدمت تبدیل کنه و به مرحله تولید انبوه برسونه.</td></tr>
+<tr><td>مخترع</td><td>توانایی بالا تو <b>تبدیل ایده به ایده‌های عملی</b>.</td></tr>
+<tr><td>نوآور</td><td>توانایی بالا تو <b>تبدیل ایده‌های عملی خودش به کالاها و خدمات</b>؛ علاوه بر کشف/خلق پدیده‌های جدید، توانایی تبدیل اختراعات خودش به محصول/خدمت و عرضه به بازار برای کسب سود رو داره.</td></tr>
+<tr><td>کارآفرین</td><td>توانایی بالا تو <b>تبدیل ایده‌ها یا کالاها و خدمات جدید خودش یا دیگران به ارزش</b>؛ قادره ایده‌ها/اختراعات/اکتشافات و حتی نوآوری‌های دیگران رو به ارزش تبدیل کنه.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>راه‌های کسب درآمد کارآفرین</h3><span class="badge s">مهم</span></div>
+<div class="fa">کارآفرین با تشخیص فرصت‌های بازار و پذیرش ریسک مربوطه، از طریق راه‌های زیر می‌تونه <b>ثروت (درآمد)</b> ایجاد کنه:</div>
+<div class="fa">۱) کسب درآمد از طریق <b>فروش ایده‌های خودش</b></div>
+<div class="fa">۲) کسب درآمد از طریق <b>اجرای ایده‌های خودش</b></div>
+<div class="fa">۳) کسب درآمد از طریق <b>خرید ایده‌های جدید دیگران و اجرای اون‌ها</b></div>
+<div class="fa">۴) کسب درآمد از طریق <b>خرید اختراعات و اکتشافات دیگران و اجرای اون‌ها</b></div>
+<div class="fa">۵) کسب درآمد از طریق <b>خرید محصولات و خدمات جدید و فروش اون‌ها</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابطه خلاقیت و نوآوری با کارآفرینی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>خلاقیت جوهره کارآفرینیه.</b></div>
+<div class="fa"><b>شومپیتر</b> کارآفرینی رو <b>«تخریب خلاق»</b> تعریف می‌کنه.</div>
+<div class="fa">خلاقیت با نوآوری و نوآوری با کارآفرینی <b>تفاوت داره</b>؛ رفتار، حالات، ویژگی‌ها و نقش افراد خلاق، نوآور و کارآفرین با یکدیگر متفاوته.</div>
+</div>
+</section>
+
+<section id="techniques" class="section">
+<h2 class="section-title">۰۴ · تکنیک‌های خلاقیت (اینا خیلی مهمن)</h2>
+<p class="section-sub">هر تکنیک با خودمونی‌ترین توضیح</p>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک طوفان ذهنی (بارش افکار)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>ابداع:</b> الکس اس اسپورن، ۱۹۳۸.</div>
+<div class="fa"><b>تعریف (واژه‌نامه بین‌المللی وبستر):</b> اجرای یه تکنیک گردهمایی که گروهی می‌کوشن راه‌حلی برای مسئله خاص یا انباشتن تمام ایده‌هایی که خودبه‌خود توسط اعضا ارائه می‌شه، بیابن؛ در نهایت راه‌حل‌های ممکن از میان جواب‌های مختلف بیرون کشیده می‌شه.</div>
+<div class="fa"><b>چهار قاعده اصلی:</b></div>
+<div class="fa">۱) هیچ قضاوتی درباره هیچ پیشنهادی صورت نمی‌گیره.</div>
+<div class="fa">۲) از کلیه ایده‌ها حتی پوچ و غیرعملی استقبال می‌شه.</div>
+<div class="fa">۳) <b>کمیت</b> ایده‌ها هدف اصلیه، چون به کیفیت می‌انجامه.</div>
+<div class="fa">۴) هرچه ترکیب ایده‌ها بیشتر باشه، بهتره.</div>
+<div class="fa"><b>تفاوت طوفان ذهنی فردی و گروهی:</b></div>
+<div class="fa">• فردی: تولید طیف گسترده‌ای از ایده‌ها؛ کمتر منجر به ایده‌های کارا و عملی می‌شه؛ فرد تو انزوا ترسی از انتقاد نداره و آزاده.</div>
+<div class="fa">• گروهی: مشکلات ایده‌ای فرد به وسیله تجربه و خلاقیت افراد دیگه حل می‌شه.</div>
+<div class="fa"><b>نتیجه مطلوب‌تر:</b> ترکیب این دو نوع طوفان ذهنی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک چرا؟</h3></div>
+<div class="fa">مثل چراهای مکرر کودکی؛ اما تو بزرگسالی باید دانسته‌هامون رو زیر سؤال ببریم.</div>
+<div class="fa">برای <b>ایده‌یابی و ایده‌پردازی</b> و شناسایی و تعریف درست و کامل مسئله به کار می‌ره.</div>
+<div class="fa">سؤالات تا جایی ادامه پیدا می‌کنه که به <b>بصیرت و بینش</b> برسیم یا تو باتلاق فرو بریم.</div>
+<div class="fa">حتی اگه به جواب مفیدی رسیدیم، باید مسئله رو به شکل دیگه از نو مطرح و فرآیند پرسش و پاسخ رو ادامه بدیم.</div>
+<div class="fa">نباید انتظار داشت همه مشکلات با این تکنیک حل بشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک توهم خلاق</h3></div>
+<div class="fa">چیزی که فکر می‌کنیم واقعیته، همیشه واقعیت نیست؛ واقعیت‌ها با حواس پنجگانه درک می‌شن.</div>
+<div class="fa">چشم می‌بینه اما وظیفه ذهن چیز دیگه‌ست: مرتب کردن، دسته‌بندی و قابل فهم کردن جرقه‌ها.</div>
+<div class="fa">تصاویر ذهنی کپی مستقیم اشیاء نیستن بلکه <b>کدهای خلاصه‌ای</b> هستن که از طریق شبکه عصبی مغز می‌رسن.</div>
+<div class="fa"><b>هدف:</b> با قدرت توهم و خطاهای عمدی به گونه‌ای دیگه به مسائل نگاه کنیم تا اصل و واقعیت موضوع رو دریابیم.</div>
+<div class="fa"><b>نتیجه:</b> آزاد شدن اطلاعات از شکاف‌های بافت‌های عصبی و ساخت <b>الگوی ذهنی جدید</b> یا انتقال موضوع از الگوی قبلی به الگوی دیگه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک ۶ کلاه فکری</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">شش جنبه یا سبک فکری؛ هر یک با یه کلاه رنگی به عنوان سمبل.</div>
+<div class="fa">فرد با تعویض کلاه‌ها نقشش رو تو گروه تغییر می‌ده؛ تنوع و کثرت این تغییرها منجر به رشد خلاقیت می‌شه.</div>
+<div class="fa">هنگام بازی نقش‌ها، فکر فرد از قالب‌های ذهنی خودش جدا شده و به سمت نقش هدایت می‌شه.</div>
+<div class="fa"><b>اهداف اصلی:</b></div>
+<div class="fa">۱) <b>ساده کردن تفکر:</b> پرداختن جداگانه به عواطف، منطق، اطلاعات، امید و خلاقیت → تفکری ساده‌تر، دقیق‌تر، شفاف‌تر، سریع‌تر و اثربخش‌تر.</div>
+<div class="fa">۲) فراهم کردن زمینه برای <b>تغییر آگاهانه الگوهای ذهنی</b> برای استفاده از تمامی ظرفیت‌های ذهنی.</div>
+<div class="fa"><b>معانی کلاه‌ها (حتماً حفظ کن):</b></div>
+<div class="fa"><b>سفید:</b> موضوعات و شکل‌های واقعی؛ بدون قضاوت، فقط جستجوی واقعیت‌ها.</div>
+<div class="fa"><b>سیاه:</b> بیان و جستجوی جنبه‌های منفی، بدبینانه و واقعی.</div>
+<div class="fa"><b>سرخ:</b> جنبه‌های هیجانی، احساسی و غیراستدلالی؛ برای اظهار نظر با این کلاه دلیلی خواسته نمی‌شه.</div>
+<div class="fa"><b>سبز:</b> تفکر جانبی؛ برای تحریک ذهن خلاق دیگران (عمدتاً فکرهای غیرمنطقی)؛ حتی اگه برانگیزنده نباشه برای پیشگیری از انجماد فکرهای ناشی از کلاه سیاه لازم و مفیده.</div>
+<div class="fa"><b>زرد:</b> جنبه‌های مثبت، خوشبینانه اما واقعی.</div>
+<div class="fa"><b>آبی:</b> تنظیم و ساماندهی فرآیند برنامه‌ریزی برای تفکر و استفاده از کلاه‌های دیگه (<b>کلاه نظارت</b>)؛ به اصل موضوع فکر نمی‌کنه بلکه به سبک تفکری فکر می‌کنه که برای بررسی موضوع لازمه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک پی.ام.آی (PMI)</h3></div>
+<div class="fa">فرد رو مجبور می‌سازه دقایقی بر خلاف قالب‌های ذهنی‌اش تفکر کنه و به مرور نسبت به قالب‌های ذهنی خودش آگاه‌تر و مسلط‌تر بشه.</div>
+<div class="fa"><b>روش کار:</b> ابتدا توجه به <b>نکات مثبت</b> موضع/پیشنهاد، سپس <b>نکات منفی</b>، نهایتاً <b>نکات جالب و تازه</b> (نه مثبت و نه منفی).</div>
+<div class="fa">در پایان: تهیه لیست مثبت/مزایا، لیست موانع/محدودیت‌ها/نکات منفی، و لیست نکات جالب و تازه.</div>
+<div class="fa"><b>مهم‌ترین کاربرد:</b> زمانی که نسبت به یه قضیه <b>اطمینان داریم</b> (نه موارد شک و ابهام). هرچه نسبت به موضوعی بیشتر بدبین یا خوش‌بین باشیم، استفاده از این تکنیک کارگشاتر و اثربخش‌تره.</div>
+<div class="fa">برای یافتن نکات جالب، جمله <b>«چقدر جالب می‌شه اگه...»</b> رو کامل کن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک DOIT</h3></div>
+<div class="fa">نام از حروف اول چهار کلمه:</div>
+<div class="fa"><b>D</b>efine = تعریف کردن</div>
+<div class="fa"><b>O</b>pen = باز کردن</div>
+<div class="fa"><b>I</b>dentify = شناسایی</div>
+<div class="fa"><b>T</b>ransform = تبدیل</div>
+<div class="fa"><b>منظور:</b> برای حل مشکل ابتدا موضوع و مسئله رو دقیق تعریف و مشخص کنیم، سپس ذهن رو برای راه‌حل‌های مختلف باز نگه داریم تا بهترین راه‌حل شناسایی و در نهایت به عمل تبدیل بشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک شکوفه نیلوفر آبی</h3></div>
+<div class="fa"><b>طراح:</b> یاسوآ ماتسومورا.</div>
+<div class="fa">الهام از شکوفه نیلوفر آبی: گلبرگ‌ها به دور یه <b>هسته مرکزی</b> خوشه می‌زنن و از اون نقطه گسترش می‌یابن.</div>
+<div class="fa">با ایجاد پنجره‌های مشابه یا پنجره‌های برنامه کامپیوتری، بخش‌هایی از یه تابلوی ایده رو می‌شه تقسیم‌بندی کرد که یه موضوع اصلی برای استخراج ایده تو پنجره‌های جانبی استفاده بشه (دلجویی، ۱۳۸۸).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک اسکمپر (SCAMPER)</h3><span class="badge s">مهم</span></div>
+<div class="fa">کاربرد اصلی بر پایه <b>ایده‌یابی فردی</b> طراحی شده اما برای گروه‌ها هم بسیار اثربخشه.</div>
+<div class="fa"><b>هدف اصلی:</b> قدرت تصور، تا اون رو در جهات و ابعاد مختلف و ضروری به حرکت دربیاره.</div>
+<div class="fa">تحریک با یه سری <b>سؤالات ایده‌برانگیز</b>؛ با افزایش ایده‌ها، کیفیت ایده‌ها تضمین و ارتقا پیدا می‌کنه.</div>
+<div class="fa"><b>حروف از ابتدای واژه‌های سؤال‌برانگیز:</b></div>
+<div class="fa"><b>S</b> = Substitution = جانشین‌سازی</div>
+<div class="fa"><b>C</b> = Combine = ترکیب کردن</div>
+<div class="fa"><b>A</b> = Adapt = رفاه، سازگاری و تعدیل کردن</div>
+<div class="fa"><b>M</b> = Magnify = بزرگ‌سازی</div>
+<div class="fa"><b>P</b> = Put to other uses = استفاده در سایر موارد</div>
+<div class="fa"><b>E</b> = Elimination = حذف کردن</div>
+<div class="fa"><b>R</b> = Reverse = معکوس‌سازی</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک درهم شکستن مفروضات</h3></div>
+<div class="fa">یکی از موانع مهم خلاقیت، <b>مفروضات قبلی</b>ه که ناخودآگاه اجازه نمی‌ده فکر در همه جهات حرکت کنه.</div>
+<div class="fa">بسیاری از مفروضات ممکنه از همون زمان ایجاد تو ذهن <b>غلط</b> باشن (مثل خطرناک بودن دوچرخه تو ذهن کسی که خواب تصادف شدید با دوچرخه دیده).</div>
+<div class="fa">بسیاری به مرور زمان اعتبارشون رو از دست دادن یا به دلیل تغییر شرایط بی‌اعتبار شدن؛ اما فرد متوجه تغییرات و اشتباهات نیست و هنوز با مفروضات قبلی به مسئله نگاه می‌کنه.</div>
+<div class="fa">چون مفروضات درونی‌ان، نمی‌شه اون‌ها رو به تنهایی فسخ یا از فکر جدا ساخت (مانند چاقویی که نمی‌تونه دسته‌اش رو ببره).</div>
+<div class="fa"><b>اولین قدم برای تغییر مفروضات: شناسایی مفروضات خود و دیگران.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک دلفی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>معرفی:</b> داکلی و هلمر، ۱۹۶۴.</div>
+<div class="fa">شبیه طوفان ذهنی با این تفاوت که افراد <b>هیچ‌گاه به صورت گروه تو یه جلسه و دور یه میز جمع نمی‌شن</b> و رویارویی مستقیم رخ نمی‌ده.</div>
+<div class="fa"><b>فلسفه:</b> تو طوفان فکری افراد به علت شرم و خجالت نمی‌تونستن بعضی ایده‌هاشون رو مطرح کنن؛ لذا تو این روش افراد کلامی و رودررو درگیر بحث نمی‌شن.</div>
+<div class="fa"><b>روش کار:</b> رئیس گروه موضوع رو به همه اعلام می‌کنه؛ هر فرد جداگانه ایده‌هاش رو <b>کتبی</b> (حتی بدون ذکر نام) برای رئیس گروه می‌فرسته؛ رئیس تمام ایده‌ها رو برای تک‌تک اعضا ارسال می‌کنه و از اون‌ها می‌خواد نسبت به ایده‌های دیگران فکر کنن و ایده جدید اضافه کنن؛ این عمل چندین بار تکرار می‌شه تا <b>اتفاق آرا</b> به دست بیاد.</div>
+<div class="fa">شامل دعوت به مشورت و مقایسه قضاوت‌های <b>بی‌نام چندنوبتی</b> اعضای تیم درباره یه مسئله یا تصمیم (دلجویی، ۱۳۸۸).</div>
+<div class="fa"><b>چه موقع از فن دلفی استفاده می‌شه:</b></div>
+<div class="fa">۱) وقتی می‌خواید نظر اعضای تیم رو در مورد شخصی به دست بیارید بی‌آنکه روبرو شدن اون‌ها سبب احتمال خطا در قضاوت بشه.</div>
+<div class="fa">۲) هنگامی که اعضای تیم تو یه جا مستقر نباشن.</div>
+<div class="fa">۳) زمانی که لازمه اعضای تیم نسبت به اتخاذ تصمیم و عواقبش کاملاً آگاه و مسئول باشن.</div>
+<div class="fa">۴) هنگامی که حضور چهره‌های بالادست و فشار همتایان بر تصمیم‌گیری اثر می‌ذاره.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک واژه تصادفی</h3></div>
+<div class="fa">برقراری <b>ارتباط اجباری</b> بین موضوع مورد نظر و یه واژه که به طور تصادفی از فرهنگ لغات (یا چیزهای اطرافمون) به دست میاد.</div>
+<div class="fa">انتظار: برای برقراری چنین ارتباطی، ایده‌ها و نظرات جدید درباره موضوع به دست بیاد. در صورت عدم موفقیت، واژه تصادفی دیگه‌ای امتحان می‌شه.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>مثال امتحانی:</b> صاحب کارخانه تلویزیون؛ باز کردن فرهنگ لغات → کلمه <b>«پنیر»</b> → چون پنیر سوراخ‌های متعددی داره، تلویزیون هم باید سوراخ‌هایی داشته باشه → طرح تلویزیون‌هایی که هم‌زمان چند کانال رو نشون می‌دن (نظری، ۱۳۹۴).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک نگاه تازه</h3></div>
+<div class="fa">از بیرون از سازمان کسی رو بیارید که چیزی در مورد مسئله نمی‌دونه؛ چنین شخصی ممکنه مسئله رو از <b>دید تازه‌ای</b> بررسی کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تکنیک‌های خلاقیت (دسته‌بندی کلی)</h3></div>
+<div class="fa">تکنیک‌ها به <b>فردی</b> و <b>گروهی</b> تقسیم می‌شن:</div>
+<div class="fa"><b>فردی:</b> توهم خلاق و ثبت آن</div>
+<div class="fa"><b>گروهی:</b> طوفان فکری و دلفی</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۵ · دام‌های امتحانی (اینا رو نخور!)</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: خلاقیت و نوآوری رو یکی می‌گیری</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی خلاقیت و نوآوری هم‌معنا هستن.</div>
+<div class="fa"><b>جواب درست:</b> خلاقیت = ایجاد چیز <b>جدید و باارزش</b>؛ نوآوری = ایجاد چیز جدیدی که <b>ارزش مهمی</b> برای فرد/گروه/سازمان/صنعت/اجتماع داره. نوآوری <b>شکل عالی‌تر خلاقیته</b> و فرآیند پایانی اونه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> هر خلاقیتی به نوآوری نمی‌رسه؛ نوآوری یه مرحله بالاتره.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: اختراع چیه؟</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی هر ایده جدید تو ذهن، اختراعه.</div>
+<div class="fa"><b>جواب درست:</b> اختراع وقتیه که ایده جدید <b>از ذهن مخترع به طرح یا نمونه تبدیل بشه</b>؛ تا زمانی که تو ذهن باشه و عینیت بیرونی نیافته، اختراع محسوب نمی‌شه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ایده تو ذهن = اختراع نیست. باید تبدیل به طرح/نمونه بشه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: تازگی یعنی چی؟</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تازگی یعنی خلق چیز جدید.</div>
+<div class="fa"><b>جواب درست:</b> تازگی به معنی خلق چیز جدید نیست؛ بیشتر <b>بُعد زمان</b> توش مستتره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تازگی یعنی جدید بودن از نظر زمان، نه خلق چیز جدید.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: مراحل خلاقیت (دیدگاه آموزش‌پذیری)</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب مراحل رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> خلاقیت <b>فرآیندی چهار مرحله‌ایه</b>: <b>ادراک → پرورش → الهام → نوآوری</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این چهار مرحله رو به ترتیب حفظ کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: ابداع‌کننده طوفان ذهنی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی داکلی و هلمر طوفان ذهنی رو ابداع کردن.</div>
+<div class="fa"><b>جواب درست:</b> <b>الکس اس اسپورن</b> تو سال ۱۹۳۸ طوفان ذهنی رو ابداع کرد. <b>داکلی و هلمر</b> تو سال ۱۹۶۴ تکنیک دلفی رو معرفی کردن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این دو تا رو با هم اشتباه نگیر.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: قواعد طوفان ذهنی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تو طوفان ذهنی باید ایده‌ها رو ارزیابی کرد.</div>
+<div class="fa"><b>جواب درست:</b> تو طوفان ذهنی <b>هیچ قضاوتی درباره هیچ پیشنهادی صورت نمی‌گیره</b>؛ از کلیه ایده‌ها حتی پوچ و غیرعملی استقبال می‌شه؛ <b>کمیت</b> ایده‌ها هدف اصلیه؛ هرچه ترکیب ایده‌ها بیشتر باشه بهتره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تو طوفان ذهنی ارزیابی ممنوعه!
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: تکنیک دلفی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تو دلفی افراد دور یه میز جمع می‌شن.</div>
+<div class="fa"><b>جواب درست:</b> تو دلفی افراد <b>هیچ‌گاه به صورت گروه تو یه جلسه و دور یه میز جمع نمی‌شن</b> و رویارویی مستقیم رخ نمی‌ده. ایده‌ها <b>کتبی و بی‌نام</b> فرستاده می‌شن و چندین بار تکرار می‌شه تا اتفاق آرا به دست بیاد.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> دلفی = کتبی، بی‌نام، بدون رویارویی، چندنوبتی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: معانی کلاه‌های فکری</h3>
+<div class="fa"><b>دام چیه:</b> معانی کلاه‌ها رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> سفید=واقعیت، سیاه=منفی، سرخ=احساسی، سبز=جانبی/خلاق، زرد=مثبت، آبی=نظارت.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این شش تا رو حتماً حفظ کن؛ خیلی میاد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: تکنیک PMI</h3>
+<div class="fa"><b>دام چیه:</b> ترتیب مراحل PMI رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> ابتدا <b>نکات مثبت</b>، سپس <b>نکات منفی</b>، نهایتاً <b>نکات جالب و تازه</b> (نه مثبت و نه منفی).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> مثبت → منفی → جالب.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: تکنیک DOIT</h3>
+<div class="fa"><b>دام چیه:</b> معنی حروف DOIT رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> <b>D</b>efine=تعریف کردن، <b>O</b>pen=باز کردن، <b>I</b>dentify=شناسایی، <b>T</b>ransform=تبدیل.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تعریف → باز کردن → شناسایی → تبدیل.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: تکنیک اسکمپر (SCAMPER)</h3>
+<div class="fa"><b>دام چیه:</b> حروف SCAMPER رو اشتباه معنی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> S=جانشین‌سازی، C=ترکیب کردن، A=سازگاری و تعدیل، M=بزرگ‌سازی، P=استفاده در سایر موارد، E=حذف کردن، R=معکوس‌سازی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این هفت تا رو حفظ کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: شش عامل خلاقیت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تعداد عوامل خلاقیت از استرنبرگ و اوهارا کم یا زیادتره.</div>
+<div class="fa"><b>جواب درست:</b> <b>۶ عامل</b>: دانش، توانایی عقلانی، سبک فکری، انگیزش، شخصیت، محیط.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این شش تا رو حفظ کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: تفاوت خلاق، مخترع، نوآور و کارآفرین</h3>
+<div class="fa"><b>دام چیه:</b> این چهار تا رو یکی می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> خلاق=ایده‌سازی؛ مخترع=تبدیل ایده به ایده عملی؛ نوآور=تبدیل ایده عملی به کالا و خدمات؛ کارآفرین=تبدیل ایده/کالا/خدمات به <b>ارزش</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این جدول رو حتماً مرور کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: کارآفرینی از نظر شومپیتر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی شومپیتر کارآفرینی رو «خلاقیت» تعریف کرده.</div>
+<div class="fa"><b>جواب درست:</b> شومپیتر کارآفرینی رو <b>«تخریب خلاق»</b> تعریف می‌کنه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تخریب خلاق، نه خلاقیت.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: آمار فراموشی</h3>
+<div class="fa"><b>دام چیه:</b> درصدهای فراموشی رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> حدود <b>۲۵٪</b> تو <b>۲۴ ساعت اول</b> و حدود <b>۸۵٪</b> تو <b>هفته اول</b> به فراموشی سپرده می‌شه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ۲۵٪ / ۲۴ ساعت — ۸۵٪ / هفته اول.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۶ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم فصل دوم — خلاقیت</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 02 · کارآفرینی · فصل دوم: خلاقیت</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+theme.onclick=()=>{const dark=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=dark?'':'dark';theme.textContent=dark?'تم شب':'تم روز'};
+
+const quizData = [
+{q:"خلاقیت یعنی چی؟",options:["فقط ایجاد اشتغال","به کارگیری توانایی‌های ذهنی برای ایجاد یه فکر یا مفهوم جدید","فقط راه‌اندازی کسب‌وکار کوچیک","مترادف با مدیریت"],answer:1,explanation:"تعریف کریمی (۱۳۸۶): خلاقیت، به کارگیری توانایی‌های ذهنی برای ایجاد یه فکر یا مفهوم جدید."},
+{q:"تفاوت خلاقیت و نوآوری چیه؟",options:["مترادفن","خلاقیت=ایجاد چیز جدید و باارزش؛ نوآوری=چیز جدید با ارزش مهم برای فرد/گروه/سازمان/صنعت/اجتماع","نوآوری=ایجاد چیز جدید و باارزش","هیچ تفاوتی ندارن"],answer:1,explanation:"خلاقیت=جدید و باارزش؛ نوآوری=جدید با ارزش مهم برای فرد/گروه/سازمان/صنعت/اجتماع."},
+{q:"اختراع چیه؟",options:["هر ایده جدید تو ذهن","وقتی ایده جدید از ذهن مخترع به طرح یا نمونه تبدیل بشه","فقط ثبت اختراع تو اداره","مترادف با خلاقیت"],answer:1,explanation:"اختراع وقتیه که ایده جدید از ذهن مخترع به طرح یا نمونه تبدیل بشه؛ تا تو ذهن باشه، اختراع نیست."},
+{q:"تازگی یعنی چی؟",options:["خلق چیز جدید","بُعد زمان","مترادف با نوآوری","مترادف با اختراع"],answer:1,explanation:"تازگی به معنی خلق چیز جدید نیست؛ بیشتر بُعد زمان توش مستتره."},
+{q:"مراحل خلاقیت از دیدگاه آموزش‌پذیری کدومن؟",options:["ادراک، پرورش، الهام، نوآوری","تعریف، باز کردن، شناسایی، تبدیل","مشکل، ائتلاف، تجهیز، ترک","مثبت، منفی، جالب"],answer:0,explanation:"خلاقیت فرآیندی چهار مرحله‌ایه: ادراک → پرورش → الهام → نوآوری."},
+{q:"سه ویژگی خلاقیت کدومن؟",options:["انگیزشی، مبتنی بر اراده، برنامه‌پذیر","فقط انگیزشی","فقط برنامه‌پذیر","فقط مبتنی بر اراده"],answer:0,explanation:"سه ویژگی خلاقیت: بنیانی انگیزشی داره، مبتنی بر اراده آدمیه، برنامه‌پذیره."},
+{q:"شش عامل خلاقیت از استرنبرگ و اوهارا کدومن؟",options:["دانش، توانایی عقلانی، سبک فکری، انگیزش، شخصیت، محیط","فقط دانش و انگیزش","فقط شخصیت و محیط","فقط توانایی عقلانی"],answer:0,explanation:"شش عامل: دانش، توانایی عقلانی، سبک فکری، انگیزش، شخصیت، محیط."},
+{q:"طوفان ذهنی رو کی ابداع کرد؟",options:["داکلی و هلمر، ۱۹۶۴","الکس اس اسپورن، ۱۹۳۸","ماتسومورا","شومپیتر"],answer:1,explanation:"الکس اس اسپورن تو سال ۱۹۳۸ طوفان ذهنی رو ابداع کرد."},
+{q:"قواعد طوفان ذهنی کدومن؟",options:["هیچ قضاوتی، استقبال از همه ایده‌ها، کمیت هدف اصلی، ترکیب ایده‌ها","فقط قضاوت ایده‌ها","فقط کیفیت ایده‌ها","فقط ترکیب ایده‌ها"],answer:0,explanation:"چهار قاعده: هیچ قضاوتی، استقبال از همه ایده‌ها حتی پوچ، کمیت هدف اصلی، هرچه ترکیب بیشتر بهتر."},
+{q:"تکنیک دلفی رو کی معرفی کرد؟",options:["اسپورن، ۱۹۳۸","داکلی و هلمر، ۱۹۶۴","ماتسومورا","شومپیتر"],answer:1,explanation:"داکلی و هلمر تو سال ۱۹۶۴ تکنیک دلفی رو معرفی کردن."},
+{q:"ویژگی اصلی تکنیک دلفی چیه؟",options:["افراد دور یه میز جمع می‌شن","افراد هیچ‌گاه به صورت گروه تو یه جلسه جمع نمی‌شن؛ کتبی و بی‌نام","فقط یه نفر ایده می‌ده","فقط دو نفر شرکت می‌کنن"],answer:1,explanation:"تو دلفی افراد هیچ‌گاه به صورت گروه تو یه جلسه و دور یه میز جمع نمی‌شن؛ ایده‌ها کتبی و بی‌نام فرستاده می‌شن."},
+{q:"معانی کلاه‌های فکری کدومن؟",options:["سفید=واقعیت، سیاه=منفی، سرخ=احساسی، سبز=جانبی/خلاق، زرد=مثبت، آبی=نظارت","سفید=منفی، سیاه=واقعیت","سرخ=واقعیت، آبی=احساسی","سبز=منفی، زرد=نظارت"],answer:0,explanation:"سفید=واقعیت، سیاه=منفی، سرخ=احساسی، سبز=جانبی/خلاق، زرد=مثبت، آبی=نظارت."},
+{q:"ترتیب مراحل تکنیک PMI چیه؟",options:["منفی، مثبت، جالب","مثبت، منفی، جالب","جالب، مثبت، منفی","مثبت، جالب، منفی"],answer:1,explanation:"PMI: ابتدا نکات مثبت، سپس نکات منفی، نهایتاً نکات جالب و تازه."},
+{q:"حروف DOIT مخفف چیه؟",options:["Define, Open, Identify, Transform","Design, Open, Identify, Test","Define, Organize, Identify, Transform","Design, Organize, Improve, Test"],answer:0,explanation:"DOIT: Define=تعریف کردن، Open=باز کردن، Identify=شناسایی، Transform=تبدیل."},
+{q:"حروف SCAMPER مخفف چیه؟",options:["Substitution, Combine, Adapt, Magnify, Put to other uses, Elimination, Reverse","Substitution, Combine, Adapt, Modify, Put, Eliminate, Reverse","Select, Combine, Adapt, Magnify, Put, Eliminate, Reverse","Substitution, Create, Adapt, Magnify, Put, Eliminate, Reverse"],answer:0,explanation:"SCAMPER: Substitution, Combine, Adapt, Magnify, Put to other uses, Elimination, Reverse."},
+{q:"تکنیک شکوفه نیلوفر آبی رو کی طراحی کرد؟",options:["اسپورن","داکلی","ماتسومورا","شومپیتر"],answer:2,explanation:"یاسوآ ماتسومورا تکنیک شکوفه نیلوفر آبی رو طراحی کرد."},
+{q:"تکنیک واژه تصادفی چیه؟",options:["انتخاب یه واژه تصادفی و برقراری ارتباط اجباری با موضوع","انتخاب یه واژه از موضوع","حذف واژه‌های تصادفی","ترکیب دو موضوع"],answer:0,explanation:"تکنیک واژه تصادفی: برقراری ارتباط اجباری بین موضوع مورد نظر و یه واژه که به طور تصادفی از فرهنگ لغات به دست میاد."},
+{q:"مثال تکنیک واژه تصادفی تو جزوه چی بود؟",options:["پنیر و تلویزیون","نان و ماشین","کتاب و موبایل","آب و کامپیوتر"],answer:0,explanation:"مثال: صاحب کارخانه تلویزیون، باز کردن فرهنگ لغات → کلمه «پنیر» → چون پنیر سوراخ داره، تلویزیون هم سوراخ داشته باشه → طرح تلویزیون‌هایی که هم‌زمان چند کانال رو نشون می‌دن."},
+{q:"درصد فراموشی اطلاعات تو ۲۴ ساعت اول و هفته اول چقدره؟",options:["۲۵٪ و ۸۵٪","۸۵٪ و ۲۵٪","۵۰٪ و ۹۰٪","۱۰٪ و ۵۰٪"],answer:0,explanation:"حدود ۲۵٪ تو ۲۴ ساعت اول و حدود ۸۵٪ تو هفته اول به فراموشی سپرده می‌شه."},
+{q:"تفاوت خلاق، مخترع، نوآور و کارآفرین چیه؟",options:["همه یکی هستن","خلاق=ایده‌سازی؛ مخترع=تبدیل ایده به ایده عملی؛ نوآور=تبدیل ایده عملی به کالا و خدمات؛ کارآفرین=تبدیل به ارزش","خلاق=کارآفرین؛ مخترع=نوآور","خلاق=نوآور؛ مخترع=کارآفرین"],answer:1,explanation:"خلاق=ایده‌سازی؛ مخترع=تبدیل ایده به ایده عملی؛ نوآور=تبدیل ایده عملی به کالا و خدمات؛ کارآفرین=تبدیل به ارزش."},
+{q:"کارآفرینی از نظر شومپیتر چیه؟",options:["خلاقیت","تخریب خلاق","نوآوری","اختراع"],answer:1,explanation:"شومپیتر کارآفرینی رو «تخریب خلاق» تعریف می‌کنه."},
+{q:"آمار خلاقیت کودکان تو ۴ سالگی و ۷ سالگی چقدره؟",options:["۹۵٪ و ۴٪","۴٪ و ۹۵٪","۵۰٪ و ۵۰٪","۸۵٪ و ۲۵٪"],answer:0,explanation:"تو ۴ سالگی ۹۵٪ کودکان خلاقیت قابل‌توجهی داشتن؛ تو ۷ سالگی فقط ۴٪ قادر بودن خلاقیت چشمگیر خودشون رو حفظ کنن."},
+{q:"تکنیک‌های گروهی خلاقیت کدومن؟",options:["طوفان فکری و دلفی","توهم خلاق و ثبت آن","PMI و DOIT","SCAMPER و نیلوفر آبی"],answer:0,explanation:"تکنیک‌های گروهی: طوفان فکری و دلفی. تکنیک فردی: توهم خلاق و ثبت آن."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مفاهیم فصل دوم — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

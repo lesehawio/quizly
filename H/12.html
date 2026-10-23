@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره توانبخشی · سری 12 · فصل دوازدهم: مهارت‌های مشاوره</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,var(--pink) 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"12";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#ffe8f0;color:#a71547}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:8px}
+.theme-btn svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.theme-btn:hover svg{transform:rotate(15deg)}
+.theorist{background:linear-gradient(135deg,var(--surface),#fff5f9);border:1px solid var(--line);border-right:6px solid var(--pink);border-radius:20px;padding:16px;margin:12px 0}
+.theorist h3{margin:0 0 4px;color:var(--pink);font-size:18px}
+.theorist .meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+.diff{border-right-color:var(--pink)}.diff strong{color:var(--pink)}
+.def{border-right-color:var(--green)}.def strong{color:var(--green)}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره توانبخشی · سری 12</small></div></div>
+  <button id="theme" class="theme-btn" aria-label="تغییر تم">
+    <svg id="themeIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</header>
+
+<section class="hero">
+  <h2>فصل دوازدهم: مهارت‌های مشاوره</h2>
+  <p>اتحاد کاری، سه شرط اساسی (همدلی، گرمی، خلوص)، مصاحبه، سه نوع سؤال، هدف‌گذاری، مقاومت و حل تعارض — همه رو ساده و خودمونی</p>
+  <div class="pills"><span class="pill">اتحاد کاری</span><span class="pill">همدلی</span><span class="pill">گرمی</span><span class="pill">خلوص</span><span class="pill">مصاحبه</span><span class="pill">هدف‌گذاری</span><span class="pill">مقاومت</span><span class="pill">حل تعارض</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل دوازدهم کتاب «مشاوره و روان‌درمانی در توانبخشی معلولین» نوشته دکتر آناهیتا خدابخش کوالیی نوشته شده. همه‌چی رو خیلی ساده گفتم. بخش «آدم‌ها و نظریه‌هاشون» جداست، بخش «اصطلاحا یعنی چی» همه تعاریف رو داره، و بخش «تفاوت‌ها و تله‌ها» برای تست زدن آماده‌ت می‌کنه.</div>
+
+<div class="stats">
+<div class="stat"><b>۳</b><span>شرط اساسی</span></div>
+<div class="stat"><b>۵</b><span>مؤلفه همدلی پیشرفته</span></div>
+<div class="stat"><b>۳</b><span>نوع مصاحبه</span></div>
+<div class="stat"><b>۳</b><span>نوع سؤال</span></div>
+</div>
+
+<nav>
+<a href="#core">خلاصه گنده</a><a href="#theorists">آدم‌ها و نظریه‌هاشون</a><a href="#concepts">اصطلاحا یعنی چی</a><a href="#alliance">اتحاد کاری</a><a href="#conditions">سه شرط اساسی</a><a href="#interview">مصاحبه</a><a href="#questions">سه نوع سؤال</a><a href="#goals">هدف‌گذاری</a><a href="#resistance">مقاومت</a><a href="#conflict">حل تعارض</a><a href="#diffs">تفاوت‌ها و تله‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ==================== هسته امتحانی ==================== -->
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · خلاصه گنده (۱۰ دقیقه بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>اتحاد کاری (بوردین، ۱۹۷۹)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>تعریف:</b> «اتحاد کاری» از <b>تعهد و التزام، اهداف و وظایف</b> تشکیل شده.</div>
+<div class="fa"><b>اساسی‌ترین اصل:</b> برای مؤثرتر و کارآمدتر بودن اتحاد کاری، <b>توافق دوسویه</b> بین مشاور و مراجع <b>مهم‌ترین اساس مشاوره</b>ست.</div>
+<div class="fa"><b>اصل برابری و مساوات:</b> مشاور و مراجع <b>مسئولیت مشترک</b> برای برنامه‌ریزی و پیامدهای درمانی دارن.</div>
+<div class="fa"><b>تعهد و التزام:</b> شامل <b>اعتماد دوسویه، احترام و پذیرش متقابل</b>ه که از راه <b>حس همکاری و تعهد به انجام اهداف و وظایف</b> آشکار می‌شه.</div>
+<div class="fa"><b>اهداف:</b> مداخله‌های مشاوره‌ای مثل <b>بازگشت به کار، افزایش استقلال، یا بهبود کارکرد شناختی، جسمانی یا عاطفی</b>.</div>
+<div class="fa"><b>وظایف:</b> فعالیت‌های ویژه‌ای که <b>مراجع رو در درمان درگیر ساخته و تغییرات رو آسان می‌سازن</b>؛ جوهره اصلی فرایند توانبخشی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه شرط اساسی مشاوره</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) همدلی (Empathy):</b> آگاهی از چارچوب مرجع درونی فرد و دستیابی به حس مراجع و تجربه لحظه‌به‌لحظه بودن با او. <b>عنصر هسته‌ای مشاوره توانبخشی کارآمد</b>.</div>
+<div class="fa"><b>۲) گرمی (Warmth):</b> ارتباط گرم و دوستانه با مراجع و اعضای تیم؛ کلیدش <b>احترام و پذیرش</b>ه.</div>
+<div class="fa"><b>۳) خلوص (Genuineness):</b> واقعی، صادق و بی‌تکلف بودن؛ برخورد برابر و مساوات‌طلبانه.</div>
+<div class="fa">این سه شرط از <b>نظریه شخص‌محور راجرز</b> نشئت گرفتن و <b>عوامل درمانی «لازم و مکفی»</b> توصیف می‌شن.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>بدون این سه شرط اساسی نمی‌شه به اهداف توانبخشی تو فرایند درمان دست پیدا کرد.</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پنج مؤلفه همدلی پیشرفته (رام‌ریل و سکف، ۱۹۹۶)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱)</b> توجه و تأکید بر <b>شدت ابرازهای کلامی و غیرکلامی مراجع</b>.</div>
+<div class="fa"><b>۲)</b> ساخته و پرداخته کردن پاسخ‌ها به‌گونه‌ای که برای فرد <b>قابل فهم و درک</b> باشه.</div>
+<div class="fa"><b>۳)</b> پاسخ دادن به احساسات مراجع، به‌گونه‌ای که <b>مشابه با حالت و تُن صدای او</b> باشه.</div>
+<div class="fa"><b>۴)</b> حرکت به سوی <b>روشن‌سازی و گسترش تجربه‌های فردی</b>.</div>
+<div class="fa"><b>۵)</b> توجه به رفتار فرد به‌عنوان <b>بهترین شاخص اثربخشی روابط حرفه‌ای در توانبخشی</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه نوع مصاحبه</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>ویژگی</th><th>مزایا</th><th>معایب</th></tr></thead>
+<tbody>
+<tr><td><b>بی‌ساختار</b></td><td>از هیچ فرمت خاصی پیروی نمی‌کنه؛ مصاحبه‌گر تعیین می‌کنه چه سؤالاتی بپرسه؛ مراجع آزاده از یه موضوع به موضوع بعدی بپردازه</td><td>بسیار جذاب؛ مناسب برقراری رابطه مشاوره‌ای</td><td>نظم خاصی نداره؛ بیشتر ذهنیه تا روایی مشخص</td></tr>
+<tr><td><b>باساختار</b></td><td>رهنمودی؛ از فرمت خاصی پیروی می‌کنه؛ سؤالات از پیش مشخصن</td><td>—</td><td>خیلی خشک و غیرقابل انعطاف</td></tr>
+<tr><td><b>نیمه‌ساختاریافته</b></td><td>تو محیط‌های توانبخشی به کار می‌ره</td><td>برای تسهیل جمع‌آوری اطلاعات اساسی مراجع (نام، شماره تلفن، تاریخ تولد، منبع ارجاع و تشخیص)</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه نوع سؤال در مصاحبه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) سؤالات باز پاسخ:</b> دیگران رو ترغیب به صحبت می‌کنن؛ با <b>چگونه، چه، کجا، چه موقع، چه کسی</b> شروع می‌شن.</div>
+<div class="fa"><b>۲) سؤالات بسته پاسخ:</b> بر تعامل و اطلاعات روشن و صریح خاص تأکید می‌کنن؛ پاسخ‌های خیلی کوتاه؛ با <b>«آیا»</b> شروع می‌شن.</div>
+<div class="fa"><b>۳) سؤالات روشن‌سازی:</b> برای <b>آگاهی دقیق‌تر یا روشن‌تر از آنچه مراجع سعی در بیانش داره</b>؛ مثال: «مطمئن نیستم منظورتون رو درست فهمیده باشم...»</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> سؤالاتی که با <b>«چرا»</b> شروع می‌شن، غالباً مراجع رو در <b>حالت تدافعی</b> قرار می‌دن و باید ازشون اجتناب کرد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هفت مرحله فرایند هدف‌گذاری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) آگاهی از درک مراجع از نیازهاش</b></div>
+<div class="fa"><b>۲) جست‌وجوی دلایل یا مستندات</b></div>
+<div class="fa"><b>۳) ارزیابی فرصت‌ها و امکانات</b></div>
+<div class="fa"><b>۴) ارزیابی سطح کنترل فردی مراجع</b></div>
+<div class="fa"><b>۵) تعهد زمانی و تلاش برای پاسخ‌گویی</b></div>
+<div class="fa"><b>۶) جمع‌آوری اطلاعات واقعی</b></div>
+<div class="fa"><b>۷) مشخص کردن هدف واقعی</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پنج مرحله رویکرد حل تعارض</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) اسطوره‌ها یا استعاره‌های روابط کاری «خوب» باید دور انداخته بشن.</b></div>
+<div class="fa"><b>۲) تعریف تعارض</b></div>
+<div class="fa"><b>۳) سوءتعبیرها روشن بشن</b></div>
+<div class="fa"><b>۴) خلق راه‌حل‌های جدید</b></div>
+<div class="fa"><b>۵) به‌کارگیری و ارزشیابی راه‌حل‌ها</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جمله‌های طلایی (حفظ کن)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>گزدا (۱۹۷۳):</b> «مشاور صادق و دارای خلوص، ساختگی و ظاهری نیست. او دفاع‌هاش رو به شدت کاهش داده و با گشودگی با مراجعان ارتباط برقرار می‌سازه و با تجارب اون‌ها در هم می‌آمیزه.»
+</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> مشاور خوب = همدل + گرم + صادق.
+</div>
+</div>
+</section>
+
+<!-- ==================== نظریه‌پردازان ==================== -->
+<section id="theorists" class="section">
+<h2 class="section-title">۰۲ · آدم‌ها و نظریه‌هاشون</h2>
+<p class="section-sub">هرکی چی گفت، کی بود</p>
+
+<div class="theorist">
+<h3>بوردین — ۱۹۷۹</h3>
+<div class="meta">تعریف اتحاد کاری</div>
+<div class="fa"><b>تعریف اتحاد کاری (بوردین، ۱۹۷۹):</b> «اتحاد کاری» از <b>تعهد و التزام، اهداف و وظایف</b> تشکیل شده.</div>
+<div class="fa"><b>اجزا:</b></div>
+<div class="fa">• <b>تعهد و التزام:</b> اعتماد دوسویه، احترام و پذیرش متقابل.</div>
+<div class="fa">• <b>اهداف:</b> مداخله‌های مشاوره‌ای مثل بازگشت به کار، افزایش استقلال، یا بهبود کارکرد شناختی، جسمانی یا عاطفی.</div>
+<div class="fa">• <b>وظایف:</b> فعالیت‌های ویژه‌ای که مراجع رو در درمان درگیر ساخته و تغییرات رو آسان می‌سازن.</div>
+</div>
+
+<div class="theorist">
+<h3>کارل راجرز — نظریه شخص‌محور</h3>
+<div class="meta">منبع سه شرط اساسی</div>
+<div class="fa"><b>سه شرط اساسی و تسهیل‌کننده اتحاد کاری:</b> <b>همدلی، گرمی و خلوص</b>.</div>
+<div class="fa">این سه شرط از <b>نظریه شخص‌محور راجرز</b> نشئت گرفتن و به‌عنوان <b>عوامل درمانی «لازم و مکفی»</b> در درمان توصیف می‌شن.</div>
+<div class="fa"><b>بدون این سه شرط اساسی نمی‌شه به اهداف توانبخشی تو فرایند درمان دست پیدا کرد.</b></div>
+</div>
+
+<div class="theorist">
+<h3>رام‌ریل و سکف — ۱۹۹۶</h3>
+<div class="meta">پنج مؤلفه همدلی پیشرفته</div>
+<div class="fa"><b>همدلی پیشرفته</b> اخیراً در مراقبت‌های سلامت روانی مطرح شده؛ <b>همدل بودن مشاور رو افزایش می‌ده</b> و به <b>ارجاع‌های معقولانه</b> منجر می‌شه.</div>
+<div class="fa"><b>پنج مؤلفه (رام‌ریل و سکف، ۱۹۹۶):</b></div>
+<div class="fa">۱) توجه و تأکید بر <b>شدت ابرازهای کلامی و غیرکلامی مراجع</b>.</div>
+<div class="fa">۲) <b>ساخته و پرداخته کردن پاسخ‌ها</b> به‌گونه‌ای که برای فرد <b>قابل فهم و درک</b> باشه.</div>
+<div class="fa">۳) <b>پاسخ دادن به احساسات مراجع</b>، مشابه با حالت و تُن صدای او.</div>
+<div class="fa">۴) حرکت به سوی <b>روشن‌سازی و گسترش تجربه‌های فردی</b>.</div>
+<div class="fa">۵) توجه به <b>رفتار فرد</b> به‌عنوان <b>بهترین شاخص اثربخشی روابط حرفه‌ای در توانبخشی</b>.</div>
+</div>
+
+<div class="theorist">
+<h3>گزدا — ۱۹۷۳</h3>
+<div class="meta">نقل‌قول درباره خلوص</div>
+<div class="fa"><b>نقل‌قول گزدا (۱۹۷۳):</b> «مشاور صادق و دارای خلوص، ساختگی و ظاهری نیست. او دفاع‌هاش رو به شدت کاهش داده و با گشودگی با مراجعان ارتباط برقرار می‌سازه و با تجارب اون‌ها در هم می‌آمیزه.»</div>
+</div>
+
+<div class="theorist">
+<h3>میلر و رولینک — ۲۰۰۲</h3>
+<div class="meta">مقاومت</div>
+<div class="fa"><b>نظر میلر و رولینک (۲۰۰۲):</b> <b>ماهیت مقاومت</b> رو قاب‌گیری کردن و افزودن که <b>برخی اوقات، مقاومت برای مشاور توانبخشی مفیده</b>.</div>
+<div class="fa">پیشنهاد کردن که <b>مقاومت به‌عنوان بخشی طبیعی از فرایند تغییر در مراجع</b> محسوب می‌شه که مشاور باید به خوبی ازش مطلع باشه.</div>
+<div class="fa">همون‌طور که مشاوران <b>نگرششون رو درباره مقاومت تغییر می‌دن و اون رو به تدریج می‌پذیرن</b>، مراجعان هم <b>کم‌کم از مقاومتشون کاسته می‌شه</b>.</div>
+<div class="fa"><b>چهار مورد مقاومت (میلر و رولینک، ۲۰۰۲):</b></div>
+<div class="fa">۱) رویکردهای مشاوره‌ای گوناگون، تفاوت‌های بارز و آشکاری در مدیریت مقاومت و تغییر دارن.</div>
+<div class="fa">۲) <b>دودلی و تردیدها طبیعی‌ه</b> و مهم‌تر از اون اینه که مشاور بکوشه <b>احساسات تردیدآلود مراجع رو نسبت به تغییر پیش رویش درک کنه</b>.</div>
+<div class="fa">۳) ضرورت داره که مشاور از <b>مجادله و مواجهه خشم‌آلود اجتناب کنه</b>.</div>
+<div class="fa">۴) لازمه که مشاور با <b>شرایط بحرانی که برای دستیابی به تغییر دائمی در مراجع مورد نیازه</b>، آشنایی داشته باشه و بکوشه اون‌ها رو درک کنه.</div>
+</div>
+
+<div class="theorist">
+<h3>پروچاسکا و دی‌کلمنته</h3>
+<div class="meta">مراحل تغییر</div>
+<div class="fa"><b>مراحل تغییر (پروچاسکا و دی‌کلمنته):</b> <b>پیش از انتظار، انتظار، تعیین، عمل، ماندگاری و بازگشت یا عود</b>.</div>
+<div class="fa"><b>نکته:</b> مقاومت و تردید یا دودلی ممکنه در <b>هر یک از شش مرحله</b> رخ بده.</div>
+<div class="fa">در مداخله‌های درمانی هدف‌مدار، مراجعان از <b>مذاکره یا مجادله کردن برای ورود به «آب‌های [تغییر]»</b> [کمک می‌گیرن].</div>
+</div>
+</section>
+
+<!-- ==================== مفاهیم و تعاریف ==================== -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۳ · اصطلاحا یعنی چی (تعاریف)</h2>
+<p class="section-sub">همه اصطلاح‌ها با زبان ساده</p>
+
+<div class="card def">
+<div class="card-head"><h3>اتحاد کاری (Working Alliance)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> از <b>تعهد و التزام، اهداف و وظایف</b> تشکیل شده (بوردین، ۱۹۷۹).</div>
+<div class="fa"><b>تعهد و التزام:</b> اعتماد دوسویه، احترام و پذیرش متقابل.</div>
+<div class="fa"><b>اهداف:</b> مداخله‌های مشاوره‌ای مثل بازگشت به کار، افزایش استقلال، یا بهبود کارکرد شناختی، جسمانی یا عاطفی.</div>
+<div class="fa"><b>وظایف:</b> فعالیت‌های ویژه‌ای که مراجع رو در درمان درگیر ساخته و تغییرات رو آسان می‌سازن؛ جوهره اصلی فرایند توانبخشی.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>همدلی (Empathy)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>مدل همدلی:</b> <b>آگاهی از چارچوب مرجع درونی فرد و دستیابی به حس مراجع و تجربه لحظه‌به‌لحظه بودن با او</b>.</div>
+<div class="fa"><b>اهمیت:</b> اگه بگیم <b>همدلی عنصر هسته‌ای مشاوره توانبخشی کارآمد</b>ه، در اغراق نگفتیم.</div>
+<div class="fa"><b>نتایج همدلی:</b></div>
+<div class="fa">• برقراری <b>روابط مشاوره‌ای مؤثر</b> با مراجع</div>
+<div class="fa">• <b>انتقال حمایت و پذیرش</b> به مراجع</div>
+<div class="fa">• <b>نشون دادن احترام و شأن</b> به مراجع</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>همدلی پیشرفته</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> همدلی پیشرفته که اخیراً در مراقبت‌های سلامت روانی مطرح شده، <b>همدل بودن مشاور رو افزایش می‌ده</b> و به <b>ارجاع‌های معقولانه</b> منجر می‌شه.</div>
+<div class="fa"><b>پنج مؤلفه (رام‌ریل و سکف، ۱۹۹۶):</b></div>
+<div class="fa">۱) توجه و تأکید بر <b>شدت ابرازهای کلامی و غیرکلامی مراجع</b>.</div>
+<div class="fa">۲) <b>ساخته و پرداخته کردن پاسخ‌ها</b> به‌گونه‌ای که برای فرد <b>قابل فهم و درک</b> باشه.</div>
+<div class="fa">۳) <b>پاسخ دادن به احساسات مراجع</b>، مشابه با حالت و تُن صدای او.</div>
+<div class="fa">۴) حرکت به سوی <b>روشن‌سازی و گسترش تجربه‌های فردی</b>.</div>
+<div class="fa">۵) توجه به <b>رفتار فرد</b> به‌عنوان <b>بهترین شاخص اثربخشی روابط حرفه‌ای در توانبخشی</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>گرمی (Warmth)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>هدف:</b> مشاور توانبخشی <b>ارتباط گرم و دوستانه‌ای</b> با مراجعان و سایر اعضای تیم برقرار می‌کنه تا از راه <b>پذیرش و احترام متقابل</b>، اتحاد کاری رو تسهیل کنه.</div>
+<div class="fa"><b>کلید اصلی:</b> <b>ارتباط همراه با احترام و پذیرش</b>، کلید اصلی در مهارت گرمی و دوستی محسوب می‌شه.</div>
+<div class="fa"><b>چهار روشی که به احترام منجر می‌شن:</b></div>
+<div class="fa">۱) پاسخ به پیام‌های دیگران، <b>بدون قضاوت کلامی و غیرکلامی</b>.</div>
+<div class="fa">۲) <b>تحسین اعضای گروه توانبخشی</b> به خاطر تلاش‌ها و انجام وظایفشون.</div>
+<div class="fa">۳) <b>ابراز قدردانی</b> از تمامی اعضای تیم توانبخشی در آغاز و پایان جلسات.</div>
+<div class="fa">۴) <b>احترام به تجربه‌ها و نقطه‌نظرات</b> تمامی اعضای تیم و خود مراجع.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>خلوص (Genuineness)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>ویژگی‌های مشاور دارای خلوص:</b></div>
+<div class="fa">• <b>واقعی، صادق و دستکار [بی‌تکلف]</b> باشه.</div>
+<div class="fa">• با تمامی اعضای تیم <b>به‌طور برابر و مساوات‌طلبانه</b> برخورد کنه.</div>
+<div class="fa">• بکوشه <b>اتحاد کاری رو هر چه مستحکم‌تر و سریع‌تر</b> برقرار سازه.</div>
+<div class="fa"><b>نقل‌قول گزدا (۱۹۷۳):</b> «مشاور صادق و دارای خلوص، ساختگی و ظاهری نیست. او دفاع‌هاش رو به شدت کاهش داده و با گشودگی با مراجعان ارتباط برقرار می‌سازه و با تجارب اون‌ها در هم می‌آمیزه.»</div>
+<div class="fa"><b>رفتارهای مشاور دارای خلوص:</b></div>
+<div class="fa">• <b>صادقانه برخورد کردن</b> با مراجعان و سایر اعضای تیم.</div>
+<div class="fa">• بهره‌گیری از <b>شوخی‌های مناسب</b> در محیط کار.</div>
+<div class="fa">• <b>پذیرش مسئولیت اشتباه</b> در صورت ارتکاب.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>خودافشاگری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> فردی رو در <b>تجربه‌ها، احساسات و ادراک‌های خود</b> سهیم کردن.</div>
+<div class="fa"><b>کاربرد:</b> ممکنه برای <b>نشون دادن خلوص</b> از سوی مشاور استفاده بشه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>هشدار:</b> خودافشاگری <b>می‌تونه خطرناک باشه</b> و اگه به <b>کاهش توجه به مشکلات و دغدغه‌های مراجع</b> منجر بشه، حتی به <b>اتحاد کاری</b> هم ممکنه آسیب برسونه. مشاوران باید <b>پیش از به کار بردن این تکنیک خاص دقت کنن</b> و <b>ثبت خود رو از به کار بردنش مشخص کنن</b>.
+</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>بازگویی مجدد (Restatement)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> یکی از راهبردهای کلامی مؤثر که <b>به شدت با گوش دادن فعال در ارتباطه</b>؛ یعنی <b>آنچه دیگری گفته، با بیان خود او بازگو کنیم</b>.</div>
+<div class="fa"><b>فواید:</b></div>
+<div class="fa">• به مشاوران امکان می‌ده <b>آنچه مراجع گفته با آنچه واقعاً شنیده‌اند</b> بررسی کنن.</div>
+<div class="fa">• به مراجع امکان می‌ده <b>سوءتعبیرها رو اصلاح کنه</b>.</div>
+<div class="fa"><b>عبارات مفید:</b> «آن‌طوری که تو گفتی...»، «به عبارت دیگر...»، «به نظر می‌آید که...»، «بگذار ببینم درست فهمیده‌ام...».</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>خلاصه کردن</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> نتیجه <b>گوش دادن فعال و با دقت</b>ه و به افراد امکان می‌ده <b>آنچه گفته رو اصلاح کنن یا عبارات دیگه‌ای بهش بیافزاین</b>.</div>
+<div class="fa">در <b>پایان هر جلسه مشاوره</b>، مشاوران می‌تونن آنچه در جلسه اتفاق افتاده رو <b>بازگو</b> کرده و <b>گام‌های بعدی</b> رو برای کار مشاوره بردارن.</div>
+<div class="fa">این فن، <b>سوءتعبیرها و گفت‌ها</b> رو روشن می‌کنه و فرصتی برای شنونده و گوینده ایجاد می‌کنه که <b>عدم اطلاع‌رسانی</b> رو جبران کنن و مراجع و مشاور <b>اطمینان حاصل کنن که معنای تعامل یکدیگر رو به خوبی درک کرده‌اند</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مهارت‌های غیرکلامی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">حالت و ژست مشاوران باید به‌گونه‌ای باشه که <b>خود رو راغب و علاقه‌مند به تعامل</b> نشون بدن.</div>
+<div class="fa">ارتباطات غیرکلامی‌شون باید <b>معنای همکاری و ارتباط متقابل</b> بده.</div>
+<div class="fa">باید بکوشن <b>نشانه‌ها و علائم کلامی و غیرکلامی‌شون با هم سازگار و همخوان</b> باشه.</div>
+<div class="fa">برخی اوقات، <b>ابرازهای چهره‌ای، حرکات بدنی و کیفیت صدا</b> می‌تونه <b>بیش از کلمات صرف</b> با دیگران ارتباط برقرار سازه.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مثال ناهمخوانی کلامی و غیرکلامی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">مراجعی که می‌گه <b>«آرام است و مشکلی ندارد»</b>، اما نشانه‌ها و اشاره‌های غیرکلامی او نشون می‌دن که <b>بسیار عجول و ناشکیبا</b>ه و به سمت جلو خم شده و در صداش حتی <b>لرزش</b> وجود داره، نشون‌دهنده <b>تعارض آشکار بین نشانه‌ها و اشاره‌های کلامی و غیرکلامی</b>ه.</div>
+<div class="fa">مشاور توانبخشی باید از چنین <b>ناهمخوانی‌های بین رفتارهای کلامی و غیرکلامی مراجع</b> مطلع باشه و <b>معنای واقعی ناهمخوانی و تعارض</b> رو دریابه.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مصاحبه در مشاوره توانبخشی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>اهداف مصاحبه:</b></div>
+<div class="fa">۱) <b>برقراری ارتباط مشاوره‌ای</b></div>
+<div class="fa">۲) تهیه اطلاعاتی پیرامون <b>نقش و کارکردهای برنامه‌ها، در دسترس بودن خدمات و مسئولیت‌های مراجع</b></div>
+<div class="fa">۳) اطلاع از <b>انتظارات مراجع</b> درباره فرایند و پیامدهای توانبخشی</div>
+<div class="fa">۴) مصاحبه، <b>خودآگاهی مراجع</b> رو پیرامون نقاط قوت، نقاط ضعف، ویژگی‌های شخصیتی و استعدادها تسهیل می‌سازه</div>
+<div class="fa">۵) <b>اضطراب مراجع</b> درباره فرایند توانبخشی رو کاهش می‌ده</div>
+<div class="fa">۶) به مراجع درباره <b>مشاور و سایر اعضای تیم و برنامه مقدماتی کار مشاور</b> اطلاعاتی می‌ده</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>سه نوع مصاحبه</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>ویژگی</th><th>مزایا</th><th>معایب</th></tr></thead>
+<tbody>
+<tr><td><b>بی‌ساختار</b></td><td>از هیچ فرمت خاصی پیروی نمی‌کنه؛ مصاحبه‌گر تعیین می‌کنه چه سؤالاتی بپرسه؛ مراجع آزاده از یه موضوع به موضوع بعدی بپردازه</td><td>بسیار جذاب؛ مناسب برقراری رابطه مشاوره‌ای</td><td>نظم خاصی نداره؛ بیشتر ذهنیه تا روایی مشخص</td></tr>
+<tr><td><b>باساختار</b></td><td>رهنمودی؛ از فرمت خاصی پیروی می‌کنه؛ سؤالات از پیش مشخصن</td><td>—</td><td>خیلی خشک و غیرقابل انعطاف</td></tr>
+<tr><td><b>نیمه‌ساختاریافته</b></td><td>تو محیط‌های توانبخشی به کار می‌ره</td><td>برای تسهیل جمع‌آوری اطلاعات اساسی مراجع (نام، شماره تلفن، تاریخ تولد، منبع ارجاع و تشخیص)</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>موضوعات جمع‌آوری‌شده از مصاحبه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱) ماهیت مشکل یا علت ارجاع مراجع</b></div>
+<div class="fa"><b>۲) تاریخچه فردی مراجع</b></div>
+<div class="fa"><b>۳) زمینه خانوادگی</b></div>
+<div class="fa"><b>۴) تاریخچه پزشکی</b></div>
+<div class="fa"><b>۵) زمینه آموزشی (تحصیل) یا شغلی</b></div>
+<div class="fa"><b>۶) انتظارات مراجع</b></div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>هدف‌گذاری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> اهداف به‌طور <b>فوری، کوتاه‌مدت و بلندمدت</b> مشخص می‌شن.</div>
+<div class="fa"><b>نکات مهم:</b></div>
+<div class="fa">• نیازهای مراجع و نیازهای دیگران (از جمله نیازهای تیم توانبخشی) باید به‌عنوان <b>عاملی یاری‌بخش</b> مورد توجه قرار گیرن.</div>
+<div class="fa">• <b>اهداف کوتاه‌مدت مراجع</b> به بهترین نحو در <b>جلسه مشاوره</b> روشن و آشکار می‌شه.</div>
+<div class="fa"><b>مهم‌ترین و اساسی‌ترین نقش مشاور توانبخشی:</b> فراهم آوردن <b>راهبردها یا شیوه‌هایی</b> که <b>انتظارات مراجع رو به واقعیت مبدل سازه</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>دیدگاه حل مسئله</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> به مسئله یا مشکلی که مطرح می‌شه، به‌مثابه <b>فرصتی برای تغییر یا نیاز برای خدمت</b> نگاه می‌شه.</div>
+<div class="fa">وظایف هر یک از اعضای تیم توانبخشی، <b>یاری رسانی به مراجع برای دستیابی به اهداف مورد نظر</b>ه.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مقاومت</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> ممکنه با <b>لجاجت و یک‌دندگی مراجع</b> تعبیر و تفسیر بشه.</div>
+<div class="fa"><b>درک مقاومت</b> ممکنه در <b>ارائه خدمات توانبخشی تداخل کنه</b> و بر <b>ارتباط مؤثر و کارآمد مراجع و مشاور اثر سویی</b> بذاره و در نهایت <b>جلوی پیامدهای مثبت توانبخشی رو بگیره</b>.</div>
+<div class="fa">بنابراین ضرورت داره که مشاوران <b>مبنای واقعی مقاومت رو به خوبی درک کرده و ازش آگاهی یابن</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>تعارض</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>منشأ تعارض:</b> ممکنه به دلیل <b>انتظارات مراجع پیرامون مسئولیت‌پذیری تیم توانبخشی و ارائه خدمات توانبخشی</b> بروز کنه.</div>
+<div class="fa"><b>موضوعات تعارض:</b> شرایط مراجع، عدم ارائه خدمات با توجه به جدول زمانی، اشتباهات مشاور، برنامه‌ریزی خط‌مشی‌ها.</div>
+<div class="fa"><b>تعارض وقتی رخ می‌ده:</b> <b>اعمال یا اهداف مراجع با اعمال یا اهداف مشاور سازگاری نداشته یا در مخالفت با یکدیگر باشند</b>.</div>
+<div class="fa"><b>نکته مهم:</b> در بسیاری از مواقع، تعارض‌ها <b>نه به دلیل ناهمخوانی بین اهداف یا اعمال طرفین</b> اتفاق می‌افتن، بلکه به دلیل <b>سوءتغییراتی که از ناهمخوانی میان اون‌ها بروز می‌کنه</b>.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>نگرش «ما» به جای «من»</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">طرفینی که می‌کوشن به سوی هدف مشترک گام بردارن، باید <b>نگرش «ما» رو به جای نگرش «من»</b> پیدا کنن.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>سه اسطوره متداول پیرامون روابط کاری «خوب»</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱)</b> رابطه بسیار خوب، رابطه‌ایه که در آن <b>هیچ مخالفتی وجود نداشته باشه</b>.</div>
+<div class="fa"><b>۲)</b> طرفین در یک رابطه کاری مؤثر، باید <b>تصورها و ارزش‌های مشترکی</b> داشته باشن.</div>
+<div class="fa"><b>۳)</b> هدف از این‌گونه روابط، <b>اجتناب و دوری گزینی از مخالفت‌ها و تعارض</b>ه.</div>
+</div>
+
+<div class="card def">
+<div class="card-head"><h3>مراحل تغییر (پروچاسکا و دی‌کلمنته)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>مراحل:</b> <b>پیش از انتظار، انتظار، تعیین، عمل، ماندگاری و بازگشت یا عود</b>.</div>
+<div class="fa"><b>نکته:</b> مقاومت و تردید یا دودلی ممکنه در <b>هر یک از شش مرحله</b> رخ بده.</div>
+</div>
+</section>
+
+<!-- ==================== اتحاد کاری ==================== -->
+<section id="alliance" class="section">
+<h2 class="section-title">۰۴ · اتحاد کاری</h2>
+<p class="section-sub">تعریف، اجزا، اصول</p>
+
+<div class="card">
+<div class="card-head"><h3>ضرورت هماهنگی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">هماهنگی در خدمات توانبخشی، <b>مشارکت فعال مراجعان، مشاوران و توانبخشی</b> رو در <b>تمامی مراحل برنامه‌ریزی توانبخشی</b> می‌طلبه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعریف اتحاد کاری (بوردین، ۱۹۷۹)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>«اتحاد کاری» از تعهد و التزام، اهداف و وظایف تشکیل شده است.</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اساسی‌ترین اصل</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">برای اینکه اتحاد کاری <b>مؤثرتر و کارآمدتر</b> باشه، <b>توافق دوسویه</b> بین طرفین (مشاور و مراجع) به‌عنوان <b>مهم‌ترین اساس مشاوره</b> تلقی می‌شه.</div>
+<div class="fa">همچنین اصل <b>«برابری و مساوات»</b> هم باید در رابطه دوسویه مورد توجه قرار گیره و <b>مشاور و مراجع مسئولیت مشترک</b> برای برنامه‌ریزی و پیامدهای درمانی دارن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اثربخشی متخصصان</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">اثربخشی متخصصان حرفه‌ای زمانی آشکار می‌شه که مشاور با مراجعان و اعضای تیم <b>روابط مؤثر</b> داشته باشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعهد و التزام</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">تعهد و التزام <b>بسیار بااهمیت و دلبستگی‌های فردی</b> رو در میان اعضای تیم ایجاد می‌کنن.</div>
+<div class="fa">تعهد و التزام متشکل از <b>اعتماد دوسویه، احترام و پذیرش متقابل</b>ه که از راه <b>حس همکاری و تعهد به انجام اهداف و وظایف</b> آشکار و روشن می‌شه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اهداف</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">اهداف، <b>مداخله‌های مشاوره‌ای</b>‌ان که از جمله‌شون می‌شه به <b>بازگشت به کار، افزایش استقلال، یا بهبود کارکرد شناختی، جسمانی یا عاطفی</b> اشاره کرد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>وظایف</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">اتحاد کاری، وظایف <b>فعالیت‌های ویژه یا خاصی</b> هستن که <b>مراجع رو در درمان درگیر ساخته و تغییرات رو آسان می‌سازن</b> و به‌طور کلی <b>جوهره اصلی فرایند توانبخشی</b> محسوب می‌شن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نتیجه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">اگه اتحاد کاری به آرامی صورت گیره، مشاور و مراجع شاهد <b>دستیابی به نتایج مطلوب توانبخشی</b> خواهند بود.</div>
+</div>
+</section>
+
+<!-- ==================== سه شرط اساسی ==================== -->
+<section id="conditions" class="section">
+<h2 class="section-title">۰۵ · سه شرط اساسی مشاوره</h2>
+<p class="section-sub">همدلی، گرمی، خلوص</p>
+
+<div class="card">
+<div class="card-head"><h3>سه شرط اساسی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">سه شرط اساسی و تسهیل‌کننده اتحاد کاری عبارتند از: <b>همدلی، گرمی و خلوص</b>.</div>
+<div class="fa">این شرط اساسی از <b>نظریه شخص‌محور راجرز</b> نشئت گرفتن و به‌عنوان <b>عوامل درمانی «لازم و مکفی»</b> در درمان توصیف می‌شن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>بدون این سه شرط اساسی نمی‌شه به اهداف توانبخشی در فرایند درمان دست پیدا کرد.</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱) همدلی (Empathy)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>مدل همدلی:</b> <b>آگاهی از چارچوب مرجع درونی فرد و دستیابی به حس مراجع و تجربه لحظه‌به‌لحظه بودن با او</b>.</div>
+<div class="fa"><b>اهمیت:</b> اگه بگیم <b>همدلی عنصر هسته‌ای مشاوره توانبخشی کارآمد</b>ه، در اغراق نگفتیم.</div>
+<div class="fa"><b>نتایج همدلی:</b></div>
+<div class="fa">• برقراری <b>روابط مشاوره‌ای مؤثر</b> با مراجع.</div>
+<div class="fa">• <b>انتقال حمایت و پذیرش</b> به مراجع.</div>
+<div class="fa">• <b>نشون دادن احترام و شأن</b> به مراجع.</div>
+<div class="fa"><b>همدلی پیشرفته:</b> اخیراً در <b>مراقبت‌های سلامت روانی</b> مطرح شده؛ <b>همدل بودن مشاور رو افزایش می‌ده</b> و به <b>ارجاع‌های معقولانه</b> منجر می‌شه.</div>
+<div class="fa"><b>پنج مؤلفه همدلی پیشرفته (رام‌ریل و سکف، ۱۹۹۶):</b></div>
+<div class="fa">۱) توجه و تأکید بر <b>شدت ابرازهای کلامی و غیرکلامی مراجع</b>.</div>
+<div class="fa">۲) <b>ساخته و پرداخته کردن پاسخ‌ها</b> به‌گونه‌ای که برای فرد <b>قابل فهم و درک</b> باشه.</div>
+<div class="fa">۳) <b>پاسخ دادن به احساسات مراجع</b>، مشابه با حالت و تُن صدای او.</div>
+<div class="fa">۴) حرکت به سوی <b>روشن‌سازی و گسترش تجربه‌های فردی</b>.</div>
+<div class="fa">۵) توجه به <b>رفتار فرد</b> به‌عنوان <b>بهترین شاخص اثربخشی روابط حرفه‌ای در توانبخشی</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) گرمی (Warmth)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>هدف:</b> مشاور توانبخشی <b>ارتباط گرم و دوستانه‌ای</b> با مراجعان و سایر اعضای تیم برقرار می‌کنه تا از راه <b>پذیرش و احترام متقابل</b>، اتحاد کاری رو تسهیل کنه.</div>
+<div class="fa"><b>کلید اصلی:</b> <b>ارتباط همراه با احترام و پذیرش، کلید اصلی در مهارت گرمی و دوستی</b> محسوب می‌شه.</div>
+<div class="fa"><b>چهار روشی که به احترام منجر می‌شن:</b></div>
+<div class="fa">۱) پاسخ به پیام‌های دیگران، <b>بدون قضاوت کلامی و غیرکلامی</b>.</div>
+<div class="fa">۲) <b>تحسین اعضای گروه توانبخشی</b> به خاطر تلاش‌ها و انجام وظایفشون.</div>
+<div class="fa">۳) <b>ابراز قدردانی</b> از تمامی اعضای تیم توانبخشی در آغاز و پایان جلسات.</div>
+<div class="fa">۴) <b>احترام به تجربه‌ها و نقطه‌نظرات</b> تمامی اعضای تیم و خود مراجع.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) خلوص (Genuineness)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>ویژگی‌های مشاور دارای خلوص:</b></div>
+<div class="fa">• <b>واقعی، صادق و دستکار [بی‌تکلف]</b> باشه.</div>
+<div class="fa">• با تمامی اعضای تیم <b>به‌طور برابر و مساوات‌طلبانه</b> برخورد کنه.</div>
+<div class="fa">• بکوشه <b>اتحاد کاری رو هر چه مستحکم‌تر و سریع‌تر</b> برقرار سازه.</div>
+<div class="fa"><b>نقل‌قول گزدا (۱۹۷۳):</b> «مشاور صادق و دارای خلوص، ساختگی و ظاهری نیست. او دفاع‌هاش رو به شدت کاهش داده و با گشودگی با مراجعان ارتباط برقرار می‌سازه و با تجارب اون‌ها در هم می‌آمیزه.»</div>
+<div class="fa"><b>رفتارهای مشاور دارای خلوص:</b></div>
+<div class="fa">• <b>صادقانه برخورد کردن</b> با مراجعان و سایر اعضای تیم.</div>
+<div class="fa">• بهره‌گیری از <b>شوخی‌های مناسب</b> در محیط کار.</div>
+<div class="fa">• <b>پذیرش مسئولیت اشتباه</b> در صورت ارتکاب.</div>
+<div class="fa"><b>خودافشاگری:</b> فردی رو در <b>تجربه‌ها، احساسات و ادراک‌های خود</b> سهیم کردن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>هشدار:</b> خودافشاگری می‌تونه <b>خطرناک</b> باشه و اگه به <b>کاهش توجه به مشکلات مراجع</b> منجر بشه، حتی به <b>اتحاد کاری</b> هم آسیب می‌رسونه.
+</div>
+<div class="fa"><b>کاربرد زبان:</b> عنصر مهم دیگه در خلوص، <b>کاربرد زبانی</b>ه که برای مراجعان و سایر اعضای تیم <b>قابل فهم</b> باشه.</div>
+<div class="fa">مشاوران باید از <b>سر واژه‌ها یا اصطلاحات تخصصی پیچیده</b> کمتر استفاده کنن و به <b>واکنش‌های دیگران نسبت به خودشون آگاهی</b> داشته باشن.</div>
+</div>
+</section>
+
+<!-- ==================== مهارت‌های کلامی و غیرکلامی ==================== -->
+<section id="verbal" class="section">
+<h2 class="section-title">۰۶ · مهارت‌های کلامی و غیرکلامی</h2>
+<p class="section-sub">غیرکلامی، کلامی، بازگویی، خلاصه کردن</p>
+
+<div class="card">
+<div class="card-head"><h3>مهارت‌های غیرکلامی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">حالت و ژست مشاوران باید به‌گونه‌ای باشه که <b>خود رو راغب و علاقه‌مند به تعامل</b> نشون بدن.</div>
+<div class="fa">ارتباطات غیرکلامی‌شون باید <b>معنای همکاری و ارتباط متقابل</b> بده.</div>
+<div class="fa">باید بکوشن <b>نشانه‌ها و علائم کلامی و غیرکلامی‌شون با هم سازگار و همخوان</b> باشه.</div>
+<div class="fa">برخی اوقات، <b>ابرازهای چهره‌ای، حرکات بدنی و کیفیت صدا</b> می‌تونه <b>بیش از کلمات صرف</b> با دیگران ارتباط برقرار سازه.</div>
+<div class="fa"><b>مثال ناهمخوانی:</b> مراجعی که می‌گه <b>«آرام است و مشکلی ندارد»</b>، اما نشانه‌ها و اشاره‌های غیرکلامی او نشون می‌دن که <b>بسیار عجول و ناشکیبا</b>ه و به سمت جلو خم شده و در صداش حتی <b>لرزش</b> وجود داره، نشون‌دهنده <b>تعارض آشکار بین نشانه‌ها و اشاره‌های کلامی و غیرکلامی</b>ه.</div>
+<div class="fa">مشاور توانبخشی باید از چنین <b>ناهمخوانی‌ها</b> مطلع باشه و <b>معنای واقعی ناهمخوانی و تعارض</b> رو دریابه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>بازگویی مجدد (Restatement)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> یکی از راهبردهای کلامی مؤثر که <b>به شدت با گوش دادن فعال در ارتباطه</b>؛ یعنی <b>آنچه دیگری گفته، با بیان خود او بازگو کنیم</b>.</div>
+<div class="fa"><b>فواید:</b></div>
+<div class="fa">• به مشاوران امکان می‌ده <b>آنچه مراجع گفته با آنچه واقعاً شنیده‌اند</b> بررسی کنن.</div>
+<div class="fa">• به مراجع امکان می‌ده <b>سوءتعبیرها رو اصلاح کنه</b>.</div>
+<div class="fa"><b>عبارات مفید:</b></div>
+<div class="fa">• «آن‌طوری که تو گفتی...»</div>
+<div class="fa">• «به عبارت دیگر...»</div>
+<div class="fa">• «به نظر می‌آید که...»</div>
+<div class="fa">• «بگذار ببینم درست فهمیده‌ام...»</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>خلاصه کردن</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>یعنی چی؟</b> نتیجه <b>گوش دادن فعال و با دقت</b>ه و به افراد امکان می‌ده <b>آنچه گفته رو اصلاح کنن یا عبارات دیگه‌ای بهش بیافزاین</b>.</div>
+<div class="fa">در <b>پایان هر جلسه مشاوره</b>، مشاوران می‌تونن آنچه در جلسه اتفاق افتاده رو <b>بازگو</b> کرده و <b>گام‌های بعدی</b> رو برای کار مشاوره بردارن.</div>
+<div class="fa">این فن، <b>سوءتعبیرها و گفت‌ها</b> رو روشن می‌کنه و فرصتی برای شنونده و گوینده ایجاد می‌کنه که <b>عدم اطلاع‌رسانی</b> رو جبران کنن و مراجع و مشاور <b>اطمینان حاصل کنن که معنای تعامل یکدیگر رو به خوبی درک کرده‌اند</b>.</div>
+</div>
+</section>
+
+<!-- ==================== مصاحبه ==================== -->
+<section id="interview" class="section">
+<h2 class="section-title">۰۷ · مصاحبه در مشاوره توانبخشی</h2>
+<p class="section-sub">اهداف، انواع، موضوعات</p>
+
+<div class="card">
+<div class="card-head"><h3>اهداف مصاحبه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱)</b> <b>برقراری ارتباط مشاوره‌ای</b>.</div>
+<div class="fa"><b>۲)</b> تهیه اطلاعاتی پیرامون <b>نقش و کارکردهای برنامه‌ها، در دسترس بودن خدمات و مسئولیت‌های مراجع</b>.</div>
+<div class="fa"><b>۳)</b> اطلاع از <b>انتظارات مراجع</b> درباره فرایند و پیامدهای توانبخشی.</div>
+<div class="fa"><b>۴)</b> مصاحبه، <b>خودآگاهی مراجع</b> رو پیرامون نقاط قوت، نقاط ضعف، ویژگی‌های شخصیتی و استعدادها تسهیل می‌سازه.</div>
+<div class="fa"><b>۵)</b> <b>اضطراب مراجع</b> درباره فرایند توانبخشی رو کاهش می‌ده.</div>
+<div class="fa"><b>۶)</b> به مراجع درباره <b>مشاور و سایر اعضای تیم و برنامه مقدماتی کار مشاور</b> اطلاعاتی می‌ده.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه نوع مصاحبه</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>نوع</th><th>ویژگی‌ها</th><th>مزایا</th><th>معایب</th></tr></thead>
+<tbody>
+<tr><td><b>بی‌ساختار</b></td><td>از هیچ فرمت خاصی پیروی نمی‌کنه؛ مصاحبه‌گر تعیین می‌کنه چه سؤالاتی بپرسه؛ مراجع آزاده از یه موضوع به موضوع بعدی بپردازه</td><td>بسیار جذاب؛ مناسب برقراری رابطه مشاوره‌ای</td><td>نظم خاصی نداره؛ بیشتر ذهنیه تا روایی مشخص</td></tr>
+<tr><td><b>باساختار</b></td><td>رهنمودی؛ از فرمت خاصی پیروی می‌کنه؛ سؤالات از پیش مشخصن؛ مراجع نباید در قالب همون سؤالات پاسخ بده</td><td>—</td><td>خیلی خشک و غیرقابل انعطاف</td></tr>
+<tr><td><b>نیمه‌ساختاریافته</b></td><td>تو محیط‌های توانبخشی به کار می‌ره</td><td>برای تسهیل جمع‌آوری اطلاعات اساسی مراجع (نام، شماره تلفن، تاریخ تولد، منبع ارجاع و تشخیص)</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>موضوعات جمع‌آوری‌شده از مصاحبه</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱)</b> <b>ماهیت مشکل یا علت ارجاع مراجع</b></div>
+<div class="fa"><b>۲)</b> <b>تاریخچه فردی مراجع</b></div>
+<div class="fa"><b>۳)</b> <b>زمینه خانوادگی</b></div>
+<div class="fa"><b>۴)</b> <b>تاریخچه پزشکی</b></div>
+<div class="fa"><b>۵)</b> <b>زمینه آموزشی (تحصیل) یا شغلی</b></div>
+<div class="fa"><b>۶)</b> <b>انتظارات مراجع</b></div>
+<div class="fa">مصاحبه‌ها نوعاً در حول و حوش موضوعات خاصی چون <b>زندگی مستقل، برنامه‌ریزی شغلی و مسائل پزشکی</b> دور می‌زنن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مصاحبه مؤثر و کارآمد</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">زمانی انجام می‌شه که <b>اهداف و برنامه‌های توانبخشی با دقت کافی مشخص شده باشند</b>.</div>
+<div class="fa">برای شناسایی چنین اهدافی، متخصصان توانبخشی باید <b>چشم‌انداز مجربی</b> باشن، یعنی <b>پرسش‌هایی رو مطرح کنن که از میان اقیانوسی از ابهام‌گویی‌های مراجع، به اطلاعات سودمندی دست یابن</b>.</div>
+</div>
+</section>
+
+<!-- ==================== سه نوع سؤال ==================== -->
+<section id="questions" class="section">
+<h2 class="section-title">۰۸ · سه نوع سؤال در مصاحبه</h2>
+<p class="section-sub">باز پاسخ، بسته پاسخ، روشن‌سازی</p>
+
+<div class="card">
+<div class="card-head"><h3>۱) سؤالات باز پاسخ (Open-ended Questions)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>تعریف:</b> گونه‌ای که <b>دیگران رو ترغیب به صحبت کردن می‌کنن</b>؛ نوعاً با کلماتی مثل <b>چگونه، چه، کجا، چه موقع یا چه کسی</b> شروع می‌شن.</div>
+<div class="fa"><b>مثال:</b> «چه مسئله یا موضوعی شما رو امروز به اینجا کشانده است؟» «چه احساسی درباره آن دارید؟»</div>
+<div class="fa"><b>کاربرد بر اساس کلمات آغازین:</b></div>
+<div class="fa">• <b>چه:</b> به دست آوردن <b>اطلاعات و حقایق</b>.</div>
+<div class="fa">• <b>چگونه:</b> جمع‌آوری اطلاعات پیرامون <b>احساسات افراد</b> یا <b>پیامدهای وقایع یا رخدادها</b>.</div>
+<div class="fa">• <b>کجا و چه زمانی:</b> دستیابی به <b>اطلاعات روشن و صریح پیرامون زمان و مکان</b>.</div>
+<div class="fa">• <b>چه کسی:</b> دستیابی به <b>اطلاعات پیرامون افراد</b>.</div>
+<div class="fa"><b>پرسش‌های کلی:</b> مثل <b>«در مورد... برایم بگو»</b> به‌منظور <b>گوش دادن فعال و ترغیب مراجع به صحبت کردن</b> به کار می‌رن.</div>
+<div class="fa"><b>مزایا:</b></div>
+<div class="fa">• <b>نقطه‌نظرات، افکار و احساسات دیگران</b> رو پیرامون موضوع مطرح‌شده جویا می‌شه.</div>
+<div class="fa">• عمدتاً <b>در آغاز مصاحبه یا جلسه</b> به کار می‌رن.</div>
+<div class="fa">• به مراجع کمک می‌کنن <b>احساس آرامش و راحتی</b> کنه.</div>
+<div class="fa">• <b>کنکاش پیرامون مسائل</b> رو آسان‌تر می‌سازن.</div>
+<div class="fa">• وقتی مشاور <b>نیازمند دریافت اطلاعات اضافی و بیشتری</b> باشه، استفاده می‌شن.</div>
+<div class="fa">• پاسخ به این سؤالات به <b>عمیق‌تر شدن رابطه مشاوره‌ای</b> کمک می‌کنه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>هشدار:</b> سؤالاتی که با <b>«چرا»</b> شروع می‌شن، غالباً مراجع رو در <b>حالت تدافعی</b> قرار می‌دن. این سؤالات <b>نیازمند توضیح و تفسیر بیشتری از سمت مراجع</b>‌ان و به <b>دور شدن رابطه مشاور/مراجع</b> می‌انجامن.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) سؤالات بسته پاسخ (Closed-ended Questions)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>تعریف:</b> سؤالاتی که بر <b>تعامل و اطلاعات روشن و صریح خاصی</b> تأکید می‌کنن؛ معمولاً <b>پاسخ‌های بسیار کوتاه</b> داده می‌شه؛ با کلماتی مثل <b>«آیا»</b> شروع می‌شن.</div>
+<div class="fa"><b>مثال:</b> «آیا برای جابه‌جایی به کمک نیاز دارید؟» یا «آیا در خانه خودتان زندگی می‌کنید؟»</div>
+<div class="fa"><b>هشدارها:</b></div>
+<div class="fa">• مشاوران وقتی در جست‌وجوی راهی برای <b>آسان‌تر شدن خوداکتشاف مراجع</b> هستن، باید بکوشن <b>از پرسیدن یا فهرست کردن یه سری سؤالات بسته پاسخ اجتناب کنن</b>.</div>
+<div class="fa">• اگه انواع خاصی از اطلاعات مورد نیازه، متخصصان باید از <b>سؤالات پشت سر هم بسته پاسخ دوری کرده</b> و به‌جاش از <b>سؤالات باز پاسخ</b> استفاده کنن.</div>
+<div class="fa">• مجموعه‌ای از سؤالات بسته پاسخ به‌طور ناخواسته <b>حالت عاطفی و معلولی</b> دارن و مراجع رو به‌جای ترغیب به سخن گفتن، <b>خاموش و ساکت</b> می‌کنن.</div>
+<div class="fa">• <b>فشار ناشی از مکالمه بی‌ثمر</b> بر مشاور وارد می‌شه.</div>
+<div class="fa">• چنین سؤال پرسیدنی، <b>نقش مشاور رو بسیار رهنمودی</b> می‌کنه.</div>
+<div class="fa">• بهتره این سؤالات <b>در حداقل امکان</b> استفاده بشن و صرفاً وقتی می‌خواید <b>اطلاعات مشخص و مرتبط با اهداف جلسه</b> بپرسید، ازشون استفاده کنید.</div>
+<div class="fa">• پاسخ به سؤالات بسته پاسخ می‌تونه <b>بسیار سخت</b> باشه، مخصوصاً وقتی به‌طور نامتناسبی ازشون استفاده بشه.</div>
+<div class="fa">• <b>مثال:</b> پرسیدن چنین سؤالاتی به <b>محدود شدن پاسخ‌های مراجع</b> منجر می‌شه یا مشاور آن‌قدر سؤال می‌پرسه که <b>جلسه مشاوره رو بیشتر شبیه جلسه بازپرسی</b> می‌کنه.</div>
+<div class="fa">• مراجعان احساس می‌کنن که <b>در تنگنا قرار گرفتن</b> و قادر نیستن آزادانه و راحت به سؤالات پاسخ بدن.</div>
+<div class="fa">• با پرسیدن سؤالاتی مثل <b>«مثل آنکه از این وضعیت زیاد خوشت نمی‌آید، درسته؟»</b> به مراجع <b>فرصت و امکان بسیار اندکی</b> می‌دید تا احساسات و افکار خودش رو بیان کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) سؤالات روشن‌سازی (Clarifying Questions)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>تعریف:</b> مشاوران مرتباً نیازمند <b>آگاهی دقیق و عمیق‌تر یا روشن‌تری از آنچه مراجع سعی در بیانش داره</b> هستن. برای رسیدن به این هدف، از <b>سؤالات روشن‌سازی</b> برای <b>به دست آوردن اطلاعات بیشتر یا روشن ساختن مقصود یا نیت مراجع</b> استفاده می‌کنن.</div>
+<div class="fa"><b>مثال:</b> «مطمئن نیستم منظورتان را درست فهمیده باشم...»</div>
+<div class="fa"><b>متداول‌ترین روش:</b> <b>مطمئن شدن از اینکه منظور و مقصود مراجع درست فهمیده بشه</b> و از او خواسته بشه <b>یه بار دیگه گفته‌اش رو تکرار کنه یا برای منظورش مثالی بزنه</b>.</div>
+<div class="fa"><b>کاربرد:</b> وقتی مشاوران خودشون دچار <b>ابهام، گویی یا سردرگمی</b> می‌شن، به مراجع امکان می‌دن که با <b>روشن‌سازی، منظور و مقصود خودش رو بیان کنه</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> فرصت دادن به مراجع برای روشن‌سازی نظرش به <b>آگاهی بیشتری از او</b> منجر می‌شه. <b>حدس و گمان‌های نادرست</b> مانع از درک نقطه‌نظرات مراجع می‌شه.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هشدار درباره افراط و تفریط در سؤال پرسیدن</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">مشاوران می‌تونن از سؤالات <b>بسیار به شدت استفاده کنن یا اصلاً نکنن</b>.</div>
+<div class="fa">وقتی مشاور <b>زیاد سؤال می‌پرسه</b>، از موضوع مورد نظر مراجع <b>فاصله می‌گیره</b> و به <b>آشفته شدن افکار او</b> منجر می‌شه.</div>
+<div class="fa">به دلیل سؤال پرسیدن زیاد، مراجع از موضوعات و مسائل <b>احساسی</b> دور می‌شه و <b>کنترل جلسه کاملاً در دست مشاور</b> قرار می‌گیره.</div>
+<div class="fa">با سؤال پرسیدن زیاد در جلسه مشاوره، مراجع احساس می‌کنه که <b>از سوی سؤالات مشاور بمباران شده</b> و به شدت <b>سؤال‌پیچ</b> شده.</div>
+<div class="fa">در حالی که، وقتی مشاور <b>سؤال نمی‌پرسه یا کم می‌پرسه</b>، این خطر وجود داره که مشاور از <b>مشکلات مراجع اطلاعات صحیح و دقیقی</b> به دست نیاره.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>نتیجه:</b> مشاور هنگامی باید از سؤالات استفاده کنه که <b>هدفش کمک به مراجعان باشه</b>.
+</div>
+</div>
+</section>
+
+<!-- ==================== هدف‌گذاری ==================== -->
+<section id="goals" class="section">
+<h2 class="section-title">۰۹ · هدف‌گذاری، حل مسئله و مهارت‌های لازم</h2>
+<p class="section-sub">تعریف، نکات، هفت مرحله</p>
+
+<div class="card">
+<div class="card-head"><h3>هدف‌گذاری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">پس از اینکه مشاور با مراجع و اعضای تیم <b>اتحاد کاری</b> برقرار ساخت و <b>مسائلی که باید در فرایند توانبخشی مورد توجه قرار بگیرن</b> مشخص شدن، نوبت به <b>گام بعدی</b> می‌رسه، یعنی <b>هدف‌گذاری</b>.</div>
+<div class="fa"><b>تعریف:</b> در این مرحله، اهداف به‌طور <b>فوری، کوتاه‌مدت و بلندمدت</b> مشخص می‌شن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکات مهم در هدف‌گذاری</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">گرچه هر عضو از اعضای تیم <b>اولویت‌های خوبش</b> رو در فرایند هدف‌گذاری داره، اما <b>نیت، خدمت‌گذاری به مراجع</b>ه.</div>
+<div class="fa">از این رو، <b>نیازهای مراجع و نیازهای دیگران</b> (از جمله نیازهای تیم) باید به‌عنوان <b>عاملی یاری‌بخش</b> مورد توجه قرار گیرن.</div>
+<div class="fa"><b>اهداف کوتاه‌مدت مراجع</b> به بهترین نحو در <b>جلسه مشاوره</b> روشن و آشکار می‌شه.</div>
+<div class="fa">مشاوره رو از قبل آماده کرده باشه و بکوشه <b>مسائل براساس دستور جلسه و با توجه به زمان و مکان مناسب</b> مطرح بشن.</div>
+<div class="fa">مشاوران باید برای <b>انتقال اهمیت کوتاه‌مدت مراجع</b> در جلسه مشاوره بکوشن و اطمینان یابن که <b>مراجع و هر عضو از اعضای تیم می‌تونه [بدونه] که چرا او آنجاست و چه نقشی داره</b>.</div>
+<div class="fa">وقتی عضو جدیدی به تیم می‌پیونده، <b>دنبال کردن ساختار و نظم جلسه</b> از مهم‌ترین وظایف مشاورانه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مهم‌ترین و اساسی‌ترین نقش مشاور توانبخشی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+فراهم آوردن <b>راهبردها یا شیوه‌هایی</b> که <b>انتظارات مراجع رو به واقعیت مبدل سازه</b>.
+</div>
+<div class="fa">اگه انتظارات مطرح‌شده از سوی مراجع در حد <b>توانایی‌ها و قابلیت‌های تیم توانبخشی</b> نبود، مشاور باید به مراجع کمک کنه تا <b>اهداف واقع‌بینانه‌تری</b> رو مشخص ساخته یا در صورت امکان، <b>اعضای متخصصی رو به تیم بیافزاید</b> که توانایی و شایستگی لازم رو برای ارائه خدمات متناسب با انتظارات مراجع داشته باشن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>دیدگاه حل مسئله</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">به‌منظور تسهیل فرایند هدف‌گذاری، می‌شه از <b>دیدگاه حل مسئله</b> استفاده کرد.</div>
+<div class="fa">در این دیدگاه، به مسئله یا مشکلی که مطرح می‌شه، به‌مثابه <b>فرصتی برای تغییر یا نیاز برای خدمت</b> نگاه می‌شه.</div>
+<div class="fa">وظایف هر یک از اعضای تیم، <b>یاری رسانی به مراجع برای دستیابی به اهداف مورد نظر</b>ه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هفت مرحله فرایند هدف‌گذاری</h3><span class="badge s">خیلی مهم</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>مرحله</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td><b>آگاهی از درک مراجع از نیازهاش</b></td><td>مشاوران باید مشخص سازن که <b>«آیا درک مراجع از مشکلش با ارزیابی‌های اعضای تیم همخوانی داره یا نه؟»</b></td></tr>
+<tr><td>۲</td><td><b>جست‌وجوی دلایل یا مستندات</b></td><td>مشاور در جست‌وجوی دلایل یا مستنداتی برمی‌آد که به <b>کمک‌خواهی مراجع</b> از او یا سایر متخصصان منجر شده. از مراجع [می‌پرسه] <b>«چرا او را برای دریافت چنین خدماتی ارجاع داده‌اند؟»</b> سپس دریابه که آیا مراجع <b>خدمات رو داوطلبانه دریافت کرده یا مشروط</b> دریافت می‌کنه.</td></tr>
+<tr><td>۳</td><td><b>ارزیابی فرصت‌ها و امکانات</b></td><td>فرصت‌ها و امکاناتی که مراجع در اختیار داره ارزیابی می‌شه. <b>آیا مراجع از منابع خدماتی که در دسترسش هست آگاهی داره؟</b> سپس <b>سطح تهدید برای تغییرات مثبتی که در زندگی‌اش رخ خواهد داد</b> روشن سازه.</td></tr>
+<tr><td>۴</td><td><b>ارزیابی سطح کنترل فردی مراجع</b></td><td><b>مراجع چه گام‌هایی رو برای ثبت‌نام یا نام‌نویسی در این بخش خدمات برداشته؟ مراجع برای شرکت در برنامه‌های تیم چقدر انگیزه داره؟</b></td></tr>
+<tr><td>۵</td><td><b>تعهد زمانی و تلاش برای پاسخ‌گویی</b></td><td>تیم مشخص کنه که <b>به چه میزان زمان، تلاش یا کار و هزینه</b> برای ارائه خدمات به مراجع نیازه و آیا اعضای تیم می‌تونن روی هزینه برای ارائه کاری سرمایه‌گذاری کنن. همچنین مهمه که تیم بدونه <b>مراجع تمایل داره چه میزان زمان، تلاش یا کار یا هزینه رو سرمایه‌گذاری کنه</b>.</td></tr>
+<tr><td>۶</td><td><b>جمع‌آوری اطلاعات واقعی</b></td><td>اطلاعات واقعی با توجه به <b>منابع درونی و بیرونی تیم</b> جمع‌آوری می‌شن و ضرورت داره <b>محدودیت‌هایی که در ارائه خدمات به مراجع وجود داره</b> شناسایی کرده و دریابن که <b>افراد یا متخصصان دیگه‌ای هستن که قادرن این خدمات رو ارائه بدن</b>.</td></tr>
+<tr><td>۷</td><td><b>مشخص کردن هدف واقعی</b></td><td>مشاور، مراجع و سایر اعضای تیم <b>هدف واقعی</b> رو مشخص می‌کنن.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هفت پرسش برای شناسایی هدف واقعی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱)</b> مراجع، <b>مطلوب‌ترین نتیجه یا پیامد تیم</b> رو چگونه درمی‌یابد؟</div>
+<div class="fa"><b>۲)</b> چگونه هر یک از اعضای تیم <b>متناسب بودن این هدف</b> رو ارزیابی می‌کنن؟</div>
+<div class="fa"><b>۳)</b> آیا نیازه که هدف <b>اصلاح یا تغییر کنه</b> تا با عوامل مورد نظر گروه متناسب بشه، یا اعضای تیم می‌خوان چه پارامترهای دیگه‌ای رو به کار قبلی‌شون بیافزاین؟</div>
+<div class="fa"><b>۴)</b> مراجع چگونه و از چه طریقی از <b>دستیابی به اهدافش</b> آگاه می‌شه؟</div>
+<div class="fa"><b>۵)</b> مراجع برای دستیابی به هدفش <b>به چقدر زمان</b> نیازمنده؟</div>
+<div class="fa"><b>۶)</b> آیا <b>معیار دستیابی به هدف و جدول زمانی</b> با توانایی و قابلیت‌های تیم هماهنگن؟</div>
+<div class="fa"><b>۷)</b> آیا هدف و جدول زمانی <b>نیاز به تغییر و اصلاح</b> دارن؟</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ورود به مرحله برنامه‌ریزی</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">وقتی مراجعان <b>نیازهایشان را برای دریافت خدمات ارزیابی می‌کنند</b> و <b>انتظارات خود را از تیم مشخص می‌سازند</b> و <b>اهداف خاصشان را روشن می‌کنند</b>، اتحاد کاری به مرحله <b>برنامه‌ریزی یا مسئله‌گشایی</b> در فرایند توانبخشی وارد می‌شه.</div>
+<div class="fa">در این مرحله، مشخصاً تأکید بر مسائلی از این قبیله: <b>هر یک از اعضای گروه چه خواهند کرد؟ چه خواهند کرد؟ و چگونه عمل خواهند کرد؟</b></div>
+</div>
+</section>
+
+<!-- ==================== مقاومت ==================== -->
+<section id="resistance" class="section">
+<h2 class="section-title">۱۰ · مدیریت مقاومت</h2>
+<p class="section-sub">تعریف، نظر میلر و رولینک، مراحل تغییر</p>
+
+<div class="card">
+<div class="card-head"><h3>تعریف مقاومت</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">[مقاومت] ممکنه با <b>لجاجت و یک‌دندگی مراجع</b> تعبیر و تفسیر بشه.</div>
+<div class="fa"><b>درک مقاومت</b> ممکنه در <b>ارائه خدمات توانبخشی تداخل کنه</b> و بر <b>ارتباط مؤثر و کارآمد مراجع و مشاور اثر سویی</b> بذاره و در نهایت <b>جلوی پیامدهای مثبت توانبخشی رو بگیره</b>.</div>
+<div class="fa">بنابراین ضرورت داره که مشاوران <b>مبنای واقعی مقاومت رو به خوبی درک کرده و ازش آگاهی یابن</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نظر میلر و رولینک (۲۰۰۲)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>ماهیت مقاومت</b> رو قاب‌گیری کردن و افزودن که <b>برخی اوقات، مقاومت برای مشاور توانبخشی مفیده</b>.</div>
+<div class="fa">پیشنهاد کردن که <b>مقاومت به‌عنوان بخشی طبیعی از فرایند تغییر در مراجع</b> محسوب می‌شه که مشاور باید به خوبی ازش مطلع باشه.</div>
+<div class="fa">همون‌طور که مشاوران <b>نگرششون رو درباره مقاومت تغییر می‌دن و اون رو به تدریج می‌پذیرن</b>، مراجعان هم <b>کم‌کم از مقاومتشون کاسته می‌شه</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چهار مورد مطرح‌شده توسط میلر و رولینک (۲۰۰۲)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>۱)</b> رویکردهای مشاوره‌ای گوناگون، <b>تفاوت‌های بارز و آشکاری در مدیریت مقاومت و تغییر</b> دارن.</div>
+<div class="fa"><b>۲)</b> <b>دودلی و تردیدها طبیعی‌ه</b> و مهم‌تر از اون اینه که مشاور بکوشه <b>احساسات تردیدآلود مراجع رو نسبت به تغییر پیش رویش درک کنه</b>.</div>
+<div class="fa"><b>۳)</b> ضرورت داره که مشاور از <b>مجادله و مواجهه خشم‌آلود اجتناب کنه</b>.</div>
+<div class="fa"><b>۴)</b> لازمه که مشاور با <b>شرایط بحرانی که برای دستیابی به تغییر دائمی در مراجع مورد نیازه</b>، آشنایی داشته باشه و بکوشه اون‌ها رو درک کنه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نقش شیوه برخورد مشاور</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">روش و شیوه‌ای که مشاوران با مراجعان برخورد می‌کنن، می‌تونه <b>از مقاومت مراجع بکاهه یا به شدت اون رو افزایش بده</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نتیجه پژوهش‌ها</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">تا حالا پژوهش‌های متعددی برای بررسی <b>اثربخشی راهبردها، فنون، مهارت‌ها و رویکردهایی که مشاوران می‌تونن برای آسان‌سازی تغییرات در مراجعان به کار بگیرن</b> انجام شده.</div>
+<div class="fa">نتایج نشون دادن که <b>تنها و یکتاترین بخشی [مهم] و ابزار ارزشمندی که مشاوران می‌تونن ازش بهره بگیرن، سبک درمان‌بخشی‌ه که در جلسه مشاوره ازش استفاده می‌کنن</b>.</div>
+<div class="fa">مشاورانی که قادرن <b>همدلی، گرمی و خلوص خودشون رو به مراجع انتقال بدن</b>، می‌تونن <b>مقاومت مراجع رو تسکین بخشیده و راه برای پیامدهای موفق مشاوره هموار کنن</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مراحل تغییر (پروچاسکا و دی‌کلمنته)</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>مراحل:</b> <b>پیش از انتظار، انتظار، تعیین، عمل، ماندگاری و بازگشت یا عود</b>.</div>
+<div class="fa"><b>نکته:</b> <b>مقاومت و تردید یا دودلی ممکنه در هر یک از شش مرحله رخ بده</b>.</div>
+<div class="fa">در مداخله‌های درمانی هدف‌مدار، مراجعان از <b>مذاکره یا مجادله کردن برای ورود به «آب‌های [تغییر]»</b> [کمک می‌گیرن].</div>
+</div>
+</section>
+
+<!-- ==================== حل تعارض ==================== -->
+<section id="conflict" class="section">
+<h2 class="section-title">۱۱ · حل تعارض</h2>
+<p class="section-sub">منشأ، پنج مرحله</p>
+
+<div class="card">
+<div class="card-head"><h3>منشأ تعارض</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">تعارض‌ها ممکنه [به دلیل] <b>انتظارات مراجع پیرامون مسئولیت‌پذیری تیم توانبخشی و ارائه خدمات توانبخشی</b> بروز کنه.</div>
+<div class="fa">غالباً تعارض‌ها حول و حوش موضوعاتی از این قبیلن:</div>
+<div class="fa">• <b>شرایط مراجع</b></div>
+<div class="fa">• <b>عدم ارائه خدمات با توجه به جدول زمانی</b></div>
+<div class="fa">• <b>اشتباهات مشاور توانبخشی</b></div>
+<div class="fa">• <b>برنامه‌ریزی خط‌مشی‌ها</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعارض زمانی بالا می‌گیره که...</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">مراجع انتظار داره که اعضای تیم <b>خیلی خوب عمل کنن و خدمات بسیار باکیفیتی</b> به او ارائه بدن، در حالی که بعد از گذشت مدتی <b>انتظاراتش برآورده نمی‌شه</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعارض وقتی رخ می‌ده که...</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa"><b>اعمال یا اهداف مراجع با اعمال یا اهداف مشاور سازگاری نداشته یا در مخالفت با یکدیگر باشند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته مهم</h3><span class="badge s">خیلی مهم</span></div>
+<div class="fa">در بسیاری از مواقع، تعارض‌ها <b>نه به دلیل ناهمخوانی بین اهداف یا اعمال طرفین ماجرا</b> اتفاق می‌افتن، بلکه به دلیل <b>سوءتغییراتی که از ناهمخوانی میان اون‌ها بروز می‌کنه</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>پنج مرحله رویکرد حل تعارض در فرایند برنامه‌ریزی توانبخشی</h3><span class="badge s">خیلی مهم</span></div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">مرحله ۱: اسطوره‌ها یا استعاره‌هایی که پیرامون روابط کاری «خوب» وجود داره، باید دور انداخته بشن</h4>
+<div class="fa"><b>سه اسطوره بسیار متداول پیرامون روابط کاری «خوب»:</b></div>
+<div class="fa"><b>۱)</b> رابطه بسیار خوب، رابطه‌ایه که در آن <b>هیچ مخالفتی وجود نداشته باشه</b>.</div>
+<div class="fa"><b>۲)</b> طرفین در یک رابطه کاری مؤثر، باید <b>تصورها و ارزش‌های مشترکی</b> داشته باشن.</div>
+<div class="fa"><b>۳)</b> هدف از این‌گونه روابط، <b>اجتناب و دوری گزینی از مخالفت‌ها و تعارض</b>ه.</div>
+<div class="fa"><b>اتحاد کاری مؤثر</b> در بهترین حالت به‌عنوان <b>رابطه‌ای توصیف می‌شه که طرفین درگیر در آن به‌گونه‌ای مؤثر و کارآمدی با تعارض‌ها برخورد می‌کنن</b>.</div>
+<div class="fa">از طرفی تلاش کنن تا <b>ارزش‌ها و تصورات یا ادراک‌های یکدیگر رو بشناسن</b> و حتی اگه در این موارد با هم توافق نداشته باشن، باز هم با یکدیگر <b>به‌گونه‌ای همکاری کنن که برای هر دو طرف سودمند باشه</b>.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">مرحله ۲: تعریف تعارض</h4>
+<div class="fa">فرایند حل تعارض با <b>تعریف دقیق و روشن «تعارض»</b> شروع می‌شه.</div>
+<div class="fa">هدف و مقصود ارتباط مؤثر و کارآمد، <b>ایجاد و رشد پذیرش رغبت‌ها، ارزش‌ها، ادراک‌ها و مساوات</b>ه و حتی اگه اختلافی هم در اون‌ها وجود داشته باشه، باز هم <b>پذیرش اساس کاره</b>.</div>
+<div class="fa">تعارض رو می‌شه به‌عنوان <b>تفاوت در رغبت‌ها و اهداف</b> قاب‌گیری مجدد کرد، در عوض اینکه بهش به‌مثابه <b>مجالی برای رقابت خواسته‌ها و اراده‌ها</b> نگاه کرد.</div>
+<div class="fa">همچنین طرفینی که می‌کوشن به سوی هدف مشترک گام بردارن، باید <b>نگرش «ما» رو به جای نگرش «من»</b> پیدا کنن.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">مرحله ۳: سوءتعبیرها روشن بشن</h4>
+<div class="fa">بعد از اینکه تعارض با دقت و به روشنی تعریف شد و از سوی طرفین <b>اتحاد کاری (مشاور و مراجع) به خوبی درک گردید</b>، نوبت به <b>روشن‌سازی سوءتعبیرها</b> می‌رسه.</div>
+<div class="fa">غالباً به‌جای اینکه سوءتعبیرها رو <b>مواردی در نظر بگیریم که در هر رابطه ممکنه پیش بیاد</b>، اون‌ها رو <b>مشکل واقعی</b> تلقی می‌کنیم.</div>
+<div class="fa">وقتی گفته‌های طرفین <b>دقیقاً مورد بررسی و تفسیر</b> قرار می‌گیره و آشکار می‌شه، <b>جلوی سوءتعبیرها هم گرفته می‌شه</b>.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">مرحله ۴: خلق راه‌حل‌های جدید</h4>
+<div class="fa">این گام در فرایند حل تعارض دربرگیرنده <b>مشارکت دادن ایده‌های طرفین</b> و <b>ایجاد مجموعه‌ای از انتظارات روشن و مورد قبول مشاور و مراجع</b>ه.</div>
+<div class="fa">در این مرحله، بهتره که <b>مرزهای مشاور توانبخشی یا تیم درمان با یکدیگر و با مراجع</b> به خوبی روشن شده باشن و در حیطه همون مرزها و وظایف با هم ارتباط برقرار کنن.</div>
+
+<h4 style="color:var(--pink);margin:14px 0 6px">مرحله ۵: به‌کارگیری و ارزشیابی راه‌حل‌ها</h4>
+<div class="fa">مرحله نهایی، <b>به‌کارگیری یا اجرایی کردن راه‌حل‌های مورد نظر طرفین و ارزشیابی اون‌ها</b>ه.</div>
+<div class="fa">اعضای اتحاد کاری باید بر سر <b>نقش‌ها و مسئولیت‌هایی</b> که هر یک از اون‌ها به عهده خواهد گرفت، <b>به توافق برسن</b>.</div>
+<div class="fa">بهتره که گروه توانبخشی و مراجع، <b>خلاصه‌ای از وظایف و مسئولیت‌های خاص خود</b> که بر سرشون توافق کرده‌اند رو <b>بنویسن</b> تا در آینده کمتر دچار [مشکل] بشن.</div>
+</div>
+</section>
+
+<!-- ==================== تفاوت‌ها و دام‌ها ==================== -->
+<section id="diffs" class="section">
+<h2 class="section-title">۱۲ · تفاوت‌ها و تله‌ها</h2>
+<p class="section-sub">برای تست چهارگزینه‌ای آماده شو</p>
+
+<div class="card diff">
+<h3>تفاوت ۱: همدلی با گرمی و خلوص</h3>
+<div class="fa"><b>همدلی:</b> آگاهی از چارچوب مرجع درونی فرد؛ تجربه لحظه‌به‌لحظه با او.</div>
+<div class="fa"><b>گرمی:</b> ارتباط گرم و دوستانه؛ کلیدش احترام و پذیرش.</div>
+<div class="fa"><b>خلوص:</b> واقعی، صادق و بی‌تکلف بودن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این سه تا رو قاطی نکن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۲: سه نوع مصاحبه</h3>
+<div class="fa"><b>بی‌ساختار:</b> جذاب، بی‌نظم، ذهنی.</div>
+<div class="fa"><b>باساختار:</b> رهنمودی، خشک، غیرقابل انعطاف.</div>
+<div class="fa"><b>نیمه‌ساختاریافته:</b> تو محیط توانبخشی؛ جمع‌آوری اطلاعات اساسی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این سه رو جابه‌جا نکن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۳: سه نوع سؤال</h3>
+<div class="fa"><b>باز پاسخ:</b> ترغیب به صحبت؛ شروع با چه، چگونه، کجا، چه زمانی، چه کسی.</div>
+<div class="fa"><b>بسته پاسخ:</b> پاسخ کوتاه؛ شروع با «آیا»؛ خطر بازپرسی.</div>
+<div class="fa"><b>روشن‌سازی:</b> روشن کردن مقصود مراجع؛ تکرار یا مثال.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این سه رو با هم قاطی نکن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۴: بازگویی مجدد با خلاصه کردن</h3>
+<div class="fa"><b>بازگویی مجدد:</b> آنچه دیگری گفته، با بیان خود او بازگو کنیم؛ در طول جلسه.</div>
+<div class="fa"><b>خلاصه کردن:</b> نتیجه گوش دادن فعال؛ در پایان جلسه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> بازگویی طول جلسه، خلاصه پایان جلسه!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۵: مقاومت با تعارض</h3>
+<div class="fa"><b>مقاومت:</b> ممکنه با لجاجت مراجع تعبیر بشه؛ بخشی طبیعی از فرایند تغییر.</div>
+<div class="fa"><b>تعارض:</b> ناهمخوانی بین اهداف یا اعمال مراجع و مشاور؛ یا سوءتغییرات.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> مقاومت از طرف مراجع، تعارض بین دو طرف!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۶: هفت مرحله هدف‌گذاری با پنج مرحله حل تعارض</h3>
+<div class="fa"><b>هفت مرحله هدف‌گذاری:</b> درک نیازها، دلایل ارجاع، فرصت‌ها، کنترل فردی، تعهد زمانی، اطلاعات واقعی، هدف واقعی.</div>
+<div class="fa"><b>پنج مرحله حل تعارض:</b> دور انداختن اسطوره‌ها، تعریف تعارض، روشن‌سازی سوءتعبیرها، خلق راه‌حل، به‌کارگیری و ارزشیابی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این دو تا رو با هم قاطی نکن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۷: سه اسطوره روابط خوب</h3>
+<div class="fa"><b>اسطوره ۱:</b> رابطه خوب = بدون مخالفت.</div>
+<div class="fa"><b>اسطوره ۲:</b> طرفین باید ارزش‌های مشترک داشته باشن.</div>
+<div class="fa"><b>اسطوره ۳:</b> هدف = اجتناب از تعارض.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این سه اسطوره باید دور انداخته بشن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۸: مراحل تغییر (پروچاسکا) با پنج مرحله حل تعارض</h3>
+<div class="fa"><b>مراحل تغییر:</b> پیش از انتظار، انتظار، تعیین، عمل، ماندگاری، بازگشت/عود (۶ مرحله).</div>
+<div class="fa"><b>پنج مرحله حل تعارض:</b> ۵ مرحله.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این دو تا فرق دارن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۹: مهم‌ترین اساس مشاوره با مهم‌ترین نقش مشاور</h3>
+<div class="fa"><b>مهم‌ترین اساس مشاوره:</b> توافق دوسویه بین مشاور و مراجع.</div>
+<div class="fa"><b>مهم‌ترین نقش مشاور:</b> تبدیل انتظارات مراجع به واقعیت.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> این دو رو قاطی نکن!</div>
+</div>
+
+<div class="card diff">
+<h3>تفاوت ۱۰: اهداف با وظایف در اتحاد کاری</h3>
+<div class="fa"><b>اهداف:</b> مداخله‌های مشاوره‌ای (بازگشت به کار، افزایش استقلال، بهبود کارکرد).</div>
+<div class="fa"><b>وظایف:</b> فعالیت‌های ویژه‌ای که مراجع رو در درمان درگیر ساخته و تغییرات رو آسان می‌سازن؛ جوهره اصلی فرایند توانبخشی.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>تله:</b> هدف = نتیجه، وظیفه = فعالیت!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱: اتحاد کاری مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال راجرزه.</div>
+<div class="fa"><b>جواب درست:</b> <b>بوردین (۱۹۷۹)</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> بوردین ۱۹۷۹.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲: سه شرط اساسی از کدوم نظریه اومده؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال گلاسره.</div>
+<div class="fa"><b>جواب درست:</b> از <b>نظریه شخص‌محور راجرز</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> راجرز.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳: همدلی پیشرفته مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال راجرزه.</div>
+<div class="fa"><b>جواب درست:</b> <b>رام‌ریل و سکف (۱۹۹۶)</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> رام‌ریل و سکف.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۴: نقل‌قول گزدا مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال راجرزه.</div>
+<div class="fa"><b>جواب درست:</b> <b>گزدا (۱۹۷۳)</b> درباره خلوص.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> گزدا ۱۹۷۳.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۵: مقاومت مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال پروچاسکاست.</div>
+<div class="fa"><b>جواب درست:</b> <b>میلر و رولینک (۲۰۰۲)</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> میلر و رولینک.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۶: مراحل تغییر مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال میلر و رولینکه.</div>
+<div class="fa"><b>جواب درست:</b> <b>پروچاسکا و دی‌کلمنته</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> پروچاسکا و دی‌کلمنته.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۷: سؤال «چرا» خوبه یا بد؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی سؤال «چرا» خوبه.</div>
+<div class="fa"><b>جواب درست:</b> سؤال «چرا» مراجع رو در <b>حالت تدافعی</b> قرار می‌ده و باید <b>ازش اجتناب کرد</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> «چرا» ممنوع!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۸: سؤالات بسته پاسخ چطورن؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی خیلی خوبن.</div>
+<div class="fa"><b>جواب درست:</b> پاسخ کوتاه؛ خطر <b>بازپرسی</b>؛ <b>حداقل استفاده</b> بشن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> حداقل استفاده!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۹: پرسش‌های «در مورد... برایم بگو» چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی بسته پاسخه.</div>
+<div class="fa"><b>جواب درست:</b> <b>پرسش‌های کلی</b> که به‌منظور <b>گوش دادن فعال و ترغیب مراجع به صحبت کردن</b> به کار می‌رن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> کلی، برای شروع.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۰: مصاحبه نیمه‌ساختاریافته کجا به کار می‌ره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی هیچ‌جا.</div>
+<div class="fa"><b>جواب درست:</b> <b>تو محیط‌های توانبخشی</b>؛ برای <b>جمع‌آوری اطلاعات اساسی</b> (نام، شماره تلفن، تاریخ تولد، منبع ارجاع و تشخیص).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> نیمه‌ساختاریافته = توانبخشی.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۱: خودافشاگری خوبه یا بد؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی همیشه خوبه.</div>
+<div class="fa"><b>جواب درست:</b> ممکنه <b>خطرناک</b> باشه؛ اگه به <b>کاهش توجه به مشکلات مراجع</b> منجر بشه، به <b>اتحاد کاری</b> هم آسیب می‌رسونه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> با احتیاط!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۲: خلاصه کردن کِی به کار می‌ره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی اول جلسه.</div>
+<div class="fa"><b>جواب درست:</b> در <b>پایان هر جلسه مشاوره</b>؛ نتیجه <b>گوش دادن فعال</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> پایان جلسه.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۳: بازگویی مجدد با چی در ارتباطه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی با تنبیه.</div>
+<div class="fa"><b>جواب درست:</b> <b>به شدت با گوش دادن فعال</b> در ارتباطه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> گوش دادن فعال.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۴: هفت مرحله هدف‌گذاری مال کیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مال بوردینه.</div>
+<div class="fa"><b>جواب درست:</b> تو متن اصلی نام خاصی نیومده؛ فقط <b>هفت مرحله فرایند هدف‌گذاری</b> هستن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> اسم خاصی نیومده.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۵: مهم‌ترین نقش مشاور توانبخشی چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی درمانه.</div>
+<div class="fa"><b>جواب درست:</b> <b>تبدیل انتظارات مراجع به واقعیت</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> انتظارات → واقعیت.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۶: دیدگاه حل مسئله چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مسئله یه مشکله.</div>
+<div class="fa"><b>جواب درست:</b> به مسئله به‌مثابه <b>فرصتی برای تغییر یا نیاز برای خدمت</b> نگاه می‌شه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> مسئله = فرصت.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۷: مقاومت برای مشاور خوبه یا بد؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی همیشه بد.</div>
+<div class="fa"><b>جواب درست:</b> طبق <b>میلر و رولینک (۲۰۰۲)</b>، برخی اوقات <b>مقاومت برای مشاور مفیده</b>؛ بخشی طبیعی از فرایند تغییره.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> گاهی مفید!</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۸: مقاومت تو چند مرحله از مراحل تغییر ممکنه رخ بده؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط مرحله اول.</div>
+<div class="fa"><b>جواب درست:</b> در <b>هر یک از شش مرحله</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> هر شش مرحله.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۱۹: ابزار ارزشمند مشاور چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی دارو.</div>
+<div class="fa"><b>جواب درست:</b> <b>سبک درمان‌بخشی</b> که در جلسه مشاوره ازش استفاده می‌کنه (همدلی، گرمی، خلوص).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> سبک درمان‌بخشی.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۰: سه اسطوره روابط کاری خوب کدومن؟</h3>
+<div class="fa"><b>تله:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>عدم مخالفت، ارزش‌های مشترک، اجتناب از تعارض</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> ۳ تا.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۱: نگرش «ما» به جای «من» تو کدوم مرحله حل تعارض مطرحه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی مرحله اول.</div>
+<div class="fa"><b>جواب درست:</b> تو <b>مرحله ۲ (تعریف تعارض)</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> مرحله ۲.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۲: پنج مرحله حل تعارض کدومن؟</h3>
+<div class="fa"><b>تله:</b> ترتیب رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> <b>دور انداختن اسطوره‌ها → تعریف تعارض → روشن‌سازی سوءتعبیرها → خلق راه‌حل → به‌کارگیری و ارزشیابی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> این ترتیب.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۳: تو مرحله ۵ حل تعارض چیکار می‌کنن؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط حرف می‌زنن.</div>
+<div class="fa"><b>جواب درست:</b> <b>به‌کارگیری و ارزشیابی راه‌حل‌ها</b>؛ توافق بر نقش‌ها و مسئولیت‌ها؛ <b>نوشتن خلاصه‌ای از وظایف</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> اجرا + ارزشیابی + نوشتن.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۴: چرا نوشتن توافق‌ها توصیه می‌شه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی فقط برای یادگاریه.</div>
+<div class="fa"><b>جواب درست:</b> تا در آینده <b>کمتر دچار مشکل</b> بشن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> کمتر مشکل.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۵: سؤال روشن‌سازی چه مثالی داره؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی «چرا این کار را کردی؟».</div>
+<div class="fa"><b>جواب درست:</b> <b>«مطمئن نیستم منظورتان را درست فهمیده باشم...»</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> «درست فهمیدم؟»</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۶: پرسش‌های کلی چطور شروع می‌شن؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی با «آیا».</div>
+<div class="fa"><b>جواب درست:</b> با <b>«در مورد... برایم بگو»</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> «برایم بگو...».</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۷: کاربرد «چه» تو سؤالات باز پاسخ چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی برای احساساته.</div>
+<div class="fa"><b>جواب درست:</b> برای <b>به دست آوردن اطلاعات و حقایق</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> «چه» = اطلاعات و حقایق.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۸: کاربرد «چگونه» تو سؤالات باز پاسخ چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی برای زمان و مکان.</div>
+<div class="fa"><b>جواب درست:</b> برای <b>جمع‌آوری اطلاعات پیرامون احساسات افراد یا پیامدهای وقایع</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> «چگونه» = احساسات و پیامدها.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۲۹: کاربرد «کجا» و «چه زمانی» تو سؤالات باز پاسخ چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی برای افراد.</div>
+<div class="fa"><b>جواب درست:</b> برای <b>دستیابی به اطلاعات روشن و صریح پیرامون زمان و مکان</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> «کجا/چه زمانی» = زمان و مکان.</div>
+</div>
+
+<div class="card diff">
+<h3>تله ۳۰: کاربرد «چه کسی» تو سؤالات باز پاسخ چیه؟</h3>
+<div class="fa"><b>تله:</b> فکر می‌کنی برای زمان.</div>
+<div class="fa"><b>جواب درست:</b> برای <b>دستیابی به اطلاعات پیرامون افراد</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px"><b>خودمونی:</b> «چه کسی» = افراد.</div>
+</div>
+</section>
+
+<!-- ==================== کوییز ==================== -->
+<section id="quiz" class="section">
+<h2 class="section-title">۱۳ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مهارت‌های مشاوره</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 12 · مشاوره توانبخشی · فصل دوازدهم: مهارت‌های مشاوره</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+const themeIcon=document.getElementById('themeIcon');
+const moonPath='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+const sunPath='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z';
+theme.onclick=()=>{
+const dark=document.documentElement.dataset.theme==='dark';
+if(dark){
+document.documentElement.dataset.theme='';
+themeIcon.innerHTML='<path d="'+moonPath+'"></path>';
+}else{
+document.documentElement.dataset.theme='dark';
+themeIcon.innerHTML='<circle cx="12" cy="12" r="4"></circle><path d="'+sunPath+'"></path>';
+}
+};
+
+const quizData = [
+{q:"اتحاد کاری (بوردین، ۱۹۷۹) از چی تشکیل شده؟",options:["تعهد و التزام، اهداف و وظایف","فقط اهداف","فقط وظایف","فقط تعهد"],answer:0,explanation:"اتحاد کاری از تعهد و التزام، اهداف و وظایف تشکیل شده."},
+{q:"مهم‌ترین اساس مشاوره در اتحاد کاری چیه؟",options:["توافق دوسویه بین مشاور و مراجع","تنبیه","پاداش مالی","دارو"],answer:0,explanation:"برای مؤثرتر و کارآمدتر بودن اتحاد کاری، توافق دوسویه بین مشاور و مراجع مهم‌ترین اساس مشاوره تلقی می‌شه."},
+{q:"اصل برابری و مساوات در اتحاد کاری یعنی چی؟",options:["مشاور و مراجع مسئولیت مشترک دارن","مشاور همه‌چی رو تعیین می‌کنه","مراجع همه‌چی رو تعیین می‌کنه","هیچ مسئولیتی وجود نداره"],answer:0,explanation:"اصل برابری و مساوات: مشاور و مراجع مسئولیت مشترک برای برنامه‌ریزی و پیامدهای درمانی دارن."},
+{q:"تعهد و التزام متشکل از چیه؟",options:["اعتماد دوسویه، احترام و پذیرش متقابل","پول، قدرت، شهرت","ترس، اضطراب، خشم","عشق، محبت، دوستی"],answer:0,explanation:"تعهد و التزام متشکل از اعتماد دوسویه، احترام و پذیرش متقابله که از راه حس همکاری و تعهد به انجام اهداف و وظایف آشکار می‌شه."},
+{q:"سه شرط اساسی و تسهیل‌کننده اتحاد کاری کدومن؟",options:["همدلی، گرمی، خلوص","همدلی، تنبیه، پاداش","گرمی، قدرت، شهرت","خلوص، پول، قدرت"],answer:0,explanation:"سه شرط: همدلی، گرمی و خلوص. این شرط از نظریه شخص‌محور راجرز نشئت گرفتن."},
+{q:"سه شرط اساسی از کدوم نظریه اومده؟",options:["نظریه شخص‌محور راجرز","نظریه گلاسر","نظریه رفتاردرمانی","نظریه معنادرمانی"],answer:0,explanation:"این سه شرط از نظریه شخص‌محور راجرز نشئت گرفتن و به‌عنوان عوامل درمانی «لازم و مکفی» توصیف می‌شن."},
+{q:"مدل همدلی چیه؟",options:["آگاهی از چارچوب مرجع درونی فرد و تجربه لحظه‌به‌لحظه بودن با او","فقط گوش دادن","فقط سؤال کردن","فقط سکوت"],answer:0,explanation:"مدل همدلی: آگاهی از چارچوب مرجع درونی فرد و دستیابی به حس مراجع و تجربه لحظه‌به‌لحظه بودن با او."},
+{q:"همدلی پیشرفته چند مؤلفه داره؟",options:["۵","۳","۴","۶"],answer:0,explanation:"پنج مؤلفه همدلی پیشرفته (رام‌ریل و سکف، ۱۹۹۶): توجه به ابرازها، پاسخ قابل فهم، پاسخ به احساسات، روشن‌سازی، توجه به رفتار."},
+{q:"همدلی پیشرفته مال کیه؟",options:["رام‌ریل و سکف (۱۹۹۶)","راجرز","گلاسر","بوردین"],answer:0,explanation:"پنج مؤلفه همدلی پیشرفته توسط رام‌ریل و سکف در سال ۱۹۹۶ مطرح شد."},
+{q:"کلید اصلی در مهارت گرمی و دوستی چیه؟",options:["ارتباط همراه با احترام و پذیرش","تنبیه","پاداش مالی","قدرت"],answer:0,explanation:"ارتباط همراه با احترام و پذیرش، کلید اصلی در مهارت گرمی و دوستی محسوب می‌شه."},
+{q:"چهار روشی که به احترام منجر می‌شن کدومن؟",options:["پاسخ بدون قضاوت، تحسین تلاش‌ها، ابراز قدردانی، احترام به تجربه‌ها","تنبیه، پاداش، قدرت، شهرت","پول، مقام، شهرت، قدرت","ترس، اضطراب، خشم، حسادت"],answer:0,explanation:"چهار روش: ۱) پاسخ بدون قضاوت ۲) تحسین اعضای گروه ۳) ابراز قدردانی ۴) احترام به تجربه‌ها."},
+{q:"نقل‌قول گزدا (۱۹۷۳) درباره خلوص چیه؟",options:["«مشاور صادق و دارای خلوص، ساختگی و ظاهری نیست»","«مشاور باید تنبیه کنه»","«مشاور باید سکوت کنه»","«مشاور باید پول بگیره»"],answer:0,explanation:"نقل‌قول گزدا (۱۹۷۳): «مشاور صادق و دارای خلوص، ساختگی و ظاهری نیست. او دفاع‌هاش رو به شدت کاهش داده و با گشودگی با مراجعان ارتباط برقرار می‌سازه و با تجارب اون‌ها در هم می‌آمیزه.»"},
+{q:"خودافشاگری چیه؟",options:["فردی رو در تجربه‌ها، احساسات و ادراک‌های خود سهیم کردن","سکوت کردن","تنبیه کردن","سؤال پرسیدن"],answer:0,explanation:"خودافشاگری: فردی رو در تجربه‌ها، احساسات و ادراک‌های خود سهیم کردن. ممکنه برای نشون دادن خلوص استفاده بشه."},
+{q:"خودافشاگری چه خطری داره؟",options:["اگه به کاهش توجه به مشکلات مراجع منجر بشه، به اتحاد کاری آسیب می‌رسونه","هیچ خطری نداره","همیشه خوبه","همیشه بد"},answer:0,explanation:"خودافشاگری می‌تونه خطرناک باشه و اگه به کاهش توجه به مشکلات و دغدغه‌های مراجع منجر بشه، حتی به اتحاد کاری هم ممکنه آسیب برسونه."},
+{q:"بازگویی مجدد چیه؟",options:["آنچه دیگری گفته، با بیان خود او بازگو کنیم","تنبیه کردن","سکوت کردن","اندرز دادن"],answer:0,explanation:"بازگویی مجدد: یکی از راهبردهای کلامی مؤثر که به شدت با گوش دادن فعال در ارتباطه؛ یعنی آنچه دیگری گفته، با بیان خود او بازگو کنیم."},
+{q:"عبارت مفید برای بازگویی مجدد کدومه؟",options:["«آن‌طوری که تو گفتی...»","«چرا این کار را کردی؟»","«باید این کار را بکنی»","«تو اشتباه می‌کنی»"],answer:0,explanation:"عبارات مفید: «آن‌طوری که تو گفتی...»، «به عبارت دیگر...»، «به نظر می‌آید که...»، «بگذار ببینم درست فهمیده‌ام...»."},
+{q:"خلاصه کردن کِی به کار می‌ره؟",options:["پایان هر جلسه مشاوره","اول جلسه","وسط جلسه","هیچ‌وقت"],answer:0,explanation:"در پایان هر جلسه مشاوره، مشاوران می‌تونن آنچه در جلسه اتفاق افتاده رو بازگو کرده و گام‌های بعدی رو بردارن."},
+{q:"اهداف مصاحبه در مشاوره توانبخشی کدومن؟",options:["برقراری ارتباط، تهیه اطلاعات، اطلاع از انتظارات، خودآگاهی، کاهش اضطراب، اطلاعات درباره مشاور","تشخیص، درمان، پیگیری","مشکل، ائتلاف، تجهیز","برقراری ارتباط، بررسی، تفسیر"],answer:0,explanation:"اهداف مصاحبه: ۱) برقراری ارتباط ۲) تهیه اطلاعات ۳) اطلاع از انتظارات ۴) خودآگاهی ۵) کاهش اضطراب ۶) اطلاعات درباره مشاور و تیم."},
+{q:"سه نوع مصاحبه کدومن؟",options:["بی‌ساختار، باساختار، نیمه‌ساختاریافته","فردی، گروهی، خانوادگی","تشخیصی، درمانی، پیگیری","کوتاه، متوسط، بلند"],answer:0,explanation:"سه نوع: ۱) بی‌ساختار ۲) باساختار ۳) نیمه‌ساختاریافته."},
+{q:"مصاحبه بی‌ساختار چه ویژگی‌ای داره؟",options:["از هیچ فرمت خاصی پیروی نمی‌کنه؛ مصاحبه‌گر تعیین می‌کنه چه سؤالاتی بپرسه","از فرمت خاصی پیروی می‌کنه","سؤالات از پیش مشخصن","خیلی خشکه"],answer:0,explanation:"مصاحبه بی‌ساختار از هیچ فرمت خاصی پیروی نمی‌کنه؛ مصاحبه‌گر تعیین می‌کنه چه سؤالاتی بپرسه؛ مراجعان آزادن از یه موضوع به موضوع بعدی بپردازن."},
+{q:"مصاحبه باساختار چه ویژگی‌ای داره؟",options:["رهنمودی؛ سؤالات از پیش مشخصن","جذاب؛ بی‌نظم","تو محیط توانبخشی","برای جمع‌آوری اطلاعات اساسی"],answer:0,explanation:"مصاحبه باساختار رهنمودی‌ان و معمولاً از فرمت یا شکل خاصی پیروی می‌کنن؛ سؤالات از پیش مشخص شده‌ان."},
+{q:"مصاحبه نیمه‌ساختاریافته کجا به کار می‌ره؟",options:["تو محیط‌های توانبخشی","تو مدرسه","تو بیمارستان","تو خانه"],answer:0,explanation:"مصاحبه نیمه‌ساختاریافته تو محیط‌های توانبخشی به کار می‌ره؛ برای تسهیل جمع‌آوری اطلاعات اساسی مراجع."},
+{q:"شش موضوع جمع‌آوری‌شده از مصاحبه کدومن؟",options:["ماهیت مشکل، تاریخچه فردی، زمینه خانوادگی، تاریخچه پزشکی، زمینه آموزشی/شغلی، انتظارات","فقط ماهیت مشکل","فقط تاریخچه فردی","فقط انتظارات"],answer:0,explanation:"شش موضوع: ۱) ماهیت مشکل ۲) تاریخچه فردی ۳) زمینه خانوادگی ۴) تاریخچه پزشکی ۵) زمینه آموزشی یا شغلی ۶) انتظارات مراجع."},
+{q:"سه نوع سؤال در مصاحبه کدومن؟",options:["باز پاسخ، بسته پاسخ، روشن‌سازی","تشخیصی، درمانی، پیگیری","فردی، گروهی، خانوادگی","کوتاه، متوسط، بلند"],answer:0,explanation:"سه نوع: ۱) باز پاسخ ۲) بسته پاسخ ۳) روشن‌سازی."},
+{q:"سؤالات باز پاسخ با چه کلماتی شروع می‌شن؟",options:["چگونه، چه، کجا، چه موقع، چه کسی","آیا","چرا","باید"],answer:0,explanation:"سؤالات باز پاسخ نوعاً با کلماتی مثل چگونه، چه، کجا، چه موقع یا چه کسی شروع می‌شن."},
+{q:"سؤالات باز پاسخ چه مزیتی دارن؟",options:["دیگران رو ترغیب به صحبت کردن می‌کنن","پاسخ کوتاه می‌گیرن","مراجع رو خاموش می‌کنن","جلسه رو شبیه بازپرسی می‌کنن"],answer:0,explanation:"سؤالات باز پاسخ گونه‌ای هستن که دیگران رو ترغیب به صحبت کردن می‌کنن."},
+{q:"کاربرد «چه» تو سؤالات باز پاسخ چیه؟",options:["به دست آوردن اطلاعات و حقایق","جمع‌آوری اطلاعات پیرامون احساسات","دستیابی به اطلاعات زمان و مکان","دستیابی به اطلاعات پیرامون افراد"],answer:0,explanation:"«چه»: به دست آوردن اطلاعات و حقایق."},
+{q:"کاربرد «چگونه» تو سؤالات باز پاسخ چیه؟",options:["جمع‌آوری اطلاعات پیرامون احساسات افراد یا پیامدهای وقایع","به دست آوردن اطلاعات و حقایق","دستیابی به اطلاعات زمان و مکان","دستیابی به اطلاعات پیرامون افراد"],answer:0,explanation:"«چگونه»: جمع‌آوری اطلاعات پیرامون احساسات افراد یا پیامدهای وقایع یا رخدادها."},
+{q:"کاربرد «کجا» و «چه زمانی» تو سؤالات باز پاسخ چیه؟",options:["دستیابی به اطلاعات روشن و صریح پیرامون زمان و مکان","به دست آوردن اطلاعات و حقایق","جمع‌آوری اطلاعات پیرامون احساسات","دستیابی به اطلاعات پیرامون افراد"],answer:0,explanation:"«کجا» و «چه زمانی»: دستیابی به اطلاعات روشن و صریح پیرامون زمان و مکان."},
+{q:"کاربرد «چه کسی» تو سؤالات باز پاسخ چیه؟",options:["دستیابی به اطلاعات پیرامون افراد","به دست آوردن اطلاعات و حقایق","جمع‌آوری اطلاعات پیرامون احساسات","دستیابی به اطلاعات زمان و مکان"],answer:0,explanation:"«چه کسی»: دستیابی به اطلاعات پیرامون افراد."},
+{q:"پرسش «در مورد... برایم بگو» چه نوعی داره؟",options:["پرسش کلی","پرسش بسته پاسخ","پرسش روشن‌سازی","پرسش چرایی"],answer:0,explanation:"پرسش‌های کلی همانند «در مورد... برایم بگو» به‌منظور گوش دادن فعال و ترغیب مراجع به صحبت کردن به کار می‌رن."},
+{q:"سؤال «چرا» چه مشکلی داره؟",options:["مراجع رو در حالت تدافعی قرار می‌ده","مراجع رو ترغیب به صحبت می‌کنه","مراجع رو آروم می‌کنه","مراجع رو خوشحال می‌کنه"],answer:0,explanation:"سؤالاتی که با «چرا» آغاز می‌شن، غالباً مراجع رو در حالتی تدافعی قرار می‌دن و به دور شدن رابطه مشاور/مراجع می‌انجامن."},
+{q:"سؤالات بسته پاسخ با چه کلمه‌ای شروع می‌شن؟",options:["«آیا»","«چگونه»","«چه»","«چرا»"],answer:0,explanation:"سؤالات بسته پاسخ با کلماتی نظیر «آیا» آغاز می‌شن و پاسخ‌های بسیار کوتاه داده می‌شه."},
+{q:"خطر سؤالات بسته پاسخ چیه؟",options:["جلسه رو شبیه بازپرسی می‌کنه","مراجع رو ترغیب به صحبت می‌کنه","مراجع رو آروم می‌کنه","مراجع رو خوشحال می‌کنه"],answer:0,explanation:"پرسیدن چنین سؤالاتی به محدود شدن پاسخ‌های مراجع منجر می‌شه یا مشاور آن‌قدر سؤال می‌پرسه که جلسه مشاوره رو بیشتر شبیه جلسه بازپرسی می‌کنه."},
+{q:"سؤالات روشن‌سازی چه زمانی به کار می‌رن؟",options:["وقتی مشاور نیازمند آگاهی دقیق‌تر یا روشن‌تر از آنچه مراجع سعی در بیانش داره","وقتی مشاور عصبانیه","وقتی مراجع ساکته","وقتی جلسه تمومه"],answer:0,explanation:"مشاوران مرتباً نیازمند آگاهی دقیق و عمیق‌تر یا روشن‌تری از آنچه مراجع سعی در بیانش داره هستن؛ برای رسیدن به این هدف از سؤالات روشن‌سازی استفاده می‌کنن."},
+{q:"مثال سؤال روشن‌سازی کدومه؟",options:["«مطمئن نیستم منظورتان را درست فهمیده باشم...»","«چرا این کار را کردی؟»","«باید این کار را بکنی»","«آیا گرسنه‌ای؟»"],answer:0,explanation:"مثال: «مطمئن نیستم منظورتان را درست فهمیده باشم...»."},
+{q:"هنگام افراط در سؤال پرسیدن چه اتفاقی می‌افته؟",options:["مراجع از موضوع احساسی دور می‌شه و کنترل جلسه در دست مشاور قرار می‌گیره","مراجع راحت‌تر صحبت می‌کنه","مراجع آروم‌تر می‌شه","جلسه کوتاه‌تر می‌شه"],answer:0,explanation:"با سؤال پرسیدن زیاد، مراجع از موضوعات و مسائل احساسی دور می‌شه و کنترل جلسه کاملاً در دست مشاور قرار می‌گیره."},
+{q:"مشاور کِی باید از سؤالات استفاده کنه؟",options:["وقتی هدفش کمک به مراجعان باشه","همیشه","هیچ‌وقت","وقتی حوصله داره"],answer:0,explanation:"مشاور هنگامی باید از سؤالات استفاده کنه که هدفش کمک به مراجعان باشه."},
+{q:"هدف‌گذاری در فرایند توانبخشی چیه؟",options:["اهداف به‌طور فوری، کوتاه‌مدت و بلندمدت مشخص می‌شن","فقط اهداف بلندمدت","فقط اهداف کوتاه‌مدت","هیچ هدفی مشخص نمی‌شه"],answer:0,explanation:"در این مرحله، اهداف به‌طور فوری، کوتاه‌مدت و بلندمدت مشخص می‌شن."},
+{q:"مهم‌ترین و اساسی‌ترین نقش مشاور توانبخشی چیه؟",options:["فراهم آوردن راهبردها یا شیوه‌هایی که انتظارات مراجع رو به واقعیت مبدل سازه","تجویز دارو","تشخیص بیماری","اندرز دادن"],answer:0,explanation:"مهم‌ترین و اساسی‌ترین نقش مشاور توانبخشی آن است که راهبردها یا شیوه‌هایی رو فراهم آورد که انتظارات مراجع رو به واقعیت مبدل سازه."},
+{q:"دیدگاه حل مسئله چیه؟",options:["به مسئله به‌مثابه فرصتی برای تغییر یا نیاز برای خدمت نگاه می‌شه","مسئله یه مشکله","مسئله باید انکار بشه","مسئله باید تنبیه بشه"],answer:0,explanation:"در دیدگاه حل مسئله، به مسئله یا مشکلی که مطرح می‌شه، به‌مثابه فرصتی برای تغییر یا نیاز برای خدمت نگاه می‌شه."},
+{q:"هفت مرحله فرایند هدف‌گذاری کدومن؟",options:["آگاهی از درک نیازها، جست‌وجوی دلایل، ارزیابی فرصت‌ها، ارزیابی کنترل فردی، تعهد زمانی، جمع‌آوری اطلاعات واقعی، مشخص کردن هدف واقعی","تشخیص، درمان، پیگیری، پایان، ترخیص، ارزیابی، بازنگری","مشکل، ائتلاف، تجهیز، ترک، پیگیری، ارزیابی، پایان","برقراری ارتباط، بررسی، تفسیر، جهت‌دهی، پیگیری، پایان، ترخیص"],answer:0,explanation:"هفت مرحله: ۱) آگاهی از درک نیازها ۲) جست‌وجوی دلایل ۳) ارزیابی فرصت‌ها ۴) ارزیابی کنترل فردی ۵) تعهد زمانی ۶) جمع‌آوری اطلاعات واقعی ۷) مشخص کردن هدف واقعی."},
+{q:"مقاومت چیه؟",options:["ممکنه با لجاجت و یک‌دندگی مراجع تعبیر بشه","فقط عصبانیت","فقط سکوت","فقط ترس"],answer:0,explanation:"مقاومت ممکنه با لجاجت و یک‌دندگی مراجع تعبیر و تفسیر بشه. درک مقاومت برای مشاوران ضروریه."},
+{q:"نظر میلر و رولینک (۲۰۰۲) درباره مقاومت چیه؟",options:["برخی اوقات مقاومت برای مشاور مفیده و بخشی طبیعی از فرایند تغییره","مقاومت همیشه بده","مقاومت باید تنبیه بشه","مقاومت وجود نداره"],answer:0,explanation:"میلر و رولینک (۲۰۰۲) پیشنهاد کردن که مقاومت به‌عنوان بخشی طبیعی از فرایند تغییر در مراجع محسوب می‌شه که مشاور باید به خوبی ازش مطلع باشه."},
+{q:"چهار مورد مطرح‌شده توسط میلر و رولینک (۲۰۰۲) پیرامون مقاومت کدومن؟",options:["تفاوت رویکردها، طبیعی بودن تردید، اجتناب از مجادله، آشنایی با شرایط بحرانی","تنبیه، پاداش، قدرت، شهرت","ترس، اضطراب، خشم، حسادت","پول، مقام، شهرت، قدرت"],answer:0,explanation:"چهار مورد: ۱) تفاوت رویکردها در مدیریت مقاومت ۲) طبیعی بودن دودلی و تردید ۳) اجتناب از مجادله و مواجهه خشم‌آلود ۴) آشنایی با شرایط بحرانی."},
+{q:"ابزار ارزشمند مشاور چیه؟",options:["سبک درمان‌بخشی که در جلسه مشاوره ازش استفاده می‌کنه","دارو","پول","مقام"],answer:0,explanation:"نتایج پژوهش‌ها نشون دادن که تنها و یکتاترین بخش مهم و ابزار ارزشمندی که مشاوران می‌تونن ازش بهره بگیرن، سبک درمان‌بخشی‌ه که در جلسه مشاوره ازش استفاده می‌کنن."},
+{q:"مراحل تغییر (پروچاسکا و دی‌کلمنته) کدومن؟",options:["پیش از انتظار، انتظار، تعیین، عمل، ماندگاری، بازگشت/عود","تشخیص، درمان، پیگیری، پایان، ترخیص، ارزیابی","مشکل، ائتلاف، تجهیز، ترک، پیگیری، ارزیابی","برقراری ارتباط، بررسی، تفسیر، جهت‌دهی، پیگیری، پایان"],answer:0,explanation:"مراحل: پیش از انتظار، انتظار، تعیین، عمل، ماندگاری و بازگشت یا عود (۶ مرحله)."},
+{q:"مقاومت تو چند مرحله از مراحل تغییر ممکنه رخ بده؟",options:["هر شش مرحله","فقط مرحله اول","فقط مرحله آخر","هیچ مرحله‌ای"],answer:0,explanation:"مقاومت و تردید یا دودلی ممکنه در هر یک از شش مرحله رخ بده."},
+{q:"منشأ تعارض در فرایند توانبخشی چیه؟",options:["انتظارات مراجع پیرامون مسئولیت‌پذیری تیم و ارائه خدمات","پول","مقام","شهرت"],answer:0,explanation:"تعارض‌ها ممکنه به دلیل انتظارات مراجع پیرامون مسئولیت‌پذیری تیم توانبخشی و ارائه خدمات توانبخشی بروز کنه."},
+{q:"موضوعات تعارض کدومن؟",options:["شرایط مراجع، عدم ارائه خدمات به‌موقع، اشتباهات مشاور، خط‌مشی‌ها","پول، مقام، شهرت، قدرت","ترس، اضطراب، خشم، حسادت","عشق، محبت، دوستی، خانواده"],answer:0,explanation:"موضوعات: شرایط مراجع، عدم ارائه خدمات با توجه به جدول زمانی، اشتباهات مشاور توانبخشی، برنامه‌ریزی خط‌مشی‌ها."},
+{q:"تعارض وقتی رخ می‌ده که...",options:["اعمال یا اهداف مراجع با اعمال یا اهداف مشاور سازگاری نداشته یا در مخالفت با یکدیگر باشند","همه‌چی خوبه","مراجع ساکته","مشاور ساکته"],answer:0,explanation:"تعارض هنگامی رخ می‌ده که اعمال یا اهداف مراجع با اعمال یا اهداف مشاور سازگاری نداشته یا در مخالفت با یکدیگر باشند."},
+{q:"پنج مرحله رویکرد حل تعارض کدومن؟",options:["دور انداختن اسطوره‌ها، تعریف تعارض، روشن‌سازی سوءتعبیرها، خلق راه‌حل، به‌کارگیری و ارزشیابی","تشخیص، درمان، پیگیری، پایان، ترخیص","مشکل، ائتلاف، تجهیز، ترک، پیگیری","برقراری ارتباط، بررسی، تفسیر، جهت‌دهی، پایان"],answer:0,explanation:"پنج مرحله: ۱) دور انداختن اسطوره‌ها ۲) تعریف تعارض ۳) روشن‌سازی سوءتعبیرها ۴) خلق راه‌حل‌های جدید ۵) به‌کارگیری و ارزشیابی راه‌حل‌ها."},
+{q:"سه اسطوره متداول پیرامون روابط کاری خوب کدومن؟",options:["عدم مخالفت، ارزش‌های مشترک، اجتناب از تعارض","پول، مقام، شهرت","ترس، اضطراب، خشم","عشق، محبت، دوستی"],answer:0,explanation:"سه اسطوره: ۱) رابطه خوب = بدون مخالفت ۲) طرفین باید ارزش‌های مشترک داشته باشن ۳) هدف = اجتناب از تعارض."},
+{q:"نگرش «ما» به جای «من» تو کدوم مرحله حل تعارض مطرحه؟",options:["مرحله ۲ (تعریف تعارض)","مرحله ۱","مرحله ۳","مرحله ۵"],answer:0,explanation:"تو مرحله ۲ (تعریف تعارض)، طرفینی که می‌کوشن به سوی هدف مشترک گام بردارن، باید نگرش «ما» رو به جای نگرش «من» پیدا کنن."},
+{q:"تو مرحله ۵ حل تعارض چیکار می‌کنن؟",options:["به‌کارگیری و ارزشیابی راه‌حل‌ها؛ توافق بر نقش‌ها و نوشتن خلاصه","دور انداختن اسطوره‌ها","تعریف تعارض","روشن‌سازی سوءتعبیرها"],answer:0,explanation:"مرحله ۵: به‌کارگیری یا اجرایی کردن راه‌حل‌های مورد نظر طرفین و ارزشیابی اون‌ها؛ توافق بر نقش‌ها و مسئولیت‌ها؛ نوشتن خلاصه‌ای از وظایف."},
+{q:"چرا نوشتن توافق‌ها توصیه می‌شه؟",options:["تا در آینده کمتر دچار مشکل بشن","فقط برای یادگاری","برای تنبیه","برای پاداش"],answer:0,explanation:"بهتره که گروه توانبخشی و مراجع، خلاصه‌ای از وظایف و مسئولیت‌های خاص خود که بر سرشون توافق کرده‌اند رو بنویسن تا در آینده کمتر دچار مشکل بشن."},
+{q:"سه شرط اساسی بدون کدوم نمی‌شه به اهداف توانبخشی رسید؟",options:["بدون همدلی، گرمی و خلوص","بدون دارو","بدون پول","بدون مقام"],answer:0,explanation:"بدون سه شرط اساسی (همدلی، گرمی و خلوص) نمی‌شه به اهداف توانبخشی در فرایند درمان دست پیدا کرد."},
+{q:"همدلی چه نتایجی داره؟",options:["برقراری روابط مؤثر، انتقال حمایت و پذیرش، نشون دادن احترام و شأن","فقط کاهش اضطراب","فقط افزایش پول","فقط افزایش قدرت"],answer:0,explanation:"نتایج همدلی: برقراری روابط مشاوره‌ای مؤثر با مراجع، انتقال حمایت و پذیرش به مراجع، نشون دادن احترام و شأن به مراجع."},
+{q:"کاربرد زبان تو خلوص چیه؟",options:["زبان باید برای مراجعان و سایر اعضای تیم قابل فهم باشه","زبان باید پیچیده باشه","زبان باید تخصصی باشه","زبان مهم نیست"],answer:0,explanation:"عنصر مهم دیگر در خلوص، کاربرد زبانیه که برای مراجعان و سایر اعضای تیم توانبخشی قابل فهم باشه. مشاوران باید از سر واژه‌ها یا اصطلاحات تخصصی پیچیده کمتر استفاده کنن."},
+{q:"مثال ناهمخوانی کلامی و غیرکلامی چیه؟",options:["مراجعی که می‌گه آرامه ولی نشانه‌های غیرکلامی نشان می‌دن عجوله","مراجعی که می‌گه عصبانیه و عصبانی هم هست","مراجعی که ساکته","مراجعی که می‌خنده"],answer:0,explanation:"مراجعی که می‌گه «آرام است و مشکلی ندارد»، اما نشانه‌ها و اشاره‌های غیرکلامی او نشون می‌دن که بسیار عجول و ناشکیباست و به سمت جلو خم شده و در صداش لرزش وجود داره، نشون‌دهنده تعارض آشکار بین نشانه‌ها و اشاره‌های کلامی و غیرکلامی‌ه."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مهارت‌های مشاوره — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

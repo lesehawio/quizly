@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره توانبخشی · سری 09 · رفتار درمانی عقلانی-هیجانی (REBT)</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--green:#1f9d73;--yellow:#c98112;
+--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,var(--pink) 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"09";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}
+.fa{text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.trap{border-right:5px solid #e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:8px}
+.theme-btn svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.theme-btn:hover svg{transform:rotate(15deg)}
+.bio{background:linear-gradient(135deg,#fff0f5,#ffe0ec);border-right:5px solid var(--pink);padding:12px 14px;border-radius:14px;margin:10px 0;font-size:14px}
+[data-theme=dark] .bio{background:linear-gradient(135deg,#2a1821,#39202c)}
+@media(min-width:520px){
+.app{padding:20px}.hero{padding:38px 28px}.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}.hero{padding:22px 14px}.hero h2{font-size:20px}
+.card{padding:12px}.fa{font-size:14px;padding:8px 12px}.section-title{font-size:20px}
+.stat b{font-size:20px}.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره توانبخشی · سری 09</small></div></div>
+  <button id="theme" class="theme-btn" aria-label="تغییر تم">
+    <svg id="themeIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</header>
+
+<section class="hero">
+  <h2>فصل نهم: رفتار درمانی عقلانی-هیجانی (REBT)</h2>
+  <p>الیس، تاریخچه، ماهیت دوگانه انسان، سه اصل اساسی، فنون شناختی/رفتاری/هیجانی، تفاوت‌ها، دام‌ها و کوییز</p>
+  <div class="pills"><span class="pill">الیس</span><span class="pill">تاریخچه RT→REBT</span><span class="pill">الگوی ABC</span><span class="pill">سه اصل</span><span class="pill">فنون</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل نهم کتاب «کاربرد نظریه‌های مشاوره و روان‌درمانی در توانبخشی معلولین» نوشته شده. ساختارش دقیقاً همون چیزیه که خواستی: نظریه‌پردازان با بیوگرافی جدا، مفاهیم کامل، فنون دسته‌بندی‌شده، تفاوت‌ها برای امتحان تستی، دام‌های چهارگزینه‌ای و کوییز.</div>
+
+<div class="stats">
+<div class="stat"><b>۲</b><span>نام تاریخی</span></div>
+<div class="stat"><b>۳</b><span>اصل اساسی</span></div>
+<div class="stat"><b>۳</b><span>دسته فن</span></div>
+<div class="stat"><b>۴</b><span>محدودیت REBT</span></div>
+</div>
+
+<nav>
+<a href="#theorists">نظریه‌پردازان</a><a href="#concepts">مفاهیم</a><a href="#process">فرآیند مشاوره</a><a href="#techniques">فنون REBT</a><a href="#compare">تفاوت‌ها</a><a href="#rehab">کاربرد توانبخشی</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<!-- ============================================ -->
+<!-- بخش ۱: نظریه‌پردازان با بیوگرافی -->
+<!-- ============================================ -->
+<section id="theorists" class="section">
+<h2 class="section-title">۰۱ · نظریه‌پردازان و بیوگرافی</h2>
+<p class="section-sub">هر کی کیه، چی گفت و چه نقشی داشت</p>
+
+<div class="card">
+<div class="card-head"><h3>آلبرت الیس (Albert Ellis) — بنیان‌گذار REBT</h3><span class="badge s">کلیدی</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> آلبرت الیس (۱۹۱۳-۲۰۰۷) روان‌شناس آمریکایی و بنیان‌گذار رفتار درمانی عقلانی-هیجانی (REBT). او در نیمه دوم دهه ۱۹۵۰ این رویکرد را بنیان‌گذاری کرد. الیس ابتدا نام «رفتار درمانی عقلانی» (Rational Therapy - RT) را در سال ۱۹۵۵ برگزید، سپس در سال ۱۹۹۳ نام آن را به «رفتار درمانی عقلانی-هیجانی» (REBT) تغییر داد. تغییرات در مجموعه فنون و روش‌های درمانی به نظریه فعلی ایجاد شده، اما تغییرات اساسی همچنان دست‌نخورده باقی مانده است (الیس، ۱۹۹۵).
+</div>
+<div class="fa"><b>نظریه اصلی:</b> REBT — تأکید بر نقش <b>باورهای غیرمنطقی</b> در ایجاد آشفتگی‌های عاطفی و هیجانی.</div>
+<div class="fa"><b>تغییر نام:</b> ۱۹۵۵ → RT | ۱۹۹۳ → REBT</div>
+<div class="fa"><b>ویژگی شخصی:</b> فعال، پرانرژی، باهوش، مطلع، شاداب، سرزنده، همراه و همدل با مراجع در جست‌وجوی باورهای غیرمنطقی.</div>
+<div class="fa"><b>نقل‌قول (الیس، ۱۹۷۳؛ به نقل از کارسک و بیشاپ، ۲۰۰۶):</b> «فعال و پُرانرژی، همانند کسانی که خطر می‌کنند. باهوش و مطلع و شاداب و سرزنده. به ویژه، هنگامی که در پی یافتن و دنبال کردن باورهای غیرمنطقی است، با مراجع‌اش همراه و همدل است.»</div>
+<div class="fa"><b>روش خاص:</b> الیس شخصاً از آزمون‌های تشخیصی استانداردشده (به ویژه آزمون‌های فرافکنی چون TAT) استفاده نمی‌کرد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارن هورنای (Karen Horney)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> کارن هورنای (۱۸۸۵-۱۹۵۲) روان‌کاو آلمانی و از نظریه‌پردازان نوفریدی. او مفهوم «بایدها» (Tyramy of the Shoulds) را مطرح کرد که بر REBT تأثیر گذاشت.
+</div>
+<div class="fa"><b>نقش در REBT:</b> «بایدهای کارن هورنای» یکی از ریشه‌های فلسفی REBT است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آلفرد آدلر (Alfred Adler)</h3><span class="badge s">کلیدی</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> آلفرد آدلر (۱۸۷۰-۱۹۳۷) روان‌پزشک اتریشی و بنیان‌گذار روان‌شناسی فردی. الیس او را به خاطر جمله «رفتار آدمی از افکارش نشئت می‌گیرد» می‌ستود و او را روان‌درمانگر مدرنی معرفی می‌کرد که یکی از پیشگامان REBT بود.
+</div>
+<div class="fa"><b>نقش در REBT:</b> نظریه و درمان آدلر یکی از ریشه‌های فلسفی REBT است. الیس با آدلر موافق بود که «انسان‌ها هدف دارند».</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>اپیکتتوس (Epictetus)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> اپیکتتوس (۵۵-۱۳۵ میلادی) فیلسوف رواقی یونانی که بر نقش ادراک و اندیشیدن در شکل‌گیری شادمانی و نگرانی تأکید کرد.
+</div>
+<div class="fa"><b>نقش در REBT:</b> فلسفه لذت‌گرایانه اپیکتتوس یکی از ریشه‌های فلسفی REBT است. او بر این باور بود که شادمانی و نگرانی‌ها در نتیجه وقایع رخدادهای بد و ناگوار به وجود نمی‌آیند، بلکه ادراک و اندیشیدن پیرامون وقایع است که آن‌ها را خوب یا بد می‌سازد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سینکا (Seneca)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> سینکا (۴ ق.م - ۶۵ م) فیلسوف رواقی رومی که بر نقش ادراک در شکل‌گیری احساسات تأکید کرد.
+</div>
+<div class="fa"><b>نقش در REBT:</b> فلسفه لذت‌گرایانه سینکا یکی از ریشه‌های فلسفی REBT است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مارکوس آریلیوس (Marcus Aurelius)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> مارکوس آریلیوس (۱۲۱-۱۸۰ میلادی) امپراتور روم و فیلسوف رواقی که بر نقش ادراک و اندیشیدن در شکل‌گیری احساسات تأکید کرد.
+</div>
+<div class="fa"><b>نقش در REBT:</b> فلسفه لذت‌گرایانه مارکوس آریلیوس یکی از ریشه‌های فلسفی REBT است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آبراهام مزلو (Abraham Maslow)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> آبراهام مزلو (۱۹۰۸-۱۹۷۰) روان‌شناس آمریکایی و بنیان‌گذار روان‌شناسی انسان‌گرا. الیس با نظریه او درباره تمایلات ذاتی انسان برای خودکفایی، شادکامی و برقراری ارتباط با دیگران همسو بود.
+</div>
+<div class="fa"><b>نقش در REBT:</b> الیس با نظریه پردازان انسان‌گرایی چون مزلو و راجرز که باور داشتند انسان‌ها تمایلات ذاتی برای خودکفایی، شادکامی و برقراری ارتباط با دیگران دارند، همسو بود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارل راجرز (Carl Rogers)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> کارل راجرز (۱۹۰۲-۱۹۸۷) روان‌شناس آمریکایی و بنیان‌گذار مشاوره شخص‌محور. الیس با نظریه او درباره تمایلات ذاتی انسان برای خودکفایی، شادکامی و برقراری ارتباط با دیگران همسو بود.
+</div>
+<div class="fa"><b>نقش در REBT:</b> الیس با نظریه پردازان انسان‌گرایی چون مزلو و راجرز که باور داشتند انسان‌ها تمایلات ذاتی برای خودکفایی، شادکامی و برقراری ارتباط با دیگران دارند، همسو بود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>کارسک و بیشاپ (Corsini & Bishop, ۲۰۰۶)</h3><span class="badge s">مهم</span></div>
+<div class="bio">
+<b>بیوگرافی:</b> کارسک و بیشاپ، نویسندگانی که ویژگی‌های مشاور REBT را از الیس (۱۹۷۳) نقل کرده‌اند.
+</div>
+<div class="fa"><b>نقل‌قول:</b> «فعال و پُرانرژی، همانند کسانی که خطر می‌کنند. باهوش و مطلع و شاداب و سرزنده. به ویژه، هنگامی که در پی یافتن و دنبال کردن باورهای غیرمنطقی است، با مراجع‌اش همراه و همدل است.»</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۲: مفاهیم — تمام تعاریف و اصطلاحات -->
+<!-- ============================================ -->
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم — تمام تعاریف و اصطلاحات</h2>
+<p class="section-sub">هر اصطلاح با تعریف دقیق و خودمونی</p>
+
+<div class="card">
+<div class="card-head"><h3>تاریخچه و تحول نام‌گذاری</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>سال</th><th>نام</th></tr></thead>
+<tbody>
+<tr><td><b>۱۹۵۵</b></td><td><b>Rational Therapy (RT)</b> — رفتار درمانی عقلانی</td></tr>
+<tr><td><b>۱۹۹۳</b></td><td><b>Rational Emotive Behavior Therapy (REBT)</b> — رفتار درمانی عقلانی-هیجانی</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> تغییرات در مجموعه فنون و روش‌های درمانی به نظریه فعلی ایجاد شده است، اما <b>تغییرات اساسی، همچنان دست‌نخورده باقی مانده است</b> (الیس، ۱۹۹۵).
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ریشه‌های فلسفی REBT</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">الیس در شکل‌گیری نظریه‌اش از نقطه‌نظرات اندیشمندان بزرگی بهره برده است:</div>
+<div class="fa">• <b>لذت‌گرایانه و فلسفه شادی انسان‌ها</b> (الیس، ۱۹۹۶)</div>
+<div class="fa">• <b>نظریه و درمان رفتاری</b></div>
+<div class="fa">• <b>بایدهای کارن هورنای</b></div>
+<div class="fa">• <b>نظریه و درمان آلفرد آدلر</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تأثیرپذیری از مکاتب فلسفی</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>فلسفه لذت‌گرایانه اپیکتتوس، سینکا و مارکوس آریلیوس</b></div>
+<div class="fa">• بر این باور بودند که <b>شادمانی و نگرانی‌ها در نتیجه وقایع رخدادهای بد و ناگوار به وجود نمی‌آیند</b>، بلکه <b>ادراک و اندیشیدن پیرامون وقایع</b> است که آن‌ها را خوب یا بد می‌سازد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابطه با آدلر</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>آدلر</b> را به خاطر آنکه می‌گفت <b>«رفتار آدمی از افکارش نشئت می‌گیرد»</b> می‌ستود.</div>
+<div class="fa">• وی، آدلر را <b>روان‌درمانگر مدرنی</b> معرفی می‌کرد که یکی از پیشگامان REBT بود (الیس، ۱۹۹۵b).</div>
+<div class="fa">• الیس از شمار زیادی از مداخله‌ها و رویکردهای مشاوره‌ای رفتار درمانگران در کار خود استفاده کرد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۱) ماهیت دوگانه انسان (اصل بنیادین REBT)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>انسان‌ها با توانایی بالقوه‌ای برای داشتن افکار، احساسات و رفتارهای منطقی (سلامتی، منطقی و ساختاری) و نیز غیرمنطقی (مضر، مسیحانه یا خودکامه) به دنیا می‌آیند.</b>
+</div>
+<div class="fa"><b>همسویی با آدلر:</b> الیس با آدلر موافق بود که می‌گفت <b>انسان‌ها هدف دارند</b>.</div>
+<div class="fa"><b>همسویی با انسان‌گرایان:</b> با <b>مازلو و راجرز</b> که باور داشتند <b>انسان‌ها تمایلات ذاتی برای خودکفایی، شادکامی و برقراری ارتباط با دیگران</b> دارند، همسو بود.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۲) جنبه‌های زیستی و روان‌شناختی</h3></div>
+<div class="fa">• انسان موجودی <b>زیستی و اجتماعی</b> است.</div>
+<div class="fa">• <b>بسیاری از باورهای غیرمنطقی</b> از دلایل <b>غیرمنطقی بودن باورها</b> ناشی می‌شوند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>۳) جنبه‌های اجتماعی</h3></div>
+<div class="fa">• انسان‌ها <b>موجودات اجتماعی‌اند</b>.</div>
+<div class="fa">• بخشی از <b>اهداف نخستین انسان‌ها، احساس شادکامی و موفقیت در جامعه</b> است.</div>
+<div class="fa">• <b>احساس «خود» فرد از خویشتن، به شدت متأثر از تعاملات پیچیده اجتماعی</b> است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعریف فرد سالم از نظر الیس</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>«فردی که عشق خود را از افراد مهم زندگی‌اش دریافت می‌کند و به دیگران عشق می‌ورزد.»</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سلامت روان‌شناختی در REBT</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">سلامت روان‌شناختی به شدت <b>متأثر از باورهای غیرمنطقی فرد</b> است.</div>
+<div class="fa"><b>ویژگی‌های افراد با شخصیت سالم:</b></div>
+<div class="fa">۱) به گونه‌ای <b>منطقی و منعطف</b> می‌اندیشند</div>
+<div class="fa">۲) <b>باورهای ارزش‌دهی بالایی</b> دارند</div>
+<div class="fa">۳) <b>احساس کنترل بر سرنوشت و تقدیر خود</b> دارند</div>
+<div class="fa">۴) از <b>توانایی‌شان در تغییر افکارشان آگاهند</b></div>
+<div class="fa"><b>ویژگی‌های افراد دچار آشفتگی عاطفی:</b></div>
+<div class="fa">۱) <b>باورهای غیرمنطقی</b> دارند</div>
+<div class="fa">۲) <b>انتظاراتشان نسبت به خودشان، دیگران و دنیا بسیار غیرمنطقی</b> است</div>
+<div class="fa">۳) این افراد <b>تنها این باورها را دارند، بلکه به دلیل تکرار غیرمنطقی از آن‌ها بی‌خبرند</b> و حتی <b>توانایی تغییر آن‌ها را نیز ندارند</b></div>
+<div class="fa">۴) از آنجایی که <b>احساس آشفتگی و ناتوانایی در کنترل شرایط زندگی‌شان</b> می‌سازند، در نتیجه <b>دائماً احساس باورهای غیرمنطقی و تأثیرشان</b> دارند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>الگوی ABC</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>الگوی ABC به خوبی سازوکار باورهای غیرمنطقی و تأثیرشان بر آشفتگی‌های عاطفی و هیجانی را آشکار می‌سازد.</b>
+</div>
+<div class="fa"><b>A (Activating Event):</b> واقعه یا رخداد فعال‌کننده</div>
+<div class="fa"><b>B (Belief):</b> باور (منطقی یا غیرمنطقی)</div>
+<div class="fa"><b>C (Consequence):</b> پیامد (احساس، رفتار)</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۳: فرآیند مشاوره REBT -->
+<!-- ============================================ -->
+<section id="process" class="section">
+<h2 class="section-title">۰۳ · فرآیند مشاوره REBT</h2>
+<p class="section-sub">اصل اساسی، ویژگی‌ها، سه اصل و نقش‌ها</p>
+
+<div class="card">
+<div class="card-head"><h3>اصل اساسی فرآیند مشاوره</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">بر <b>آموزش مراجع و ماهر ساختن او در شناسایی باورهای غیرمنطقی‌اش</b> تأکید می‌ورزد.</div>
+<div class="fa">هنگامی که باورهای غیرمنطقی و خودویرانگرانه شناسایی شدند، مشاور از طریق <b>شماری از فنون درمانی</b> به مراجع آموزش می‌دهد تا:</div>
+<div class="fa">۱) این باورها را <b>به چالش بکشاند</b></div>
+<div class="fa">۲) <b>باورهای منطقی را جایگزین باورهای پیشین خودساز</b> کند</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>بسیار مهم است که مشاور به مراجع بیاموزد چگونه با باورهای غیرمنطقی‌اش مجادله کند.</b>
+</div>
+<div class="fa">مراجع می‌آموزد که این فرایند، <b>فرایند عمیق و اساسی</b> است که <b>تغییرات بلندمدتی</b> در زندگی‌اش فراهم می‌سازد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ویژگی‌های درمان REBT</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>رهنمودی و مشکل‌مدار</b> است</div>
+<div class="fa">• مشاوران غالباً از <b>روش‌های کوتاه‌مدت مقرون‌به‌صرفه</b> استفاده می‌کنند</div>
+<div class="fa">• <b>ابزارها:</b> پرسش‌نامه‌ها، فرم‌های خودیاری، تکالیف خانگی (خواندن یا گوش دادن به مواد روانی-آموزشی)</div>
+<div class="fa">• از <b>روش‌ها و فنون درمانی خاص متناسب با مراجع</b> در جلسه مشاوره بهره می‌گیرند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>آنچه مشاوران REBT استفاده نمی‌کنند</h3><span class="badge s">مهم</span></div>
+<div class="fa">• <b>روش‌های غیرسودمند و غیررهنمودی</b></div>
+<div class="fa">• <b>الیس شخصاً از آزمون‌های تشخیصی استانداردشده</b> (به ویژه <b>آزمون‌های فرافکنی چون آزمون اندریافت موضوع - TAT</b>) استفاده نمی‌کرد، زیرا باور داشت این آزمون‌ها مراجع را در جلسات نخست آن‌قدر به صحبت وامی‌دارد که بعدها چندان علاقه‌ای به حرف زدن در جلسات آتی ندارد.</div>
+<div class="fa">• <b>مشاور REBT وقت زیادی را صرف کار نمی‌کند</b> و مستقیماً به مشکل فعلی فرد می‌پردازد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نکته مهم جلسه مشاوره</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>در جلسه مشاوره، باید فوراً به سراغ باورهای غیرمنطقی فرد رفت، زیرا تصور REBT این است که مسبب تمامی مشکلات مراجعان، باورهای غیرمنطقی آن‌هاست.</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>باورهای غیرمنطقی به چه چیزی نسبت داده می‌شوند؟</h3></div>
+<div class="fa">• <b>عوامل خارجی و غیرقابل کنترل</b> در زندگی فرد، مثلاً:</div>
+<div class="fa">• والدین بی‌لیاقت</div>
+<div class="fa">• دوستان بد</div>
+<div class="fa">• محیط کاری پراسترس</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>هشدار:</b> این‌گونه استدلال‌ها، <b>روند رشد درمان را متوقف می‌سازند</b> یا مراجع از مشاور انتظار دارد <b>کاری جادویی یا غیرقابل تصور</b> برای او انجام دهد تا به یک چشم به هم زدن تمامی مشکلاتش حل شوند.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه اصل اساسی که مشاور باید قبل از شروع مشاوره برای مراجع آشکار سازد</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>اصل</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td><b>اصل ۱</b></td><td><b>شما خودتان وقایع یا رخدادهای ناخشنودکننده زندگی‌تان را برگزیده‌اید</b>، حتی اگر عوامل خارجی بر ناخشنودی شما تأثیرگذار بوده‌اند، باز هم <b>شما عامل اساسی هستید</b>. شما آن‌طوری که می‌اندیشید، احساس می‌کنید.</td></tr>
+<tr><td><b>اصل ۲</b></td><td><b>بدون توجه به آنکه چگونه یا چه موقع این‌گونه باورهای خودویرانگرانه را کسب کرده‌اید، شما خود انتخاب کرده‌اید که آن‌ها را در زندگی فعلی‌تان ادامه دهید</b> و هم‌اکنون نیز به آن‌ها ادامه می‌دهید. گذشته شما و شرایط زندگی فعلی‌تان، شما را تحت تأثیر قرار می‌دهد، اما <b>آن‌ها شما را آشفته نمی‌کنند</b>.</td></tr>
+<tr><td><b>اصل ۳</b></td><td><b>هیچ راه یا روش جادویی و ماورایی وجود ندارد</b> که شخصیت و تمایل شما را نسبت به این‌گونه آشفتگی‌ها تغییر دهد. <b>تغییر تنها در صورتی امکان‌پذیر است که بخواهید باورهایتان را عوض کنید و برای تغییر آن‌ها بکوشید.</b></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>رابطه مشاور-مراجع در REBT</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>نقش مشاور در ابتدا درمان:</b> <b>تعلیم‌دهنده</b></div>
+<div class="fa"><b>نقش مراجع:</b> <b>دانش‌آموز یا تعلیم‌گیرنده</b></div>
+<div class="fa"><b>ویژگی‌های مشاور REBT (الیس، ۱۹۷۳؛ به نقل از کارسک و بیشاپ، ۲۰۰۶):</b> «فعال و پُرانرژی، همانند کسانی که خطر می‌کنند. باهوش و مطلع و شاداب و سرزنده. به ویژه، هنگامی که در پی یافتن و دنبال کردن باورهای غیرمنطقی است، با مراجع‌اش همراه و همدل است.»</div>
+<div class="fa"><b>نحوه مواجهه:</b> مشاوران REBT مراجعان را <b>مستقیماً با مشکلاتشان مواجه می‌کنند</b>، به گونه‌ای که <b>زمان را به هدر ندهند</b>. آن‌ها مراجعان را به <b>استدلال کردن در عوض احساس کردن</b> وامی‌دارند.</div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته مهم:</b> گرچه مشاوران REBT (به ویژه خود الیس) معتقدند رابطه مشاوره‌ای <b>ضرورتی ندارد که همراه با گرمی، لطافت و عشق به مراجع باشد</b>، در عوض <b>مؤثر بودن یا برقراری رابطه مشاوره‌ای خوب و پذیرش غیرمشروط</b> را در جلسه مشاوره <b>الزامی</b> می‌دانند.
+</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۴: فنون REBT -->
+<!-- ============================================ -->
+<section id="techniques" class="section">
+<h2 class="section-title">۰۴ · فنون REBT</h2>
+<p class="section-sub">فنون شناختی، رفتاری و هیجانی (عاطفی)</p>
+
+<div class="card">
+<div class="card-head"><h3>الف) فنون شناختی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>فن</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td><b>بار معنایی دقیق کلمات</b></td><td>مراجع از کاربرد زبان آگاه شده و متوجه می‌شود کلمات خود زاده باور غیرمنطقی باشند. <b>مثال:</b> به جای «من نمی‌توانم انجامش بدهم» بگوید «تا به حال نخواسته‌ام که انجامش دهم».</td></tr>
+<tr><td><b>خودگویی‌های منطقی سازگارانه</b></td><td>نوعی از باور منطقی که مراجع با تکرار آن به <b>استحکام باورهای منطقی‌اش</b> کمک می‌کند.</td></tr>
+<tr><td><b>قاب‌گیری مجدد</b></td><td>مراجع می‌آموزد <b>شکل تازه‌ای به مشکل خود دهد</b>.</td></tr>
+<tr><td><b>انتساب</b></td><td>مراجع ترغیب می‌شود <b>هر دو جنبه مثبت و منفی مشکلات</b> را بررسی کرده و <b>دیدگاهی کل‌نگرانه</b> بیابد. <b>مثال:</b> اگر مراجع بر جنبه‌های منفی تمرکز کند، از نتایج مثبت غافل می‌شود، لذا باید به هر دو جنبه توجه کند.</td></tr>
+<tr><td><b>شوخی</b></td><td>به مراجع نشان می‌دهد مشکل را با <b>خنده و طنز</b> حل کند. الیس غالباً از شوخی استفاده می‌کرد؛ مشکلات را با <b>اغراق و مبالغه بسیار و حرف‌های غیرقابل تصور و ماجراهای طنزآلود</b> تعریف می‌کرد.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ب) فنون رفتاری</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>فن</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td><b>تکالیف منزل</b></td><td><b>از مهم‌ترین مؤلفه‌های REBT</b>. به طرق گوناگون: فرم‌ها یا آزمون‌های خودیاری، روش‌های روانی-آموزشی (خواندن کتاب‌های REBT یا گوش دادن به نوارهای آموزشی).</td></tr>
+<tr><td><b>فنون آموزش مهارت‌ها</b></td><td>آموزش <b>مهارت‌های اجتماعی، مهارت‌های جرئت‌ورزی و تکنیک‌های آرمیدگی</b>.</td></tr>
+<tr><td><b>حساسیت‌زدایی منظم</b></td><td>همزمان با <b>تصویرسازی ذهنی و آرمیدگی</b>؛ فرد بتواند بر <b>ترس، اضطراب، شرمساری و دیگر رفتارها و احساساتی که بر پایه باورهای غیرمنطقی بنا نهاده شده‌اند</b> غلبه کند.</td></tr>
+<tr><td><b>جریمه‌ها و پاداش‌ها</b></td><td>برای ترغیب مراجعان به دنبال کردن تکالیفی که به <b>اهداف بلندمدت درمانی</b> ختم می‌شوند.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>ج) فنون هیجانی (عاطفی)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نکته:</b> مشاوران REBT زمان زیادی را صرف درمان نمی‌کنند، مگر آنکه در پی کشف احساسات و عواطف تجربه‌شده در ارتباط با مشکل فعلی باشند، که به منظور یاری‌رسانی به مراجعان، <b>رفتار و عواطف ناکارآمد و غیرسازگارانه</b> کاربرد دارند. <b>هیجان ماهیتی تعاملی دارند</b>، لذا تمرین‌ها و فنونی برای <b>آگاه ساختن مراجع از پاسخ‌های هیجانی</b> به کار می‌روند.
+</div>
+<div class="fa"><b>۱) تصویرسازی ذهنی:</b></div>
+<div class="fa">• مراجعان می‌توانند <b>احساس کردن و عمل کردن</b> را تمرین کنند، <b>گویی که آن همان تصویرسازی، اندیشیدن</b> است.</div>
+<div class="fa">• مراجعان می‌توانند <b>موقعیت‌های نگران‌کننده</b> را تمرین کنند که <b>در دنیای واقعی اتفاق می‌افتند</b>.</div>
+<div class="fa">• مراجعان می‌توانند <b>موقعیت‌های مثبت و کارآمد</b> را نیز تصویرسازی کنند.</div>
+<div class="fa">• در این مرحله، مراجعان نشان می‌دهند که به <b>تأثیر بین‌فردی و عاطفی باورهای غیرمنطقی‌شان</b> بنگرند.</div>
+<div class="fa">• مشاوران می‌توانند از این تکنیک برای <b>تمرین رفتارهای جدید و مؤثر</b> استفاده کنند و در نتیجه <b>هیجان‌های مثبت</b> را تجربه کنند.</div>
+<div class="fa"><b>۲) تمرین‌های مقابله با شرم:</b></div>
+<div class="fa">• <b>ماهیت غیرمنطقی ترس از دستپاچگی یا شرم</b> را به‌خوبی آشکار می‌سازند.</div>
+<div class="fa">• مراجع تکالیفی انجام می‌دهد که <b>مستقیماً به حل چنین ترس‌هایی</b> می‌پردازد.</div>
+<div class="fa">• <b>مثال‌ها:</b> به غریبه‌ها نزدیک شده و صحبت را باز کند؛ از سخنران پرسشی ابلهانه یا احمقانه بپرسد؛ بلند بلند آواز بخواند.</div>
+<div class="fa">• در هنگام انجام چنین تکالیفی، مراجعان متوجه می‌شوند که <b>از طریق پاسخ‌ها یا پاسخ‌های بالقوه دیگران تحت فشار یا کنترل نیستند</b>.</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۵: تفاوت‌ها -->
+<!-- ============================================ -->
+<section id="compare" class="section">
+<h2 class="section-title">۰۵ · تفاوت‌ها — برای امتحان چهارگزینه‌ای</h2>
+<p class="section-sub">هر جفتی که ممکنه اشتباه بگیری، یک‌جا</p>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت دو نام تاریخی REBT</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>Rational Therapy (RT) - ۱۹۵۵</th><th>Rational Emotive Behavior Therapy (REBT) - ۱۹۹۳</th></tr></thead>
+<tbody>
+<tr><td>رفتار درمانی عقلانی</td><td>رفتار درمانی عقلانی-هیجانی</td></tr>
+<tr><td>نام اولیه</td><td>نام فعلی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت فنون شناختی، رفتاری و هیجانی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>دسته</th><th>فنون</th><th>هدف</th></tr></thead>
+<tbody>
+<tr><td><b>شناختی</b></td><td>بار معنایی دقیق کلمات، خودگویی‌های منطقی، قاب‌گیری مجدد، انتساب، شوخی</td><td>تغییر باورهای غیرمنطقی از طریق شناخت</td></tr>
+<tr><td><b>رفتاری</b></td><td>تکالیف منزل، آموزش مهارت‌ها، حساسیت‌زدایی منظم، جریمه‌ها و پاداش‌ها</td><td>تغییر رفتار از طریق تمرین و تکلیف</td></tr>
+<tr><td><b>هیجانی</b></td><td>تصویرسازی ذهنی، تمرین‌های مقابله با شرم</td><td>آگاه ساختن مراجع از پاسخ‌های هیجانی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت شخصیت سالم و آشفتگی عاطفی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>شخصیت سالم</th><th>آشفتگی عاطفی</th></tr></thead>
+<tbody>
+<tr><td>منطقی و منعطف می‌اندیشد</td><td>باورهای غیرمنطقی دارد</td></tr>
+<tr><td>باورهای ارزش‌دهی بالا دارد</td><td>انتظارات غیرمنطقی از خود، دیگران و دنیا دارد</td></tr>
+<tr><td>احساس کنترل بر سرنوشت خود دارد</td><td>از باورهای غیرمنطقی‌اش بی‌خبر است</td></tr>
+<tr><td>از توانایی تغییر افکارش آگاه است</td><td>احساس آشفتگی و ناتوانی در کنترل شرایط دارد</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت نقش مشاور و مراجع در REBT</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>مشاور</th><th>مراجع</th></tr></thead>
+<tbody>
+<tr><td><b>تعلیم‌دهنده</b></td><td><b>دانش‌آموز یا تعلیم‌گیرنده</b></td></tr>
+<tr><td>فعال و پرانرژی</td><td>یادگیرنده باورهای منطقی</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت رابطه مشاوره‌ای REBT با سایر رویکردها</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>REBT</th><th>سایر رویکردها (مثل شخص‌محور)</th></tr></thead>
+<tbody>
+<tr><td>ضرورتی ندارد همراه با گرمی و لطافت باشد</td><td>تأکید بر گرمی و همدلی</td></tr>
+<tr><td>مؤثر بودن و پذیرش غیرمشروط الزامی است</td><td>پذیرش غیرمشروط نیز مهم است</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت REBT با CBT</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>REBT (الیس)</th><th>CBT (بک)</th></tr></thead>
+<tbody>
+<tr><td>تأکید بر <b>نظام باورهای غیرمنطقی</b></td><td>تأکید بر <b>تغییرات مثبت در شناخت‌های منفی</b></td></tr>
+<tr><td>رهنمودی، مواجهه‌ای، مجادله با باورها</td><td>همکاری و کنکاش متقابل</td></tr>
+<tr><td>کوتاه‌مدت و مقرون‌به‌صرفه</td><td>ترکیب شناخت + رفتار</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت سه فن شناختی (انتساب، قاب‌گیری مجدد، بار معنایی دقیق کلمات)</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>فن</th><th>کلیدواژه</th><th>خودمونی</th></tr></thead>
+<tbody>
+<tr><td><b>بار معنایی دقیق کلمات</b></td><td>زبان</td><td>کلماتت رو دقیق کن</td></tr>
+<tr><td><b>قاب‌گیری مجدد</b></td><td>شکل تازه</td><td>به مشکلت شکل تازه بده</td></tr>
+<tr><td><b>انتساب</b></td><td>هر دو جنبه</td><td>هم مثبت هم منفی رو ببین</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت تمرین‌های مقابله با شرم با حساسیت‌زدایی منظم</h3><span class="badge s">مهم</span></div>
+<table class="compare">
+<thead><tr><th>تمرین‌های مقابله با شرم</th><th>حساسیت‌زدایی منظم</th></tr></thead>
+<tbody>
+<tr><td>ماهیت غیرمنطقی ترس از شرم را آشکار می‌کند</td><td>غلبه بر ترس و اضطراب با آرمیدگی و تصویرسازی</td></tr>
+<tr><td>تکالیف مستقیم (مثل آواز بلند)</td><td>سلسله‌مراتبی و گام‌به‌گام</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تفاوت کاربرد REBT در مراحل مختلف سازگاری با معلولیت</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>مراحل اولیه سازگاری</th><th>مراحل بعدی سازگاری</th></tr></thead>
+<tbody>
+<tr><td>REBT ممکن است با واکنش‌های مراجع (مثل انکار) مجادله کند</td><td>REBT رهنمودی و مواجهه‌ای مناسب‌تر است</td></tr>
+<tr><td>انکار بخشی طبیعی از فرآیند سازگاری است</td><td>به ویژه برای مراجعانی که افسردگی را تجربه می‌کنند</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۶: کاربرد REBT در توانبخشی -->
+<!-- ============================================ -->
+<section id="rehab" class="section">
+<h2 class="section-title">۰۶ · کاربرد REBT در توانبخشی</h2>
+<p class="section-sub">نقاط قوت، محدودیت‌ها و مشکل اساسی</p>
+
+<div class="card">
+<div class="card-head"><h3>نقاط قوت REBT در توانبخشی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">• <b>پذیرش غیرمشروط و کامل مراجع از سوی مشاور</b></div>
+<div class="fa">• مشاور به مراجع <b>ارزش می‌دهد، بدون هیچ‌گونه قضاوتی</b> به دیدگاه‌های او گوش می‌دهد و سپس به مراجع امکان می‌دهد <b>شواهدی در حمایت از دیدگاهش</b> ارائه دهد.</div>
+<div class="fa">• REBT <b>بدون قضاوت کردن درباره مراجع، واقع‌بینی را در او تقویت</b> کرده و به مراجع کمک می‌کند تا از <b>انتظارات مستبدانه خود پیرامون دنیا</b> دست بکشد و در عوض به <b>آموختن مهارت‌های جدید در زندگی</b> بپردازد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>چرا REBT برای توانبخشی مناسب است؟</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">• <b>رهنمودی</b> است و <b>فی‌النفسه جزء درمان‌های کوتاه‌مدت</b> محسوب می‌شود → <b>زمینه مناسبی برای مشاوره توانبخشی که کوتاه‌مدت و هدف‌مدار است</b>.</div>
+<div class="fa">• از نقطه نظر REBT، <b>معلولین متفاوت از سایر افرادی‌اند که در زندگی‌شان بداقبالی و گرفتاری را تجربه کرده‌اند، نیستند.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نحوه پرداختن به معلولیت در REBT</h3><span class="badge s">مهم</span></div>
+<div class="fa">• هنگامی که در مشاوره به <b>خود معلولیت</b> پرداخته می‌شود، معلولیت به عنوان <b>واقعه یا رخدادی</b> تلقی می‌گردد که <b>باورهای غیرمنطقی و نگرش‌های ناکارآمد، آن واقعه یا رخداد را احاطه کرده‌اند</b>.</div>
+<div class="fa">• مشاور <b>به‌طور کلامی باورهای غیرمنطقی مراجع</b> را که به <b>خودویرانگری او</b> منجر شده است <b>به چالش کشانده</b> و پیرامون آن‌ها با مراجع <b>مجادله</b> می‌کنند و به او <b>اثبات می‌کند که چگونه این باورها و نگرش‌ها آن‌قدر بزرگ شده‌اند که بر تمام زندگی او سایه افکنده‌اند</b>.</div>
+<div class="fa">• مشاوران REBT به مراجعان کمک می‌کنند تا <b>مشکلات خود را به اجزای کوچکتر تقسیم کرده و به واحدهای قابل کنترل درآورند</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>انطباق با فرهنگ‌ها و سطوح مختلف</h3></div>
+<div class="fa">برخی از نویسندگان REBT تأکید می‌کنند که این رویکرد برای مراجعانی از <b>فرهنگ‌ها، زمینه‌های آموزشی، سطوح هوشی و انواع معلولیت‌ها و بیماری‌های روانی</b> متناسب و یاری‌رسان است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>محدودیت‌های REBT (بسیار مهم برای امتحان)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>REBT برای افرادی که با واقعیت در ارتباط نیستند، کاربرد ندارد، همانند:</b>
+</div>
+<div class="fa">• کسانی که دچار <b>ضایعه مغزی</b> شده‌اند</div>
+<div class="fa">• <b>مانیا شدید</b> دارند</div>
+<div class="fa">• <b>اوتیسم</b>‌اند</div>
+<div class="fa">• دچار <b>عقب‌ماندگی ذهنی شدید</b>ند</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مشکل اساسی کاربرد REBT در توانبخشی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">هنگامی آشکار می‌گردد که به <b>فرآیند سازگاری با معلولیت</b> توجه کنیم:</div>
+<div class="fa">• مشخصه اساسی REBT آن است که مراجعان اساساً <b>باورهای غیرمنطقی</b> دارند، اما باید این واقعیت را پذیرفت که <b>عوامل محیطی که در ارتباط با معلولیت‌های شدیدند، به تجارب نگران‌کننده واقعی منجر می‌شوند</b>.</div>
+<div class="fa">• هنگامی که از REBT در <b>مراحل اولیه فرآیند سازگاری</b> استفاده می‌شود، ممکن است مشاوران REBT در جست‌وجوی <b>حمله و جدل کردن با واکنش‌های مراجع</b> برآیند (مثلاً با افکار او مجادله کنند)، در حالی که واقعیت آن است که <b>انکار غالباً بخشی طبیعی از فرآیند سازگاری با معلولیت است</b> و معلول برای <b>حمایت از بهداشت روانی‌اش به طور موقتی یا گذرا</b> به آن نیازمند است.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نتیجه‌گیری مهم</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>شیوه رهنمودی و مواجهه‌ای REBT، برای مراحل بعدی فرآیند سازگاری با معلولیت متناسب‌تر است، به ویژه هنگامی که با مراجعانی سر و کار دارید که افسردگی را تجربه می‌کنند.</b>
+</div>
+<div class="fa"><b>تأکید نهایی:</b> <b>REBT بر پذیرش نامشروط و احترام به شأن و ارزش فرد، جدای از نقشی که در زندگی‌اش ایفا می‌کند، تأکید می‌ورزد. پذیرش نامشروط و احترام به مراجع در مشاوره با مراجعان معلول، بسیار حائز اهمیت‌اند.</b></div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مورد پژوهی: سامانتا</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>سامانتا:</b> زنی <b>۳۷ ساله</b>.</div>
+<div class="fa">پس از <b>سانحه شغلی</b> که برایش پیش آمد، <b>توانایی سازگاری با محیط اطراف</b> را هنگام جابه‌جا کردن بیمار از دست داد.</div>
+<div class="fa">در <b>بخش مراقبت‌های ویژه بیمارستانی</b> مشغول به کار بود.</div>
+<div class="fa">پس از مدتی، <b>آسیب [جسمی] مرتفع شد</b>، اما <b>دیگر نمی‌توانست در بخش مراقبت‌های ویژه بیمارستان کار کند</b> یا هر کار دیگری که مربوط به وظایف پرستاری بود انجام دهد، زیرا انجام این وظایف نیازمند <b>قدرت و توانایی بدنی</b> بود که سامانتا دیگر از آن برخوردار نبود.</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۷: دام‌ها -->
+<!-- ============================================ -->
+<section id="traps" class="section">
+<h2 class="section-title">۰۷ · دام‌های امتحانی (چهارگزینه‌ای)</h2>
+<p class="section-sub">هر دام با گزینه‌های درست و نادرست</p>
+
+<div class="card trap">
+<h3>دام ۱: بنیان‌گذار REBT</h3>
+<div class="fa"><b>سوال:</b> بنیان‌گذار REBT کیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) فروید ❌ — ب) آلبرت الیس ✅ — ج) بک ❌ — د) راجرز ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) آلبرت الیس</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: نام اولیه REBT</h3>
+<div class="fa"><b>سوال:</b> نام اولیه REBT چه بود؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) Rational Emotive Therapy ❌ — ب) Rational Therapy (RT) ✅ — ج) Cognitive Therapy ❌ — د) Behavior Therapy ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) Rational Therapy (RT)</b> — رفتار درمانی عقلانی (۱۹۵۵)</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: سال تغییر نام به REBT</h3>
+<div class="fa"><b>سوال:</b> نام REBT در چه سالی تغییر یافت؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) ۱۹۵۵ ❌ — ب) ۱۹۷۰ ❌ — ج) ۱۹۹۳ ✅ — د) ۲۰۰۰ ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ج) ۱۹۹۳</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: ماهیت دوگانه انسان</h3>
+<div class="fa"><b>سوال:</b> اصل بنیادین REBT درباره ماهیت انسان چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) انسان ذاتاً خوب است ❌ — ب) انسان ذاتاً بد است ❌ — ج) انسان با توانایی بالقوه برای افکار، احساسات و رفتارهای منطقی و غیرمنطقی به دنیا می‌آید ✅ — د) انسان ذاتاً خنثی است ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ج) انسان با توانایی بالقوه برای افکار، احساسات و رفتارهای منطقی و غیرمنطقی به دنیا می‌آید</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: تعریف فرد سالم از نظر الیس</h3>
+<div class="fa"><b>سوال:</b> تعریف فرد سالم از نظر الیس چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) فردی که هیچ مشکلی ندارد ❌ — ب) فردی که عشق خود را از افراد مهم زندگی‌اش دریافت می‌کند و به دیگران عشق می‌ورزد ✅ — ج) فردی که همیشه شاد است ❌ — د) فردی که از دیگران متنفر است ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) فردی که عشق خود را از افراد مهم زندگی‌اش دریافت می‌کند و به دیگران عشق می‌ورزد</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: الگوی ABC</h3>
+<div class="fa"><b>سوال:</b> الگوی ABC در REBT چه چیزی را آشکار می‌سازد؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) سازوکار باورهای غیرمنطقی و تأثیرشان بر آشفتگی‌های عاطفی ✅ — ب) سازوکار ناخودآگاه ❌ — ج) سازوکار رفتار ❌ — د) سازوکار ژنتیک ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) سازوکار باورهای غیرمنطقی و تأثیرشان بر آشفتگی‌های عاطفی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: اصل اول از سه اصل اساسی</h3>
+<div class="fa"><b>سوال:</b> طبق اصل اول REBT، چه کسی وقایع ناخشنودکننده زندگی را برگزیده است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) دیگران ❌ — ب) محیط ❌ — ج) خود فرد ✅ — د) ژنتیک ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ج) خود فرد</b> — شما خودتان وقایع یا رخدادهای ناخشنودکننده زندگی‌تان را برگزیده‌اید.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: اصل سوم از سه اصل اساسی</h3>
+<div class="fa"><b>سوال:</b> طبق اصل سوم REBT، تغییر چگونه امکان‌پذیر است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) با راه جادویی ❌ — ب) با دارو ❌ — ج) فقط با خواستن و کوشیدن برای تغییر باورها ✅ — د) با گذشت زمان ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ج) فقط با خواستن و کوشیدن برای تغییر باورها</b> — هیچ راه جادویی وجود ندارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: نقش مشاور و مراجع در REBT</h3>
+<div class="fa"><b>سوال:</b> نقش مشاور در ابتدا درمان REBT چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) دانش‌آموز ❌ — ب) تعلیم‌دهنده ✅ — ج) ناظر ❌ — د) دوست ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) تعلیم‌دهنده</b> — مراجع نقش دانش‌آموز یا تعلیم‌گیرنده را دارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: آزمون‌های مورد استفاده الیس</h3>
+<div class="fa"><b>سوال:</b> الیس از کدام آزمون استفاده نمی‌کرد؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) پرسش‌نامه‌ها ❌ — ب) فرم‌های خودیاری ❌ — ج) آزمون‌های فرافکنی (مثل TAT) ✅ — د) تکالیف خانگی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ج) آزمون‌های فرافکنی (مثل TAT)</b> — الیس باور داشت این آزمون‌ها مراجع را در جلسات نخست آن‌قدر به صحبت وامی‌دارد که بعدها علاقه‌ای به حرف زدن ندارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: فن بار معنایی دقیق کلمات</h3>
+<div class="fa"><b>سوال:</b> فن «بار معنایی دقیق کلمات» چه کاری انجام می‌دهد؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) مراجع را از کاربرد زبان آگاه می‌کند و متوجه می‌شود کلمات خود زاده باور غیرمنطقی باشند ✅ — ب) مراجع را به سکوت وامی‌دارد ❌ — ج) مراجع را به گذشته می‌برد ❌ — د) مراجع را به آینده می‌برد ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) مراجع را از کاربرد زبان آگاه می‌کند</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: فن انتساب</h3>
+<div class="fa"><b>سوال:</b> فن «انتساب» در REBT چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) مراجع ترغیب می‌شود هر دو جنبه مثبت و منفی مشکلات را بررسی کند ✅ — ب) مراجع فقط به جنبه‌های منفی توجه کند ❌ — ج) مراجع فقط به جنبه‌های مثبت توجه کند ❌ — د) مراجع از مشکل فرار کند ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) مراجع ترغیب می‌شود هر دو جنبه مثبت و منفی مشکلات را بررسی کند</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: مهم‌ترین مؤلفه رفتاری REBT</h3>
+<div class="fa"><b>سوال:</b> مهم‌ترین مؤلفه رفتاری REBT چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) حساسیت‌زدایی منظم ❌ — ب) تکالیف منزل ✅ — ج) آموزش مهارت‌ها ❌ — د) جریمه‌ها و پاداش‌ها ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) تکالیف منزل</b> — از مهم‌ترین مؤلفه‌های REBT است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: فنون هیجانی REBT</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء فنون هیجانی (عاطفی) REBT است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) تکالیف منزل ❌ — ب) تصویرسازی ذهنی ✅ — ج) قاب‌گیری مجدد ❌ — د) شوخی ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) تصویرسازی ذهنی</b> — فنون هیجانی: تصویرسازی ذهنی و تمرین‌های مقابله با شرم.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: تمرین‌های مقابله با شرم</h3>
+<div class="fa"><b>سوال:</b> تمرین‌های مقابله با شرم چه چیزی را آشکار می‌سازند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) ماهیت غیرمنطقی ترس از دستپاچگی یا شرم ✅ — ب) ماهیت منطقی شرم ❌ — ج) ضرورت شرم ❌ — د) هیچ‌کدام ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) ماهیت غیرمنطقی ترس از دستپاچگی یا شرم</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۶: رابطه مشاوره‌ای در REBT</h3>
+<div class="fa"><b>سوال:</b> طبق REBT، رابطه مشاوره‌ای باید چگونه باشد؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) ضرورتاً همراه با گرمی و لطافت ❌ — ب) مؤثر بودن و پذیرش غیرمشروط الزامی است ✅ — ج) سرد و بی‌احساس ❌ — د) هیچ رابطه‌ای لازم نیست ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) مؤثر بودن و پذیرش غیرمشروط الزامی است</b> — گرچه ضرورتی ندارد همراه با گرمی و لطافت باشد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۷: ویژگی مشاور REBT</h3>
+<div class="fa"><b>سوال:</b> طبق الیس (۱۹۷۳)، ویژگی مشاور REBT چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) منفعل و ساکت ❌ — ب) فعال، پرانرژی، باهوش، مطلع، شاداب، سرزنده، همراه و همدل ✅ — ج) سرد و بی‌تفاوت ❌ — د) فقط گوش دادن ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) فعال، پرانرژی، باهوش، مطلع، شاداب، سرزنده، همراه و همدل</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۸: REBT و توانبخشی</h3>
+<div class="fa"><b>سوال:</b> چرا REBT برای توانبخشی مناسب است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) بلندمدت است ❌ — ب) رهنمودی و کوتاه‌مدت است → زمینه مناسب برای مشاوره توانبخشی ✅ — ج) غیررهنمودی است ❌ — د) فقط برای کودکان است ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) رهنمودی و کوتاه‌مدت است</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۹: محدودیت‌های REBT</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء محدودیت‌های REBT نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) ضایعه مغزی ✅ — ب) مانیای شدید ✅ — ج) اوتیسم ✅ — د) افراد سالم ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) افراد سالم</b> — REBT برای افرادی که با واقعیت در ارتباط نیستند (ضایعه مغزی، مانیای شدید، اوتیسم، عقب‌ماندگی ذهنی شدید) کاربرد ندارد.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۰: مشکل اساسی REBT در توانبخشی</h3>
+<div class="fa"><b>سوال:</b> مشکل اساسی کاربرد REBT در توانبخشی چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) انکار بخشی طبیعی از فرآیند سازگاری با معلولیت است ✅ — ب) REBT برای همه مناسب است ❌ — ج) REBT هیچ محدودیتی ندارد ❌ — د) REBT فقط برای کودکان است ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) انکار بخشی طبیعی از فرآیند سازگاری با معلولیت است</b> — REBT رهنمودی و مواجهه‌ای برای مراحل بعدی سازگاری مناسب‌تر است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۱: نتیجه‌گیری REBT در توانبخشی</h3>
+<div class="fa"><b>سوال:</b> شیوه رهنمودی و مواجهه‌ای REBT برای کدام مرحله سازگاری با معلولیت مناسب‌تر است؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) مراحل اولیه ❌ — ب) مراحل بعدی، به ویژه افسردگی ✅ — ج) هر دو مرحله یکسان ❌ — د) هیچ مرحله‌ای ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) مراحل بعدی، به ویژه افسردگی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۲: تأکید نهایی REBT</h3>
+<div class="fa"><b>سوال:</b> تأکید نهایی REBT در مشاوره با معلولان چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) پذیرش نامشروط و احترام به شأن و ارزش فرد ✅ — ب) قضاوت کردن مراجع ❌ — ج) نادیده گرفتن معلولیت ❌ — د) انکار معلولیت ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) پذیرش نامشروط و احترام به شأن و ارزش فرد</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۳: تفاوت REBT و CBT</h3>
+<div class="fa"><b>سوال:</b> تفاوت اصلی REBT و CBT چیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) REBT بر نظام باورهای غیرمنطقی تأکید دارد؛ CBT بر تغییرات مثبت در شناخت‌های منفی ✅ — ب) REBT بر شناخت‌های منفی تأکید دارد ❌ — ج) CBT بر باورهای غیرمنطقی تأکید دارد ❌ — د) هر دو یکسانند ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) REBT بر نظام باورهای غیرمنطقی؛ CBT بر شناخت‌های منفی</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۴: مورد پژوهی سامانتا</h3>
+<div class="fa"><b>سوال:</b> سامانتا در مورد پژوهی چه ویژگی داشت؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) ۳۷ ساله، پس از سانحه شغلی نمی‌توانست در بخش مراقبت‌های ویژه کار کند ✅ — ب) ۲۰ ساله، دانشجو ❌ — ج) ۵۰ ساله، بازنشسته ❌ — د) ۱۵ ساله، دانش‌آموز ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) ۳۷ ساله، پس از سانحه شغلی نمی‌توانست در بخش مراقبت‌های ویژه کار کند</b></div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۵: ریشه فلسفی REBT</h3>
+<div class="fa"><b>سوال:</b> کدام فیلسوف جزء ریشه‌های فلسفی REBT نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) اپیکتتوس ✅ — ب) سینکا ✅ — ج) مارکوس آریلیوس ✅ — د) افلاطون ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) افلاطون</b> — ریشه‌های فلسفی: اپیکتتوس، سینکا، مارکوس آریلیوس.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۶: باورهای غیرمنطقی به چه نسبت داده می‌شوند؟</h3>
+<div class="fa"><b>سوال:</b> طبق REBT، باورهای غیرمنطقی به چه چیزی نسبت داده می‌شوند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) عوامل خارجی و غیرقابل کنترل (والدین بی‌لیاقت، دوستان بد، محیط پراسترس) ✅ — ب) فقط ژنتیک ❌ — ج) فقط ناخودآگاه ❌ — د) فقط گذشته ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) عوامل خارجی و غیرقابل کنترل</b> — اما این استدلال‌ها روند رشد درمان را متوقف می‌سازند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۷: جلسه مشاوره REBT</h3>
+<div class="fa"><b>سوال:</b> در جلسه مشاوره REBT، مشاور باید فوراً به سراغ چه چیزی برود؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) گذشته مراجع ❌ — ب) باورهای غیرمنطقی مراجع ✅ — ج) ناخودآگاه مراجع ❌ — د) خانواده مراجع ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>ب) باورهای غیرمنطقی مراجع</b> — زیرا تصور REBT این است که مسبب تمامی مشکلات مراجعان، باورهای غیرمنطقی آن‌هاست.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۸: ویژگی‌های افراد با شخصیت سالم</h3>
+<div class="fa"><b>سوال:</b> کدام گزینه جزء ویژگی‌های افراد با شخصیت سالم در REBT نیست؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) منطقی و منعطف می‌اندیشند ✅ — ب) باورهای ارزش‌دهی بالا دارند ✅ — ج) احساس کنترل بر سرنوشت خود دارند ✅ — د) باورهای غیرمنطقی دارند ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>د) باورهای غیرمنطقی دارند</b> — این ویژگی افراد دچار آشفتگی عاطفی است.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۹: رویکرد REBT در توانبخشی</h3>
+<div class="fa"><b>سوال:</b> طبق REBT، معلولین چه تفاوتی با سایر افراد بداقبال دارند؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) تفاوتی ندارند ✅ — ب) کاملاً متفاوتند ❌ — ج) نیاز به درمان ندارند ❌ — د) قابل درمان نیستند ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) تفاوتی ندارند</b> — از نقطه نظر REBT، معلولین متفاوت از سایر افرادی‌اند که در زندگی‌شان بداقبالی و گرفتاری را تجربه کرده‌اند، نیستند.</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳۰: فن شوخی</h3>
+<div class="fa"><b>سوال:</b> فن «شوخی» در REBT چه کاری انجام می‌دهد؟</div>
+<div class="fa"><b>گزینه‌ها:</b> الف) به مراجع نشان می‌دهد مشکل را با خنده و طنز حل کند ✅ — ب) مراجع را مسخره می‌کند ❌ — ج) مراجع را ناراحت می‌کند ❌ — د) هیچ کاربردی ندارد ❌</div>
+<div class="fa"><b>جواب درست:</b> <b>الف) به مراجع نشان می‌دهد مشکل را با خنده و طنز حل کند</b> — الیس غالباً از شوخی با اغراق و مبالغه بسیار استفاده می‌کرد.</div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- بخش ۸: کوییز -->
+<!-- ============================================ -->
+<section id="quiz" class="section">
+<h2 class="section-title">۰۸ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم REBT</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 09 · مشاوره توانبخشی · فصل نهم: رفتار درمانی عقلانی-هیجانی (REBT)</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+const themeIcon=document.getElementById('themeIcon');
+const moonPath='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+const sunPath='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z';
+theme.onclick=()=>{
+const dark=document.documentElement.dataset.theme==='dark';
+if(dark){
+document.documentElement.dataset.theme='';
+themeIcon.innerHTML='<path d="'+moonPath+'"></path>';
+}else{
+document.documentElement.dataset.theme='dark';
+themeIcon.innerHTML='<circle cx="12" cy="12" r="4"></circle><path d="'+sunPath+'"></path>';
+}
+};
+
+const quizData = [
+{q:"بنیان‌گذار REBT کیه؟",options:["فروید","آلبرت الیس","بک","راجرز"],answer:1,explanation:"آلبرت الیس در نیمه دوم دهه ۱۹۵۰ REBT را بنیان‌گذاری کرد."},
+{q:"نام اولیه REBT چه بود؟",options:["Rational Emotive Therapy","Rational Therapy (RT)","Cognitive Therapy","Behavior Therapy"],answer:1,explanation:"نام اولیه REBT، «رفتار درمانی عقلانی» (Rational Therapy - RT) در سال ۱۹۵۵ بود."},
+{q:"نام REBT در چه سالی تغییر یافت؟",options:["۱۹۵۵","۱۹۷۰","۱۹۹۳","۲۰۰۰"],answer:2,explanation:"در سال ۱۹۹۳ نام آن به «رفتار درمانی عقلانی-هیجانی» (REBT) تغییر یافت."},
+{q:"اصل بنیادین REBT درباره ماهیت انسان چیه؟",options:["انسان ذاتاً خوب است","انسان ذاتاً بد است","انسان با توانایی بالقوه برای افکار، احساسات و رفتارهای منطقی و غیرمنطقی به دنیا می‌آید","انسان ذاتاً خنثی است"],answer:2,explanation:"انسان‌ها با توانایی بالقوه‌ای برای داشتن افکار، احساسات و رفتارهای منطقی و نیز غیرمنطقی به دنیا می‌آیند."},
+{q:"تعریف فرد سالم از نظر الیس چیه؟",options:["فردی که هیچ مشکلی ندارد","فردی که عشق خود را از افراد مهم زندگی‌اش دریافت می‌کند و به دیگران عشق می‌ورزد","فردی که همیشه شاد است","فردی که از دیگران متنفر است"],answer:1,explanation:"تعریف فرد سالم از نظر الیس: فردی که عشق خود را از افراد مهم زندگی‌اش دریافت می‌کند و به دیگران عشق می‌ورزد."},
+{q:"الگوی ABC در REBT چه چیزی را آشکار می‌سازد؟",options:["سازوکار باورهای غیرمنطقی و تأثیرشان بر آشفتگی‌های عاطفی","سازوکار ناخودآگاه","سازوکار رفتار","سازوکار ژنتیک"],answer:0,explanation:"الگوی ABC به خوبی سازوکار باورهای غیرمنطقی و تأثیرشان بر آشفتگی‌های عاطفی و هیجانی را آشکار می‌سازد."},
+{q:"طبق اصل اول REBT، چه کسی وقایع ناخشنودکننده زندگی را برگزیده است؟",options:["دیگران","محیط","خود فرد","ژنتیک"],answer:2,explanation:"اصل ۱: شما خودتان وقایع یا رخدادهای ناخشنودکننده زندگی‌تان را برگزیده‌اید."},
+{q:"طبق اصل سوم REBT، تغییر چگونه امکان‌پذیر است؟",options:["با راه جادویی","با دارو","فقط با خواستن و کوشیدن برای تغییر باورها","با گذشت زمان"],answer:2,explanation:"اصل ۳: هیچ راه یا روش جادویی وجود ندارد. تغییر تنها در صورتی امکان‌پذیر است که بخواهید باورهایتان را عوض کنید و برای تغییر آن‌ها بکوشید."},
+{q:"نقش مشاور در ابتدا درمان REBT چیه؟",options:["دانش‌آموز","تعلیم‌دهنده","ناظر","دوست"],answer:1,explanation:"نقش مشاور در ابتدا درمان: تعلیم‌دهنده — مراجع: دانش‌آموز یا تعلیم‌گیرنده."},
+{q:"الیس از کدام آزمون استفاده نمی‌کرد؟",options:["پرسش‌نامه‌ها","فرم‌های خودیاری","آزمون‌های فرافکنی (مثل TAT)","تکالیف خانگی"],answer:2,explanation:"الیس شخصاً از آزمون‌های تشخیصی استانداردشده (به ویژه آزمون‌های فرافکنی چون TAT) استفاده نمی‌کرد."},
+{q:"فن «بار معنایی دقیق کلمات» چه کاری انجام می‌دهد؟",options:["مراجع را از کاربرد زبان آگاه می‌کند و متوجه می‌شود کلمات خود زاده باور غیرمنطقی باشند","مراجع را به سکوت وامی‌دارد","مراجع را به گذشته می‌برد","مراجع را به آینده می‌برد"],answer:0,explanation:"بار معنایی دقیق کلمات: مراجع از کاربرد زبان آگاه شده و متوجه می‌شود کلمات خود زاده باور غیرمنطقی باشند."},
+{q:"فن «انتساب» در REBT چیه؟",options:["مراجع فقط به جنبه‌های منفی توجه کند","مراجع ترغیب می‌شود هر دو جنبه مثبت و منفی مشکلات را بررسی کند","مراجع فقط به جنبه‌های مثبت توجه کند","مراجع از مشکل فرار کند"],answer:1,explanation:"انتساب: مراجع ترغیب می‌شود هر دو جنبه مثبت و منفی مشکلات را بررسی کرده و دیدگاهی کل‌نگرانه بیابد."},
+{q:"مهم‌ترین مؤلفه رفتاری REBT چیه؟",options:["حساسیت‌زدایی منظم","تکالیف منزل","آموزش مهارت‌ها","جریمه‌ها و پاداش‌ها"],answer:1,explanation:"تکالیف منزل از مهم‌ترین مؤلفه‌های REBT است."},
+{q:"کدام گزینه جزء فنون هیجانی (عاطفی) REBT است؟",options:["تکالیف منزل","تصویرسازی ذهنی","قاب‌گیری مجدد","شوخی"],answer:1,explanation:"فنون هیجانی: تصویرسازی ذهنی و تمرین‌های مقابله با شرم."},
+{q:"تمرین‌های مقابله با شرم چه چیزی را آشکار می‌سازند؟",options:["ماهیت غیرمنطقی ترس از دستپاچگی یا شرم","ماهیت منطقی شرم","ضرورت شرم","هیچ‌کدام"],answer:0,explanation:"تمرین‌های مقابله با شرم، ماهیت غیرمنطقی ترس از دستپاچگی یا شرم را به‌خوبی آشکار می‌سازند."},
+{q:"طبق REBT، رابطه مشاوره‌ای باید چگونه باشد؟",options:["ضرورتاً همراه با گرمی و لطافت","مؤثر بودن و پذیرش غیرمشروط الزامی است","سرد و بی‌احساس","هیچ رابطه‌ای لازم نیست"],answer:1,explanation:"گرچه مشاوران REBT معتقدند رابطه مشاوره‌ای ضرورتی ندارد همراه با گرمی و لطافت باشد، مؤثر بودن و پذیرش غیرمشروط را الزامی می‌دانند."},
+{q:"طبق الیس (۱۹۷۳)، ویژگی مشاور REBT چیه؟",options:["منفعل و ساکت","فعال، پرانرژی، باهوش، مطلع، شاداب، سرزنده، همراه و همدل","سرد و بی‌تفاوت","فقط گوش دادن"],answer:1,explanation:"ویژگی مشاور REBT: فعال و پرانرژی، باهوش و مطلع، شاداب و سرزنده، همراه و همدل."},
+{q:"چرا REBT برای توانبخشی مناسب است؟",options:["بلندمدت است","رهنمودی و کوتاه‌مدت است → زمینه مناسب برای مشاوره توانبخشی","غیررهنمودی است","فقط برای کودکان است"],answer:1,explanation:"REBT رهنمودی است و فی‌النفسه جزء درمان‌های کوتاه‌مدت محسوب می‌شود → زمینه مناسبی برای مشاوره توانبخشی که کوتاه‌مدت و هدف‌مدار است."},
+{q:"کدام گزینه جزء محدودیت‌های REBT نیست؟",options:["ضایعه مغزی","مانیای شدید","اوتیسم","افراد سالم"],answer:3,explanation:"REBT برای افرادی که با واقعیت در ارتباط نیستند (ضایعه مغزی، مانیای شدید، اوتیسم، عقب‌ماندگی ذهنی شدید) کاربرد ندارد."},
+{q:"مشکل اساسی کاربرد REBT در توانبخشی چیه؟",options:["انکار بخشی طبیعی از فرآیند سازگاری با معلولیت است","REBT برای همه مناسب است","REBT هیچ محدودیتی ندارد","REBT فقط برای کودکان است"],answer:0,explanation:"انکار غالباً بخشی طبیعی از فرآیند سازگاری با معلولیت است و معلول برای حمایت از بهداشت روانی‌اش به آن نیازمند است."},
+{q:"شیوه رهنمودی و مواجهه‌ای REBT برای کدام مرحله سازگاری با معلولیت مناسب‌تر است؟",options:["مراحل اولیه","مراحل بعدی، به ویژه افسردگی","هر دو مرحله یکسان","هیچ مرحله‌ای"],answer:1,explanation:"شیوه رهنمودی و مواجهه‌ای REBT برای مراحل بعدی فرآیند سازگاری با معلولیت متناسب‌تر است، به ویژه هنگامی که با مراجعانی سر و کار دارید که افسردگی را تجربه می‌کنند."},
+{q:"تأکید نهایی REBT در مشاوره با معلولان چیه؟",options:["پذیرش نامشروط و احترام به شأن و ارزش فرد","قضاوت کردن مراجع","نادیده گرفتن معلولیت","انکار معلولیت"],answer:0,explanation:"REBT بر پذیرش نامشروط و احترام به شأن و ارزش فرد، جدای از نقشی که در زندگی‌اش ایفا می‌کند، تأکید می‌ورزد."},
+{q:"تفاوت اصلی REBT و CBT چیه؟",options:["REBT بر نظام باورهای غیرمنطقی تأکید دارد؛ CBT بر تغییرات مثبت در شناخت‌های منفی","REBT بر شناخت‌های منفی تأکید دارد","CBT بر باورهای غیرمنطقی تأکید دارد","هر دو یکسانند"],answer:0,explanation:"الیس بر نظام باورهای غیرمنطقی تمرکز می‌کند؛ بک بر تغییرات مثبت در شناخت‌های منفی تأکید می‌کند."},
+{q:"سامانتا در مورد پژوهی چه ویژگی داشت؟",options:["۳۷ ساله، پس از سانحه شغلی نمی‌توانست در بخش مراقبت‌های ویژه کار کند","۲۰ ساله، دانشجو","۵۰ ساله، بازنشسته","۱۵ ساله، دانش‌آموز"],answer:0,explanation:"سامانتا زنی ۳۷ ساله بود که پس از سانحه شغلی نمی‌توانست در بخش مراقبت‌های ویژه بیمارستان کار کند."},
+{q:"کدام فیلسوف جزء ریشه‌های فلسفی REBT نیست؟",options:["اپیکتتوس","سینکا","مارکوس آریلیوس","افلاطون"],answer:3,explanation:"ریشه‌های فلسفی REBT: اپیکتتوس، سینکا، مارکوس آریلیوس."},
+{q:"طبق REBT، باورهای غیرمنطقی به چه چیزی نسبت داده می‌شوند؟",options:["عوامل خارجی و غیرقابل کنترل (والدین بی‌لیاقت، دوستان بد، محیط پراسترس)","فقط ژنتیک","فقط ناخودآگاه","فقط گذشته"],answer:0,explanation:"باورهای غیرمنطقی به عوامل خارجی و غیرقابل کنترل نسبت داده می‌شوند، اما این استدلال‌ها روند رشد درمان را متوقف می‌سازند."},
+{q:"در جلسه مشاوره REBT، مشاور باید فوراً به سراغ چه چیزی برود؟",options:["گذشته مراجع","باورهای غیرمنطقی مراجع","ناخودآگاه مراجع","خانواده مراجع"],answer:1,explanation:"در جلسه مشاوره، باید فوراً به سراغ باورهای غیرمنطقی فرد رفت، زیرا تصور REBT این است که مسبب تمامی مشکلات مراجعان، باورهای غیرمنطقی آن‌هاست."},
+{q:"کدام گزینه جزء ویژگی‌های افراد با شخصیت سالم در REBT نیست؟",options:["منطقی و منعطف می‌اندیشند","باورهای ارزش‌دهی بالا دارند","احساس کنترل بر سرنوشت خود دارند","باورهای غیرمنطقی دارند"],answer:3,explanation:"باورهای غیرمنطقی ویژگی افراد دچار آشفتگی عاطفی است، نه افراد با شخصیت سالم."},
+{q:"طبق REBT، معلولین چه تفاوتی با سایر افراد بداقبال دارند؟",options:["تفاوتی ندارند","کاملاً متفاوتند","نیاز به درمان ندارند","قابل درمان نیستند"],answer:0,explanation:"از نقطه نظر REBT، معلولین متفاوت از سایر افرادی‌اند که در زندگی‌شان بداقبالی و گرفتاری را تجربه کرده‌اند، نیستند."},
+{q:"فن «شوخی» در REBT چه کاری انجام می‌دهد؟",options:["به مراجع نشان می‌دهد مشکل را با خنده و طنز حل کند","مراجع را مسخره می‌کند","مراجع را ناراحت می‌کند","هیچ کاربردی ندارد"],answer:0,explanation:"شوخی: به مراجع نشان می‌دهد مشکل را با خنده و طنز حل کند. الیس غالباً از شوخی با اغراق و مبالغه بسیار استفاده می‌کرد."},
+{q:"ریشه‌های فلسفی REBT کدومن؟",options:["لذت‌گرایانه و فلسفه شادی، نظریه رفتاری، بایدهای هورنای، نظریه آدلر","فقط نظریه فروید","فقط نظریه یونگ","فقط نظریه راجرز"],answer:0,explanation:"ریشه‌های فلسفی REBT: لذت‌گرایانه و فلسفه شادی انسان‌ها، نظریه و درمان رفتاری، بایدهای کارن هورنای، نظریه و درمان آلفرد آدلر."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مفاهیم REBT — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>

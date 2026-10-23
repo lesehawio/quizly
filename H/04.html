@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=yes">
+<title>Quizly · مشاوره توانبخشی · سری 04 · فصل چهارم: مشاوره شخص‌محور</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;--purple:#7c4dff;
+--green:#1f9d73;--yellow:#c98112;--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme=dark]{--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;-webkit-font-smoothing:antialiased}
+[data-theme=dark] body{background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)}
+.app{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--pink2));color:white;display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:var(--shadow)}
+.brand h1{margin:0;font-size:20px}.brand small{color:var(--muted);font-size:11px;display:block}
+button,.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;font-size:14px;touch-action:manipulation;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+button:hover,.btn:hover{border-color:var(--pink);transform:translateY(-1px)}
+.hero{background:linear-gradient(135deg,#9f174d,var(--pink) 55%,#ff8bad);padding:30px 20px;border-radius:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"04";position:absolute;left:-10px;bottom:-40px;font-size:160px;font-weight:900;opacity:.09;line-height:1}
+.hero h2{margin:0;font-size:26px}.hero p{max-width:100%;opacity:.94;margin:8px 0 16px;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:99px;font-size:12px}
+.notice{margin:16px 0;background:var(--surface);border:1px solid var(--line);border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}.stat span{font-size:12px;color:var(--muted)}
+nav{position:sticky;top:6px;z-index:5;display:flex;gap:6px;overflow-x:auto;background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;border:1px solid var(--line);border-radius:18px;margin:14px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+[data-theme=dark] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px;flex-shrink:0}nav a:hover{background:var(--soft);color:var(--pink)}
+.section{margin-top:30px}.section-title{font-size:22px;margin-bottom:4px}.section-sub{color:var(--muted);margin-top:0;font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.badge{padding:3px 10px;border-radius:99px;font-size:11px;font-weight:bold;white-space:nowrap}.s{background:#ffe3ea;color:#a71547}.a{background:#fff0cc;color:#946000}.b{background:#e5e1ff;color:#5538b5}.direct{background:#dff7ee;color:#08724d}
+.fa{font-family:Tahoma,"Segoe UI",sans-serif;text-align:right;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0;font-size:15px;word-wrap:break-word;overflow-wrap:break-word;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+.question{border-right:5px solid var(--pink)}.qnum{color:var(--pink);font-weight:bold;font-size:14px}
+.answer{color:var(--green);font-weight:bold}.trap{border-right-color:#e08b17}.trap strong{color:#b36d00}
+.compare{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px;display:block;overflow-x:auto;white-space:nowrap}
+.compare th,.compare td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:right;font-size:13px}
+.compare th{color:var(--pink)}
+.quiz{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:22px;padding:18px}
+.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.option{text-align:right;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:15px;touch-action:manipulation;min-height:48px;width:100%;transition:all .15s}
+.option:active{transform:scale(.98)}
+.feedback{margin-top:10px;font-weight:bold;min-height:28px;font-size:15px}
+.footer{padding:20px 0;color:var(--muted);text-align:center;font-size:13px}
+.logo-icon{width:54px;height:54px;background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);border-radius:18px;display:flex;justify-content:center;align-items:center;overflow:hidden;border:1px solid rgba(249,71,121,0.25);box-shadow:0 10px 30px rgba(249,71,121,0.15);flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:8px}
+.theme-btn svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.theme-btn:hover svg{transform:rotate(15deg)}
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:30px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.options{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:20px}
+.card{padding:12px}
+.fa{font-size:14px;padding:8px 12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo{width:40px;height:40px;font-size:18px}
+.logo-icon{width:44px;height:44px}
+button,.btn{font-size:13px;padding:6px 12px;min-height:38px}
+.option{font-size:14px;padding:10px 14px;min-height:44px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="logo-icon"><img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo"></div><div><h1>Quizly</h1><small>مشاوره توانبخشی · سری 04</small></div></div>
+  <button id="theme" class="theme-btn" aria-label="تغییر تم">
+    <svg id="themeIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</header>
+
+<section class="hero">
+  <h2>فصل چهارم: مشاوره شخص‌محور</h2>
+  <p>راجرز، خودشکوفایی، عشق نامشروط، شش شرط لازم و کافی، سه مرحله توانبخشی و هشت محدودیت — همه رو خودمونی می‌گم</p>
+  <div class="pills"><span class="pill">راجرز</span><span class="pill">خودشکوفایی</span><span class="pill">شش شرط</span><span class="pill">سه مرحله</span><span class="pill">هشت محدودیت</span><span class="pill">کوییز</span></div>
+</section>
+
+<div class="notice"><b>داداش اینو بخون:</b> این جزوه بر اساس فصل چهارم کتاب «مشاوره و روان‌درمانی در توانبخشی معلولین (کاربرد نظریه‌ها)» نوشته دکتر آناهیتا خدابخش کوالیی نوشته شده. همه‌چی رو ساده و خودمونی گفتم. شرایط تسهیل‌گر، شش شرط لازم و کافی و هشت محدودیت رو جدا مشخص کردم که راحت حفظ کنی.</div>
+
+<div class="stats">
+<div class="stat"><b>۶</b><span>دستاورد راجرز</span></div>
+<div class="stat"><b>۳</b><span>شرط تسهیل‌گر</span></div>
+<div class="stat"><b>۶</b><span>شرط لازم و کافی</span></div>
+<div class="stat"><b>۸</b><span>محدودیت توانبخشی</span></div>
+</div>
+
+<nav>
+<a href="#core">هسته امتحانی</a><a href="#concepts">مفاهیم</a><a href="#personality">نظریه شخصیت</a><a href="#conditions">شش شرط</a><a href="#rehab">سه مرحله توانبخشی</a><a href="#limits">هشت محدودیت</a><a href="#traps">دام‌ها</a><a href="#quiz">کوییز</a>
+</nav>
+
+<section id="core" class="section">
+<h2 class="section-title">۰۱ · هسته امتحانی (۱۰ دقیقه‌ای بخون برو)</h2>
+<p class="section-sub">اگه وقت نداری و فقط می‌خوای قبول شی، همین بخش رو بخون</p>
+
+<div class="card">
+<div class="card-head"><h3>جایگاه کارل راجرز (نکته عددی مهم)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تأثیرگذارترین روان‌شناس تاریخ آمریکا</b> (اسمیت، ۱۹۸۲).</div>
+<div class="fa">در فهرست <b>ده روان‌شناس برتر و تأثیرگذار</b>، <b>رتبه نخست</b> رو کسب کرده (توی این فهرست نام زیگموند فروید هم دیده می‌شه).</div>
+<div class="fa">نویسنده <b>۱۶ کتاب</b> و بیش از <b>۲۰۰ مقاله و پژوهش</b>.</div>
+<div class="fa">آثارش میلیون‌ها بار تجدید چاپ و به بیش از <b>۶۰ زبان</b> ترجمه شده‌اند.</div>
+<div class="fa"><b>پنج دهه فعالیت اثربخش</b> داشته (۱۹۴۲، ۱۹۵۱، ۱۹۶۱، ۱۹۸۰).</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه شرط تسهیل‌گر درمان (مهم‌ترین نکته راجرز)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱) همدلی</b></div>
+<div class="fa"><b>۲) توجه مثبت نامشروط</b></div>
+<div class="fa"><b>۳) خلوص مشاور</b></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>نقل‌قول راجرز (۱۹۵۷):</b> «شرایط تسهیل‌گر، اساسی‌ترین و ضروری‌ترین شرایط برای مشاوره درمان‌اند، نه بیشتر و نه کمتر.» این تفکر انقلابی، راجرز رو سردمدار <b>«جنبش انقلابیون آرام»</b> ساخت.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جمله معروف راجرز (۱۹۴۲)</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>«انسان‌ها اساساً و ذاتاً خوب‌اند و خودشان قادرند که مسیر زندگی‌شان را هدایت کنند.»</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش شرط «لازم و کافی» روان‌درمانی سنتی شخص‌محور</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>۱)</b> دو نفر در تماس روان‌شناختی‌اند.</div>
+<div class="fa"><b>۲)</b> مراجع در شرایطی ناهمخوان، آسیب‌پذیر و عصبی (دستپاچه) قرار داره.</div>
+<div class="fa"><b>۳)</b> درمانگر/مشاور در رابطه‌اش دارای <b>خلوص یا انسجام (یکپارچگی)</b> است.</div>
+<div class="fa"><b>۴)</b> درمانگر/مشاور <b>چارچوب توجه مثبت نامشروط</b> داره و می‌کوشه این تجربه رو از طریق <b>مرجع درونی مراجع</b> و از طریق <b>درک همدلانه</b> رابطه برقرار کنه.</div>
+<div class="fa"><b>۵)</b> درمانگر <b>درک همدلانه و توجه مثبت نامشروط</b> رو به مراجع انتقال می‌ده.</div>
+<div class="fa"><b>۶)</b> مراجع باید ادراک کنه که درمانگر شرایط ۳ تا ۵ رو داره. (شرط ششم در متن اصلی ذکر نشده، اما معمولاً همین است.)</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>سه مرحله خدمات توانبخشی شخص‌محور</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>مرحله</th><th>نام</th><th>خودمونی</th></tr></thead>
+<tbody>
+<tr><td>اول</td><td>تشخیص</td><td>مراجع درخواست خدمات می‌ده؛ کار تشخیص آغاز می‌شه؛ کنکاش در احساسات و امیددهی شروع می‌شه؛ رابطه مشاوره‌ای برقرار می‌شه. <b>شرایط تسهیل‌گر بسیار بااهمیت‌اند</b>.</td></tr>
+<tr><td>دوم</td><td>اندیشیدن و برنامه‌ریزی</td><td>اطلاعات جمع‌آوری‌شده تحلیل و منسجم می‌شن و روی <b>برنامه یا هدف شغلی خاص</b> متمرکز می‌شن. رویکردهای پیشنهادی: <b>خصیصه-عامل</b> یا <b>روانی-آموزشی</b>.</td></tr>
+<tr><td>سوم</td><td>عمل یا اجرا</td><td>برنامه توانبخشی اجرا می‌شه و مراجع شغل جدید یا برنامه آموزشی رو آغاز می‌کنه. رویکردهای توصیه‌شده: <b>رفتاری، عقلانی-هیجانی الیس و واقعیت‌درمانی گلاسر</b>. بهترین روش پیشگیری: <b>گوش دادن فعال</b>.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هشت محدودیت رویکرد سنتی شخص‌محور در توانبخشی</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱)</b> به <b>هدف‌گذاری یا تعیین اهداف</b> نپرداخته.</div>
+<div class="fa"><b>۲)</b> به <b>«تشخیص»</b> در روند درمان اعتقادی نداره.</div>
+<div class="fa"><b>۳)</b> <b>اندرزی به مراجع نمی‌ده</b>.</div>
+<div class="fa"><b>۴)</b> چندان رغبتی به <b>محیط بیرونی</b> نداره.</div>
+<div class="fa"><b>۵)</b> برای مراجعانی که <b>دستپاچه‌اند و توانایی صحبت کردن دارند</b> بسیار مؤثره؛ بسیاری از مراجعان توانبخشی با این توصیف <b>همخوانی ندارن</b>.</div>
+<div class="fa"><b>۶)</b> <b>فرایندمدار</b>ه؛ مشاوران توانبخشی برای <b>نتایج پایانی و نهایی درمان</b> ارزش بیشتری قائل‌اند.</div>
+<div class="fa"><b>۷)</b> در جست‌وجوی <b>بازسازی مجدد مراجعان</b>ه؛ افرادی که معلولیت‌های جسمانی دارن، از لحاظ روان‌شناختی <b>ناتوان نیستن</b> و ضرورت چندانی به سازمان‌دهی مجدد «خودپنداره‌شان» ندارن.</div>
+<div class="fa"><b>۸)</b> بر <b>رفتار مراجع</b> تأکید نمی‌کنه؛ در مشاوره توانبخشی <b>رشد مهارت‌ها، آموزش و اقدام به عمل</b> از حیاتی‌ترین عوامل درمانی محسوب می‌شن.</div>
+</div>
+</section>
+
+<section id="concepts" class="section">
+<h2 class="section-title">۰۲ · مفاهیم (مو به مو)</h2>
+<p class="section-sub">مقدمه، جایگاه راجرز، دستاوردها و مفاهیم عمده</p>
+
+<div class="card">
+<div class="card-head"><h3>جایگاه و اهمیت کارل راجرز</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تأثیرگذارترین روان‌شناس تاریخ آمریکا</b> (اسمیت، ۱۹۸۲).</div>
+<div class="fa">در فهرست <b>ده روان‌شناس برتر و تأثیرگذار</b>، <b>رتبه نخست</b> رو کسب کرده (توی این فهرست نام زیگموند فروید هم دیده می‌شه).</div>
+<div class="fa">نویسنده <b>۱۶ کتاب</b> و بیش از <b>۲۰۰ مقاله و پژوهش</b>.</div>
+<div class="fa">آثارش میلیون‌ها بار تجدید چاپ و به بیش از <b>۶۰ زبان</b> ترجمه شده‌اند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>شش دستاورد عمده راجرز</h3><span class="badge s">حفظ کن</span></div>
+<div class="fa"><b>۱)</b> بنیان‌گذاری <b>مشاوره و روان‌درمانی شخص‌محور</b> (با نام‌های <b>مراجع‌محور</b> یا <b>درمان غیررهنمودی</b> نیز شناخته می‌شه).</div>
+<div class="fa"><b>۲)</b> پیشگام ایجاد و توسعه <b>روان‌شناسی انسان‌گرا</b>.</div>
+<div class="fa"><b>۳)</b> پیشگام ابداع و رشد <b>گروه‌های درمانی رویارویی</b>.</div>
+<div class="fa"><b>۴)</b> پیشگام اشاعه اصول روان‌درمانی به سایر زمینه‌ها و حرفه‌های کمک‌رسانی (مددکاری اجتماعی، راهنمایی و مشاوره، تعلیم و تربیت، سازمان‌ها).</div>
+<div class="fa"><b>۵)</b> پیشگام کاربرد <b>مهارت‌های ارتباطی در حل معضلات و مشکلات بین‌المللی</b>.</div>
+<div class="fa"><b>۶)</b> پیشگام در تأکید بر <b>اهمیت تحقیقات علمی</b> در مشاوره و روان‌درمانی.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>جمله معروف راجرز (۱۹۴۲)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>«انسان‌ها اساساً و ذاتاً خوب‌اند و خودشان قادرند که مسیر زندگی‌شان را هدایت کنند.»</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نوآوری انقلابی راجرز</h3><span class="badge s">مهم</span></div>
+<div class="fa">رویکرد درمانی کاملاً جدیدی بنا نهاد که بیشتر بر <b>ویژگی‌های فردی مشاور</b> تأکید می‌ورزید و بر <b>تکنیک‌ها یا آموزش‌های رسمی و آکادمیک</b> اصرار اندکی داشت.</div>
+<div class="fa">جامعه روان‌درمانی رو از طریق باورش به <b>«شرایط تسهیل‌گر درمان»</b> متحول ساخت.</div>
+<div class="fa">تأکید بر <b>همدلی، توجه مثبت نامشروط و خلوص مشاور</b>.</div>
+<div class="fa"><b>نقل‌قول راجرز (۱۹۵۷):</b> <b>«شرایط تسهیل‌گر، اساسی‌ترین و ضروری‌ترین شرایط برای مشاوره درمان‌اند، نه بیشتر و نه کمتر.»</b></div>
+<div class="fa">این تفکر انقلابی، راجرز رو سردمدار <b>«جنبش انقلابیون آرام»</b> ساخت.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>فعالیت‌های بعدی راجرز (دهه ۱۹۷۰ به بعد)</h3></div>
+<div class="fa">• کارهای آموزشی و برگزاری <b>سمینارها و گروه‌های روان‌رویی</b></div>
+<div class="fa">• فعالیت در <b>تعلیم و تربیت، زوج‌درمانی</b> و سایر مناطق جهان</div>
+<div class="fa">• تلاش برای حل منازعات بین‌المللی (کاتولیک‌ها و پروتستان‌ها، آپارتاید آفریقای جنوبی، السالوادور، گواتمالا و سایر کشورهای آمریکای لاتین)</div>
+<div class="fa">• <b>نامزد دریافت جایزه صلح نوبل</b> اندکی پس از مرگش</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>باور محوری راجرز</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:13px;padding:8px 12px">
+<b>انسان‌ها به‌طور ذاتی قابلیت رشد و هدایت در مسیر مثبت و بازشناسی همه ظرفیت‌ها و قابلیت‌هایشان را دارند، به شرطی که:</b>
+</div>
+<div class="fa"><b>۱)</b> <b>اقبال درک شدن</b> از سوی افراد مهم رو داشته باشند.</div>
+<div class="fa"><b>۲)</b> <b>دریافت عشق نامشروط</b> رو تجربه کنند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>افکار آزادی‌خواهانه نظریه شخص‌محور</h3><span class="badge s">مهم</span></div>
+<div class="fa">در میان تمامی نظریه‌های اساسی مشاوره، نظریه شخص‌محور <b>بیشترین افکار و ایده‌های آزادی‌خواهانه</b> رو داراست.</div>
+<div class="fa"><b>جمله اساسی راجرز:</b> <b>«تحمل، پذیرش و علاقه‌مندی به دیگران، امکان می‌دهد تا افراد آن‌طوری که برایشان بهتر است، زندگی کنند.»</b></div>
+<div class="fa">این جمله صراحتاً می‌گه: اگه می‌خواید در موفقیت دیگران اون‌ها رو یاری بدید، باید به اون‌ها <b>عشق بورزید</b>، اما در عین حال <b>از سر راه شکوفایی‌شان کنار بروید</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مفهوم خودشکوفایی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">راجرز (۱۹۸۰) سرانجام مفهوم <b>خودشکوفایی</b> رو به‌طور مفهومی <b>جهانی</b> مطرح ساخت. این ایده، کاربردهای نظریه رو در <b>فلسفه و معنویت</b> آشکار نمود.</div>
+</div>
+</section>
+
+<section id="personality" class="section">
+<h2 class="section-title">۰۳ · نظریه شخصیت</h2>
+<p class="section-sub">خاستگاه، نیاز به توجه مثبت، عشق مشروط و تعارض درونی</p>
+
+<div class="card">
+<div class="card-head"><h3>خاستگاه نظریه شخصیت راجرز</h3><span class="badge s">مهم</span></div>
+<div class="fa">از <b>کارهای بالینی</b> او نشئت گرفته.</div>
+<div class="fa">راجرز مشاهده می‌کرد که انسان‌ها <b>ذاتاً به سوی کمال و سلامتی</b> حرکت می‌کنن.</div>
+<div class="fa">او عواطف منفی (اضطراب، خشم، حسادت و خودتخریبی) رو هم مشاهده می‌کرد، اما به آن‌ها به‌مثابه <b>واکنش‌های ثانویه به ناکامی</b> می‌نگریست.</div>
+<div class="fa"><b>تمایل ذاتی انسان:</b> <b>تمایل ذاتی انسان‌ها به سوی شفابخشی یا رشد و تحول در مسیر مثبت</b>ه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نیاز به توجه مثبت</h3><span class="badge s">کلیدی</span></div>
+<div class="fa"><b>تعریف:</b> در طی مراحل اولیه رشد، <b>نیاز ثانویه قدرتمندی</b> شکل می‌گیره که علیه یا له فرآیند <b>ارزش‌گذاری ارگانیسمی</b> وارد عمل می‌شه، یعنی <b>نیاز به عشق یا توجه مثبتی که از سوی دیگران کسب می‌شه</b>.</div>
+<div class="fa"><b>عشق نامشروط:</b> هنگامی که افراد بااهمیت، <b>عشق رو به‌طور نامشروط</b> به کودکان می‌دهند، آن‌ها آزادن تا بر پایه <b>تمایل به خودشکوفایی</b> خودشون رو رشد داده و توانایی‌های بالقوه خویش رو به <b>بالفعل</b> مبدل سازن.</div>
+<div class="fa"><b>نقش والدین:</b></div>
+<div class="fa">• والدین باید <b>محدودیت‌های ایمن، سالم و قانونی</b> رو برای فرزندانشان در نظر گیرند.</div>
+<div class="fa">• والدین <b>مسئول برقراری نظم و انضباط</b>‌اند و بهترین شرایط رو برای فرزندان خودشون فراهم می‌سازن.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>عشق مشروط (خطرناک)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">هنگامی که ابراز عشق از سوی افراد بااهمیت در خانواده <b>بسته به چگونگی انجام رفتار</b> باشه، رشد افراد در شرایط بد و ناگواری صورت می‌گیره.</div>
+<div class="fa"><b>عشق مشروط</b> رشد افراد رو دچار اختلال می‌کنه، زیرا از آن‌ها می‌خواد به‌جای <b>گوش سپردن به درونشان</b>، از <b>دیگران اطاعت کنند</b>.</div>
+<div class="fa"><b>پیامدهای عشق مشروط:</b></div>
+<div class="fa">• افراد بر اساس <b>ارزش‌های درونی‌شده دیگران</b> زندگی می‌کنن.</div>
+<div class="fa">• بر اساس <b>شرایط یا سیستم ارزش‌گذاری دیگران</b> رشد می‌یابن.</div>
+<div class="fa">• این <b>حق‌السکوت عاطفی</b> به <b>انکار تمایل به خودشکوفایی</b> منجر می‌شه.</div>
+<div class="fa">• افراد از حق خودشون برای <b>کشف و کنکاش منحصربه‌فرد بودنشان</b> چشم‌پوشی می‌کنن.</div>
+<div class="fa">• در شدیدترین حالت: رشد <b>سخن‌های شخصیتی اقتدارطلب، خودپنداره خشک و بدون انعطاف</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>تعارض درونی و اضطراب</h3><span class="badge s">مهم</span></div>
+<div class="fa"><b>تعریف تعارض درونی:</b> زمانی رخ می‌ده که افراد <b>توانایی تمایز قائل شدن</b> میان <b>آنچه به‌طور طبیعی پیش می‌ره</b> و <b>آنچه دیگران از آن‌ها انتظار دارند</b> رو ندارن.</div>
+<div class="fa">هنگامی که افراد ارزش‌های دیگران رو جایگزین ارزش‌های درونی خودشون می‌کنن، دچار تعارض می‌شن.</div>
+</div>
+</section>
+
+<section id="conditions" class="section">
+<h2 class="section-title">۰۴ · شش شرط «لازم و کافی» روان‌درمانی سنتی شخص‌محور</h2>
+<p class="section-sub">شرایط اساسی درمان از نظر راجرز</p>
+
+<div class="card">
+<div class="card-head"><h3>شش شرط لازم و کافی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">در روان‌درمانی سنتی شخص‌محور، درمان باید بر اساس <b>شش شرط «لازم و کافی»</b> صورت گیره:</div>
+<table class="compare">
+<thead><tr><th>#</th><th>شرط</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>دو نفر در <b>تماس روان‌شناختی</b>‌اند.</td></tr>
+<tr><td>۲</td><td>مراجع در شرایطی <b>ناهمخوان، آسیب‌پذیر و عصبی (دستپاچه)</b> قرار داره.</td></tr>
+<tr><td>۳</td><td>درمانگر/مشاور در رابطه‌اش دارای <b>خلوص یا انسجام (یکپارچگی)</b> است.</td></tr>
+<tr><td>۴</td><td>درمانگر/مشاور <b>چارچوب توجه مثبت نامشروط</b> داره و می‌کوشه این تجربه رو از طریق <b>مرجع درونی مراجع</b> و از طریق <b>درک همدلانه</b> رابطه برقرار کنه.</td></tr>
+<tr><td>۵</td><td>درمانگر <b>درک همدلانه و توجه مثبت نامشروط</b> رو به مراجع انتقال می‌ده.</td></tr>
+<tr><td>۶</td><td>مراجع باید ادراک کنه که درمانگر شرایط ۳ تا ۵ رو داره. (شرط ششم در متن اصلی ذکر نشده، اما معمولاً همین است.)</td></tr>
+</tbody>
+</table>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;color:#251820;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> این شش شرط رو حتماً حفظ کن؛ خیلی از سوالا از همین‌جا میاد.
+</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نقل‌قول راجرز (۱۹۵۷)</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>«شرایط تسهیل‌گر، اساسی‌ترین و ضروری‌ترین شرایط برای مشاوره درمان‌اند، نه بیشتر و نه کمتر.»</b>
+</div>
+<div class="fa">این تفکر انقلابی، راجرز رو سردمدار <b>«جنبش انقلابیون آرام»</b> ساخت.</div>
+</div>
+</section>
+
+<section id="rehab" class="section">
+<h2 class="section-title">۰۵ · سه مرحله خدمات توانبخشی شخص‌محور</h2>
+<p class="section-sub">تشخیص، اندیشیدن و برنامه‌ریزی، عمل یا اجرا</p>
+
+<div class="card">
+<div class="card-head"><h3>مرحله اول: تشخیص</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">مراجع درخواست خدمات می‌ده؛ کار تشخیص آغاز می‌شه؛ کنکاش در احساسات و امیددهی به مراجع شروع می‌شه؛ رابطه مشاوره‌ای برقرار شده و مراجع به مشاور اعتماد می‌کنه.</div>
+<div class="fa"><b>شرایط تسهیل‌گر بسیار بااهمیت‌اند</b>، زیرا مراجع می‌کوشه کلماتی بیابه که نمادی از تعارض‌های درونی‌اش باشه و حرکت به سوی <b>خودآگاهی</b> آغاز می‌گردد.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مرحله دوم: اندیشیدن و برنامه‌ریزی</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">مراجعان و مشاوران اطلاعات جمع‌آوری‌شده در مرحله اول رو <b>تحلیل و منسجم</b> می‌کنن و می‌کوشن بر یک <b>برنامه یا هدف شغلی خاص</b> متمرکز بشن.</div>
+<div class="fa">در این مرحله، بهتره از رویکردهایی همانند <b>خصیصه-عامل</b> یا <b>روانی-آموزشی</b> پیروی کرد.</div>
+<div class="fa">این مرحله به شرایط تسهیل‌گری همانند مرحله اول نیازی نداره، اما برای غلبه بر اضطراب مراجع، بهتره از <b>اصول شخص‌محور</b> استفاده بشه.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مرحله سوم: عمل یا اجرا</h3><span class="badge s">کلیدی</span></div>
+<div class="fa">برنامه توانبخشی اجرا شده و مراجع شغل جدید یا برنامه آموزشی رو آغاز می‌کنه.</div>
+<div class="fa">رویکردهای توصیه‌شده: <b>رفتاری، عقلانی-هیجانی الیس و واقعیت‌درمانی گلاسر</b>.</div>
+<div class="fa"><b>شرایط تسهیل‌گر</b> همچنان به‌عنوان بخش مهمی از ادامه‌دهی روابط مشاوره‌ای باقی می‌مونه و برای کنار آمدن با احساسات منفی مراجع به کار می‌ره.</div>
+<div class="fa"><b>بهترین روش پیشگیری: گوش دادن فعال</b>.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>مرکز آموزش توانبخشی (۲۰۰۰)</h3></div>
+<div class="fa">یکی از برنامه‌های آموزشی برای دانشجویان کارشناسی ارشد مشاوره توانبخشی، <b>برنامه‌های مبتنی بر توانبخشی شخص‌محور یا برنامه زندگی مستقل</b>ه.</div>
+</div>
+</section>
+
+<section id="limits" class="section">
+<h2 class="section-title">۰۶ · هشت محدودیت رویکرد سنتی/کلاسیک شخص‌محور در توانبخشی</h2>
+<p class="section-sub">از نظر سی (۱۹۸۶، به نقل از سی و کامنتز، ۲۰۰۴)</p>
+
+<div class="card">
+<div class="card-head"><h3>مقدمه</h3><span class="badge s">مهم</span></div>
+<div class="fa">رویکرد مشاوره شخص‌محور در نوع <b>سنتی یا کلاسیک</b>‌اش برای متخصصان توانبخشی <b>کاربرد چندانی نداره</b>.</div>
+<div class="fa">اصطلاح «سنتی و کلاسیک» به درمان <b>ژرف‌نگرانه‌ای</b> می‌پردازه که از سوی راجرز برای رشد شخصیت آدمی ساخته و پرداخته شد. این دیدگاه <b>تماماً غیررهنمودی</b>ه.</div>
+<div class="fa">محدودیت‌ها از سوی <b>سی (۱۹۸۶، به نقل از سی و کامنتز، ۲۰۰۴)</b> ارائه شده‌اند.</div>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>هشت محدودیت اصلی</h3><span class="badge s">کلیدی</span></div>
+<table class="compare">
+<thead><tr><th>#</th><th>محدودیت الگوی سنتی</th><th>نیاز مشاور توانبخشی</th></tr></thead>
+<tbody>
+<tr><td>۱</td><td>به <b>هدف‌گذاری یا تعیین اهداف</b> نپرداخته</td><td>باید خدمات رو متناسب با <b>طرح‌ها و برنامه‌های هر مراجع</b> تنظیم و اجرا کنه</td></tr>
+<tr><td>۲</td><td>به <b>«تشخیص»</b> در روند درمان اعتقادی نداره</td><td>باید از <b>ارزیابی‌های طبی، روان‌شناسی و شغلی</b> بهره گیره</td></tr>
+<tr><td>۳</td><td><b>اندرزی به مراجع نمی‌ده</b></td><td>باید از <b>دانش شغلی روز و دنیای کار</b> آگاه باشه و در اختیار مراجع قرار بده</td></tr>
+<tr><td>۴</td><td>چندان رغبتی به <b>محیط بیرونی</b> نداره</td><td>دائم در تماس با <b>دنیای واقعی</b>ه و وقت قابل توجهی رو به <b>هماهنگی میان منابع جامعه و ارائه خدمات ملموس و عینی</b> اختصاص می‌ده</td></tr>
+<tr><td>۵</td><td>برای مراجعانی که <b>دستپاچه‌اند و توانایی صحبت کردن دارند</b> بسیار مؤثره</td><td>بسیاری از مراجعان توانبخشی با این توصیف <b>همخوانی ندارن</b></td></tr>
+<tr><td>۶</td><td><b>فرایندمدار</b>ه</td><td>مشاوران توانبخشی برای <b>نتایج پایانی و نهایی درمان</b> ارزش بیشتری قائل‌اند</td></tr>
+<tr><td>۷</td><td>در جست‌وجوی <b>بازسازی مجدد مراجعان</b>ه</td><td>افرادی که معلولیت‌های جسمانی دارن، از لحاظ روان‌شناختی <b>ناتوان نیستن</b> و ضرورت چندانی به سازمان‌دهی مجدد «خودپنداره‌شان» ندارن</td></tr>
+<tr><td>۸</td><td>بر <b>رفتار مراجع</b> تأکید نمی‌کنه</td><td>در مشاوره توانبخشی <b>رشد مهارت‌ها، آموزش و اقدام به عمل</b> از حیاتی‌ترین عوامل درمانی محسوب می‌شن</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<div class="card-head"><h3>نتیجه‌گیری</h3><span class="badge s">کلیدی</span></div>
+<div class="fa" style="background:#ffe8f0;border-color:#f94779;color:#251820;font-size:15px;padding:12px 14px">
+<b>برای کاربرد رویکرد شخص‌محور در دنیای توانبخشی، باید آن را با اهداف توانبخشی متناسب‌سازی کرد.</b>
+</div>
+</div>
+</section>
+
+<section id="traps" class="section">
+<h2 class="section-title">۰۷ · دام‌های امتحانی (اینا رو نخور!)</h2>
+<p class="section-sub">هر دام + جواب درست + نکته امتحانی</p>
+
+<div class="card trap">
+<h3>دام ۱: جایگاه راجرز</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فروید رتبه نخست رو داره.</div>
+<div class="fa"><b>جواب درست:</b> <b>راجرز</b> رتبه نخست رو در فهرست ده روان‌شناس برتر داره (فروید هم تو فهرست هست، ولی رتبه نخست راجرزه).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> رتبه نخست = راجرز.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲: تعداد کتاب‌ها و مقالات راجرز</h3>
+<div class="fa"><b>دام چیه:</b> اعداد رو قاطی می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> <b>۱۶ کتاب</b> و بیش از <b>۲۰۰ مقاله و پژوهش</b>؛ ترجمه به بیش از <b>۶۰ زبان</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ۱۶ / ۲۰۰ / ۶۰.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۳: نام‌های دیگر رویکرد</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی فقط شخص‌محوره.</div>
+<div class="fa"><b>جواب درست:</b> <b>شخص‌محور، مراجع‌محور، درمان غیررهنمودی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> سه نام.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۴: سه شرط تسهیل‌گر</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> <b>همدلی، توجه مثبت نامشروط، خلوص مشاور</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> سه تا.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۵: نقل‌قول ۱۹۵۷</h3>
+<div class="fa"><b>دام چیه:</b> جمله رو اشتباه نقل می‌کنی.</div>
+<div class="fa"><b>جواب درست:</b> <b>«شرایط تسهیل‌گر، اساسی‌ترین و ضروری‌ترین شرایط برای مشاوره درمان‌اند، نه بیشتر و نه کمتر.»</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> نه بیشتر، نه کمتر.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۶: جنبش انقلابیون آرام</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی جنبش دیگه‌ایه.</div>
+<div class="fa"><b>جواب درست:</b> <b>«جنبش انقلابیون آرام»</b> — اشاره به راجرز.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> انقلابیون آرام = راجرز.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۷: خودشکوفایی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی راجرز خودشکوفایی رو جهانی نکرد.</div>
+<div class="fa"><b>جواب درست:</b> راجرز (۱۹۸۰) مفهوم <b>خودشکوفایی</b> رو به‌طور مفهومی <b>جهانی</b> مطرح ساخت؛ کاربرد در <b>فلسفه و معنویت</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> جهانی شد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۸: نیاز به توجه مثبت</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی نیاز اولیه است.</div>
+<div class="fa"><b>جواب درست:</b> <b>نیاز ثانویه قدرتمند</b>ه که علیه یا له فرآیند <b>ارزش‌گذاری ارگانیسمی</b> وارد عمل می‌شه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> نیاز ثانویه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۹: عشق مشروط و نامشروط</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی عشق مشروط بهتره.</div>
+<div class="fa"><b>جواب درست:</b> <b>عشق نامشروط</b> رشد خودشکوفایی رو ممکن می‌کنه. <b>عشق مشروط</b> رشد رو دچار اختلال می‌کنه، چون از افراد می‌خواد به‌جای گوش سپردن به درونشان، از دیگران اطاعت کنند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> نامشروط خوب، مشروط بد.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۰: پیامدهای عشق مشروط</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> زندگی بر اساس ارزش‌های درونی‌شده دیگران، رشد بر اساس سیستم ارزش‌گذاری دیگران، حق‌السکوت عاطفی، انکار تمایل به خودشکوفایی، چشم‌پوشی از کشف منحصربه‌فرد بودن، خودپنداره خشک.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> اینا رو حفظ کن.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۱: تعارض درونی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی تعارض درونی همیشه هست.</div>
+<div class="fa"><b>جواب درست:</b> زمانی رخ می‌ده که افراد <b>توانایی تمایز قائل شدن</b> میان <b>آنچه به‌طور طبیعی پیش می‌ره</b> و <b>آنچه دیگران از آن‌ها انتظار دارند</b> رو ندارن.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ناتوانی در تمایز.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۲: شش شرط لازم و کافی</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> تماس روان‌شناختی، ناهمخوانی مراجع، خلوص، توجه مثبت نامشروط، درک همدلانه، انتقال آن به مراجع (+ شرط ششم: ادراک مراجع).</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> شش تا.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۳: سه مرحله توانبخشی شخص‌محور</h3>
+<div class="fa"><b>دام چیه:</b> ترتیبشون رو اشتباه می‌گیری.</div>
+<div class="fa"><b>جواب درست:</b> <b>تشخیص → اندیشیدن و برنامه‌ریزی → عمل یا اجرا</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> تشخیص، اندیشیدن، عمل.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۴: رویکردهای مرحله دوم</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی رفتاری یا واقعیت‌درمانیه.</div>
+<div class="fa"><b>جواب درست:</b> <b>خصیصه-عامل</b> یا <b>روانی-آموزشی</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> خصیصه-عامل یا روانی-آموزشی.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۵: رویکردهای مرحله سوم</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی خصیصه-عامله.</div>
+<div class="fa"><b>جواب درست:</b> <b>رفتاری، عقلانی-هیجانی الیس و واقعیت‌درمانی گلاسر</b>؛ بهترین روش پیشگیری: <b>گوش دادن فعال</b>.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> رفتاری، الیس، گلاسر.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۶: هشت محدودیت</h3>
+<div class="fa"><b>دام چیه:</b> یکی رو جا می‌ندازی.</div>
+<div class="fa"><b>جواب درست:</b> عدم هدف‌گذاری، عدم تشخیص، عدم اندرز، بی‌توجهی به محیط بیرونی، مناسب نبودن برای برخی مراجعان، فرایندمدار بودن، بازسازی مجدد، عدم تأکید بر رفتار.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> هشت تا.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۷: نتیجه‌گیری نهایی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی رویکرد سنتی بدون تغییر برای توانبخشی مناسبه.</div>
+<div class="fa"><b>جواب درست:</b> <b>باید رویکرد شخص‌محور را با اهداف توانبخشی متناسب‌سازی کرد.</b></div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> متناسب‌سازی لازمه.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۸: مهارت موردپژوهی</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی مشاور اندرز می‌ده.</div>
+<div class="fa"><b>جواب درست:</b> <b>انعکاس احساسات</b> (مهارت اساسی شخص‌محور) — مشاور بدون قضاوت یا اندرز دادن، احساسات مراجع رو منعکس می‌سازه.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> انعکاس احساسات.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۱۹: تفاوت با رویکردهای دیگر</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی راجرز بر تکنیک تأکید داشت.</div>
+<div class="fa"><b>جواب درست:</b> رویکرد راجرز بیشتر بر <b>ویژگی‌های فردی مشاور</b> تأکید می‌ورزید و بر <b>تکنیک‌ها یا آموزش‌های رسمی و آکادمیک</b> اصرار اندکی داشت.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> ویژگی مشاور، نه تکنیک.
+</div>
+</div>
+
+<div class="card trap">
+<h3>دام ۲۰: نقش والدین</h3>
+<div class="fa"><b>دام چیه:</b> فکر می‌کنی والدین نباید محدودیت بذارن.</div>
+<div class="fa"><b>جواب درست:</b> والدین باید <b>محدودیت‌های ایمن، سالم و قانونی</b> برای فرزندانشان در نظر گیرند و <b>مسئول برقراری نظم و انضباط</b>‌اند.</div>
+<div class="fa" style="background:#fff0cc;border-color:#e08b17;font-size:13px;padding:8px 12px">
+<b>خودمونی:</b> محدودیت + نظم.
+</div>
+</div>
+</section>
+
+<section id="quiz" class="section">
+<h2 class="section-title">۰۸ · کوییز (خودت رو بسنج)</h2>
+<div class="quiz">
+<h3 id="quizTitle">مرور سریع مفاهیم مشاوره شخص‌محور</h3>
+<div id="quizQuestion" class="fa"></div>
+<div id="options" class="options"></div>
+<div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" style="margin-top:10px;width:100%;justify-content:center">سوال بعدی</button>
+</div>
+</section>
+
+<div class="footer">Quizly · سری 04 · مشاوره توانبخشی · فصل چهارم: مشاوره شخص‌محور</div>
+</div>
+
+<script>
+const theme=document.getElementById('theme');
+const themeIcon=document.getElementById('themeIcon');
+const moonPath='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z';
+const sunPath='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z';
+theme.onclick=()=>{
+const dark=document.documentElement.dataset.theme==='dark';
+if(dark){
+document.documentElement.dataset.theme='';
+themeIcon.innerHTML='<path d="'+moonPath+'"></path>';
+}else{
+document.documentElement.dataset.theme='dark';
+themeIcon.innerHTML='<circle cx="12" cy="12" r="4"></circle><path d="'+sunPath+'"></path>';
+}
+};
+
+const quizData = [
+{q:"جایگاه راجرز در روان‌شناسی چیه؟",options:["تأثیرگذارترین روان‌شناس تاریخ آمریکا و رتبه نخست در فهرست ده روان‌شناس برتر","رتبه دوم","رتبه سوم","رتبه دهم"],answer:0,explanation:"راجرز تأثیرگذارترین روان‌شناس تاریخ آمریکا (اسمیت، ۱۹۸۲) و رتبه نخست در فهرست ده روان‌شناس برتر است."},
+{q:"راجرز چند کتاب و چند مقاله نوشت؟",options:["۱۶ کتاب و بیش از ۲۰۰ مقاله","۱۰ کتاب و ۱۰۰ مقاله","۲۰ کتاب و ۳۰۰ مقاله","۵ کتاب و ۵۰ مقاله"],answer:0,explanation:"راجرز نویسنده ۱۶ کتاب و بیش از ۲۰۰ مقاله و پژوهش است."},
+{q:"آثار راجرز به چند زبان ترجمه شده‌اند؟",options:["بیش از ۶۰ زبان","بیش از ۳۰ زبان","بیش از ۱۰۰ زبان","بیش از ۲۰ زبان"],answer:0,explanation:"آثار راجرز به بیش از ۶۰ زبان ترجمه شده‌اند."},
+{q:"نام‌های دیگر رویکرد راجرز کدومن؟",options:["مراجع‌محور، درمان غیررهنمودی","رفتاردرمانی، شناخت‌درمانی","روان‌کاوی، روان‌پویایی","گشتالت، وجودی"],answer:0,explanation:"رویکرد راجرز با نام‌های مراجع‌محور یا درمان غیررهنمودی نیز شناخته می‌شود."},
+{q:"جمله معروف راجرز (۱۹۴۲) چیه؟",options:["«انسان‌ها اساساً و ذاتاً خوب‌اند و خودشان قادرند که مسیر زندگی‌شان را هدایت کنند»","«انسان‌ها ذاتاً بداند»","«انسان‌ها قادر به تغییر نیستند»","«انسان‌ها محکوم به رنج‌اند»"],answer:0,explanation:"جمله معروف راجرز (۱۹۴۲): انسان‌ها اساساً و ذاتاً خوب‌اند و خودشان قادرند که مسیر زندگی‌شان را هدایت کنند."},
+{q:"سه شرط تسهیل‌گر درمان کدومن؟",options:["همدلی، توجه مثبت نامشروط، خلوص","هدف‌گذاری، گوش دادن، وفاداری","شناختی، هیجانی، رفتاری","فردی، گروهی، خانوادگی"],answer:0,explanation:"سه شرط تسهیل‌گر: همدلی، توجه مثبت نامشروط، خلوص مشاور."},
+{q:"نقل‌قول راجرز (۱۹۵۷) درباره شرایط تسهیل‌گر چیه؟",options:["«شرایط تسهیل‌گر، اساسی‌ترین و ضروری‌ترین شرایط برای مشاوره درمان‌اند، نه بیشتر و نه کمتر»","«شرایط تسهیل‌گر اختیاری‌اند»","«شرایط تسهیل‌گر کافی نیستند»","«شرایط تسهیل‌گر فقط برای کودکان است»"],answer:0,explanation:"نقل‌قول راجرز (۱۹۵۷): شرایط تسهیل‌گر، اساسی‌ترین و ضروری‌ترین شرایط برای مشاوره درمان‌اند، نه بیشتر و نه کمتر."},
+{q:"جنبش «انقلابیون آرام» به چه کسی اشاره داره؟",options:["راجرز","فروید","آدلر","الیس"],answer:0,explanation:"این تفکر انقلابی، راجرز را سردمدار «جنبش انقلابیون آرام» ساخت."},
+{q:"مفهوم خودشکوفایی توسط راجرز (۱۹۸۰) چه ویژگی‌ای پیدا کرد؟",options:["مفهومی جهانی؛ کاربرد در فلسفه و معنویت","فقط برای کودکان","فقط برای معلولین","فقط در روان‌کاوی"],answer:0,explanation:"راجرز (۱۹۸۰) سرانجام مفهوم خودشکوفایی را به‌طور مفهومی جهانی مطرح ساخت. این ایده، کاربردهای نظریه را در فلسفه و معنویت آشکار نمود."},
+{q:"نیاز به توجه مثبت چیه؟",options:["نیاز ثانویه قدرتمند که علیه یا له فرآیند ارزش‌گذاری ارگانیسمی وارد عمل می‌شود","نیاز اولیه","نیاز جسمانی","نیاز جنسی"],answer:0,explanation:"نیاز به توجه مثبت: نیاز ثانویه قدرتمندی که علیه یا له فرآیند ارزش‌گذاری ارگانیسمی وارد عمل می‌شود، یعنی نیاز به عشق یا توجه مثبتی که از سوی دیگران کسب می‌شود."},
+{q:"تفاوت عشق نامشروط و مشروط چیه؟",options:["نامشروط رشد خودشکوفایی را ممکن می‌کند؛ مشروط رشد را دچار اختلال می‌کند","هر دو یکسانند","مشروط بهتر است","نامشروط بدتر است"],answer:0,explanation:"عشق نامشروط رشد خودشکوفایی را ممکن می‌کند. عشق مشروط رشد را دچار اختلال می‌کند، زیرا از افراد می‌خواهد به‌جای گوش سپردن به درونشان، از دیگران اطاعت کنند."},
+{q:"پیامدهای عشق مشروط کدومن؟",options:["زندگی بر اساس ارزش‌های دیگران، انکار خودشکوفایی، خودپنداره خشک","فقط خودپنداره خشک","فقط انکار خودشکوفایی","هیچ پیامدی"],answer:0,explanation:"پیامدها: زندگی بر اساس ارزش‌های درونی‌شده دیگران، رشد بر اساس سیستم ارزش‌گذاری دیگران، حق‌السکوت عاطفی، انکار تمایل به خودشکوفایی، چشم‌پوشی از کشف منحصربه‌فرد بودن، خودپنداره خشک."},
+{q:"تعارض درونی از دیدگاه راجرز چه زمانی رخ می‌ده؟",options:["زمانی که افراد توانایی تمایز بین تمایلات طبیعی و انتظارات دیگران را ندارند","همیشه","هرگز","فقط در کودکی"],answer:0,explanation:"تعارض درونی زمانی رخ می‌دهد که افراد توانایی تمایز قائل شدن میان آنچه به‌طور طبیعی پیش می‌رود و آنچه دیگران از آن‌ها انتظار دارند را ندارند."},
+{q:"شش شرط لازم و کافی روان‌درمانی سنتی شخص‌محور کدومن؟",options:["تماس روان‌شناختی، ناهمخوانی مراجع، خلوص، توجه مثبت نامشروط، درک همدلانه، انتقال آن به مراجع","فقط تماس روان‌شناختی","فقط خلوص","فقط همدلی"],answer:0,explanation:"شش شرط: دو نفر در تماس روان‌شناختی، مراجع ناهمخوان، خلوص درمانگر، توجه مثبت نامشروط، درک همدلانه، انتقال آن به مراجع (+ شرط ششم: ادراک مراجع)."},
+{q:"سه مرحله خدمات توانبخشی شخص‌محور کدومن؟",options:["تشخیص، اندیشیدن و برنامه‌ریزی، عمل یا اجرا","تشخیص، درمان، پیگیری","مشکل، ائتلاف، تجهیز، ترک","برقراری ارتباط، بررسی، تفسیر، جهت‌دهی"],answer:0,explanation:"سه مرحله: تشخیص → اندیشیدن و برنامه‌ریزی → عمل یا اجرا."},
+{q:"در مرحله دوم (اندیشیدن و برنامه‌ریزی) از چه رویکردهایی بهتر است استفاده شود؟",options:["خصیصه-عامل یا روانی-آموزشی","رفتاری یا واقعیت‌درمانی","شناختی یا هیجانی","گشتالت یا وجودی"],answer:0,explanation:"در مرحله دوم، بهتر است از رویکردهایی همانند خصیصه-عامل یا روانی-آموزشی پیروی کرد."},
+{q:"در مرحله سوم (عمل یا اجرا) از چه رویکردهایی توصیه می‌شود؟",options:["رفتاری، عقلانی-هیجانی الیس و واقعیت‌درمانی گلاسر","خصیصه-عامل یا روانی-آموزشی","گشتالت یا وجودی","روان‌کاوی یا آدلری"],answer:0,explanation:"در مرحله سوم، رویکردهای توصیه‌شده: رفتاری، عقلانی-هیجانی الیس و واقعیت‌درمانی گلاسر. بهترین روش پیشگیری: گوش دادن فعال."},
+{q:"هشت محدودیت رویکرد سنتی شخص‌محور در توانبخشی کدومن؟",options:["عدم هدف‌گذاری، عدم تشخیص، عدم اندرز، بی‌توجهی به محیط بیرونی، مناسب نبودن برای برخی مراجعان، فرایندمدار بودن، بازسازی مجدد، عدم تأکید بر رفتار","فقط عدم هدف‌گذاری","فقط عدم تشخیص","فقط عدم اندرز"],answer:0,explanation:"هشت محدودیت: عدم هدف‌گذاری، عدم تشخیص، عدم اندرز، بی‌توجهی به محیط بیرونی، مناسب نبودن برای برخی مراجعان، فرایندمدار بودن، بازسازی مجدد، عدم تأکید بر رفتار."},
+{q:"نتیجه‌گیری نهایی درباره کاربرد رویکرد شخص‌محور در توانبخشی چیه؟",options:["باید رویکرد شخص‌محور را با اهداف توانبخشی متناسب‌سازی کرد","رویکرد شخص‌محور بدون تغییر مناسب است","رویکرد شخص‌محور برای توانبخشی مناسب نیست","رویکرد شخص‌محور فقط برای کودکان است"],answer:0,explanation:"برای کاربرد رویکرد شخص‌محور در دنیای توانبخشی، باید آن را با اهداف توانبخشی متناسب‌سازی کرد."},
+{q:"مهارت اساسی که در موردپژوهی راجرز (۱۹۸۳) دیده می‌شود چیه؟",options:["انعکاس احساسات","اندرز دادن","قضاوت کردن","تفسیر"],answer:0,explanation:"در موردپژوهی، مشاور از انعکاس احساسات (مهارت اساسی شخص‌محور) استفاده می‌کند و بدون قضاوت یا اندرز دادن، احساسات مراجع را منعکس می‌سازد."},
+{q:"تفاوت رویکرد راجرز با رویکردهای دیگر در تأکید بر تکنیک‌ها چیه؟",options:["تأکید بر ویژگی‌های فردی مشاور و اصرار اندک بر تکنیک‌ها و آموزش رسمی","تأکید بر تکنیک‌های آکادمیک","تأکید بر دارو","تأکید بر تشخیص"],answer:0,explanation:"رویکرد راجرز بیشتر بر ویژگی‌های فردی مشاور تأکید می‌ورزید و بر تکنیک‌ها یا آموزش‌های رسمی و آکادمیک اصرار اندکی داشت."},
+{q:"نقش والدین در رشد خودشکوفایی کودکان از دیدگاه راجرز چیه؟",options:["فراهم کردن محدودیت‌های ایمن، سالم و قانونی و برقراری نظم و انضباط","عدم مداخله","تنبیه شدید","بی‌توجهی"],answer:0,explanation:"والدین باید محدودیت‌های ایمن، سالم و قانونی را برای فرزندانشان در نظر گیرند و مسئول برقراری نظم و انضباط‌اند."},
+{q:"فعالیت‌های بعدی راجرز (دهه ۱۹۷۰ به بعد) شامل چه مواردی بود؟",options:["سمینارها و گروه‌های روان‌رویی، تعلیم و تربیت، زوج‌درمانی، حل منازعات بین‌المللی","فقط درمان فردی","فقط تدریس","فقط نویسندگی"],answer:0,explanation:"فعالیت‌های بعدی راجرز: کارهای آموزشی و برگزاری سمینارها و گروه‌های روان‌رویی، فعالیت در تعلیم و تربیت، زوج‌درمانی و سایر مناطق جهان، تلاش برای حل منازعات بین‌المللی، نامزد دریافت جایزه صلح نوبل."},
+{q:"عشق نامشروط چه تأثیری بر رشد کودک داره؟",options:["کودکان آزادند تا بر پایه تمایل به خودشکوفایی رشد کنند و توانایی‌های بالقوه خود را به بالفعل تبدیل کنند","کودکان از دیگران اطاعت می‌کنند","کودکان خودپنداره خشک پیدا می‌کنند","کودکان دچار تعارض درونی می‌شوند"],answer:0,explanation:"هنگامی که افراد بااهمیت، عشق را به‌طور نامشروط به کودکان می‌دهند، آن‌ها آزادند تا بر پایه تمایل به خودشکوفایی خود را رشد داده و توانایی‌های بالقوه خویش را به بالفعل مبدل سازند."}
+];
+
+let quizIndex = 0;
+let quizScore = 0;
+let answeredQuestions = [];
+
+function renderQuiz() {
+const q = quizData[quizIndex];
+document.getElementById('quizTitle').textContent = `مرور سریع مفاهیم مشاوره شخص‌محور — سوال ${quizIndex+1} از ${quizData.length}`;
+document.getElementById('quizQuestion').textContent = q.q;
+document.getElementById('feedback').textContent = '';
+document.getElementById('options').innerHTML = q.options.map((opt, i) => 
+`<button class="option" data-i="${i}">${opt}</button>`
+).join('');
+
+document.querySelectorAll('.option').forEach(btn => {
+btn.onclick = function() {
+const selected = parseInt(this.dataset.i);
+const isCorrect = selected === q.answer;
+const feedback = document.getElementById('feedback');
+feedback.textContent = isCorrect ? 'آفرین! درست گفتی. ' + q.explanation : 'نه داداش، اینطوری نه. ' + q.explanation;
+feedback.style.color = isCorrect ? 'var(--green)' : 'var(--pink)';
+if (isCorrect) quizScore++;
+if (!answeredQuestions.includes(quizIndex)) answeredQuestions.push(quizIndex);
+document.querySelectorAll('.option').forEach(b => b.disabled = true);
+};
+});
+}
+
+document.getElementById('next').onclick = function() {
+if (quizIndex === quizData.length - 1) {
+document.getElementById('feedback').textContent = `تمومه داداش! امتیازت: ${quizScore} از ${quizData.length}`;
+document.getElementById('feedback').style.color = 'var(--pink)';
+return;
+}
+quizIndex++;
+renderQuiz();
+};
+
+renderQuiz();
+</script>
+</body>
+</html>
