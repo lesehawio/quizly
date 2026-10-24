@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>Quizly · مشاوره سالمندی · کلید واژه‌های طلایی</title>
+<style>
+:root{
+--bg:#f7edf1;--surface:#fffafd;--surface2:#fdf3f7;--ink:#251820;--muted:#765b68;
+--line:#ecd6df;--pink:#f94779;--pink2:#ff7aa1;--soft:#ffe8f0;
+--green:#1f9d73;--yellow:#c98112;--red:#c83b58;
+--shadow:0 18px 55px rgba(115,38,67,.12)
+}
+[data-theme="dark"]{
+--bg:#140c11;--surface:#21131a;--surface2:#2a1821;--ink:#f9e8ef;--muted:#c7a9b7;
+--line:#4a2938;--soft:#39202c;--shadow:0 18px 55px rgba(0,0,0,.35)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+margin:0;font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9;color:var(--ink);
+background:radial-gradient(circle at top right,#ffd9e7 0,transparent 28%),var(--bg);
+transition:.25s
+}
+[data-theme="dark"] body{
+background:radial-gradient(circle at top right,#3c1828 0,transparent 28%),var(--bg)
+}
+.app{max-width:1180px;margin:auto;padding:16px}
+
+/* HEADER */
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px}
+.logo-icon{
+width:54px;height:54px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+background:rgba(255,255,255,.3);border:1px solid rgba(249,71,121,.25);
+box-shadow:0 10px 30px rgba(249,71,121,.15);overflow:hidden
+}
+.logo-icon img{width:100%;height:100%;object-fit:contain;padding:6px}
+.brand h1{margin:0;font-size:20px}
+.brand small{display:block;color:var(--muted);font-size:11px}
+button{
+border:1px solid var(--line);background:var(--surface);color:var(--ink);
+padding:8px 14px;border-radius:14px;cursor:pointer;font:inherit;min-height:44px;transition:.15s
+}
+button:hover{border-color:var(--pink);transform:translateY(-1px)}
+
+/* HERO */
+.hero{
+position:relative;overflow:hidden;
+background:linear-gradient(135deg,#9f174d,#f94779 55%,#ff8bad);
+padding:32px 22px;border-radius:28px;color:white;box-shadow:var(--shadow)
+}
+.hero:after{
+content:"AGING";position:absolute;left:-15px;bottom:-42px;
+font-size:130px;font-weight:900;opacity:.08;line-height:1
+}
+.hero h2{margin:0;font-size:29px;position:relative;z-index:1}
+.hero p{margin:7px 0 16px;max-width:700px;opacity:.95;position:relative;z-index:1}
+.pills{display:flex;flex-wrap:wrap;gap:7px;position:relative;z-index:1}
+.pill{
+background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+padding:5px 11px;border-radius:99px;font-size:12px
+}
+
+/* NOTICE */
+.notice{
+margin:16px 0;background:var(--surface);border:1px solid var(--line);
+border-right:7px solid var(--pink);padding:14px 16px;border-radius:18px;
+color:var(--muted);font-size:14px
+}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--line);padding:14px;border-radius:18px;box-shadow:0 7px 22px rgba(0,0,0,.03)}
+.stat b{display:block;font-size:22px;color:var(--pink)}
+.stat span{font-size:12px;color:var(--muted)}
+
+/* NAV */
+nav{
+position:sticky;top:6px;z-index:10;display:flex;gap:6px;overflow-x:auto;
+background:rgba(255,250,253,.92);backdrop-filter:blur(14px);padding:8px 10px;
+border:1px solid var(--line);border-radius:18px;margin:14px 0;scrollbar-width:none
+}
+nav::-webkit-scrollbar{display:none}
+[data-theme="dark"] nav{background:rgba(33,19,26,.92)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:12px;font-size:13px}
+nav a:hover{background:var(--soft);color:var(--pink)}
+
+/* SECTION */
+.section{margin-top:32px;scroll-margin-top:80px}
+.section-title{font-size:22px;margin-bottom:3px}
+.section-sub{color:var(--muted);margin-top:0;font-size:13px}
+
+/* CARD */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;margin:12px 0;box-shadow:0 8px 28px rgba(0,0,0,.035)}
+.card h3{margin-top:0}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:500px}
+th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:right;font-size:13px}
+th{color:var(--pink);background:var(--surface2)}
+tr:hover td{background:var(--soft)}
+
+/* GRID */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{padding:13px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--line)}
+.box h4{margin:0 0 6px;color:var(--pink);font-size:15px}
+
+/* SEARCH */
+.search{
+width:100%;padding:12px 16px;border-radius:14px;border:1px solid var(--line);
+background:var(--surface);color:var(--ink);font:inherit;font-size:15px;margin:10px 0
+}
+
+/* MEMORY */
+.memory{
+background:linear-gradient(135deg,var(--surface),var(--surface2));
+border:1px dashed var(--pink);border-radius:18px;padding:14px;margin-top:12px
+}
+.memory b{color:var(--pink)}
+
+/* FOOTER */
+.footer{padding:25px 0;color:var(--muted);text-align:center;font-size:12px}
+
+/* MOBILE */
+@media(min-width:520px){
+.app{padding:20px}
+.hero{padding:38px 28px}
+.hero h2{font-size:34px}
+.stats{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:520px){
+.grid2{grid-template-columns:1fr}
+.hero h2{font-size:24px}
+.hero{padding:25px 17px}
+}
+@media(max-width:380px){
+.app{padding:10px}
+.hero{padding:22px 14px}
+.hero h2{font-size:22px}
+.card{padding:12px}
+.section-title{font-size:20px}
+.stat b{font-size:20px}
+.brand h1{font-size:18px}
+.logo-icon{width:44px;height:44px}
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+<!-- HEADER -->
+<header>
+  <div class="brand">
+    <div class="logo-icon">
+      <img src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly">
+    </div>
+    <div>
+      <h1>Quizly</h1>
+      <small>مشاوره سالمندی · کلید واژه‌های طلایی</small>
+    </div>
+  </div>
+  <button id="theme">تم شب</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>مشاوره سالمندی</h2>
+  <p>تمام کلید واژه‌های ۶ فصل — بدون تکرار، آماده امتحان، به زبان ساده</p>
+  <div class="pills">
+    <span class="pill">۶ فصل</span>
+    <span class="pill">۲۰۰+ کلید واژه</span>
+    <span class="pill">۱۵+ نظریه‌پرداز</span>
+    <span class="pill">۲۱ ابزار سنجش</span>
+  </div>
+</section>
+
+<!-- NOTICE -->
+<div class="notice">
+  <b>راهنمای مطالعه:</b> اول از نوار پایین فصل رو انتخاب کن، بعد جدول کلید واژه‌ها رو بخون. آخرش «قواعد طلایی» رو مرور کن.
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><b>۶</b><span>فصل</span></div>
+  <div class="stat"><b>۲۰۰+</b><span>کلید واژه</span></div>
+  <div class="stat"><b>۱۵+</b><span>نظریه‌پرداز</span></div>
+  <div class="stat"><b>۲۱</b><span>ابزار سنجش</span></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#ch1">فصل ۱</a>
+  <a href="#ch2">فصل ۲</a>
+  <a href="#ch3">فصل ۳</a>
+  <a href="#ch4">فصل ۴</a>
+  <a href="#ch5">فصل ۵</a>
+  <a href="#ch6">فصل ۶</a>
+  <a href="#golden">قواعد طلایی</a>
+</nav>
+
+<!-- SEARCH -->
+<div class="card">
+  <input id="search" class="search" placeholder="🔍 جستجو در کلید واژه‌ها...">
+</div>
+
+<!-- فصل ۱ -->
+<section id="ch1" class="section">
+  <h2 class="section-title">فصل ۱ · کلیاتی در روان‌شناسی سالمندی</h2>
+  <p class="section-sub">تعریف سالمندی، دوره‌ها، نظریه‌ها، تغییرات، ارتباط مؤثر</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>ژرونولوژی</td><td>علم مطالعه مسائل <b>سالمندی</b></td></tr>
+          <tr><td>دوره پیری</td><td><b>۶۵ سالگی به بعد</b></td></tr>
+          <tr><td>جوان-سالمند (Young Old)</td><td><b>۶۵-۷۵ سال</b></td></tr>
+          <tr><td>سالمند-سالمند (Old-Old)</td><td><b>۷۵-۸۵ سال و بالاتر</b></td></tr>
+          <tr><td>کهن‌سالان (Oldest-Old)</td><td><b>۸۵ سال و بالاتر</b></td></tr>
+          <tr><td>سن کارکردی (Functional Age)</td><td><b>کفایت و عملکرد واقعی</b> — ملاک معتبرتر</td></tr>
+          <tr><td>سن تقویمی vs کارکردی</td><td>تاریخ تولد / عملکرد واقعی</td></tr>
+          <tr><td>نظریه عدم تعهد</td><td><b>کامینگ و هنری (۱۹۶۱)</b></td></tr>
+          <tr><td>نظریه فعالیت</td><td><b>هوویگ هرست (۱۹۴۸)</b></td></tr>
+          <tr><td>نظریه استمرار</td><td><b>نوگارتن (۱۹۶۸)</b></td></tr>
+          <tr><td>نظریه تعاملی</td><td><b>اسپنس (۱۹۷۵)</b></td></tr>
+          <tr><td>نظریه محیط اجتماعی</td><td><b>گوریوم (۲۰۰۰)</b></td></tr>
+          <tr><td>یونگ — مراحل</td><td><b>۴ دوره</b> (کودکی، جوانی، میانسالی، پیری)</td></tr>
+          <tr><td>تفرد (یونگ)</td><td>ادغام <b>ناهشیار با هشیار</b></td></tr>
+          <tr><td>بوهلر — مراحل</td><td><b>۵ مرحله</b> زندگی روانی</td></tr>
+          <tr><td>اریکسون — مراحل</td><td><b>۸ مرحله</b></td></tr>
+          <tr><td>مرحله هشتم اریکسون</td><td><b>انسجام در برابر نومیدی</b></td></tr>
+          <tr><td>پک — تکالیف</td><td><b>۳ تکلیف</b>: تمایز من از کار، استعلای بدن، استعلای من</td></tr>
+          <tr><td>لابووی-ویف</td><td><b>خبرگی هیجانی</b></td></tr>
+          <tr><td>فولر</td><td><b>۵ مرحله رشد ایمان</b></td></tr>
+          <tr><td>تلومر بلند</td><td>سلامت و عمر <b>بیشتر</b></td></tr>
+          <tr><td>تلومر کوتاه</td><td>پیری <b>سریع‌تر</b> و بیماری</td></tr>
+          <tr><td>مناطق آبی</td><td><b>۵ منطقه</b>: ایکاریا، لوما لیندا، ساردینیا، اوکیناوا، نیکویا</td></tr>
+          <tr><td>ارتباط مؤثر با سالمند</td><td><b>اطلاعات ≠ درک کردن</b> (گوش دادن همدلانه)</td></tr>
+          <tr><td>«دخالت» سالمند</td><td>تلاش برای <b>اثبات مفید بودن</b></td></tr>
+          <tr><td>احترام از دیدگاه اسلام</td><td>سوره اسراء آیه ۲۳ + امام صادق «لَیْسَ مِنَّا...»</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۲ -->
+<section id="ch2" class="section">
+  <h2 class="section-title">فصل ۲ · سالمندی مثبت (فعال)</h2>
+  <p class="section-sub">بهزیستی، SOC، ۸ اصل موفق، مدل ریف، معنویت</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>تعریف WHO از سلامتی</td><td><b>تکمیل حالات فیزیکی، روانی و رفاهی-اجتماعی</b></td></tr>
+          <tr><td>روان‌شناسی مثبت‌گرا</td><td>تأکید بر <b>بهزیستی و عملکرد مطلوب</b></td></tr>
+          <tr><td>نکته طلایی</td><td><b>پیری معادل بیماری نیست</b></td></tr>
+          <tr><td>سالمندی مثبت</td><td>مفهوم <b>چندبعدی</b></td></tr>
+          <tr><td>۵ عامل سالمندی مثبت</td><td><b>سلامت + شناخت + فعالیت + عاطفه + آمادگی جسمانی</b></td></tr>
+          <tr><td>نظریه SOC (بالتر ۱۹۹۹)</td><td><b>بهینه‌سازی انتخابی با جبران</b></td></tr>
+          <tr><td>۳ راهبرد SOC</td><td><b>انتخاب + بهینه‌سازی + جبران</b></td></tr>
+          <tr><td>انتخاب (SOC)</td><td>گزینش گزینه‌های با بیشترین سود</td></tr>
+          <tr><td>بهینه‌سازی (SOC)</td><td>بهترین راه جبران زیان‌ها</td></tr>
+          <tr><td>جبران (SOC)</td><td>سازگاری برای حفظ منابع</td></tr>
+          <tr><td>پیری فعال (WHO ۲۰۰۲)</td><td><b>بهینه کردن سلامت، مشارکت و امنیت</b></td></tr>
+          <tr><td>۸ اصل سالمندی موفق</td><td><b>لازاروس و لازاروس</b></td></tr>
+          <tr><td>شاخص‌های بهزیستی (وایلات ۲۰۰۳)</td><td><b>۴ شاخص</b></td></tr>
+          <tr><td>مدل ریف</td><td><b>۶ بعد</b> بهزیستی روان‌شناختی</td></tr>
+          <tr><td>۶ بعد مدل ریف</td><td>پذیرش خود + روابط مثبت + خودمختاری + تسلط بر محیط + هدف در زندگی + رشد شخصی</td></tr>
+          <tr><td>نظر بالنس (۱۹۹۶)</td><td><b>سالمندی بهینه</b> بهتر از موفق</td></tr>
+          <tr><td>دالنسر (۲۰۰۲)</td><td>پذیرش شرایط سالمندی + رشد متناسب</td></tr>
+          <tr><td>کوبزانسکی (۲۰۱۸)</td><td><b>۳ مسیر</b> تأثیر بهزیستی بر سلامت</td></tr>
+          <tr><td>نقش راجرز</td><td>دین → مقابله با استرس + یافتن معنا</td></tr>
+          <tr><td>کلارک (۱۹۵۸)</td><td>مذهب برای <b>معنا دادن به زندگی</b></td></tr>
+          <tr><td>رکر (۱۹۹۷)</td><td>تعریف <b>معنای زندگی</b></td></tr>
+          <tr><td>کراس (۲۰۰۳)</td><td>معنای مذهبی → <b>رضایت + اعتمادبه‌نفس + خوش‌بینی بیشتر</b></td></tr>
+          <tr><td>فرانکل</td><td>معنا → <b>مقاومت در برابر استرس</b></td></tr>
+          <tr><td>بامستر (۱۹۹۱)</td><td>ارزش‌ها → <b>معنادهی به زندگی</b></td></tr>
+          <tr><td>اریکسون — مرحله نهایی</td><td><b>یکپارچگی در برابر یأس</b></td></tr>
+          <tr><td>هوش معنوی (SQ)</td><td><b>جستجوی معنا</b> — ارتباطی با IQ و EQ ندارد</td></tr>
+          <tr><td>راتو و آگاروال (۲۰۲۲)</td><td><b>تفاوت معناداری</b> در هوش معنوی زنان و مردان <b>نیست</b></td></tr>
+          <tr><td>صالحیان و جهان (۱۴۰۰)</td><td>خرد با هوش معنوی <b>رابطه مثبت</b></td></tr>
+          <tr><td>محمدپور و همکاران (۱۴۰۰)</td><td><b>۴ مقوله</b> معنای زندگی: تعالی معنوی + توجه به خود + تبادل عشق + پویش اجتماعی</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۳ -->
+<section id="ch3" class="section">
+  <h2 class="section-title">فصل ۳ · اختلالات و مشکلات شایع در سالمندی</h2>
+  <p class="section-sub">ثبات شخصیت، دلیریوم، MCI، دمانس، افسردگی، اضطراب، اسکیزوفرنی</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>نظریه پنج عاملی</td><td><b>کاستا و مک کرا</b> — ثبات نسبی شخصیت</td></tr>
+          <tr><td>۵ عامل شخصیت</td><td><b>روان‌رنجوری + برون‌گرایی + انعطاف‌پذیری + دلپذیر بودن + باوجدان بودن</b></td></tr>
+          <tr><td>کاپ (۲۰۱۷)</td><td>روان‌رنجوری بالا + وظیفه‌شناسی کم → <b>دمانس بیشتر</b></td></tr>
+          <tr><td>آیرز (۲۰۲۰)</td><td>انعطاف‌پذیری بالا → <b>اختلالات شناختی کمتر</b></td></tr>
+          <tr><td>۶ احساس منفی مشترک</td><td>اندوه + تنهایی + یأس + اضطراب + بیهوده بودن + سربار بودن</td></tr>
+          <tr><td>۳ طبقه اختلالات شناختی</td><td><b>دلیریوم + MCI + دمانس (عمده)</b></td></tr>
+          <tr><td>دلیریوم</td><td><b>اختلال حاد هوشیاری</b> + نوسان‌دار</td></tr>
+          <tr><td>مهم‌ترین نشانه دلیریوم</td><td><b>اختلال هوشیاری</b></td></tr>
+          <tr><td>توهم شایع در دلیریوم</td><td><b>بینایی</b> بیش از لامسه و شنوایی</td></tr>
+          <tr><td>بیشترین احتمال دلیریوم</td><td>افراد <b>۶۵ سال به بالا</b> در بیمارستان</td></tr>
+          <tr><td>MCI</td><td>افت خفیف + <b>حفظ استقلال</b></td></tr>
+          <tr><td>دمانس (عمده)</td><td>افت شدید + <b>از دست دادن استقلال</b></td></tr>
+          <tr><td>تمایز MCI با دمانس</td><td><b>بیش از ۲ انحراف استاندارد</b> کاهش در دمانس</td></tr>
+          <tr><td>آپراکسیا</td><td><b>ناتوانی در انجام فعالیت‌های حرکتی</b></td></tr>
+          <tr><td>آگنوزیا</td><td><b>ناتوانی در بازشناسی اشیا</b> برخلاف سالم بودن حواس</td></tr>
+          <tr><td>دمانس عروقی</td><td><b>آسیب رگ‌های خونی مغز</b></td></tr>
+          <tr><td>دمانس اجسام لوی</td><td><b>توهم بینایی و مفصلی</b> بارز در مراحل اولیه</td></tr>
+          <tr><td>فصل مشترک اجسام لوی</td><td><b>آلزایمر و پارکینسون</b></td></tr>
+          <tr><td>FTD</td><td><b>انحطاط قشر پیشانی-گیجگاهی</b></td></tr>
+          <tr><td>FTD در چه سنی شایع‌تر</td><td><b>زیر ۶۵ سال</b> (۷۰٪ قبل از ۶۵ سالگی)</td></tr>
+          <tr><td>شیوع جهانی افسردگی در سالمندان</td><td><b>۲۸.۴٪</b></td></tr>
+          <tr><td>MDD</td><td>حداقل <b>۲ هفته</b></td></tr>
+          <tr><td>دیس‌تایمی</td><td>بیش از <b>۲ سال</b></td></tr>
+          <tr><td>افسردگی پس از سکته</td><td>از هر ۳ بازمانده، ۱ نفر</td></tr>
+          <tr><td>۳ فاز افسردگی پس از سکته</td><td><b>حاد (کمتر از ۱ ماه) + میان‌مدت (۱-۶ ماه) + بهبودی (بیش از ۶ ماه)</b></td></tr>
+          <tr><td>۵ تحریف شناختی بعد از سکته</td><td>فاجعه‌آمیز کردن + استدلال دو وجهی + انتزاع انتخابی + بیش‌تعمیمی + خطاهای بین‌فردی</td></tr>
+          <tr><td>اضطراب خطر مرگ زودرس</td><td><b>۳۹٪ بیشتر</b></td></tr>
+          <tr><td>GAD در چه سنی شایع‌تر</td><td><b>سنین بالا</b></td></tr>
+          <tr><td>فوبیا در کودکی / هراس و PTSD در بزرگسالی</td><td>شایع‌تر</td></tr>
+          <tr><td>اضطراب با شروع جدید</td><td><b>۱۱٪ زنان + ۲٪ مردان</b></td></tr>
+          <tr><td>ترس شایع و منحصربه‌فرد سالمندی</td><td><b>ترس از افتادن</b></td></tr>
+          <tr><td>عوامل محافظتی اضطراب</td><td>حمایت اجتماعی + دین‌داری + فعالیت بدنی + تحریک شناختی</td></tr>
+          <tr><td>شروع اسکیزوفرنی</td><td><b>نوجوانی/اوایل بزرگسالی</b> (مردان ۱۸-۲۵، زنان ۲۵-۳۵)</td></tr>
+          <tr><td>۳ حالت شروع روان‌پریشی</td><td><b>حاد + تدریجی + مزمن</b></td></tr>
+          <tr><td>بهترین عامل محافظتی روان‌پریشی</td><td><b>رفاه اقتصادی</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۴ -->
+<section id="ch4" class="section">
+  <h2 class="section-title">فصل ۴ · اصول ارزیابی و معاینه روانی</h2>
+  <p class="section-sub">تبعیض، موانع تغییر، مقاومت، انتقال، ۸ باور نادرست، مسائل جنسی</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>ارزیابی روان‌شناختی</td><td><b>ابزارهای معتبر + معاینه وضعیت روانی + ارزیابی مهارت ارتباطی</b></td></tr>
+          <tr><td>تبعیض علیه سالخوردگان</td><td>نیازمند <b>تغییر فرهنگ</b>، نه فقط تصویب قانون</td></tr>
+          <tr><td>نشانه‌های اجتناب از مشاوره</td><td>نیامدن + دیر رسیدن + سخن‌پرانی + طرح مسائل در پایان جلسه</td></tr>
+          <tr><td>انتقال</td><td>احساسات <b>مراجع → درمانگر</b> (از افراد مهم زندگی)</td></tr>
+          <tr><td>انتقال مثبت</td><td>کنترل‌شده + مفید</td></tr>
+          <tr><td>انتقال نامفید</td><td>احساسات عاشقانه جنسی</td></tr>
+          <tr><td>انتقال متقابل</td><td>احساسات <b>درمانگر → مراجع</b></td></tr>
+          <tr><td>مقاومت</td><td>کوشش <b>آگاهانه و ارادی</b> برای اجتناب از موضوع خاص</td></tr>
+          <tr><td>شکل مستقیم مقاومت</td><td>«ترجیح می‌دهم الآن راجع به این موضوع حرف نزنیم»</td></tr>
+          <tr><td>شکل غیرمستقیم مقاومت</td><td>پاسخ مختصر + ابهام‌گویی + مکث + اکراه</td></tr>
+          <tr><td>دو دلیل شایع مقاومت</td><td><b>حفظ تصویر خوب از خود + ترس از طرد یا مسخره شدن</b></td></tr>
+          <tr><td>بهترین کار با مقاومت</td><td><b>انعطاف‌پذیری + تعصب کمتر</b></td></tr>
+          <tr><td>۶ تکنیک کاهش مقاومت</td><td>همدلی + فرصت انتخاب + گوش دادن + اشاره به اختلافات + خودکارآمدی + تمرکز بر راه‌حل</td></tr>
+          <tr><td>۸ باور نادرست</td><td>افسردگی طبیعی + اعتیاد فقط جوانان + درمان فقط شدید + فراموشی = آلزایمر + پیر شدن ترسناک + سالمندان روان‌درمانی نمی‌خواهند + روان‌درمانی انتزاعی مفید نیست + درمان کم برای درد زیاد</td></tr>
+          <tr><td>باور نادرست ۱</td><td><b>افسردگی بخش طبیعی پیری نیست</b></td></tr>
+          <tr><td>باور نادرست ۴</td><td><b>فراموشی همیشه آلزایمر نیست</b></td></tr>
+          <tr><td>باور نادرست ۶</td><td>راک و اسکوگین (۱۹۹۵): <b>نگرش مثبت سالمندان بیشتر از جوانان</b></td></tr>
+          <tr><td>باور نادرست ۸</td><td>سالمندان <b>حق درمان</b> دارند</td></tr>
+          <tr><td>ادعای فروید</td><td>سالمندان فاقد اثرپذیری ذهنی برای تغییر — <b>نادرست</b></td></tr>
+          <tr><td>مشاور مناسب</td><td><b>میان‌سال</b> (والدین پیر دارد + آشنا با مشکلات سن پیری)</td></tr>
+          <tr><td>مهم‌تر از نظریه</td><td><b>وجدان آرام + مهربانی + شکیبایی</b></td></tr>
+          <tr><td>مهم‌ترین عامل اثربخشی مشاوره</td><td><b>گوش کردن صمیمانه، بدون ابراز تعجب یا بی‌میلی</b></td></tr>
+          <tr><td>بتی فریدان</td><td>تأکید بر <b>تجربه صمیمیت</b>، نه صرفاً فعالیت جنسی</td></tr>
+          <tr><td>نگرانی زنان در مسائل جنسی</td><td>یائسگی + پایان جدایی‌های جنسی</td></tr>
+          <tr><td>نگرانی مردان</td><td>ناتوانی جنسی → رابطه با زنان جوان‌تر</td></tr>
+          <tr><td>اولین مصاحبه</td><td>بیماران می‌خواهند <b>تصویر خوبی از خود</b> به‌جای گذارند</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۵ -->
+<section id="ch5" class="section">
+  <h2 class="section-title">فصل ۵ · روش‌های مشاوره و روان‌درمانی</h2>
+  <p class="section-sub">انسان‌گرایی، کوبلر-راس، IPT، خانواده‌درمانی، CBT، بی‌خوابی</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>سالمندان از روان‌درمانی</td><td><b>به همان اندازه بزرگسالان جوان‌تر</b> بهره‌مند می‌شوند</td></tr>
+          <tr><td>دلایل اجتناب درمانگران</td><td>۱) قادر به تغییر نیستند ۲) تلف کردن توانایی ۳) ترس از مرگ مراجع</td></tr>
+          <tr><td>شروع بیان مشکل در سالمندان</td><td><b>کند</b> است</td></tr>
+          <tr><td>بیان دوباره داستان‌ها</td><td><b>اثر درمانی بسیار خوبی</b> دارد</td></tr>
+          <tr><td>رویکرد انسان‌گرایی</td><td><b>راجرز</b> — ارزش‌های فردی، رشد، خودشکوفایی</td></tr>
+          <tr><td>نظریه مرحله</td><td><b>الیزابت کوبلر-راس (۱۹۷۰)</b> — ۵ مرحله</td></tr>
+          <tr><td>۵ مرحله کوبلر-راس</td><td><b>شوک/انکار + خشم + چانه‌زنی + افسردگی + پذیرش</b></td></tr>
+          <tr><td>همه افراد سوگوار به پذیرش می‌رسند؟</td><td><b>خیر</b> — ترتیب و بروز مراحل یکسان نیست</td></tr>
+          <tr><td>IPT (درمان بین فردی)</td><td><b>جرالد کلرمن</b> — کوتاه‌مدت، تمرکز بر بین‌فردی</td></tr>
+          <tr><td>تفاوت IPT با روان‌کاوی</td><td>IPT = <b>فرایندهای بین فردی</b> / روان‌کاوی = فرایندهای درون‌روانی</td></tr>
+          <tr><td>۴ حوزه IPT</td><td><b>انتقال نقش + اختلاف نقش + اندوه غیرعادی + نقص بین فردی</b></td></tr>
+          <tr><td>لزاک (۱۹۸۸)</td><td>اختلالات سالمندی <b>خانوادگی</b> است، نه فردی</td></tr>
+          <tr><td>خانواده‌درمانی از چه سالی</td><td><b>۱۹۵۰</b></td></tr>
+          <tr><td>با نفوذترین خانواده‌درمانی</td><td><b>ساختاری</b></td></tr>
+          <tr><td>CBT بیشتر برای</td><td><b>افسردگی و اضطراب</b> سالمندان</td></tr>
+          <tr><td>مراحل CBT</td><td><b>اولیه + میانی + آخر</b></td></tr>
+          <tr><td>تعداد جلسات CBT افسردگی</td><td><b>۱۶ تا ۲۰ جلسه</b></td></tr>
+          <tr><td>۵ مؤلفه رابطه درمانی CBT</td><td>انتظارات + مشارکتی + محدودیت زمانی + اینجا و اکنون + تعیین اهداف</td></tr>
+          <tr><td>۶ دلیل مؤثر بودن CBT (موریس)</td><td>اینجا و اکنون + مهارت‌ها + سازمان‌دهی + خود بازنگری + بعد آموزشی + جهت دادن هدف‌ها</td></tr>
+          <tr><td>درمان بی‌خوابی</td><td><b>مداخلات رفتاری و شناختی</b> (نه دارو صرف)</td></tr>
+          <tr><td>خواب‌آورها</td><td><b>افزایش تحمل + کاهش خواب عمیق و REM + گیجی</b></td></tr>
+          <tr><td>واکنش تسلیم</td><td><b>آرام‌بخش</b> (نه سرکشی)</td></tr>
+          <tr><td>انزوای اجتماعی</td><td><b>عامل خطر اصلی</b> مشکلات سلامت روان</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- فصل ۶ -->
+<section id="ch6" class="section">
+  <h2 class="section-title">فصل ۶ · مقیاس‌های سنجش در سالمندی</h2>
+  <p class="section-sub">MMSE، GDS، ADL، FAQ، LSI، DRS، ADAS، CAPE، MAI</p>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کلید واژه</th><th>جواب</th></tr></thead>
+        <tbody>
+          <tr><td>MMSE</td><td><b>آزمون معاینه مختصر وضعیت شناختی</b> — ۱۱ گویه، حداکثر ۳۰</td></tr>
+          <tr><td>MMSE برای MCI</td><td><b>حساسیت کم</b></td></tr>
+          <tr><td>MMSE و تحصیلات</td><td><b>حساس</b> به سطح تحصیلات</td></tr>
+          <tr><td>GDS</td><td><b>مقیاس افسردگی سالمندان</b> — بدون علائم جسمانی، بله/خیر</td></tr>
+          <tr><td>ADL</td><td><b>فعالیت‌های پایه</b> (حمام، لباس، غذا)</td></tr>
+          <tr><td>FAQ</td><td><b>فعالیت‌های پیچیده‌تر (IADL)</b> — افت زودهنگام</td></tr>
+          <tr><td>خودگزارشی</td><td>پرسشنامه حافظه + SELF</td></tr>
+          <tr><td>مصاحبه‌گر</td><td>ADL + MMSE</td></tr>
+          <tr><td>LSI</td><td><b>شاخص رضایت از زندگی</b></td></tr>
+          <tr><td>SISRI-24</td><td><b>هوش معنوی</b></td></tr>
+          <tr><td>PQCMS</td><td><b>روحیه و بهزیستی</b> (فیلادلفیا)</td></tr>
+          <tr><td>DRS</td><td><b>درجه‌بندی شدت دمانس</b></td></tr>
+          <tr><td>ADAS</td><td><b>آلزایمر</b> — کارآزمایی بالینی</td></tr>
+          <tr><td>CAPE</td><td><b>جامع</b> (شناختی، رفتاری، اجتماعی)</td></tr>
+          <tr><td>MAI</td><td><b>چندسطحی</b> (جسمانی، روانی، عملکردی، اجتماعی)</td></tr>
+          <tr><td>CCSE</td><td><b>ظرفیت شناختی</b> (مشابه MMSE)</td></tr>
+          <tr><td>BLS-D</td><td><b>غربالگری دمانس</b></td></tr>
+          <tr><td>خودگزارشی vs مصاحبه‌گر</td><td>SELF (خودگزارشی) / ADL (مصاحبه‌گر)</td></tr>
+          <tr><td>غربالگری vs تشخیصی</td><td>MMSE و GDS غربالگری هستند، نه تشخیصی</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- قواعد طلایی -->
+<section id="golden" class="section">
+  <h2 class="section-title">🎯 قواعد طلایی پاسخ‌گویی سریع</h2>
+  <p class="section-sub">هر جا این کلمه رو دیدی، بلافاصله جواب رو بزن</p>
+  <div class="card">
+    <div class="grid2">
+      <div class="box"><h4>«پیری معادل بیماری»</h4>خیر</div>
+      <div class="box"><h4>«سن کارکردی»</h4>عملکرد واقعی</div>
+      <div class="box"><h4>«نظریه عدم تعهد»</h4>کامینگ و هنری</div>
+      <div class="box"><h4>«نظریه فعالیت»</h4>هوویگ هرست</div>
+      <div class="box"><h4>«نظریه استمرار»</h4>نوگارتن</div>
+      <div class="box"><h4>«اریکسون مرحله نهایی»</h4>انسجام در برابر نومیدی</div>
+      <div class="box"><h4>«مدل ریف»</h4>۶ بعد</div>
+      <div class="box"><h4>«SOC»</h4>انتخاب + بهینه‌سازی + جبران</div>
+      <div class="box"><h4>«هوش معنوی»</h4>SQ ≠ IQ ≠ EQ</div>
+      <div class="box"><h4>«دلیریوم»</h4>اختلال حاد هوشیاری</div>
+      <div class="box"><h4>«توهم دلیریوم»</h4>بینایی</div>
+      <div class="box"><h4>«MCI vs دمانس»</h4>حفظ استقلال / از دست دادن استقلال</div>
+      <div class="box"><h4>«آپراکسیا»</h4>ناتوانی حرکتی</div>
+      <div class="box"><h4>«آگنوزیا»</h4>ناتوانی بازشناسی اشیا</div>
+      <div class="box"><h4>«اجسام لوی»</h4>توهم بینایی + فصل مشترک آلزایمر/پارکینسون</div>
+      <div class="box"><h4>«FTD»</h4>زیر ۶۵ سال</div>
+      <div class="box"><h4>«افسردگی سالمندان»</h4>۲۸.۴٪</div>
+      <div class="box"><h4>«MDD»</h4>۲ هفته</div>
+      <div class="box"><h4>«دیس‌تایمی»</h4>۲ سال</div>
+      <div class="box"><h4>«افسردگی پس از سکته»</h4>از هر ۳ نفر، ۱ نفر</div>
+      <div class="box"><h4>«اضطراب خطر مرگ»</h4>۳۹٪ بیشتر</div>
+      <div class="box"><h4>«GAD»</h4>سنین بالا</div>
+      <div class="box"><h4>«ترس منحصربه‌فرد»</h4>ترس از افتادن</div>
+      <div class="box"><h4>«شروع اسکیزوفرنی»</h4>نوجوانی/اوایل بزرگسالی</div>
+      <div class="box"><h4>«انتقال»</h4>مراجع → درمانگر</div>
+      <div class="box"><h4>«انتقال متقابل»</h4>درمانگر → مراجع</div>
+      <div class="box"><h4>«بهترین کار با مقاومت»</h4>انعطاف‌پذیری + تعصب کمتر</div>
+      <div class="box"><h4>«ادعای فروید»</h4>نادرست</div>
+      <div class="box"><h4>«مشاور مناسب»</h4>میان‌سال</div>
+      <div class="box"><h4>«مهم‌تر از نظریه»</h4>وجدان آرام + مهربانی + شکیبایی</div>
+      <div class="box"><h4>«اثربخشی مشاوره»</h4>گوش کردن صمیمانه</div>
+      <div class="box"><h4>«کوبلر-راس»</h4>۵ مرحله</div>
+      <div class="box"><h4>«IPT»</h4>جرالد کلرمن + ۴ حوزه</div>
+      <div class="box"><h4>«با نفوذترین خانواده‌درمانی»</h4>ساختاری</div>
+      <div class="box"><h4>«CBT»</h4>۱۶ تا ۲۰ جلسه</div>
+      <div class="box"><h4>«درمان بی‌خوابی»</h4>مداخلات رفتاری-شناختی</div>
+      <div class="box"><h4>«MMSE»</h4>۱۱ گویه، حداکثر ۳۰</div>
+      <div class="box"><h4>«MMSE برای MCI»</h4>حساسیت کم</div>
+      <div class="box"><h4>«GDS»</h4>بدون علائم جسمانی</div>
+      <div class="box"><h4>«ADL»</h4>فعالیت‌های پایه</div>
+      <div class="box"><h4>«FAQ»</h4>فعالیت‌های پیچیده (IADL)</div>
+      <div class="box"><h4>«غربالگری vs تشخیصی»</h4>MMSE و GDS غربالگری هستند</div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  Quizly · مشاوره سالمندی · کلید واژه‌های طلایی · ۶ فصل کامل
+</div>
+
+</div>
+
+<script>
+// THEME
+const themeBtn = document.getElementById("theme");
+themeBtn.onclick = () => {
+  const dark = document.documentElement.dataset.theme === "dark";
+  document.documentElement.dataset.theme = dark ? "" : "dark";
+  themeBtn.textContent = dark ? "تم شب" : "تم روز";
+};
+
+// SEARCH
+const searchInput = document.getElementById("search");
+searchInput.addEventListener("input", (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll("tbody tr").forEach(tr => {
+    const text = tr.innerText.toLowerCase();
+    tr.style.display = (!q || text.includes(q)) ? "" : "none";
+  });
+});
+</script>
+
+</body>
+</html>
