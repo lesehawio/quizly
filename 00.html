@@ -60,7 +60,6 @@
             padding: 20px;
         }
 
-        /* هدر و لوگو */
         header {
             display: flex;
             justify-content: space-between;
@@ -130,7 +129,6 @@
             transform: translateY(-2px);
         }
 
-        /* آیکون‌های SVG پایه */
         .icon {
             width: 18px;
             height: 18px;
@@ -142,7 +140,6 @@
             flex-shrink: 0;
         }
 
-        /* بخش هدر اصلی (Hero) */
         .hero {
             background: linear-gradient(135deg, #9f174d, #f94779 60%, #ff8bad);
             color: white;
@@ -179,7 +176,6 @@
             opacity: 0.9;
         }
 
-        /* بخش کارت‌های درسی */
         .schedule-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -191,7 +187,7 @@
                 grid-template-columns: 1fr 1fr;
             }
             .wednesday-card {
-                grid-column: 1 / -1; /* کارت چهارشنبه تمام عرض */
+                grid-column: 1 / -1;
             }
         }
 
@@ -241,14 +237,12 @@
             gap: 6px;
         }
 
-        /* استایل لیست کلاس‌ها */
         .class-list {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
 
-        /* استایل گرید برای چهارشنبه (دوتا دوتا روبروی هم) */
         .wednesday-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -281,6 +275,15 @@
             background: linear-gradient(to left, var(--surface-hover) 40%, var(--danger-soft));
         }
 
+        .class-item.exam {
+            border-right-color: var(--purple);
+            background: linear-gradient(to left, var(--surface-hover) 40%, #ede8ff);
+        }
+
+        [data-theme="dark"] .class-item.exam {
+            background: linear-gradient(to left, var(--surface-hover) 40%, #2e1e4a);
+        }
+
         .time-row {
             display: flex;
             justify-content: space-between;
@@ -306,6 +309,11 @@
         .class-item.conflict .class-time {
             color: var(--danger);
             border-color: var(--danger-soft);
+        }
+
+        .class-item.exam .class-time {
+            color: var(--purple);
+            border-color: #d5c8ff;
         }
 
         .class-name {
@@ -345,7 +353,22 @@
             border-radius: 6px;
         }
 
-        /* فوتر */
+        .exam-badge {
+            color: var(--purple);
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #ede8ff;
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        [data-theme="dark"] .exam-badge {
+            background: #2e1e4a;
+        }
+
         footer {
             text-align: center;
             margin-top: 50px;
@@ -374,7 +397,6 @@
                     <p>داشبورد هوشمند برنامه کلاسی</p>
                 </div>
             </div>
-            <!-- دکمه تم با آیکون SVG -->
             <button class="theme-btn" id="themeToggle">
                 <svg class="icon" id="themeIcon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 <span id="themeText">تم شب</span>
@@ -384,31 +406,38 @@
         <!-- بخش اصلی -->
         <section class="hero">
             <h2>برنامه هفتگی من</h2>
-            <p>مدیریت زمان، کلید موفقیت در تحصیل است. تمامی کلاس‌ها و ساعت‌های حضور شما در این داشبورد ثبت شده است.</p>
+            <p>مدیریت زمان، کلید موفقیت در تحصیل است. تمامی کلاس‌ها، امتحانات و ساعت‌های حضور شما در این داشبورد ثبت شده است.</p>
         </section>
 
         <!-- گرید برنامه‌ها -->
         <div class="schedule-grid">
             
-            <!-- روز شنبه -->
+            <!-- روز دوشنبه (امتحان مشاوره تادیبی) -->
             <div class="day-card">
                 <div class="day-header">
-                    <div class="day-title">شنبه</div>
-                    <div class="day-badge">۱ کلاس</div>
+                    <div class="day-title">دوشنبه</div>
+                    <div class="day-badge danger">
+                        <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        امتحان
+                    </div>
                 </div>
                 <div class="class-list">
-                    <div class="class-item">
+                    <div class="class-item exam">
                         <div class="time-row">
                             <span class="class-time">
                                 <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                ۱۳:۱۵ - ۱۴:۴۵
+                                ۱۵:۰۰ - ۱۶:۳۰
+                            </span>
+                            <span class="exam-badge">
+                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                                امتحان
                             </span>
                         </div>
-                        <div class="class-name">روانشناسی سالمندی</div>
+                        <div class="class-name">مشاوره تادیبی</div>
                         <div class="class-details">
                             <span class="detail-tag">
                                 <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                استاد عبدالخسینی
+                                استاد برجی
                             </span>
                             <span class="detail-tag">
                                 <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -419,10 +448,10 @@
                 </div>
             </div>
 
-            <!-- روز دوشنبه -->
+            <!-- روز سه‌شنبه (شیوه‌های فرزندپروری) -->
             <div class="day-card">
                 <div class="day-header">
-                    <div class="day-title">دوشنبه</div>
+                    <div class="day-title">سه‌شنبه</div>
                     <div class="day-badge">۱ کلاس</div>
                 </div>
                 <div class="class-list">
@@ -430,45 +459,38 @@
                         <div class="time-row">
                             <span class="class-time">
                                 <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                ۱۵:۰۰ - ۱۶:۳۰
+                                ۱۳:۱۵ - ۱۴:۴۵
                             </span>
                         </div>
-                        <div class="class-name">اندیشه اسلامی ۱</div>
+                        <div class="class-name">شیوه‌های فرزندپروری و آموزش والدین</div>
                         <div class="class-details">
                             <span class="detail-tag">
                                 <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                استاد منتی
+                                استاد مریم منصوری
                             </span>
                             <span class="detail-tag">
                                 <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                کلاس ۲۰۳
+                                کلاس ۲۰۶
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- روز چهارشنبه -->
+            <!-- روز چهارشنبه (ورزش + مشاوره کارآفرینی) -->
             <div class="day-card wednesday-card">
                 <div class="day-header">
                     <div class="day-title">چهارشنبه</div>
-                    <div class="day-badge danger">
-                        <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                        ۶ کلاس (تداخل)
-                    </div>
+                    <div class="day-badge">۲ کلاس</div>
                 </div>
                 
                 <div class="wednesday-grid">
-                    <!-- ردیف اول (صبح) -->
-                    <div class="class-item conflict">
+                    <!-- ورزش (حفظ شده از برنامه قبلی) -->
+                    <div class="class-item">
                         <div class="time-row">
                             <span class="class-time">
                                 <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                                 ۰۸:۰۰ - ۰۹:۳۰
-                            </span>
-                            <span class="conflict-warning">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                                تداخل
                             </span>
                         </div>
                         <div class="class-name">ورزش ۱</div>
@@ -484,124 +506,23 @@
                         </div>
                     </div>
 
-                    <div class="class-item conflict">
+                    <!-- مشاوره کارآفرینی و اشتغال‌پذیری -->
+                    <div class="class-item">
                         <div class="time-row">
                             <span class="class-time">
                                 <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                ۰۸:۰۰ - ۰۹:۳۰
-                            </span>
-                            <span class="conflict-warning">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                                تداخل
+                                ۱۱:۳۰ - ۱۳:۰۰
                             </span>
                         </div>
-                        <div class="class-name">سنجش و اندازه‌گیری</div>
+                        <div class="class-name">مشاوره کارآفرینی و اشتغال‌پذیری</div>
                         <div class="class-details">
                             <span class="detail-tag">
                                 <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                استاد کاظم‌زاده
+                                استاد الماسی
                             </span>
                             <span class="detail-tag">
                                 <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                کلاس ۲۰۶
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- ردیف دوم (ظهر) -->
-                    <div class="class-item conflict">
-                        <div class="time-row">
-                            <span class="class-time">
-                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                ۱۳:۱۵ - ۱۴:۱۵
-                            </span>
-                            <span class="conflict-warning">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                                تداخل
-                            </span>
-                        </div>
-                        <div class="class-name">مشاوره خانواده (عملی)</div>
-                        <div class="class-details">
-                            <span class="detail-tag">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                استاد صبوحی
-                            </span>
-                            <span class="detail-tag">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                کلاس ۲۰۵
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="class-item conflict">
-                        <div class="time-row">
-                            <span class="class-time">
-                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                ۱۳:۱۵ - ۱۴:۱۵
-                            </span>
-                            <span class="conflict-warning">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                                تداخل
-                            </span>
-                        </div>
-                        <div class="class-name">مشاوره تحصیلی (عملی)</div>
-                        <div class="class-details">
-                            <span class="detail-tag">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                استاد یاری
-                            </span>
-                            <span class="detail-tag">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                کلاس ۲۰۸
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- ردیف سوم (عصر) -->
-                    <div class="class-item conflict">
-                        <div class="time-row">
-                            <span class="class-time">
-                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                ۱۶:۴۵ - ۱۸:۱۵
-                            </span>
-                            <span class="conflict-warning">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                                تداخل
-                            </span>
-                        </div>
-                        <div class="class-name">مشاوره گروهی (عملی)</div>
-                        <div class="class-details">
-                            <span class="detail-tag">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                استاد صبوحی
-                            </span>
-                            <span class="detail-tag">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                کلاس ۲۰۵
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="class-item conflict">
-                        <div class="time-row">
-                            <span class="class-time">
-                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                ۱۶:۴۵ - ۱۸:۱۵
-                            </span>
-                            <span class="conflict-warning">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                                تداخل
-                            </span>
-                        </div>
-                        <div class="class-name">مشاوره سلامت روان</div>
-                        <div class="class-details">
-                            <span class="detail-tag">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                استاد هواسی
-                            </span>
-                            <span class="detail-tag">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                کلاس ۲۰۸
+                                کلاس ۲۰۴
                             </span>
                         </div>
                     </div>
@@ -618,13 +539,11 @@
     </div>
 
     <script>
-        // اسکریپت تغییر تم (روز / شب)
         const themeToggle = document.getElementById('themeToggle');
         const htmlElement = document.documentElement;
         const themeText = document.getElementById('themeText');
         const themeIcon = document.getElementById('themeIcon');
 
-        // آیکون‌های SVG برای تم روز و شب
         const moonIcon = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
         const sunIcon = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
 
