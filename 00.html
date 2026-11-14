@@ -229,6 +229,14 @@
             font-weight: 700;
         }
 
+        .day-badge.danger {
+            background: var(--danger-soft);
+            color: var(--danger);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
         .class-list {
             display: flex;
             flex-direction: column;
@@ -262,6 +270,20 @@
             transform: scale(1.01);
         }
 
+        .class-item.conflict {
+            border-right-color: var(--danger);
+            background: linear-gradient(to left, var(--surface-hover) 40%, var(--danger-soft));
+        }
+
+        .class-item.exam {
+            border-right-color: var(--purple);
+            background: linear-gradient(to left, var(--surface-hover) 40%, #ede8ff);
+        }
+
+        [data-theme="dark"] .class-item.exam {
+            background: linear-gradient(to left, var(--surface-hover) 40%, #2e1e4a);
+        }
+
         .time-row {
             display: flex;
             justify-content: space-between;
@@ -282,6 +304,16 @@
             display: flex;
             align-items: center;
             gap: 6px;
+        }
+
+        .class-item.conflict .class-time {
+            color: var(--danger);
+            border-color: var(--danger-soft);
+        }
+
+        .class-item.exam .class-time {
+            color: var(--purple);
+            border-color: #d5c8ff;
         }
 
         .class-name {
@@ -309,6 +341,34 @@
             gap: 5px;
         }
 
+        .conflict-warning {
+            color: var(--danger);
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--danger-soft);
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        .exam-badge {
+            color: var(--purple);
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #ede8ff;
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        [data-theme="dark"] .exam-badge {
+            background: #2e1e4a;
+        }
+
         footer {
             text-align: center;
             margin-top: 50px;
@@ -326,6 +386,7 @@
 <body>
 
     <div class="app-container">
+        <!-- هدر Quizly -->
         <header>
             <div class="brand">
                 <div class="logo-container">
@@ -342,14 +403,52 @@
             </button>
         </header>
 
+        <!-- بخش اصلی -->
         <section class="hero">
             <h2>برنامه هفتگی من</h2>
-            <p>مدیریت زمان، کلید موفقیت در تحصیل است. تمامی کلاس‌ها و ساعت‌های حضور شما در این داشبورد ثبت شده است.</p>
+            <p>مدیریت زمان، کلید موفقیت در تحصیل است. تمامی کلاس‌ها، امتحانات و ساعت‌های حضور شما در این داشبورد ثبت شده است.</p>
         </section>
 
+        <!-- گرید برنامه‌ها -->
         <div class="schedule-grid">
+            
+            <!-- روز دوشنبه (امتحان مشاوره تادیبی) -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-title">دوشنبه</div>
+                    <div class="day-badge danger">
+                        <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        امتحان
+                    </div>
+                </div>
+                <div class="class-list">
+                    <div class="class-item exam">
+                        <div class="time-row">
+                            <span class="class-time">
+                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                ۱۵:۰۰ - ۱۶:۳۰
+                            </span>
+                            <span class="exam-badge">
+                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                                امتحان
+                            </span>
+                        </div>
+                        <div class="class-name">مشاوره تادیبی</div>
+                        <div class="class-details">
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                استاد برجی
+                            </span>
+                            <span class="detail-tag">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                کلاس ۲۰۵
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <!-- روز سه‌شنبه -->
+            <!-- روز سه‌شنبه (شیوه‌های فرزندپروری) -->
             <div class="day-card">
                 <div class="day-header">
                     <div class="day-title">سه‌شنبه</div>
@@ -378,7 +477,7 @@
                 </div>
             </div>
 
-            <!-- روز چهارشنبه -->
+            <!-- روز چهارشنبه (ورزش + مشاوره کارآفرینی) -->
             <div class="day-card wednesday-card">
                 <div class="day-header">
                     <div class="day-title">چهارشنبه</div>
@@ -386,7 +485,7 @@
                 </div>
                 
                 <div class="wednesday-grid">
-                    <!-- ورزش -->
+                    <!-- ورزش (حفظ شده از برنامه قبلی) -->
                     <div class="class-item">
                         <div class="time-row">
                             <span class="class-time">
@@ -407,7 +506,7 @@
                         </div>
                     </div>
 
-                    <!-- مشاوره کارآفرینی -->
+                    <!-- مشاوره کارآفرینی و اشتغال‌پذیری -->
                     <div class="class-item">
                         <div class="time-row">
                             <span class="class-time">
@@ -433,6 +532,7 @@
 
         </div>
 
+        <!-- فوتر -->
         <footer>
             طراحی شده تحت مدیریت <strong>Quizly</strong> · تمامی حقوق محفوظ است.
         </footer>
