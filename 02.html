@@ -87,7 +87,7 @@
         }
         .brand-text p { font-size: 0.85rem; color: var(--muted); }
 
-        .header-actions { display: flex; align-items: center; gap: 10px; }
+        .header-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
         .btn {
             background: var(--surface); color: var(--ink);
@@ -96,6 +96,7 @@
             cursor: pointer; font-family: inherit; font-weight: 700; font-size: 0.9rem;
             transition: all 0.2s; box-shadow: var(--shadow);
             display: flex; align-items: center; gap: 8px;
+            text-decoration: none;
         }
         .btn:hover { border-color: var(--pink); transform: translateY(-2px); }
 
@@ -105,14 +106,6 @@
             border: none;
         }
         .btn.primary:hover { box-shadow: 0 10px 25px rgba(249, 71, 121, 0.4); }
-
-        .btn.danger {
-            color: var(--danger);
-            border-color: var(--danger-soft);
-            padding: 6px 10px;
-            font-size: 0.78rem;
-        }
-        .btn.danger:hover { background: var(--danger-soft); border-color: var(--danger); }
 
         .icon {
             width: 18px; height: 18px;
@@ -346,7 +339,7 @@
             background: var(--surface);
             border-radius: 20px;
             padding: 28px;
-            max-width: 520px;
+            max-width: 540px;
             width: 100%;
             max-height: 90vh;
             overflow-y: auto;
@@ -405,6 +398,176 @@
             gap: 12px;
         }
 
+        /* ---------- DATE PICKER ---------- */
+        .date-picker-wrapper {
+            position: relative;
+        }
+
+        .date-display {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: var(--bg-color);
+            color: var(--ink);
+            font-family: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            transition: all 0.2s;
+            text-align: right;
+        }
+        .date-display:hover { border-color: var(--pink); }
+        .date-display.open { border-color: var(--pink); box-shadow: 0 0 0 3px var(--pink-soft); }
+        .date-display .date-value { font-weight: 600; }
+        .date-display .date-value.empty { color: var(--muted); font-weight: 400; }
+        .date-display svg {
+            width: 16px; height: 16px;
+            fill: none; stroke: var(--muted); stroke-width: 2;
+            stroke-linecap: round; stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+        .date-picker {
+            position: absolute;
+            top: calc(100% + 6px);
+            right: 0;
+            left: 0;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            padding: 14px;
+            z-index: 20;
+            display: none;
+        }
+        [data-theme="dark"] .date-picker {
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+        .date-picker.open { display: block; }
+
+        .dp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        .dp-nav {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--muted);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            transition: all 0.2s;
+        }
+        .dp-nav:hover { border-color: var(--pink); color: var(--pink); }
+        .dp-nav svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .dp-nav:disabled { opacity: 0.3; cursor: not-allowed; }
+
+        .dp-month-year {
+            flex: 1;
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            align-items: center;
+        }
+        .dp-select {
+            padding: 5px 8px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--surface);
+            color: var(--ink);
+            font-family: inherit;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .dp-select:focus { outline: none; border-color: var(--pink); }
+
+        .dp-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+            margin-bottom: 6px;
+        }
+        .dp-weekday {
+            text-align: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--muted);
+            padding: 4px 0;
+        }
+
+        .dp-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+        }
+        .dp-day {
+            aspect-ratio: 1;
+            border-radius: 8px;
+            border: none;
+            background: transparent;
+            color: var(--ink);
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s;
+            padding: 0;
+        }
+        .dp-day:hover:not(:disabled):not(.selected) {
+            background: var(--pink-soft);
+            color: var(--pink);
+        }
+        .dp-day.today {
+            border: 1.5px solid var(--pink);
+            color: var(--pink);
+            font-weight: 800;
+        }
+        .dp-day.selected {
+            background: var(--pink);
+            color: #fff;
+            font-weight: 800;
+        }
+        .dp-day.other-month { color: var(--muted); opacity: 0.35; }
+        .dp-day:disabled { cursor: default; }
+
+        .dp-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 6px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--line);
+        }
+        .dp-quick {
+            padding: 5px 10px;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--muted);
+            font-family: inherit;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .dp-quick:hover { border-color: var(--pink); color: var(--pink); background: var(--pink-soft); }
+
         .modal-actions {
             display: flex;
             gap: 10px;
@@ -422,6 +585,7 @@
         @media (max-width: 480px) {
             .form-row { grid-template-columns: 1fr; }
             .header-actions { width: 100%; justify-content: space-between; }
+            .delete-btn { opacity: 1; }
         }
     </style>
 </head>
@@ -450,6 +614,10 @@
                 </div>
             </div>
             <div class="header-actions">
+                <a href="./index.html" class="btn" title="صفحه اصلی">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    خانه
+                </a>
                 <button class="btn primary" id="addExamBtn">
                     <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     افزودن امتحان
@@ -474,16 +642,14 @@
         </div>
 
         <!-- گرید امتحانات -->
-        <div class="schedule-grid" id="scheduleGrid">
-            <!-- با JS پر می‌شود -->
-        </div>
+        <div class="schedule-grid" id="scheduleGrid"></div>
 
         <footer>
             طراحی شده تحت مدیریت <strong>Quizly</strong> · تمامی حقوق محفوظ است.
         </footer>
     </div>
 
-    <!-- ---------- MODAL افزودن امتحان ---------- -->
+    <!-- ---------- MODAL ---------- -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal">
             <h3>افزودن امتحان جدید</h3>
@@ -497,8 +663,42 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>تاریخ (شمسی) <span class="req">*</span></label>
-                        <input type="text" id="fDate" placeholder="مثلاً: 1405-09-15" required pattern="\d{4}-\d{2}-\d{2}">
+                        <label>تاریخ <span class="req">*</span></label>
+                        <div class="date-picker-wrapper">
+                            <div class="date-display" id="dateDisplay" tabindex="0" role="button">
+                                <span class="date-value empty" id="dateValue">انتخاب تاریخ</span>
+                                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            </div>
+                            <div class="date-picker" id="datePicker">
+                                <div class="dp-header">
+                                    <button type="button" class="dp-nav" id="dpPrevMonth" title="ماه قبل">
+                                        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                    </button>
+                                    <div class="dp-month-year">
+                                        <select class="dp-select" id="dpMonth"></select>
+                                        <select class="dp-select" id="dpYear"></select>
+                                    </div>
+                                    <button type="button" class="dp-nav" id="dpNextMonth" title="ماه بعد">
+                                        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                    </button>
+                                </div>
+                                <div class="dp-weekdays">
+                                    <div class="dp-weekday">ش</div>
+                                    <div class="dp-weekday">ی</div>
+                                    <div class="dp-weekday">د</div>
+                                    <div class="dp-weekday">س</div>
+                                    <div class="dp-weekday">چ</div>
+                                    <div class="dp-weekday">پ</div>
+                                    <div class="dp-weekday">ج</div>
+                                </div>
+                                <div class="dp-days" id="dpDays"></div>
+                                <div class="dp-footer">
+                                    <button type="button" class="dp-quick" id="dpToday">امروز</button>
+                                    <button type="button" class="dp-quick" id="dpClear">پاک کردن</button>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="fDate" required>
                     </div>
                     <div class="form-group">
                         <label>ساعت <span class="req">*</span></label>
@@ -608,6 +808,21 @@
             return { jy, jm, jd };
         }
 
+        function isLeapJalali(jy) {
+            return ((jy + 12) % 33) % 4 === 1;
+        }
+
+        function jalaliMonthDays(jy, jm) {
+            if (jm <= 6) return 31;
+            if (jm <= 11) return 30;
+            return isLeapJalali(jy) ? 30 : 29;
+        }
+
+        function jalaliFirstWeekday(jy, jm) {
+            const g = jalaliToGregorian(jy, jm, 1);
+            return (g.getDay() + 1) % 7;
+        }
+
         const jalaliMonths = ['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
         const weekdays = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
 
@@ -617,6 +832,10 @@
 
         function formatJalaliStr(jy, jm, jd) {
             return `${toPersianDigits(jd)} ${jalaliMonths[jm - 1]}`;
+        }
+
+        function formatJalaliFull(jy, jm, jd) {
+            return `${toPersianDigits(jd)} ${jalaliMonths[jm - 1]} ${toPersianDigits(jy)}`;
         }
 
         /* ============ داده‌های پیش‌فرض ============ */
@@ -654,32 +873,53 @@
         ];
 
         const STORAGE_KEY = 'quizly_exams_v1';
+        const HIDDEN_DEFAULTS_KEY = 'quizly_hidden_defaults_v1';
 
         function loadUserExams() {
             try {
                 const raw = localStorage.getItem(STORAGE_KEY);
                 return raw ? JSON.parse(raw) : [];
-            } catch (e) {
-                return [];
-            }
+            } catch (e) { return []; }
         }
 
         function saveUserExams(exams) {
             localStorage.setItem(STORAGE_KEY, JSON.stringify(exams));
         }
 
-        let userExams = loadUserExams();
-
-        /* ============ رندر کارت‌ها ============ */
-        function getAllExams() {
-            return [...DEFAULT_EXAMS, ...userExams];
+        function loadHiddenDefaults() {
+            try {
+                const raw = localStorage.getItem(HIDDEN_DEFAULTS_KEY);
+                return raw ? JSON.parse(raw) : [];
+            } catch (e) { return []; }
         }
 
+        function saveHiddenDefaults(ids) {
+            localStorage.setItem(HIDDEN_DEFAULTS_KEY, JSON.stringify(ids));
+        }
+
+        let userExams = loadUserExams();
+        let hiddenDefaults = loadHiddenDefaults();
+
+        function getAllExams() {
+            const visibleDefaults = DEFAULT_EXAMS.filter(d => !hiddenDefaults.includes(d.id));
+            return [...visibleDefaults, ...userExams];
+        }
+
+        /* ============ رندر کارت‌ها ============ */
         function renderCards() {
             const grid = document.getElementById('scheduleGrid');
             grid.innerHTML = '';
 
             const allExams = getAllExams();
+
+            if (allExams.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align:center; padding: 40px 20px; color: var(--muted);">
+                        <p>هیچ امتحانی ثبت نشده. با دکمه «افزودن امتحان» اولین امتحان را اضافه کن.</p>
+                    </div>
+                `;
+                return;
+            }
 
             allExams.forEach(exam => {
                 const [jy, jm, jd] = exam.date.split('-').map(Number);
@@ -710,9 +950,9 @@
                 card.className = `day-card ${cardClass}`;
                 card.dataset.examId = exam.id;
 
-                // دکمه حذف فقط برای امتحان‌های کاربر
-                const deleteBtn = exam.isDefault ? '' : `
-                    <button class="delete-btn" data-delete-id="${exam.id}" title="حذف امتحان">
+                // دکمه حذف برای همه امتحان‌ها
+                const deleteBtn = `
+                    <button class="delete-btn" data-delete-id="${exam.id}" data-is-default="${exam.isDefault ? '1' : '0'}" title="حذف امتحان">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="3 6 5 6 21 6"></polyline>
                             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -720,7 +960,6 @@
                     </button>
                 `;
 
-                // جزئیات اضافی
                 let detailsHTML = '';
                 if (exam.method) {
                     detailsHTML += `<span class="method-badge">${exam.method}</span>`;
@@ -759,11 +998,17 @@
                 btn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     const id = btn.dataset.deleteId;
-                    if (confirm('این امتحان حذف شود؟')) {
+                    const isDefault = btn.dataset.isDefault === '1';
+                    if (!confirm('این امتحان حذف شود؟')) return;
+
+                    if (isDefault) {
+                        hiddenDefaults.push(id);
+                        saveHiddenDefaults(hiddenDefaults);
+                    } else {
                         userExams = userExams.filter(ex => ex.id !== id);
                         saveUserExams(userExams);
-                        renderCards();
                     }
+                    renderCards();
                 });
             });
         }
@@ -772,49 +1017,199 @@
         function updateToday() {
             const now = new Date();
             const j = gregorianToJalali(now.getFullYear(), now.getMonth() + 1, now.getDate());
-            const dayName = weekdays[now.getDay()];
             document.getElementById('todayText').textContent =
-                `امروز: ${dayName} — ${toPersianDigits(j.jd)} ${jalaliMonths[j.jm - 1]} ${toPersianDigits(j.jy)}`;
+                `امروز: ${weekdays[now.getDay()]} — ${toPersianDigits(j.jd)} ${jalaliMonths[j.jm - 1]} ${toPersianDigits(j.jy)}`;
         }
+
+        /* ============ DATE PICKER ============ */
+        const dateDisplay = document.getElementById('dateDisplay');
+        const dateValue = document.getElementById('dateValue');
+        const datePicker = document.getElementById('datePicker');
+        const dpMonth = document.getElementById('dpMonth');
+        const dpYear = document.getElementById('dpYear');
+        const dpDays = document.getElementById('dpDays');
+        const dpPrevMonth = document.getElementById('dpPrevMonth');
+        const dpNextMonth = document.getElementById('dpNextMonth');
+        const dpToday = document.getElementById('dpToday');
+        const dpClear = document.getElementById('dpClear');
+        const hiddenDate = document.getElementById('fDate');
+
+        let selectedDate = null;
+        let viewYear, viewMonth;
+
+        jalaliMonths.forEach((name, i) => {
+            const opt = document.createElement('option');
+            opt.value = i + 1;
+            opt.textContent = name;
+            dpMonth.appendChild(opt);
+        });
+
+        for (let y = 1400; y <= 1410; y++) {
+            const opt = document.createElement('option');
+            opt.value = y;
+            opt.textContent = toPersianDigits(y);
+            dpYear.appendChild(opt);
+        }
+
+        function todayJalali() {
+            const now = new Date();
+            return gregorianToJalali(now.getFullYear(), now.getMonth() + 1, now.getDate());
+        }
+
+        function openPicker() {
+            const today = todayJalali();
+            if (selectedDate) {
+                viewYear = selectedDate.jy;
+                viewMonth = selectedDate.jm;
+            } else {
+                viewYear = today.jy;
+                viewMonth = today.jm;
+            }
+            dpMonth.value = viewMonth;
+            dpYear.value = viewYear;
+            renderDays();
+            datePicker.classList.add('open');
+            dateDisplay.classList.add('open');
+        }
+
+        function closePicker() {
+            datePicker.classList.remove('open');
+            dateDisplay.classList.remove('open');
+        }
+
+        function renderDays() {
+            const today = todayJalali();
+            const firstWeekday = jalaliFirstWeekday(viewYear, viewMonth);
+            const monthDays = jalaliMonthDays(viewYear, viewMonth);
+            const prevMonth = viewMonth === 1 ? 12 : viewMonth - 1;
+            const prevYear = viewMonth === 1 ? viewYear - 1 : viewYear;
+            const prevDays = jalaliMonthDays(prevYear, prevMonth);
+
+            dpDays.innerHTML = '';
+
+            for (let i = 0; i < firstWeekday; i++) {
+                const dayNum = prevDays - firstWeekday + i + 1;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'dp-day other-month';
+                btn.textContent = toPersianDigits(dayNum);
+                btn.disabled = true;
+                dpDays.appendChild(btn);
+            }
+
+            for (let d = 1; d <= monthDays; d++) {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'dp-day';
+                btn.textContent = toPersianDigits(d);
+
+                if (viewYear === today.jy && viewMonth === today.jm && d === today.jd) {
+                    btn.classList.add('today');
+                }
+                if (selectedDate && selectedDate.jy === viewYear && selectedDate.jm === viewMonth && selectedDate.jd === d) {
+                    btn.classList.add('selected');
+                }
+
+                btn.addEventListener('click', () => {
+                    selectDate(viewYear, viewMonth, d);
+                });
+                dpDays.appendChild(btn);
+            }
+        }
+
+        function selectDate(jy, jm, jd) {
+            selectedDate = { jy, jm, jd };
+            hiddenDate.value = `${jy}-${String(jm).padStart(2, '0')}-${String(jd).padStart(2, '0')}`;
+            dateValue.textContent = formatJalaliFull(jy, jm, jd);
+            dateValue.classList.remove('empty');
+            closePicker();
+        }
+
+        dateDisplay.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (datePicker.classList.contains('open')) closePicker();
+            else openPicker();
+        });
+        dateDisplay.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPicker(); }
+            if (e.key === 'Escape') closePicker();
+        });
+        datePicker.addEventListener('click', (e) => e.stopPropagation());
+        document.addEventListener('click', () => closePicker());
+
+        dpMonth.addEventListener('change', () => { viewMonth = parseInt(dpMonth.value); renderDays(); });
+        dpYear.addEventListener('change', () => { viewYear = parseInt(dpYear.value); renderDays(); });
+
+        dpPrevMonth.addEventListener('click', () => {
+            if (viewMonth === 1) { viewMonth = 12; viewYear--; }
+            else viewMonth--;
+            dpMonth.value = viewMonth;
+            dpYear.value = viewYear;
+            renderDays();
+        });
+        dpNextMonth.addEventListener('click', () => {
+            if (viewMonth === 12) { viewMonth = 1; viewYear++; }
+            else viewMonth++;
+            dpMonth.value = viewMonth;
+            dpYear.value = viewYear;
+            renderDays();
+        });
+
+        dpToday.addEventListener('click', () => {
+            const t = todayJalali();
+            viewYear = t.jy;
+            viewMonth = t.jm;
+            dpMonth.value = viewMonth;
+            dpYear.value = viewYear;
+            selectDate(t.jy, t.jm, t.jd);
+        });
+
+        dpClear.addEventListener('click', () => {
+            selectedDate = null;
+            hiddenDate.value = '';
+            dateValue.textContent = 'انتخاب تاریخ';
+            dateValue.classList.add('empty');
+            closePicker();
+        });
 
         /* ============ MODAL ============ */
         const modalOverlay = document.getElementById('modalOverlay');
         const examForm = document.getElementById('examForm');
-        const addExamBtn = document.getElementById('addExamBtn');
-        const cancelBtn = document.getElementById('cancelBtn');
 
-        addExamBtn.addEventListener('click', () => {
+        document.getElementById('addExamBtn').addEventListener('click', () => {
             examForm.reset();
+            const t = todayJalali();
+            selectDate(t.jy, t.jm, t.jd);
+            closePicker();
             modalOverlay.classList.add('active');
         });
 
-        cancelBtn.addEventListener('click', () => {
+        document.getElementById('cancelBtn').addEventListener('click', () => {
             modalOverlay.classList.remove('active');
         });
 
         modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) {
-                modalOverlay.classList.remove('active');
-            }
+            if (e.target === modalOverlay) modalOverlay.classList.remove('active');
         });
 
         examForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
+            if (!hiddenDate.value) {
+                alert('لطفاً تاریخ امتحان را انتخاب کنید.');
+                return;
+            }
             const newExam = {
                 id: 'user-' + Date.now(),
                 name: document.getElementById('fName').value.trim(),
-                date: document.getElementById('fDate').value.trim(),
+                date: hiddenDate.value,
                 time: document.getElementById('fTime').value.trim(),
                 type: document.getElementById('fType').value,
                 method: document.getElementById('fMethod').value,
                 note: document.getElementById('fNote').value.trim(),
                 isDefault: false
             };
-
             userExams.push(newExam);
             saveUserExams(userExams);
-
             modalOverlay.classList.remove('active');
             renderCards();
         });
@@ -823,7 +1218,6 @@
         updateToday();
         renderCards();
 
-        // چک کردن تغییر روز
         let lastDay = new Date().getDate();
         setInterval(() => {
             if (new Date().getDate() !== lastDay) {
