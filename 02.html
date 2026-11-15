@@ -21,6 +21,8 @@
             --green-soft: #e3f7ef;
             --danger: #ef4444;
             --danger-soft: #ffe3ea;
+            --amber: #b26a00;
+            --amber-soft: #fff3d6;
             --shadow: 0 18px 45px rgba(115, 38, 67, 0.08);
             --shadow-hover: 0 22px 55px rgba(115, 38, 67, 0.15);
         }
@@ -35,15 +37,12 @@
             --pink-soft: #39202c;
             --danger-soft: #3c1828;
             --green-soft: #163a2d;
+            --amber-soft: #3a2a0f;
             --shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
             --shadow-hover: 0 22px 55px rgba(0, 0, 0, 0.6);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Vazirmatn', Tahoma, sans-serif;
@@ -56,11 +55,7 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .app-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .app-container { max-width: 1100px; margin: 0 auto; padding: 20px; }
 
         header {
             display: flex;
@@ -69,76 +64,60 @@
             padding: 15px 0;
             margin-bottom: 30px;
             border-bottom: 1px solid var(--line);
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+        .brand { display: flex; align-items: center; gap: 12px; }
 
         .logo-container {
-            width: 55px;
-            height: 55px;
+            width: 55px; height: 55px;
             background: rgba(249, 71, 121, 0.1);
             border-radius: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex; justify-content: center; align-items: center;
             border: 1px solid rgba(249, 71, 121, 0.2);
             box-shadow: var(--shadow);
             overflow: hidden;
         }
-
-        .logo-container svg {
-            width: 45px;
-            height: auto;
-        }
+        .logo-container svg { width: 45px; height: auto; }
 
         .brand-text h1 {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--pink);
-            letter-spacing: -0.5px;
-            margin-bottom: 2px;
+            font-size: 1.5rem; font-weight: 900;
+            color: var(--pink); letter-spacing: -0.5px; margin-bottom: 2px;
         }
+        .brand-text p { font-size: 0.85rem; color: var(--muted); }
 
-        .brand-text p {
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
+        .header-actions { display: flex; align-items: center; gap: 10px; }
 
-        .theme-btn {
-            background: var(--surface);
-            color: var(--ink);
+        .btn {
+            background: var(--surface); color: var(--ink);
             border: 1px solid var(--line);
-            padding: 8px 16px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-family: inherit;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            padding: 8px 16px; border-radius: 12px;
+            cursor: pointer; font-family: inherit; font-weight: 700; font-size: 0.9rem;
+            transition: all 0.2s; box-shadow: var(--shadow);
+            display: flex; align-items: center; gap: 8px;
         }
+        .btn:hover { border-color: var(--pink); transform: translateY(-2px); }
 
-        .theme-btn:hover {
-            border-color: var(--pink);
-            transform: translateY(-2px);
+        .btn.primary {
+            background: linear-gradient(135deg, #f94779, #ff7fa0);
+            color: white;
+            border: none;
         }
+        .btn.primary:hover { box-shadow: 0 10px 25px rgba(249, 71, 121, 0.4); }
+
+        .btn.danger {
+            color: var(--danger);
+            border-color: var(--danger-soft);
+            padding: 6px 10px;
+            font-size: 0.78rem;
+        }
+        .btn.danger:hover { background: var(--danger-soft); border-color: var(--danger); }
 
         .icon {
-            width: 18px;
-            height: 18px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            flex-shrink: 0;
+            width: 18px; height: 18px;
+            fill: none; stroke: currentColor; stroke-width: 2;
+            stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0;
         }
 
         .hero {
@@ -147,59 +126,46 @@
             padding: 35px 25px;
             border-radius: 24px;
             box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 30px;
+            position: relative; overflow: hidden;
+            margin-bottom: 24px;
         }
-
         .hero::before {
             content: "";
-            position: absolute;
-            left: -20px;
-            bottom: -30px;
-            width: 160px;
-            height: 160px;
+            position: absolute; left: -20px; bottom: -30px;
+            width: 160px; height: 160px;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 11l3 3L22 4'/%3E%3Cpath d='M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11'/%3E%3C/svg%3E");
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: 0.1;
-            transform: rotate(-15deg);
+            background-size: contain; background-repeat: no-repeat;
+            opacity: 0.1; transform: rotate(-15deg);
         }
+        .hero h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 10px; }
+        .hero p { font-size: 1rem; opacity: 0.9; }
+        .hero p + p { margin-top: 6px; font-size: 0.92rem; opacity: 0.85; }
 
-        .hero h2 {
-            font-size: 1.8rem;
-            font-weight: 900;
-            margin-bottom: 10px;
+        .today-bar {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 12px 18px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--muted);
+            box-shadow: var(--shadow);
         }
+        .today-bar .icon { color: var(--pink); }
 
-        .hero p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        .hero p + p {
-            margin-top: 6px;
-            font-size: 0.92rem;
-            opacity: 0.85;
-        }
-
+        /* ---------- SCHEDULE ---------- */
         .schedule-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
         }
 
-        @media (min-width: 768px) {
-            .schedule-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .schedule-grid {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
+        @media (min-width: 768px) { .schedule-grid { grid-template-columns: 1fr 1fr; } }
+        @media (min-width: 1024px) { .schedule-grid { grid-template-columns: 1fr 1fr 1fr; } }
 
         .day-card {
             background: var(--surface);
@@ -210,15 +176,17 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
+        .day-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
 
-        .day-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
+        .day-card.finished {
+            opacity: 0.55;
+            filter: grayscale(0.7);
         }
-
-        .day-card.completed {
-            opacity: 0.85;
+        .day-card.finished:hover {
+            transform: none;
+            box-shadow: var(--shadow);
         }
 
         .day-header {
@@ -232,40 +200,33 @@
             flex-wrap: wrap;
         }
 
-        .day-title {
-            font-size: 1.4rem;
-            font-weight: 900;
-            color: var(--ink);
-        }
+        .day-title { font-size: 1.4rem; font-weight: 900; color: var(--ink); }
 
-        .day-badge {
-            background: var(--pink-soft);
-            color: var(--pink);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
+        .status-tag {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
         }
-
-        .day-badge.danger {
-            background: var(--danger-soft);
-            color: var(--danger);
-        }
-
-        .day-badge.success {
+        .status-tag.done {
             background: var(--green-soft);
             color: var(--green);
         }
-
-        .class-list {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            flex: 1;
+        .status-tag.remaining {
+            background: var(--amber-soft);
+            color: var(--amber);
         }
+        [data-theme="dark"] .status-tag.remaining { color: #ffc857; }
+        .status-tag.today {
+            background: var(--pink-soft);
+            color: var(--pink);
+        }
+
+        .class-list { display: flex; flex-direction: column; gap: 15px; flex: 1; }
 
         .class-item {
             background: var(--surface-hover);
@@ -277,27 +238,17 @@
             gap: 10px;
             transition: all 0.2s ease;
             flex: 1;
+            position: relative;
         }
-
-        .class-item:hover {
-            transform: scale(1.01);
-        }
-
         .class-item.exam {
             border-right-color: var(--purple);
             background: linear-gradient(to left, var(--surface-hover) 40%, #ede8ff);
         }
-
         [data-theme="dark"] .class-item.exam {
             background: linear-gradient(to left, var(--surface-hover) 40%, #2e1e4a);
         }
-
         .class-item.done {
             border-right-color: var(--green);
-            background: linear-gradient(to left, var(--surface-hover) 40%, var(--green-soft));
-        }
-
-        [data-theme="dark"] .class-item.done {
             background: linear-gradient(to left, var(--surface-hover) 40%, var(--green-soft));
         }
 
@@ -310,36 +261,19 @@
         }
 
         .class-time {
-            font-weight: 900;
-            color: var(--pink);
-            font-size: 1rem;
-            direction: ltr;
-            background: var(--surface);
-            padding: 4px 10px;
-            border-radius: 10px;
+            font-weight: 900; color: var(--pink); font-size: 1rem;
+            direction: ltr; background: var(--surface);
+            padding: 4px 10px; border-radius: 10px;
             border: 1px solid var(--line);
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            display: flex; align-items: center; gap: 6px;
         }
-
-        .class-item.exam .class-time {
-            color: var(--purple);
-            border-color: #d5c8ff;
-        }
-
-        .class-item.done .class-time {
-            color: var(--green);
-            border-color: var(--green-soft);
-        }
+        .class-item.exam .class-time { color: var(--purple); border-color: #d5c8ff; }
+        .class-item.done .class-time { color: var(--green); border-color: var(--green-soft); }
 
         .class-name {
-            font-weight: 900;
-            font-size: 1.15rem;
-            color: var(--ink);
-            margin-top: 4px;
+            font-weight: 900; font-size: 1.15rem;
+            color: var(--ink); margin-top: 4px;
         }
-
         .class-item.done .class-name {
             text-decoration: line-through;
             text-decoration-color: var(--green);
@@ -348,91 +282,146 @@
         }
 
         .class-details {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            font-size: 0.85rem;
-            color: var(--muted);
+            display: flex; flex-wrap: wrap;
+            gap: 8px; font-size: 0.85rem; color: var(--muted);
         }
 
         .detail-tag {
             background: var(--surface);
-            padding: 4px 10px;
-            border-radius: 8px;
+            padding: 4px 10px; border-radius: 8px;
             border: 1px solid var(--line);
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .exam-badge {
-            color: var(--purple);
-            font-size: 0.8rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: #ede8ff;
-            padding: 3px 8px;
-            border-radius: 6px;
-        }
-
-        [data-theme="dark"] .exam-badge {
-            background: #2e1e4a;
+            display: inline-flex; align-items: center; gap: 5px;
         }
 
         .method-badge {
-            color: var(--green);
-            font-size: 0.8rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: var(--green-soft);
-            padding: 3px 8px;
-            border-radius: 6px;
+            color: var(--green); font-size: 0.8rem; font-weight: 700;
+            display: inline-flex; align-items: center; gap: 5px;
+            background: var(--green-soft); padding: 3px 8px; border-radius: 6px;
         }
 
         .midterm-badge {
-            color: #b26a00;
-            font-size: 0.8rem;
-            font-weight: 700;
-            display: inline-flex;
+            color: var(--amber); font-size: 0.8rem; font-weight: 700;
+            display: inline-flex; align-items: center; gap: 5px;
+            background: var(--amber-soft); padding: 3px 8px; border-radius: 6px;
+        }
+        [data-theme="dark"] .midterm-badge { color: #ffc857; }
+
+        .delete-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            border: 1px solid var(--danger-soft);
+            background: var(--surface);
+            color: var(--danger);
+            cursor: pointer;
+            display: flex;
             align-items: center;
-            gap: 5px;
-            background: #fff3d6;
-            padding: 3px 8px;
-            border-radius: 6px;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.2s;
+            padding: 0;
+        }
+        .day-card:hover .delete-btn { opacity: 1; }
+        .delete-btn:hover { background: var(--danger-soft); border-color: var(--danger); }
+        .delete-btn svg { width: 14px; height: 14px; }
+
+        /* ---------- MODAL ---------- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            padding: 20px;
+        }
+        .modal-overlay.active { display: flex; }
+
+        .modal {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 28px;
+            max-width: 520px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--line);
         }
 
-        [data-theme="dark"] .midterm-badge {
-            color: #ffc857;
-            background: #3a2a0f;
+        .modal h3 {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--ink);
+            margin-bottom: 6px;
+        }
+        .modal p.subtitle {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 22px;
         }
 
-        .done-badge {
-            color: var(--green);
-            font-size: 0.8rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: var(--green-soft);
-            padding: 3px 8px;
-            border-radius: 6px;
+        .form-group {
+            margin-bottom: 16px;
         }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 6px;
+        }
+        .form-group label .req { color: var(--danger); }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: var(--bg-color);
+            color: var(--ink);
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--pink);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 24px;
+        }
+        .modal-actions .btn { flex: 1; justify-content: center; }
 
         footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
+            text-align: center; margin-top: 50px; padding-top: 20px;
             border-top: 1px solid var(--line);
-            color: var(--muted);
-            font-size: 0.9rem;
+            color: var(--muted); font-size: 0.9rem;
         }
+        footer strong { color: var(--pink); }
 
-        footer strong {
-            color: var(--pink);
+        @media (max-width: 480px) {
+            .form-row { grid-template-columns: 1fr; }
+            .header-actions { width: 100%; justify-content: space-between; }
         }
     </style>
 </head>
@@ -460,10 +449,16 @@
                     <p>برنامه امتحانی</p>
                 </div>
             </div>
-            <button class="theme-btn" id="themeToggle">
-                <svg class="icon" id="themeIcon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                <span id="themeText">تم شب</span>
-            </button>
+            <div class="header-actions">
+                <button class="btn primary" id="addExamBtn">
+                    <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    افزودن امتحان
+                </button>
+                <button class="btn" id="themeToggle">
+                    <svg class="icon" id="themeIcon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <span id="themeText">تم شب</span>
+                </button>
+            </div>
         </header>
 
         <!-- بخش اصلی -->
@@ -472,130 +467,80 @@
             <p>تمامی امتحانات میان‌ترم و پایان‌ترم در این قسمت قابل مشاهده است.</p>
         </section>
 
-        <!-- گرید امتحانات -->
-        <div class="schedule-grid">
-
-            <!-- میان‌ترم: مشاوره بهداشت روانی (انجام‌شده) -->
-            <div class="day-card completed">
-                <div class="day-header">
-                    <div class="day-title">۲۰ آبان</div>
-                    <div class="day-badge success">
-                        <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        انجام شد
-                    </div>
-                </div>
-                <div class="class-list">
-                    <div class="class-item done">
-                        <div class="time-row">
-                            <span class="class-time">
-                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                میان‌ترم
-                            </span>
-                            <span class="done-badge">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                انجام شد
-                            </span>
-                        </div>
-                        <div class="class-name">مشاوره بهداشت روانی</div>
-                        <div class="class-details">
-                            <span class="midterm-badge">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                                میان‌ترم
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- میان‌ترم: سنجش و اندازه‌گیری -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-title">۱۱ آذر</div>
-                    <div class="day-badge danger">
-                        <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                        امتحان
-                    </div>
-                </div>
-                <div class="class-list">
-                    <div class="class-item exam">
-                        <div class="time-row">
-                            <span class="class-time">
-                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                ۰۸:۳۰ صبح
-                            </span>
-                            <span class="exam-badge">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                                امتحان
-                            </span>
-                        </div>
-                        <div class="class-name">سنجش و اندازه‌گیری در مشاوره</div>
-                        <div class="class-details">
-                            <span class="detail-tag">
-                                <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                                فصول ۱، ۵ و ۹
-                            </span>
-                            <span class="method-badge">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-                                تشریحی
-                            </span>
-                            <span class="method-badge">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                حضوری
-                            </span>
-                            <span class="midterm-badge">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                                میان‌ترم
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- میان‌ترم: مشاوره سالمندان -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-title">۷ آذر</div>
-                    <div class="day-badge danger">
-                        <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                        امتحان
-                    </div>
-                </div>
-                <div class="class-list">
-                    <div class="class-item exam">
-                        <div class="time-row">
-                            <span class="class-time">
-                                <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                ۰۱:۳۰ بعدازظهر
-                            </span>
-                            <span class="exam-badge">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                                امتحان
-                            </span>
-                        </div>
-                        <div class="class-name">مشاوره سالمندان</div>
-                        <div class="class-details">
-                            <span class="method-badge">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
-                                ریلاین
-                            </span>
-                            <span class="midterm-badge">
-                                <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                                میان‌ترم
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <!-- تاریخ امروز -->
+        <div class="today-bar">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span id="todayText">در حال بارگذاری...</span>
         </div>
 
-        <!-- فوتر -->
+        <!-- گرید امتحانات -->
+        <div class="schedule-grid" id="scheduleGrid">
+            <!-- با JS پر می‌شود -->
+        </div>
+
         <footer>
             طراحی شده تحت مدیریت <strong>Quizly</strong> · تمامی حقوق محفوظ است.
         </footer>
     </div>
 
+    <!-- ---------- MODAL افزودن امتحان ---------- -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <h3>افزودن امتحان جدید</h3>
+            <p class="subtitle">اطلاعات امتحان را وارد کن. بعد از ذخیره، در برنامه نمایش داده می‌شود.</p>
+
+            <form id="examForm">
+                <div class="form-group">
+                    <label>نام درس <span class="req">*</span></label>
+                    <input type="text" id="fName" placeholder="مثلاً: مشاوره خانواده" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>تاریخ (شمسی) <span class="req">*</span></label>
+                        <input type="text" id="fDate" placeholder="مثلاً: 1405-09-15" required pattern="\d{4}-\d{2}-\d{2}">
+                    </div>
+                    <div class="form-group">
+                        <label>ساعت <span class="req">*</span></label>
+                        <input type="text" id="fTime" placeholder="مثلاً: ۰۸:۳۰ صبح" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>نوع امتحان <span class="req">*</span></label>
+                        <select id="fType" required>
+                            <option value="میان‌ترم">میان‌ترم</option>
+                            <option value="پایان‌ترم">پایان‌ترم</option>
+                            <option value="کوییز">کوییز</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>نوع برگزاری <span class="req">*</span></label>
+                        <select id="fMethod" required>
+                            <option value="حضوری">حضوری</option>
+                            <option value="ریلاین">ریلاین</option>
+                            <option value="آنلاین">آنلاین</option>
+                            <option value="تشریحی">تشریحی</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>توضیحات (اختیاری)</label>
+                    <input type="text" id="fNote" placeholder="مثلاً: فصول ۱ تا ۵">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn" id="cancelBtn">انصراف</button>
+                    <button type="submit" class="btn primary">ذخیره امتحان</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
+        /* ============ THEME ============ */
         const themeToggle = document.getElementById('themeToggle');
         const htmlElement = document.documentElement;
         const themeText = document.getElementById('themeText');
@@ -615,6 +560,278 @@
                 themeIcon.innerHTML = sunIcon;
             }
         });
+
+        /* ============ تاریخ ============ */
+        function jalaliToGregorian(jy, jm, jd) {
+            let gy = (jy <= 979) ? 621 : 1600;
+            jy -= (jy <= 979) ? 0 : 979;
+            let days = (365 * jy) + (Math.floor(jy / 33) * 8) + Math.floor(((jy % 33) + 3) / 4) + 78 + jd + ((jm < 7) ? (jm - 1) * 31 : ((jm - 7) * 30) + 186);
+            gy += 400 * Math.floor(days / 146097);
+            days %= 146097;
+            if (days > 36524) {
+                gy += 100 * Math.floor(--days / 36524);
+                days %= 36524;
+                if (days >= 365) days++;
+            }
+            gy += 4 * Math.floor(days / 1461);
+            days %= 1461;
+            if (days > 365) {
+                gy += Math.floor((days - 1) / 365);
+                days = (days - 1) % 365;
+            }
+            let gd = days + 1;
+            const sal_a = [0, 31, ((gy % 4 === 0 && gy % 100 !== 0) || (gy % 400 === 0)) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            let gm = 1;
+            for (gm = 1; gm <= 12; gm++) {
+                if (gd <= sal_a[gm]) break;
+                gd -= sal_a[gm];
+            }
+            return new Date(gy, gm - 1, gd);
+        }
+
+        function gregorianToJalali(gy, gm, gd) {
+            const g_d_m = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+            let jy = (gy <= 1600) ? 0 : 979;
+            gy -= (gy <= 1600) ? 621 : 1600;
+            const gy2 = (gm > 2) ? (gy + 1) : gy;
+            let days = (365 * gy) + Math.floor((gy2 + 3) / 4) - Math.floor((gy2 + 99) / 100) + Math.floor((gy2 + 399) / 400) - 80 + gd + g_d_m[gm - 1];
+            jy += 33 * Math.floor(days / 12053);
+            days %= 12053;
+            jy += 4 * Math.floor(days / 1461);
+            days %= 1461;
+            if (days > 365) {
+                jy += Math.floor((days - 1) / 365);
+                days = (days - 1) % 365;
+            }
+            const jm = (days < 186) ? 1 + Math.floor(days / 31) : 7 + Math.floor((days - 186) / 30);
+            const jd = 1 + ((days < 186) ? (days % 31) : ((days - 186) % 30));
+            return { jy, jm, jd };
+        }
+
+        const jalaliMonths = ['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+        const weekdays = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+
+        function toPersianDigits(num) {
+            return String(num).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+        }
+
+        function formatJalaliStr(jy, jm, jd) {
+            return `${toPersianDigits(jd)} ${jalaliMonths[jm - 1]}`;
+        }
+
+        /* ============ داده‌های پیش‌فرض ============ */
+        const DEFAULT_EXAMS = [
+            {
+                id: 'default-1',
+                name: 'مشاوره بهداشت روانی',
+                date: '1405-08-20',
+                time: 'میان‌ترم',
+                type: 'میان‌ترم',
+                method: '',
+                note: '',
+                isDefault: true
+            },
+            {
+                id: 'default-2',
+                name: 'مشاوره سالمندان',
+                date: '1405-09-07',
+                time: '۰۱:۳۰ بعدازظهر',
+                type: 'میان‌ترم',
+                method: 'ریلاین',
+                note: '',
+                isDefault: true
+            },
+            {
+                id: 'default-3',
+                name: 'سنجش و اندازه‌گیری در مشاوره',
+                date: '1405-09-11',
+                time: '۰۸:۳۰ صبح',
+                type: 'میان‌ترم',
+                method: 'حضوری',
+                note: 'فصول ۱، ۵ و ۹ — تشریحی',
+                isDefault: true
+            }
+        ];
+
+        const STORAGE_KEY = 'quizly_exams_v1';
+
+        function loadUserExams() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                return raw ? JSON.parse(raw) : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function saveUserExams(exams) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(exams));
+        }
+
+        let userExams = loadUserExams();
+
+        /* ============ رندر کارت‌ها ============ */
+        function getAllExams() {
+            return [...DEFAULT_EXAMS, ...userExams];
+        }
+
+        function renderCards() {
+            const grid = document.getElementById('scheduleGrid');
+            grid.innerHTML = '';
+
+            const allExams = getAllExams();
+
+            allExams.forEach(exam => {
+                const [jy, jm, jd] = exam.date.split('-').map(Number);
+                const examDate = jalaliToGregorian(jy, jm, jd);
+                const now = new Date();
+                const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                const diff = Math.round((examDate - todayMidnight) / (1000 * 60 * 60 * 24));
+
+                let statusClass, statusText, cardClass, itemClass;
+                if (diff < 0) {
+                    statusClass = 'done';
+                    statusText = 'تمام شده';
+                    cardClass = 'finished';
+                    itemClass = 'done';
+                } else if (diff === 0) {
+                    statusClass = 'today';
+                    statusText = 'امروز!';
+                    cardClass = '';
+                    itemClass = 'exam';
+                } else {
+                    statusClass = 'remaining';
+                    statusText = diff === 1 ? '۱ روز مانده' : `${toPersianDigits(diff)} روز مانده`;
+                    cardClass = '';
+                    itemClass = 'exam';
+                }
+
+                const card = document.createElement('div');
+                card.className = `day-card ${cardClass}`;
+                card.dataset.examId = exam.id;
+
+                // دکمه حذف فقط برای امتحان‌های کاربر
+                const deleteBtn = exam.isDefault ? '' : `
+                    <button class="delete-btn" data-delete-id="${exam.id}" title="حذف امتحان">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                    </button>
+                `;
+
+                // جزئیات اضافی
+                let detailsHTML = '';
+                if (exam.method) {
+                    detailsHTML += `<span class="method-badge">${exam.method}</span>`;
+                }
+                if (exam.type) {
+                    detailsHTML += `<span class="midterm-badge">${exam.type}</span>`;
+                }
+                if (exam.note) {
+                    detailsHTML += `<span class="detail-tag">${exam.note}</span>`;
+                }
+
+                card.innerHTML = `
+                    ${deleteBtn}
+                    <div class="day-header">
+                        <div class="day-title">${formatJalaliStr(jy, jm, jd)}</div>
+                        <span class="status-tag ${statusClass}">${statusText}</span>
+                    </div>
+                    <div class="class-list">
+                        <div class="class-item ${itemClass}">
+                            <div class="time-row">
+                                <span class="class-time">
+                                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    ${exam.time}
+                                </span>
+                            </div>
+                            <div class="class-name">${exam.name}</div>
+                            <div class="class-details">${detailsHTML}</div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            // اتصال دکمه‌های حذف
+            grid.querySelectorAll('[data-delete-id]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const id = btn.dataset.deleteId;
+                    if (confirm('این امتحان حذف شود؟')) {
+                        userExams = userExams.filter(ex => ex.id !== id);
+                        saveUserExams(userExams);
+                        renderCards();
+                    }
+                });
+            });
+        }
+
+        /* ============ تاریخ امروز ============ */
+        function updateToday() {
+            const now = new Date();
+            const j = gregorianToJalali(now.getFullYear(), now.getMonth() + 1, now.getDate());
+            const dayName = weekdays[now.getDay()];
+            document.getElementById('todayText').textContent =
+                `امروز: ${dayName} — ${toPersianDigits(j.jd)} ${jalaliMonths[j.jm - 1]} ${toPersianDigits(j.jy)}`;
+        }
+
+        /* ============ MODAL ============ */
+        const modalOverlay = document.getElementById('modalOverlay');
+        const examForm = document.getElementById('examForm');
+        const addExamBtn = document.getElementById('addExamBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+
+        addExamBtn.addEventListener('click', () => {
+            examForm.reset();
+            modalOverlay.classList.add('active');
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            modalOverlay.classList.remove('active');
+        });
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('active');
+            }
+        });
+
+        examForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const newExam = {
+                id: 'user-' + Date.now(),
+                name: document.getElementById('fName').value.trim(),
+                date: document.getElementById('fDate').value.trim(),
+                time: document.getElementById('fTime').value.trim(),
+                type: document.getElementById('fType').value,
+                method: document.getElementById('fMethod').value,
+                note: document.getElementById('fNote').value.trim(),
+                isDefault: false
+            };
+
+            userExams.push(newExam);
+            saveUserExams(userExams);
+
+            modalOverlay.classList.remove('active');
+            renderCards();
+        });
+
+        /* ============ INIT ============ */
+        updateToday();
+        renderCards();
+
+        // چک کردن تغییر روز
+        let lastDay = new Date().getDate();
+        setInterval(() => {
+            if (new Date().getDate() !== lastDay) {
+                lastDay = new Date().getDate();
+                updateToday();
+                renderCards();
+            }
+        }, 60 * 1000);
     </script>
 </body>
 </html>
