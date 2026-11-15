@@ -66,8 +66,12 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.05);
   flex-shrink: 0;
+  overflow: hidden;
 }
-.logo { width: 40px; height: auto; border-radius: 8px; }
+.logo-wrap svg {
+  width: 45px;
+  height: auto;
+}
 
 .header-title h1 { font-size: 1.2rem; color: var(--text); font-weight: 800; }
 .header-title p { margin-top: 4px; color: var(--muted); font-size: 0.8rem; }
@@ -106,7 +110,7 @@ body {
   margin-top: 2px;
 }
 
-/* دکمه‌های برنامه و ژورنال */
+/* دکمه‌های برنامه و ژورنال و امتحان */
 .header-actions { display: flex; gap: 8px; align-items: center; }
 .nav-btn {
   display: flex; align-items: center; gap: 6px;
@@ -231,7 +235,7 @@ footer { width: 100%; max-width: var(--maxw); text-align: center; color: var(--m
 @media (max-width: 480px) {
   .header { padding: 12px; }
   .logo-wrap { width: 45px; height: 45px; }
-  .logo { width: 30px; }
+  .logo-wrap svg { width: 36px; }
   .header-title h1 { font-size: 0.95rem; }
   .header-title p { font-size: 0.7rem; }
   .menu-card { padding: 14px; gap: 12px; }
@@ -248,7 +252,24 @@ footer { width: 100%; max-width: var(--maxw); text-align: center; color: var(--m
 <header class="header" role="banner">
   <div class="header-right">
       <div class="logo-wrap">
-        <img class="logo" src="https://cdn.imgurl.ir/uploads/j893448_Quizly.png" alt="Quizly Logo" loading="lazy">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220">
+          <g transform="rotate(15, 135, 145)">
+            <!-- ۱. کمان اصلی -->
+            <circle cx="100" cy="100" r="65" fill="none" stroke="#FF3366" stroke-width="19" stroke-dasharray="385 385" stroke-dashoffset="-38" />
+            <!-- ۲. بدنه (مثلث با هلال پایینی) -->
+            <path d="M 90 100 L 145 130 Q 170 185 60 150 Z" fill="#FF3366" />
+            <!-- ۳. سر (دایره بالای مثلث) -->
+            <circle cx="100" cy="95" r="25" fill="#FF3366" />
+            <!-- ۴. نقطه پایانی -->
+            <circle cx="200" cy="115" r="18" fill="#FF3366" />
+            <!-- ۵. خط کوتاه -->
+            <line x1="100" y1="120" x2="120" y2="124" stroke="#FF3366" stroke-width="8" stroke-linecap="butt" />
+            <!-- ۶. پر کردن شکاف -->
+            <path d="M 145 130 L 160 143 L 153 150 Z" fill="#FF3366" />
+            <!-- ۷. قاچ پایینی -->
+            <path d="M 108 113 L 170 123 A 74.5 74.5 0 0 1 153 153 Z" fill="#FF3366" />
+          </g>
+        </svg>
       </div>
       <div class="header-title">
         <h1>Quizly — دروس ترم پاییز</h1>
@@ -271,6 +292,10 @@ footer { width: 100%; max-width: var(--maxw); text-align: center; color: var(--m
         <a href="./01.html" class="nav-btn" title="ژورنال">
             <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
             ژورنال
+        </a>
+        <a href="./002.html" class="nav-btn" title="امتحان">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            امتحان
         </a>
     </div>
   </div>
